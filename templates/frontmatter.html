@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Atalanta Fugiens - Frontmatter Sample Page</title>
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+	<h1>Atalanta Fugiens Frontmatter Sample Page</h1>
+</body>
+</html>
+
+<nav class="topnav">
+	<ul>
+		<li class="my-trigger"><a href="#" title="Table of Contents"><img src="../img/icons/toc.png" alt="table of contents icon" /></a></li>
+		<li>Furnace + Fugue: Atalanta Fugiens</li>
+		<li></li>
+	</ul>
+</nav>
+<nav class='toc-wrapper'>
+	<ul class="toc">
+		<li><a href="#">Home</a></li>
+		<div class="toc__atalanta-101">
+			<li><a href="#">Atalanta 101</a></li>
+		</div>
+		<div class="toc__edition">
+			<li><a href="#">Frontmatter</a></li>
+			<li><a href="#">Emblem 01</a></li>
+			<li><a href="#">Backmatter</a></li>
+		</div>
+		<div class="toc__atalanta-essay">
+			<li><a href="#">Essay 01</a></li>
+		</div>
+		<li><a href="#">Search/Index</a></li>
+	</ul>
+</nav>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.toc').on('mouseenter', function(){
+			$('.toc-wrapper').css('background-color', 'hsla(283, 100%, 50%, .5)');
+			$('body').css('overflow', 'hidden');
+		});
+		$('.toc').on('mouseleave', function(){
+			$('.toc-wrapper').css('background-color', 'hsla(183, 100%, 50%, .5)');
+			$('body').css('overflow', 'visible');
+		});
+		$('.toc-wrapper').click(function() {
+			$(this).css('display', 'none');
+		})
+		$('.my-trigger').click(function() {
+			console.log("the menu is sliding in");
+			$('.toc-wrapper').css('display', 'block');
+			$('.toc-wrapper').addClass('move-in');
+			$('.toc-wrapper').removeClass('move-out');
+		});
+		$('.edition').click(function() {
+			console.log("the menu is sliding out");
+			$('.toc-wrapper').css('display', 'none');
+			$('.toc-wrapper').addClass('move-out');
+			$('.toc-wrapper').removeClass('move-in');
+		});
+	})
+</script>
