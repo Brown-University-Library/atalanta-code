@@ -1,0 +1,57 @@
+<!-- https://openseadragon.github.io/docs/ -->
+<section class="facsimile-wrapper is-hidden">
+	<div class="facsimile">			
+	<!-- <div id="wrapper-wrapper"> -->
+		<div id="openseadragon-wrapper">
+			<div id="tools" style="position: absolute; top: 30px; z-index: 10000;">
+				<span style="float:left; margin: 10px 20px 0 0">
+					<a id="zoom-in" href="#zoom-in" title="Zoom In" style="display: inline-block; position: relative">Zoom In</a>
+					<a id="zoom-out" href="#zoom-out" title="Zoom Out" style="display: inline-block; position: relative">Zoom Out</a>
+					<a id="home" href="#home" title="Reset" style="display: inline-block; position: relative">Reset</a>
+	<!-- 				<a id="full-page" href="#full-page" title="Full Page" style="display: inline-block; position: relative">Full Page</a> -->
+					<a id="previous" href="#previous" title="Previous" style="display: inline-block; position: relative">Previous</a>
+					<a id="next" href="#next" title="Next" style="display: inline-block; position: relative">Next</a>
+				</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script type="text/javascript">
+	$(document).ready(function(){ // prepare and display zoomable scans of book pages
+		var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
+		var pageTiles = "../data/pageView.json"; // file path to page view dzi files
+		var bookTiles = "../data/bookView.json"; // file path to book view dzi files
+		var pageView = $.getJSON(pageTiles, function() { // get pageView.json file
+			pageView = pageView.responseJSON; // get array of page view URLS
+		})
+		var bookView = $.getJSON(bookTiles, function() { // get bookView.json file
+			bookView = bookView.responseJSON; // get array of book view URLS
+		})
+		.done(function() { // after all the image tiles are ready, display zoomable pages
+			var atalantaZoom = pageView.slice(myEmblemDataNum + 13, myEmblemDataNum + 17); // current view mode (initially pageView)
+			// var atalantaZoom = pageView; // current view mode (initially pageView)
+			var viewer = OpenSeadragon({
+				id: "openseadragon-wrapper",
+				tileSources: [atalantaZoom],
+				autoResize: true, /***/
+	            showHomeControl: false, /***/
+				animationTime: 1.5, /* smoother zooming with easing */
+				sequenceMode: true, /* group an array of images */
+				showReferenceStrip: true, /* thumbnails */
+				showNavigator: true, /* mini map */
+				// toolbar: "tools",
+				toolbar: "openseadragon-wrapper",
+				zoomInButton:   "zoom-in",
+				zoomOutButton:   "zoom-out",
+				homeButton: "home",
+				fullPageButton: "full-page",
+				previousButton: "previous",
+				nextButton: "next"
+			});
+			
+			// var pageIndex = this.pageIndex - (this.mode === 'book' ? 2 : 1);
+			// 	if (this.mode === 'book')
+		});
+	})
+</script>

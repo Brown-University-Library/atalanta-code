@@ -1,0 +1,161 @@
+<div class="wrapper-sidenav">
+	<div class="sidenav">
+		<ul class="sidenav__navigation">
+			<li><a id="sidenav__prev" href="#">&#10094;</a></li>
+			<li id="sidenav__titles">Emblem 0</li>
+			<li><a id="sidenav__next" href="#">&#10095;</a></li>
+		</ul>
+		<ul class="sidenav__options">
+			<li class="sidenav--is-active"><a href="#motto">Motto</a></li>
+			<li><a href="#image">Image</a></li>
+			<li><a href="#music">Music</a></li>
+			<li><a href="#epigram">Epigram</a></li>
+			<li><a href="#discourse">Discourse</a></li>
+		</ul>
+	</div>
+</div>
+
+<script>//http://jennamolby.com/how-to-display-dynamic-content-on-a-page-using-url-parameters/
+	$(document).ready(function(){
+		var mottoSideNav = 'ul.sidenav__options > li:nth-child(1)';
+		var imageSideNav = 'ul.sidenav__options > li:nth-child(2)';
+		var musicSideNav = 'ul.sidenav__options > li:nth-child(3)';
+		var epigramSideNav = 'ul.sidenav__options > li:nth-child(4)';
+		var discourseSideNav = 'ul.sidenav__options > li:nth-child(5)';
+		var sideNavOption = 'ul.sidenav__options > li';
+		var dataID = $('.emblem-page').data('id');
+		var currentEmblemNum = dataID + 1;
+		var prevEmblemNum = currentEmblemNum - 1;
+		var nextEmblemNum = currentEmblemNum + 1;
+		var prevBtn = '#sidenav__prev';
+		var nextBtn = '#sidenav__next';
+		var emblemNumTextArea = '#sidenav__titles';
+		
+		if (dataID === 0) {
+			$(prevBtn).addClass('is-hidden'); // do not display previous button on first emblem
+			$(nextBtn).removeClass('is-hidden'); // display next button
+			$(nextBtn).attr("href", "../pages/emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
+			$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
+		}
+		else if (dataID === 4) { 
+			$(nextBtn).addClass('is-hidden'); // do not display next button on last emblem
+			$(prevBtn).removeClass('is-hidden'); // display previous button
+			$(prevBtn).attr("href", "../pages/emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
+			$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
+		}
+		else {
+			$(prevBtn).removeClass('is-hidden'); // display previous button
+			$(nextBtn).removeClass('is-hidden'); // display next button
+			$(prevBtn).attr("href", "../pages/emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
+			$(nextBtn).attr("href", "../pages/emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
+			$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
+		}
+
+		$(sideNavOption).click(function() {
+			$(this).siblings().removeClass('sidenav--is-active'); // remove bkg highlight from all li
+			$(this).addClass('sidenav--is-active'); // add bkg highlight to currently selected li
+		})
+
+
+		/*** MOTTO WAYPOINT ***/
+		// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+		var waypoint = new Waypoint({
+			element: document.getElementById('basic-waypoint__0'), // tells waypoint which DOM element's position to observe on scroll
+			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+				console.log('Direction: ' + direction);
+				if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
+					highlightSideNavMotto()
+				}
+				else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
+					
+				}
+			},
+			offset: 180, // moving the trigger location from 0 at the top of the viewport
+		})
+
+		/*** IMAGE WAYPOINT ***/
+		// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+		var waypoint = new Waypoint({
+			element: document.getElementById('basic-waypoint__1'), // tells waypoint which DOM element's position to observe on scroll
+			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+				console.log('Direction: ' + direction);
+				if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
+					highlightSideNavImage();
+				}
+				else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
+					highlightSideNavMotto();
+				}
+			},
+			offset: 300, // moving the trigger location from 0 at the top of the viewport
+		})
+
+		/*** MUSIC WAYPOINT ***/
+		// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+		var waypoint = new Waypoint({
+			element: document.getElementById('basic-waypoint__2'), // tells waypoint which DOM element's position to observe on scroll
+			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+				console.log('Direction: ' + direction);
+				if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
+					highlightSideNavMusic();
+				}
+				else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
+					highlightSideNavImage();
+				}
+			},
+			offset: 300, // moving the trigger location from 0 at the top of the viewport
+		})
+
+		/*** EPIGRAM WAYPOINT ***/
+		// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+		var waypoint = new Waypoint({
+			element: document.getElementById('basic-waypoint__3'), // tells waypoint which DOM element's position to observe on scroll
+			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+				console.log('Direction: ' + direction);
+				if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
+					highlightSideNavEpigram();
+				}
+				else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
+					highlightSideNavMusic();
+				}
+			},
+			offset: 300, // moving the trigger location from 0 at the top of the viewport
+		})
+
+		/*** DISCOURSE WAYPOINT ***/
+		// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+		var waypoint = new Waypoint({
+			element: document.getElementById('basic-waypoint__4'), // tells waypoint which DOM element's position to observe on scroll
+			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+				console.log('Direction: ' + direction);
+				if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
+					highlightSideNavDiscourse();
+				}
+				else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
+					highlightSideNavEpigram();
+				}
+			},
+			offset: 300, // moving the trigger location from 0 at the top of the viewport
+		})
+
+		function highlightSideNavMotto() {
+			$(mottoSideNav).siblings().removeClass('sidenav--is-active');
+			$(mottoSideNav).addClass('sidenav--is-active');
+		}
+		function highlightSideNavImage() {
+			$(imageSideNav).siblings().removeClass('sidenav--is-active');
+			$(imageSideNav).addClass('sidenav--is-active');
+		}
+		function highlightSideNavMusic() {
+			$(musicSideNav).siblings().removeClass('sidenav--is-active');
+			$(musicSideNav).addClass('sidenav--is-active');
+		}
+		function highlightSideNavEpigram() {
+			$(epigramSideNav).siblings().removeClass('sidenav--is-active');
+			$(epigramSideNav).addClass('sidenav--is-active');
+		}
+		function highlightSideNavDiscourse() {
+			$(discourseSideNav).siblings().removeClass('sidenav--is-active');
+			$(discourseSideNav).addClass('sidenav--is-active');
+		}
+	})
+</script>
