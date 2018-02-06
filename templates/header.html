@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>Atalanta Fugiens - Table of Contents Sample Page</title>
-	<link rel="stylesheet" href="css/app.css">
-</head>
-<body>
-	<h1>Atalanta Fugiens Header / Table of Contents Sample Page</h1>
-</body>
-</html>
-
 <nav class="topnav">
 	<ul>
-		<li class="my-trigger"><a href="#" title="Table of Contents"><img src="../img/icons/toc.png" alt="table of contents icon" /></a></li>
+		<li class="my-trigger"><button><img class="toc-icon" src="https://raw.githubusercontent.com/Brown-University-Library/atalanta-media/master/assets/icons/toc.png" alt="table of contents icon" /></button></li>
 		<li>Furnace + Fugue: Atalanta Fugiens</li>
 		<li></li>
 	</ul>
+
 </nav>
 <nav class='toc-wrapper'>
 	<ul class="toc">
-		<li><a href="#">Home</a></li>
+		<li><a href="/index.html">Home</a></li>
 		<div class="toc__atalanta-101">
 			<li><a href="#">Atalanta 101</a></li>
 		</div>
@@ -38,31 +26,3 @@
 		</div>
 	</ul>
 </nav>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('.toc').on('mouseenter', function(){
-			$('.toc-wrapper').css('background-color', 'hsla(283, 100%, 50%, .5)');
-			$('body').css('overflow', 'hidden');
-		});
-		$('.toc').on('mouseleave', function(){
-			$('.toc-wrapper').css('background-color', 'hsla(183, 100%, 50%, .5)');
-			$('body').css('overflow', 'visible');
-		});
-		$('.toc-wrapper').click(function() {
-			$(this).css('display', 'none');
-		})
-		$('.my-trigger').click(function() {
-			console.log("the menu is sliding in");
-			$('.toc-wrapper').css('display', 'block');
-			$('.toc-wrapper').addClass('move-in');
-			$('.toc-wrapper').removeClass('move-out');
-		});
-		$('.edition').click(function() {
-			console.log("the menu is sliding out");
-			$('.toc-wrapper').css('display', 'none');
-			$('.toc-wrapper').addClass('move-out');
-			$('.toc-wrapper').removeClass('move-in');
-		});
-	})
-</script>

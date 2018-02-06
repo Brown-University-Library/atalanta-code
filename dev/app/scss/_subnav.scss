@@ -1,20 +1,12 @@
 @import 'utilities';
 @import 'colors';
 
-/*.wrapper-subnav5 {
-	display: block;
-	margin-top: $topnav-h;
-	position: fixed;
-	width: 100%;
-	z-index: 100;
-}*/
 .subnav {
 	display: flex;
 	align-items: top;
 	justify-content: center;
 	height: $subnav-h;
 	width: 100%;
-	margin-top: $topnav-h;
 	position: fixed;
 	z-index: 100;
 

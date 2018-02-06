@@ -10,7 +10,7 @@
 	grid-gap: 1rem;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr;
-	margin-top: $subnav-h;
+	margin-top: calc($subnav-h - $topnav-h);
 	position: relative;
 	height: auto;
 	width: 100%;
