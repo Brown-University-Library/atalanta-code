@@ -1,0 +1,138 @@
+@import 'colors';
+
+.css-test {
+	border: 2px solid green !important;
+}
+.is-active {
+	background-color: $periwinkle !important;
+	a {
+		color: $black !important;
+	}
+}
+.is-hidden {
+	display: none !important;
+}
+.emblem-wrapper {
+/*	background-color: blue;*/
+	display: flex;
+	justify-content: center;
+	padding-top: 8rem;
+}
+.emblem__full {
+	width: 100%;
+}
+.emblem__left {
+	display: inline-block;
+	vertical-align: top; /* pfft text */
+	width: 49%;
+	height: 20rem;
+
+}
+.emblem__right {
+	display: inline-block;
+	vertical-align: top; /* pfft text */
+	width: 49%;
+	height: 20rem;
+}
+.emblem {
+	display: inline-block;
+	width: 100%;
+	vertical-align: top; /* pfft text */
+}
+.half {
+	display: flex;
+}
+/*.compare {
+	border: 1px solid red;
+	padding: 4rem !important;
+	p {
+		text-align: left !important;
+	}
+}*/
+.facsimile-wrapper {
+/*	background-color: hsla(19, 62%, 54%, .7);*/
+	height: 100vh;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: top; /* pfft text */
+}
+.emblem__left .facsimile-wrapper {
+	left: 0;
+}
+.facsimile {
+	background-color: hsla(19, 62%, 54%, .7);
+	height: 100vh;
+	position: fixed;
+}
+.motto {
+	width: 100%;
+}
+.epigram {
+	width: 100%;
+}
+.discourse {
+	width: 100%;
+}
+.switch-wrapper {
+/*	border: 1px solid green;*/
+	display: flex;
+	justify-content: center;
+	top: 0;
+	width: 100%;
+}
+.latin-german-switch {
+/*	border: 1px solid red;*/
+	display: flex;
+	align-self: flex-start;
+	justify-content: center;
+	height: 1.25rem;
+	width: 8rem;
+	margin-bottom: 1.5rem;
+	ul {
+/*		border: 1px solid blue;*/
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		width: 100%;
+		li {
+/*			border: 1px solid green;*/
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: .75em;
+			margin: 0 .25rem;
+			width: 100%;
+			a {
+				color: $black;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				width: 100%;
+			}
+			a:hover {
+				color: $blue;
+			}
+		}
+	}
+}
+.is-selected {
+	border-bottom: 3px solid $blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
