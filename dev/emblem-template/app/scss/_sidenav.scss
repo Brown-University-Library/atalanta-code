@@ -1,0 +1,94 @@
+@import 'colors';
+
+.wrapper-sidenav {
+	 background-color: $black;
+	 margin-top: 8.75rem;
+	 margin-left: .5rem;
+	 padding: 0 0 1rem 0;
+	 position: fixed;
+	 width: 9rem;
+	 height: 13.5rem;
+	 z-index: 20;
+}
+.sidenav ul li {
+	cursor: pointer;
+	font-size: .825rem;
+	a {
+		color: $white;
+	}
+}
+.sidenav .sidenav__navigation {
+	background-color: $dusty-blue;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-weight: 800;
+	width: 9rem;
+	li {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 2.5rem;
+		min-width: 1.75rem;
+		:hover {
+			background-color: $dusty-blue;	
+			color: $dusty-blue-lt;
+		}
+		a {
+			color: $black;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+}
+.sidenav .sidenav__options {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
+	li {
+		color: $white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 2rem;
+		/*padding-bottom: .125rem;*/
+		:hover {
+			background-color: $dusty-blue-lt;
+			color: $black;
+		}
+		:active {
+			background-color: $blue;
+		}
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+.sidenav--is-active {
+	background-color: $dusty-blue-dk;
+}
+ul.sidenav__options li.sidenav--is-active a:hover {
+	background-color: $dusty-blue-dk;
+	color: $white;
+}
+
+/* http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/ */
+/* https://github.com/twbs/bootstrap/issues/1768#issuecomment-46519033 */
+	 *[id]:before { 
+	  display: block; 
+	  content: " "; 
+	  margin-top: -180px; 
+	  height: 180px; 
+	  visibility: hidden; 
+	}
+
+ 	 

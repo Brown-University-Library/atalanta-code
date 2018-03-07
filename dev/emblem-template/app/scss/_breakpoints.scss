@@ -1,0 +1,28 @@
+/***     Breakpoints     ***/
+
+/* large  -  desktop */
+@media screen and (min-width: 1200px) and (max-width: 1499px) {
+
+}
+
+/* medium-large - laptop */
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+
+}
+
+/* medium - small laptop */
+@media screen and (min-width: 900px) and (max-width: 999px) {
+
+}
+
+/* medium - tablet */
+@media screen and (min-width: 768px) and (max-width: 899px) {
+
+}
+
+/* small  -  mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) { /* mobile phones are too small for a side by side view */
+	._sidenav {
+		display: none;
+	}
+}
