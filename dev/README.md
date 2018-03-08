@@ -1,7 +1,7 @@
 ## Setting Up Your Gulp Dev Environment in 12 Easy Steps
 
 ##### Why bother?
-Task managers like Gulp let you be lazy/smart and code faster/easier 
+Task managers like Gulp let you be lazy/smart and code faster/easier. For example, with a task manager you can use Sass (SCSS) to break up your CSS into manageable chunks and/or set up a local server that upddates the browser whenever you save your code. No refresh required!
 ##### What you need to know: A few terminal commands
 * cd = move to a directory (folder)
 * mkdir = create a new directory
@@ -53,11 +53,11 @@ $ npm install gulp --save-dev
 
 
 **5)  Set up some more folders to organize your project and help automate your workflow**
-* Create a folder that will hold all of your html, css/scss, js. I call it app, but you do you
+* Create a folder that will hold all of your HTML, CSS/SCSS, JavaScript. I call it app, but you do you
 ```sh
 $ mkdir app
 ```
-*  The new folder, make folders for your css, scss, and js files
+*  In the new folder, make folders for your CSS, SCSS, and JavaScript files
 ```sh
 $ cd app
 $ mkdir css
@@ -79,7 +79,7 @@ $ touch gulpfile.js
 
 
 **7)  Install the other libraries you want to use**
-* Gulp-sass transpiles sass into css
+* Gulp-sass transpiles Sass into CSS
 ```sh
 $ npm install gulp-sass --save-dev
 ```
@@ -102,7 +102,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
-// function to convert sass into css
+// function to convert Sass into CSS
 gulp.task('sass', function() {
 	return gulp.src('app/scss/app.scss')
 		.pipe(sass())
