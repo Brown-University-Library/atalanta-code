@@ -1,0 +1,52 @@
+@import 'utilities';
+
+#openseadragon-wrapper {
+/*	border: 1px solid red !important;*/
+	float: right !important;
+	height: calc(100vh - 11.125rem); /* currently, the combined height of the topnav and subnav is 11.125rem */
+/*	width: 50% !important;*/
+	width: 100vw;
+}
+#openseadragon-wrapper--half {
+/*	border: 1px solid red !important;*/
+	float: right !important;
+	height: calc(100vh - 11.125rem); /* currently, the combined height of the topnav and subnav is 11.125rem */
+/*	width: 50% !important;*/
+	width: 50vw !important;
+
+	canvas {
+		cursor: pointer;
+	}
+	.navigator {
+		cursor: pointer;
+	}
+}
+.facsimile-wrapper #openseadragon-wrapper {
+	width: 50vw;
+}
+#openseadragon-wrapper canvas {
+	cursor: pointer;
+}
+/*#openseadragon-wrapper .navigator {
+	cursor: pointer;
+}*/
+#tools {
+	background-color: $black;
+	max-width: 25rem;
+	padding: 1rem;
+	position: absolute;
+	right: 0;
+	top: 25%;
+	z-index: 1000;
+
+}
+#tools a {
+	color: orange;
+	padding: 0 .25rem;
+}
+#tools a:hover {
+	color: red;
+}
+#tools a:active {
+	color: yellow;
+}
