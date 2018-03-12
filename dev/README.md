@@ -1,14 +1,14 @@
 ## Setting Up Your Gulp Dev Environment in 12 Easy Steps
 
 ##### Why bother?
-Task managers like Gulp let you be lazy/smart and code faster/easier. For example, with a task manager you can use Sass (SCSS) to break up your CSS into manageable chunks and/or set up a local server that upddates the browser whenever you save your code. No refresh required!
+Task managers like Gulp let you be lazy/smart and code faster/easier. For example, with a task manager you can use Sass (SCSS) to break up your CSS into manageable chunks and/or set up a local server that updates the browser whenever you save your code. No refresh required!
 ##### What you need to know: A few terminal commands
 * cd = move to a directory (folder)
 * mkdir = create a new directory
 * touch = create a new file
 * npm = node package manager
-* -g = global (you will only have to install on your computer once)
-* sudo = super user do (forces your computer to install things)
+* -g = global (you will only have to install a package on your computer once)
+* sudo = super user do (forces your computer to install things even if it protests)
 <br><br>
 
 
