@@ -15,6 +15,8 @@
 <!-- GLOBAL NAVIGATION -->
 	<header>
 		<div class="_topnav"></div>
+
+
 <!-- EMBLEM NAVIGATION -->
 		<nav class="subnav">
 			<ul>
@@ -44,7 +46,7 @@
 					<!-- Motto -->
 					<a name="motto" id="basic-waypoint__0"></a>
 					<section class="motto-wrapper half wrapper-section section--split-or-wrap">
-						<div class="section section--motto width--100">
+						<div class="section section--motto section--single">
 							<div class="translation">
 								<div class="switch-wrapper left">
 									<div class="facsimile-normalized-switch">
@@ -70,7 +72,7 @@
 								<div class="lang--german _motto--german is-hidden"></div>
 							</div>
 						</div>
-						<div class="section section--motto double is-hidden">
+						<div class="section section--motto section--double is-hidden">
 							<div class="translation is-hidden">
 								<div class="switch-wrapper left">
 									<div class="facsimile-normalized-switch">
@@ -101,14 +103,14 @@
 					<a name="image" id="basic-waypoint__1"></a>
 					<div class="_image">
 						<section class="image wrapper-section section">
-							<div class="image__picture width--100"><img class="emblem__image--cropped" src="" alt="Illustration" /></div>
+							<div class="image__picture section--single"><img class="emblem__image--cropped" src="" alt="Illustration" /></div>
 						</section>
 					</div>
 					<!-- Music -->
 					<a name="music" id="basic-waypoint__2"></a>
 					<div class="_music">
 						<section class="music wrapper-section">
-							<div class="section width--100">
+							<div class="section section--single">
 								<div class="test">
 									<p>Music will go here</p>
 								</div>
@@ -118,7 +120,7 @@
 					<!-- Epigram -->
 					<a name="epigram" id="basic-waypoint__3"></a>
 					<section class="epigram-wrapper half wrapper-section section--split-or-wrap">
-						<div class="section section--epigram width--100">
+						<div class="section section--epigram section--single">
 							<div class="translation">
 								<div class="switch-wrapper left">
 									<div class="facsimile-normalized-switch">
@@ -144,8 +146,7 @@
 								<div class="lang--german _epigram--german is-hidden"></div>
 							</div>
 						</div>
-						<div class="section section--epigram double is-hidden">
-						<!-- <div class="epigram section double is-hidden"> -->
+						<div class="section section--epigram section--double is-hidden">
 							<div class="translation is-hidden">
 								<div class="switch-wrapper right">
 									<div class="facsimile-normalized-switch">
@@ -175,7 +176,7 @@
 					<!-- Discourse -->
 					<a name="discourse" id="basic-waypoint__4"></a>
 					<section class="discourse-wrapper half wrapper-section section--split-or-wrap">
-						<div class="section section--discourse section width--100">
+						<div class="section section--discourse section section--single">
 							<div class="translation">
 								<div class="switch-wrapper left">
 									<div class="facsimile-normalized-switch">
@@ -192,9 +193,9 @@
 								<div class="lang--latin _discourse--latin">Latin Discourse</div>
 							</div>
 						</div>
-							<div class="section section--discourse double is-hidden">
+						<div class="section section--discourse section--double is-hidden">
 							<div class="translation is-hidden">
-								<div class="switch-wrapper left">
+								<div class="switch-wrapper right">
 									<div class="facsimile-normalized-switch">
 										<ul>
 											<li><a href="#">Facsimile</a></li>
@@ -432,17 +433,21 @@
 			var latinDoubleView = '.subnav > ul li:nth-child(7)';
 			var facsimileDoubleView = '.subnav > ul li:nth-child(8)';
 			/* emblem languages */
-			var singleEmblem = '.emblem__full .emblem';
-			var singleTranslation = '.single .english';
-			var singleOriginal = '.single .original';
+			var singleEmblem = '.emblem__full .section--single';
+			var singleTranslation = '.section--single .translation';
+			var singleOriginal = '.section--single .original';
 			var singleFacsimile = '.emblem__full .facsimile';
-			var doubleEmblem = '.emblem__full .double';
-			var doubleTranslation = '.double .english';
-			var doubleOriginal = '.double .original';
+			var doubleEmblem = '.emblem__full .section--double';
+			var doubleTranslation = '.section--double .translation';
+			var doubleOriginal = '.section--double .original';
 			var leftEnglishGroup = '.left-english-text';
 			var rightEnglishGroup = '.right-english-text';
 			var leftOriginalGroup = '.left-latin-german-text';
 			var rightOriginalGroup = '.right-latin-german-text';
+			var leftFacsimileSwitch = '.left .facsimile-normalized-switch ul li:nth-child(1)';
+			var leftNormalizedSwitch = '.left .facsimile-normalized-switch ul li:nth-child(2)';
+			var rightFacsimileSwitch = '.right .facsimile-normalized-switch ul li:nth-child(1)';
+			var rightNormalizedSwitch = '.right .facsimile-normalized-switch ul li:nth-child(2)';
 			var leftLatinSwitch = '.left .latin-german-switch ul li:nth-child(1)';
 			var leftGermanSwitch = '.left .latin-german-switch ul li:nth-child(2)';
 			var rightLatinSwitch = '.right .latin-german-switch ul li:nth-child(1)';
@@ -461,7 +466,7 @@
 			var rightEmblemText = '.emblem__right .emblem';
 			var leftFacsimile = '.emblem__left .facsimile-wrapper';
 			var rightFacsimile = '.emblem__right .facsimile-wrapper';
-			var rightTranslation = '.emblem__right .english';
+			var rightTranslation = '.emblem__right .translation';
 			var rightOriginal = '.emblem__right .original';
 			/* emblem sections */
 			var imageSection = '.emblem__full .image';
@@ -574,22 +579,42 @@
 				}
 				return false;
 			});
-			$(leftGermanSwitch).click(function() {
+			$(leftNormalizedSwitch).click(function() { // select left normalized switch
+					$(leftNormalizedSwitch).addClass('is-selected'); // highlight german switch on left side
+					$(leftFacsimileSwitch).removeClass('is-selected'); // remove highlight from latin on left side
+					return false;
+			});
+			$(rightNormalizedSwitch).click(function() { // select right normalized switch
+					$(rightNormalizedSwitch).addClass('is-selected'); // highlight german switch on right side
+					$(rightFacsimileSwitch).removeClass('is-selected'); // remove highlight from latin on right side
+					return false;
+			});
+			$(leftFacsimileSwitch).click(function() { // select left facsimile switch
+					$(leftFacsimileSwitch).addClass('is-selected'); // highlight Latin switch on left side
+					$(leftNormalizedSwitch).removeClass('is-selected'); // remove highlight from German on left side
+					return false;
+			});
+			$(rightFacsimileSwitch).click(function() { // select right facsimile switch
+					$(rightFacsimileSwitch).addClass('is-selected'); // highlight Latin switch on right side
+					$(rightNormalizedSwitch).removeClass('is-selected'); // remove highlight from German on right side
+					return false;
+			});
+			$(leftGermanSwitch).click(function() { // select left german switch
 					$(leftGermanSwitch).addClass('is-selected'); // highlight german switch on left side
 					$(leftLatinSwitch).removeClass('is-selected'); // remove highlight from latin on left side
 					return false;
 			});
-			$(rightGermanSwitch).click(function() {
+			$(rightGermanSwitch).click(function() { // select right german switch
 					$(rightGermanSwitch).addClass('is-selected'); // highlight german switch on right side
 					$(rightLatinSwitch).removeClass('is-selected'); // remove highlight from latin on right side
 					return false;
 			});
-			$(leftLatinSwitch).click(function() {
+			$(leftLatinSwitch).click(function() { // select left latin switch
 					$(leftLatinSwitch).addClass('is-selected'); // highlight Latin switch on left side
 					$(leftGermanSwitch).removeClass('is-selected'); // remove highlight from German on left side
 					return false;
 			});
-			$(rightLatinSwitch).click(function() {
+			$(rightLatinSwitch).click(function() { // select right latin switch
 					$(rightLatinSwitch).addClass('is-selected'); // highlight Latin switch on right side
 					$(rightGermanSwitch).removeClass('is-selected'); // remove highlight from German on right side
 					return false;
@@ -637,10 +662,10 @@
 				}
 			}
 			function splitWholeEmblem() {
-				$('.emblem__full .double').removeClass('is-hidden'); //replace full-width with left/right halves in whole emblem container
+				$(doubleEmblem).removeClass('is-hidden'); //replace full-width with left/right halves in whole emblem container
 			}
 			function rejoinWholeEmblem() {
-				$('.emblem__full .double').addClass('is-hidden'); //replace left/right halves with full-width in whole emblem container
+				$(doubleEmblem).addClass('is-hidden'); //replace left/right halves with full-width in whole emblem container
 			}
 			function resetLanguagesOnLeft() {
 				$(singleEmblem).removeClass('is-hidden'); // show full-width emblem
