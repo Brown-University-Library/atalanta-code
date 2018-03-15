@@ -1,0 +1,83 @@
+@import 'utilities';
+@import 'colors';
+.old {
+	display: none;
+}
+.emblem-page {
+	background-color: $light-gray;
+	padding: 50px 0 .125rem 0;
+
+}
+.emblem {
+	margin-top: 200px;
+	background-color: green;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: repeat(5, fit-content(100%));
+	grid-gap: 1rem;
+	min-height: 100vh;
+	width: 100%;
+}
+.panel--full {
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+.panel--left {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.panel--right {
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+.section__facsimile {
+	grid-row-start: 1;
+	grid-row-end: 6;
+	background-color: blue;
+}
+.section__motto {
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+.section__image {
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+.section__music {
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+.section__epigram {
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+.section__discourse {
+	grid-row-start: 5;
+	grid-row-end: 6;	
+}
+.wrapper-facsimile {
+	
+}
+.facsimile--full {
+	background-color: blue;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+}
+.facsimile--left {
+	background-color: pink;
+	height: 100vh;
+	width: 50%;
+	position: fixed;
+	left: 0;
+}
+.facsimile--right {
+	background-color: orange;
+	height: 100vh;
+	width: 50%;
+	position: fixed;
+	right: 0;
+}
+._facsimile {
+	padding-top: 200px;
+}
