@@ -605,11 +605,6 @@ body {
   grid-column-start: 3;
   grid-column-end: 5; }
 
-.section__facsimile {
-  grid-row-start: 1;
-  grid-row-end: 6;
-  background-color: blue; }
-
 .section__motto {
   grid-row-start: 1;
   grid-row-end: 2; }

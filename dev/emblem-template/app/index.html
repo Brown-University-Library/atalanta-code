@@ -20,14 +20,14 @@
 <!-- EMBLEM NAVIGATION -->
 		<nav class="subnav">
 			<ul>
-				<li class="subnav__views--single"><a href="#">Single View</a></li>
-				<li class="subnav__options--option"><a href="#">English</a></li>
-				<li class="subnav__options--option"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option"><a href="#">Facsimile</a></li>
-				<li class="subnav__views--double"><a href="#">Side-by-side View</a></li>
-				<li class="subnav__options--option"><a href="#">English</a></li>
-				<li class="subnav__options--option"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option"><a href="#">Facsimile</a></li>
+				<li class="subnav__views--single" data-state="active"><a href="#">Single View</a></li>
+				<li class="subnav__options--option" data-state="active"><a href="#">English</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Latin/German</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Facsimile</a></li>
+				<li class="subnav__views--double" data-state="inactive"><a href="#">Side-by-side View</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">English</a></li>
+				<li class="subnav__options--option" data-state="active"><a href="#">Latin/German</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Facsimile</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -49,11 +49,11 @@
 			<section class="section__motto section--double panel--right is-hidden">Motto Right</section>
 			<!-- Image -->
 			<a name="image" id="basic-waypoint__1" class="section__image"></a>
-			<div class="section__image section--full panel--left">Image</div>
+			<div class="section__image section--full panel--full">Image</div>
 			<div class="section__image section--full panel--right is-hidden">Image Right</div>
 			<!-- Music -->
 			<a name="music" id="basic-waypoint__2" class="section__music"></a>
-			<section class="section__music section--full panel--left">Music</section>
+			<section class="section__music section--full panel--full">Music</section>
 			<section class="section__music section--full panel--right is-hidden">Music Right</section>
 			<!-- Epigram -->
 			<a name="epigram" id="basic-waypoint__3" class="section__epigram"></a>
@@ -315,9 +315,13 @@
 			/* new variables */
 			var sectionSingle = '.section--single';
 			var sectionDouble = '.section--double';
-			var sectionFull = '.section--full .panel--full';
-			var sectionSplit = '.section--full .panel--right';
+			var sectionFull = '.section--full.panel--full'
+			var sectionFullLeft = '.section--full.panel--left';
+			var sectionFullRight = '.section--full.panel--right';
 			var sectionFacsimile = '.section__facsimile';
+			var facsimileFull = '.facsimile--full';
+			var facsimileLeft = '.facsimile--left';
+			var facsimileRight = '.facsimile--right';
 /* INITIALIZE */
 			onLoad(); // DISPLAY EMBLEM MENU AND DEFAULT OPTIONS ON PAGE LOAD
 
@@ -325,10 +329,11 @@
 			/* pages */
 			$(doubleViewBtn).click(function() { // DISPLAY SPLIT EMBLEM
 				isActiveDouble();// highlight side-by-side view button
-				$(sectionSingle).removeClass('panel--full'); // SHOW LEFT AND RIGHT HALVES
-				$(sectionSingle).addClass('panel--left');
-				$(sectionDouble).removeClass('is-hidden');
-				$(sectionSplit).addClass('is-hidden');
+				
+				$(this).attr('data-state','active');
+				$(singleViewBtn).attr('data-state','inactive');
+				checkState();
+				//CHECK FACSIMILE
 				// console.log("I clicked on double view!");
 				// isActiveDouble(); // highlight double view
 				// if( $(facsimileSingleView).hasClass('is-active') ) { // display left facsimile if it is stored
@@ -344,9 +349,17 @@
 			});
 			$(singleViewBtn).click(function() { // DISPLAY SINGLE EMBLEM
 				isActiveSingle();// highlight single view button
-				$(sectionDouble).addClass('is-hidden'); // SHOW LEFT HALF ONLY
-				$(sectionSingle).removeClass('panel--full');
-				$(sectionSingle).addClass('panel--left');
+				
+				$(this).attr('data-state', 'active');
+				$(doubleViewBtn).attr('data-state', 'inactive');
+
+
+				// if ($(englishSingleView).attr("data-state")===("active")) {
+				// 	console.log("I'm an active one!");
+				// 	$(englishSingleView).attr('data-state','inactive');
+				// }
+				checkState();
+				//CHECK FACSIMILE
 				// isActiveSingle(); // highlight single view
 				// rejoinWholeEmblem(); //replace left/right halves with full-width in whole emblem container
 				// if( $(facsimileSingleView).hasClass('is-active') ) { // display whole facsimile if left facsimile is active when switching from double to single view
@@ -363,6 +376,16 @@
 			});
 			/* languages */
 			$(englishSingleView).click(function() { // ACTIVATE SINGLE ENGLISH
+				if ($(englishSingleView).attr("data-state")===("active")) {
+
+					
+				}
+				else if ($(englishSingleView).attr("data-state")===("inactive")) {
+					$(singleNav).attr('data-state','inactive');
+					$(this).attr('data-state','active');
+				}
+				checkState();
+/////////////////////
 				resetLanguagesOnLeft(); // hide all full-width text or left half text, except image and music sections
 				showTranslation(); // show english text in full-width or left half
 				if( $(this).hasClass('is-active') ) { 
@@ -375,6 +398,16 @@
 				return false;
 			});
 			$(latinSingleView).click(function() { // ACTIVATE SINGLE LATIN
+				if ($(latinSingleView).attr("data-state")===("active")) {
+
+					
+				}
+				else if ($(latinSingleView).attr("data-state")===("inactive")) {
+					$(singleNav).attr('data-state','inactive');
+					$(this).attr('data-state','active');
+				}
+				checkState();
+/////////////////////////
 				resetLanguagesOnLeft(); // hide all full-width text or left half text, except image and music sections
 				showOriginalLanguage(); // show latin text in full-width or left half
 				if( $(this).hasClass('is-active') ) {
@@ -387,6 +420,17 @@
 				return false;
 			});
 			$(facsimileSingleView).click(function() { // ACTIVATE SINGLE FACSIMILE
+				if ($(facsimileSingleView).attr("data-state")===("active")) {
+
+					
+				}
+				else if ($(facsimileSingleView).attr("data-state")===("inactive")) {
+					$(singleNav).attr('data-state','inactive');
+					$(this).attr('data-state','active');
+				}
+				checkState();
+///////////////////////////
+
 				if( $(this).hasClass('is-active') ) {
 
 				}
@@ -398,6 +442,16 @@
 				return false;
 			});
 			$(englishDoubleView).click(function() { // ACTIVATE DOUBLE ENGLISH
+				if ($(englishDoubleView).attr("data-state")===("active")) {
+
+					
+				}
+				else if ($(englishDoubleView).attr("data-state")===("inactive")) {
+					$(doubleNav).attr('data-state','inactive');
+					$(this).attr('data-state','active');
+				}
+				checkState();
+/////////////////////				
 				resetLanguagesOnRight(); // hide all full-width text or left half text, except image and music sections
 				showTranslationDouble(); // show english text in right half
 				if( $(this).hasClass('is-active') ) {
@@ -410,6 +464,18 @@
 				return false;
 			});
 			$(latinDoubleView).click(function() { // ACTIVATE DOUBLE LATIN
+				if ($(latinDoubleView).attr("data-state")===("active")) {
+
+					
+				}
+				else if ($(latinDoubleView).attr("data-state")===("inactive")) {
+					$(doubleNav).attr('data-state','inactive');
+					$(this).attr('data-state','active');
+				}
+
+
+				checkState();
+/////////////////////
 				resetLanguagesOnRight(); // hide all full-width text or left half text, except image and music sections
 				showOriginalLanguageDouble(); // show latin text in right half
 				if( $(this).hasClass('is-active') ) {
@@ -422,6 +488,17 @@
 				return false;
 			});
 			$(facsimileDoubleView).click(function() { // ACTIVATE DOUBLE FACSIMILE
+				if ($(facsimileDoubleView).attr("data-state")===("active")) {
+
+					
+				}
+				else if ($(facsimileDoubleView).attr("data-state")===("inactive")) {
+					$(doubleNav).attr('data-state','inactive');
+					$(this).attr('data-state','active');
+				}
+
+				checkState();
+////////////////////				
 				if( $(this).hasClass('is-active') ) {
 
 				}
@@ -476,6 +553,143 @@
 					return false;
 			});
 /* FUNCTIONS */
+			function showFull() {
+				resetFacsimile();
+				$(sectionDouble).addClass('is-hidden'); // SHOW LEFT HALF ONLY
+				$(sectionSingle).removeClass('panel--full');
+				$(sectionSingle).addClass('panel--left');
+			}
+			function showHalves() {
+				resetFacsimile();
+				$(sectionSingle).removeClass('panel--full'); // SHOW LEFT AND RIGHT HALVES
+				$(sectionSingle).addClass('panel--left');
+				$(sectionDouble).removeClass('is-hidden');
+				$(sectionFullRight).addClass('is-hidden');
+			}
+			function showHalvesSplit() {
+				resetFacsimile();
+				$(sectionSingle).removeClass('panel--full'); // SHOW LEFT AND RIGHT HALVES
+				$(sectionSingle).addClass('panel--left');
+				$(sectionDouble).removeClass('is-hidden');
+				$(sectionFull).addClass('panel--left');
+				$(sectionFull).removeClass('panel--full');
+				$(sectionFullRight).removeClass('is-hidden');
+			}
+			function showFacsimileFull() {
+				$(sectionFacsimile).removeClass('is-hidden');
+				$(facsimileFull).removeClass('is-hidden');
+				$(facsimileFull).siblings().addClass('is-hidden');
+				$(sectionSingle).addClass('is-hidden');
+				$(sectionDouble).addClass('is-hidden');
+				$(sectionFull).addClass('is-hidden');
+				$(sectionFullRight).addClass('is-hidden');
+			}
+			function showFacsimileSplit() {
+				$(sectionFacsimile).removeClass('is-hidden');
+				$(facsimileLeft).removeClass('is-hidden');
+				$(facsimileRight).removeClass('is-hidden');
+				$(facsimileFull).addClass('is-hidden');
+				$(sectionSingle).addClass('is-hidden');
+				$(sectionDouble).addClass('is-hidden');
+				$(sectionFull).addClass('is-hidden');
+				$(sectionFullRight).addClass('is-hidden');
+			}
+			function showFacsimileLeft() {
+				$(sectionFacsimile).removeClass('is-hidden');
+				$(facsimileLeft).removeClass('is-hidden');
+				$(facsimileLeft).siblings().addClass('is-hidden');
+				$(sectionFull).addClass('panel--left');
+				$(sectionFull).removeClass('panel--full');
+				$(sectionFullRight).removeClass('is-hidden');
+				$(sectionSingle).addClass('is-hidden');
+				$(sectionFullLeft).addClass('is-hidden');
+			}
+			function showFacsimileRight() {
+				$(sectionFacsimile).removeClass('is-hidden');
+				$(facsimileRight).removeClass('is-hidden');
+				$(facsimileRight).siblings().addClass('is-hidden');
+				$(sectionFull).addClass('panel--left');
+				$(sectionFull).removeClass('panel--full');
+				$(sectionFullLeft).removeClass('is-hidden');
+				$(sectionDouble).addClass('is-hidden');
+				$(sectionFullRight).addClass('is-hidden');
+
+			}
+			function resetFacsimile() {
+				$(sectionFacsimile).addClass('is-hidden');
+				$(sectionSingle).removeClass('is-hidden');
+				$(sectionFullLeft).addClass('panel--full');
+				$(sectionFullLeft).removeClass('panel--left');
+				$(sectionFull).removeClass('is-hidden');
+				$(sectionFullRight).addClass('is-hidden');
+			}
+			function checkState() {
+				// if single and english are active
+				if ( $(singleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') ) {
+					showFull();
+					console.log("Single English is ACTIVE");
+				}
+				// if single and latin are active
+				else if ( $(singleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') ) {
+					showFull();
+					console.log("Single Latin is ACTIVE");
+				}
+				// if single and facsimile are active
+				else if ( $(singleViewBtn).attr('data-state')===('active') && $(facsimileSingleView).attr('data-state')===('active') ) {
+					showFacsimileFull();
+					console.log("Single Facsimile is ACTIVE");
+				}
+				// if double and SingleEnglish and DoubleEnglish are active
+				else if ( $(doubleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') && $(englishDoubleView).attr('data-state')===('active') ) {
+					showHalvesSplit();
+					console.log("Single English is ACTIVE and Double English is ACTIVE");
+				}
+				// if double and SingleEnglish and DoubleLatin are active
+				else if ( $(doubleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') && $(latinDoubleView).attr('data-state')===('active') ) {
+					showHalves();
+					console.log("Single English is ACTIVE and Double Latin is ACTIVE");
+				}
+				// if double and SingleEnglish and DoubleFacsimile are active
+				else if ( $(doubleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') && $(facsimileDoubleView).attr('data-state')===('active') ) {
+					showHalves();
+					showFacsimileRight();
+					console.log("Single English is ACTIVE and Double Facsimile is ACTIVE");
+				}
+				// if double and SingleLatin and DoubleEnglish are active
+				else if ( $(doubleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') && $(englishDoubleView).attr('data-state')===('active') ) {
+					showHalves();
+					console.log("Single Latin is ACTIVE and Double English is ACTIVE");
+				}
+				// if double and SingleLatin and DoubleLatin are active
+				else if ( $(doubleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') && $(latinDoubleView).attr('data-state')===('active') ) {
+					showHalvesSplit();
+					console.log("Single Latin is ACTIVE and Double Latin is ACTIVE");
+				}
+				// if double and SingleLatin and DoubleFacsimile are active
+				else if ( $(doubleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') && $(facsimileDoubleView).attr('data-state')===('active') ) {
+					showHalves();
+					showFacsimileRight();
+					console.log("Single Latin is ACTIVE and Double Facsimile is ACTIVE");
+				}
+				// if double and SingleFacsimile and DoubleEnglish are active
+				else if ( $(doubleViewBtn).attr('data-state')===('active') && $(facsimileSingleView).attr('data-state')===('active') && $(englishDoubleView).attr('data-state')===('active') ) {
+					showHalves();
+					showFacsimileLeft();
+					console.log("Single Facsimile is ACTIVE and Double English is ACTIVE");
+				}
+				// if double and SingleFacsimile and DoubleLatin are active
+				else if ( $(doubleViewBtn).attr('data-state')===('active') && $(facsimileSingleView).attr('data-state')===('active') && $(latinDoubleView).attr('data-state')===('active') ) {
+					showHalves();
+					showFacsimileLeft();
+					console.log("Single Facsimile is ACTIVE and Double Latin is ACTIVE");
+				}
+				// if double and SingleFacsimile and DoubleFacsimile are active
+				else if ( $(doubleViewBtn).attr('data-state')===('active') && $(facsimileSingleView).attr('data-state')===('active') && $(facsimileDoubleView).attr('data-state')===('active') ) {
+					showHalves();
+					showFacsimileSplit();
+					console.log("Single Facsimile is ACTIVE and Double Facsimile is ACTIVE");
+				}
+			}
 			function onLoad() {
 				$(doubleNav).toggleClass('is-hidden'); // hide last 3 language options for double view
 				$(singleViewBtn).toggleClass('is-active'); // make "Single View" button active
