@@ -580,11 +580,12 @@ body {
   display: none; }
 
 .emblem-page {
+  /*	margin-top: 200px;*/
   background-color: #eee;
   padding: 50px 0 .125rem 0; }
 
 .emblem {
-  margin-top: 200px;
+  margin-top: 128px;
   background-color: green;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -617,7 +618,7 @@ body {
   grid-row-start: 2;
   grid-row-end: 3; }
   .section__image img {
-    max-width: 40rem; }
+    max-width: 30rem; }
 
 .section__music {
   grid-row-start: 3;
@@ -630,6 +631,9 @@ body {
 .section__discourse {
   grid-row-start: 5;
   grid-row-end: 6; }
+
+.section__facsimile {
+  margin-top: 128px; }
 
 .facsimile--full {
   background-color: blue;
@@ -650,9 +654,6 @@ body {
   width: 50%;
   position: fixed;
   right: 0; }
-
-._facsimile {
-  padding-top: 200px; }
 
 .switch-wrapper {
   /*	border: 1px solid green;*/

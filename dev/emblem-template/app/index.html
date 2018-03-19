@@ -595,7 +595,8 @@
 				}
 				// if double and SingleEnglish and DoubleEnglish are active
 				else if ( $(doubleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') && $(englishDoubleView).attr('data-state')===('active') ) {
-					showHalvesSplit();
+					showHalves();
+					// showHalvesSplit();
 					console.log("Single English is ACTIVE and Double English is ACTIVE");
 				}
 				// if double and SingleEnglish and DoubleLatin are active
@@ -616,7 +617,8 @@
 				}
 				// if double and SingleLatin and DoubleLatin are active
 				else if ( $(doubleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') && $(latinDoubleView).attr('data-state')===('active') ) {
-					showHalvesSplit();
+					showHalves();
+					// showHalvesSplit();
 					console.log("Single Latin is ACTIVE and Double Latin is ACTIVE");
 				}
 				// if double and SingleLatin and DoubleFacsimile are active
