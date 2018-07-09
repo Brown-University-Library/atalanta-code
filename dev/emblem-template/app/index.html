@@ -109,7 +109,7 @@
 			<div class="section__image section--full panel--right is-hidden">
 				<div class="_image">
 					<section class="image wrapper-section section">
-							<div class="image__picture section--single"><img class="emblem__image--cropped" src="img/img12.png" alt="Illustration" /></div>
+							<div class="image__picture section--single panel--right"><img class="emblem__image--cropped" src="img/img12.png" alt="Illustration" /></div>
 					</section>
 				</div>
 			</div>
@@ -262,6 +262,7 @@
 			var rightOriginal = '.emblem__right .original';
 			/* emblem sections */
 			var imageSection = '.emblem__full .image';
+			var imageSectionRight = '.section__image.section--full.panel--right .image__picture.section--single';
 			var musicSection = '.emblem__full .music';
 
 
@@ -375,22 +376,24 @@
 			});
 			$(facsimileSingleView).click(function() { // ACTIVATE SINGLE FACSIMILE
 				if ($(facsimileSingleView).attr("data-state")===("active")) {
-
+					alert("check 1L");
 					
 				}
 				else if ($(facsimileSingleView).attr("data-state")===("inactive")) {
 					$(singleNav).attr('data-state','inactive');
 					$(this).attr('data-state','active');
+					alert("check 2L");
 				}
 				checkState();
 ///////////////////////////
 
 				if( $(this).hasClass('is-active') ) {
-
+					alert("check 3L");
 				}
 				else {
 					$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
 					$(this).addClass('is-active'); // highlight selected view option in nav
+					alert("check 4L");
 					showFacsimile(); // display full-width or left half facsimile
 				}
 				return false;
@@ -443,14 +446,12 @@
 			});
 			$(facsimileDoubleView).click(function() { // ACTIVATE DOUBLE FACSIMILE
 				if ($(facsimileDoubleView).attr("data-state")===("active")) {
-
 					
 				}
 				else if ($(facsimileDoubleView).attr("data-state")===("inactive")) {
 					$(doubleNav).attr('data-state','inactive');
 					$(this).attr('data-state','active');
 				}
-
 				checkState();
 ////////////////////				
 				if( $(this).hasClass('is-active') ) {
@@ -466,6 +467,7 @@
 				}
 				return false;
 			});
+			/* text switches */
 			$(leftNormalizedSwitch).click(function() { // SELECT LEFT NORMALIZED SWITCH
 					$(leftNormalizedSwitch).addClass('is-selected'); // highlight german switch on left side
 					$(leftFacsimileSwitch).removeClass('is-selected'); // remove highlight from latin on left side
@@ -509,70 +511,72 @@
 /* FUNCTIONS */
 			function showFull() {
 				resetFacsimile();
-				$(sectionDouble).addClass('is-hidden'); // SHOW LEFT HALF ONLY
+				$(sectionDouble).addClass('is-hidden'); // show full / left half only
 			}
 			function showHalves() {
 				resetFacsimile();
-				$(sectionSingle).removeClass('panel--full'); // SHOW LEFT AND RIGHT HALVES
+				$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
 				$(sectionSingle).addClass('panel--left');
 				$(sectionDouble).removeClass('is-hidden');
 				$(sectionFullRight).addClass('is-hidden');
 			}
 			function showHalvesSplit() {
 				resetFacsimile();
-				$(sectionSingle).removeClass('panel--full'); // SHOW LEFT AND RIGHT HALVES
-				$(sectionSingle).addClass('panel--left');
-				$(sectionDouble).removeClass('is-hidden');
-				$(sectionFull).addClass('panel--left');
-				$(sectionFull).removeClass('panel--full');
-				$(sectionFullRight).removeClass('is-hidden');
+				$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
+				$(sectionSingle).addClass('panel--left'); // assign left half to single
+				$(sectionDouble).removeClass('is-hidden'); // show left half
+				$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel name)
+				$(sectionFull).removeClass('panel--full'); // rename full panel step 2 (remove full panel name)
+				$(sectionFullRight).removeClass('is-hidden'); // show right half
 			}
 			function showFacsimileFull() {
-				$(sectionFacsimile).removeClass('is-hidden');
-				$(facsimileFull).removeClass('is-hidden');
-				$(facsimileFull).siblings().addClass('is-hidden');
-				$(sectionSingle).addClass('is-hidden');
-				$(sectionDouble).addClass('is-hidden');
-				$(sectionFull).addClass('is-hidden');
-				$(sectionFullRight).addClass('is-hidden');
+				$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
+				$(facsimileFull).removeClass('is-hidden'); // show full facsimile
+				$(facsimileFull).siblings().addClass('is-hidden'); // hide left and right facsimiles
+				$(sectionSingle).addClass('is-hidden'); // hide full/left panel wrapper
+				$(sectionDouble).addClass('is-hidden'); // hide right panel wrapper
+				$(sectionFull).addClass('is-hidden'); // hide full/left panel content
+				$(sectionFullRight).addClass('is-hidden'); // hide right panel content
 			}
 			function showFacsimileSplit() {
-				$(sectionFacsimile).removeClass('is-hidden');
-				$(facsimileLeft).removeClass('is-hidden');
-				$(facsimileRight).removeClass('is-hidden');
-				$(facsimileFull).addClass('is-hidden');
-				$(sectionSingle).addClass('is-hidden');
-				$(sectionDouble).addClass('is-hidden');
-				$(sectionFull).addClass('is-hidden');
-				$(sectionFullRight).addClass('is-hidden');
+				$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
+				$(facsimileLeft).removeClass('is-hidden'); // show left facsimile content
+				$(facsimileRight).removeClass('is-hidden'); // show right facsimile content
+				$(facsimileFull).addClass('is-hidden'); // hide full facsimile content
+				$(sectionSingle).addClass('is-hidden'); // hide full/left panel wrapper
+				$(sectionDouble).addClass('is-hidden'); // hide right panel wrapper
+				$(sectionFull).addClass('is-hidden'); // hide full/left panel content
+				$(sectionFullRight).addClass('is-hidden'); // hide right panel content
 			}
 			function showFacsimileLeft() {
-				$(sectionFacsimile).removeClass('is-hidden');
-				$(facsimileLeft).removeClass('is-hidden');
-				$(facsimileLeft).siblings().addClass('is-hidden');
-				$(sectionFull).addClass('panel--left');
-				$(sectionFull).removeClass('panel--full');
-				$(sectionFullRight).removeClass('is-hidden');
-				$(sectionSingle).addClass('is-hidden');
-				$(sectionFullLeft).addClass('is-hidden');
+				$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
+				$(facsimileLeft).removeClass('is-hidden'); // show left facsimile content
+				$(facsimileLeft).siblings().addClass('is-hidden'); // hide all facsimile content except left
+				$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel name)
+				$(sectionFull).removeClass('panel--full'); // rename full panel step 2 (remove full panel name)
+				$(sectionFullRight).removeClass('is-hidden');  // show right half
+				$(sectionSingle).addClass('is-hidden'); // hide full/left panel wrapper
+				$(sectionFullLeft).addClass('is-hidden'); // hide full/left panel content
+				$(imageSectionRight).removeClass('panel--left'); // kludge to show right image
+				$(imageSectionRight).removeClass('is-hidden'); // kludge to show right image
 			}
 			function showFacsimileRight() {
-				$(sectionFacsimile).removeClass('is-hidden');
-				$(facsimileRight).removeClass('is-hidden');
-				$(facsimileRight).siblings().addClass('is-hidden');
-				$(sectionFull).addClass('panel--left');
-				$(sectionFull).removeClass('panel--full');
-				$(sectionFullLeft).removeClass('is-hidden');
-				$(sectionDouble).addClass('is-hidden');
-				$(sectionFullRight).addClass('is-hidden');
+				$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
+				$(facsimileRight).removeClass('is-hidden'); // show right facsimile content
+				$(facsimileRight).siblings().addClass('is-hidden'); // hide all facsimile content except right
+				$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel class)
+				$(sectionFull).removeClass('panel--full'); // rename full panel step 1 (add left panel class)
+				$(sectionFullLeft).removeClass('is-hidden'); // show left half
+				$(sectionDouble).addClass('is-hidden'); // hide right panel wrapper
+				$(sectionFullRight).addClass('is-hidden'); // hide right panel content
 
 			}
 			function resetFacsimile() {
-				$(sectionFacsimile).addClass('is-hidden');
-				$(sectionSingle).removeClass('is-hidden');
-				$(sectionSingle).removeClass('panel--left');
-				$(sectionSingle).addClass('panel--full');
-				$(sectionFullLeft).addClass('panel--full');
+				$(sectionFacsimile).addClass('is-hidden'); // hide facsimile wrapper
+				$(sectionSingle).removeClass('is-hidden'); // show full/left panel content
+				$(sectionSingle).removeClass('panel--left'); // rename left panel step 1 (remove left panel class)
+				$(sectionSingle).addClass('panel--full'); // rename left panel step 2 (add full panel class)
+				$(sectionFullLeft).addClass('panel--full'); 
 				$(sectionFullLeft).removeClass('panel--left');
 				$(sectionFull).removeClass('is-hidden');
 				$(sectionFullRight).addClass('is-hidden');
