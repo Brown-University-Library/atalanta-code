@@ -376,24 +376,21 @@
 			});
 			$(facsimileSingleView).click(function() { // ACTIVATE SINGLE FACSIMILE
 				if ($(facsimileSingleView).attr("data-state")===("active")) {
-					alert("check 1L");
 					
 				}
 				else if ($(facsimileSingleView).attr("data-state")===("inactive")) {
 					$(singleNav).attr('data-state','inactive');
 					$(this).attr('data-state','active');
-					alert("check 2L");
 				}
 				checkState();
 ///////////////////////////
 
 				if( $(this).hasClass('is-active') ) {
-					alert("check 3L");
+
 				}
 				else {
 					$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
 					$(this).addClass('is-active'); // highlight selected view option in nav
-					alert("check 4L");
 					showFacsimile(); // display full-width or left half facsimile
 				}
 				return false;
