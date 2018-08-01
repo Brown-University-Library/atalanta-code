@@ -6,6 +6,9 @@
 .emblem-page {
 /*	margin-top: 200px;*/
 	background-color: $light-gray;
+	display: grid;
+	grid-template-columns: repeat( 4, 1fr);
+	grid-template-rows: 1;
 	padding: 50px 0 .125rem 0;
 
 }
@@ -13,6 +16,7 @@
 	margin-top: 128px;
 	background-color: green;
 	display: grid;
+	grid-area: 1 / 1 / 2 / 5;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: repeat(5, fit-content(100%));
 	min-height: 100vh;
@@ -60,6 +64,7 @@
 }
 .section__facsimile {
 	margin-top: 128px;
+	grid-area: 1 / 1 / 1 / 5;
 }
 .facsimile--full {
 	background-color: blue;
@@ -67,19 +72,16 @@
 	width: 100%;
 	position: fixed;
 }
-.facsimile--left {
-	background-color: pink;
-	height: 100vh;
-	width: 50%;
-	position: fixed;
-	left: 0;
+.grid--left {
+	grid-area: 1 / 1 / 2 / 3;
+	outline: 5px solid orange;
 }
-.facsimile--right {
+.grid--right {
+	grid-area: 1 / 3 / 2 / 5;
+}
+.grid--half {
 	background-color: orange;
-	height: 100vh;
-	width: 50%;
-	position: fixed;
-	right: 0;
+	width: 50%;	
 }
 .switch-wrapper {
 /*	border: 1px solid green;*/
