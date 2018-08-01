@@ -12,11 +12,9 @@ $(function () {
 			var latinDoubleView = '.subnav > ul li:nth-child(7)';
 			var facsimileDoubleView = '.subnav > ul li:nth-child(8)';
 			/* emblem languages */
-			var singleEmblem = '.emblem__full .section--single';
 			var singleTranslation = '.section--single .translation';
 			var singleOriginal = '.section--single .original';
 			var singleFacsimile = '.emblem__full .facsimile';
-			var doubleEmblem = '.emblem__full .section--double';
 			var doubleTranslation = '.section--double .translation';
 			var doubleOriginal = '.section--double .original';
 			// var leftEnglishGroup = '.left-english-text';
@@ -465,20 +463,12 @@ $(function () {
 					console.log("383: i'm making double view active in isActiveDouble()");
 				}
 			}
-			function splitWholeEmblem() {
-				$(doubleEmblem).removeClass('is-hidden'); //replace full-width with left/right halves in whole emblem container
-			}
-			function rejoinWholeEmblem() {
-				$(doubleEmblem).addClass('is-hidden'); //replace left/right halves with full-width in whole emblem container
-			}
 			function resetLanguagesOnLeft() {
-				$(singleEmblem).removeClass('is-hidden'); // show full-width emblem
 				$(singleFacsimile).addClass('is-hidden'); // hide full-width/left-half facsimile
 				$(singleTranslation).addClass('is-hidden'); // hide full-width/left-half english text
 				$(singleOriginal).addClass('is-hidden'); // hide full-width/left-half original language text
 			}
 			function resetLanguagesOnRight() {
-				$(doubleEmblem).removeClass('is-hidden'); // show right half in whole emblem container
 				$(doubleTranslation).addClass('is-hidden'); // hide all english text in right half
 				$(doubleOriginal).addClass('is-hidden'); // hide all latin/german text in right half
 				$(rightTranslation).addClass('is-hidden'); // hide right emblem english text
@@ -505,6 +495,5 @@ $(function () {
 			}
 			function storeFacsimileWhole() {
 				$(singleFacsimile).removeClass('is-hidden'); // show full-width facsimile
-				$(singleEmblem).addClass('is-hidden'); // hide whole emblem	
 			}
 		});
