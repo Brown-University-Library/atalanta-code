@@ -48,7 +48,6 @@ $(function () {
 			// var rightTranslation = '.emblem__right .translation';
 			// var rightOriginal = '.emblem__right .original';
 			/* emblem sections */
-			// var imageSection = '.emblem__full .image';
 			var imageSectionRight = '.section__image.section--full.panel--right .image__picture.section--single';
 			// var musicSection = '.emblem__full .music';
 
@@ -489,25 +488,21 @@ $(function () {
 			}
 			function showTranslation() {
 				$(singleTranslation).removeClass('is-hidden'); // display english text
-				storeTranslationLeft(); // mark english text to be visible in left container of split facsimile view
 				if( $(singleViewBtn).hasClass('is-active') ) {
 					hideFacsimileHalves(); // hide split facsimile view
 				}
 			}
 			function showTranslationDouble() {
 				$(doubleTranslation).removeClass('is-hidden'); // show latin/german text in double half
-				storeTranslationRight(); // mark english text to be visible in right container of split facsimile view
 			}
 			function showOriginalLanguage() {
 				$(singleOriginal).removeClass('is-hidden'); // display default latin text
-				storeOriginalLeft(); // mark default latin text to be visible in left container of split facsimile view
 				if( $(singleViewBtn).hasClass('is-active') ) {
 					hideFacsimileHalves(); // hide split facsimile view		
 				}
 			}
 			function showOriginalLanguageDouble() {
 				$(doubleOriginal).removeClass('is-hidden'); // show latin/german text in right half of whole emblem container
-				storeOriginalLanguageRight(); // mark latin text to be visible in right container of split facsimile view
 			}
 			function showFacsimile() {
 				storeFacsimileWhole(); // mark whole facsimile as active, even though the wrapper and its contents may be hidden
@@ -523,29 +518,6 @@ $(function () {
 			function showRightFacsimile() { // show right facsimile and hide right emblem text  
 					hideFacsimileWhole();
 					storeFacsimileRight();
-			}
-			function storeTranslationLeft() {
-				$('.emblem__left > .emblem').removeClass('is-hidden'); // show left emblem
-				$('.emblem__left > .emblem').siblings().addClass('is-hidden'); // hide left facsimile
-				$(leftEnglishGroup).removeClass('is-hidden'); // show left english text
-				$(leftEnglishGroup).siblings().addClass('is-hidden'); // hide left original text
-			}
-			function storeTranslationRight() {
-				$('.emblem__right > .emblem').removeClass('is-hidden'); // show right emblem
-				$('.emblem__right > .emblem').siblings().addClass('is-hidden'); // hide right facsimile
-				$(rightEnglishGroup).removeClass('is-hidden'); // show right english text
-				$(rightEnglishGroup).siblings().addClass('is-hidden'); // hide right original text
-			}
-			function storeOriginalLeft() {
-				$('.emblem__left > .emblem').removeClass('is-hidden'); // show left emblem
-				$('.emblem__left > .emblem').siblings().addClass('is-hidden'); // hide left facsimile
-				$(leftOriginalGroup).removeClass('is-hidden'); // show left latin text
-			}
-			function storeOriginalLanguageRight() {
-				$('.emblem__right > .emblem').removeClass('is-hidden'); // show right emblem
-				$('.emblem__right > .emblem').siblings().addClass('is-hidden'); // hide right facsimile
-				$(rightOriginalGroup).removeClass('is-hidden'); // show right latin/german text
-				$(rightOriginalGroup).siblings().addClass('is-hidden'); // hide right latin/german text
 			}
 			function storeFacsimileWhole() {
 				$(singleFacsimile).removeClass('is-hidden'); // show full-width facsimile
