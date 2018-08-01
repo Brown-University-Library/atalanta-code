@@ -19,10 +19,10 @@ $(function () {
 			var doubleEmblem = '.emblem__full .section--double';
 			var doubleTranslation = '.section--double .translation';
 			var doubleOriginal = '.section--double .original';
-			var leftEnglishGroup = '.left-english-text';
-			var rightEnglishGroup = '.right-english-text';
-			var leftOriginalGroup = '.left-latin-german-text';
-			var rightOriginalGroup = '.right-latin-german-text';
+			// var leftEnglishGroup = '.left-english-text';
+			// var rightEnglishGroup = '.right-english-text';
+			// var leftOriginalGroup = '.left-latin-german-text';
+			// var rightOriginalGroup = '.right-latin-german-text';
 			var leftFacsimileSwitch = '.left .facsimile-normalized-switch ul li:nth-child(1)';
 			var leftNormalizedSwitch = '.left .facsimile-normalized-switch ul li:nth-child(2)';
 			var rightFacsimileSwitch = '.right .facsimile-normalized-switch ul li:nth-child(1)';
@@ -38,19 +38,19 @@ $(function () {
 			// var epigramSideNav = 'ul.sidenav__options > a li:nth-child(4)';
 			// var discourseSideNav = 'ul.sidenav__options > a li:nth-child(5)';
 			/* emblem halves */
-			var wholeEmblemWrapper = '.emblem__full';
-			var leftEmblem = '.emblem__left';
-			var rightEmblem = '.emblem__right';
-			var leftEmblemText = '.emblem__left .emblem';
-			var rightEmblemText = '.emblem__right .emblem';
-			var leftFacsimile = '.emblem__left .facsimile-wrapper';
-			var rightFacsimile = '.emblem__right .facsimile-wrapper';
-			var rightTranslation = '.emblem__right .translation';
-			var rightOriginal = '.emblem__right .original';
+			// var wholeEmblemWrapper = '.emblem__full';
+			// var leftEmblem = '.emblem__left';
+			// var rightEmblem = '.emblem__right';
+			// var leftEmblemText = '.emblem__left .emblem';
+			// var rightEmblemText = '.emblem__right .emblem';
+			// var leftFacsimile = '.emblem__left .facsimile-wrapper';
+			// var rightFacsimile = '.emblem__right .facsimile-wrapper';
+			// var rightTranslation = '.emblem__right .translation';
+			// var rightOriginal = '.emblem__right .original';
 			/* emblem sections */
-			var imageSection = '.emblem__full .image';
+			// var imageSection = '.emblem__full .image';
 			var imageSectionRight = '.section__image.section--full.panel--right .image__picture.section--single';
-			var musicSection = '.emblem__full .music';
+			// var musicSection = '.emblem__full .music';
 
 
 
@@ -452,10 +452,6 @@ $(function () {
 					$(doubleNav).addClass('is-hidden'); // hide last 3 language options for double view
 					$(doubleViewBtn).removeClass('is-active'); // remove highlight from double view button
 					$(singleViewBtn).addClass('is-active'); // add highlight to single view button
-					// $(imageSection).removeClass('double'); // end half width image section
-					// $(imageSection).addClass('single'); // begin full width image section
-					// $(musicSection).removeClass('double'); // end half width music section
-					// $(musicSection).addClass('single'); // begin full width music section
 					console.log("367: i'm making single view active in isActiveSingle()");
 
 				}
@@ -468,10 +464,6 @@ $(function () {
 					$(doubleNav).removeClass('is-hidden'); // reveal last 3 language options for double view
 					$(singleViewBtn).removeClass('is-active'); // remove highlight from single view button
 					$(doubleViewBtn).addClass('is-active'); // add highlight to double view button
-					// $(imageSection).removeClass('single'); // end full width image section
-					// $(imageSection).addClass('double'); // begin half width image section
-					// $(musicSection).removeClass('single'); // end full width music section
-					// $(musicSection).addClass('double'); // begin half width music section
 					console.log("383: i'm making double view active in isActiveDouble()");
 				}
 			}
