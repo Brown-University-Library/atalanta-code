@@ -44,7 +44,6 @@ $(function () {
 			// var leftEmblemText = '.emblem__left .emblem';
 			// var rightEmblemText = '.emblem__right .emblem';
 			// var leftFacsimile = '.emblem__left .facsimile-wrapper';
-			// var rightFacsimile = '.emblem__right .facsimile-wrapper';
 			// var rightTranslation = '.emblem__right .translation';
 			// var rightOriginal = '.emblem__right .original';
 			/* emblem sections */
@@ -482,24 +481,17 @@ $(function () {
 				$(doubleEmblem).removeClass('is-hidden'); // show right half in whole emblem container
 				$(doubleTranslation).addClass('is-hidden'); // hide all english text in right half
 				$(doubleOriginal).addClass('is-hidden'); // hide all latin/german text in right half
-				$(rightFacsimile).addClass('is-hidden'); // hide right facsimile
 				$(rightTranslation).addClass('is-hidden'); // hide right emblem english text
 				$(rightOriginal).addClass('is-hidden'); // hide right emblem latin/german text
 			}
 			function showTranslation() {
 				$(singleTranslation).removeClass('is-hidden'); // display english text
-				if( $(singleViewBtn).hasClass('is-active') ) {
-					hideFacsimileHalves(); // hide split facsimile view
-				}
 			}
 			function showTranslationDouble() {
 				$(doubleTranslation).removeClass('is-hidden'); // show latin/german text in double half
 			}
 			function showOriginalLanguage() {
 				$(singleOriginal).removeClass('is-hidden'); // display default latin text
-				if( $(singleViewBtn).hasClass('is-active') ) {
-					hideFacsimileHalves(); // hide split facsimile view		
-				}
 			}
 			function showOriginalLanguageDouble() {
 				$(doubleOriginal).removeClass('is-hidden'); // show latin/german text in right half of whole emblem container
@@ -507,38 +499,12 @@ $(function () {
 			function showFacsimile() {
 				storeFacsimileWhole(); // mark whole facsimile as active, even though the wrapper and its contents may be hidden
 				storeFacsimileLeft(); // mark left facsimile as active, even though the wrapper and its contents may be hidden
-				if( $(singleViewBtn).hasClass('is-active') ) { // make facsimile 100vh
-					hideFacsimileHalves(); // show whole container emblem and hide left/right container emblems
-				}
-				// do I need an else if that applies to left facs when double view is active???
-				else if( $(doubleViewBtn).hasClass('is-active') ) {
-					hideFacsimileWhole(); // show split container emblems / hide whole container emblem
-				}
 			}
 			function showRightFacsimile() { // show right facsimile and hide right emblem text  
-					hideFacsimileWhole();
 					storeFacsimileRight();
 			}
 			function storeFacsimileWhole() {
 				$(singleFacsimile).removeClass('is-hidden'); // show full-width facsimile
 				$(singleEmblem).addClass('is-hidden'); // hide whole emblem	
-			}
-			function storeFacsimileLeft() {
-				$(leftFacsimile).removeClass('is-hidden'); // show left facsimile
-				$(leftFacsimile).siblings().addClass('is-hidden'); // hide left emblem text
-			}
-			function storeFacsimileRight() {
-				$(rightFacsimile).removeClass('is-hidden'); // show right facsimile
-				$(rightFacsimile).siblings().addClass('is-hidden'); // hide right emblem text
-			}
-			function hideFacsimileHalves() {
-				$(wholeEmblemWrapper).removeClass('is-hidden'); // show whole emblem
-				$(leftEmblem).addClass('is-hidden'); // hide left emblem
-				$(rightEmblem).addClass('is-hidden'); // hide right emblem
-			}
-			function hideFacsimileWhole() { // ***this has to happen whenever facsimile is selected in split view
-				$(wholeEmblemWrapper).addClass('is-hidden'); // hide whole emblem
-				$(leftEmblem).removeClass('is-hidden'); // show left emblem
-				$(rightEmblem).removeClass('is-hidden'); // show right emblem
 			}
 		});
