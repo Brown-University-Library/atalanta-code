@@ -132,6 +132,8 @@ $(function () {
 					$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
 					$(this).addClass('is-active'); // highlight selected view option in nav
 				}
+				$(sectionFacsimile).removeClass(gridLeft);
+				$(sectionFacsimile).removeClass(gridRight);
 				console.log("I clicked Facsimile Single");
 				return false;
 			});
@@ -182,6 +184,14 @@ $(function () {
 					
 				}
 				else if ($(facsimileDoubleView).attr("data-state")===("inactive")) {
+					if ($(facsimileSingleView).attr("data-state")===("active")) {
+						$(sectionFacsimile).removeClass(gridLeft);
+						$(sectionFacsimile).removeClass(gridRight);
+					}
+					else {
+						$(sectionFacsimile).removeClass(gridLeft);
+						$(sectionFacsimile).addClass(gridRight);
+					}
 					$(doubleNav).attr('data-state','inactive');
 					$(this).attr('data-state','active');
 				}
@@ -193,7 +203,7 @@ $(function () {
 					$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
 					$(this).addClass('is-active'); // highlight selected view option in nav
 				}
-				$(sectionFacsimile).addClass('grid--right');
+
 				console.log("I clicked Facsimile Double");
 				return false;
 
@@ -262,8 +272,6 @@ $(function () {
 			}
 			function showFacsimileFull() {
 				$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
-				$(facsimileFull).removeClass('is-hidden'); // show full facsimile
-				$(facsimileFull).siblings().addClass('is-hidden'); // hide left and right facsimiles
 				$(sectionSingle).addClass('is-hidden'); // hide full/left panel wrapper
 				$(sectionDouble).addClass('is-hidden'); // hide right panel wrapper
 				$(sectionFull).addClass('is-hidden'); // hide full/left panel content
@@ -426,4 +434,5 @@ $(function () {
 			function showOriginalLanguageDouble() {
 				$(doubleOriginal).removeClass('is-hidden'); // show latin/german text in right half of whole emblem container
 			}
+
 		});
