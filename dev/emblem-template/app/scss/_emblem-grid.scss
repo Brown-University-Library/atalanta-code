@@ -10,11 +10,9 @@
 	grid-template-columns: repeat( 4, 1fr);
 	grid-template-rows: 1;
 	padding: 50px 0 .125rem 0;
-
 }
 .emblem {
 	margin-top: 128px;
-	background-color: green;
 	display: grid;
 	grid-area: 1 / 1 / 2 / 5;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -67,7 +65,7 @@
 	grid-area: 1 / 1 / 1 / 5;
 }
 .facsimile--full {
-	background-color: blue;
+	background-color: $black;
 	height: 100vh;
 	width: 100%;
 	position: fixed;
@@ -80,7 +78,6 @@
 	grid-area: 1 / 3 / 2 / 5;
 }
 .grid--half {
-	background-color: orange;
 	width: 50%;	
 }
 .switch-wrapper {

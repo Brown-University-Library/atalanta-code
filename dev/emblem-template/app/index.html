@@ -7,10 +7,12 @@
 	<title>Furnace and Fugue: Atalanta Fugiens (Digital Edition)</title>
 	<link type="text/css" rel="stylesheet" media="screen" href="css/app.css">
 <!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+	<script type="text/javascript" src="js/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/openseadragon/openseadragon.min.js"></script>
 <!-- 	<script type="text/javascript" src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
-	<script type="text/javascript" src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
+	<script type="text/javascript" src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script> -->
+<!-- 	<script type="text/javascript" src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
 	<script type="text/javascript" src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script> -->
 </head>
 <body>
@@ -32,13 +34,32 @@
 		</nav>
 	</header>
 <!-- EMBLEM PAGE-->
-	<main class="emblem-page" data-id="4">
+	<main class="emblem-page" data-id="5">
 <!-- SIDENAV -->
 		<!-- <div class="_sidenav"></div> -->
 <!-- EMBLEM GRID -->
 		<!-- Facsimile -->
 		<div class="section__facsimile is-hidden">
-			<div class="facsimile--full"><section class="_facsimile">Facsimile</section></div>
+			<div class="facsimile--full">
+				<section class="_facsimile">
+					<!-- https://openseadragon.github.io/docs/ -->
+					<section class="facsimile">
+						<div id="openseadragon-wrapper">
+							<div id="tools">
+								<span>
+									<a id="zoom-in" href="#zoom-in" title="Zoom In" style="display: inline-block; position: relative">Zoom In</a>
+									<a id="zoom-out" href="#zoom-out" title="Zoom Out" style="display: inline-block; position: relative">Zoom Out</a>
+					<!-- 				<a id="home" href="#home" title="Go home" style="display: inline-block; position: relative;">Home</a> -->
+					<!-- 				<a id="home" href="#home" title="Home" style="display: inline-block; position: relative">Reset</a> -->
+					<!-- 				<a id="full-page" href="#full-page" title="Full Page" style="display: inline-block; position: relative">Full Page</a> -->
+									<a id="previous" href="#previous" title="Previous" style="display: inline-block; position: relative">Previous</a>
+									<a id="next" href="#next" title="Next" style="display: inline-block; position: relative">Next</a>
+								</span>
+							</div>
+						</div>
+					</section>
+				</section>
+			</div>
 		</div>
 		<div class="emblem">
 			<!-- Motto -->
@@ -225,6 +246,7 @@
 	</main> <!-- END OF EMBLEM PAGE -->
 <!-- JS -->
 	<script type="text/javascript" src="js/emblem.js"></script>
+	<script type="text/javascript" src="js/zooming-image-viewer--openseadragon.js"></script>
 </body>
 </html>
 

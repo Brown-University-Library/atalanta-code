@@ -1,44 +1,23 @@
+@import 'colors';
 @import 'utilities';
 
 #openseadragon-wrapper {
-/*	border: 1px solid red !important;*/
-	float: right !important;
 	height: calc(100vh - 11.125rem); /* currently, the combined height of the topnav and subnav is 11.125rem */
-/*	width: 50% !important;*/
-	width: 100vw;
-}
-#openseadragon-wrapper--half {
-/*	border: 1px solid red !important;*/
-	float: right !important;
-	height: calc(100vh - 11.125rem); /* currently, the combined height of the topnav and subnav is 11.125rem */
-/*	width: 50% !important;*/
-	width: 50vw !important;
-
-	canvas {
-		cursor: pointer;
-	}
-	.navigator {
-		cursor: pointer;
-	}
-}
-.facsimile-wrapper #openseadragon-wrapper {
-	width: 50vw;
 }
 #openseadragon-wrapper canvas {
 	cursor: pointer;
 }
-/*#openseadragon-wrapper .navigator {
-	cursor: pointer;
-}*/
-#tools {
+.facsimile--full #tools {
 	background-color: $black;
 	max-width: 25rem;
 	padding: 1rem;
 	position: absolute;
 	right: 0;
-	top: 25%;
+	top: 40%;
 	z-index: 1000;
-
+}
+.facsimile--full.grid--half #tools {
+	top: 93vh;
 }
 #tools a {
 	color: orange;
