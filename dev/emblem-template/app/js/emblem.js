@@ -17,10 +17,6 @@ $(function () {
 			var singleFacsimile = '.emblem__full .facsimile';
 			var doubleTranslation = '.section--double .translation';
 			var doubleOriginal = '.section--double .original';
-			// var leftEnglishGroup = '.left-english-text';
-			// var rightEnglishGroup = '.right-english-text';
-			// var leftOriginalGroup = '.left-latin-german-text';
-			// var rightOriginalGroup = '.right-latin-german-text';
 			var leftFacsimileSwitch = '.left .facsimile-normalized-switch ul li:nth-child(1)';
 			var leftNormalizedSwitch = '.left .facsimile-normalized-switch ul li:nth-child(2)';
 			var rightFacsimileSwitch = '.right .facsimile-normalized-switch ul li:nth-child(1)';
@@ -35,15 +31,6 @@ $(function () {
 			// var musicSideNav = 'ul.sidenav__options > a li:nth-child(3)';
 			// var epigramSideNav = 'ul.sidenav__options > a li:nth-child(4)';
 			// var discourseSideNav = 'ul.sidenav__options > a li:nth-child(5)';
-			/* emblem halves */
-			// var wholeEmblemWrapper = '.emblem__full';
-			// var leftEmblem = '.emblem__left';
-			// var rightEmblem = '.emblem__right';
-			// var leftEmblemText = '.emblem__left .emblem';
-			// var rightEmblemText = '.emblem__right .emblem';
-			// var leftFacsimile = '.emblem__left .facsimile-wrapper';
-			// var rightTranslation = '.emblem__right .translation';
-			// var rightOriginal = '.emblem__right .original';
 			/* emblem sections */
 			var imageSectionRight = '.section__image.section--full.panel--right .image__picture.section--single';
 			// var musicSection = '.emblem__full .music';
@@ -71,18 +58,6 @@ $(function () {
 				$(this).attr('data-state','active');
 				$(singleViewBtn).attr('data-state','inactive');
 				checkState();
-				//CHECK FACSIMILE
-				// console.log("I clicked on double view!");
-				// isActiveDouble(); // highlight double view
-				// if( $(facsimileSingleView).hasClass('is-active') ) { // display left facsimile if it is stored
-				// 	showFacsimile();
-				// }
-				// else if( $(facsimileDoubleView).hasClass('is-active') ) { // display right facsimile if it is stored
-				// 	showRightFacsimile();
-				// }
-				// else { // display emblem halves in whole emblem container if no facsimile is stored
-				// 	splitWholeEmblem();
-				// }
 				return false;
 			});
 			$(singleViewBtn).click(function() { // DISPLAY SINGLE EMBLEM
@@ -97,19 +72,6 @@ $(function () {
 				// 	$(englishSingleView).attr('data-state','inactive');
 				// }
 				checkState();
-				//CHECK FACSIMILE
-				// isActiveSingle(); // highlight single view
-				// rejoinWholeEmblem(); //replace left/right halves with full-width in whole emblem container
-				// if( $(facsimileSingleView).hasClass('is-active') ) { // display whole facsimile if left facsimile is active when switching from double to single view
-				// 	showFacsimile();
-				// }
-				// else if( $(englishSingleView).hasClass('is-active') ) { // display whole english text
-				// 	showTranslation();
-				// }
-				// else {  // display latin text in full-width or left half
-				// 	showOriginalLanguage();
-				// }
-
 				return false;
 			});
 			/* languages */
@@ -241,9 +203,6 @@ $(function () {
 					$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
 					$(this).addClass('is-active'); // highlight selected view option in nav
 					showRightFacsimile();
-					if( $(leftEmblem).hasClass('is-hidden') ) {
-						$(leftFacsimile).addClass('is-hidden'); // reset and hide left facsimile if the left panel is also hidden
-					}
 				}
 				return false;
 			});
@@ -471,8 +430,6 @@ $(function () {
 			function resetLanguagesOnRight() {
 				$(doubleTranslation).addClass('is-hidden'); // hide all english text in right half
 				$(doubleOriginal).addClass('is-hidden'); // hide all latin/german text in right half
-				$(rightTranslation).addClass('is-hidden'); // hide right emblem english text
-				$(rightOriginal).addClass('is-hidden'); // hide right emblem latin/german text
 			}
 			function showTranslation() {
 				$(singleTranslation).removeClass('is-hidden'); // display english text
