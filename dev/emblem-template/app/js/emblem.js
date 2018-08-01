@@ -14,7 +14,6 @@ $(function () {
 			/* emblem languages */
 			var singleTranslation = '.section--single .translation';
 			var singleOriginal = '.section--single .original';
-			var singleFacsimile = '.emblem__full .facsimile';
 			var doubleTranslation = '.section--double .translation';
 			var doubleOriginal = '.section--double .original';
 			var leftFacsimileSwitch = '.left .facsimile-normalized-switch ul li:nth-child(1)';
@@ -33,7 +32,6 @@ $(function () {
 			// var discourseSideNav = 'ul.sidenav__options > a li:nth-child(5)';
 			/* emblem sections */
 			var imageSectionRight = '.section__image.section--full.panel--right .image__picture.section--single';
-			// var musicSection = '.emblem__full .music';
 
 
 
@@ -136,7 +134,6 @@ $(function () {
 				else {
 					$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
 					$(this).addClass('is-active'); // highlight selected view option in nav
-					showFacsimile(); // display full-width or left half facsimile
 				}
 				return false;
 			});
@@ -202,7 +199,6 @@ $(function () {
 				else { 
 					$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
 					$(this).addClass('is-active'); // highlight selected view option in nav
-					showRightFacsimile();
 				}
 				return false;
 			});
@@ -423,7 +419,6 @@ $(function () {
 				}
 			}
 			function resetLanguagesOnLeft() {
-				$(singleFacsimile).addClass('is-hidden'); // hide full-width/left-half facsimile
 				$(singleTranslation).addClass('is-hidden'); // hide full-width/left-half english text
 				$(singleOriginal).addClass('is-hidden'); // hide full-width/left-half original language text
 			}
@@ -442,15 +437,5 @@ $(function () {
 			}
 			function showOriginalLanguageDouble() {
 				$(doubleOriginal).removeClass('is-hidden'); // show latin/german text in right half of whole emblem container
-			}
-			function showFacsimile() {
-				storeFacsimileWhole(); // mark whole facsimile as active, even though the wrapper and its contents may be hidden
-				storeFacsimileLeft(); // mark left facsimile as active, even though the wrapper and its contents may be hidden
-			}
-			function showRightFacsimile() { // show right facsimile and hide right emblem text  
-					storeFacsimileRight();
-			}
-			function storeFacsimileWhole() {
-				$(singleFacsimile).removeClass('is-hidden'); // show full-width facsimile
 			}
 		});
