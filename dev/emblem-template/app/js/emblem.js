@@ -43,7 +43,7 @@ $(function () {
 			/* newer variables (grid2) */
 			var gridLeft = 'grid--left';
 			var gridRight = 'grid--right';
-			var gridFull = 'grid--full';
+			var gridHalf = 'grid--half';
 			var sectionEmblem = '.emblem';
 
 /* INITIALIZE */
@@ -61,15 +61,8 @@ $(function () {
 			});
 			$(singleViewBtn).click(function() { // DISPLAY SINGLE EMBLEM
 				isActiveSingle();// highlight single view button
-				
 				$(this).attr('data-state', 'active');
 				$(doubleViewBtn).attr('data-state', 'inactive');
-
-
-				// if ($(englishSingleView).attr("data-state")===("active")) {
-				// 	console.log("I'm an active one!");
-				// 	$(englishSingleView).attr('data-state','inactive');
-				// }
 				checkState();
 				return false;
 			});
@@ -132,8 +125,6 @@ $(function () {
 					$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
 					$(this).addClass('is-active'); // highlight selected view option in nav
 				}
-				$(sectionFacsimile).removeClass(gridLeft);
-				$(sectionFacsimile).removeClass(gridRight);
 				console.log("I clicked Facsimile Single");
 				return false;
 			});
@@ -184,14 +175,6 @@ $(function () {
 					
 				}
 				else if ($(facsimileDoubleView).attr("data-state")===("inactive")) {
-					if ($(facsimileSingleView).attr("data-state")===("active")) {
-						$(sectionFacsimile).removeClass(gridLeft);
-						$(sectionFacsimile).removeClass(gridRight);
-					}
-					else {
-						$(sectionFacsimile).removeClass(gridLeft);
-						$(sectionFacsimile).addClass(gridRight);
-					}
 					$(doubleNav).attr('data-state','inactive');
 					$(this).attr('data-state','active');
 				}
@@ -203,7 +186,6 @@ $(function () {
 					$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
 					$(this).addClass('is-active'); // highlight selected view option in nav
 				}
-
 				console.log("I clicked Facsimile Double");
 				return false;
 
@@ -251,10 +233,12 @@ $(function () {
 			});
 /* FUNCTIONS */
 			function showFull() {
+				console.log("I am in showFull()");
 				resetFacsimile();
 				$(sectionDouble).addClass('is-hidden'); // show full / left half only
 			}
 			function showHalves() {
+				console.log("I am in showHalves()");
 				resetFacsimile();
 				$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
 				$(sectionSingle).addClass('panel--left');
@@ -262,6 +246,7 @@ $(function () {
 				$(sectionFullRight).addClass('is-hidden');
 			}
 			function showHalvesSplit() {
+				console.log("I am in showHalvesSplit()");
 				resetFacsimile();
 				$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
 				$(sectionSingle).addClass('panel--left'); // assign left half to single
@@ -271,13 +256,10 @@ $(function () {
 				$(sectionFullRight).removeClass('is-hidden'); // show right half
 			}
 			function showFacsimileFull() {
-				$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
-				$(sectionSingle).addClass('is-hidden'); // hide full/left panel wrapper
-				$(sectionDouble).addClass('is-hidden'); // hide right panel wrapper
-				$(sectionFull).addClass('is-hidden'); // hide full/left panel content
-				$(sectionFullRight).addClass('is-hidden'); // hide right panel content
-			}
-			function showFacsimileSplit() {
+				console.log("I am in showFacsimileFull()");
+				$(facsimileFull).removeClass(gridHalf); // make facsimile full width
+				$(sectionFacsimile).removeClass(gridLeft); // make facsimile full width
+				$(sectionFacsimile).removeClass(gridRight); // make facsimile full width
 				$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
 				$(sectionSingle).addClass('is-hidden'); // hide full/left panel wrapper
 				$(sectionDouble).addClass('is-hidden'); // hide right panel wrapper
@@ -285,6 +267,10 @@ $(function () {
 				$(sectionFullRight).addClass('is-hidden'); // hide right panel content
 			}
 			function showFacsimileLeft() {
+				console.log("I am in showFacsimileLeft()");
+				$(facsimileFull).addClass(gridHalf); // make facsimile half width (required because of fixed position in grid)
+				$(sectionFacsimile).removeClass(gridRight); // remove facsimile from right grid columns
+				$(sectionFacsimile).addClass(gridLeft); // add facsimile to left grid columns
 				$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
 				$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel name)
 				$(sectionFull).removeClass('panel--full'); // rename full panel step 2 (remove full panel name)
@@ -295,6 +281,10 @@ $(function () {
 				$(imageSectionRight).removeClass('is-hidden'); // kludge to show right image
 			}
 			function showFacsimileRight() {
+				console.log("I am in showFacsimileRight()");
+				$(facsimileFull).addClass(gridHalf); // make facsimile half width (required because of fixed position in grid)
+				$(sectionFacsimile).removeClass(gridLeft); // remove facsimile from left grid columns
+				$(sectionFacsimile).addClass(gridRight); // add facsimile to right grid columns
 				$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
 				$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel class)
 				$(sectionFull).removeClass('panel--full'); // rename full panel step 1 (add left panel class)
@@ -304,6 +294,7 @@ $(function () {
 
 			}
 			function resetFacsimile() {
+				console.log("I am in resetFacsimile()");
 				$(sectionFacsimile).addClass('is-hidden'); // hide facsimile wrapper
 				$(sectionSingle).removeClass('is-hidden'); // show full/left panel content
 				$(sectionSingle).removeClass('panel--left'); // rename left panel step 1 (remove left panel class)
@@ -353,7 +344,6 @@ $(function () {
 				// if double and SingleLatin and DoubleLatin are active
 				else if ( $(doubleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') && $(latinDoubleView).attr('data-state')===('active') ) {
 					showHalves();
-					// showHalvesSplit();
 					console.log("Single Latin is ACTIVE and Double Latin is ACTIVE");
 				}
 				// if double and SingleLatin and DoubleFacsimile are active
@@ -377,7 +367,7 @@ $(function () {
 				// if double and SingleFacsimile and DoubleFacsimile are active
 				else if ( $(doubleViewBtn).attr('data-state')===('active') && $(facsimileSingleView).attr('data-state')===('active') && $(facsimileDoubleView).attr('data-state')===('active') ) {
 					showHalves();
-					showFacsimileSplit();
+					showFacsimileFull();
 					console.log("Single Facsimile is ACTIVE and Double Facsimile is ACTIVE");
 				}
 			}
@@ -393,25 +383,25 @@ $(function () {
 			// I need to take a deep look at the *pages* event listeners and these two functions below. Are they repeating themselves???
 			function isActiveSingle() { // make full-width emblem when single view is active
 				if( $(singleViewBtn).hasClass('is-active') ) {
-					console.log("357: single view is already active");
+
 				}
 				else {
 					$(doubleNav).addClass('is-hidden'); // hide last 3 language options for double view
 					$(doubleViewBtn).removeClass('is-active'); // remove highlight from double view button
 					$(singleViewBtn).addClass('is-active'); // add highlight to single view button
-					console.log("367: i'm making single view active in isActiveSingle()");
+
 
 				}
 			}
 			function isActiveDouble() { // split whole emblem into left/right halves
 				if( $(doubleViewBtn).hasClass('is-active') ) {
-					console.log("373: double view is already active!!!");
+
 				}
 				else if( !$(doubleViewBtn).hasClass('is-active') && $(doubleNav).hasClass('is-hidden') ) { 
 					$(doubleNav).removeClass('is-hidden'); // reveal last 3 language options for double view
 					$(singleViewBtn).removeClass('is-active'); // remove highlight from single view button
 					$(doubleViewBtn).addClass('is-active'); // add highlight to double view button
-					console.log("383: i'm making double view active in isActiveDouble()");
+
 				}
 			}
 			function resetLanguagesOnLeft() {
@@ -434,5 +424,4 @@ $(function () {
 			function showOriginalLanguageDouble() {
 				$(doubleOriginal).removeClass('is-hidden'); // show latin/german text in right half of whole emblem container
 			}
-
 		});

@@ -74,12 +74,14 @@
 }
 .grid--left {
 	grid-area: 1 / 1 / 2 / 3;
+	outline: 5px solid orange;
 }
 .grid--right {
 	grid-area: 1 / 3 / 2 / 5;
 }
-.grid--full {
-	grid-area: 1 / 1 / 2 / 5;
+.grid--half {
+	background-color: orange;
+	width: 50%;	
 }
 .switch-wrapper {
 /*	border: 1px solid green;*/
