@@ -73,144 +73,37 @@ $(function () {
 
 /* EVENTS */
 	/* pages */
-	$(doubleViewBtn).click(function() { // DISPLAY SPLIT EMBLEM
-		isActiveDouble();// highlight side-by-side view button
-		
-		$(this).attr('data-state','active');
-		$(singleViewBtn).attr('data-state','inactive');
-		$(sideNav).addClass('is-hidden'); // hide sidenav in comparative page view
-		checkState();
+	$(doubleViewBtn).click(function() { // PROCESS COMPARATIVE VIEW PAGE
+		processComparativeView();
 		return false;
 	});
-	$(singleViewBtn).click(function() { // DISPLAY SINGLE EMBLEM
-		isActiveSingle();// highlight single view button
-		$(this).attr('data-state', 'active');
-		$(doubleViewBtn).attr('data-state', 'inactive');
-		$(sideNav).removeClass('is-hidden'); // show sidenav in single page view
-		checkState();
+	$(singleViewBtn).click(function() { // PROCESS SINGLE VIEW PAGE
+		processSingleView()
 		return false;
 	});
 	/* languages */
 	$(englishSingleView).click(function() { // ACTIVATE SINGLE ENGLISH
-		if ($(englishSingleView).attr("data-state")===("active")) {
-
-			
-		}
-		else if ($(englishSingleView).attr("data-state")===("inactive")) {
-			$(singleNav).attr('data-state','inactive');
-			$(this).attr('data-state','active');
-		}
-		checkState();
-		resetLanguagesOnLeft(); // hide all full-width text or left half text, except image and music sections
-		showTranslation(); // show english text in full-width or left half
-		if( $(this).hasClass('is-active') ) { 
-
-		}
-		else {
-			$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
-			$(this).addClass('is-active'); // highlight selected view option in single nav
-		}
+		processEnglishSingle();
 		return false;
 	});
 	$(latinSingleView).click(function() { // ACTIVATE SINGLE LATIN
-		if ($(latinSingleView).attr("data-state")===("active")) {
-
-			
-		}
-		else if ($(latinSingleView).attr("data-state")===("inactive")) {
-			$(singleNav).attr('data-state','inactive');
-			$(this).attr('data-state','active');
-		}
-		checkState();
-		resetLanguagesOnLeft(); // hide all full-width text or left half text, except image and music sections
-		showOriginalLanguage(); // show latin text in full-width or left half
-		if( $(this).hasClass('is-active') ) {
-
-		}
-		else {
-			$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
-			$(this).addClass('is-active'); // highlight selected view option in single nav
-		}
+		processLatinSingle();
 		return false;
 	});
 	$(facsimileSingleView).click(function() { // ACTIVATE SINGLE FACSIMILE
-		if ($(facsimileSingleView).attr("data-state")===("active")) {
-			
-		}
-		else if ($(facsimileSingleView).attr("data-state")===("inactive")) {
-			$(singleNav).attr('data-state','inactive');
-			$(this).attr('data-state','active');
-		}
-		checkState();
-		if( $(this).hasClass('is-active') ) {
-
-		}
-		else {
-			$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
-			$(this).addClass('is-active'); // highlight selected view option in nav
-		}
-		console.log("I clicked Facsimile Single");
+		processFacsimileSingle();
 		return false;
 	});
 	$(englishDoubleView).click(function() { // ACTIVATE DOUBLE ENGLISH
-		if ($(englishDoubleView).attr("data-state")===("active")) {
-
-			
-		}
-		else if ($(englishDoubleView).attr("data-state")===("inactive")) {
-			$(doubleNav).attr('data-state','inactive');
-			$(this).attr('data-state','active');
-		}
-		checkState();				
-		resetLanguagesOnRight(); // hide all full-width text or left half text, except image and music sections
-		showTranslationDouble(); // show english text in right half
-		if( $(this).hasClass('is-active') ) {
-
-		}
-		else {
-			$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
-			$(this).addClass('is-active'); // highlight selected view option in nav
-		}
+		processEnglishDouble();
 		return false;
 	});
 	$(latinDoubleView).click(function() { // ACTIVATE DOUBLE LATIN
-		if ($(latinDoubleView).attr("data-state")===("active")) {
-
-			
-		}
-		else if ($(latinDoubleView).attr("data-state")===("inactive")) {
-			$(doubleNav).attr('data-state','inactive');
-			$(this).attr('data-state','active');
-		}
-		checkState();
-		resetLanguagesOnRight(); // hide all full-width text or left half text, except image and music sections
-		showOriginalLanguageDouble(); // show latin text in right half
-		if( $(this).hasClass('is-active') ) {
-
-		}
-		else {
-			$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
-			$(this).addClass('is-active'); // highlight selected view option in nav
-		}
+		processLatinDouble();
 		return false;
 	});
 	$(facsimileDoubleView).click(function() { // ACTIVATE DOUBLE FACSIMILE
-		if ($(facsimileDoubleView).attr("data-state")===("active")) {
-			
-		}
-		else if ($(facsimileDoubleView).attr("data-state")===("inactive")) {
-			$(doubleNav).attr('data-state','inactive');
-			$(this).attr('data-state','active');
-		}
-		checkState();		
-		if( $(this).hasClass('is-active') ) {
-
-		}
-		else { 
-			$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
-			$(this).addClass('is-active'); // highlight selected view option in nav
-		}
-		console.log("I clicked Facsimile Double");
+		processFacsimileDouble();
 		return false;
 
 	});
@@ -332,89 +225,6 @@ $(function () {
 	// });
 // }
 /* FUNCTIONS */
-	function onLoad() {
-		$(doubleNav).toggleClass('is-hidden'); // hide last 3 language options for double view
-		$(singleViewBtn).toggleClass('is-active'); // make "Single View" button active
-		$(englishSingleView).toggleClass('is-active'); // highlight english translation as default single text
-		$(latinDoubleView).toggleClass('is-active'); // highlight latin as default double text
-		// $(mottoSideNav).toggleClass('is-active'); // highlight motto in sidenav menu
-		setSideNavNum();
-		console.log("I loaded the page");
-	}
-	function showFull() {
-		console.log("I am in showFull()");
-		resetFacsimile();
-		$(sectionDouble).addClass('is-hidden'); // show full / left half only
-		$(sideNav).removeClass('is-hidden'); // show sidenav in single page view
-	}
-	function showHalves() {
-		console.log("I am in showHalves()");
-		resetFacsimile();
-		$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
-		$(sectionSingle).addClass('panel--left');
-		$(sectionDouble).removeClass('is-hidden');
-		$(sectionFullRight).addClass('is-hidden');
-	}
-	function showHalvesSplit() {
-		console.log("I am in showHalvesSplit()");
-		resetFacsimile();
-		$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
-		$(sectionSingle).addClass('panel--left'); // assign left half to single
-		$(sectionDouble).removeClass('is-hidden'); // show left half
-		$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel name)
-		$(sectionFull).removeClass('panel--full'); // rename full panel step 2 (remove full panel name)
-		$(sectionFullRight).removeClass('is-hidden'); // show right half
-	}
-	function showFacsimileFull() {
-		console.log("I am in showFacsimileFull()");
-		$(facsimileFull).removeClass(gridHalf); // make facsimile full width
-		$(sectionFacsimile).removeClass(gridLeft); // make facsimile full width
-		$(sectionFacsimile).removeClass(gridRight); // make facsimile full width
-		$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
-		$(sectionSingle).addClass('is-hidden'); // hide full/left panel wrapper
-		$(sectionDouble).addClass('is-hidden'); // hide right panel wrapper
-		$(sectionFull).addClass('is-hidden'); // hide full/left panel content
-		$(sectionFullRight).addClass('is-hidden'); // hide right panel content
-		$(sideNav).addClass('is-hidden'); // hide sidenav when facsimile is active
-	}
-	function showFacsimileLeft() {
-		console.log("I am in showFacsimileLeft()");
-		$(facsimileFull).addClass(gridHalf); // make facsimile half width (required because of fixed position in grid)
-		$(sectionFacsimile).removeClass(gridRight); // remove facsimile from right grid columns
-		$(sectionFacsimile).addClass(gridLeft); // add facsimile to left grid columns
-		$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
-		$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel name)
-		$(sectionFull).removeClass('panel--full'); // rename full panel step 2 (remove full panel name)
-		$(sectionFullRight).removeClass('is-hidden');  // show right half
-		$(sectionSingle).addClass('is-hidden'); // hide full/left panel wrapper
-		$(sectionFullLeft).addClass('is-hidden'); // hide full/left panel content
-		$(imageSectionRight).removeClass('panel--left'); // kludge to show right image
-		$(imageSectionRight).removeClass('is-hidden'); // kludge to show right image
-	}
-	function showFacsimileRight() {
-		console.log("I am in showFacsimileRight()");
-		$(facsimileFull).addClass(gridHalf); // make facsimile half width (required because of fixed position in grid)
-		$(sectionFacsimile).removeClass(gridLeft); // remove facsimile from left grid columns
-		$(sectionFacsimile).addClass(gridRight); // add facsimile to right grid columns
-		$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
-		$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel class)
-		$(sectionFull).removeClass('panel--full'); // rename full panel step 1 (add left panel class)
-		$(sectionFullLeft).removeClass('is-hidden'); // show left half
-		$(sectionDouble).addClass('is-hidden'); // hide right panel wrapper
-		$(sectionFullRight).addClass('is-hidden'); // hide right panel content
-
-	}
-	function resetFacsimile() {
-		console.log("I am in resetFacsimile()");
-		$(sectionFacsimile).addClass('is-hidden'); // hide facsimile wrapper
-		$(sectionSingle).removeClass('is-hidden'); // show full/left panel content
-		$(sectionSingle).removeClass('panel--left'); // rename left panel step 1 (remove left panel class)
-		$(sectionSingle).addClass('panel--full'); // rename left panel step 2 (add full panel class)
-		$(sectionFullLeft).addClass('panel--full'); 
-		$(sectionFullLeft).removeClass('panel--left');
-		$(sectionFull).removeClass('is-hidden');
-		$(sectionFullRight).addClass('is-hidden');
-	}
 	function checkState() {
 		// if single and english are active
 		if ( $(singleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') ) {
@@ -482,26 +292,171 @@ $(function () {
 			console.log("Single Facsimile is ACTIVE and Double Facsimile is ACTIVE");
 		}
 	}
-	// I need to take a deep look at the *pages* event listeners and these two functions below. Are they repeating themselves???
-	function isActiveSingle() { // make full-width emblem when single view is active
-		if( $(singleViewBtn).hasClass('is-active') ) {
+	function isActiveSingle() { // when single view is selected, reveal comparative view switch but hide comparative nav
+		if( $(singleViewBtn).hasClass('is-hidden') ) {
 
 		}
 		else {
-			$(doubleNav).addClass('is-hidden'); // hide last 3 language options for double view
-			$(doubleViewBtn).removeClass('is-active'); // remove highlight from double view button
-			$(singleViewBtn).addClass('is-active'); // add highlight to single view button
+			$(singleViewBtn).addClass('is-hidden'); // hide single view btn
+			$(doubleViewBtn).removeClass('is-hidden'); // reveal comparative view btn
+			$(doubleNav).addClass('is-hidden'); // hide last 3 language options for comparative view
 		}
 	}
-	function isActiveDouble() { // split whole emblem into left/right halves
-		if( $(doubleViewBtn).hasClass('is-active') ) {
+	function isActiveDouble() { // when comparative view is selected, reveal single view switch and reveal comparative nav
+		if( $(doubleViewBtn).hasClass('is-hidden') ) {
 
 		}
-		else if( !$(doubleViewBtn).hasClass('is-active') && $(doubleNav).hasClass('is-hidden') ) { 
-			$(doubleNav).removeClass('is-hidden'); // reveal last 3 language options for double view
-			$(singleViewBtn).removeClass('is-active'); // remove highlight from single view button
-			$(doubleViewBtn).addClass('is-active'); // add highlight to double view button
+		else {
+			$(doubleViewBtn).addClass('is-hidden'); // hide comparative view btn
+			$(singleViewBtn).removeClass('is-hidden'); // reveal single view btn
+			$(doubleNav).removeClass('is-hidden'); // reveal last 3 language options for comparative view
 		}
+	}
+	function onLoad() {
+		$(doubleNav).toggleClass('is-hidden'); // hide last 3 language options for double view
+		$(englishSingleView).toggleClass('is-active'); // highlight english translation as default single text
+		$(latinDoubleView).toggleClass('is-active'); // highlight latin as default double text
+		sideNavSetNum();
+		console.log("I loaded the page");
+	}
+	function processComparativeView() {
+		isActiveDouble();// reveal single view btn and hide comparative view btn
+		$(doubleViewBtn).attr('data-state','active'); // make comparative view state active
+		$(singleViewBtn).attr('data-state','inactive'); // make single view state inactive
+		$(sideNav).addClass('is-hidden'); // hide sidenav in comparative view
+		checkState(); // check state of all subnav options to reveal correct panels/languages
+	}
+	function processSingleView() {
+		isActiveSingle();// reveal comparative view btn and hide single view btn
+		$(singleViewBtn).attr('data-state', 'active'); // make single view state active
+		$(doubleViewBtn).attr('data-state', 'inactive'); // make comparative view state inactive
+		$(sideNav).removeClass('is-hidden'); // show sidenav in single view
+		checkState(); // check state of all subnav options to reveal correct panels/languages
+	}
+	function processEnglishDouble() {
+		if ($(englishDoubleView).attr("data-state")===("active")) {
+
+			
+		}
+		else if ($(englishDoubleView).attr("data-state")===("inactive")) {
+			$(doubleNav).attr('data-state','inactive');
+			$(englishDoubleView).attr('data-state','active');
+		}
+		checkState();				
+		resetLanguagesOnRight(); // hide all full-width text or left half text, except image and music sections
+		showTranslationDouble(); // show english text in right half
+		if( $(englishDoubleView).hasClass('is-active') ) {
+
+		}
+		else {
+			$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
+			$(englishDoubleView).addClass('is-active'); // highlight selected view option in nav
+		}
+	}
+	function processEnglishSingle() {
+		if ($(englishSingleView).attr("data-state")===("active")) {
+
+			
+		}
+		else if ($(englishSingleView).attr("data-state")===("inactive")) {
+			$(singleNav).attr('data-state','inactive');
+			$(englishSingleView).attr('data-state','active');
+		}
+		checkState();
+		resetLanguagesOnLeft(); // hide all full-width text or left half text, except image and music sections
+		showTranslation(); // show english text in full-width or left half
+		if( $(englishSingleView).hasClass('is-active') ) { 
+
+		}
+		else {
+			$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
+			$(englishSingleView).addClass('is-active'); // highlight selected view option in single nav
+		}
+	}
+	function processFacsimileDouble() {
+		if ($(facsimileDoubleView).attr("data-state")===("active")) {
+			
+		}
+		else if ($(facsimileDoubleView).attr("data-state")===("inactive")) {
+			$(doubleNav).attr('data-state','inactive');
+			$(facsimileDoubleView).attr('data-state','active');
+		}
+		checkState();		
+		if( $(facsimileDoubleView).hasClass('is-active') ) {
+
+		}
+		else { 
+			$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
+			$(facsimileDoubleView).addClass('is-active'); // highlight selected view option in nav
+		}
+	}
+	function processFacsimileSingle() {
+		if ($(facsimileSingleView).attr("data-state")===("active")) {
+			
+		}
+		else if ($(facsimileSingleView).attr("data-state")===("inactive")) {
+			$(singleNav).attr('data-state','inactive');
+			$(facsimileSingleView).attr('data-state','active');
+		}
+		checkState();
+		if( $(facsimileSingleView).hasClass('is-active') ) {
+
+		}
+		else {
+			$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
+			$(facsimileSingleView).addClass('is-active'); // highlight selected view option in nav
+		}
+	}
+	function processLatinDouble() {
+		if ($(latinDoubleView).attr("data-state")===("active")) {
+
+			
+		}
+		else if ($(latinDoubleView).attr("data-state")===("inactive")) {
+			$(doubleNav).attr('data-state','inactive');
+			$(latinDoubleView).attr('data-state','active');
+		}
+		checkState();
+		resetLanguagesOnRight(); // hide all full-width text or left half text, except image and music sections
+		showOriginalLanguageDouble(); // show latin text in right half
+		if( $(latinDoubleView).hasClass('is-active') ) {
+
+		}
+		else {
+			$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
+			$(latinDoubleView).addClass('is-active'); // highlight selected view option in nav
+		}
+	}
+	function processLatinSingle() {
+		if ($(latinSingleView).attr("data-state")===("active")) {
+
+			
+		}
+		else if ($(latinSingleView).attr("data-state")===("inactive")) {
+			$(singleNav).attr('data-state','inactive');
+			$(latinSingleView).attr('data-state','active');
+		}
+		checkState();
+		resetLanguagesOnLeft(); // hide all full-width text or left half text, except image and music sections
+		showOriginalLanguage(); // show latin text in full-width or left half
+		if( $(latinSingleView).hasClass('is-active') ) {
+
+		}
+		else {
+			$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
+			$(latinSingleView).addClass('is-active'); // highlight selected view option in single nav
+		}
+	}
+	function resetFacsimile() {
+		console.log("I am in resetFacsimile()");
+		$(sectionFacsimile).addClass('is-hidden'); // hide facsimile wrapper
+		$(sectionSingle).removeClass('is-hidden'); // show full/left panel content
+		$(sectionSingle).removeClass('panel--left'); // rename left panel step 1 (remove left panel class)
+		$(sectionSingle).addClass('panel--full'); // rename left panel step 2 (add full panel class)
+		$(sectionFullLeft).addClass('panel--full'); 
+		$(sectionFullLeft).removeClass('panel--left');
+		$(sectionFull).removeClass('is-hidden');
+		$(sectionFullRight).addClass('is-hidden');
 	}
 	function resetLanguagesOnLeft() {
 		$(singleTranslation).addClass('is-hidden'); // hide full-width/left-half english text
@@ -511,11 +466,68 @@ $(function () {
 		$(doubleTranslation).addClass('is-hidden'); // hide all english text in right half
 		$(doubleOriginal).addClass('is-hidden'); // hide all latin/german text in right half
 	}
-	function showTranslation() {
-		$(singleTranslation).removeClass('is-hidden'); // display english text
+	function showHalves() {
+		console.log("I am in showHalves()");
+		resetFacsimile();
+		$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
+		$(sectionSingle).addClass('panel--left');
+		$(sectionDouble).removeClass('is-hidden');
+		$(sectionFullRight).addClass('is-hidden');
 	}
-	function showTranslationDouble() {
-		$(doubleTranslation).removeClass('is-hidden'); // show latin/german text in double half
+	function showHalvesSplit() {
+		console.log("I am in showHalvesSplit()");
+		resetFacsimile();
+		$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
+		$(sectionSingle).addClass('panel--left'); // assign left half to single
+		$(sectionDouble).removeClass('is-hidden'); // show left half
+		$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel name)
+		$(sectionFull).removeClass('panel--full'); // rename full panel step 2 (remove full panel name)
+		$(sectionFullRight).removeClass('is-hidden'); // show right half
+	}
+	function showFacsimileFull() {
+		console.log("I am in showFacsimileFull()");
+		$(facsimileFull).removeClass(gridHalf); // make facsimile full width
+		$(sectionFacsimile).removeClass(gridLeft); // make facsimile full width
+		$(sectionFacsimile).removeClass(gridRight); // make facsimile full width
+		$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
+		$(sectionSingle).addClass('is-hidden'); // hide full/left panel wrapper
+		$(sectionDouble).addClass('is-hidden'); // hide right panel wrapper
+		$(sectionFull).addClass('is-hidden'); // hide full/left panel content
+		$(sectionFullRight).addClass('is-hidden'); // hide right panel content
+		$(sideNav).addClass('is-hidden'); // hide sidenav when facsimile is active
+	}
+	function showFacsimileLeft() {
+		console.log("I am in showFacsimileLeft()");
+		$(facsimileFull).addClass(gridHalf); // make facsimile half width (required because of fixed position in grid)
+		$(sectionFacsimile).removeClass(gridRight); // remove facsimile from right grid columns
+		$(sectionFacsimile).addClass(gridLeft); // add facsimile to left grid columns
+		$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
+		$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel name)
+		$(sectionFull).removeClass('panel--full'); // rename full panel step 2 (remove full panel name)
+		$(sectionFullRight).removeClass('is-hidden');  // show right half
+		$(sectionSingle).addClass('is-hidden'); // hide full/left panel wrapper
+		$(sectionFullLeft).addClass('is-hidden'); // hide full/left panel content
+		$(imageSectionRight).removeClass('panel--left'); // kludge to show right image
+		$(imageSectionRight).removeClass('is-hidden'); // kludge to show right image
+	}
+	function showFacsimileRight() {
+		console.log("I am in showFacsimileRight()");
+		$(facsimileFull).addClass(gridHalf); // make facsimile half width (required because of fixed position in grid)
+		$(sectionFacsimile).removeClass(gridLeft); // remove facsimile from left grid columns
+		$(sectionFacsimile).addClass(gridRight); // add facsimile to right grid columns
+		$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
+		$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel class)
+		$(sectionFull).removeClass('panel--full'); // rename full panel step 1 (add left panel class)
+		$(sectionFullLeft).removeClass('is-hidden'); // show left half
+		$(sectionDouble).addClass('is-hidden'); // hide right panel wrapper
+		$(sectionFullRight).addClass('is-hidden'); // hide right panel content
+
+	}
+	function showFull() {
+		console.log("I am in showFull()");
+		resetFacsimile();
+		$(sectionDouble).addClass('is-hidden'); // show full / left half only
+		$(sideNav).removeClass('is-hidden'); // show sidenav in single page view
 	}
 	function showOriginalLanguage() {
 		$(singleOriginal).removeClass('is-hidden'); // display default latin text
@@ -523,10 +535,37 @@ $(function () {
 	function showOriginalLanguageDouble() {
 		$(doubleOriginal).removeClass('is-hidden'); // show latin/german text in right half of whole emblem container
 	}
+	function showTranslation() {
+		$(singleTranslation).removeClass('is-hidden'); // display english text
+	}
+	function showTranslationDouble() {
+		$(doubleTranslation).removeClass('is-hidden'); // show latin/german text in double half
+	}
 
 /* SIDENAV */
 //http://jennamolby.com/how-to-display-dynamic-content-on-a-page-using-url-parameters/
-	function setSideNavNum() {
+	function sideNavHighlightDiscourse() {
+		$(discourseSideNav).siblings().removeClass('sidenav--is-active');
+		$(discourseSideNav).addClass('sidenav--is-active');
+	}
+	function sideNavHighlightEpigram() {
+		$(epigramSideNav).siblings().removeClass('sidenav--is-active');
+		$(epigramSideNav).addClass('sidenav--is-active');
+	}
+	function sideNavHighlightImage() {
+		$(imageSideNav).siblings().removeClass('sidenav--is-active');
+		$(imageSideNav).addClass('sidenav--is-active');
+	}
+	function sideNavHighlightMotto() {
+		$(mottoSideNav).siblings().removeClass('sidenav--is-active');
+		$(mottoSideNav).addClass('sidenav--is-active');
+	}
+
+	function sideNavHighlightMusic() {
+		$(musicSideNav).siblings().removeClass('sidenav--is-active');
+		$(musicSideNav).addClass('sidenav--is-active');
+	}
+	function sideNavSetNum() {
 		if (dataID === 1) {
 			$(prevBtn).addClass('is-hidden'); // do not display previous button on first emblem
 			$(nextBtn).removeClass('is-hidden'); // display next button
@@ -564,34 +603,7 @@ $(function () {
 			$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
 		}	
 	}
-	function highlightSideNavMotto() {
-		$(mottoSideNav).siblings().removeClass('sidenav--is-active');
-		$(mottoSideNav).addClass('sidenav--is-active');
-	}
-	function highlightSideNavImage() {
-		$(imageSideNav).siblings().removeClass('sidenav--is-active');
-		$(imageSideNav).addClass('sidenav--is-active');
-	}
-	function highlightSideNavMusic() {
-		$(musicSideNav).siblings().removeClass('sidenav--is-active');
-		$(musicSideNav).addClass('sidenav--is-active');
-	}
-	function highlightSideNavEpigram() {
-		$(epigramSideNav).siblings().removeClass('sidenav--is-active');
-		$(epigramSideNav).addClass('sidenav--is-active');
-	}
-	function highlightSideNavDiscourse() {
-		$(discourseSideNav).siblings().removeClass('sidenav--is-active');
-		$(discourseSideNav).addClass('sidenav--is-active');
-	}		
-
-
-		// var myDoubleViewBtn = '.subnav > ul li:nth-child(5)';
-		// var mySideNav = '._sidenav';
-
-		// $(myDoubleViewBtn).click(function() {
-		// 	$(mySideNav).removeClass('is-hidden');
-		// });
+		
 
 	/*** MOTTO WAYPOINT ***/
 	// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
@@ -600,7 +612,7 @@ $(function () {
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-				highlightSideNavMotto();
+				sideNavHighlightMotto();
 			}
 			else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
 				
@@ -616,10 +628,10 @@ $(function () {
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-				highlightSideNavImage();
+				sideNavHighlightImage();
 			}
 			else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-				highlightSideNavMotto();
+				sideNavHighlightMotto();
 			}
 		},
 		offset: 300, // moving the trigger location from 0 at the top of the viewport
@@ -632,10 +644,10 @@ $(function () {
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-				highlightSideNavMusic();
+				sideNavHighlightMusic();
 			}
 			else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-				highlightSideNavImage();
+				sideNavHighlightImage();
 			}
 		},
 		offset: 300, // moving the trigger location from 0 at the top of the viewport
@@ -648,10 +660,10 @@ $(function () {
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-				highlightSideNavEpigram();
+				sideNavHighlightEpigram();
 			}
 			else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-				highlightSideNavMusic();
+				sideNavHighlightMusic();
 			}
 		},
 		offset: 300, // moving the trigger location from 0 at the top of the viewport
@@ -664,10 +676,10 @@ $(function () {
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-				highlightSideNavDiscourse();
+				sideNavHighlightDiscourse();
 			}
 			else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-				highlightSideNavEpigram();
+				sideNavHighlightEpigram();
 			}
 		},
 		offset: 300, // moving the trigger location from 0 at the top of the viewport

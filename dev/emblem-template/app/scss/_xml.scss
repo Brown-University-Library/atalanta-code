@@ -66,3 +66,20 @@ h3.title .italics {
 	font-style: oblique;
 }
 
+/* BREAKPOINTS */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.subst {
+		margin-right: -.5rem;
+	}
+	div.title {
+		grid-area: 1 / 2 / 2 / 12;
+	}
+	h1.title {
+		font-size: 2rem;
+		line-height: 2.125rem;
+	}
+	h3.title {
+		font-size: .825rem;
+		line-height: 1.5rem;
+	}
+}
