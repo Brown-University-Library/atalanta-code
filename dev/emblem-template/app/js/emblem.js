@@ -36,11 +36,22 @@ $(function () {
 	// var rightGermanSwitch = '.panel--right .right .latin-german-switch ul li:nth-child(2)';
 
 	/* emblem side nav */
-	// var mottoSideNav = 'ul.sidenav__options > a li:nth-child(1)';
-	// var imageSideNav = 'ul.sidenav__options > a li:nth-child(2)';
-	// var musicSideNav = 'ul.sidenav__options > a li:nth-child(3)';
-	// var epigramSideNav = 'ul.sidenav__options > a li:nth-child(4)';
-	// var discourseSideNav = 'ul.sidenav__options > a li:nth-child(5)';
+	var sideNav = '.wrapper-sidenav';
+	var mottoSideNav = 'ul.sidenav__options > li:nth-child(1)';
+	var imageSideNav = 'ul.sidenav__options > li:nth-child(2)';
+	var musicSideNav = 'ul.sidenav__options > li:nth-child(3)';
+	var epigramSideNav = 'ul.sidenav__options > li:nth-child(4)';
+	var discourseSideNav = 'ul.sidenav__options > li:nth-child(5)';
+	var sideNavOption = 'ul.sidenav__options > li';
+	var dataID = $('.emblem-page').data('id');
+	var myEmblem = dataID - 4;
+	var currentEmblemNum = myEmblem;
+	var prevEmblemNum = currentEmblemNum - 1;
+	var nextEmblemNum = currentEmblemNum + 1;
+	var prevBtn = '#sidenav__prev';
+	var nextBtn = '#sidenav__next';
+	var emblemNumTextArea = '#sidenav__titles';
+
 	/* emblem sections */
 	var imageSectionRight = '.section__image.section--full.panel--right .image__picture.section--single';
 	/* new variables (grid) */
@@ -67,6 +78,7 @@ $(function () {
 		
 		$(this).attr('data-state','active');
 		$(singleViewBtn).attr('data-state','inactive');
+		$(sideNav).addClass('is-hidden'); // hide sidenav in comparative page view
 		checkState();
 		return false;
 	});
@@ -74,6 +86,7 @@ $(function () {
 		isActiveSingle();// highlight single view button
 		$(this).attr('data-state', 'active');
 		$(doubleViewBtn).attr('data-state', 'inactive');
+		$(sideNav).removeClass('is-hidden'); // show sidenav in single page view
 		checkState();
 		return false;
 	});
@@ -201,6 +214,31 @@ $(function () {
 		return false;
 
 	});
+	/* sidenav */
+	$(sideNavOption).click(function() {
+		$(this).siblings().removeClass('sidenav--is-active'); // remove bkg highlight from all li
+		$(this).addClass('sidenav--is-active'); // add bkg highlight to currently selected li
+	// 	if($(this).children("a").attr("href")===("#motto")) {
+	// 		$('section.section__motto').siblings().removeClass('jumplink--kludge');
+	// 		$('section.section__motto').addClass('jumplink--kludge');
+	// 		$('.emblem').css("margin-top", "0");
+	// 		console.log("motto!");
+	// 	}
+	// 	else if($(this).children("a").attr("href")===("#image")) {
+	// 		$('.section__image').siblings().removeClass('jumplink--kludge');
+	// 		$('div.section__image').addClass('jumplink--kludge');
+	// 		console.log("image!");
+	// 	}
+	// 	else if($(this).children("a").attr("href")===("#music")) {
+	// 		console.log("music!");
+	// 	}
+	// 	else if($(this).children("a").attr("href")===("#epigram")) {
+	// 		console.log("epigram!");
+	// 	}
+	// 	else if($(this).children("a").attr("href")===("#discourse")) {
+	// 		console.log("discourse!");
+	// 	}
+	});
 	/* text switches */
 	$(leftNormalizedSwitch).click(function() { // SELECT LEFT & FULL NORMALIZED SWITCH
 		console.log("I clicked left normalized");
@@ -294,10 +332,20 @@ $(function () {
 	// });
 // }
 /* FUNCTIONS */
+	function onLoad() {
+		$(doubleNav).toggleClass('is-hidden'); // hide last 3 language options for double view
+		$(singleViewBtn).toggleClass('is-active'); // make "Single View" button active
+		$(englishSingleView).toggleClass('is-active'); // highlight english translation as default single text
+		$(latinDoubleView).toggleClass('is-active'); // highlight latin as default double text
+		// $(mottoSideNav).toggleClass('is-active'); // highlight motto in sidenav menu
+		setSideNavNum();
+		console.log("I loaded the page");
+	}
 	function showFull() {
 		console.log("I am in showFull()");
 		resetFacsimile();
 		$(sectionDouble).addClass('is-hidden'); // show full / left half only
+		$(sideNav).removeClass('is-hidden'); // show sidenav in single page view
 	}
 	function showHalves() {
 		console.log("I am in showHalves()");
@@ -327,6 +375,7 @@ $(function () {
 		$(sectionDouble).addClass('is-hidden'); // hide right panel wrapper
 		$(sectionFull).addClass('is-hidden'); // hide full/left panel content
 		$(sectionFullRight).addClass('is-hidden'); // hide right panel content
+		$(sideNav).addClass('is-hidden'); // hide sidenav when facsimile is active
 	}
 	function showFacsimileLeft() {
 		console.log("I am in showFacsimileLeft()");
@@ -433,16 +482,6 @@ $(function () {
 			console.log("Single Facsimile is ACTIVE and Double Facsimile is ACTIVE");
 		}
 	}
-	function onLoad() {
-		$(doubleNav).toggleClass('is-hidden'); // hide last 3 language options for double view
-		$(singleViewBtn).toggleClass('is-active'); // make "Single View" button active
-		$(englishSingleView).toggleClass('is-active'); // highlight english translation as default single text
-		$(latinDoubleView).toggleClass('is-active'); // highlight latin as default double text
-		// $('ul.sidenav__options a:nth-child(1)').toggleClass('is-active'); // highlight motto in sidenav menu
-		$('.wrapper-vertical-divider').toggleClass('is-disabled'); // hide vertical line that divides text sections
-		// textSwitch(); // enable facsimile/normalized/german/latin switches when languages are done
-		console.log("I loaded the page");
-	}
 	// I need to take a deep look at the *pages* event listeners and these two functions below. Are they repeating themselves???
 	function isActiveSingle() { // make full-width emblem when single view is active
 		if( $(singleViewBtn).hasClass('is-active') ) {
@@ -452,8 +491,6 @@ $(function () {
 			$(doubleNav).addClass('is-hidden'); // hide last 3 language options for double view
 			$(doubleViewBtn).removeClass('is-active'); // remove highlight from double view button
 			$(singleViewBtn).addClass('is-active'); // add highlight to single view button
-
-
 		}
 	}
 	function isActiveDouble() { // split whole emblem into left/right halves
@@ -464,7 +501,6 @@ $(function () {
 			$(doubleNav).removeClass('is-hidden'); // reveal last 3 language options for double view
 			$(singleViewBtn).removeClass('is-active'); // remove highlight from single view button
 			$(doubleViewBtn).addClass('is-active'); // add highlight to double view button
-
 		}
 	}
 	function resetLanguagesOnLeft() {
@@ -487,4 +523,156 @@ $(function () {
 	function showOriginalLanguageDouble() {
 		$(doubleOriginal).removeClass('is-hidden'); // show latin/german text in right half of whole emblem container
 	}
+
+/* SIDENAV */
+//http://jennamolby.com/how-to-display-dynamic-content-on-a-page-using-url-parameters/
+	function setSideNavNum() {
+		if (dataID === 1) {
+			$(prevBtn).addClass('is-hidden'); // do not display previous button on first emblem
+			$(nextBtn).removeClass('is-hidden'); // display next button
+			$(nextBtn).attr("href", "author-epigram.html"); // update the next button to link to the next emblem
+			$(emblemNumTextArea).text("Frontispiece"); // update the emblem title to reflect the current emblem number
+		}
+		else if (dataID === 2) {
+			$(prevBtn).attr("href", "frontispiece.html"); // update the previous button to link to the previous emblem
+			$(nextBtn).attr("href", "dedication.html"); // update the next button to link to the next emblem
+			$(emblemNumTextArea).text("Author's Epigram"); // update the emblem title to reflect the current emblem number	
+		}
+		else if (dataID === 3) {
+			$(prevBtn).attr("href", "author-epigram.html"); // update the previous button to link to the previous emblem
+			$(nextBtn).attr("href", "preface.html"); // update the next button to link to the next emblem
+			$(emblemNumTextArea).text("Dedication"); // update the emblem title to reflect the current emblem number
+		}
+		else if (dataID === 4) {
+			$(prevBtn).attr("href", "dedication.html"); // update the previous button to link to the previous emblem
+			$(nextBtn).attr("href", "emblem01.html"); // update the next button to link to the next emblem
+			$(emblemNumTextArea).text("Preface"); // update the emblem title to reflect the current emblem number
+		}
+		else if (dataID === 5) {
+			$(prevBtn).attr("href", "preface.html"); // update the previous button to link to the previous emblem
+			$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
+			$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
+		}
+		else if (dataID > 5 && dataID < 55) {
+			$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
+			$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
+			$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
+		}
+		else if (dataID === 55) {
+			$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
+			$(nextBtn).addClass('is-hidden'); // do not display next button
+			$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
+		}	
+	}
+	function highlightSideNavMotto() {
+		$(mottoSideNav).siblings().removeClass('sidenav--is-active');
+		$(mottoSideNav).addClass('sidenav--is-active');
+	}
+	function highlightSideNavImage() {
+		$(imageSideNav).siblings().removeClass('sidenav--is-active');
+		$(imageSideNav).addClass('sidenav--is-active');
+	}
+	function highlightSideNavMusic() {
+		$(musicSideNav).siblings().removeClass('sidenav--is-active');
+		$(musicSideNav).addClass('sidenav--is-active');
+	}
+	function highlightSideNavEpigram() {
+		$(epigramSideNav).siblings().removeClass('sidenav--is-active');
+		$(epigramSideNav).addClass('sidenav--is-active');
+	}
+	function highlightSideNavDiscourse() {
+		$(discourseSideNav).siblings().removeClass('sidenav--is-active');
+		$(discourseSideNav).addClass('sidenav--is-active');
+	}		
+
+
+		// var myDoubleViewBtn = '.subnav > ul li:nth-child(5)';
+		// var mySideNav = '._sidenav';
+
+		// $(myDoubleViewBtn).click(function() {
+		// 	$(mySideNav).removeClass('is-hidden');
+		// });
+
+	/*** MOTTO WAYPOINT ***/
+	// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+	var waypoint = new Waypoint({
+		element: document.getElementById('basic-waypoint__0'), // tells waypoint which DOM element's position to observe on scroll
+		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+			console.log('Direction: ' + direction);
+			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
+				highlightSideNavMotto();
+			}
+			else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
+				
+			}
+		},
+		offset: 150, // moving the trigger location from 0 at the top of the viewport
+	})
+
+	/*** IMAGE WAYPOINT ***/
+	// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+	var waypoint = new Waypoint({
+		element: document.getElementById('basic-waypoint__1'), // tells waypoint which DOM element's position to observe on scroll
+		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+			console.log('Direction: ' + direction);
+			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
+				highlightSideNavImage();
+			}
+			else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
+				highlightSideNavMotto();
+			}
+		},
+		offset: 300, // moving the trigger location from 0 at the top of the viewport
+	})
+
+	/*** MUSIC WAYPOINT ***/
+	// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+	var waypoint = new Waypoint({
+		element: document.getElementById('basic-waypoint__2'), // tells waypoint which DOM element's position to observe on scroll
+		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+			console.log('Direction: ' + direction);
+			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
+				highlightSideNavMusic();
+			}
+			else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
+				highlightSideNavImage();
+			}
+		},
+		offset: 300, // moving the trigger location from 0 at the top of the viewport
+	})
+
+	/*** EPIGRAM WAYPOINT ***/
+	// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+	var waypoint = new Waypoint({
+		element: document.getElementById('basic-waypoint__3'), // tells waypoint which DOM element's position to observe on scroll
+		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+			console.log('Direction: ' + direction);
+			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
+				highlightSideNavEpigram();
+			}
+			else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
+				highlightSideNavMusic();
+			}
+		},
+		offset: 300, // moving the trigger location from 0 at the top of the viewport
+	})
+
+	/*** DISCOURSE WAYPOINT ***/
+	// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+	var waypoint = new Waypoint({
+		element: document.getElementById('basic-waypoint__4'), // tells waypoint which DOM element's position to observe on scroll
+		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+			console.log('Direction: ' + direction);
+			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
+				highlightSideNavDiscourse();
+			}
+			else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
+				highlightSideNavEpigram();
+			}
+		},
+		offset: 300, // moving the trigger location from 0 at the top of the viewport
+	})
+
+
+
 });

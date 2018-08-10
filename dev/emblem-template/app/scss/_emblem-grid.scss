@@ -4,15 +4,14 @@
 	display: none;
 }
 .emblem-page {
-/*	margin-top: 200px;*/
 	background-color: $light-gray;
 	display: grid;
 	grid-template-columns: repeat( 4, 1fr);
 	grid-template-rows: 1;
-	padding: 50px 0 .125rem 0;
+	padding: 0 0 .125rem 0;
 }
 .emblem {
-	margin-top: 128px;
+	margin-top: $emblemnav-h;
 	display: grid;
 	grid-area: 1 / 1 / 2 / 5;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
