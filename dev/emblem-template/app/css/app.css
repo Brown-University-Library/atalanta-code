@@ -327,6 +327,7 @@ button {
   position: fixed;
   z-index: 100; }
   .subnav ul {
+    background-color: #fff;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -339,11 +340,15 @@ button {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: .5rem 3rem;
     width: 100%; }
     .subnav ul li {
       /*			background-color: hsla(145, 60%, 45%, .5);*/
-      background-color: #222;
-      color: #fff;
+      border-radius: 5px;
+      color: #222;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -356,9 +361,14 @@ button {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-      font-size: 1em; }
+      font-size: 1rem;
+      height: 3.5rem;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto; }
       .subnav ul li a {
-        color: #fff;
+        color: #222;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
@@ -381,31 +391,18 @@ button {
       -webkit-box-ordinal-group: 2;
       -webkit-order: 1;
       -ms-flex-order: 1;
-      order: 1;
-      max-width: 50%; }
+      order: 1; }
     .subnav ul li:nth-child(2) {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
       -webkit-box-ordinal-group: 4;
       -webkit-order: 3;
       -ms-flex-order: 3;
       order: 3; }
     .subnav ul li:nth-child(3) {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
       -webkit-box-ordinal-group: 5;
       -webkit-order: 4;
       -ms-flex-order: 4;
       order: 4; }
     .subnav ul li:nth-child(4) {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
       -webkit-box-ordinal-group: 6;
       -webkit-order: 5;
       -ms-flex-order: 5;
@@ -414,48 +411,43 @@ button {
       -webkit-box-ordinal-group: 3;
       -webkit-order: 2;
       -ms-flex-order: 2;
-      order: 2;
-      max-width: 50%; }
+      order: 2; }
     .subnav ul li:nth-child(6) {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
       -webkit-box-ordinal-group: 7;
       -webkit-order: 6;
       -ms-flex-order: 6;
       order: 6; }
     .subnav ul li:nth-child(7) {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
       -webkit-box-ordinal-group: 8;
       -webkit-order: 7;
       -ms-flex-order: 7;
       order: 7; }
     .subnav ul li:nth-child(8) {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
       -webkit-box-ordinal-group: 9;
       -webkit-order: 8;
       -ms-flex-order: 8;
       order: 8; }
 
+/*.subnav__views--single, .subnav__views--double  {
+	box-sizing: border-box;
+	cursor: pointer;
+	height: 40%;
+	width: 50%;
+}*/
 .subnav__views--single, .subnav__views--double {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  cursor: pointer;
-  height: 40%;
-  width: 50%; }
-
-.subnav__views--single {
-  border-right: 0.25rem solid #fff; }
+  /*border-right: .25rem solid $white;*/
+  background-color: #fff;
+  border: 5px solid green;
+  border-radius: 5px;
+  width: 15rem;
+  position: absolute;
+  right: 2rem;
+  top: 5.625rem; }
+  .subnav__views--single a, .subnav__views--double a {
+    color: green; }
 
 .subnav__views--double {
-  border-left: 0.25rem solid #fff; }
+  /*border-left: .25rem solid $white;*/ }
 
 .subnav__options--option {
   height: 60%; }
@@ -532,18 +524,27 @@ button {
 /*** Breakpoints ***/
 /* small  -  mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .subnav5 {
-    z-index: 10;
+  .emblem {
+    margin-top: 0; }
+  .subnav {
+    height: auto;
+    margin-top: 0 !important;
     position: fixed;
-    top: 0;
-    transform: translate3d(0, 101vh, 0);
-    -webkit-transform: translate3d(0, 101vh, 0);
-    -webkit-transition: -webkit-transform .25s linear;
-    transition: -webkit-transform .25s linear;
-    -o-transition: transform .25s linear;
-    transition: transform .25s linear;
-    transition: transform .25s linear, -webkit-transform .25s linear;
-    -webkit-transition: transform .25s linear; }
+    bottom: 0;
+    /*		transform: translate3d(0, 130vh, 0);
+		-webkit-transform: translate3d(0, 130vh, 0);
+		transition: transform .25s linear;
+		-webkit-transition: transform .25s linear;*/ }
+    .subnav ul {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      padding: .5rem; }
+  .subnav__views--single, .subnav__views--double {
+    display: none !important; }
+  .wrapper-sidenav {
+    display: none !important; }
   /*	.subnav--open {
 		transform: translate3d(0, 93vh, 0);
 		-webkit-transform: translate3d(0, 93vh, 0);
@@ -565,11 +566,7 @@ button {
 		-webkit-transform: translate3d(0, 83.5vh, 0);
 		transition: transform .25s linear;
 		-webkit-transition: transform .25s linear;	
-	}*/
-  .subnav5__options {
-    top: 0; }
-  .subnav5__btn__single, .subnav5__btn__double {
-    display: none; } }
+	}*/ }
 
 /* medium  -  tablet */
 /* medium-large */
@@ -961,6 +958,13 @@ background-color: blue !important;
       .latin-german-switch ul li a:hover, .facsimile-normalized-switch ul li a:hover {
         color: #7694C0; }
 
+/* BREAKPOINTS */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .emblem {
+    margin-top: 3.125rem; }
+  .emblem__image--cropped {
+    width: 100%; } }
+
 .edition--normalized .del {
   display: none; }
 
@@ -1031,6 +1035,19 @@ h3.title {
 
 h3.title .italics {
   font-style: oblique; }
+
+/* BREAKPOINTS */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .subst {
+    margin-right: -.5rem; }
+  div.title {
+    grid-area: 1 / 2 / 2 / 12; }
+  h1.title {
+    font-size: 2rem;
+    line-height: 2.125rem; }
+  h3.title {
+    font-size: .825rem;
+    line-height: 1.5rem; } }
 
 /*@import 'tara__atalanta-proof--color';
 @import 'tara';*/
