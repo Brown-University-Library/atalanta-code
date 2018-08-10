@@ -1,5 +1,11 @@
 @import 'colors';
 
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+}
 .btn {
 	background-color: $dusty-blue;
 	border-radius: .25rem;

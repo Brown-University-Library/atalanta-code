@@ -2,16 +2,15 @@
 @import 'colors';
 
 .topnav {
-/*	background-color: hsla(70, 30%, 60%, .5);*/
 	background-color: $black;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: $topnav-h;
-	width: 100%;
 	line-height: 2rem;
 	margin: 0;
 	position: fixed;
+	width: 100%;
 	z-index: 100000;
 	ul {
 		display: flex;
@@ -31,59 +30,53 @@
 	}
 }
 .toc-wrapper {
-	position: fixed;
-/*	height: 100vh;*/
-	width: 100%;
-	height: 100vh;
-
-	top: 0;
-	left: 0;	
-/*	overflow: hidden;*/
-	z-index: 20000000;
-/*	overflow: hidden;*/
-overflow: auto;
-/*	display: flex;
-	justify-content: flex-start;*/
 	display: none;
+	height: 100vh;
+	overflow: auto;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 20000000;
 }
 .toc {
-	padding: 2rem;
 	background-color: $gray;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	height: 180vh;
-/*	overflow-y: auto;
-	overflow-x: hidden;*/
+	padding: 2rem;
 	width: 20%;
-/*	position: fixed;*/
-/*	height: 100vh;*/
-/*		overflow-y: auto !important;
-		overflow-x: hidden;*/
-
-
 }
-.edition {
-/*	border: 2px solid purple;*/
+.toc__items {
 	display: flex;
 	flex-direction: column;
-	align-content: center;
+	align-items: flex-start;
 	height: auto;
-/*height: auto;*/
 	width: 100%;
-/*	overflow: auto;*/
-
-/*	border: 5px solid green;*/
+	li {
+		color: $white;
+		cursor: default;
+		font-size: 1rem;
+		line-height: 1.5rem;
+		padding-left: 2rem;
+		text-align: left;
+	}
+	.toc__heading  {
+		color: $dark-pink;
+		padding-left: .5rem;
+	}
+	.toc__heading a {
+		color: $dark-pink;
+	}
+	.toc__heading a:hover {
+		color: $dusty-pink;
+	}
 	a {
 		display: flex;
 		align-self: center;
 		justify-content: center;
-/*		border: 1px solid pink;*/
 		color: $white;
-		font-size: 1rem;
-		line-height: 1.5rem;
-		padding: 0 1rem;
-		margin: 0 20%;
 	}
 	a:hover {
 		color: $dusty-blue-lt;
@@ -95,6 +88,12 @@ overflow: auto;
 .move-out {
 	left: -50vh;
 }
+/*.move-in__bkg {
+	background-color: hsla(0, 0%, 10%, .8);
+}
+.move-out__bkg {
+	background-color: hsla(0, 0%, 90%, .3);
+}*/
 
 
 /*** Breakpoints ***/

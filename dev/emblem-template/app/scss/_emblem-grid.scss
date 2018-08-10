@@ -22,7 +22,7 @@
 }
 .emblem section {
 	background-color: $white;
-	margin: .5rem;
+/*	margin: .5rem;*/
 	padding: 1rem 0;
 }
 .panel--full {
@@ -59,6 +59,12 @@
 .section__discourse {
 	grid-row-start: 5;
 	grid-row-end: 6;	
+}
+.section__motto.panel--left, .section__epigram.panel--left, .section__discourse.panel--left {
+	margin-right: 5px;
+}
+.section__motto.panel--right, .section__epigram.panel--right, .section__discourse.panel--right {
+	margin-left: 5px;
 }
 .section__facsimile {
 	margin-top: 128px;
