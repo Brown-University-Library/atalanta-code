@@ -603,16 +603,13 @@ button {
 
 .wrapper-sidenav {
   background-color: #222;
-  margin-top: 7.625rem;
-  margin-left: .5rem;
+  height: 13.5rem;
+  margin-left: 1.825rem;
   padding: 0 0 1rem 0;
   position: fixed;
+  top: 9rem;
   width: 9rem;
-  height: 13.5rem;
   z-index: 20; }
-
-.sidenav {
-  margin-top: 1rem; }
 
 .sidenav ul li {
   cursor: pointer;
@@ -1077,16 +1074,13 @@ h3.title .italics {
 
 .wrapper-sidenav {
   background-color: #222;
-  margin-top: 7.625rem;
-  margin-left: .5rem;
+  height: 13.5rem;
+  margin-left: 1.825rem;
   padding: 0 0 1rem 0;
   position: fixed;
+  top: 9rem;
   width: 9rem;
-  height: 13.5rem;
   z-index: 20; }
-
-.sidenav {
-  margin-top: 1rem; }
 
 .sidenav ul li {
   cursor: pointer;
