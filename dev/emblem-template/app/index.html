@@ -8,13 +8,20 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="css/app.css">
 <!-- 	<link type="text/css" rel="stylesheet" media="screen" href="./assets/css/styles.css" /> -->
 	<script type="text/javascript" src="js/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script type="text/javascript" src="js/waypoints/lib/noframework.waypoints.min.js"></script>
+<!-- 	<script type="text/javascript" src="js/waypoints/src/waypoints.js"></script>
+	<script type="text/javascript" src="js/waypoints/lib/waypoints.debug.js"></script> -->
 	<script type="text/javascript" src="js/openseadragon/openseadragon.min.js"></script>
 <!-- 	<script type="text/javascript" src="./assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="./assets/js/vendors/openseadragon/openseadragon.min.js"></script> -->
-<!-- 	<script type="text/javascript" src="./assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
-	<script type="text/javascript" src="./assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script> -->
+<!-- 	<script type="text/javascript" src="./assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="./assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
+	 -->
 </head>
 <body>
+<!-- <div class="trigger-debug" style="position: fixed; height: 2px; width: 100%; z-index: 5000000000; background-color: red; top: 150px;"></div>
+<div class="trigger-debug" style="position: fixed; height: 2px; width: 100%; z-index: 5000000000; background-color: green; top: 300px;"></div> -->
 <!-- GLOBAL NAVIGATION -->
 	<header>
 		<div class="_topnav"></div>
@@ -24,18 +31,35 @@
 				<li class="subnav__views--single" data-state="active"><a href="#">Single View</a></li>
 				<li class="subnav__options--option" data-state="active"><a href="#">English</a></li>
 				<li class="subnav__options--option" data-state="inactive"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option" data-state="inactive"><a href="#">Facsimile</a></li>
-				<li class="subnav__views--double" data-state="inactive"><a href="#">Side-by-side View</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Original Book</a></li>
+				<li class="subnav__views--double" data-state="inactive"><a href="#">Comparative View</a></li>
 				<li class="subnav__options--option" data-state="inactive"><a href="#">English</a></li>
 				<li class="subnav__options--option" data-state="active"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option" data-state="inactive"><a href="#">Facsimile</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Original Book</a></li>
 			</ul>
 		</nav>
 	</header>
 <!-- EMBLEM PAGE-->
 	<main class="emblem-page" data-id="5">
 <!-- SIDENAV -->
-		<!-- <div class="_sidenav"></div> -->
+<!-- 	<div class="_sidenav"> -->
+		<div class="wrapper-sidenav">
+			<div class="sidenav">
+				<ul class="sidenav__navigation">
+					<li><a id="sidenav__prev" href="#">&#10094;</a></li>
+					<li id="sidenav__titles">Emblem 0</li>
+					<li><a id="sidenav__next" href="#">&#10095;</a></li>
+				</ul>
+				<ul class="sidenav__options">
+					<li class="sidenav--is-active"><a href="#motto">Motto</a></li>
+					<li><a href="#image">Image</a></li>
+					<li><a href="#music">Music</a></li>
+					<li><a href="#epigram">Epigram</a></li>
+					<li><a href="#discourse">Discourse</a></li>
+				</ul>
+			</div>
+		</div>
+<!-- 	</div> -->
 <!-- EMBLEM GRID -->
 		<!-- Facsimile -->
 		<div class="section__facsimile is-hidden">
@@ -62,7 +86,7 @@
 		</div>
 		<div class="emblem">
 			<!-- Motto -->
-<!-- 			<a name="motto" id="basic-waypoint__0" class="section__motto"></a> -->
+			<a name="motto" id="basic-waypoint__0" class="section__motto"></a>
 			<section class="section__motto section--single panel--full">
 				<div class="translation">
 					<div class="switch-wrapper left">
@@ -160,7 +184,7 @@
 				</div>
 			</section>
 			<!-- Image -->
-<!-- 			<a name="image" id="basic-waypoint__1" class="section__image"></a> -->
+			<a name="image" id="basic-waypoint__1" class="section__image"></a>
 			<div class="section__image section--full panel--full">					
 				<div class="_image">
 					<section class="image wrapper-section section">
@@ -192,11 +216,11 @@
 				</div>
 			</div>
 			<!-- Music -->
-<!-- 			<a name="music" id="basic-waypoint__2" class="section__music"></a> -->
+			<a name="music" id="basic-waypoint__2" class="section__music"></a>
 			<section class="section__music section--full panel--full">Music</section>
 			<section class="section__music section--full panel--right is-hidden">Music Right</section>
 			<!-- Epigram -->
-<!-- 			<a name="epigram" id="basic-waypoint__3" class="section__epigram"></a> -->
+			<a name="epigram" id="basic-waypoint__3" class="section__epigram"></a>
 			<section class="section__epigram section--single panel--full">
 				<div class="translation">
 					<div class="switch-wrapper left">
@@ -272,7 +296,7 @@
 				</div>
 			</section>
 			<!-- Discourse -->
-<!-- 			<a name="discourse" id="basic-waypoint__4" class="section__discourse"></a> -->
+			<a name="discourse" id="basic-waypoint__4" class="section__discourse"></a>
 			<section class="section__discourse section--single panel--full">
 				<div class="translation">
 					<div class="switch-wrapper left">

@@ -1,13 +1,6 @@
 @import 'utilities';
 @import 'colors';
 
-/*.wrapper-subnav5 {
-	display: block;
-	margin-top: $topnav-h;
-	position: fixed;
-	width: 100%;
-	z-index: 100;
-}*/
 .subnav {
 	display: flex;
 	align-items: top;
@@ -96,25 +89,6 @@
 .subnav__options--option {
 	height: 60%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .toggle {
 	background-color: $dusty-blue;
