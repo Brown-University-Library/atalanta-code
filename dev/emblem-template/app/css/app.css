@@ -321,7 +321,7 @@ button {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 8rem;
+  height: 4.5rem;
   width: 100%;
   margin-top: 3.125rem;
   position: fixed;
@@ -434,17 +434,18 @@ button {
 	height: 40%;
 	width: 50%;
 }*/
-.subnav__views--single, .subnav__views--double {
+.subnav li.subnav__views--single, .subnav li.subnav__views--double {
   /*border-right: .25rem solid $white;*/
   background-color: #fff;
-  border: 5px solid green;
+  border: 2px solid #222;
   border-radius: 5px;
-  width: 15rem;
+  height: 3rem;
+  width: 14rem;
   position: absolute;
   right: 2rem;
   top: 5.625rem; }
-  .subnav__views--single a, .subnav__views--double a {
-    color: green; }
+  .subnav li.subnav__views--single a, .subnav li.subnav__views--double a {
+    color: #222; }
 
 .subnav__views--double {
   /*border-left: .25rem solid $white;*/ }
@@ -602,7 +603,7 @@ button {
 
 .wrapper-sidenav {
   background-color: #222;
-  margin-top: 11.125rem;
+  margin-top: 7.625rem;
   margin-left: .5rem;
   padding: 0 0 1rem 0;
   position: fixed;
@@ -804,7 +805,7 @@ background-color: blue !important;
   padding: 0 0 .125rem 0; }
 
 .emblem {
-  margin-top: 11.125rem;
+  margin-top: 7.625rem;
   display: grid;
   grid-area: 1 / 1 / 2 / 5;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1076,7 +1077,7 @@ h3.title .italics {
 
 .wrapper-sidenav {
   background-color: #222;
-  margin-top: 11.125rem;
+  margin-top: 7.625rem;
   margin-left: .5rem;
   padding: 0 0 1rem 0;
   position: fixed;
