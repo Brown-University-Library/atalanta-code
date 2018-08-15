@@ -1,0 +1,18 @@
+@import 'colors';
+@import 'utilities';
+
+main.home-page {
+	background-color: $white;
+	font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
+	font-size: 1.25rem;
+	min-height: calc(100vh - 3.125rem);
+	line-height: 2rem;
+	margin-top: $topnav-h;
+	padding: 2rem;
+	a {
+		color: $black;
+	}
+	a:hover {
+		color: $dusty-blue;
+	}
+}

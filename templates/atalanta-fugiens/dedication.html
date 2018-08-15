@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta content="text/html" charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Furnace and Fugue: Atalanta Fugiens (Digital Edition)</title>
+	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" />
+	<script type="text/javascript" src="../assets/js/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../assets/js/openseadragon/openseadragon.min.js"></script>
+</head>
+<body>
+<!-- <div class="trigger-debug" style="position: fixed; height: 2px; width: 100%; z-index: 5000000000; background-color: red; top: 150px;"></div>
+<div class="trigger-debug" style="position: fixed; height: 2px; width: 100%; z-index: 5000000000; background-color: green; top: 300px;"></div> -->
+<!-- GLOBAL NAVIGATION -->
+	<header>
+		<div class="_topnav">
+		</div>
+<!-- EMBLEM NAVIGATION -->
+		<nav class="subnav">
+			<ul>
+				<li class="subnav__views--single is-hidden" data-state="active"><a href="#">Single View</a></li>
+				<li class="subnav__options--option is-active" data-state="active"><a href="#">English</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Latin/German</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Page Image</a></li>
+				<li class="subnav__views--double" data-state="inactive"><a href="#">Comparative View</a></li>
+				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">English</a></li>
+				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">Latin/German</a></li>
+				<li class="subnav__options--option is-hidden is-active" data-state="active"><a href="#">Page Image</a></li>
+			</ul>
+		</nav>
+	</header>
+<!-- EMBLEM PAGE-->
+	<main class="emblem-page frontmatter" data-id="3">
+<!-- SIDENAV -->
+<!-- 	<div class="_sidenav"> -->
+		<div class="wrapper-sidenav">
+			<div class="sidenav">
+				<ul class="sidenav__navigation">
+					<li><a id="sidenav__prev" href="#">&#10094;</a></li>
+					<li id="sidenav__titles">Emblem 0</li>
+					<li><a id="sidenav__next" href="#">&#10095;</a></li>
+				</ul>
+				<ul class="sidenav__options">
+					<li class="sidenav--is-active"><a href="#motto">Motto</a></li>
+					<li><a href="#image">Image</a></li>
+					<li><a href="#music">Music</a></li>
+					<li><a href="#epigram">Epigram</a></li>
+					<li><a href="#discourse">Discourse</a></li>
+				</ul>
+			</div>
+		</div>
+<!-- 	</div> -->
+<!-- EMBLEM GRID -->
+		<!-- Facsimile -->
+		<div class="section__facsimile is-hidden">
+			<div class="facsimile--full">
+				<section class="_facsimile">
+					<!-- https://openseadragon.github.io/docs/ -->
+					<section class="facsimile">
+						<div id="openseadragon-wrapper">
+							<div id="tools">
+								<span>
+									<a id="zoom-in" href="#zoom-in" title="Zoom In" style="display: inline-block; position: relative">Zoom In</a>
+									<a id="zoom-out" href="#zoom-out" title="Zoom Out" style="display: inline-block; position: relative">Zoom Out</a>
+					<!-- 				<a id="home" href="#home" title="Go home" style="display: inline-block; position: relative;">Home</a> -->
+					<!-- 				<a id="home" href="#home" title="Home" style="display: inline-block; position: relative">Reset</a> -->
+					<!-- 				<a id="full-page" href="#full-page" title="Full Page" style="display: inline-block; position: relative">Full Page</a> -->
+									<a id="previous" href="#previous" title="Previous" style="display: inline-block; position: relative">Previous</a>
+									<a id="next" href="#next" title="Next" style="display: inline-block; position: relative">Next</a>
+								</span>
+							</div>
+						</div>
+					</section>
+				</section>
+			</div>
+		</div>
+		<div class="emblem">
+			<section class="section__dedication section--single panel--full">
+				<div class="translation">
+					<div class="switch-wrapper left">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--english _dedication--english edition--normalized">
+		            </div>
+				</div>
+				<div class="original is-hidden">
+					<div class="switch-wrapper left">
+						<div class="latin-german-switch" style="display:none;">
+							<ul>
+								<li class="is-selected"><a href="#">Latin</a></li>
+								<li><a href="#">German</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--latin _dedication--latin">
+					</div>
+				</div>
+			</section>
+			<section class="section__dedication section--double panel--right is-hidden">
+				<div class="translation is-hidden">
+					<div class="switch-wrapper right">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--english _dedication--english edition--normalized">
+					</div>
+				</div>
+				<div class="original">
+					<div class="switch-wrapper right">
+						<div class="latin-german-switch" style="display:none;">
+							<ul>
+								<li class="is-selected"><a href="#">Latin</a></li>
+								<li><a href="#">German</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--latin _dedication--latin">
+					</div>
+				</div>
+			</section>
+		</div><!-- END EMBLEM -->
+	</main> <!-- END OF EMBLEM PAGE -->
+<!-- JS -->
+	<script type="text/javascript" src="../assets/js/topnav.js"></script>
+	<script type="text/javascript" src="../assets/js/emblem.js"></script>
+	<script type="text/javascript" src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
+</body>
+</html>
