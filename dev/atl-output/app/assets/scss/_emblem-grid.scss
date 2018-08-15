@@ -1,14 +1,16 @@
 @import 'utilities';
 @import 'colors';
-.old {
-	display: none;
-}
+
 main.emblem-page {
 	background-color: $light-gray;
 	display: grid;
 	grid-template-columns: repeat( 4, 1fr);
 	grid-template-rows: 1;
+	font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
+	font-size: 1rem;
 	min-height: calc(100vh - 3.125rem);
+	line-height: 1.5rem;
+	margin-top: $topnav-h;
 	padding: 0 0 .125rem 0;
 }
 .emblem {
@@ -22,7 +24,6 @@ main.emblem-page {
 }
 .emblem section {
 	background-color: $white;
-/*	margin: .5rem;*/
 	padding: 1rem 0;
 }
 .panel--full {
