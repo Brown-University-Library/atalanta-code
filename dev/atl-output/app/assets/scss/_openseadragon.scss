@@ -1,0 +1,31 @@
+@import 'colors';
+@import 'utilities';
+
+#openseadragon-wrapper {
+	height: calc(100vh - 11.125rem); /* currently, the combined height of the topnav and subnav is 11.125rem */
+}
+#openseadragon-wrapper canvas {
+	cursor: pointer;
+}
+.facsimile--full #tools {
+	background-color: $black;
+	max-width: 25rem;
+	padding: 1rem;
+	position: absolute;
+	right: 0;
+	top: 40%;
+	z-index: 1000;
+}
+.facsimile--full.grid--half #tools {
+	top: 93vh;
+}
+#tools a {
+	color: orange;
+	padding: 0 .25rem;
+}
+#tools a:hover {
+	color: red;
+}
+#tools a:active {
+	color: yellow;
+}

@@ -1,0 +1,25 @@
+@import 'colors';
+@import 'utilities';
+
+body {
+	a {
+		text-decoration: none;
+	}
+}
+header {
+	margin-top: 0;
+}
+main {
+	background-color: $white;
+	font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	min-height: calc(100vh - 3.125rem);
+	margin-top: $topnav-h;
+	padding: 2rem;
+}
+h1 {
+	font-size: 3rem;
+	font-weight: 600;
+	line-height: 4rem;
+}

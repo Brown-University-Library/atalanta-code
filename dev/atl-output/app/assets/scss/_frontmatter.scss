@@ -1,0 +1,9 @@
+@import 'colors';
+@import 'utilities';
+
+.frontmatter section {
+	font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
+	height: auto;
+	/*min-height: calc(100vh - 3.125rem);*/
+	padding: 2rem;
+}

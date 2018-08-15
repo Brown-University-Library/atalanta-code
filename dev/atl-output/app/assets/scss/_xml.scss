@@ -1,0 +1,92 @@
+@import 'colors';
+@import 'utilities';
+
+.lorem {
+	color: purple !important; /* only use until latin xml is available ??? */
+}
+.edition--normalized {
+	.del {
+		display: none;
+	}
+	.italics {
+		font-style: normal;
+	}
+	.orig {
+		display: none;
+	}
+}
+.edition--facsimile {
+	.del {
+		display: none;
+	}
+	.italics {
+		font-style: oblique;
+	}
+	.pb:before{
+    content: "––– Page: ";
+	}
+
+	.pb:after{
+	    content: " –––"
+	}
+	.reg {
+		display: none;
+	}
+}
+.pc { /* what is .pc ??? */
+	white-space: nowrap;
+}
+/*.subst {
+	margin-right: -.75rem;
+}*/
+.lang--english._motto--english {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 1;
+}
+div.title {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	grid-area: 1 / 4 / 2 / 10;
+}
+.panel--left div.title, .panel--right div.title {
+	grid-area: 1 / 2 / 2 / 12;
+}
+h1.title {
+	font-family: $display-font_emblem, Helvetica, Arial, sans-serif;
+	font-size: 3rem;
+	font-weight: 600;
+	line-height: 3.5rem;
+}
+.panel--left h1.title, .panel--right h1.title {
+	font-size: 2.325rem;
+	line-height: 2.75rem;
+}
+h3.title {
+	font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+h3.title .italics {
+	font-style: oblique;
+}
+
+/* BREAKPOINTS */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+/*	.subst {
+		margin-right: -.5rem;
+	}*/
+	div.title {
+		grid-area: 1 / 2 / 2 / 12;
+	}
+	h1.title {
+		font-size: 2rem;
+		line-height: 2.125rem;
+	}
+	h3.title {
+		font-size: .825rem;
+		line-height: 1.5rem;
+	}
+}

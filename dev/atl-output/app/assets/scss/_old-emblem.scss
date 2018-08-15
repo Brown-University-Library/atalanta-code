@@ -1,0 +1,236 @@
+@import 'colors';
+
+body {
+	background-color: pink;
+	font-family: 'Futura', Helvetica, sans-serif;
+	font-size: 16px;
+	p {
+		font-family: Garamond, serif;
+	}
+}
+.wrapper-emblem {
+	background-color: $light-gray;
+	padding: 50px 0 .125rem 0;
+}
+.wrapper-section {
+	background-color: $white;
+	margin: .5rem;
+	padding: 1rem 0;
+}
+.section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 14rem;
+	text-align: center;
+	h1 {
+		font-size: 2.5rem;
+	}
+}
+.motto {
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+	min-height: 10rem; /* this prevents the page from shifting vertically when selecting language options in the subnav */
+	max-height: 20rem; /* this prevents the page from shifting vertically when selecting language options in the subnav */	
+	padding: 5rem 0 0 0;
+	h1 {
+		font-size: 2rem;
+	}
+}
+.image {
+	display: flex;
+	justify-content: center;
+	min-height: 34rem;
+/*	position: relative;  needed for the z-index to apply and hide the vertical divider in this section 
+	z-index: 3;*/
+	.image__picture {
+/*		position: absolute; - breaks in safari*/ 
+		img {
+			width: 31rem;
+			height: 31rem;
+		}
+	}
+	.image__facets {
+		position: absolute;
+		left: 67%;
+		z-index: 0;
+	}
+	.image__buttons {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		max-width: 22rem;
+	}
+}
+.music {
+	background-color: $white;
+	display: flex;
+	justify-content: center;
+	min-height: 40rem;
+/*	position: relative;   needed for the z-index to apply and hide the vertical divider in this section */
+/*	z-index: 3;*/
+
+}
+.epigram {
+	display: flex;
+	align-items: baseline;
+	justify-content: center;
+	min-height: 6rem;
+	max-height: 30rem;  /* this prevents the page from shifting vertically when selecting language options in the subnav */
+	padding: 4rem 0;
+	text-align: center;
+	p {
+		font-size: 1.25rem;
+		font-weight: bold;
+		line-height: 2.125rem;
+		text-align: center;
+		white-space: pre-line;
+	}
+}
+.discourse {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	justify-content: center;
+/*	justify-content: space-between;*/
+	min-height: 30rem;
+	max-height: 5000rem; /* this prevents the page from shifting vertically when selecting language options in the subnav */
+	padding-bottom: 6rem;
+	.text {
+		flex-direction: column;
+		margin: 5rem 0;
+		text-align: left;
+	}
+	p {
+		margin: 0;
+		padding: 0;
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+		margin-bottom: 1rem;
+		text-indent: 2rem;
+		max-width: 40rem;
+	}
+}
+/*.wrapper-transcription {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}*/
+/*.transcription__numbers {
+	color: $dark-gray;
+	font-size: 1.125rem;
+	text-align: right;
+	min-width: 3rem;
+}*/
+/*.transcription__lines {
+	padding-left: 1rem;
+	p {
+		text-align: left;
+		text-indent: 0;
+	}
+}*/
+.wrapper-vertical-divider {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+.vertical-divider {
+	background-color: $light-gray;
+	height: 100vh;
+	width: .5rem;
+}
+
+
+
+/***     Breakpoints     ***/
+
+/* large  -  desktop */
+@media screen and (min-width: 1200px) and (max-width: 1499px) {
+	.motto {
+		h1 {
+			max-width: 36rem;
+		}
+	}
+	.epigram {
+		padding: 4rem 3rem;
+		p {
+			max-width: 35rem;
+		}
+	}
+	.discourse p {
+		max-width: 30rem;
+	}
+}
+
+/* medium-large - laptop */
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+	.motto {
+		h1 {
+			max-width: 35rem;
+		}
+	}
+	.epigram p {
+		max-width: 26rem;
+	}
+	.discourse p {
+		max-width: 26rem;
+	}
+}
+
+/* medium - small laptop */
+@media screen and (min-width: 900px) and (max-width: 999px) {
+	.epigram p {
+		max-width: 25rem;
+	}
+	.discourse p {
+		max-width: 22rem;
+	}
+}
+
+/* medium - tablet */
+@media screen and (min-width: 768px) and (max-width: 899px) {
+	.motto h1 {
+		font-size: 1.625rem;
+		line-height: 2.125rem;
+	}
+	.epigram p {
+		font-size: 1rem;
+		font-weight: lighter;
+		line-height: 1.625rem;
+		max-width: 21rem;
+	}
+	.discourse p {
+		font-size: 1rem;
+		max-width: 18rem;
+	}
+/*	.discourse.single p {  this needs to be wider in single view, but not when double view is active 
+		border: 1px solid red;
+		max-width: 30rem;
+	}*/
+}
+
+/* small  -  mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) { /* mobile phones are too small for a side by side view */
+	.subnav5 li:nth-child(1) {
+		display: none !important;
+	}
+	.subnav5 li:nth-child(n+5) {
+		display: none !important;
+	}
+	.discourse p {
+		max-width: 30rem;
+	}
+}
+
+
+
+
+
+
+
