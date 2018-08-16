@@ -381,10 +381,10 @@ main.home-page {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: top;
-  -webkit-align-items: top;
-  -ms-flex-align: top;
-  align-items: top;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -416,7 +416,6 @@ main.home-page {
     padding: .5rem 3rem;
     width: 100%; }
     .subnav ul li {
-      /*			background-color: hsla(145, 60%, 45%, .5);*/
       border-radius: 5px;
       color: #222;
       display: -webkit-box;
@@ -504,7 +503,6 @@ main.home-page {
 	width: 50%;
 }*/
 .subnav li.subnav__views--single, .subnav li.subnav__views--double {
-  /*border-right: .25rem solid $white;*/
   background-color: #fff;
   border: 2px solid #222;
   border-radius: 5px;
@@ -532,9 +530,9 @@ main.home-page {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: no-wrap;
-  -ms-flex-wrap: no-wrap;
-  flex-wrap: no-wrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -585,12 +583,6 @@ main.home-page {
   .is-inactive a {
     color: #222 !important; }
 
-/* see index-scrolling.html */
-/*.fixed-header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-}*/
 /*** Breakpoints ***/
 /* small  -  mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -671,7 +663,7 @@ main.emblem-page {
   background-color: #eee;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1;
+  grid-template-rows: 1fr;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   min-height: calc(100vh - 3.125rem);
@@ -1093,7 +1085,7 @@ background-color: blue !important;
 .lang--english._motto--english {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1; }
+  grid-template-rows: 1fr; }
 
 div.title {
   display: -webkit-box;

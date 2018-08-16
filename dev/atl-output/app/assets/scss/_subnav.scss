@@ -3,7 +3,7 @@
 
 .subnav {
 	display: flex;
-	align-items: top;
+	align-items: flex-start;
 	justify-content: center;
 	font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
 	font-size: 1.125rem;
@@ -22,7 +22,6 @@
 		padding: .5rem 3rem;
 		width: 100%;
 		li {
-/*			background-color: hsla(145, 60%, 45%, .5);*/
 			border-radius: 5px;
 			color: $black;
 			display: flex;
@@ -79,7 +78,6 @@
 	width: 50%;
 }*/
 .subnav li.subnav__views--single, .subnav li.subnav__views--double {
-	/*border-right: .25rem solid $white;*/
 	background-color: $white;
 	border: 2px solid $black;
 	border-radius: 5px;
@@ -105,7 +103,7 @@
 	border: 1px solid $dusty-blue-dk;
 	box-shadow: inset 0 0 .25rem $light-gray;
 	display: flex;
-	flex-wrap: no-wrap;
+	flex-wrap: nowrap;
 	justify-content: space-between;
 	padding: .5rem .125rem;
 	width: 20%;
@@ -149,13 +147,6 @@
 		color: $black !important;
 	}
 }
-
-/* see index-scrolling.html */
-/*.fixed-header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-}*/
 
 
 /*** Breakpoints ***/

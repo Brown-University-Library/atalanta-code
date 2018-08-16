@@ -5,7 +5,7 @@ main.emblem-page {
 	background-color: $light-gray;
 	display: grid;
 	grid-template-columns: repeat( 4, 1fr);
-	grid-template-rows: 1;
+	grid-template-rows: 1fr;
 	font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
 	font-size: 1rem;
 	min-height: calc(100vh - 3.125rem);
