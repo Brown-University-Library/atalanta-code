@@ -1,13 +1,14 @@
 @import 'colors';
+@import 'utilities';
 
 .wrapper-sidenav {
 	 background-color: $black;
-	 margin-top: 8.75rem;
-	 margin-left: .5rem;
+	 height: 13.5rem;
+	 margin-left: 1.825rem;
 	 padding: 0 0 1rem 0;
 	 position: fixed;
+	 top: 9rem;
 	 width: 9rem;
-	 height: 13.5rem;
 	 z-index: 20;
 }
 .sidenav ul li {
@@ -83,12 +84,45 @@ ul.sidenav__options li.sidenav--is-active a:hover {
 
 /* http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/ */
 /* https://github.com/twbs/bootstrap/issues/1768#issuecomment-46519033 */
-	 *[id]:before { 
+/*	 *[id]:before { 
 	  display: block; 
 	  content: " "; 
-	  margin-top: -180px; 
+	  margin-top: 300px; 
+	  height: 300px; 
+	  visibility: hidden;
+	} */
+
+/*	section:before { 
+	  display: block; 
+	  content: " "; 
+	  margin-top: -10px; 
+	  height: 100px; 
+	  visibility: hidden;
+	} */
+
+/**[id]:before {
+background-color: blue !important;
+  position: relative;
+  padding: 1rem;
+  border-top: 200px solid red;
+  margin-top: -10px;
+  background-clip: padding-box;
+}
+*/
+/*	*[id]:before { 
+	  display: block; 
+	  content: " ";
 	  height: 180px; 
 	  visibility: hidden; 
-	}
+	}*/
 
+.jumplink--kludge {
+	outline: 5px solid red;
+/*	position: relative;
+	padding: 1rem;
+	border-top: 180px solid transparent;*/
+	/*margin-top: -180px*/;
+/*	background-clip: padding-box;*/
+margin-top: 180px;
+}
  	 

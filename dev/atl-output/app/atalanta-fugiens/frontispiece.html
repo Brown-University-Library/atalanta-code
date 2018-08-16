@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta content="text/html" charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Furnace and Fugue: Atalanta Fugiens (Digital Edition)</title>
+	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css">
+<!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
+	<script type="text/javascript" src="../assets/js/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../assets/js/openseadragon/openseadragon.min.js"></script>
+</head>
+<body>
+<!-- <div class="trigger-debug" style="position: fixed; height: 2px; width: 100%; z-index: 5000000000; background-color: red; top: 150px;"></div>
+<div class="trigger-debug" style="position: fixed; height: 2px; width: 100%; z-index: 5000000000; background-color: green; top: 300px;"></div> -->
+<!-- GLOBAL NAVIGATION -->
+	<header>
+		<div class="_topnav">
+			<nav class="topnav">
+				<ul>
+					<li class="my-trigger"><button><img class="toc-icon" src="../assets/icons/toc.png" alt="table of contents icon" /></button></li>
+					<li><a href="../index.html">Furnace &amp; Fugue<span class="topnav__subdirectory">: Atalanta Fugiens</span></a></li>
+					<li></li>
+				</ul>
+			</nav>
+			<nav class='toc-wrapper'>
+				<ul class="toc">
+					<div class="toc__items">
+						<li class="toc__heading"><a href="../index.html">Home</a></li>
+						<li class="toc__heading">Front Matter</li>
+						<li><a href="../front-matter/overview.html">Overview</a></li>
+						<li><a href="../front-matter/backstory.html">Backstory</a></li>
+						<li class="toc__heading"><a href="../atalanta-fugiens/af-toc.html">Atalanta fugiens</a></li>
+						<li><a href="../atalanta-fugiens/frontispiece.html">Frontispiece</a></li>
+						<li><a href="../atalanta-fugiens/author-epigram.html">Author's Epigram</a></li>
+						<li><a href="../atalanta-fugiens/dedication.html">Dedication</a></li>
+						<li><a href="../atalanta-fugiens/preface.html">Preface</a></li>
+						<li><a href="../atalanta-fugiens/emblem01.html">Emblem 1</a></li>
+						<li><a href="../atalanta-fugiens/emblem02.html">Emblem 2</a></li>
+						<li><a href="../atalanta-fugiens/emblem03.html">Emblem 3</a></li>
+						<li><a href="../atalanta-fugiens/emblem04.html">Emblem 4</a></li>
+						<li><a href="../atalanta-fugiens/emblem05.html">Emblem 5</a></li>
+						<li><a href="../atalanta-fugiens/emblem06.html">Emblem 6</a></li>
+						<li><a href="../atalanta-fugiens/emblem07.html">Emblem 7</a></li>
+						<li><a href="../atalanta-fugiens/emblem08.html">Emblem 8</a></li>
+						<li><a href="../atalanta-fugiens/emblem09.html">Emblem 9</a></li>
+						<li><a href="../atalanta-fugiens/emblem10.html">Emblem 10</a></li>
+						<li class="toc__heading"><a href="../atalanta-essays/essay-toc.html">Essays</a></li>
+						<li><a href="../atalanta-essays/essay-intro.html">Introduction</a></li>
+						<li><a href="../atalanta-essays/essay1.html">Essay 1</a></li>
+						<li><a href="../atalanta-essays/essay2.html">Essay 2</a></li>
+						<li><a href="../atalanta-essays/essay3.html">Essay 3</a></li>
+						<li><a href="../atalanta-essays/essay4.html">Essay 4</a></li>
+						<li><a href="../atalanta-essays/essay5.html">Essay 5</a></li>
+						<li><a href="../atalanta-essays/essay6.html">Essay 6</a></li>
+						<li><a href="../atalanta-essays/essay7.html">Essay 7</a></li>
+						<li class="toc__heading"><a href="../search.html">Search</a></li>
+						<li class="toc__heading">Resources</li>
+						<li><a href="#">Process &amp; Acknowledgments</a></li>
+						<li><a href="#">Performance Edition</a></li>
+						<li><a href="#">Downloads</a></li>
+					</div>
+				</ul>
+			</nav>
+		</div>
+<!-- EMBLEM NAVIGATION -->
+		<nav class="subnav">
+			<ul>
+				<li class="subnav__views--single is-hidden" data-state="active"><a href="#">Single View</a></li>
+				<li class="subnav__options--option is-active" data-state="active"><a href="#">English</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Latin/German</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Page Image</a></li>
+				<li class="subnav__views--double" data-state="inactive"><a href="#">Comparative View</a></li>
+				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">English</a></li>
+				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">Latin/German</a></li>
+				<li class="subnav__options--option is-hidden is-active" data-state="active"><a href="#">Page Image</a></li>
+			</ul>
+		</nav>
+	</header>
+<!-- EMBLEM PAGE-->
+	<main class="emblem-page frontmatter" data-id="1">
+<!-- SIDENAV -->
+<!-- 	<div class="_sidenav"> -->
+		<div class="wrapper-sidenav">
+			<div class="sidenav">
+				<ul class="sidenav__navigation">
+					<li><a id="sidenav__prev" href="#">&#10094;</a></li>
+					<li id="sidenav__titles">Emblem 0</li>
+					<li><a id="sidenav__next" href="#">&#10095;</a></li>
+				</ul>
+				<ul class="sidenav__options">
+					<li class="sidenav--is-active"><a href="#motto">Motto</a></li>
+					<li><a href="#image">Image</a></li>
+					<li><a href="#music">Music</a></li>
+					<li><a href="#epigram">Epigram</a></li>
+					<li><a href="#discourse">Discourse</a></li>
+				</ul>
+			</div>
+		</div>
+<!-- 	</div> -->
+<!-- EMBLEM GRID -->
+		<!-- Facsimile -->
+		<div class="section__facsimile is-hidden">
+			<div class="facsimile--full">
+				<section class="_facsimile">
+					<!-- https://openseadragon.github.io/docs/ -->
+					<section class="facsimile">
+						<div id="openseadragon-wrapper">
+							<div id="tools">
+								<span>
+									<a id="zoom-in" href="#zoom-in" title="Zoom In" style="display: inline-block; position: relative">Zoom In</a>
+									<a id="zoom-out" href="#zoom-out" title="Zoom Out" style="display: inline-block; position: relative">Zoom Out</a>
+					<!-- 				<a id="home" href="#home" title="Go home" style="display: inline-block; position: relative;">Home</a> -->
+					<!-- 				<a id="home" href="#home" title="Home" style="display: inline-block; position: relative">Reset</a> -->
+					<!-- 				<a id="full-page" href="#full-page" title="Full Page" style="display: inline-block; position: relative">Full Page</a> -->
+									<a id="previous" href="#previous" title="Previous" style="display: inline-block; position: relative">Previous</a>
+									<a id="next" href="#next" title="Next" style="display: inline-block; position: relative">Next</a>
+								</span>
+							</div>
+						</div>
+					</section>
+				</section>
+			</div>
+		</div>
+		<div class="emblem">
+			<section class="section__frontispiece section--single panel--full">
+				<div class="translation">
+					<div class="switch-wrapper left">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
+					<span class="page-break--atalanta-fugiens"></span>
+					<span class="page-break--beinecke"></span>
+					<div class="lang--english _frontispiece--english edition--normalized">
+						<div class="title">
+		                    <h3 class="title">
+		                        <span class="italics">Atalanta running,
+		                        that is,</span>
+		                    </h3>
+		  
+		                    <h3 class="title">
+		                        <span class="italics">New <span class="choice"><span class="orig">Chymicall </span><span class="reg">Chymical</span></span> Emblems relating to the
+		                        Secrets of Nature,</span>
+		                    </h3>
+		  
+		                    <h3 class="title">
+		                        <span class="italics"><span class="choice"><span class="orig">Accomodated </span><span class="reg">Accommodated</span></span> partly to the eyes and understanding, with figures <span class="choice"><span class="orig">cutt </span><span class="reg">cut</span></span>
+		                        in Copper, and Sentences, Epigrams, and notes added, partly to the
+		                        ears and recreation of the mind, with 50 <span class="choice"><span class="orig">musicall </span><span class="reg">musical</span></span> flights of
+		                        three <span class="choice"><span class="orig">voyces </span><span class="reg">voices</span></span>, whereof two may correspond to one single
+		                        
+		                        <span class="subst">
+		                            <span class="del">
+		                                melody <span class="superscript">1</span>appropriated <span class="superscript">5</span>with <span class="superscript">6</span>distichs <span class="superscript">2</span>to <span class="superscript">3</span>be <span class="superscript">4</span>sung: <span class="superscript">11</span>to <span class="superscript">12</span>be 
+		                                <span class="superscript">13</span>seen, <span class="superscript">14</span>read, <span class="superscript">15</span>meditated, <span class="superscript">16</span>understood, <span class="superscript">17</span><span class="subst"><span class="del">judged</span><span class="add">distinguished</span></span>, <span class="superscript">18</span>sung,
+		                                <span class="superscript">19</span>and <span class="superscript">20</span> heard <span class="superscript">7</span>not <span class="superscript">8</span>without <span class="superscript">9</span>Singular <span class="superscript">10</span>delectation.
+		                                <span class="pc">. . . . . . . .</span>
+		                            </span>
+		                            <span class="add">
+		                                melody <span class="choice"><span class="orig">Apropriated </span><span class="reg">Appropriated</span></span> to be Sung with distichs, not without 
+		                                Singlular delectation, to be seen, read, meditated,
+		                                Understood, distinguished, Sung and Heard;
+		                            </span>
+		                        </span>
+		                        the Author.</span>
+		                    </h3>
+
+		                    <h3 class="title">
+		                        <span class="italics">Michael Majerus Count of the Imperiall Consistory. Doctor of <span class="choice"><span class="orig">Physicke </span><span class="reg">Physic</span></span>. Knight of etc.
+		                        <span class="pc">. . . . .</span></span>
+		                    </h3>
+		                    <h3 class="title">
+		                        <span class="italics">Oppenheim.</span>
+		                    </h3>
+		                    <h3 class="title">
+		                        <span class="italics">Printed by Hieronymus Gallerus, at the charge of
+		                        John Theodore de Bry.
+		                        1618.
+		                        <span class="pc">. . . .</span></span>
+		                    </h3>
+		                </div>
+					</div>
+				</div>
+				<div class="original is-hidden">
+					<div class="switch-wrapper left">
+						<div class="facsimile-normalized-switch" style="display:none;">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--latin _frontispiece--latin">
+						<div class="title lorem">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue eu metus quis rhoncus. Sed urna ipsum, faucibus nec erat eget, consectetur fringilla nisi. Integer molestie dui venenatis ex lacinia euismod. Sed facilisis, nibh a eleifend feugiat, turpis eros ornare metus, ac ornare tortor metus lacinia massa. Cras tempor tellus nec lacinia dignissim. Integer sed semper mi, vel luctus nisi. Donec vel mi arcu. Donec in nibh eget mauris fermentum eleifend vel sed diam. Vivamus ac libero ac ipsum accumsan lacinia. Aliquam gravida euismod leo, sit amet tempor justo rhoncus ut. Proin eu auctor nulla, vel consequat leo.
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section__frontispiece section--double panel--right is-hidden">
+				<div class="translation is-hidden">
+					<div class="switch-wrapper right">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--english _frontispiece--english edition--normalized">
+						<div class="title">
+		                    <h3 class="title">
+		                        <span class="italics">Atalanta running,
+		                        that is,</span>
+		                    </h3>
+		  
+		                    <h3 class="title">
+		                        <span class="italics">New <span class="choice"><span class="orig">Chymicall </span><span class="reg">Chymical</span></span> Emblems relating to the
+		                        Secrets of Nature,</span>
+		                    </h3>
+		  
+		                    <h3 class="title">
+		                        <span class="italics"><span class="choice"><span class="orig">Accomodated </span><span class="reg">Accommodated</span></span> partly to the eyes and understanding, with figures <span class="choice"><span class="orig">cutt </span><span class="reg">cut</span></span>
+		                        in Copper, and Sentences, Epigrams, and notes added, partly to the
+		                        ears and recreation of the mind, with 50 <span class="choice"><span class="orig">musicall </span><span class="reg">musical</span></span> flights of
+		                        three <span class="choice"><span class="orig">voyces </span><span class="reg">voices</span></span>, whereof two may correspond to one single
+		                        
+		                        <span class="subst">
+		                            <span class="del">
+		                                melody <span class="superscript">1</span>appropriated <span class="superscript">5</span>with <span class="superscript">6</span>distichs <span class="superscript">2</span>to <span class="superscript">3</span>be <span class="superscript">4</span>sung: <span class="superscript">11</span>to <span class="superscript">12</span>be 
+		                                <span class="superscript">13</span>seen, <span class="superscript">14</span>read, <span class="superscript">15</span>meditated, <span class="superscript">16</span>understood, <span class="superscript">17</span><span class="subst"><span class="del">judged</span><span class="add">distinguished</span></span>, <span class="superscript">18</span>sung,
+		                                <span class="superscript">19</span>and <span class="superscript">20</span> heard <span class="superscript">7</span>not <span class="superscript">8</span>without <span class="superscript">9</span>Singular <span class="superscript">10</span>delectation.
+		                                <span class="pc">. . . . . . . .</span>
+		                            </span>
+		                            <span class="add">
+		                                melody <span class="choice"><span class="orig">Apropriated </span><span class="reg">Appropriated</span></span> to be Sung with distichs, not without 
+		                                Singlular delectation, to be seen, read, meditated,
+		                                Understood, distinguished, Sung and Heard;
+		                            </span>
+		                        </span>
+		                        the Author.</span>
+		                    </h3>
+
+		                    <h3 class="title">
+		                        <span class="italics">Michael Majerus Count of the Imperiall Consistory. Doctor of <span class="choice"><span class="orig">Physicke </span><span class="reg">Physic</span></span>. Knight of etc.
+		                        <span class="pc">. . . . .</span></span>
+		                    </h3>
+		                    <h3 class="title">
+		                        <span class="italics">Oppenheim.</span>
+		                    </h3>
+		                    <h3 class="title">
+		                        <span class="italics">Printed by Hieronymus Gallerus, at the charge of
+		                        John Theodore de Bry.
+		                        1618.
+		                        <span class="pc">. . . .</span></span>
+		                    </h3>
+		                </div>
+					</div>
+				</div>
+				<div class="original">
+					<div class="switch-wrapper right">
+						<div class="latin-german-switch" style="display:none;">
+							<ul>
+								<li class="is-selected"><a href="#">Latin</a></li>
+								<li><a href="#">German</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--latin _frontispiece--latin">
+						<div class="title lorem">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue eu metus quis rhoncus. Sed urna ipsum, faucibus nec erat eget, consectetur fringilla nisi. Integer molestie dui venenatis ex lacinia euismod. Sed facilisis, nibh a eleifend feugiat, turpis eros ornare metus, ac ornare tortor metus lacinia massa. Cras tempor tellus nec lacinia dignissim. Integer sed semper mi, vel luctus nisi. Donec vel mi arcu. Donec in nibh eget mauris fermentum eleifend vel sed diam. Vivamus ac libero ac ipsum accumsan lacinia. Aliquam gravida euismod leo, sit amet tempor justo rhoncus ut. Proin eu auctor nulla, vel consequat leo.
+						</div>
+					</div>
+				</div>
+			</section>
+		</div><!-- END EMBLEM -->
+	</main> <!-- END OF EMBLEM PAGE -->
+<!-- JS -->
+	<script type="text/javascript" src="../assets/js/topnav.js"></script>
+	<script type="text/javascript" src="../assets/js/emblem.js"></script>
+	<script type="text/javascript" src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

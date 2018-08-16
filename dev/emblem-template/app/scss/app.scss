@@ -1,12 +1,16 @@
 @import 'reset';
+@import 'utilities';
 @import 'grid';
 @import 'buttons';
 @import 'topnav';
 @import 'subnav';
-@import 'emblem';
-@import 'utilities';
-@import 'tara__atalanta-proof--color';
-@import 'tara';
+@import 'sidenav';
+/*@import 'emblem';*/
+@import 'emblem-grid';
+@import 'xml';
+/*@import 'tara__atalanta-proof--color';
+@import 'tara';*/
+
 @import 'sidenav';
 @import 'openseadragon';
 @import 'breakpoints';

@@ -6,765 +6,337 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Furnace and Fugue: Atalanta Fugiens (Digital Edition)</title>
 	<link type="text/css" rel="stylesheet" media="screen" href="css/app.css">
-<!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<!-- 	<script type="text/javascript" src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
-	<script type="text/javascript" src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
-	<script type="text/javascript" src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script> -->
+<!-- 	<link type="text/css" rel="stylesheet" media="screen" href="./assets/css/styles.css" /> -->
+	<script type="text/javascript" src="js/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script type="text/javascript" src="js/waypoints/lib/noframework.waypoints.min.js"></script>
+<!-- 	<script type="text/javascript" src="js/waypoints/src/waypoints.js"></script>
+	<script type="text/javascript" src="js/waypoints/lib/waypoints.debug.js"></script> -->
+	<script type="text/javascript" src="js/openseadragon/openseadragon.min.js"></script>
+<!-- 	<script type="text/javascript" src="./assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./assets/js/vendors/openseadragon/openseadragon.min.js"></script> -->
+<!-- 	<script type="text/javascript" src="./assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="./assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
+	 -->
 </head>
 <body>
+<!-- <div class="trigger-debug" style="position: fixed; height: 2px; width: 100%; z-index: 5000000000; background-color: red; top: 150px;"></div>
+<div class="trigger-debug" style="position: fixed; height: 2px; width: 100%; z-index: 5000000000; background-color: green; top: 300px;"></div> -->
 <!-- GLOBAL NAVIGATION -->
 	<header>
 		<div class="_topnav"></div>
 <!-- EMBLEM NAVIGATION -->
 		<nav class="subnav">
 			<ul>
-				<li class="subnav__views--single"><a href="#">Single View</a></li>
-				<li class="subnav__options--option"><a href="#">English</a></li>
-				<li class="subnav__options--option"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option"><a href="#">Facsimile</a></li>
-				<li class="subnav__views--double"><a href="#">Side-by-side View</a></li>
-				<li class="subnav__options--option"><a href="#">English</a></li>
-				<li class="subnav__options--option"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option"><a href="#">Facsimile</a></li>
+				<li class="subnav__views--single is-hidden" data-state="active"><a href="#">Single View</a></li>
+				<li class="subnav__options--option" data-state="active"><a href="#">English</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Latin/German</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Original Book</a></li>
+				<li class="subnav__views--double" data-state="inactive"><a href="#">Comparative View</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">English</a></li>
+				<li class="subnav__options--option" data-state="active"><a href="#">Latin/German</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Original Book</a></li>
 			</ul>
 		</nav>
 	</header>
 <!-- EMBLEM PAGE-->
-	<main class="emblem-page" data-id="4">
+	<main class="emblem-page" data-id="5">
 <!-- SIDENAV -->
-		<div class="_sidenav"></div>
-<!-- EMBLEMS: WHOLE / LEFT / RIGHT -->
-		<div class="emblem-wrapper">
-<!-- WHOLE EMBLEM -->
-			<div class="emblem__full">
-				<!-- Facsimile -->
-				<div class="_facsimile"></div>
-				<!-- Digital Edition -->
-				<div class="emblem">
-					<!-- Motto -->
-					<a name="motto" id="basic-waypoint__0"></a>
-					<section class="motto-wrapper half wrapper-section section--split-or-wrap">
-						<div class="section section--motto section--single">
-							<div class="translation">
-								<div class="switch-wrapper left">
-									<div class="facsimile-normalized-switch">
-										<ul>
-											<li><a href="#">Facsimile</a></li>
-											<li class="is-selected"><a href="#">Normalized</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--english _motto--english edition--facsimile is-hidden">Facsimile English Motto</div>
-								<div class="lang--english _motto--english edition--normalized">Normalized English Motto</div>
-							</div>
-							<div class="original is-hidden">
-								<div class="switch-wrapper left">
-									<div class="latin-german-switch">
-										<ul>
-											<li class="is-selected"><a href="#">Latin</a></li>
-											<li><a href="#">German</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--latin _motto--latin">Latin Motto</div>
-								<div class="lang--german _motto--german is-hidden">German Motto</div>
-							</div>
-						</div>
-						<div class="section section--motto section--double is-hidden">
-							<div class="translation is-hidden">
-								<div class="switch-wrapper left">
-									<div class="facsimile-normalized-switch">
-										<ul>
-											<li><a href="#">Facsimile</a></li>
-											<li class="is-selected"><a href="#">Normalized</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--english _motto--english edition--facsimile is-hidden">Facsimile English Motto Right</div>
-								<div class="lang--english _motto--english edition--normalized">Normalized English Motto Right</div>
-							</div>
-							<div class="original">
-								<div class="switch-wrapper right">
-									<div class="latin-german-switch">
-										<ul>
-											<li class="is-selected"><a href="#">Latin</a></li>
-											<li><a href="#">German</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--latin _motto--latin">Latin Motto Right</div>
-								<div class="lang--german _motto--german is-hidden">German Motto Right</div>
+<!-- 	<div class="_sidenav"> -->
+		<div class="wrapper-sidenav">
+			<div class="sidenav">
+				<ul class="sidenav__navigation">
+					<li><a id="sidenav__prev" href="#">&#10094;</a></li>
+					<li id="sidenav__titles">Emblem 0</li>
+					<li><a id="sidenav__next" href="#">&#10095;</a></li>
+				</ul>
+				<ul class="sidenav__options">
+					<li class="sidenav--is-active"><a href="#motto">Motto</a></li>
+					<li><a href="#image">Image</a></li>
+					<li><a href="#music">Music</a></li>
+					<li><a href="#epigram">Epigram</a></li>
+					<li><a href="#discourse">Discourse</a></li>
+				</ul>
+			</div>
+		</div>
+<!-- 	</div> -->
+<!-- EMBLEM GRID -->
+		<!-- Facsimile -->
+		<div class="section__facsimile is-hidden">
+			<div class="facsimile--full">
+				<section class="_facsimile">
+					<!-- https://openseadragon.github.io/docs/ -->
+					<section class="facsimile">
+						<div id="openseadragon-wrapper">
+							<div id="tools">
+								<span>
+									<a id="zoom-in" href="#zoom-in" title="Zoom In" style="display: inline-block; position: relative">Zoom In</a>
+									<a id="zoom-out" href="#zoom-out" title="Zoom Out" style="display: inline-block; position: relative">Zoom Out</a>
+					<!-- 				<a id="home" href="#home" title="Go home" style="display: inline-block; position: relative;">Home</a> -->
+					<!-- 				<a id="home" href="#home" title="Home" style="display: inline-block; position: relative">Reset</a> -->
+					<!-- 				<a id="full-page" href="#full-page" title="Full Page" style="display: inline-block; position: relative">Full Page</a> -->
+									<a id="previous" href="#previous" title="Previous" style="display: inline-block; position: relative">Previous</a>
+									<a id="next" href="#next" title="Next" style="display: inline-block; position: relative">Next</a>
+								</span>
 							</div>
 						</div>
 					</section>
-					<!-- Image -->
-					<a name="image" id="basic-waypoint__1"></a>
-					<div class="_image">
-						<section class="image wrapper-section section">
-							<div class="image__picture section--single"><img class="emblem__image--cropped" src="img/img12.png" alt="Illustration" /></div>
-						</section>
+				</section>
+			</div>
+		</div>
+		<div class="emblem">
+			<!-- Motto -->
+			<a name="motto" id="basic-waypoint__0" class="section__motto"></a>
+			<section class="section__motto section--single panel--full">
+				<div class="translation">
+					<div class="switch-wrapper left">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
 					</div>
-					<!-- Music -->
-					<a name="music" id="basic-waypoint__2"></a>
-					<div class="_music">
-						<section class="music wrapper-section">
-							<div class="section section--single">
-								<div class="test">
-									<p>Music will go here</p>
-								</div>
-							</div>
-						</section>
+					<div class="lang--english _motto--english edition--normalized">
+						<div class="title">
+						    <h3 class="title">
+						        <span class="italics">the first <span class="choice"><span class="orig">Embleme </span><span class="reg">Emblem</span></span>. Of the Secrets of Nature.</span>
+						    </h3>
+						    <h1 class="title">
+						        <span class="del">
+						        	<span class="unclear">4 chars</span>
+						        </span>
+						        <span class="subst">
+						        	<span class="del">
+						        		<span class="unclear">1 char</span>
+						        	</span>
+						        	<span class="add">W</span>
+						        </span>
+						        ind 
+						        <span class="choice">
+						        	<span class="orig">carryed </span>
+						        	<span class="reg">carried</span>
+						        </span> 
+						        him in his belly <span class="pc">- - - -</span>
+						    </h1>
+						</div>
 					</div>
-					<!-- Epigram -->
-					<a name="epigram" id="basic-waypoint__3"></a>
-					<section class="epigram-wrapper half wrapper-section section--split-or-wrap">
-						<div class="section section--epigram section--single">
-							<div class="translation">
-								<div class="switch-wrapper left">
-									<div class="facsimile-normalized-switch">
-										<ul>
-											<li><a href="#">Facsimile</a></li>
-											<li class="is-selected"><a href="#">Normalized</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--english _epigram--english edition--facsimile is-hidden">Facsimile English Epigram</div>
-								<div class="lang--english _epigram--english edition--normalized">Normalized English Epigram</div>
-							</div>
-							<div class="original is-hidden">
-								<div class="switch-wrapper left">
-									<div class="latin-german-switch">
-										<ul>
-											<li class="is-selected"><a href="#">Latin</a></li>
-											<li><a href="#">German</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--latin _epigram--latin">Latin Epigram</div>
-								<div class="lang--german _epigram--german is-hidden">German Epigram</div>
-							</div>
+				</div>
+				<div class="original is-hidden">
+					<div class="switch-wrapper left">
+						<div class="latin-german-switch">
+							<ul>
+								<li class="is-selected"><a href="#">Latin</a></li>
+								<li><a href="#">German</a></li>
+							</ul>
 						</div>
-						<div class="section section--epigram section--double is-hidden">
-							<div class="translation is-hidden">
-								<div class="switch-wrapper right">
-									<div class="facsimile-normalized-switch">
-										<ul>
-											<li><a href="#">Facsimile</a></li>
-											<li class="is-selected"><a href="#">Normalized</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--english _epigram--english edition--facsimile is-hidden">Facsimile English Epigram Right</div>
-								<div class="lang--english _epigram--english edition--normalized">Normalized English Epigram Right</div>
-							</div>
-							<div class="original">
-								<div class="switch-wrapper right">
-									<div class="latin-german-switch">
-										<ul>
-											<li class="is-selected"><a href="#">Latin</a></li>
-											<li><a href="#">German</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--latin _epigram--latin">Latin Epigram Right</div>
-								<div class="lang--german _epigram--german is-hidden">German Epigram Right</div>
-							</div>
+					</div>
+					<div class="lang--latin _motto--latin">Latin Motto</div>
+					<div class="lang--german _motto--german is-hidden">German Motto</div>
+				</div>
+			</section>
+			<section class="section__motto section--double panel--right is-hidden">
+				<div class="translation is-hidden">
+					<div class="switch-wrapper right">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
 						</div>
-					</section>
-					<!-- Discourse -->
-					<a name="discourse" id="basic-waypoint__4"></a>
-					<section class="discourse-wrapper half wrapper-section section--split-or-wrap">
-						<div class="section section--discourse section section--single">
-							<div class="translation">
-								<div class="switch-wrapper left">
-									<div class="facsimile-normalized-switch">
-										<ul>
-											<li><a href="#">Facsimile</a></li>
-											<li class="is-selected"><a href="#">Normalized</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--english _discourse--english edition--facsimile text is-hidden">Facsimile English Discourse</div>
-								<div class="lang--english _discourse--english edition--normalized text">Normalized English Discourse</div>
-							</div>
-							<div class="original text is-hidden">
-								<div class="lang--latin _discourse--latin">Latin Discourse</div>
-							</div>
+					</div>
+					<div class="lang--english _motto--english edition--normalized">
+						<div class="title">
+						    <h3 class="title">
+						        <span class="italics">the first <span class="choice"><span class="orig">Embleme </span><span class="reg">Emblem</span></span>. Of the Secrets of Nature.</span>
+						    </h3>
+						    <h1 class="title">
+						        <span class="del">
+						        	<span class="unclear">4 chars</span>
+						        </span>
+						        <span class="subst">
+						        	<span class="del">
+						        		<span class="unclear">1 char</span>
+						        	</span>
+						        	<span class="add">W</span>
+						        </span>
+						        ind 
+						        <span class="choice">
+						        	<span class="orig">carryed </span>
+						        	<span class="reg">carried</span>
+						        </span> 
+						        him in his belly <span class="pc">- - - -</span>
+						    </h1>
 						</div>
-							<div class="section section--discourse section--double is-hidden">
-							<div class="translation is-hidden">
-								<div class="switch-wrapper right">
-									<div class="facsimile-normalized-switch">
-										<ul>
-											<li><a href="#">Facsimile</a></li>
-											<li class="is-selected"><a href="#">Normalized</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--english _discourse--english edition--facsimile text is-hidden">Facsimile English Discourse Right</div>
-								<div class="lang--english _discourse--english edition--normalized text">Normalized English Discourse Right</div>
-							</div>
-							<div class="original text">
-								<div class="lang--latin _discourse--latin">Latin Discourse Right</div>
-							</div>
+					</div>
+				</div>
+				<div class="original">
+					<div class="switch-wrapper right">
+						<div class="latin-german-switch">
+							<ul>
+								<li class="is-selected"><a href="#">Latin</a></li>
+								<li><a href="#">German</a></li>
+							</ul>
 						</div>
+					</div>
+					<div class="lang--latin _motto--latin">Latin Motto Right</div>
+					<div class="lang--german _motto--german is-hidden">German Motto Right</div>
+				</div>
+			</section>
+			<!-- Image -->
+			<a name="image" id="basic-waypoint__1" class="section__image"></a>
+			<div class="section__image section--full panel--full">					
+				<div class="_image">
+					<section class="image wrapper-section section">
+							<div class="image__picture section--single">
+<!-- 								<img class="emblem__image--cropped" 
+									srcset="img/emblem-images/320/bdr698524_021_straightened.jpg 320w,
+											img/emblem-images/960/bdr698524_021_straightened.jpg 960w,
+											img/emblem-images/1600/bdr698524_021_straightened.jpg 1600w"
+									src="img/emblem-images/1600/bdr698524_021_straightened.jpg"
+									alt="Illustration" /> -->
+									<img class="emblem__image--cropped" src="http://cdn1-www.dogtime.com/assets/uploads/gallery/30-impossibly-cute-puppies/impossibly-cute-puppy-2.jpg" />
+							</div>
 					</section>
 				</div>
 			</div>
-<!-- LEFT PANEL -->
-			<div class="emblem__left is-hidden">
-				<!-- Facsimile -->
-				<div class="_facsimile-half is-hidden"></div>
-				<!-- Digital Edition -->
-				<div class="emblem">
-					<!-- Motto -->
-					<a name="motto" id="basic-waypoint__0"></a>
-					<section class="section section--motto wrapper-section">
-						<div class="translation left-english-text">
-							<div class="switch-wrapper left">
-								<div class="facsimile-normalized-switch">
-									<ul>
-										<li><a href="#">Facsimile</a></li>
-										<li class="is-selected"><a href="#">Normalized</a></li>
-									</ul>
-								</div>
+			<div class="section__image section--full panel--right is-hidden">
+				<div class="_image">
+					<section class="image wrapper-section section">
+							<div class="image__picture section--single panel--right">
+<!-- 								<img class="emblem__image--cropped" 
+									srcset="img/emblem-images/320/bdr698524_021_straightened.jpg 320w,
+											img/emblem-images/960/bdr698524_021_straightened.jpg 960w,
+											img/emblem-images/1600/bdr698524_021_straightened.jpg 1600w"
+									src="img/emblem-images/1600/bdr698524_021_straightened.jpg"
+									alt="Illustration" /> -->
+									<img class="emblem__image--cropped" src="https://cdn3.list25.com/wp-content/uploads/2013/08/pugpuppies2-610x412.jpg" alt="illustration" />
 							</div>
-							<div class="lang--english _motto--english edition--facsimile is-hidden">Facsimile English Motto</div>
-							<div class="lang--english _motto--english edition--normalized">Normalized English Motto</div>
-						</div>
-						<div class="original left-latin-german-text is-hidden">
-							<div class="switch-wrapper left">
-								<div class="latin-german-switch">
-									<ul>
-										<li class="is-selected"><a href="#">Latin</a></li>
-										<li><a href="#">German</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--latin _motto--latin">Latin Motto</div>
-							<div class="lang--german _motto--german is-hidden">German Motto</div>
-						</div>
-					</section>
-					<!-- Image -->
-					<a name="image" id="basic-waypoint__1"></a>
-					<div class="_image">
-						<section class="image wrapper-section section">
-							<div class="image__picture"><img class="emblem__image--cropped" src="" alt="Illustration" /></div>
-						</section>
-					</div>
-					<!-- Music -->
-					<a name="music" id="basic-waypoint__2"></a>
-					<div class="_music">
-						<section class="music wrapper-section">
-							<div class="section">
-								<div class="test">
-									<p>Music will go here</p>
-								</div>
-							</div>
-						</section>
-					</div>
-					<!-- Epigram -->
-					<a name="epigram" id="basic-waypoint__3"></a>
-					<section class="section section--epigram wrapper-section">
-						<div class="translation left-english-text">
-							<div class="switch-wrapper left">
-								<div class="facsimile-normalized-switch">
-									<ul>
-										<li><a href="#">Facsimile</a></li>
-										<li class="is-selected"><a href="#">Normalized</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--english _epigram--english edition--facsimile is-hidden">Facsimile English Epigram</div>
-							<div class="lang--english _epigram--english edition--normalized">Normalized English Epigram</div>
- 						</div>
-						<div class="original left-latin-german-text is-hidden">
-							<div class="switch-wrapper left">
-								<div class="latin-german-switch">
-									<ul>
-										<li class="is-selected"><a href="#">Latin</a></li>
-										<li><a href="#">German</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--latin _epigram--latin">Latin Epigram</div>
-							<div class="lang--german _epigram--german is-hidden">German Epigram</div>
-						</div>
-					</section>
-					<!-- Discourse -->
-					<a name="discourse" id="basic-waypoint__4"></a>
-					<section class="section--discourse wrapper-section">
-						<div class="translation left-english-text">
-							<div class="switch-wrapper left">
-								<div class="facsimile-normalized-switch">
-									<ul>
-										<li><a href="#">Facsimile</a></li>
-										<li class="is-selected"><a href="#">Normalized</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--english _discourse--english edition--facsimile section text is-hidden">Facsimile English Discourse</div>
-							<div class="lang--english _discourse--english edition--normalized section text">Normalized English Discourse</div>
-						</div>
-						<div class="original left-latin-german-text section text is-hidden">
-							<div class="lang--latin _discourse--latin">Latin Discourse</div>
-						</div>
 					</section>
 				</div>
-			</div>			
-<!-- RIGHT PANEL -->
-			<div class="emblem__right is-hidden">
-				<!-- Facsimile -->
-				<div class="_facsimile-half"></div>
-				<!-- Digital Edition -->
-				<div class="emblem">
-					<!-- Motto -->
-					<a name="motto" id="basic-waypoint__0"></a>
-					<section class="section section--motto wrapper-section">
-						<div class="translation right-english-text is-hidden">
-							<div class="switch-wrapper right">
-								<div class="facsimile-normalized-switch">
-									<ul>
-										<li><a href="#">Facsimile</a></li>
-										<li class="is-selected"><a href="#">Normalized</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--english _motto--english edition--facsimile is-hidden">Facsimile English Motto</div>
-							<div class="lang--english _motto--english edition--normalized">Normalized English Motto</div>
+			</div>
+			<!-- Music -->
+			<a name="music" id="basic-waypoint__2" class="section__music"></a>
+			<section class="section__music section--full panel--full">Music</section>
+			<section class="section__music section--full panel--right is-hidden">Music Right</section>
+			<!-- Epigram -->
+			<a name="epigram" id="basic-waypoint__3" class="section__epigram"></a>
+			<section class="section__epigram section--single panel--full">
+				<div class="translation">
+					<div class="switch-wrapper left">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
 						</div>
-						<div class="original right-latin-german-text">
-							<div class="switch-wrapper right">
-								<div class="latin-german-switch">
-									<ul>
-										<li class="is-selected"><a href="#">Latin</a></li>
-										<li><a href="#">German</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--latin _motto--latin">Latin Motto</div>
-							<div class="lang--german _motto--german is-hidden">German Motto</div>
-						</div>
-					</section>
-					<!-- Image -->
-					<a name="image" id="basic-waypoint__1"></a>
-					<div class="_image">
-						<section class="image wrapper-section section">
-							<div class="image__picture"><img class="emblem__image--cropped" src="" alt="Illustration" /></div>
-						</section>
 					</div>
-					<!-- Music -->
-					<a name="music" id="basic-waypoint__2"></a>
-					<div class="_music">
-						<section class="music wrapper-section">
-							<div class="section">
-								<div class="test">
-									<p>Music will go here</p>
-								</div>
-							</div>
-						</section>
+					<div class="lang--english _epigram--english edition--normalized">
+						<div class="epigram">
+		                    <h3 class="epigram">the first <span class="choice"><span class="orig">Epigramme </span><span class="reg">Epigram</span></span>.</h3>
+		                    <div class="verse-epigram">
+		                        <br/>If Boreas once expand his windy <span class="choice"><span class="orig">wombe </span><span class="reg">womb</span></span>,
+		                        <br/>That <span class="choice"><span class="orig">th' </span><span class="reg">the</span></span> Infant in the world alive may come,
+		                        <br/>His <span class="choice"><span class="orig">prowesse </span><span class="reg">prowess</span></span> will the Heroes all <span class="choice"><span class="orig">outdoe </span><span class="reg">outdo</span></span>
+		                        <br/>In art, in hand, in mind, and body too.
+		                        <br/><span class="choice"><span class="orig">Thinke </span><span class="reg">Think</span></span> him <span class="choice"><span class="orig">noe </span><span class="reg">no</span></span> Cæso, nor abortive brood,
+		                        <br/>Nor yet Agrippa, for his <span class="choice"><span class="orig">starre </span><span class="reg">star</span></span> was good.
+		                    </div>
+		                </div>
 					</div>
-					<!-- Epigram -->
-					<a name="epigram" id="basic-waypoint__3"></a>
-					<section class="section section--epigram wrapper-section">
-						<div class="translation right-english-text is-hidden">
-							<div class="switch-wrapper right">
-								<div class="facsimile-normalized-switch">
-									<ul>
-										<li><a href="#">Facsimile</a></li>
-										<li class="is-selected"><a href="#">Normalized</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--english _epigram--english edition--facsimile is-hidden">Facsimile English Epigram</div>
-							<div class="lang--english _epigram--english edition--normalized">Normalized English Epigram</div>
- 						</div>
-						<div class="original right-latin-german-text">
-							<div class="switch-wrapper right">
-								<div class="latin-german-switch">
-									<ul>
-										<li class="is-selected"><a href="#">Latin</a></li>
-										<li><a href="#">German</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--latin _epigram--latin">Latin Epigram</div>
-							<div class="lang--german _epigram--german is-hidden">German Epigram</div>
-						</div>
-					</section>
-					<!-- Discourse -->
-					<a name="discourse" id="basic-waypoint__4"></a>
-					<section class="section--discourse wrapper-section">
-						<div class="translation right-english-text is-hidden">
-							<div class="switch-wrapper right">
-								<div class="facsimile-normalized-switch">
-									<ul>
-										<li><a href="#">Facsimile</a></li>
-										<li class="is-selected"><a href="#">Normalized</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--english _discourse--english edition--facsimile section text is-hidden">Facsimile English Discourse</div>
-							<div class="lang--english _discourse--english edition--normalized section text">Normalized English Discourse</div>
-						</div>
-						<div class="original right-latin-german-text section text">
-							<div class="lang--latin _discourse--latin">Latin Discourse</div>
-						</div>
-					</section>
 				</div>
-			</div> <!-- END OF RIGHT PANEL -->
-		</div> <!-- END OF EMBLEM WRAPPER -->
+				<div class="original is-hidden">
+					<div class="switch-wrapper left">
+						<div class="latin-german-switch">
+							<ul>
+								<li class="is-selected"><a href="#">Latin</a></li>
+								<li><a href="#">German</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--latin _epigram--latin">Latin Epigram</div>
+					<div class="lang--german _epigram--german is-hidden">German Epigram</div>
+				</div>
+			</section>
+			<section class="section__epigram section--double panel--right is-hidden">
+				<div class="translation is-hidden">
+					<div class="switch-wrapper right">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--english _epigram--english edition--normalized">
+						<div class="epigram">
+		                    <h3 class="epigram">the first <span class="choice"><span class="orig">Epigramme </span><span class="reg">Epigram</span></span>.</h3>
+		                    <div class="verse-epigram">
+		                        <br/>If Boreas once expand his windy <span class="choice"><span class="orig">wombe </span><span class="reg">womb</span></span>,
+		                        <br/>That <span class="choice"><span class="orig">th' </span><span class="reg">the</span></span> Infant in the world alive may come,
+		                        <br/>His <span class="choice"><span class="orig">prowesse </span><span class="reg">prowess</span></span> will the Heroes all <span class="choice"><span class="orig">outdoe </span><span class="reg">outdo</span></span>
+		                        <br/>In art, in hand, in mind, and body too.
+		                        <br/><span class="choice"><span class="orig">Thinke </span><span class="reg">Think</span></span> him <span class="choice"><span class="orig">noe </span><span class="reg">no</span></span> Cæso, nor abortive brood,
+		                        <br/>Nor yet Agrippa, for his <span class="choice"><span class="orig">starre </span><span class="reg">star</span></span> was good.
+		                    </div>
+		                </div>
+					</div>
+				</div>
+				<div class="original">
+					<div class="switch-wrapper right">
+						<div class="latin-german-switch">
+							<ul>
+								<li class="is-selected"><a href="#">Latin</a></li>
+								<li><a href="#">German</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--latin _epigram--latin">Latin Epigram Right</div>
+					<div class="lang--german _epigram--german is-hidden">German Epigram Right</div>
+				</div>
+			</section>
+			<!-- Discourse -->
+			<a name="discourse" id="basic-waypoint__4" class="section__discourse"></a>
+			<section class="section__discourse section--single panel--full">
+				<div class="translation">
+					<div class="switch-wrapper left">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--english _discourse--english edition--facsimile text is-hidden">Facsimile English Discourse</div>
+					<div class="lang--english _discourse--english edition--normalized text">Normalized English Discourse</div>
+				</div>
+				<div class="original text is-hidden">
+					<div class="lang--latin _discourse--latin">Latin Discourse</div>
+				</div>
+			</section>
+			<section class="section__discourse section--double panel--right is-hidden">
+				<div class="translation is-hidden">
+					<div class="switch-wrapper right">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--english _discourse--english edition--facsimile text is-hidden">Facsimile English Discourse Right</div>
+					<div class="lang--english _discourse--english edition--normalized text">Normalized English Discourse Right</div>
+				</div>
+				<div class="original text">
+					<div class="lang--latin _discourse--latin">Latin Discourse Right</div>
+				</div>
+			</section>
+		</div><!-- END EMBLEM -->
 	</main> <!-- END OF EMBLEM PAGE -->
 <!-- JS -->
-	<script type="text/javascript">
-		$(function () {
-/* VARIABLES */
-			/* emblem nav */
-			var singleNav = '.subnav > ul li:nth-child(n + 2):nth-child(-n + 4)';
-			var doubleNav = '.subnav > ul li:nth-last-child(-n + 3)';
-			var singleViewBtn = '.subnav > ul li:nth-child(1)';
-			var doubleViewBtn = '.subnav > ul li:nth-child(5)';
-			var englishSingleView = '.subnav > ul li:nth-child(2)';
-			var latinSingleView = '.subnav > ul li:nth-child(3)';
-			var facsimileSingleView = '.subnav > ul li:nth-child(4)';
-			var englishDoubleView = '.subnav > ul li:nth-child(6)';
-			var latinDoubleView = '.subnav > ul li:nth-child(7)';
-			var facsimileDoubleView = '.subnav > ul li:nth-child(8)';
-			/* emblem languages */
-			var singleEmblem = '.emblem__full .section--single';
-			var singleTranslation = '.section--single .translation';
-			var singleOriginal = '.section--single .original';
-			var singleFacsimile = '.emblem__full .facsimile';
-			var doubleEmblem = '.emblem__full .section--double';
-			var doubleTranslation = '.section--double .translation';
-			var doubleOriginal = '.section--double .original';
-			var leftEnglishGroup = '.left-english-text';
-			var rightEnglishGroup = '.right-english-text';
-			var leftOriginalGroup = '.left-latin-german-text';
-			var rightOriginalGroup = '.right-latin-german-text';
-			var leftFacsimileSwitch = '.left .facsimile-normalized-switch ul li:nth-child(1)';
-			var leftNormalizedSwitch = '.left .facsimile-normalized-switch ul li:nth-child(2)';
-			var rightFacsimileSwitch = '.right .facsimile-normalized-switch ul li:nth-child(1)';
-			var rightNormalizedSwitch = '.right .facsimile-normalized-switch ul li:nth-child(2)';
-			var leftLatinSwitch = '.left .latin-german-switch ul li:nth-child(1)';
-			var leftGermanSwitch = '.left .latin-german-switch ul li:nth-child(2)';
-			var rightLatinSwitch = '.right .latin-german-switch ul li:nth-child(1)';
-			var rightGermanSwitch = '.right .latin-german-switch ul li:nth-child(2)';
-			/* emblem side nav */
-			// var mottoSideNav = 'ul.sidenav__options > a li:nth-child(1)';
-			// var imageSideNav = 'ul.sidenav__options > a li:nth-child(2)';
-			// var musicSideNav = 'ul.sidenav__options > a li:nth-child(3)';
-			// var epigramSideNav = 'ul.sidenav__options > a li:nth-child(4)';
-			// var discourseSideNav = 'ul.sidenav__options > a li:nth-child(5)';
-			/* emblem halves */
-			var wholeEmblemWrapper = '.emblem__full';
-			var leftEmblem = '.emblem__left';
-			var rightEmblem = '.emblem__right';
-			var leftEmblemText = '.emblem__left .emblem';
-			var rightEmblemText = '.emblem__right .emblem';
-			var leftFacsimile = '.emblem__left .facsimile-wrapper';
-			var rightFacsimile = '.emblem__right .facsimile-wrapper';
-			var rightTranslation = '.emblem__right .translation';
-			var rightOriginal = '.emblem__right .original';
-			/* emblem sections */
-			var imageSection = '.emblem__full .image';
-			var musicSection = '.emblem__full .music';
-
-/* INITIALIZE */
-			onLoad(); // DISPLAY EMBLEM MENU AND DEFAULT OPTIONS ON PAGE LOAD
-
-/* EVENTS */
-			/* pages */
-			$(doubleViewBtn).click(function() { // DISPLAY SPLIT EMBLEM
-				console.log("I clicked on double view!");
-				isActiveDouble(); // highlight double view
-				if( $(facsimileSingleView).hasClass('is-active') ) { // display left facsimile if it is stored
-					showFacsimile();
-				}
-				else if( $(facsimileDoubleView).hasClass('is-active') ) { // display right facsimile if it is stored
-					showRightFacsimile();
-				}
-				else { // display emblem halves in whole emblem container if no facsimile is stored
-					splitWholeEmblem();
-				}
-				return false;
-			});
-			$(singleViewBtn).click(function() { // DISPLAY SINGLE EMBLEM
-				isActiveSingle(); // highlight single view
-				rejoinWholeEmblem(); //replace left/right halves with full-width in whole emblem container
-				if( $(facsimileSingleView).hasClass('is-active') ) { // display whole facsimile if left facsimile is active when switching from double to single view
-					showFacsimile();
-				}
-				else if( $(englishSingleView).hasClass('is-active') ) { // display whole english text
-					showTranslation();
-				}
-				else {  // display latin text in full-width or left half
-					showOriginalLanguage();
-				}
-				return false;
-			});
-			/* languages */
-			$(englishSingleView).click(function() { // ACTIVATE SINGLE ENGLISH
-				resetLanguagesOnLeft(); // hide all full-width text or left half text, except image and music sections
-				showTranslation(); // show english text in full-width or left half
-				if( $(this).hasClass('is-active') ) { 
-
-				}
-				else {
-					$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
-					$(this).addClass('is-active'); // highlight selected view option in single nav
-				}
-				return false;
-			});
-			$(latinSingleView).click(function() { // ACTIVATE SINGLE LATIN
-				resetLanguagesOnLeft(); // hide all full-width text or left half text, except image and music sections
-				showOriginalLanguage(); // show latin text in full-width or left half
-				if( $(this).hasClass('is-active') ) {
-
-				}
-				else {
-					$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
-					$(this).addClass('is-active'); // highlight selected view option in single nav
-				}
-				return false;
-			});
-			$(facsimileSingleView).click(function() { // ACTIVATE SINGLE FACSIMILE
-				if( $(this).hasClass('is-active') ) {
-
-				}
-				else {
-					$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
-					$(this).addClass('is-active'); // highlight selected view option in nav
-					showFacsimile(); // display full-width or left half facsimile
-				}
-				return false;
-			});
-			$(englishDoubleView).click(function() { // ACTIVATE DOUBLE ENGLISH
-				resetLanguagesOnRight(); // hide all full-width text or left half text, except image and music sections
-				showTranslationDouble(); // show english text in right half
-				if( $(this).hasClass('is-active') ) {
-
-				}
-				else {
-					$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
-					$(this).addClass('is-active'); // highlight selected view option in nav
-				}
-				return false;
-			});
-			$(latinDoubleView).click(function() { // ACTIVATE DOUBLE LATIN
-				resetLanguagesOnRight(); // hide all full-width text or left half text, except image and music sections
-				showOriginalLanguageDouble(); // show latin text in right half
-				if( $(this).hasClass('is-active') ) {
-
-				}
-				else {
-					$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
-					$(this).addClass('is-active'); // highlight selected view option in nav
-				}
-				return false;
-			});
-			$(facsimileDoubleView).click(function() { // ACTIVATE DOUBLE FACSIMILE
-				if( $(this).hasClass('is-active') ) {
-
-				}
-				else { 
-					$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
-					$(this).addClass('is-active'); // highlight selected view option in nav
-					showRightFacsimile();
-					if( $(leftEmblem).hasClass('is-hidden') ) {
-						$(leftFacsimile).addClass('is-hidden'); // reset and hide left facsimile if the left panel is also hidden
-					}
-				}
-				return false;
-			});
-			$(leftNormalizedSwitch).click(function() { // SELECT LEFT NORMALIZED SWITCH
-					$(leftNormalizedSwitch).addClass('is-selected'); // highlight german switch on left side
-					$(leftFacsimileSwitch).removeClass('is-selected'); // remove highlight from latin on left side
-					return false;
-			});
-			$(rightNormalizedSwitch).click(function() { // SELECT RIGHT NORMALIZED SWITCH
-					$(rightNormalizedSwitch).addClass('is-selected'); // highlight german switch on right side
-					$(rightFacsimileSwitch).removeClass('is-selected'); // remove highlight from latin on right side
-					return false;
-			});
-			$(leftFacsimileSwitch).click(function() { // SELECT LEFT FACSIMILE SWITCH
-					$(leftFacsimileSwitch).addClass('is-selected'); // highlight Latin switch on left side
-					$(leftNormalizedSwitch).removeClass('is-selected'); // remove highlight from German on left side
-					return false;
-			});
-			$(rightFacsimileSwitch).click(function() { // SELECT RIGHT FACSIMILE SWITCH
-					$(rightFacsimileSwitch).addClass('is-selected'); // highlight Latin switch on right side
-					$(rightNormalizedSwitch).removeClass('is-selected'); // remove highlight from German on right side
-					return false;
-			});
-			$(leftGermanSwitch).click(function() { // SELECT LEFT GERMAN SWITCH
-					$(leftGermanSwitch).addClass('is-selected'); // highlight german switch on left side
-					$(leftLatinSwitch).removeClass('is-selected'); // remove highlight from latin on left side
-					return false;
-			});
-			$(rightGermanSwitch).click(function() { // SELECT RIGHT GERMAN SWITCH
-					$(rightGermanSwitch).addClass('is-selected'); // highlight german switch on right side
-					$(rightLatinSwitch).removeClass('is-selected'); // remove highlight from latin on right side
-					return false;
-			});
-			$(leftLatinSwitch).click(function() { // SELECT LEFT LATIN SWITCH
-					$(leftLatinSwitch).addClass('is-selected'); // highlight Latin switch on left side
-					$(leftGermanSwitch).removeClass('is-selected'); // remove highlight from German on left side
-					return false;
-			});
-			$(rightLatinSwitch).click(function() { // SELECT RIGHT LATIN SWITCH
-					$(rightLatinSwitch).addClass('is-selected'); // highlight Latin switch on right side
-					$(rightGermanSwitch).removeClass('is-selected'); // remove highlight from German on right side
-					return false;
-			});
-/* FUNCTIONS */
-			function onLoad() {
-				$(doubleNav).toggleClass('is-hidden'); // hide last 3 language options for double view
-				$(singleViewBtn).toggleClass('is-active'); // make "Single View" button active
-				$(englishSingleView).toggleClass('is-active'); // highlight english translation as default single text
-				$(latinDoubleView).toggleClass('is-active'); // highlight latin as default double text
-				// $('ul.sidenav__options a:nth-child(1)').toggleClass('is-active'); // highlight motto in sidenav menu
-				$('.wrapper-vertical-divider').toggleClass('is-disabled'); // hide vertical line that divides text sections
-				console.log("352: I loaded the page");
-			}
-			// I need to take a deep look at the *pages* event listeners and these two functions below. Are they repeating themselves???
-			function isActiveSingle() { // make full-width emblem when single view is active
-				if( $(singleViewBtn).hasClass('is-active') ) {
-					console.log("357: single view is already active");
-				}
-				else {
-					$(doubleNav).addClass('is-hidden'); // hide last 3 language options for double view
-					$(doubleViewBtn).removeClass('is-active'); // remove highlight from double view button
-					$(singleViewBtn).addClass('is-active'); // add highlight to single view button
-					$(imageSection).removeClass('double'); // end half width image section
-					$(imageSection).addClass('single'); // begin full width image section
-					$(musicSection).removeClass('double'); // end half width music section
-					$(musicSection).addClass('single'); // begin full width music section
-					console.log("367: i'm making single view active in isActiveSingle()");
-
-				}
-			}
-			function isActiveDouble() { // split whole emblem into left/right halves
-				if( $(doubleViewBtn).hasClass('is-active') ) {
-					console.log("373: double view is already active!!!");
-				}
-				else if( !$(doubleViewBtn).hasClass('is-active') && $(doubleNav).hasClass('is-hidden') ) { 
-					$(doubleNav).removeClass('is-hidden'); // reveal last 3 language options for double view
-					$(singleViewBtn).removeClass('is-active'); // remove highlight from single view button
-					$(doubleViewBtn).addClass('is-active'); // add highlight to double view button
-					$(imageSection).removeClass('single'); // end full width image section
-					$(imageSection).addClass('double'); // begin half width image section
-					$(musicSection).removeClass('single'); // end full width music section
-					$(musicSection).addClass('double'); // begin half width music section
-					console.log("383: i'm making double view active in isActiveDouble()");
-				}
-			}
-			function splitWholeEmblem() {
-				$(doubleEmblem).removeClass('is-hidden'); //replace full-width with left/right halves in whole emblem container
-			}
-			function rejoinWholeEmblem() {
-				$(doubleEmblem).addClass('is-hidden'); //replace left/right halves with full-width in whole emblem container
-			}
-			function resetLanguagesOnLeft() {
-				$(singleEmblem).removeClass('is-hidden'); // show full-width emblem
-				$(singleFacsimile).addClass('is-hidden'); // hide full-width/left-half facsimile
-				$(singleTranslation).addClass('is-hidden'); // hide full-width/left-half english text
-				$(singleOriginal).addClass('is-hidden'); // hide full-width/left-half original language text
-			}
-			function resetLanguagesOnRight() {
-				$(doubleEmblem).removeClass('is-hidden'); // show right half in whole emblem container
-				$(doubleTranslation).addClass('is-hidden'); // hide all english text in right half
-				$(doubleOriginal).addClass('is-hidden'); // hide all latin/german text in right half
-				$(rightFacsimile).addClass('is-hidden'); // hide right facsimile
-				$(rightTranslation).addClass('is-hidden'); // hide right emblem english text
-				$(rightOriginal).addClass('is-hidden'); // hide right emblem latin/german text
-			}
-			function showTranslation() {
-				$(singleTranslation).removeClass('is-hidden'); // display english text
-				storeTranslationLeft(); // mark english text to be visible in left container of split facsimile view
-				if( $(singleViewBtn).hasClass('is-active') ) {
-					hideFacsimileHalves(); // hide split facsimile view
-				}
-			}
-			function showTranslationDouble() {
-				$(doubleTranslation).removeClass('is-hidden'); // show latin/german text in double half
-				storeTranslationRight(); // mark english text to be visible in right container of split facsimile view
-			}
-			function showOriginalLanguage() {
-				$(singleOriginal).removeClass('is-hidden'); // display default latin text
-				storeOriginalLeft(); // mark default latin text to be visible in left container of split facsimile view
-				if( $(singleViewBtn).hasClass('is-active') ) {
-					hideFacsimileHalves(); // hide split facsimile view		
-				}
-			}
-			function showOriginalLanguageDouble() {
-				$(doubleOriginal).removeClass('is-hidden'); // show latin/german text in right half of whole emblem container
-				storeOriginalLanguageRight(); // mark latin text to be visible in right container of split facsimile view
-			}
-			function showFacsimile() {
-				storeFacsimileWhole(); // mark whole facsimile as active, even though the wrapper and its contents may be hidden
-				storeFacsimileLeft(); // mark left facsimile as active, even though the wrapper and its contents may be hidden
-				if( $(singleViewBtn).hasClass('is-active') ) { // make facsimile 100vh
-					hideFacsimileHalves(); // show whole container emblem and hide left/right container emblems
-				}
-				// do I need an else if that applies to left facs when double view is active???
-				else if( $(doubleViewBtn).hasClass('is-active') ) {
-					hideFacsimileWhole(); // show split container emblems / hide whole container emblem
-				}
-			}
-			function showRightFacsimile() { // show right facsimile and hide right emblem text  
-					hideFacsimileWhole();
-					storeFacsimileRight();
-			}
-			function storeTranslationLeft() {
-				$('.emblem__left > .emblem').removeClass('is-hidden'); // show left emblem
-				$('.emblem__left > .emblem').siblings().addClass('is-hidden'); // hide left facsimile
-				$(leftEnglishGroup).removeClass('is-hidden'); // show left english text
-				$(leftEnglishGroup).siblings().addClass('is-hidden'); // hide left original text
-			}
-			function storeTranslationRight() {
-				$('.emblem__right > .emblem').removeClass('is-hidden'); // show right emblem
-				$('.emblem__right > .emblem').siblings().addClass('is-hidden'); // hide right facsimile
-				$(rightEnglishGroup).removeClass('is-hidden'); // show right english text
-				$(rightEnglishGroup).siblings().addClass('is-hidden'); // hide right original text
-			}
-			function storeOriginalLeft() {
-				$('.emblem__left > .emblem').removeClass('is-hidden'); // show left emblem
-				$('.emblem__left > .emblem').siblings().addClass('is-hidden'); // hide left facsimile
-				$(leftOriginalGroup).removeClass('is-hidden'); // show left latin text
-			}
-			function storeOriginalLanguageRight() {
-				$('.emblem__right > .emblem').removeClass('is-hidden'); // show right emblem
-				$('.emblem__right > .emblem').siblings().addClass('is-hidden'); // hide right facsimile
-				$(rightOriginalGroup).removeClass('is-hidden'); // show right latin/german text
-				$(rightOriginalGroup).siblings().addClass('is-hidden'); // hide right latin/german text
-			}
-			function storeFacsimileWhole() {
-				$(singleFacsimile).removeClass('is-hidden'); // show full-width facsimile
-				$(singleEmblem).addClass('is-hidden'); // hide whole emblem	
-			}
-			function storeFacsimileLeft() {
-				$(leftFacsimile).removeClass('is-hidden'); // show left facsimile
-				$(leftFacsimile).siblings().addClass('is-hidden'); // hide left emblem text
-			}
-			function storeFacsimileRight() {
-				$(rightFacsimile).removeClass('is-hidden'); // show right facsimile
-				$(rightFacsimile).siblings().addClass('is-hidden'); // hide right emblem text
-			}
-			function hideFacsimileHalves() {
-				$(wholeEmblemWrapper).removeClass('is-hidden'); // show whole emblem
-				$(leftEmblem).addClass('is-hidden'); // hide left emblem
-				$(rightEmblem).addClass('is-hidden'); // hide right emblem
-			}
-			function hideFacsimileWhole() { // ***this has to happen whenever facsimile is selected in split view
-				$(wholeEmblemWrapper).addClass('is-hidden'); // hide whole emblem
-				$(leftEmblem).removeClass('is-hidden'); // show left emblem
-				$(rightEmblem).removeClass('is-hidden'); // show right emblem
-			}
-		});
-	</script>
+	<script type="text/javascript" src="js/topnav.js"></script>
+	<script type="text/javascript" src="js/emblem.js"></script>
+	<script type="text/javascript" src="js/zooming-image-viewer--openseadragon.js"></script>
 </body>
 </html>
 
