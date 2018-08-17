@@ -9,6 +9,9 @@
   	flex-direction: column;
   	align-items: center;*/
 }
+
+
+/*************************************************/
 .section__music.section--full.panel--left {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
@@ -49,6 +52,7 @@
 		grid-area: 4 / 2 / 5 / 12;
 	}
 }
+/*************************************************/
 .atalanta-notation-viz-pianoroll {
 	display: none;
 	grid-area: 4 / 2 / 5 / 12;
