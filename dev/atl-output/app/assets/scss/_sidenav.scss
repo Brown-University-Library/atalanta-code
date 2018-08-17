@@ -8,7 +8,7 @@
 	 padding: 0 0 1rem 0;
 	 position: fixed;
 	 top: 9rem;
-	 width: 11rem;
+	 width: 9rem;
 	 z-index: 20;
 }
 .sidenav ul li {
@@ -27,7 +27,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	font-weight: 800;
-	width: 11rem;
+	width: 9rem;
 	li {
 		display: flex;
 		align-items: center;
@@ -133,6 +133,24 @@ background-color: blue !important;
 	border-top: 180px solid transparent;*/
 	/*margin-top: -180px*/;
 /*	background-clip: padding-box;*/
-margin-top: 180px;
+	margin-top: 180px;
+}
+
+/* BREAKPOINTS */
+/*----- SIDENAV -- SMALL LAPTOPS -----*/
+@media screen and (min-width: 768px) and (max-width: 999px) {
+	.wrapper-sidenav {
+		margin-left: .5rem;
+		width: 9rem;
+	}
+	.sidenav .sidenav__navigation {
+		width: 9rem;
+	}
+}
+/*----- SIDENAV -- SMALL LAPTOPS -----*/
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+	.wrapper-sidenav {
+		margin-left: 1rem;
+	}
 }
  	 

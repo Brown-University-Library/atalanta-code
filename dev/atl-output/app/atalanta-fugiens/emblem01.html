@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="../assets/js/waypoints/lib/jquery.waypoints.min.js"></script>
 	<script type="text/javascript" src="../assets/js/waypoints/lib/noframework.waypoints.min.js"></script>
 	<script type="text/javascript" src="../assets/js/openseadragon/openseadragon.min.js"></script>
+	<script type="text/javascript" src="../assets/js/verovio/verovio-toolkit.js"></script>
 </head>
 <body>
 <!-- <div class="trigger-debug" style="position: fixed; height: 2px; width: 100%; z-index: 5000000000; background-color: red; top: 150px;"></div>
@@ -296,8 +297,24 @@
 			</div>
 			<!-- Music -->
 			<a name="music" id="basic-waypoint__2" class="section__music"></a>
-			<section class="section__music section--full panel--full">Music</section>
-			<section class="section__music section--full panel--right is-hidden">Music Right</section>
+			<section class="section__music section--full panel--full">
+				<div class="atalanta-notation" data-mei="../data/mei/Fuga 1.xml">
+				    <div class="atalanta-notation-viz atalanta-notation-viz-cmn" style="background-image: url(../assets/img/default/music.png)"></div>
+				    <div class="atalanta-notation-viz atalanta-notation-viz-audio" data-tempo="240" data-mp3="../assets/audio/fugue 01 P.mp3;../assets/audio/fugue 01 A.mp3;../assets/audio/fugue 01 H.mp3">
+				    </div>
+				    <!-- Tracks separated by semicolons, audio files by commas -->
+				    <div class="atalanta-notation-viz atalanta-notation-viz-pianoroll"></div>
+				</div>
+			</section>
+			<section class="section__music section--full panel--right is-hidden">
+				<div class="atalanta-notation" data-mei="../data/mei/Fuga 1.xml">
+				    <div class="atalanta-notation-viz atalanta-notation-viz-cmn" style="background-image: url(../assets/img/default/music.png)"></div>
+				    <div class="atalanta-notation-viz atalanta-notation-viz-audio" data-tempo="240" data-mp3="../assets/audio/fugue 01 P.mp3;../assets/audio/fugue 01 A.mp3;../assets/audio/fugue 01 H.mp3">
+				    </div>
+				    <!-- Tracks separated by semicolons, audio files by commas -->
+				    <div class="atalanta-notation-viz atalanta-notation-viz-pianoroll"></div>
+				</div>
+			</section>
 			<!-- Epigram -->
 			<a name="epigram" id="basic-waypoint__3" class="section__epigram"></a>
 			<section class="section__epigram section--single panel--full">
@@ -416,6 +433,7 @@
 	<script type="text/javascript" src="../assets/js/topnav.js"></script>
 	<script type="text/javascript" src="../assets/js/emblem.js"></script>
 	<script type="text/javascript" src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
+  	<script type="text/javascript" src="../assets/js/notation.js"></script>
 </body>
 </html>
 
