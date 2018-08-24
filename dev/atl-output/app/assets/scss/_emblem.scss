@@ -139,9 +139,9 @@
 /*	width: 100%;*/
 	padding: 4rem 0;
 	text-align: center;
-	p {
+	p h3 {
 		font-size: 1.25rem;
-		font-weight: bold;
+		font-weight: normal;
 		line-height: 2.125rem;
 		text-align: center;
 		white-space: pre-line;
@@ -272,9 +272,9 @@ section > div.discourse.section.width--100 {
 		font-size: 1.625rem;
 		line-height: 2.125rem;
 	}
-	.epigram p {
+	.epigram p h3 {
 		font-size: 1rem;
-		font-weight: lighter;
+		font-weight: normal;
 		line-height: 1.625rem;
 		max-width: 21rem;
 	}
