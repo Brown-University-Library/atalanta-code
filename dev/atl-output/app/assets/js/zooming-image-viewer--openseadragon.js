@@ -1,9 +1,14 @@
 $(function () {
 	var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
-	var startPage // the number of first page of current emblem
+	var startPage = 0; // the number of first page of current emblem
+	var currentPageSingle = 0;
+	var myCurrentPageSingle = 0;
+	var currentPageBook = 0;
 	var pageTiles = "../data/pageView.json"; // file path to page view dzi files
 	console.log("This is pageTiles " + pageTiles);
 	var bookTiles = "../data/bookView.json"; // file path to book view dzi files
+	var nextPageBtn = $('#next');
+	var prevPageBtn = $('#previous');
 	var pageView = $.getJSON(pageTiles, function(myJSON) { // get pageView.json file
 		pageView = pageView.responseJSON; // get array of page view URLS
 	})
@@ -17,6 +22,7 @@ $(function () {
 		else if (myEmblemDataNum > 4) { // handle emblems (in sets of 4)
 			startPage = myEmblemDataNum * 4 - 7;
 		}
+		currentPageSingle = startPage;
 		var atalantaZoom = pageView; // current view mode (initially pageView)
 		var viewer = OpenSeadragon({
 			id: "openseadragon-wrapper",
@@ -42,4 +48,34 @@ $(function () {
 		// var pageIndex = this.pageIndex - (this.mode === 'book' ? 2 : 1);
 		// 	if (this.mode === 'book')
 	});
+	console.log("the current page is " + currentPageSingle);
+	console.log("my emblem number is " + myEmblemDataNum);
+	$(nextPageBtn).click(function(){
+		console.log("I clicked the next page");
+		currentPageSingle = currentPageSingle + 1;
+		console.log("now the current page is " + currentPageSingle);
+		if(currentPageSingle <= 7) {
+			myCurrentPageSingle = currentPageSingle - 3;
+			console.log("my new current page is " + myCurrentPageSingle);
+		}
+		else if(currentPageSingle > 7) {
+			myCurrentPageSingle = Math.floor(currentPageSingle / 4) + 3;
+			console.log("my new current page is " + myCurrentPageSingle);
+		}
+		updatePage();
+	});
+	function updatePage(){
+		var testing = document.getElementById('myPage');
+		console.log("my element is " + testing);
+		testing.setAttribute("data-id", myCurrentPageSingle);
+		checkUpdate();
+	}
+	function checkUpdate(){
+		var testing2 = document.getElementById('myPage');
+		var myNewEmblemDataNum = testing2.getAttribute('data-id');
+		console.log("now my emblem number is " + myNewEmblemDataNum);
+	}
+
+		// 	var mySingleData = document.querySelector(singleViewBtn);
+		// mySingleData.setAttribute("data-state", singleData);
 });
