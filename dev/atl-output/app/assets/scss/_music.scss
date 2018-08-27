@@ -61,9 +61,6 @@
 
 /* CMN Visualization (from Patrick) */
 
-g.page-margin {
-	transform: translate(0, 0);
-}
 /* This is for the background (non-javascript) image */
 
 .atalanta-notation-viz-cmn {
@@ -225,9 +222,6 @@ g.page-margin {
 
 /* VENDOR SPECIFIC STYLES */
 @-moz-document url-prefix() { /* https://developer.mozilla.org/en-US/docs/Web/CSS/@document */
-	.atalanta-notation {
-		outline: 10px solid green;
-	}
 	.music-page svg {
 		margin-left: -25vw;
 	}
@@ -251,23 +245,25 @@ g.page-margin {
 		margin-bottom: -113rem;
 	}
 	@-moz-document url-prefix() {
-		.music-page {
-			height: 4000px;
+		.music-pages {
+			height: auto;
+			max-height: 200vh;
+			margin-bottom: -6rem;
 		}
 		.music-page svg {
 			margin-left: -336vw;
 		}
 		.music-page:nth-of-type(1) {
-			margin-top: -108rem;
+			margin-bottom: 0;
 		}
 		.music-page:nth-of-type(1) svg {
-			background-color: red;
-			margin-top: 0;
+			margin-top: -108rem;
+		}
+		.music-page:nth-of-type(2) {
+			margin-top: -107rem;
 		}
 		.music-page:nth-of-type(2) svg {
-			background-color: blue;
-			margin-top: -25rem;
-			margin-bottom: 0;
+			margin-top: -59rem;
 		}
 	}
 }
