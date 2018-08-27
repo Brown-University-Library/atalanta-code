@@ -110,7 +110,7 @@
       $.ajax({
           url: meiFileURL, dataType: 'text', success: function(meiData) {
 
-            const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gis;
+            const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gi;
             let staffDefTxt;
 
             while (staffDefTxt = voiceNameRE.exec(meiData)) {
@@ -433,7 +433,7 @@
           pageSvgCode = verovioToolkit.renderPage(pageNumber + 1),
           svgWidth = (widthRE.exec(pageSvgCode))[1],
           // scale = (pageContainerWidth / svgWidth);
-          scale = (pageContainerWidth / svgWidth)*1.15; // I made the scale slightly larger so I can make the verse text larger
+          scale = (pageContainerWidth / svgWidth)*1.15; // (CB) I made the scale slightly larger so I can make the verse text larger
 
         if (scale < smallestScale) smallestScale = scale;
 
@@ -443,7 +443,7 @@
       // Add a transform property to the SVG to scale it to fit the containing div
       //  then attach page div to DOM
 
-      pageContainers.forEach((pageContainer, pageIndex) => {
+      pageContainers.forEach((pageContainer, pageIndex) => { // (CB) This results in very different layout in Chrome vs. Safari/Firefox
 
         let scaledPageSvgCode, svgHeight;
 
@@ -844,7 +844,7 @@
     
     // Get mute button text from MEI
 
-    const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gis;
+    const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gi;
     let staffDefTxt, muteButtonTexts = [];
 
     while (staffDefTxt = voiceNameRE.exec(meiData)) {
