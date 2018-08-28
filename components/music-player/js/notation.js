@@ -110,7 +110,7 @@
       $.ajax({
           url: meiFileURL, dataType: 'text', success: function(meiData) {
 
-            const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gis;
+            const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gi;
             let staffDefTxt;
 
             while (staffDefTxt = voiceNameRE.exec(meiData)) {
