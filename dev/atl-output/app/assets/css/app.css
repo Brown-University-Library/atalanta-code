@@ -1396,12 +1396,7 @@ h3.title .italics {
 @-moz-document url-prefix() {
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/@document */
   .music-page svg {
-    margin-left: -25vw; }
-  .music-page:nth-of-type(1) svg {
-    margin-top: -70vh; }
-  .music-page:nth-of-type(2) svg {
-    margin-top: -125vh;
-    margin-bottom: -32vh; } }
+    margin-left: 1rem; } }
 
 /* BREAKPOINTS */
 /*----- EMBLEM MUSIC -- MOBILE -----*/
