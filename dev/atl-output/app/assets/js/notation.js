@@ -368,6 +368,7 @@
     }
     
     function render() {
+      console.log("page height is " + pageHeight);
 
       let viewDOM = (viewContainer.get())[0];
 
@@ -394,6 +395,7 @@
       // adjustPageHeight: true
       };
 
+      console.log("now the page height is " + pageHeight);
       verovioToolkit.setOptions(VEROVIO_OPTIONS_2);
 
       // Merge pages together
@@ -443,20 +445,56 @@
       // Add a transform property to the SVG to scale it to fit the containing div
       //  then attach page div to DOM
 
-      pageContainers.forEach((pageContainer, pageIndex) => { // (CB) This results in very different layout in Chrome vs. Safari/Firefox
+      // pageContainers.forEach((pageContainer, pageIndex) => { // (CB) This results in very different layout in Chrome vs. Safari/Firefox
+
+      //   let scaledPageSvgCode, svgHeight;
+      //     console.log("initial svg height is " + svgHeight);
+      //   scaledPageSvgCode = svgCodeForPages[pageIndex].replace(
+      //     /^<svg\s+/, 
+      //     `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
+      //   );
+
+      //CB TEST
+        pageContainers.forEach((pageContainer, pageIndex) => { // (CB) This results in very different layout in Chrome vs. Safari/Firefox
 
         let scaledPageSvgCode, svgHeight;
-
+          console.log("initial svg height is " + svgHeight);
         scaledPageSvgCode = svgCodeForPages[pageIndex].replace(
           /^<svg\s+/, 
           `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
         );
 
         svgHeight = (heightRE.exec(scaledPageSvgCode))[1] * smallestScale;
-
+          console.log("new svg height is " + svgHeight);
         pageContainer.style.height = svgHeight;
+          console.log("final svg height is " + svgHeight);
         pageContainer.innerHTML = scaledPageSvgCode;
+        myViewBoxTest();
       });
+
+
+      function myViewBoxTest() {
+        let musicPageA, musicPageB, firstSVG, secondSVG, heightSVGa, heightSVGb, widthSVGa, widthSVGb, scaleHeightSVGa, scaleWidthSVGa;
+        musicPageA = '.music-page:nth-child(1) svg';
+        musicPageB = '.music-page:nth-child(2) svg';
+        firstSVG = document.querySelector(musicPageA);
+        secondSVG = document.querySelector(musicPageB);
+        heightSVGa = $(firstSVG).attr('height');
+        heightSVGb = $(secondSVG).attr('height');
+        widthSVGa = $(firstSVG).attr('width');
+        widthSVGb = $(secondSVG).attr('width');
+        console.log
+        console.log("my first SVG height is " + heightSVGa + " and width is " + widthSVGa);
+        console.log("my second SVG height is " + heightSVGb + " and width is " + widthSVGb);
+        heightSVGa = parseInt(heightSVGa, 10);
+        widthSVGa = parseInt(widthSVGa, 10);
+        scaleHeightSVGa = heightSVGa * smallestScale;
+        scaleWidthSVGa = widthSVGa * smallestScale;
+        console.log("my scaled SVG a height is " + scaleHeightSVGa);
+        console.log("my scaled SVG a width is " + scaleWidthSVGa);
+        firstSVG.setAttribute("viewBox", "0 0 " + scaleWidthSVGa + " " + scaleHeightSVGa);
+        // firstSVG.setAttribute("viewBox", "0 0 800 1500");
+      }
 
       // Fill with music SVG
 /*
