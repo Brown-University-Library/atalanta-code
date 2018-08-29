@@ -1412,36 +1412,6 @@ h3.title .italics {
 
 /* BREAKPOINTS */
 /*----- EMBLEM MUSIC -- MOBILE -----*/
-@media screen and (min-width: 320px) and (max-width: 335px) {
-  /*	.music-page:nth-of-type(1) {
-		margin-bottom: -218.5rem;
-	}
-	.music-page:nth-of-type(2) {
-		margin-bottom: -113rem;
-	}
-	@-moz-document url-prefix() {
-		.music-pages {
-			height: auto;
-			max-height: 200vh;
-			margin-bottom: -6rem;
-		}
-		.music-page svg {
-			margin-left: -336vw;
-		}
-		.music-page:nth-of-type(1) {
-			margin-bottom: 0;
-		}
-		.music-page:nth-of-type(1) svg {
-			margin-top: -108rem;
-		}
-		.music-page:nth-of-type(2) {
-			margin-top: -107rem;
-		}
-		.music-page:nth-of-type(2) svg {
-			margin-top: -59rem;
-		}
-	}*/ }
-
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .atalanta-notation .transport {
     -webkit-box-orient: vertical;
@@ -1457,37 +1427,26 @@ h3.title .italics {
     margin: 0; }
   .music-pages {
     background-image: url("../img/default/Fuga01.png");
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
     height: auto;
-    min-height: 448vh; }
+    min-height: 250vh; }
   .music-page {
     display: none; }
-  .atalanta-notation-viz-cmn {
-    /*	  grid-area: 3 / 1 / 4 / 13;
-	  margin-left: 2rem;
-	  margin-top: -2rem;*/ }
-  .music-page:nth-of-type(1) svg {
-    /*margin-bottom: -174.75rem;*/
-    /*		margin-bottom: -492.5vh;*/ }
-  .music-page:nth-of-type(2) svg {
-    /*margin-top: -125vh;*/
-    /*margin-top: 0;*/
-    /*margin-bottom: -32vh;*/
-    /*margin-bottom: 0;*/ }
   .atalanta-notation-viz-pianoroll {
     grid-area: 4 / 1 / 5 / 13; } }
 
 @media screen and (min-width: 320px) and (max-width: 399px) {
   .music-pages {
-    min-height: 233vh; } }
+    min-height: 250vh; } }
 
 @media screen and (min-width: 400px) and (max-width: 499px) {
   .music-pages {
-    min-height: 291vh; } }
+    min-height: 210vh; } }
 
 @media screen and (min-width: 500px) and (max-width: 599px) {
   .music-pages {
-    min-height: 349vh; } }
+    min-height: 348vh; } }
 
 @media screen and (min-width: 600px) and (max-width: 699px) {
   .music-pages {
