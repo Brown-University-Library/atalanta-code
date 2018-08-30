@@ -1253,7 +1253,7 @@ h3.title .italics {
   background-size: contain;
   /*  background-color: white;*/
   grid-area: 3 / 1 / 4 / 13;
-  margin: -8rem 0 4rem -4rem;
+  margin: -8rem 0 4rem -1rem;
   overflow: hidden; }
 
 .atalanta-notation-viz-cmn .highlighted {
@@ -1271,7 +1271,7 @@ h3.title .italics {
 	grid-template-rows: repeat(2, auto);*/ }
 
 .atalanta-notation-viz-cmn .music-pages .music-page {
-  padding-left: 4%;
+  /*padding-left: 4%;*/
   text-align: center;
   -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
@@ -1394,34 +1394,37 @@ h3.title .italics {
     margin-left: 1rem; } }
 
 /* BREAKPOINTS */
+/*----- EMBLEM MUSIC - SMALL LAPTOPS -----*/
+@media screen and (max-width: 1099px) {
+  .atalanta-notation-viz-cmn {
+    margin: -4rem 0 4rem 0rem; } }
+
 /*----- EMBLEM MUSIC -- MOBILE -----*/
-/*@media screen and (min-width: 320px) and (max-width: 767px) {
-	.atalanta-notation .transport {
-		flex-direction: column;
-		grid-area: 1 / 1 / 2 / 13;
-		.track-mute {
-			display: none;
-		}
-	}
-	.atalanta-notation-viz.atalanta-notation-viz-cmn {
-		grid-area: 2 / 1 / 3 / 13;
-		margin: 0;
-	}
-	.music-pages {
-		background-image: url("../img/default/Fuga01.png");
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		height: auto;
-		min-height: 250vh;
-	}
-	.music-page {
-		display: none;
-	}
-	.atalanta-notation-viz-pianoroll {
-		grid-area: 4 / 1 / 5 / 13;
-	}
-}
-@media screen and (min-width: 320px) and (max-width: 399px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .atalanta-notation .transport {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    grid-area: 1 / 1 / 2 / 13; }
+    .atalanta-notation .transport .track-mute {
+      display: none; }
+  .atalanta-notation-viz.atalanta-notation-viz-cmn {
+    grid-area: 2 / 1 / 3 / 13;
+    margin: 0; }
+  .music-pages {
+    background-image: url("../img/default/Fuga01.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: auto;
+    min-height: 250vh; }
+  .music-page {
+    display: none; }
+  .atalanta-notation-viz-pianoroll {
+    grid-area: 4 / 1 / 5 / 13; } }
+
+/*@media screen and (min-width: 320px) and (max-width: 399px) {
 	.music-pages {
 		min-height: 250vh;
 	}
@@ -1440,22 +1443,16 @@ h3.title .italics {
 	.music-pages {
 		min-height: 408vh;
 	}
-}
+}*/
 @media screen and (min-width: 768px) and (max-width: 999px) {
-	.atalanta-notation .transport {
-		grid-area: 1 / 4 / 2 / 12;
-	}
-	.atalanta-notation-viz-cmn {
-		grid-area: 3 / 4 / 4 / 12;
-	}
-	.music-page {
+  .atalanta-notation .transport {
+    grid-area: 1 / 4 / 2 / 12; }
+  .atalanta-notation-viz-cmn {
+    grid-area: 3 / 4 / 4 / 12; }
+  .atalanta-notation-viz-pianoroll {
+    grid-area: 4 / 4 / 5 / 12; } }
 
-	}
-	.atalanta-notation-viz-pianoroll {
-		grid-area: 4 / 4 / 5 / 12;
-	}
-}
-@media screen and (min-width: 1000px) and (max-width: 1060px) {
+/*@media screen and (min-width: 1000px) and (max-width: 1060px) {
 	.music-page:nth-of-type(1) {
 		height: 210vh;
 	}
