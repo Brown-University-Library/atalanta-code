@@ -1190,6 +1190,28 @@ h3.title .italics {
     font-size: .825rem;
     line-height: 1.5rem; } }
 
+/* NEUTRAL */
+/* COOL */
+/* WARM */
+/* PRODUCTION */
+/* NEUTRAL */
+/* COOL */
+/* WARM */
+/* PRODUCTION */
+.is-active {
+  background-color: #A0AACE !important; }
+  .is-active a {
+    color: #222 !important; }
+
+.is-hidden {
+  display: none !important; }
+
+.is-selected {
+  border-bottom: 3px solid #7694C0; }
+
+.is-sticky {
+  position: fixed; }
+
 .section__music {
   font-family: "Usual", Helvetica, Arial, sans-serif; }
 
@@ -1265,11 +1287,6 @@ h3.title .italics {
   font-size: 13rem;
   /* ??? This is only to adjust spacing for overlapping verse */ }
 
-.atalanta-notation-viz-cmn .music-pages {
-  /* 	display: grid;
- 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: repeat(2, auto);*/ }
-
 .atalanta-notation-viz-cmn .music-pages .music-page {
   /*padding-left: 4%;*/
   text-align: center;
@@ -1292,7 +1309,7 @@ h3.title .italics {
 
 /* Start / stop / mute buttons */
 .atalanta-notation .transport {
-  outline: 5px solid purple;
+  background-color: #F1F1F1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1312,10 +1329,7 @@ h3.title .italics {
   justify-content: flex-start;
   grid-area: 1 / 1 / 2 / 13;
   z-index: 10;
-  /*  width: 100%;
-  float: left;
-  background: white;
-  padding: 1em;*/ }
+  /* music page SVG overlaps with transport controls */ }
 
 .atalanta-notation .transport button {
   background-size: contain;

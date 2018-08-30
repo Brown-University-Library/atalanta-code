@@ -1,3 +1,6 @@
+@import 'colors';
+@import 'utilities';
+
 .section__music {
 	font-family: $display-font_emblem, Helvetica, Arial, sans-serif;
 }
@@ -82,12 +85,6 @@
   font-size: 13rem; /* ??? This is only to adjust spacing for overlapping verse */
 }
 
-.atalanta-notation-viz-cmn .music-pages {
-/* 	display: grid;
- 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: repeat(2, auto);*/
-}
-
 .atalanta-notation-viz-cmn .music-pages .music-page {
 /*padding-left: 4%;*/
   text-align: center;
@@ -109,17 +106,13 @@
 /* Start / stop / mute buttons */
 
 .atalanta-notation .transport {
-	outline: 5px solid purple;
+	background-color: $gray-light;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: flex-start;
 	grid-area: 1 / 1 / 2 / 13;
-	z-index: 10;
-/*  width: 100%;
-  float: left;
-  background: white;
-  padding: 1em;*/
+	z-index: 10; /* music page SVG overlaps with transport controls */
 }
 
 .atalanta-notation .transport button {
