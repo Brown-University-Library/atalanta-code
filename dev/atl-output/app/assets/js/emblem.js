@@ -71,6 +71,8 @@ $(function () {
 	var sectionFullRight = '.section--full.panel--right';
 	var sectionFacsimile = '.section__facsimile';
 	var facsimileFull = '.facsimile--full';
+	var sectionMusic = '.section__music';
+	var musicFull = '.music--full';
 	/* newer variables (grid2) */
 	var gridLeft = 'grid--left';
 	var gridRight = 'grid--right';
@@ -493,6 +495,8 @@ $(function () {
 	}
 	function resetFacsimile() {
 		console.log("I am in resetFacsimile()");
+		$(sectionMusic).removeClass(gridLeft); // remove left grid placement to reveal full music
+		$(sectionMusic).removeClass(gridRight); // remove right grid placement to reveal full music
 		$(sectionFacsimile).addClass('is-hidden'); // hide facsimile wrapper
 		$(sectionSingle).removeClass('is-hidden'); // show full/left panel content
 		$(sectionSingle).removeClass('panel--left'); // rename left panel step 1 (remove left panel class)
@@ -502,7 +506,7 @@ $(function () {
 		$(sectionFull).removeClass('is-hidden');
 		$(sectionFullRight).addClass('is-hidden');
 	}
-	function resetLanguagesOnLeft() {
+	function resetLanguagesOnLeft() {		
 		$(singleTranslation).addClass('is-hidden'); // hide full-width/left-half english text
 		$(singleOriginal).addClass('is-hidden'); // hide full-width/left-half original language text
 	}
@@ -530,6 +534,7 @@ $(function () {
 	}
 	function showFacsimileFull() {
 		console.log("I am in showFacsimileFull()");
+		$(sectionMusic).addClass('is-hidden'); // hide music
 		$(facsimileFull).removeClass(gridHalf); // make facsimile full width
 		$(sectionFacsimile).removeClass(gridLeft); // make facsimile full width
 		$(sectionFacsimile).removeClass(gridRight); // make facsimile full width
@@ -542,6 +547,9 @@ $(function () {
 	}
 	function showFacsimileLeft() {
 		console.log("I am in showFacsimileLeft()");
+		$(sectionMusic).removeClass('is-hidden'); // reveal music
+		$(sectionMusic).addClass(gridRight); // place music on right half of grid
+		$(sectionMusic).removeClass(gridLeft); // remove music from left half of grid
 		$(facsimileFull).addClass(gridHalf); // make facsimile half width (required because of fixed position in grid)
 		$(sectionFacsimile).removeClass(gridRight); // remove facsimile from right grid columns
 		$(sectionFacsimile).addClass(gridLeft); // add facsimile to left grid columns
@@ -556,6 +564,9 @@ $(function () {
 	}
 	function showFacsimileRight() {
 		console.log("I am in showFacsimileRight()");
+		$(sectionMusic).removeClass('is-hidden'); // reveal music
+		$(sectionMusic).addClass(gridLeft); // place music on left half of grid
+		$(sectionMusic).removeClass(gridRight); // remove music from right half of grid
 		$(facsimileFull).addClass(gridHalf); // make facsimile half width (required because of fixed position in grid)
 		$(sectionFacsimile).removeClass(gridLeft); // remove facsimile from left grid columns
 		$(sectionFacsimile).addClass(gridRight); // add facsimile to right grid columns
@@ -570,6 +581,7 @@ $(function () {
 	function showFull() {
 		console.log("I am in showFull()");
 		resetFacsimile();
+
 		$(sectionDouble).addClass('is-hidden'); // show full / left half only
 		$(sideNav).removeClass('is-hidden'); // show sidenav in single page view
 	}
