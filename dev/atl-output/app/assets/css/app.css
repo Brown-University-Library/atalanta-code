@@ -1399,7 +1399,16 @@ h3.title .italics {
   .atalanta-notation-viz-cmn {
     margin: -4rem 0 4rem 0rem; } }
 
-/*----- EMBLEM MUSIC -- MOBILE -----*/
+/*----- EMBLEM MUSIC - TABLET -----*/
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  .atalanta-notation .transport {
+    grid-area: 1 / 1 / 2 / 13; }
+  .atalanta-notation-viz-cmn {
+    grid-area: 3 / 1 / 4 / 13; }
+  .atalanta-notation-viz-pianoroll {
+    grid-area: 4 / 1 / 5 / 13; } }
+
+/*----- EMBLEM MUSIC - MOBILE -----*/
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .atalanta-notation .transport {
     -webkit-box-orient: vertical;
@@ -1418,74 +1427,12 @@ h3.title .italics {
     background-repeat: no-repeat;
     background-size: 100% auto;
     height: auto;
-    min-height: 250vh; }
+    min-height: 380vw; }
   .music-page {
     display: none; }
   .atalanta-notation-viz-pianoroll {
     grid-area: 4 / 1 / 5 / 13; } }
 
-/*@media screen and (min-width: 320px) and (max-width: 399px) {
-	.music-pages {
-		min-height: 250vh;
-	}
-}
-@media screen and (min-width: 400px) and (max-width: 499px) {
-	.music-pages {
-		min-height: 210vh;
-	}
-}
-@media screen and (min-width: 500px) and (max-width: 599px) {
-	.music-pages {
-		min-height: 348vh;
-	}
-}
-@media screen and (min-width: 600px) and (max-width: 699px) {
-	.music-pages {
-		min-height: 408vh;
-	}
-}*/
-@media screen and (min-width: 768px) and (max-width: 999px) {
-  .atalanta-notation .transport {
-    grid-area: 1 / 4 / 2 / 12; }
-  .atalanta-notation-viz-cmn {
-    grid-area: 3 / 4 / 4 / 12; }
-  .atalanta-notation-viz-pianoroll {
-    grid-area: 4 / 4 / 5 / 12; } }
-
-/*@media screen and (min-width: 1000px) and (max-width: 1060px) {
-	.music-page:nth-of-type(1) {
-		height: 210vh;
-	}
-}
-@media screen and (min-width: 1061px) and (max-width: 1100px) {
-	.music-page:nth-of-type(1) {
-		height: 211vh;
-	}
-}*/
-/*@media screen and (min-width: 1101px) and (max-width: 1150px) {
-	.music-page:nth-of-type(1) {
-		height: 213vh;
-	}
-}
-@media screen and (min-width: 1151px) and (max-width: 1200px) {
-	.music-page:nth-of-type(1) {
-		height: 215vh;
-	}
-}
-@media screen and (min-width: 1000px) and (max-width: 1300px) {
-	.atalanta-notation .transport {
-		grid-area: 1 / 3 / 2 / 12;
-	}
-	.atalanta-notation-viz-cmn {
-		grid-area: 3 / 3 / 4 / 13;
-	}
-	.atalanta-notation-viz-pianoroll {
-		grid-area: 4 / 3 / 5 / 12;
-	}
-	.music-page:nth-of-type(2) {
-		height: 130vh;
-	}
-}*/
 /* NEUTRAL */
 /* COOL */
 /* WARM */
