@@ -2,7 +2,8 @@
 @import 'utilities';
 
 #openseadragon-wrapper {
-	height: calc(100vh - 11.125rem); /* currently, the combined height of the topnav and subnav is 11.125rem */
+	height: calc(100vh - 7.625rem); /* currently, the combined height of the topnav and subnav is 7.625rem */
+	background-color: $black;
 }
 #openseadragon-wrapper canvas {
 	cursor: pointer;
@@ -16,16 +17,20 @@
 	top: 40%;
 	z-index: 1000;
 }
+
+.displayregion {
+
+}
 .facsimile--full.grid--half #tools {
 	top: 93vh;
 }
 #tools a {
-	color: orange;
+	color: $aqua;
 	padding: 0 .25rem;
 }
 #tools a:hover {
-	color: red;
+	color: $orange-yellow;
 }
 #tools a:active {
-	color: yellow;
+	color: $gray-medium;
 }
