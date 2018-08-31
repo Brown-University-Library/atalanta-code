@@ -21,33 +21,29 @@
 				<li class="subnav__views--single is-hidden" data-state="active"><a href="#">Single View</a></li>
 				<li class="subnav__options--option is-active" data-state="active"><a href="#">English</a></li>
 				<li class="subnav__options--option" data-state="inactive"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option" data-state="inactive"><a href="#">Page Image</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Original</a></li>
 				<li class="subnav__views--double" data-state="inactive"><a href="#">Comparative View</a></li>
 				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">English</a></li>
 				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option is-hidden is-active" data-state="active"><a href="#">Page Image</a></li>
+				<li class="subnav__options--option is-hidden is-active" data-state="active"><a href="#">Original</a></li>
 			</ul>
 		</nav>
 	</header>
 <!-- EMBLEM PAGE-->
 	<main class="emblem-page" data-id="5">
 <!-- SIDENAV -->
-		<div class="_sidenav"></div>
+	<div class="_sidenav"></div>
 <!-- EMBLEM GRID -->
 		<!-- Facsimile -->
 		<div class="section__facsimile is-hidden">
 			<div class="facsimile--full">
 				<section class="_facsimile">
-					<!-- https://openseadragon.github.io/docs/ -->
 					<section class="facsimile">
 						<div id="openseadragon-wrapper">
 							<div id="tools">
 								<span>
 									<a id="zoom-in" href="#zoom-in" title="Zoom In" style="display: inline-block; position: relative">Zoom In</a>
 									<a id="zoom-out" href="#zoom-out" title="Zoom Out" style="display: inline-block; position: relative">Zoom Out</a>
-					<!-- 				<a id="home" href="#home" title="Go home" style="display: inline-block; position: relative;">Home</a> -->
-					<!-- 				<a id="home" href="#home" title="Home" style="display: inline-block; position: relative">Reset</a> -->
-					<!-- 				<a id="full-page" href="#full-page" title="Full Page" style="display: inline-block; position: relative">Full Page</a> -->
 									<a id="previous" href="#previous" title="Previous" style="display: inline-block; position: relative">Previous</a>
 									<a id="next" href="#next" title="Next" style="display: inline-block; position: relative">Next</a>
 								</span>
@@ -116,6 +112,20 @@
 				<div class="_image">
 					<section class="image wrapper-section section">
 							<div class="image__picture section--single">
+								<img class="emblem__image--cropped" 
+									srcset="../assets/img/emblem-images_cropped/320/bdr698524_021_straightened.jpg 320w,
+											../assets/img/emblem-images_cropped/960/bdr698524_021_straightened.jpg 960w,
+											../assets/img/emblem-images_cropped/1600/bdr698524_021_straightened.jpg 1600w"
+									src="../assets/img/emblem-images_cropped/1600/bdr698524_021_straightened.jpg"
+									alt="Illustration" />
+							</div>
+					</section>
+				</div>
+			</div>
+			<div class="section__image section--full panel--right is-hidden">
+				<div class="_image">
+					<section class="image wrapper-section section">
+							<div class="image__picture section--single panel--right">
 								<img class="emblem__image--cropped" 
 									srcset="../assets/img/emblem-images_cropped/320/bdr698524_021_straightened.jpg 320w,
 											../assets/img/emblem-images_cropped/960/bdr698524_021_straightened.jpg 960w,
@@ -235,22 +245,3 @@
   	<script type="text/javascript" src="../assets/js/notation.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
