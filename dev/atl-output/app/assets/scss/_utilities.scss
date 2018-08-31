@@ -1,7 +1,7 @@
 @import 'colors';
 
 .is-active {
-	background-color: $periwinkle !important;
+	background-color: $orange-yellow_brighter !important;
 	a {
 		color: $black !important;
 	}
@@ -10,7 +10,7 @@
 	display: none !important;
 }
 .is-selected {
-	border-bottom: 3px solid $blue;
+	border-bottom: 3px solid $royal-blue;
 }
 .is-sticky {
 	position: fixed;
