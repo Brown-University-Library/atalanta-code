@@ -772,7 +772,7 @@ main.emblem-page {
   grid-row-start: 1;
   grid-row-end: 2;
   /*	grid-area: 1 / 1 / 1 / 5;*/
-  margin-top: 128px;
+  margin-top: 4.5rem;
   /*padding-top: $subnav-h;*/ }
 
 .facsimile--full {
@@ -1629,8 +1629,9 @@ h3.epigram {
   position: fixed; }
 
 #openseadragon-wrapper {
-  height: calc(100vh - 11.125rem);
-  /* currently, the combined height of the topnav and subnav is 11.125rem */ }
+  height: calc(100vh - 7.625rem);
+  /* currently, the combined height of the topnav and subnav is 7.625rem */
+  background-color: #222; }
 
 #openseadragon-wrapper canvas {
   cursor: pointer; }
@@ -1648,14 +1649,14 @@ h3.epigram {
   top: 93vh; }
 
 #tools a {
-  color: orange;
+  color: #3DF2BF;
   padding: 0 .25rem; }
 
 #tools a:hover {
-  color: red; }
+  color: #FFB000; }
 
 #tools a:active {
-  color: yellow; }
+  color: #989898; }
 
 /***     Breakpoints     ***/
 /* large  -  desktop */
