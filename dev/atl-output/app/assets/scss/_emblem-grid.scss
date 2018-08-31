@@ -2,7 +2,11 @@
 @import 'colors';
 
 main.emblem-page {
-	background-color: $light-gray;
+	background-color: $black;
+	background-image: url("../img/default/bkg-illustration.png");
+	/*background-repeat: no-repeat;*/
+	/*background-size: cover;*/
+	background-size: contain;
 	display: grid;
 	grid-template-columns: repeat( 4, 1fr);
 	grid-template-rows: 1;
@@ -23,8 +27,12 @@ main.emblem-page {
 	width: 100%;
 }
 .emblem section {
-	background-color: $white;
+	background-color: hsla(0, 0%, 100%, .97);
 	padding: 1rem 0;
+}
+.emblem section.section__motto, .emblem .section__image section, .emblem section.section__epigram {
+	background-color: $royal-blue;
+	color: $white;
 }
 .panel--full {
 	grid-column-start: 1;
@@ -45,6 +53,11 @@ main.emblem-page {
 .section__image {
 	grid-row-start: 2;
 	grid-row-end: 3;
+	.image__picture {
+		display: grid;
+		justify-content: center;
+		padding-bottom: 1rem;
+	}
 	img {
 		max-width: 30rem;
 	}
@@ -58,6 +71,9 @@ main.emblem-page {
 .section__epigram {
 	grid-row-start: 4;
 	grid-row-end: 5;
+}
+.emblem section.section__epigram {
+	padding: 4rem 0;
 }
 .section__discourse {
 	grid-row-start: 5;
@@ -88,7 +104,6 @@ main.emblem-page {
 	grid-column-start: 1;
 	grid-column-end: 3;
 /*	grid-area: 1 / 1 / 2 / 3;*/
-	outline: 5px solid orange;
 }
 .grid--right {
 	grid-column-start: 3;
@@ -139,9 +154,27 @@ main.emblem-page {
 				width: 100%;
 			}
 			a:hover {
-				color: $blue;
+				color: $royal-blue;
 			}
 		}
+		li.is-selected {
+			border-bottom: 3px solid $royal-blue;
+			margin-bottom: -3px;
+		}
+	}
+}
+.section__motto .switch-wrapper, .section__epigram .switch-wrapper{
+	li {
+
+	}
+	li.is-selected {
+		border-bottom: 3px solid $aqua;
+	}
+	a {
+		color: $white;
+	}
+	a:hover {
+		color: $aqua;
 	}
 }
 
