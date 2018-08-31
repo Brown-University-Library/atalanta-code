@@ -353,18 +353,160 @@ button {
 .is-sticky {
   position: fixed; }
 
-main.home-page {
-  background-color: #fff;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  font-size: 1.25rem;
-  min-height: calc(100vh - 3.125rem);
-  line-height: 2rem;
-  margin-top: 3.125rem;
-  padding: 2rem; }
-  main.home-page a {
-    color: #222; }
-  main.home-page a:hover {
-    color: #989DAC; }
+/*main.home-page {
+	background-color: $white;
+	font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
+	font-size: 1.25rem;
+	min-height: calc(100vh - 3.125rem);
+	line-height: 2rem;
+	margin-top: $topnav-h;
+	padding: 2rem;
+	a {
+		color: $black;
+	}
+	a:hover {
+		color: $dusty-blue;
+	}
+}*/
+main.home {
+  background-color: #F1F1F1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto; }
+  main.home em {
+    font-style: oblique; }
+  main.home .hero {
+    background-color: #DC4929;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: auto;
+    grid-area: 1 / 1 / 2 / 13;
+    min-height: 96vh; }
+  main.home .hero-text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    grid-area: 1 / 1 / 2 / 2;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transform: translate(12vw, 0);
+    -ms-transform: translate(12vw, 0);
+    transform: translate(12vw, 0);
+    padding-bottom: 20vh; }
+  main.home .hero-text h1 {
+    font-family: Garamond, Georgia, serif;
+    font-size: 7rem;
+    height: auto;
+    line-height: 7rem;
+    padding: 0;
+    margin: 0;
+    width: 128%; }
+  main.home .hero-text h5 {
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+    margin-top: 1rem;
+    width: 50%; }
+  main.home .hero-image {
+    background-color: #FFB000;
+    grid-area: 1 / 2 / 2 / 3; }
+  main.home nav.home {
+    background-color: rgba(51, 51, 51, 0.99);
+    color: #fff;
+    grid-area: 2 / 1 / 3 / 13;
+    min-height: 20vh;
+    padding-bottom: 1px;
+    -webkit-transform: translate(0, -20vh);
+    -ms-transform: translate(0, -20vh);
+    transform: translate(0, -20vh); }
+  main.home nav.home ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    list-style: none;
+    min-height: 17vh;
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+  main.home ul li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    width: 100%; }
+  main.home ul li a {
+    color: #FFB000;
+    font-size: 1rem;
+    letter-spacing: .125rem;
+    line-height: 1.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 1rem; }
+  main.home ul li a:hover {
+    color: #ffcd61; }
+  main.home ul li span {
+    color: #fff;
+    font-size: .875rem;
+    line-height: 1rem;
+    margin-top: .25rem; }
+  main.home .intro-text {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-area: 3 / 1 / 4 / 13;
+    margin-top: -17vh;
+    padding: 3rem 0 6rem 0; }
+  main.home .intro-text p {
+    font-size: 1.375rem;
+    grid-area: 1 / 4 / 2 / 10;
+    line-height: 2rem; }
+  main.home .intro-text a {
+    color: #DC4929;
+    font-size: 1.125rem;
+    font-weight: 600;
+    grid-area: 2 / 4 / 3 / 10;
+    text-decoration: none; }
+  main.home .intro-text a:hover {
+    color: #b83a1e; }
 
 /* NEUTRAL */
 /* COOL */
