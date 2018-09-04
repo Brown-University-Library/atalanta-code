@@ -192,4 +192,12 @@ h3.epigram {
 		font-size: .825rem;
 		line-height: 1.5rem;
 	}
+	.verse-epigram {
+		font-size: 1.5rem;
+		grid-area: 2 / 4 / 3 / 11;
+		line-height: 2.5rem;
+	}
+	.panel--left .verse-epigram, .panel--right .verse-epigram {
+		grid-area: 2 / 3 / 3 / 11;
+	}
 }
