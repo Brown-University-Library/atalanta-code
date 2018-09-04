@@ -42,6 +42,13 @@
 	font-family: $display-font_emblem, Helvetica, Arial, sans-serif;
 	font-weight: 500;
 }
+div[data-nav='home'] .topnav {
+	background-color: transparent;
+	position: absolute;
+}
+div[data-nav='home'] .topnav__identity {
+		display: none;
+	}
 .toc-wrapper {
 	display: none;
 	height: 100vh;
