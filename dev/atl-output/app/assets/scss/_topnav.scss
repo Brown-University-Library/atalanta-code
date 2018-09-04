@@ -30,7 +30,7 @@
 		color: $white;
 	}
 	a:hover {
-		color: $dusty-pink;
+		color: $orange-yellow_brighter;
 	}
 	img {
 		margin-top: .5rem;
@@ -42,6 +42,13 @@
 	font-family: $display-font_emblem, Helvetica, Arial, sans-serif;
 	font-weight: 500;
 }
+div[data-nav='home'] .topnav {
+	background-color: transparent;
+	position: absolute;
+}
+div[data-nav='home'] .topnav__identity {
+		display: none;
+	}
 .toc-wrapper {
 	display: none;
 	height: 100vh;
@@ -81,22 +88,22 @@
 		color: $white;
 	}
 	a:hover {
-		color: $dusty-pink;
+		color: $orange-yellow_brighter;
 	}
 	a em {
 		font-style: italic;
 	}
 	.toc__heading  {
-		color: $dark-pink;
+		color: $orange-yellow;
 		font-size: 1.125rem;
 		font-weight: 500;
 		padding: .825rem 0 .325rem .5rem;
 	}
 	.toc__heading a {
-		color: $dark-pink;
+		color: $orange-yellow;
 	}
 	.toc__heading a:hover {
-		color: $dusty-pink;
+		color: $orange-yellow_brighter;
 	}
 	.toc__essay {
 		margin-bottom: .75rem;
