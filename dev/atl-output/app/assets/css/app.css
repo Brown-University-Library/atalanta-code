@@ -891,10 +891,11 @@ main.emblem-page {
   grid-row-end: 6; }
 
 .section__motto.panel--left, .section__epigram.panel--left, .section__discourse.panel--left {
-  margin-right: 5px; }
+  /* needs a better solution now that I'm using a background image ??? */
+  /*	border-right: 5px solid white;*/ }
 
 .section__motto.panel--right, .section__epigram.panel--right, .section__discourse.panel--right {
-  margin-left: 5px; }
+  /*	border-left: 5px solid white;*/ }
 
 .section__facsimile {
   grid-column-start: 1;
