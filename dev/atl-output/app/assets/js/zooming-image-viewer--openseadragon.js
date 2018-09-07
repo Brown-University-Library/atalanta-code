@@ -20,14 +20,25 @@ $(function () {
 		// $(nextPageBtn).attr("href", "../atalanta-fugiens/dedication.html");
 		if (myEmblemDataNum <= 3) { // handle front matter (not in sets of 4)
 			startPage = myEmblemDataNum + 7;
+			console.log("startPage is " + startPage);
 		}
 		else if (myEmblemDataNum === 4) { // handle front matter: preface
 			startPage = myEmblemDataNum + 9;
+			console.log("startPage is " + startPage);
 		}
 		else if (myEmblemDataNum > 4) { // handle emblems (in sets of 4)
 			startPage = myEmblemDataNum * 4 - 1;
+			console.log("startPage is " + startPage);
 		}
-		currentPageSingle = startPage + 1;
+		// if (startPage === 8) {
+		// 	$(nextPageBtn).attr("href", "../atalanta-fugiens/author-epigram.html");
+		// 	$(prevPageBtn).attr("href", "../atalanta-fugiens/atl-toc.html");
+		// }
+		// else if (startPage === 9) {
+		// 	$(nextPageBtn).attr("href", "../atalanta-fugiens/dedication.html");
+		// 	$(prevPageBtn).attr("href", "../atalanta-fugiens/frontispiece.html");
+		// }
+		currentPageSingle = startPage;
 		var atalantaZoom = pageView; // current view mode (initially pageView)
 		var viewer = OpenSeadragon({
 			id: "openseadragon-wrapper",
@@ -54,62 +65,97 @@ $(function () {
 	});
 
 	$(nextPageBtn).click(function(){
-		console.log("my emblem number is " + myEmblemDataNum);
-		console.log("I clicked the next page");
-		console.log("the page was " + currentPageSingle);
 		currentPageSingle = currentPageSingle + 1; // advance zooming page image by 1
-		console.log("now the current page is " + currentPageSingle);
-		if(currentPageSingle <= 8) { // handle book cover
-			myCurrentPageSingle = 0; // tie book cover to introduction/toc
-			console.log("my new emblem number is " + myCurrentPageSingle);
+		console.log("my current page is " + currentPageSingle);
+		if (currentPageSingle === 8) {
+			console.log("I should be on the frontispiece");
+			window.location.href = "../atalanta-fugiens/frontispiece.html";
 		}
-		else if(currentPageSingle > 8 && currentPageSingle <= 10) { // handle frontispiece and epigram
-			myCurrentPageSingle = currentPageSingle - 8; // new emblem data number should = myCurrentPageSingle
-			console.log("my new current page is " + myCurrentPageSingle);
+		else if (currentPageSingle === 9) {
+			console.log("I should be on the epigram");
+			window.location.href = "../atalanta-fugiens/author-epigram.html";
 		}
-		else if(currentPageSingle > 10 && currentPageSingle <=13) { // handle dedication
-			myCurrentPageSingle = 3;
-			console.log("my dedication page is " + myCurrentPageSingle);
+		else if (currentPageSingle === 10) {
+			console.log("I should be on the dedication");
+			window.location.href = "../atalanta-fugiens/dedication.html";
 		}
-		else if(currentPageSingle > 13 && currentPageSingle <=19) { // handle preface
-			myCurrentPageSingle = 4;
-			console.log("my preface page is " + myCurrentPageSingle);
+		else if (currentPageSingle === 13) {
+			console.log("I should be on the preface");
+			window.location.href = "../atalanta-fugiens/preface.html";
 		}
-		else if(currentPageSingle > 19) { // handle emblems
-			myCurrentPageSingle = Math.floor(currentPageSingle / 4);
-			console.log("my first emblem page is " + myCurrentPageSingle);
+		else if (currentPageSingle === 19) {
+			console.log("I should be on the emblem");
+			window.location.href = "../atalanta-fugiens/emblem01.html";
 		}
-		updatePage();
+		// console.log("my emblem number is " + myEmblemDataNum);
+		// console.log("I clicked the next page");
+		// console.log("the page was " + currentPageSingle);
+		// currentPageSingle = currentPageSingle + 1; // advance zooming page image by 1
+		// console.log("now the current page is " + currentPageSingle);
+		// if(currentPageSingle <= 8) { // handle book cover
+		// 	myCurrentPageSingle = 0; // tie book cover to introduction/toc
+		// 	console.log("my new emblem number is " + myCurrentPageSingle);
+		// }
+		// else if(currentPageSingle > 8 && currentPageSingle <= 10) { // handle frontispiece and epigram
+		// 	myCurrentPageSingle = currentPageSingle - 8; // new emblem data number should = myCurrentPageSingle
+		// 	console.log("my new current page is " + myCurrentPageSingle);
+		// }
+		// else if(currentPageSingle > 10 && currentPageSingle <=13) { // handle dedication
+		// 	myCurrentPageSingle = 3;
+		// 	console.log("my dedication page is " + myCurrentPageSingle);
+		// }
+		// else if(currentPageSingle > 13 && currentPageSingle <=19) { // handle preface
+		// 	myCurrentPageSingle = 4;
+		// 	console.log("my preface page is " + myCurrentPageSingle);
+		// }
+		// else if(currentPageSingle > 19) { // handle emblems
+		// 	myCurrentPageSingle = Math.floor(currentPageSingle / 4);
+		// 	console.log("my first emblem page is " + myCurrentPageSingle);
+		// }
+		// updatePage();
 	});
-	function updatePage(){
-		var testing = document.getElementById('emblem-data');
-		console.log("my element is " + testing);
-		testing.setAttribute("data-id", myCurrentPageSingle);
-		window.history.replaceState('/atalanta-fugiens', '/atalanta-fugiens', '/atalanta-fugiens/dedication.html');
+	$(prevPageBtn).click(function(){
+		currentPageSingle = currentPageSingle - 1; // subtract zooming page image by 1
+		console.log("my current page is " + currentPageSingle);
+		if (currentPageSingle === 8) {
+			console.log("I should be on the frontispiece");
+			window.location.href = "../atalanta-fugiens/frontispiece.html";
+		}
+		else if (currentPageSingle === 9) {
+			console.log("I should be on the epigram");
+			window.location.href = "../atalanta-fugiens/author-epigram.html";
+		}
+		else if (currentPageSingle === 12) {
+			console.log("I should be on the dedication");
+			window.location.href = "../atalanta-fugiens/dedication.html";
+		}
+		else if (currentPageSingle === 18) {
+			console.log("I should be on the preface");
+			window.location.href = "../atalanta-fugiens/preface.html";
+		}
+		else if (currentPageSingle === 22) {
+			console.log("I should be on the emblem");
+			window.location.href = "../atalanta-fugiens/emblem01.html";
+		}
+	});
+	// function updatePage(){
+	// 	var testing = document.getElementById('emblem-data');
+	// 	console.log("my element is " + testing);
+	// 	testing.setAttribute("data-id", myCurrentPageSingle);
+	// 	window.history.replaceState('/atalanta-fugiens', '/atalanta-fugiens', '/atalanta-fugiens/dedication.html');
 
-		checkUpdate();
-		return false;
-	}
-	function checkUpdate(){
-		var testing2 = document.getElementById('emblem-data');
-		var myNewEmblemDataNum = testing2.getAttribute('data-id');
-		console.log("now my emblem number is " + myNewEmblemDataNum);
-	}
+	// 	checkUpdate();
+	// 	return false;
+	// }
+	// function checkUpdate(){
+	// 	var testing2 = document.getElementById('emblem-data');
+	// 	var myNewEmblemDataNum = testing2.getAttribute('data-id');
+	// 	console.log("now my emblem number is " + myNewEmblemDataNum);
+	// }
 
 		// 	var mySingleData = document.querySelector(singleViewBtn);
 		// mySingleData.setAttribute("data-state", singleData);
 });
-
-
-
-// data 1 = page 4 								| x - 3
-// data 2 = page 5									| x - 3
-// data 3 = page 6									| x - 3
-// data 4 = page 7									| x - 3
-// data 5 = page 8, page 9, page 10, page 11		| x - 3, x - 4, x - 5, x - 6	| x/4 = 2, x/4 = 2.1, x/4 = 2.2 x/4 = 2.3 floor/modulo??? + 3
-// data 6 = page 12, page 13, page 14, page 15		| x - 6, x - 7, x - 8, x - 9	| x/4 = 3, x/4 = 3.1, x/4 = 3.2, x/4 = 3.3 
-
-// pageNum/4 + 3;
 
 // frontispiece = page9 data1				x - 8
 // epigram = page10 data2					x - 8
