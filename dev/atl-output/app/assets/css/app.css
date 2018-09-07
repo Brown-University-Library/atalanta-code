@@ -591,10 +591,10 @@ main.home {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: top;
-  -webkit-align-items: top;
-  -ms-flex-align: top;
-  align-items: top;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -734,7 +734,7 @@ main.home {
 	border: 1px solid $dusty-blue-dk;
 	box-shadow: inset 0 0 .25rem $light-gray;
 	display: flex;
-	flex-wrap: no-wrap;
+	flex-wrap: nowrap;
 	justify-content: space-between;
 	padding: .5rem .125rem;
 	width: 20%;
@@ -776,12 +776,6 @@ main.home {
   .is-inactive a {
     color: #222 !important; }
 
-/* see index-scrolling.html */
-/*.fixed-header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-}*/
 /*** Breakpoints ***/
 /* small  -  mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -868,7 +862,7 @@ main.emblem-page {
   background-size: contain;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1;
+  grid-template-rows: 1fr;
   font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   min-height: calc(100vh - 3.125rem);
@@ -1354,7 +1348,7 @@ cite {
 .lang--english._motto--english {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1; }
+  grid-template-rows: 1fr; }
 
 div.title {
   display: -webkit-box;
