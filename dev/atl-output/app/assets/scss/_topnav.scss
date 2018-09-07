@@ -30,7 +30,7 @@
 		color: $white;
 	}
 	a:hover {
-		color: $dusty-pink;
+		color: $orange-yellow_brighter;
 	}
 	img {
 		margin-top: .5rem;
@@ -39,9 +39,16 @@
 
 }
 .topnav__identity a {
-	font-family: $display-font_emblem, Helvetica, Arial, sans-serif;
+	font-family: $display-font_emblem;
 	font-weight: 500;
 }
+div[data-nav='home'] .topnav {
+	background-color: transparent;
+	position: absolute;
+}
+div[data-nav='home'] .topnav__identity {
+		display: none;
+	}
 .toc-wrapper {
 	display: none;
 	height: 100vh;
@@ -70,7 +77,7 @@
 	li {
 		color: $white;
 		cursor: default;
-		font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
+		font-family: $body-font_emblem;
 		font-size: 1rem;
 		font-weight: 300;
 		line-height: 1.5rem;
@@ -81,22 +88,19 @@
 		color: $white;
 	}
 	a:hover {
-		color: $dusty-pink;
-	}
-	a em {
-		font-style: italic;
+		color: $orange-yellow_brighter;
 	}
 	.toc__heading  {
-		color: $dark-pink;
+		color: $orange-yellow;
 		font-size: 1.125rem;
 		font-weight: 500;
 		padding: .825rem 0 .325rem .5rem;
 	}
 	.toc__heading a {
-		color: $dark-pink;
+		color: $orange-yellow;
 	}
 	.toc__heading a:hover {
-		color: $dusty-pink;
+		color: $orange-yellow_brighter;
 	}
 	.toc__essay {
 		margin-bottom: .75rem;
@@ -141,6 +145,10 @@
 	}
 	.toc__items {
 		width: 100%;
+	}
+	.toc__items li {
+		padding-left: 1.5rem;
+		padding-right: .5rem;
 	}
 }
 

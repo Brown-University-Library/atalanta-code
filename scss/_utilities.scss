@@ -1,0 +1,25 @@
+@import 'colors';
+
+.is-active {
+	background-color: $periwinkle !important;
+	a {
+		color: $black !important;
+	}
+}
+.is-hidden {
+	display: none !important;
+}
+.is-selected {
+	border-bottom: 3px solid $blue;
+}
+.is-sticky {
+	position: fixed;
+}
+
+$topnav-h: 3.125rem;
+$subnav-h: 4.5rem;
+$emblemnav-h: 7.625rem;
+
+$body-font_emblem: 'Avenir';
+$display-font_emblem: 'Usual';
+$secondary-display-font_emblem: 'GT Sectra';

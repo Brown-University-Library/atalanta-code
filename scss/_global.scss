@@ -1,0 +1,23 @@
+@import 'colors';
+@import 'utilities';
+
+body {
+	background-color: $white;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	a {
+		color: $dusty-pink;
+		text-decoration: none;
+	}
+	a:hover {
+		color: $mauve;
+	}
+}
+header {
+	margin-top: 0;
+}
+h1 {
+	font-size: 3rem;
+	font-weight: 600;
+	line-height: 4rem;
+}
