@@ -1313,10 +1313,6 @@ background-color: blue !important;
 .is-sticky {
   position: fixed; }
 
-.lorem {
-  color: purple !important;
-  /* only use until latin xml is available ??? */ }
-
 cite {
   font-style: oblique; }
 
@@ -1379,7 +1375,7 @@ div.title {
   grid-area: 1 / 2 / 2 / 12; }
 
 h1.title {
-  font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif, Helvetica, Arial, sans-serif;
+  font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif;
   font-size: 3rem;
   font-weight: 600;
   line-height: 3.5rem; }
@@ -1389,7 +1385,7 @@ h1.title {
   line-height: 2.75rem; }
 
 h3.title {
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif, Helvetica, Arial, sans-serif;
+  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5rem; }
