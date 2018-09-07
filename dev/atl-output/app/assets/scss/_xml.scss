@@ -49,7 +49,7 @@ cite {
 .lang--english._motto--english {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 1;
+	grid-template-rows: 1fr;
 }
 div.title {
 	display: flex;
