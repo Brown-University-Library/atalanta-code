@@ -1,6 +1,38 @@
 @charset "UTF-8";
 /* Usual */
 @import url("https://use.typekit.net/utc2ige.css");
+@font-face {
+  font-family: 'GTAmericaTrial';
+  /* regular */
+  src: url("../fonts/GT-America-Trial-Regular.eot");
+  src: url("../fonts/GT-America-Trial-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Trial-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GTAmericaTrial';
+  /* italic */
+  src: url("../fonts/GT-America-Trial-Regular-Italic.eot");
+  src: url("../fonts/GT-America-Trial-Regular-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Trial-Regular-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'GTAmericaTrial';
+  /* bold */
+  src: url("../fonts/GT-America-Trial-Medium.eot");
+  src: url("../fonts/GT-America-Trial-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Trial-Medium.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GTAmericaTrial';
+  /* bold italic */
+  src: url("../fonts/GT-America-Trial-Medium-Italic.eot");
+  src: url("../fonts/GT-America-Trial-Medium-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Trial-Medium-Italic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -90,7 +122,7 @@ table {
 
 body {
   background-color: #fff;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'GTAmericaTrial', Helvetica, Arial, sans-serif;
   font-size: 16px; }
   body a {
     color: #C9A2A2;
@@ -218,7 +250,7 @@ button {
     width: 45px; }
 
 .topnav__identity a {
-  font-family: "Usual", Helvetica, Arial, sans-serif;
+  font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif;
   font-weight: 500; }
 
 div[data-nav='home'] .topnav {
@@ -276,7 +308,7 @@ div[data-nav='home'] .topnav__identity {
   .toc__items li {
     color: #fff;
     cursor: default;
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.5rem;
@@ -413,7 +445,7 @@ main.home {
     transform: translate(12vw, 0);
     padding-bottom: 20vh; }
   main.home .hero-text h1 {
-    font-family: Garamond, Georgia, serif;
+    font-family: "GT Sectra", Garamond, Georgia, serif;
     font-size: 7rem;
     height: auto;
     line-height: 7rem;
@@ -567,7 +599,7 @@ main.home {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
   height: 4.5rem;
@@ -837,7 +869,7 @@ main.emblem-page {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   min-height: calc(100vh - 3.125rem);
   line-height: 1.5rem;
@@ -1082,7 +1114,7 @@ main.emblem-page {
   z-index: 20; }
 
 .sidenav ul li {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
   font-size: .825rem;
   font-weight: 600;
   cursor: pointer;
@@ -1281,10 +1313,6 @@ background-color: blue !important;
 .is-sticky {
   position: fixed; }
 
-.lorem {
-  color: purple !important;
-  /* only use until latin xml is available ??? */ }
-
 cite {
   font-style: oblique; }
 
@@ -1347,7 +1375,7 @@ div.title {
   grid-area: 1 / 2 / 2 / 12; }
 
 h1.title {
-  font-family: "Usual", Helvetica, Arial, sans-serif;
+  font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif;
   font-size: 3rem;
   font-weight: 600;
   line-height: 3.5rem; }
@@ -1357,7 +1385,7 @@ h1.title {
   line-height: 2.75rem; }
 
 h3.title {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5rem; }
@@ -1512,7 +1540,7 @@ h3.epigram {
   position: fixed; }
 
 .section__music {
-  font-family: "Usual", Helvetica, Arial, sans-serif; }
+  font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif; }
 
 .atalanta-notation {
   display: grid;
@@ -1769,7 +1797,7 @@ h3.epigram {
   position: fixed; }
 
 .frontmatter section {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
   height: auto;
   min-height: calc(100vh - 3.125rem);
   /* subtracts topnav height */

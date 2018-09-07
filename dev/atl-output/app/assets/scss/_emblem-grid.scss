@@ -10,7 +10,7 @@ main.emblem-page {
 	display: grid;
 	grid-template-columns: repeat( 4, 1fr);
 	grid-template-rows: 1;
-	font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
+	font-family: $body-font_emblem;
 	font-size: 1rem;
 	min-height: calc(100vh - 3.125rem);
 	line-height: 1.5rem;
