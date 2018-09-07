@@ -361,35 +361,20 @@ div[data-nav='home'] .topnav__identity {
 .is-sticky {
   position: fixed; }
 
-<<<<<<< HEAD
-main.home-page {
-  background-color: #fff;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+/*main.home-page {
+  background-color: $white;
+  font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
-  min-height: -webkit-calc(100vh - 3.125rem);
   min-height: calc(100vh - 3.125rem);
   line-height: 2rem;
-  margin-top: 3.125rem;
-  padding: 2rem; }
-  main.home-page a {
-    color: #222; }
-  main.home-page a:hover {
-    color: #989DAC; }
-=======
-/*main.home-page {
-	background-color: $white;
-	font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
-	font-size: 1.25rem;
-	min-height: calc(100vh - 3.125rem);
-	line-height: 2rem;
-	margin-top: $topnav-h;
-	padding: 2rem;
-	a {
-		color: $black;
-	}
-	a:hover {
-		color: $dusty-blue;
-	}
+  margin-top: $topnav-h;
+  padding: 2rem;
+  a {
+    color: $black;
+  }
+  a:hover {
+    color: $dusty-blue;
+  }
 }*/
 main.home {
   background-color: #F1F1F1;
@@ -546,7 +531,6 @@ main.home {
     grid-area: 1 / 2 / 2 / 12; }
   main.home .intro-text a {
     grid-area: 2 / 2 / 3 / 12; } }
->>>>>>> master
 
 /* NEUTRAL */
 /* COOL */
@@ -711,69 +695,13 @@ main.home {
 .subnav__options--option {
   height: 60%; }
 
-<<<<<<< HEAD
-.toggle {
-  background-color: #989DAC;
-  border-radius: .125rem;
-  border: 1px solid #777D94;
-  box-shadow: inset 0 0 0.25rem #eee;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: .5rem .125rem;
-  width: 20%;
-  max-height: 2.75rem; }
-  .toggle a {
-    background-color: inherit;
-    border-radius: .125rem;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    /*		padding-bottom: .25rem;*/
-    min-width: 50%; }
-  .toggle .selected {
-    background-color: #DCE1E9;
-    border: 1px solid #777D94;
-    box-shadow: inset 0 0 0.75rem #eee;
-    padding: .75rem 1rem; }
-    .toggle .selected p {
-      color: #222; }
-  .toggle .not-selected {
-    background-color: inherit;
-    padding: .825rem 1rem; }
-  .toggle .not-selected:hover {
-    background-color: #DCE1E9;
-    border: 1px solid #777D94;
-    box-shadow: inset 0 0 0.75rem #eee;
-    padding: .75rem 1rem; }
-    .toggle .not-selected:hover p {
-      color: #222; }
-
-=======
 /*.toggle {
 	background-color: $dusty-blue;
 	border-radius: .125rem;
 	border: 1px solid $dusty-blue-dk;
 	box-shadow: inset 0 0 .25rem $light-gray;
 	display: flex;
-	flex-wrap: no-wrap;
+	flex-wrap: nowrap;
 	justify-content: space-between;
 	padding: .5rem .125rem;
 	width: 20%;
@@ -809,7 +737,6 @@ main.home {
 		}
 	}
 }*/
->>>>>>> master
 .is-inactive {
   background-color: #eee !important;
   pointer-events: none !important; }
@@ -905,7 +832,6 @@ main.emblem-page {
   grid-template-rows: 1fr;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  min-height: -webkit-calc(100vh - 3.125rem);
   min-height: calc(100vh - 3.125rem);
   line-height: 1.5rem;
   margin-top: 3.125rem;
@@ -1838,7 +1764,6 @@ h3.epigram {
 .frontmatter section {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   height: auto;
-  min-height: -webkit-calc(100vh - 3.125rem);
   min-height: calc(100vh - 3.125rem);
   /* subtracts topnav height */
   padding: 2rem; }
@@ -1870,15 +1795,9 @@ h3.epigram {
   position: fixed; }
 
 #openseadragon-wrapper {
-<<<<<<< HEAD
-  height: -webkit-calc(100vh - 11.125rem);
-  height: calc(100vh - 11.125rem);
-  /* currently, the combined height of the topnav and subnav is 11.125rem */ }
-=======
   height: calc(100vh - 7.625rem);
   /* currently, the combined height of the topnav and subnav is 7.625rem */
   background-color: #222; }
->>>>>>> master
 
 #openseadragon-wrapper canvas {
   cursor: pointer; }

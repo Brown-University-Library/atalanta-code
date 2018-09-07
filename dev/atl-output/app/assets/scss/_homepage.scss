@@ -2,19 +2,19 @@
 @import 'utilities';
 
 /*main.home-page {
-	background-color: $white;
-	font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
-	font-size: 1.25rem;
-	min-height: calc(100vh - 3.125rem);
-	line-height: 2rem;
-	margin-top: $topnav-h;
-	padding: 2rem;
-	a {
-		color: $black;
-	}
-	a:hover {
-		color: $dusty-blue;
-	}
+  background-color: $white;
+  font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  min-height: calc(100vh - 3.125rem);
+  line-height: 2rem;
+  margin-top: $topnav-h;
+  padding: 2rem;
+  a {
+    color: $black;
+  }
+  a:hover {
+    color: $dusty-blue;
+  }
 }*/
 main.home {
   background-color: $gray-light;
@@ -87,7 +87,7 @@ main.home {
     width: 100%;
   }
   ul li a {
-  	color: $orange-yellow;
+    color: $orange-yellow;
     font-size: 1rem;
     letter-spacing: .125rem;
     line-height: 1.25rem;
@@ -96,7 +96,7 @@ main.home {
     padding-top: 1rem;
   }
   ul li a:hover {
-  	color: $orange-yellow_brighter;
+    color: $orange-yellow_brighter;
   }
   ul li span {
     color: #fff;
@@ -126,7 +126,7 @@ main.home {
     text-decoration: none;
   }
   .intro-text a:hover {
-  	color: $orange-red_darker;
+    color: $orange-red_darker;
   }
 }
 
