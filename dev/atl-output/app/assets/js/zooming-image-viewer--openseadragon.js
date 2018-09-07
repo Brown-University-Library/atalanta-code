@@ -17,6 +17,7 @@ $(function () {
 		bookView = bookView.responseJSON; // get array of book view URLS
 	})
 	.done(function() { // after all the image tiles are ready, display zoomable pages
+		// $(nextPageBtn).attr("href", "../atalanta-fugiens/dedication.html");
 		if (myEmblemDataNum <= 3) { // handle front matter (not in sets of 4)
 			startPage = myEmblemDataNum + 7;
 		}
@@ -26,7 +27,7 @@ $(function () {
 		else if (myEmblemDataNum > 4) { // handle emblems (in sets of 4)
 			startPage = myEmblemDataNum * 4 - 1;
 		}
-		currentPageSingle = startPage;
+		currentPageSingle = startPage + 1;
 		var atalantaZoom = pageView; // current view mode (initially pageView)
 		var viewer = OpenSeadragon({
 			id: "openseadragon-wrapper",
@@ -47,36 +48,50 @@ $(function () {
 			previousButton: "previous",
 			nextButton: "next"
 		});
-		console.log(viewer);
 		
 		// var pageIndex = this.pageIndex - (this.mode === 'book' ? 2 : 1);
 		// 	if (this.mode === 'book')
 	});
 
-	console.log("the current page is " + currentPageSingle);
-	console.log("my emblem number is " + myEmblemDataNum);
 	$(nextPageBtn).click(function(){
+		console.log("my emblem number is " + myEmblemDataNum);
 		console.log("I clicked the next page");
-		currentPageSingle = currentPageSingle + 1;
+		console.log("the page was " + currentPageSingle);
+		currentPageSingle = currentPageSingle + 1; // advance zooming page image by 1
 		console.log("now the current page is " + currentPageSingle);
-		if(currentPageSingle <= 7) {
-			myCurrentPageSingle = currentPageSingle - 3;
+		if(currentPageSingle <= 8) { // handle book cover
+			myCurrentPageSingle = 0; // tie book cover to introduction/toc
+			console.log("my new emblem number is " + myCurrentPageSingle);
+		}
+		else if(currentPageSingle > 8 && currentPageSingle <= 10) { // handle frontispiece and epigram
+			myCurrentPageSingle = currentPageSingle - 8; // new emblem data number should = myCurrentPageSingle
 			console.log("my new current page is " + myCurrentPageSingle);
 		}
-		else if(currentPageSingle > 7) {
-			myCurrentPageSingle = Math.floor(currentPageSingle / 4) + 3;
-			console.log("my new current page is " + myCurrentPageSingle);
+		else if(currentPageSingle > 10 && currentPageSingle <=13) { // handle dedication
+			myCurrentPageSingle = 3;
+			console.log("my dedication page is " + myCurrentPageSingle);
+		}
+		else if(currentPageSingle > 13 && currentPageSingle <=19) { // handle preface
+			myCurrentPageSingle = 4;
+			console.log("my preface page is " + myCurrentPageSingle);
+		}
+		else if(currentPageSingle > 19) { // handle emblems
+			myCurrentPageSingle = Math.floor(currentPageSingle / 4);
+			console.log("my first emblem page is " + myCurrentPageSingle);
 		}
 		updatePage();
 	});
 	function updatePage(){
-		var testing = document.getElementById('myPage');
+		var testing = document.getElementById('emblem-data');
 		console.log("my element is " + testing);
 		testing.setAttribute("data-id", myCurrentPageSingle);
+		window.history.replaceState('/atalanta-fugiens', '/atalanta-fugiens', '/atalanta-fugiens/dedication.html');
+
 		checkUpdate();
+		return false;
 	}
 	function checkUpdate(){
-		var testing2 = document.getElementById('myPage');
+		var testing2 = document.getElementById('emblem-data');
 		var myNewEmblemDataNum = testing2.getAttribute('data-id');
 		console.log("now my emblem number is " + myNewEmblemDataNum);
 	}
@@ -96,9 +111,9 @@ $(function () {
 
 // pageNum/4 + 3;
 
-// frontispiece = 9
-// epigram = 10
-// dedication = 11 - 13
-// preface = 14 - 19
-// emblem 1 = 20
+// frontispiece = page9 data1				x - 8
+// epigram = page10 data2					x - 8
+// dedication = pages11 - 13 data 3			x - 8, x - 9, x - 10
+// preface = pages14 - 19 data 4			x - 10, x - 11, x - 12, x - 13, x - 14, x - 15
+// emblem 1 = pages20-23 data 5				x - 15, x - 16, x - 17, x - 18	
 
