@@ -51,8 +51,11 @@ main.emblem-page {
 	grid-row-end: 2;
 }
 .section__image {
+	grid-column-start: 1;
+	grid-column-end: 5;
 	grid-row-start: 2;
 	grid-row-end: 3;
+/*	grid-area: 2 / 1 / 3 / 5;*/
 	.image__picture {
 		display: grid;
 		justify-content: center;
