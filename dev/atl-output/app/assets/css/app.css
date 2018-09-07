@@ -286,8 +286,6 @@ div[data-nav='home'] .topnav__identity {
     color: #fff; }
   .toc__items a:hover {
     color: #ffcd61; }
-  .toc__items a em {
-    font-style: italic; }
   .toc__items .toc__heading {
     color: #FFB000;
     font-size: 1.125rem;
@@ -330,7 +328,10 @@ div[data-nav='home'] .topnav__identity {
     padding: 0;
     width: 100%; }
   .toc__items {
-    width: 100%; } }
+    width: 100%; }
+  .toc__items li {
+    padding-left: 1.5rem;
+    padding-right: .5rem; } }
 
 /* medium  -  tablet */
 /* medium-large */
@@ -380,8 +381,6 @@ main.home {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto; }
-  main.home em {
-    font-style: oblique; }
   main.home .hero {
     background-color: #DC4929;
     color: #fff;
@@ -514,6 +513,24 @@ main.home {
     text-decoration: none; }
   main.home .intro-text a:hover {
     color: #b83a1e; }
+
+/* BREAKPOINTS */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  main.home .hero-text {
+    -webkit-transform: translate(6vw, 0);
+    -ms-transform: translate(6vw, 0);
+    transform: translate(6vw, 0);
+    padding-bottom: 20vh; }
+  main.home .hero-text h1 {
+    font-size: 3rem;
+    line-height: 3.25rem;
+    width: 130%; }
+  main.home .hero-text h5 {
+    width: 80%; }
+  main.home .intro-text p {
+    grid-area: 1 / 2 / 2 / 12; }
+  main.home .intro-text a {
+    grid-area: 2 / 2 / 3 / 12; } }
 
 /* NEUTRAL */
 /* COOL */
@@ -906,6 +923,9 @@ main.emblem-page {
   margin-top: 4.5rem;
   /*padding-top: $subnav-h;*/ }
 
+.frontmatter section.facsimile, .frontmatter section._facsimile {
+  padding: 0; }
+
 .facsimile--full {
   background-color: #222;
   height: 100vh;
@@ -1025,7 +1045,9 @@ main.emblem-page {
   .emblem {
     margin-top: 0; }
   .emblem__image--cropped {
-    width: 100%; } }
+    width: 100%; }
+  main.emblem-page {
+    padding: 0 0 4.5rem 0; } }
 
 /* NEUTRAL */
 /* COOL */
@@ -1263,6 +1285,9 @@ background-color: blue !important;
   color: purple !important;
   /* only use until latin xml is available ??? */ }
 
+cite {
+  font-style: oblique; }
+
 .edition--normalized .del {
   display: none; }
 
@@ -1449,7 +1474,20 @@ h3.epigram {
     line-height: 2.125rem; }
   h3.title {
     font-size: .825rem;
-    line-height: 1.5rem; } }
+    line-height: 1.5rem; }
+  .verse-epigram {
+    font-size: 1.125rem;
+    grid-area: 2 / 1 / 3 / 13;
+    line-height: 1.875rem;
+    padding: 0 .5rem 0 1rem; } }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .verse-epigram {
+    font-size: 1.5rem;
+    grid-area: 2 / 4 / 3 / 12;
+    line-height: 2.5rem; }
+  .panel--left .verse-epigram, .panel--right .verse-epigram {
+    grid-area: 2 / 3 / 3 / 11; } }
 
 /* NEUTRAL */
 /* COOL */
@@ -1737,6 +1775,10 @@ h3.epigram {
   /* subtracts topnav height */
   padding: 2rem; }
 
+/**.displayregioncontainer {
+	top: 200px;
+	outline: 20px solid orange;
+}*/
 /* NEUTRAL */
 /* COOL */
 /* WARM */

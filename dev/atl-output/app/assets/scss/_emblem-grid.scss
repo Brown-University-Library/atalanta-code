@@ -94,6 +94,9 @@ main.emblem-page {
 	margin-top: $subnav-h;
 	/*padding-top: $subnav-h;*/
 }
+.frontmatter section.facsimile, .frontmatter section._facsimile {
+	padding: 0;
+}
 .facsimile--full {
 	background-color: $black;
 	height: 100vh;
@@ -185,5 +188,8 @@ main.emblem-page {
 	}
 	.emblem__image--cropped {
 		width: 100%;
+	}
+	main.emblem-page {
+		padding: 0 0 $subnav-h 0;
 	}
 }

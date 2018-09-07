@@ -90,9 +90,6 @@ div[data-nav='home'] .topnav__identity {
 	a:hover {
 		color: $orange-yellow_brighter;
 	}
-	a em {
-		font-style: italic;
-	}
 	.toc__heading  {
 		color: $orange-yellow;
 		font-size: 1.125rem;
@@ -148,6 +145,10 @@ div[data-nav='home'] .topnav__identity {
 	}
 	.toc__items {
 		width: 100%;
+	}
+	.toc__items li {
+		padding-left: 1.5rem;
+		padding-right: .5rem;
 	}
 }
 

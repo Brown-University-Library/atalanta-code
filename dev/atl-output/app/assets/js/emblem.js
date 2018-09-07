@@ -666,7 +666,6 @@ $(function () {
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__0'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
 				sideNavHighlightMotto();
 			}
@@ -682,7 +681,6 @@ $(function () {
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__1'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
 				sideNavHighlightImage();
 			}
@@ -698,7 +696,6 @@ $(function () {
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__2'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
 				sideNavHighlightMusic();
 			}
@@ -714,7 +711,6 @@ $(function () {
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__3'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
 				sideNavHighlightEpigram();
 			}
@@ -730,7 +726,6 @@ $(function () {
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__4'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
 				sideNavHighlightDiscourse();
 			}
