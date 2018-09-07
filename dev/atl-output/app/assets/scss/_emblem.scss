@@ -26,12 +26,12 @@
 	position: relative;
 }
 .emblem__left {
-	border: 5px solid red;
+	/*border: 5px solid red;*/
 	grid-area: 1 / 1 / auto / span 1;
 	vertical-align: top; /* pfft text */
 }
 .emblem__right {
-	border: 5px solid orange;
+	/*border: 5px solid orange;*/
 	grid-area: 1 / 2 / auto / span 1;
 	vertical-align: top; /* pfft text */
 }

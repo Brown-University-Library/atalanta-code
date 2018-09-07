@@ -4,9 +4,10 @@ $(function () {
 	var currentPageSingle = 0;
 	var myCurrentPageSingle = 0;
 	var currentPageBook = 0;
-	var pageTiles = "../data/pageView.json"; // file path to page view dzi files
-	console.log("This is pageTiles " + pageTiles);
-	var bookTiles = "../data/bookView.json"; // file path to book view dzi files
+	// var pageTiles = "../data/json/page-view.json"; // file path to page view dzi files
+	// var bookTiles = "../data/json/book-view.json"; // file path to book view dzi files
+	var pageTiles = "../data/json/pageView.json"; // file path to page view dzi files
+	var bookTiles = "../data/json/bookView.json"; // file path to book view dzi files
 	var nextPageBtn = $('#next');
 	var prevPageBtn = $('#previous');
 	var pageView = $.getJSON(pageTiles, function(myJSON) { // get pageView.json file
@@ -16,17 +17,19 @@ $(function () {
 		bookView = bookView.responseJSON; // get array of book view URLS
 	})
 	.done(function() { // after all the image tiles are ready, display zoomable pages
-		if (myEmblemDataNum <= 4) { // handle front matter (not in sets of 4)
-			startPage = myEmblemDataNum + 3;
+		if (myEmblemDataNum <= 3) { // handle front matter (not in sets of 4)
+			startPage = myEmblemDataNum + 7;
+		}
+		else if (myEmblemDataNum === 4) { // handle front matter: preface
+			startPage = myEmblemDataNum + 9;
 		}
 		else if (myEmblemDataNum > 4) { // handle emblems (in sets of 4)
-			startPage = myEmblemDataNum * 4 - 7;
+			startPage = myEmblemDataNum * 4 - 1;
 		}
 		currentPageSingle = startPage;
 		var atalantaZoom = pageView; // current view mode (initially pageView)
 		var viewer = OpenSeadragon({
 			id: "openseadragon-wrapper",
-			// tileSources: [atalantaZoom],
 			tileSources: [atalantaZoom],
 			initialPage: startPage, // start viewer at first page of current emblem
 			autoResize: true, /***/
@@ -44,10 +47,12 @@ $(function () {
 			previousButton: "previous",
 			nextButton: "next"
 		});
+		console.log(viewer);
 		
 		// var pageIndex = this.pageIndex - (this.mode === 'book' ? 2 : 1);
 		// 	if (this.mode === 'book')
 	});
+
 	console.log("the current page is " + currentPageSingle);
 	console.log("my emblem number is " + myEmblemDataNum);
 	$(nextPageBtn).click(function(){
@@ -90,3 +95,10 @@ $(function () {
 // data 6 = page 12, page 13, page 14, page 15		| x - 6, x - 7, x - 8, x - 9	| x/4 = 3, x/4 = 3.1, x/4 = 3.2, x/4 = 3.3 
 
 // pageNum/4 + 3;
+
+// frontispiece = 9
+// epigram = 10
+// dedication = 11 - 13
+// preface = 14 - 19
+// emblem 1 = 20
+

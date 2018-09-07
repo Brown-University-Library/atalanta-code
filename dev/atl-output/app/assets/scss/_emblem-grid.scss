@@ -2,7 +2,11 @@
 @import 'colors';
 
 main.emblem-page {
-	background-color: $light-gray;
+	background-color: $black;
+	background-image: url("../img/default/bkg-illustration.png");
+	/*background-repeat: no-repeat;*/
+	/*background-size: cover;*/
+	background-size: contain;
 	display: grid;
 	grid-template-columns: repeat( 4, 1fr);
 	grid-template-rows: 1fr;
@@ -23,8 +27,12 @@ main.emblem-page {
 	width: 100%;
 }
 .emblem section {
-	background-color: $white;
+	background-color: hsla(0, 0%, 100%, .97);
 	padding: 1rem 0;
+}
+.emblem section.section__motto, .emblem .section__image section, .emblem section.section__epigram {
+	background-color: $royal-blue;
+	color: $white;
 }
 .panel--full {
 	grid-column-start: 1;
@@ -45,31 +53,49 @@ main.emblem-page {
 .section__image {
 	grid-row-start: 2;
 	grid-row-end: 3;
+	.image__picture {
+		display: grid;
+		justify-content: center;
+		padding-bottom: 1rem;
+	}
 	img {
 		max-width: 30rem;
 	}
 }
 .section__music {
-	grid-row-start: 3;
-	grid-row-end: 4;
+	grid-area: 3 / 1 / 4 / 5;
+}
+.music--full {
+	width: 100%;
 }
 .section__epigram {
 	grid-row-start: 4;
 	grid-row-end: 5;
 }
+.emblem section.section__epigram {
+	padding: 4rem 0;
+}
 .section__discourse {
 	grid-row-start: 5;
 	grid-row-end: 6;	
 }
-.section__motto.panel--left, .section__epigram.panel--left, .section__discourse.panel--left {
-	margin-right: 5px;
+.section__motto.panel--left, .section__epigram.panel--left, .section__discourse.panel--left { /* needs a better solution now that I'm using a background image ??? */
+/*	border-right: 5px solid white;*/
 }
 .section__motto.panel--right, .section__epigram.panel--right, .section__discourse.panel--right {
-	margin-left: 5px;
+/*	border-left: 5px solid white;*/
 }
 .section__facsimile {
-	margin-top: 128px;
-	grid-area: 1 / 1 / 1 / 5;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 2;
+/*	grid-area: 1 / 1 / 1 / 5;*/
+	margin-top: $subnav-h;
+	/*padding-top: $subnav-h;*/
+}
+.frontmatter section.facsimile, .frontmatter section._facsimile {
+	padding: 0;
 }
 .facsimile--full {
 	background-color: $black;
@@ -78,14 +104,18 @@ main.emblem-page {
 	position: fixed;
 }
 .grid--left {
-	grid-area: 1 / 1 / 2 / 3;
-	outline: 5px solid orange;
+	grid-column-start: 1;
+	grid-column-end: 3;
+/*	grid-area: 1 / 1 / 2 / 3;*/
 }
 .grid--right {
-	grid-area: 1 / 3 / 2 / 5;
+	grid-column-start: 3;
+	grid-column-end: 5;
+/*	grid-area: 1 / 3 / 2 / 5;*/
 }
 .grid--half {
-	width: 50%;	
+	width: 50%;
+	background-color: silver;
 }
 .switch-wrapper {
 /*	border: 1px solid green;*/
@@ -127,9 +157,27 @@ main.emblem-page {
 				width: 100%;
 			}
 			a:hover {
-				color: $blue;
+				color: $royal-blue;
 			}
 		}
+		li.is-selected {
+			border-bottom: 3px solid $royal-blue;
+			margin-bottom: -3px;
+		}
+	}
+}
+.section__motto .switch-wrapper, .section__epigram .switch-wrapper{
+	li {
+
+	}
+	li.is-selected {
+		border-bottom: 3px solid $aqua;
+	}
+	a {
+		color: $white;
+	}
+	a:hover {
+		color: $aqua;
 	}
 }
 
@@ -140,5 +188,8 @@ main.emblem-page {
 	}
 	.emblem__image--cropped {
 		width: 100%;
+	}
+	main.emblem-page {
+		padding: 0 0 $subnav-h 0;
 	}
 }

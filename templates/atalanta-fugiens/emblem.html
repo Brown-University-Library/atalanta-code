@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -8,435 +7,241 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" />
 	<script type="text/javascript" src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
-	<script type="text/javascript" src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
+	<script type="text/javascript" src="../assets/js/vendors/verovio/verovio-toolkit.js"></script>
 	<script type="text/javascript" src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script type="text/javascript" src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
 </head>
 <body>
 <!-- GLOBAL NAVIGATION -->
 	<header>
 		<div class="_topnav"></div>
-
-
 <!-- EMBLEM NAVIGATION -->
 		<nav class="subnav">
 			<ul>
-				<li class="subnav__views--single"><a href="#">Single View</a></li>
-				<li class="subnav__options--option"><a href="#">English</a></li>
-				<li class="subnav__options--option"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option"><a href="#">Facsimile</a></li>
-				<li class="subnav__views--double"><a href="#">Side-by-side View</a></li>
-				<li class="subnav__options--option"><a href="#">English</a></li>
-				<li class="subnav__options--option"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option"><a href="#">Facsimile</a></li>
+				<li class="subnav__views--single is-hidden" data-state="active"><a href="#">Single View</a></li>
+				<li class="subnav__options--option is-active" data-state="active"><a href="#">English</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Latin/German</a></li>
+				<li class="subnav__options--option" data-state="inactive"><a href="#">Original</a></li>
+				<li class="subnav__views--double" data-state="inactive"><a href="#">Comparative View</a></li>
+				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">English</a></li>
+				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">Latin/German</a></li>
+				<li class="subnav__options--option is-hidden is-active" data-state="active"><a href="#">Original</a></li>
 			</ul>
 		</nav>
 	</header>
 <!-- EMBLEM PAGE-->
-	<main class="emblem-page" data-id="4">
+	<main class="emblem-page" data-id="5">
 <!-- SIDENAV -->
-		<div class="_sidenav"></div>
-<!-- EMBLEMS: WHOLE / LEFT / RIGHT -->
-		<div class="emblem-wrapper">
-<!-- WHOLE EMBLEM -->
-			<div class="emblem__full">
-				<!-- Facsimile -->
-				<div class="_facsimile"></div>
-				<!-- Digital Edition -->
-				<div class="emblem">
-					<!-- Motto -->
-					<a name="motto" id="basic-waypoint__0"></a>
-					<section class="motto-wrapper half wrapper-section section--split-or-wrap">
-						<div class="section section--motto section--single">
-							<div class="translation">
-								<div class="switch-wrapper left">
-									<div class="facsimile-normalized-switch">
-										<ul>
-											<li><a href="#">Facsimile</a></li>
-											<li class="is-selected"><a href="#">Normalized</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--english _motto--english edition--facsimile is-hidden"></div>
-								<div class="lang--english _motto--english edition--normalized"></div>
-							</div>
-							<div class="original is-hidden">
-								<div class="switch-wrapper left">
-									<div class="latin-german-switch">
-										<ul>
-											<li class="is-selected"><a href="#">Latin</a></li>
-											<li><a href="#">German</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--latin _motto--latin"></div>
-								<div class="lang--german _motto--german is-hidden"></div>
-							</div>
-						</div>
-						<div class="section section--motto section--double is-hidden">
-							<div class="translation is-hidden">
-								<div class="switch-wrapper left">
-									<div class="facsimile-normalized-switch">
-										<ul>
-											<li><a href="#">Facsimile</a></li>
-											<li class="is-selected"><a href="#">Normalized</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--english _motto--english edition--facsimile is-hidden"></div>
-								<div class="lang--english _motto--english edition--normalized"></div>
-							</div>
-							<div class="original">
-								<div class="switch-wrapper right">
-									<div class="latin-german-switch">
-										<ul>
-											<li class="is-selected"><a href="#">Latin</a></li>
-											<li><a href="#">German</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--latin _motto--latin"></div>
-								<div class="lang--german _motto--german is-hidden"></div>
+	<div class="_sidenav"></div>
+<!-- EMBLEM GRID -->
+		<!-- Facsimile -->
+		<div class="section__facsimile is-hidden">
+			<div class="facsimile--full">
+				<section class="_facsimile">
+					<section class="facsimile">
+						<div id="openseadragon-wrapper">
+							<div id="tools">
+								<span>
+									<a id="zoom-in" href="#zoom-in" title="Zoom In" style="display: inline-block; position: relative">Zoom In</a>
+									<a id="zoom-out" href="#zoom-out" title="Zoom Out" style="display: inline-block; position: relative">Zoom Out</a>
+									<a id="previous" href="#previous" title="Previous" style="display: inline-block; position: relative">Previous</a>
+									<a id="next" href="#next" title="Next" style="display: inline-block; position: relative">Next</a>
+								</span>
 							</div>
 						</div>
 					</section>
-					<!-- Image -->
-					<a name="image" id="basic-waypoint__1"></a>
-					<div class="_image">
-						<section class="image wrapper-section section">
-							<div class="image__picture section--single"><img class="emblem__image--cropped" src="" alt="Illustration" /></div>
-						</section>
+				</section>
+			</div>
+		</div>
+		<div class="emblem">
+			<!-- Motto -->
+			<a name="motto" id="basic-waypoint__0" class="section__motto"></a>
+			<section class="section__motto section--single panel--full">
+				<div class="translation">
+					<div class="switch-wrapper left">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
 					</div>
-					<!-- Music -->
-					<a name="music" id="basic-waypoint__2"></a>
-					<div class="_music">
-						<section class="music wrapper-section">
-							<div class="section section--single">
-								<div class="test">
-									<p>Music will go here</p>
-								</div>
-							</div>
-						</section>
+					<div class="lang--english _motto--english edition--normalized"></div>
+				</div>
+				<div class="original is-hidden">
+					<div class="switch-wrapper left">
+						<div class="latin-german-switch">
+							<ul>
+								<li class="is-selected"><a href="#">Latin</a></li>
+								<li><a href="#">German</a></li>
+							</ul>
+						</div>
 					</div>
-					<!-- Epigram -->
-					<a name="epigram" id="basic-waypoint__3"></a>
-					<section class="epigram-wrapper half wrapper-section section--split-or-wrap">
-						<div class="section section--epigram section--single">
-							<div class="translation">
-								<div class="switch-wrapper left">
-									<div class="facsimile-normalized-switch">
-										<ul>
-											<li><a href="#">Facsimile</a></li>
-											<li class="is-selected"><a href="#">Normalized</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--english _epigram--english edition--facsimile is-hidden"></div>
-								<div class="lang--english _epigram--english edition--normalized"></div>
-							</div>
-							<div class="original is-hidden">
-								<div class="switch-wrapper left">
-									<div class="latin-german-switch">
-										<ul>
-											<li class="is-selected"><a href="#">Latin</a></li>
-											<li><a href="#">German</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--latin _epigram--latin"></div>
-								<div class="lang--german _epigram--german is-hidden"></div>
-							</div>
+					<div class="lang--latin _motto--latin"></div>
+					<div class="lang--german _motto--german is-hidden"></div>
+				</div>
+			</section>
+			<section class="section__motto section--double panel--right is-hidden">
+				<div class="translation is-hidden">
+					<div class="switch-wrapper right">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
 						</div>
-						<div class="section section--epigram section--double is-hidden">
-							<div class="translation is-hidden">
-								<div class="switch-wrapper right">
-									<div class="facsimile-normalized-switch">
-										<ul>
-											<li><a href="#">Facsimile</a></li>
-											<li class="is-selected"><a href="#">Normalized</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--english _epigram--english edition--facsimile is-hidden"></div>
-								<div class="lang--english _epigram--english edition--normalized"></div>
-							</div>
-							<div class="original">
-								<div class="switch-wrapper right">
-									<div class="latin-german-switch">
-										<ul>
-											<li class="is-selected"><a href="#">Latin</a></li>
-											<li><a href="#">German</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--latin _epigram--latin"></div>
-								<div class="lang--german _epigram--german is-hidden"></div>
-							</div>
+					</div>
+					<div class="lang--english _motto--english edition--normalized"></div>
+				</div>
+				<div class="original">
+					<div class="switch-wrapper right">
+						<div class="latin-german-switch">
+							<ul>
+								<li class="is-selected"><a href="#">Latin</a></li>
+								<li><a href="#">German</a></li>
+							</ul>
 						</div>
-					</section>
-					<!-- Discourse -->
-					<a name="discourse" id="basic-waypoint__4"></a>
-					<section class="discourse-wrapper half wrapper-section section--split-or-wrap">
-						<div class="section section--discourse section section--single">
-							<div class="translation">
-								<div class="switch-wrapper left">
-									<div class="facsimile-normalized-switch">
-										<ul>
-											<li><a href="#">Facsimile</a></li>
-											<li class="is-selected"><a href="#">Normalized</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--english _discourse--english edition--facsimile text is-hidden"></div>
-								<div class="lang--english _discourse--english edition--normalized text"></div>
+					</div>
+					<div class="lang--latin _motto--latin"></div>
+					<div class="lang--german _motto--german is-hidden"></div>
+				</div>
+			</section>
+			<!-- Image -->
+			<a name="image" id="basic-waypoint__1" class="section__image"></a>
+			<div class="section__image section--full panel--full">					
+				<div class="_image">
+					<section class="image wrapper-section section">
+							<div class="image__picture section--single">
+								<img class="emblem__image--cropped" 
+									srcset="../assets/img/emblem-images_cropped/320/bdr698524_021_straightened.jpg 320w,
+											../assets/img/emblem-images_cropped/960/bdr698524_021_straightened.jpg 960w,
+											../assets/img/emblem-images_cropped/1600/bdr698524_021_straightened.jpg 1600w"
+									src="../assets/img/emblem-images_cropped/1600/bdr698524_021_straightened.jpg"
+									alt="Illustration" />
 							</div>
-							<div class="original text is-hidden">
-								<div class="lang--latin _discourse--latin">Latin Discourse</div>
-							</div>
-						</div>
-						<div class="section section--discourse section--double is-hidden">
-							<div class="translation is-hidden">
-								<div class="switch-wrapper right">
-									<div class="facsimile-normalized-switch">
-										<ul>
-											<li><a href="#">Facsimile</a></li>
-											<li class="is-selected"><a href="#">Normalized</a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="lang--english _discourse--english edition--facsimile text is-hidden"></div>
-								<div class="lang--english _discourse--english edition--normalized text"></div>
-							</div>
-							<div class="original text">
-								<div class="lang--latin _discourse--latin"></div>
-							</div>
-						</div>
 					</section>
 				</div>
 			</div>
-<!-- LEFT PANEL -->
-			<div class="emblem__left is-hidden">
-				<!-- Facsimile -->
-				<div class="_facsimile-half is-hidden"></div>
-				<!-- Digital Edition -->
-				<div class="emblem">
-					<!-- Motto -->
-					<a name="motto" id="basic-waypoint__0"></a>
-					<section class="section section--motto wrapper-section">
-						<div class="translation left-english-text">
-							<div class="switch-wrapper left">
-								<div class="facsimile-normalized-switch">
-									<ul>
-										<li><a href="#">Facsimile</a></li>
-										<li class="is-selected"><a href="#">Normalized</a></li>
-									</ul>
-								</div>
+			<div class="section__image section--full panel--right is-hidden">
+				<div class="_image">
+					<section class="image wrapper-section section">
+							<div class="image__picture section--single panel--right">
+								<img class="emblem__image--cropped" 
+									srcset="../assets/img/emblem-images_cropped/320/bdr698524_021_straightened.jpg 320w,
+											../assets/img/emblem-images_cropped/960/bdr698524_021_straightened.jpg 960w,
+											../assets/img/emblem-images_cropped/1600/bdr698524_021_straightened.jpg 1600w"
+									src="../assets/img/emblem-images_cropped/1600/bdr698524_021_straightened.jpg"
+									alt="Illustration" />
 							</div>
-							<div class="lang--english _motto--english edition--facsimile is-hidden"></div>
-							<div class="lang--english _motto--english edition--normalized"></div>
-						</div>
-						<div class="original left-latin-german-text is-hidden">
-							<div class="switch-wrapper left">
-								<div class="latin-german-switch">
-									<ul>
-										<li class="is-selected"><a href="#">Latin</a></li>
-										<li><a href="#">German</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--latin _motto--latin"></div>
-							<div class="lang--german _motto--german is-hidden"></div>
-						</div>
-					</section>
-					<!-- Image -->
-					<a name="image" id="basic-waypoint__1"></a>
-					<div class="_image">
-						<section class="image wrapper-section section">
-							<div class="image__picture"><img class="emblem__image--cropped" src="" alt="Illustration" /></div>
-						</section>
-					</div>
-					<!-- Music -->
-					<a name="music" id="basic-waypoint__2"></a>
-					<div class="_music">
-						<section class="music wrapper-section">
-							<div class="section">
-								<div class="test">
-									<p>Music will go here</p>
-								</div>
-							</div>
-						</section>
-					</div>
-					<!-- Epigram -->
-					<a name="epigram" id="basic-waypoint__3"></a>
-					<section class="section section--epigram wrapper-section">
-						<div class="translation left-english-text">
-							<div class="switch-wrapper left">
-								<div class="facsimile-normalized-switch">
-									<ul>
-										<li><a href="#">Facsimile</a></li>
-										<li class="is-selected"><a href="#">Normalized</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--english _epigram--english edition--facsimile is-hidden"></div>
-							<div class="lang--english _epigram--english edition--normalized"></div>
- 						</div>
-						<div class="original left-latin-german-text is-hidden">
-							<div class="switch-wrapper left">
-								<div class="latin-german-switch">
-									<ul>
-										<li class="is-selected"><a href="#">Latin</a></li>
-										<li><a href="#">German</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--latin _epigram--latin"></div>
-							<div class="lang--german _epigram--german is-hidden"></div>
-						</div>
-					</section>
-					<!-- Discourse -->
-					<a name="discourse" id="basic-waypoint__4"></a>
-					<section class="section--discourse wrapper-section">
-						<div class="translation left-english-text">
-							<div class="switch-wrapper left">
-								<div class="facsimile-normalized-switch">
-									<ul>
-										<li><a href="#">Facsimile</a></li>
-										<li class="is-selected"><a href="#">Normalized</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--english _discourse--english edition--facsimile section text is-hidden"></div>
-							<div class="lang--english _discourse--english edition--normalized section text"></div>
-						</div>
-						<div class="original left-latin-german-text section text is-hidden">
-							<div class="lang--latin _discourse--latin"></div>
-						</div>
 					</section>
 				</div>
 			</div>
-<!-- RIGHT PANEL -->
-			<div class="emblem__right is-hidden">
-				<!-- Facsimile -->
-				<div class="_facsimile-half"></div>
-				<!-- Digital Edition -->
-				<div class="emblem">
-					<!-- Motto -->
-					<a name="motto" id="basic-waypoint__0"></a>
-					<section class="section section--motto wrapper-section">
-						<div class="translation right-english-text is-hidden">
-							<div class="switch-wrapper right">
-								<div class="facsimile-normalized-switch">
-									<ul>
-										<li><a href="#">Facsimile</a></li>
-										<li class="is-selected"><a href="#">Normalized</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--english _motto--english edition--facsimile is-hidden"></div>
-							<div class="lang--english _motto--english edition--normalized"></div>
-						</div>
-						<div class="original right-latin-german-text">
-							<div class="switch-wrapper right">
-								<div class="latin-german-switch">
-									<ul>
-										<li class="is-selected"><a href="#">Latin</a></li>
-										<li><a href="#">German</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--latin _motto--latin"></div>
-							<div class="lang--german _motto--german is-hidden"></div>
-						</div>
-					</section>
-					<!-- Image -->
-					<a name="image" id="basic-waypoint__1"></a>
-					<div class="_image">
-						<section class="image wrapper-section section">
-							<div class="image__picture"><img class="emblem__image--cropped" src="" alt="Illustration" /></div>
-						</section>
-					</div>
-					<!-- Music -->
-					<a name="music" id="basic-waypoint__2"></a>
-					<div class="_music">
-						<section class="music wrapper-section">
-							<div class="section">
-								<div class="test">
-									<p>Music will go here</p>
-								</div>
-							</div>
-						</section>
-					</div>
-					<!-- Epigram -->
-					<a name="epigram" id="basic-waypoint__3"></a>
-					<section class="section section--epigram wrapper-section">
-						<div class="translation right-english-text is-hidden">
-							<div class="switch-wrapper right">
-								<div class="facsimile-normalized-switch">
-									<ul>
-										<li><a href="#">Facsimile</a></li>
-										<li class="is-selected"><a href="#">Normalized</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--english _epigram--english edition--facsimile is-hidden"></div>
-							<div class="lang--english _epigram--english edition--normalized"></div>
- 						</div>
-						<div class="original right-latin-german-text">
-							<div class="switch-wrapper right">
-								<div class="latin-german-switch">
-									<ul>
-										<li class="is-selected"><a href="#">Latin</a></li>
-										<li><a href="#">German</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--latin _epigram--latin"></div>
-							<div class="lang--german _epigram--german is-hidden"></div>
-						</div>
-					</section>
-					<!-- Discourse -->
-					<a name="discourse" id="basic-waypoint__4"></a>
-					<section class="section--discourse wrapper-section">
-						<div class="translation right-english-text is-hidden">
-							<div class="switch-wrapper right">
-								<div class="facsimile-normalized-switch">
-									<ul>
-										<li><a href="#">Facsimile</a></li>
-										<li class="is-selected"><a href="#">Normalized</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="lang--english _discourse--english edition--facsimile section text is-hidden"></div>
-							<div class="lang--english _discourse--english edition--normalized section text"></div>
-						</div>
-						<div class="original right-latin-german-text section text">
-							<div class="lang--latin _discourse--latin"></div>
-						</div>
-					</section>
+			<!-- Music -->
+			<a name="music" id="basic-waypoint__2" class="section__music"></a>
+			<section class="section__music">
+				<div class="music--full">
+ 					<div class="atalanta-notation" data-mei="../data/mei/Fuga 1.xml">
+				    <div class="atalanta-notation-viz atalanta-notation-viz-cmn" style="background-image: url(../assets/img/default/music.png)"></div>
+				    <div class="atalanta-notation-viz atalanta-notation-viz-audio" data-tempo="240" data-mp3="../assets/audio/fugue 01 P.mp3;../assets/audio/fugue 01 A.mp3;../assets/audio/fugue 01 H.mp3">
+				    </div>
+				    <!-- Tracks separated by semicolons, audio files by commas -->
+				    <div class="atalanta-notation-viz atalanta-notation-viz-pianoroll"></div>
 				</div>
-			</div> <!-- END OF RIGHT PANEL -->
-		</div> <!-- END OF EMBLEM WRAPPER -->
+			</section>
+			<!-- Epigram -->
+			<a name="epigram" id="basic-waypoint__3" class="section__epigram"></a>
+			<section class="section__epigram section--single panel--full">
+				<div class="translation">
+					<div class="switch-wrapper left">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--english _epigram--english edition--normalized"></div>
+				</div>
+				<div class="original is-hidden">
+					<div class="switch-wrapper left">
+						<div class="latin-german-switch">
+							<ul>
+								<li class="is-selected"><a href="#">Latin</a></li>
+								<li><a href="#">German</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--latin _epigram--latin"></div>
+					<div class="lang--german _epigram--german is-hidden"></div>
+				</div>
+			</section>
+			<section class="section__epigram section--double panel--right is-hidden">
+				<div class="translation is-hidden">
+					<div class="switch-wrapper right">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--english _epigram--english edition--normalized"></div>
+				</div>
+				<div class="original">
+					<div class="switch-wrapper right">
+						<div class="latin-german-switch">
+							<ul>
+								<li class="is-selected"><a href="#">Latin</a></li>
+								<li><a href="#">German</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--latin _epigram--latin"></div>
+					<div class="lang--german _epigram--german is-hidden"></div>
+				</div>
+			</section>
+			<!-- Discourse -->
+			<a name="discourse" id="basic-waypoint__4" class="section__discourse"></a>
+			<section class="section__discourse section--single panel--full">
+				<div class="translation">
+					<div class="switch-wrapper left">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--english _discourse--english edition--facsimile text is-hidden"></div>
+					<div class="lang--english _discourse--english edition--normalized text"></div>
+				</div>
+				<div class="original text is-hidden">
+					<div class="lang--latin _discourse--latin"></div>
+				</div>
+			</section>
+			<section class="section__discourse section--double panel--right is-hidden">
+				<div class="translation is-hidden">
+					<div class="switch-wrapper right">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="lang--english _discourse--english edition--facsimile text is-hidden"></div>
+					<div class="lang--english _discourse--english edition--normalized text"></div>
+				</div>
+				<div class="original text">
+					<div class="lang--latin _discourse--latin"></div>
+				</div>
+			</section>
+		</div><!-- END EMBLEM -->
 	</main> <!-- END OF EMBLEM PAGE -->
 <!-- JS -->
+	<script type="text/javascript" src="../assets/js/topnav.js"></script>
 	<script type="text/javascript" src="../assets/js/emblem.js"></script>
+	<script type="text/javascript" src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
+  	<script type="text/javascript" src="../assets/js/notation.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
