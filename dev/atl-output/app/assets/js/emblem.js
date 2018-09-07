@@ -151,7 +151,7 @@ $(function () {
 	});
 	/* text switches */
 	$(leftNormalizedSwitch).click(function() { // SELECT LEFT & FULL NORMALIZED SWITCH
-		console.log("I clicked left normalized");
+		// console.log("I clicked left normalized");
 		if($(leftNormalizedSwitch).hasClass('is-selected')) {
 
 		}
@@ -166,7 +166,7 @@ $(function () {
 		return false;
 	});
 	$(rightNormalizedSwitch).click(function() { // SELECT RIGHT NORMALIZED SWITCH
-		console.log("I clicked right normalized");
+		// console.log("I clicked right normalized");
 		if($(rightNormalizedSwitch).hasClass('is-selected')) {
 
 		}
@@ -179,7 +179,7 @@ $(function () {
 		return false;
 	});
 	$(leftFacsimileSwitch).click(function() { // SELECT LEFT & FULL FACSIMILE SWITCH
-		console.log("I clicked left facsimile");
+		// console.log("I clicked left facsimile");
 		if($(leftFacsimileSwitch).hasClass('is-selected')) {
 
 		}
@@ -194,7 +194,7 @@ $(function () {
 		return false;
 	});
 	$(rightFacsimileSwitch).click(function() { // SELECT RIGHT FACSIMILE SWITCH
-		console.log("I clicked right normalized");
+		// console.log("I clicked right normalized");
 		if($(rightFacsimileSwitch).hasClass('is-selected')) {
 
 		}
@@ -496,7 +496,7 @@ $(function () {
 		}
 	}
 	function resetFacsimile() {
-		console.log("I am in resetFacsimile()");
+		// console.log("I am in resetFacsimile()");
 		$(sectionMusic).removeClass(gridLeft); // remove left grid placement to reveal full music
 		$(sectionMusic).removeClass(gridRight); // remove right grid placement to reveal full music
 		$(sectionImage).removeClass(gridLeft); // remove left grid placement to reveal full image
@@ -519,7 +519,7 @@ $(function () {
 		$(doubleOriginal).addClass('is-hidden'); // hide all latin/german text in right half
 	}
 	function showHalves() {
-		console.log("I am in showHalves()");
+		// console.log("I am in showHalves()");
 		resetFacsimile();
 		$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
 		$(sectionSingle).addClass('panel--left');
@@ -527,7 +527,7 @@ $(function () {
 		$(sectionFullRight).addClass('is-hidden');
 	}
 	function showHalvesSplit() {
-		console.log("I am in showHalvesSplit()");
+		// console.log("I am in showHalvesSplit()");
 		resetFacsimile();
 		$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
 		$(sectionSingle).addClass('panel--left'); // assign left half to single
@@ -571,7 +571,7 @@ $(function () {
 		$(imageSectionRight).removeClass('is-hidden'); // kludge to show right image
 	}
 	function showFacsimileRight() {
-		console.log("I am in showFacsimileRight()");
+		// console.log("I am in showFacsimileRight()");
 		$(sectionMusic).removeClass('is-hidden'); // reveal music
 		$(sectionMusic).addClass(gridLeft); // place music on left half of grid
 		$(sectionMusic).removeClass(gridRight); // remove music from right half of grid
@@ -590,9 +590,8 @@ $(function () {
 
 	}
 	function showFull() {
-		console.log("I am in showFull()");
+		// console.log("I am in showFull()");
 		resetFacsimile();
-
 		$(sectionDouble).addClass('is-hidden'); // show full / left half only
 		$(sideNav).removeClass('is-hidden'); // show sidenav in single page view
 	}

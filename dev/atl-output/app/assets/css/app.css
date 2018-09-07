@@ -920,10 +920,13 @@ main.emblem-page {
     max-width: 30rem; }
 
 .section__music {
-  grid-area: 3 / 1 / 4 / 5; }
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4; }
 
 .music--full {
-  width: 100%; }
+  /*	width: 100%;*/ }
 
 .section__epigram {
   grid-row-start: 4;
@@ -1844,7 +1847,26 @@ h3.epigram {
   z-index: 1000; }
 
 .facsimile--full.grid--half #tools {
-  top: 93vh; }
+  background-color: transparent;
+  text-align: center;
+  top: 45vh; }
+  .facsimile--full.grid--half #tools #zoom-in {
+    display: none !important; }
+  .facsimile--full.grid--half #tools #zoom-out {
+    display: none !important; }
+  .facsimile--full.grid--half #tools #previous {
+    background-color: rgba(33, 33, 33, 0.4);
+    /*		outline: 5px solid red;*/
+    padding: .75rem;
+    position: absolute !important;
+    left: -48vw !important;
+    min-width: 3rem; }
+  .facsimile--full.grid--half #tools #next {
+    background-color: rgba(33, 33, 33, 0.4);
+    padding: .75rem;
+    position: absolute !important;
+    right: .5vw !important;
+    min-width: 3rem; }
 
 #tools a {
   color: #3DF2BF;

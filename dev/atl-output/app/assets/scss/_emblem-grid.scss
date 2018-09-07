@@ -66,10 +66,13 @@ main.emblem-page {
 	}
 }
 .section__music {
-	grid-area: 3 / 1 / 4 / 5;
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 3;
+	grid-row-end: 4;
 }
 .music--full {
-	width: 100%;
+/*	width: 100%;*/
 }
 .section__epigram {
 	grid-row-start: 4;
