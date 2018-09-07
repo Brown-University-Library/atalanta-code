@@ -79,3 +79,14 @@ $(function () {
 		// 	var mySingleData = document.querySelector(singleViewBtn);
 		// mySingleData.setAttribute("data-state", singleData);
 });
+
+
+
+// data 1 = page 4 								| x - 3
+// data 2 = page 5									| x - 3
+// data 3 = page 6									| x - 3
+// data 4 = page 7									| x - 3
+// data 5 = page 8, page 9, page 10, page 11		| x - 3, x - 4, x - 5, x - 6	| x/4 = 2, x/4 = 2.1, x/4 = 2.2 x/4 = 2.3 floor/modulo??? + 3
+// data 6 = page 12, page 13, page 14, page 15		| x - 6, x - 7, x - 8, x - 9	| x/4 = 3, x/4 = 3.1, x/4 = 3.2, x/4 = 3.3 
+
+// pageNum/4 + 3;
