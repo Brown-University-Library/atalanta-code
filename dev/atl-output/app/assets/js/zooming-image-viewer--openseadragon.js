@@ -1,8 +1,10 @@
 $(function () {
 	var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
 	var startPage // the number of first page of current emblem
-	var pageTiles = "../data/pageView.json"; // file path to page view dzi files
-	var bookTiles = "../data/bookView.json"; // file path to book view dzi files
+	// var pageTiles = "../data/json/page-view.json"; // file path to page view dzi files
+	// var bookTiles = "../data/json/book-view.json"; // file path to book view dzi files
+	var pageTiles = "../data/json/pageView.json"; // file path to page view dzi files
+	var bookTiles = "../data/json/bookView.json"; // file path to book view dzi files
 	var pageView = $.getJSON(pageTiles, function(myJSON) { // get pageView.json file
 		pageView = pageView.responseJSON; // get array of page view URLS
 	})
@@ -11,21 +13,19 @@ $(function () {
 	})
 	.done(function() { // after all the image tiles are ready, display zoomable pages
 		if (myEmblemDataNum <= 3) { // handle front matter (not in sets of 4)
-			startPage = myEmblemDataNum + 6;
+			startPage = myEmblemDataNum + 7;
 		}
 		else if (myEmblemDataNum === 4) { // handle front matter: preface
-			startPage = myEmblemDataNum + 8;
+			startPage = myEmblemDataNum + 9;
 		}
 		else if (myEmblemDataNum > 4) { // handle emblems (in sets of 4)
-			startPage = myEmblemDataNum * 4 - 2;
+			startPage = myEmblemDataNum * 4 - 1;
 		}
 		var atalantaZoom = pageView; // current view mode (initially pageView)
 		var viewer = OpenSeadragon({
 			id: "openseadragon-wrapper",
-			// tileSources: [atalantaZoom],
 			tileSources: [atalantaZoom],
-			// initialPage: startPage, // start viewer at first page of current emblem
-			// tileSources: "../assets/img/emblem-images_tiled/page-view/pageView14.dzi",
+			initialPage: startPage, // start viewer at first page of current emblem
 			autoResize: true, /***/
             showHomeControl: false, /***/
 			animationTime: 1.5, /* smoother zooming with easing */
@@ -47,3 +47,11 @@ $(function () {
 		// 	if (this.mode === 'book')
 	});
 });
+
+
+
+// frontispiece = 9
+// epigram = 10
+// dedication = 11 - 13
+// preface = 14 - 19
+// emblem 1 = 20
