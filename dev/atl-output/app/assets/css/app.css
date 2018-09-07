@@ -250,7 +250,7 @@ button {
     width: 45px; }
 
 .topnav__identity a {
-  font-family: "GTAmericaTrial", "Usual", "GTAmericaTrial", Helvetica, Arial, sans-serif;
+  font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif;
   font-weight: 500; }
 
 div[data-nav='home'] .topnav {
@@ -308,7 +308,7 @@ div[data-nav='home'] .topnav__identity {
   .toc__items li {
     color: #fff;
     cursor: default;
-    font-family: "GTAmericaTrial", "Avenir", "GTAmericaTrial", Helvetica, Arial, sans-serif;
+    font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.5rem;
@@ -445,7 +445,7 @@ main.home {
     transform: translate(12vw, 0);
     padding-bottom: 20vh; }
   main.home .hero-text h1 {
-    font-family: Garamond, Georgia, serif;
+    font-family: "GT Sectra", Garamond, Georgia, serif;
     font-size: 7rem;
     height: auto;
     line-height: 7rem;
@@ -1379,7 +1379,7 @@ div.title {
   grid-area: 1 / 2 / 2 / 12; }
 
 h1.title {
-  font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif;
+  font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif, Helvetica, Arial, sans-serif;
   font-size: 3rem;
   font-weight: 600;
   line-height: 3.5rem; }
@@ -1389,7 +1389,7 @@ h1.title {
   line-height: 2.75rem; }
 
 h3.title {
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif, Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5rem; }
