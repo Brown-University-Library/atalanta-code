@@ -36,14 +36,15 @@
 /*		outline: 5px solid red;*/
 		padding: .75rem;
 		position: absolute !important;
-		left: -48vw !important;
+/*		left: -48vw !important;*/
+		left: -46vw !important;
 		min-width: 3rem;
 	}
 	#next {
 		background-color: $black_transparent;
 		padding: .75rem;
 		position: absolute !important;
-		right: .5vw !important;
+		right: 1vw !important;
 		min-width: 3rem;
 	}
 }

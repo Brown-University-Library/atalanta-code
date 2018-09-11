@@ -1353,12 +1353,12 @@ cite {
 /*.subst {
 	margin-right: -.75rem;
 }*/
-.lang--english._motto--english {
+.lang--english._motto--english, .lang--latin._motto--latin, .lang--german._motto--german {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr; }
 
-div.title {
+div.title, div.fugue, ._motto--latin div.image {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1376,7 +1376,7 @@ div.title {
 .panel--left div.title, .panel--right div.title {
   grid-area: 1 / 2 / 2 / 12; }
 
-h1.title {
+h1.title, ._motto--latin h1, ._motto--german h1 {
   font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif;
   font-size: 3rem;
   font-weight: 600;
@@ -1400,7 +1400,7 @@ div.epigram {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto; }
 
-h3.epigram {
+h3.epigram, ._epigram--latin h3, ._epigram--german h3 {
   grid-area: 1 / 5 / 2 / 10; }
 
 .panel--left h3.epigram, .panel--right h3.epigram {
@@ -1434,6 +1434,9 @@ h3.epigram {
   font-size: .75rem;
   grid-area: 1 / 4 / 2 / 11; }
 
+.pb.Meier {
+  grid-area: 1 / 5 / 2 / 11; }
+
 .pb.Maier1618 {
   grid-area: 1 / 5 / 2 / 11; }
 
@@ -1460,7 +1463,8 @@ div.margin-note {
   display: inline-block;
   padding-right: 2rem;
   position: absolute;
-  left: 75rem; }
+  /*left: 75rem;*/
+  left: 80vw; }
 
 div.margin-note.line2 {
   display: block; }
@@ -1468,6 +1472,11 @@ div.margin-note.line2 {
 .panel--left span.note-mark, .panel--right span.note-mark, .panel--left div.margin-note, .panel--right div.margin-note {
   display: none; }
 
+/*.panel--left div.margin-note {  This is only worth the effort on large desktops ???
+	left: calc(50vw - 10%);
+	padding-right: .5rem;
+	width: 10vw;
+}*/
 .panel--left .pb, .panel--right .pb {
   grid-area: 1 / 2 / 2 / 11; }
 
@@ -1537,11 +1546,28 @@ div.margin-note.line2 {
   h3.title {
     font-size: .825rem;
     line-height: 1.5rem; }
+  .pb {
+    grid-area: 1 / 1 / 2 / 13; }
+  .pb.Meier {
+    grid-area: 1 / 4 / 2 / 13; }
+  .pb.Maier1618 {
+    grid-area: 1 / 4 / 2 / 13; }
   .verse-epigram {
     font-size: 1.125rem;
     grid-area: 2 / 1 / 3 / 13;
     line-height: 1.875rem;
-    padding: 0 .5rem 0 1rem; } }
+    padding: 0 .5rem 0 1rem; }
+  ._discourse--english, ._discourse--latin {
+    margin: 0 1rem; }
+  div.discourse {
+    grid-area: 2 / 1 / 3 / 13;
+    grid-template-columns: repeat(12, 1fr); }
+    div.discourse h3 {
+      grid-area: 1 / 1 / 2 / 13; }
+    div.discourse .ab {
+      grid-area: 2 / 1 / 3 / 13; }
+  span.note-mark, div.margin-note {
+    display: none; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .verse-epigram {
@@ -1893,13 +1919,14 @@ div.margin-note.line2 {
     /*		outline: 5px solid red;*/
     padding: .75rem;
     position: absolute !important;
-    left: -48vw !important;
+    /*		left: -48vw !important;*/
+    left: -46vw !important;
     min-width: 3rem; }
   .facsimile--full.grid--half #tools #next {
     background-color: rgba(33, 33, 33, 0.4);
     padding: .75rem;
     position: absolute !important;
-    right: .5vw !important;
+    right: 1vw !important;
     min-width: 3rem; }
 
 #tools a {
