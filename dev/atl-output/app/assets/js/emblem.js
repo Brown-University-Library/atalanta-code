@@ -154,7 +154,6 @@ $(function () {
 	});
 	/* text switches */
 	$(leftNormalizedSwitch).click(function() { // SELECT LEFT & FULL NORMALIZED SWITCH
-		// console.log("I clicked left normalized");
 		if($(leftNormalizedSwitch).hasClass('is-selected')) {
 
 		}
@@ -169,7 +168,6 @@ $(function () {
 		return false;
 	});
 	$(rightNormalizedSwitch).click(function() { // SELECT RIGHT NORMALIZED SWITCH
-		// console.log("I clicked right normalized");
 		if($(rightNormalizedSwitch).hasClass('is-selected')) {
 
 		}
@@ -182,7 +180,6 @@ $(function () {
 		return false;
 	});
 	$(leftFacsimileSwitch).click(function() { // SELECT LEFT & FULL FACSIMILE SWITCH
-		// console.log("I clicked left facsimile");
 		if($(leftFacsimileSwitch).hasClass('is-selected')) {
 
 		}
@@ -197,7 +194,6 @@ $(function () {
 		return false;
 	});
 	$(rightFacsimileSwitch).click(function() { // SELECT RIGHT FACSIMILE SWITCH
-		// console.log("I clicked right normalized");
 		if($(rightFacsimileSwitch).hasClass('is-selected')) {
 
 		}
@@ -268,7 +264,6 @@ $(function () {
 			$(rightGermanText).addClass('is-hidden'); // hide right German text
 		}
 	});
-// }
 /* FUNCTIONS */
 	function checkState() {
 		console.log("I am checking the state");
@@ -337,7 +332,10 @@ $(function () {
 			showFacsimileFull();
 			console.log("Single Facsimile is ACTIVE and Double Facsimile is ACTIVE");
 		}
-		getDataState();
+		else {
+			console.log("NONE OF THE STATES APPLY!!!");
+		}
+		// getDataState();
 	}
 	function getDataState() {
 		// var mySingleData = document.querySelector('.subnav > ul li:nth-child(1)');
@@ -355,7 +353,7 @@ $(function () {
 	// var englishDoubleData;
 	// var latinDoubleData;
 	// var facsimileDoubleData;
-		updateDataState();
+		// updateDataState();
 	}
 	function updateDataState() {
 		var mySingleData = document.querySelector(singleViewBtn);
