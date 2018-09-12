@@ -33,15 +33,18 @@ $(function () {
 	var fullGermanText = '.panel--full .lang--german';
 	var leftGermanText = '.panel--left .lang--german';
 	var rightGermanText = '.panel--right .lang--german';
+	var fullLatinDiscourse = '.panel--full .lang--latin._discourse--latin';
+	var leftLatinDiscourse = '.panel--left .lang--latin._discourse--latin';
+	var rightLatinDiscourse = '.panel--right .lang--latin._discourse--latin';
 	/* switches */
 	var leftFacsimileSwitch = '.left .facsimile-normalized-switch ul li:nth-child(1)';
 	var rightFacsimileSwitch = '.right .facsimile-normalized-switch ul li:nth-child(1)';
 	var leftNormalizedSwitch = '.left .facsimile-normalized-switch ul li:nth-child(2)';
 	var rightNormalizedSwitch = '.right .facsimile-normalized-switch ul li:nth-child(2)';
-	// var leftLatinSwitch = '.panel--left .left .latin-german-switch ul li:nth-child(1)';
-	// var rightLatinSwitch = '.panel--right .right .latin-german-switch ul li:nth-child(1)';
-	// var leftGermanSwitch = '.panel--left .left .latin-german-switch ul li:nth-child(2)';
-	// var rightGermanSwitch = '.panel--right .right .latin-german-switch ul li:nth-child(2)';
+	var leftLatinSwitch = '.left .latin-german-switch ul li:nth-child(1)';
+	var rightLatinSwitch = '.right .latin-german-switch ul li:nth-child(1)';
+	var leftGermanSwitch = '.left .latin-german-switch ul li:nth-child(2)';
+	var rightGermanSwitch = '.right .latin-german-switch ul li:nth-child(2)';
 
 	/* emblem side nav */
 	var sideNav = '.wrapper-sidenav';
@@ -206,40 +209,65 @@ $(function () {
 		}
 		return false;
 	});
-	// $(leftGermanSwitch).click(function() { // SELECT LEFT & FULL GERMAN SWITCH
-	// 	if($(leftGermanSwitch).hasClass('is-selected')) {
+	$(leftGermanSwitch).click(function() { // SELECT LEFT & FULL GERMAN SWITCH
+		if($(leftGermanSwitch).hasClass('is-selected')) {
 
-	// 	}
-	// 	else {
-	// 		$(leftGermanSwitch).addClass('is-selected'); // highlight german switch on left side
-	// 		$(leftLatinSwitch).removeClass('is-selected'); // remove highlight from latin on left side
-	// 		$(fullGermanText).addClass('edition--facsimile'); // switch German text to facsimile CSS
-	// 		$(fullGermanText).removeClass('edition--normalized'); // remove normalized CSS from German text
-	// 		$(leftGermanText).addClass('edition--facsimile'); // switch German text to facsimile CSS
-	// 		$(leftGermanText).removeClass('edition--normalized'); // remove normalized CSS from German text
-	// 	}
-	// 	return false;
-	// });
-	// $(rightGermanSwitch).click(function() { // SELECT RIGHT GERMAN SWITCH
-	// 	if($(rightGermanSwitch).hasClass('is-selected')) {
+		}
+		else {
+			$(leftGermanSwitch).addClass('is-selected'); // highlight german switch on left side
+			$(leftLatinSwitch).removeClass('is-selected'); // remove highlight from latin on left side
+			$(fullGermanText).removeClass('is-hidden'); // make full German text visible
+			$(fullLatinText).addClass('is-hidden'); // hide full Latin text
+			$(fullLatinDiscourse).removeClass('is-hidden'); // make full Latin discourse visible
+			$(leftGermanText).removeClass('is-hidden'); // make left German text visible
+			$(leftLatinText).addClass('is-hidden'); // hide left Latin text
+			$(leftLatinDiscourse).removeClass('is-hidden'); // make left Latin discourse visible
+		}
+		return false;
+	});
+	$(rightGermanSwitch).click(function() { // SELECT RIGHT GERMAN SWITCH
+		if($(rightGermanSwitch).hasClass('is-selected')) {
 
-	// 	}
-	// 	else {
-	// 		$(rightGermanSwitch).addClass('is-selected'); // highlight german switch on right side
-	// 		$(rightLatinSwitch).removeClass('is-selected'); // remove highlight from latin on right side
-	// 	}
-	// 	return false;
-	// });
-	// $(leftLatinSwitch).click(function() { // SELECT LEFT & FULL LATIN SWITCH
-	// 		$(leftLatinSwitch).addClass('is-selected'); // highlight Latin switch on left side
-	// 		$(leftGermanSwitch).removeClass('is-selected'); // remove highlight from German on left side
-	// 		return false;
-	// });
-	// $(rightLatinSwitch).click(function() { // SELECT RIGHT LATIN SWITCH
-	// 		$(rightLatinSwitch).addClass('is-selected'); // highlight Latin switch on right side
-	// 		$(rightGermanSwitch).removeClass('is-selected'); // remove highlight from German on right side
-	// 		return false;
-	// });
+		}
+		else {
+			$(rightGermanSwitch).addClass('is-selected'); // highlight german switch on left side
+			$(rightLatinSwitch).removeClass('is-selected'); // remove highlight from latin on right side
+			$(fullGermanText).removeClass('is-hidden'); // make full German text visible
+			$(fullLatinText).addClass('is-hidden'); // hide full Latin text
+			$(fullLatinDiscourse).removeClass('is-hidden'); // make full Latin discourse visible
+			$(rightGermanText).removeClass('is-hidden'); // make right German text visible
+			$(rightLatinText).addClass('is-hidden'); // hide right Latin text
+			$(rightLatinDiscourse).removeClass('is-hidden'); // make right Latin discourse visible
+		}
+		return false;
+	});
+	$(leftLatinSwitch).click(function() { // SELECT LEFT & FULL LATIN SWITCH
+		if($(leftLatinSwitch).hasClass('is-selected')) {
+
+		}
+		else {
+			$(leftLatinSwitch).addClass('is-selected'); // highlight Latin switch on left side
+			$(leftGermanSwitch).removeClass('is-selected'); // remove highlight from German on left side
+			$(fullLatinText).removeClass('is-hidden'); // make full Latin text visible
+			$(fullGermanText).addClass('is-hidden'); // hide full German text
+			$(leftLatinText).removeClass('is-hidden'); // make left Latin text visible
+			$(leftGermanText).addClass('is-hidden'); // hide left German text
+		}
+		return false;
+	});
+	$(rightLatinSwitch).click(function() { // SELECT RIGHT LATIN SWITCH
+		if($(rightLatinSwitch).hasClass('is-selected')) {
+
+		}
+		else {
+			$(rightLatinSwitch).addClass('is-selected'); // highlight Latin switch on right side
+			$(rightGermanSwitch).removeClass('is-selected'); // remove highlight from German on right side
+			$(fullLatinText).removeClass('is-hidden'); // make full Latin text visible
+			$(fullGermanText).addClass('is-hidden'); // hide full German text
+			$(rightLatinText).removeClass('is-hidden'); // make right Latin text visible
+			$(rightGermanText).addClass('is-hidden'); // hide right German text
+		}
+	});
 // }
 /* FUNCTIONS */
 	function checkState() {

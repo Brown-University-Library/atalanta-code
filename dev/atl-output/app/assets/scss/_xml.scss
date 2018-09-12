@@ -204,7 +204,7 @@ div.margin-note span.note-mark {
 .panel--left .pb.Meier, .panel--right .pb.Meier {
 	grid-area: 1 / 4 / 2 / 13;
 }
-._discourse--latin .pb.Maier1618 {
+.panel--left ._discourse--latin .pb.Maier1618, .panel--right ._discourse--latin .pb.Maier1618 {
 	grid-area: 1 / 2 / 2 / 13;
 }
 .panel--left div.discourse, .panel--right div.discourse {
