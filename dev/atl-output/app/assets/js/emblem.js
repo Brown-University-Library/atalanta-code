@@ -382,12 +382,8 @@ $(function () {
 		}
 	}
 	function onLoad() {
-		// $(doubleNav).toggleClass('is-hidden'); // hide last 3 language options for double view
-		// $(englishSingleView).toggleClass('is-active'); // highlight english translation as default single text
-		// $(latinDoubleView).toggleClass('is-active'); // highlight latin as default double text
 		sideNavSetNum();
 		checkState();
-		console.log("I loaded the page");
 	}
 	function processComparativeView() {
 		isActiveDouble();// reveal single view btn and hide comparative view btn
@@ -416,7 +412,8 @@ $(function () {
 			$(doubleNav).attr('data-state','inactive');
 			$(englishDoubleView).attr('data-state','active');
 		}
-		checkState();				
+		checkState();
+				
 		resetLanguagesOnRight(); // hide all full-width text or left half text, except image and music sections
 		showTranslationDouble(); // show english text in right half
 		if( $(englishDoubleView).hasClass('is-active') ) {
@@ -437,6 +434,7 @@ $(function () {
 			$(englishSingleView).attr('data-state','active');
 		}
 		checkState();
+
 		resetLanguagesOnLeft(); // hide all full-width text or left half text, except image and music sections
 		showTranslation(); // show english text in full-width or left half
 		if( $(englishSingleView).hasClass('is-active') ) { 
@@ -525,8 +523,10 @@ $(function () {
 		// console.log("I am in resetFacsimile()");
 		$(sectionMusic).removeClass(gridLeft); // remove left grid placement to reveal full music
 		$(sectionMusic).removeClass(gridRight); // remove right grid placement to reveal full music
+		$(sectionMusic).removeClass('is-hidden'); // show music
 		$(sectionImage).removeClass(gridLeft); // remove left grid placement to reveal full image
 		$(sectionImage).removeClass(gridRight); // remove right grid placement to reveal full image
+		$(sectionImage).removeClass('is-hidden'); // show image
 		$(sectionFacsimile).addClass('is-hidden'); // hide facsimile wrapper
 		$(sectionSingle).removeClass('is-hidden'); // show full/left panel content
 		$(sectionSingle).removeClass('panel--left'); // rename left panel step 1 (remove left panel class)
