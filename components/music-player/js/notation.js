@@ -22,7 +22,7 @@
 
   'use strict';
   
-  // Constants
+  // GLOBAL CONSTANTS
   
   let MAIN_CLASS_NAME = 'atalanta-notation',
       VIZ_CLASS_NAME = 'atalanta-notation-viz',
@@ -48,7 +48,7 @@
   // GLOBALS
   
   var audioContext;
-  
+
   // UTILITY FUNCTIONS
 
   // Workaround for Verovio not reading MEI tempo
@@ -110,7 +110,7 @@
       $.ajax({
           url: meiFileURL, dataType: 'text', success: function(meiData) {
 
-            const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gis;
+            const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gi;
             let staffDefTxt;
 
             while (staffDefTxt = voiceNameRE.exec(meiData)) {
@@ -570,14 +570,40 @@
     
     // Given the attribute string, returns an array-of-arrays
     //  [tracks][voices]
-    
-    function getMp3Filenames(mp3FilenameString) {
+    // DEFUNCT
+
+    function getMp3Filenames_DEFUNCT(mp3FilenameString) {
       
       return mp3FilenameString.split(';') // This should be a regex ...
                               .reduce(function (acc, x) {
                                 acc.push(x.split(','))
                                 return acc;
                               }, []);
+    }
+
+    function getTrackInfo(containerNode) {
+
+      let trackInfo = [];
+
+      containerNode.querySelectorAll('.audio-track').forEach(trackNode => {
+        let data = trackNode.dataset;
+        trackInfo.push([
+          {
+            type: 'main',
+            filename: data.mp3,
+            pan: parseFloat(data.pan) || 0,
+            gain: parseFloat(data.gain) || 1,
+          },
+          {
+            type: 'reverb',
+            filename: data.reverbMp3,
+            pan: 0,
+            gain: parseFloat(data.reverbGain) || 1,
+          }
+        ]);
+      });
+      
+      return trackInfo;
     }
     
     function onMuteChange(muteStatusArray) {
@@ -589,15 +615,14 @@
     }
     
     function init() {
-      
-      // Load filenames for MP3 files from attribute
-      
-      let allTrackFilenames = getMp3Filenames(viewContainer.attr(AUDIO_VIZ_MP3_ATTR_NAME));
 
-      // Create objects for each track (main voice + reverb)
-      // TODO: implement reverb
-      
-      tracks = allTrackFilenames.map(getViewAudioTrack);
+      // Get track info from markup (MP3 filename, gain, pan, etc.)
+
+      let tracksInfo = getTrackInfo(viewContainer[0]);      
+
+      // Using tracksInfo, create track objects
+
+      tracks = tracksInfo.map(getViewAudioTrack);
       console.log(tracks);
       
       // Track object: volume, pan, mute, play, pause, jumpTo
@@ -619,37 +644,49 @@
   // The track object is responsible for playing and stopping an
   //  audio file for a single vocal part AND its reverb.
   // It also mutes when told
+  // The AudioTrack object is only owned and used by the Audio View
   
-  function getViewAudioTrack(trackFilenames) {
+  function getViewAudioTrack(trackInfo) {
 
-    let bufferList, 
-        bufferLoader, 
-        sources,
-        isMuted = false,
-        gainNode = null;
+   console.log("TRACKINFO");
+   console.log(trackInfo);
+
+    let sounds = { main: {}, reverb: {} }; // Initialized in init()
+
+    let bufferList, // A list of audio buffers (i.e. sound files)
+        sources, // A list of sound sources which are hooked up to audio graphs
+        gainNodes = [], // Array of gain nodes (main and reverb)
+        isMuted = false;
+
+    // play() takes the buffers (audio sources) and 
+    //  creates an audio graph out of each
+    // This is a method common to all Views
+    // The start time in MS
 
     function play(startTimeInMilliseconds) {
       
       // Take each buffer and connect to audio output
       
-      sources = bufferList.map((buffer) => {
+      sources = bufferList.map((buffer, index) => {
         
         // Get buffer source node
         
         let source = audioContext.createBufferSource();
         source.buffer = buffer;
-        
-        // Get gain node
-        
-        if (!audioContext.createGain)
-          audioContext.createGain = audioContext.createGainNode;
-        
-        gainNode = audioContext.createGain();
+
+        let gainNode = audioContext.createGain();
+        gainNode.gain.value = trackInfo[index].gain;
+        gainNodes.push(gainNode);
+
+        let panNode = audioContext.createStereoPanner();
+        panNode.pan.value = trackInfo[index].pan;
         
         // Connect source node to gain node & gain to output
         
         source.connect(gainNode);
-        gainNode.connect(audioContext.destination);
+        gainNode.connect(panNode);
+        panNode.connect(audioContext.destination)
+        // gainNode.connect(audioContext.destination);
         
         return source;
       });
@@ -684,16 +721,21 @@
       sources.forEach(source => source.stop(0));
     }
 
-    function finishedLoading(buffers) { 
-      bufferList = buffers;
-      console.log('Loaded audio files:' + trackFilenames);
-      // play(); // TEMP -- for testing
-    }
-    
     function setGain(gain) {
       console.log("Setting gain to " + gain);
-      gainNode.gain.value = gain * gain;
-    }    
+      gainNodes.forEach(
+        gainNode => gainNode.gain.value = gain * gain
+      );
+      // gainNode.gain.value = gain * gain;
+    }
+    
+    // Won't ever change in mid-play - so maybe 
+    //  not necessary as a stand-alone function
+
+    function setPan(pan) {
+      console.log("Setting pan to " + pan);
+      // panNode.gain.value = pan; THIS NEEDS TO BE IMPLEMENTED
+    }
     
     function mute(muteStatus) {
       isMuted = (muteStatus);
@@ -701,13 +743,45 @@
       setGain(muteStatus ? 0 : 1);
     }
 
-    function init() {
-      // Load audio
-      bufferLoader = new AudioLoader(audioContext, trackFilenames, finishedLoading);
-      bufferLoader.load();        
+    function init2(trackInfo) {
+
+      if (trackInfo.mainFilename !== undefined) {
+        sounds.main = {
+
+        }
+      }
+
+
+
+      sounds.reverb = {
+
+      }
     }
 
-    init();
+    function init(trackInfo) {
+
+      // Create list of filenames for audio files (can't be undefined)
+
+      let trackFilenames = trackInfo.map(track => track.filename);
+
+      //let trackFilenames = [trackInfo.mainFilename, trackInfo.reverbFilename].filter(
+      //  filename => filename !== undefined
+      //);
+
+      function onFinishedLoading(buffers) { 
+        bufferList = buffers;
+        console.log('Loaded audio files:' + trackFilenames);
+      }
+
+      // Load audio and call onFinishedLoading()
+
+      getAudioFromFilenames(audioContext, trackFilenames, onFinishedLoading);
+
+      //let bufferLoader = new AudioLoader(audioContext, trackFilenames, onFinishedLoading);
+      //bufferLoader.load();        
+    }
+
+    init(trackInfo);
 
     return {
       play: play,
@@ -716,26 +790,128 @@
     }
   }
   
+  // BUFFERLOADER 2
+
+
+  function getAudioFromFilenames(audioContext, audioFilenames, onFinishedLoading) {
+
+    let loadedCount = 0,
+        bufferList = [];
+
+    function endIfAllURLsResolved() {
+      loadedCount++;
+      if (loadedCount === audioFilenames.length - 1) {
+        onFinishedLoading(bufferList);
+      }
+    }
+
+    // Decode a file buffer into audio
+
+    function convertToAudioData(fileContents, bufferIndex) {
+
+      // If the decoding succeeds
+
+      function onDecodingSuccess(buffer) {
+        if (buffer) {
+          bufferList[bufferIndex] = buffer;
+        } else {
+          onDecodingError('unknown');
+        }
+
+        endIfAllURLsResolved();
+      }
+
+      // If the decoding doesn't succeed
+
+      function onDecodingError(error) {
+        console.error('decodeAudioData error', error);
+      }
+
+      // Do the decoding
+
+      audioContext.decodeAudioData(fileContents, onDecodingSuccess, onDecodingError);
+    }
+
+    // Given a filename, do an HTTP request for the (binary) file contents 
+    //  and then pass it to decodeAudioData() to convert it into audio data
+
+    function loadBuffer(audioFilename, bufferIndex) {
+    
+      let request = new XMLHttpRequest();
+
+      request.open('GET', audioFilename, true);
+      request.responseType = 'arraybuffer';
+
+      request.onload = function () {
+        let fileContents = request.response;
+        convertToAudioData(fileContents, bufferIndex);
+      }
+
+      request.onerror = function() {
+        console.log('XHR error loading ' + audioFilename);
+      }
+
+      request.send();
+    }
+
+    // Save a null audio buffer
+
+    function loadNullBuffer(bufferIndex) {
+      bufferList[bufferIndex] = null;
+      endIfAllURLsResolved();
+    }
+
+    // Given a URL, resolve it
+
+    function resolveURL(audioFilename, bufferIndex) {
+      if (audioFilename !== undefined) {
+        loadBuffer(audioFilename, bufferIndex);
+      } else {
+        loadNullBuffer(bufferIndex);
+      }
+    }
+
+    // Resolve all URLs
+
+    audioFilenames.forEach(resolveURL);
+  }
+
+
   // OBJECT: BUFFERLOADER
   
-  // Loads an audio buffer
+  // Given an array of filenames, loads them into buffers and calls
+  //   onFinishedLoading(bufferList)
   // Code from https://www.html5rocks.com/en/tutorials/webaudio/intro/
+  // TODO: rewrite this
   
-  function AudioLoader(context, urlList, callback) {
-    this.context = context;
-    this.urlList = urlList;
-    this.onload = callback;
+  function AudioLoader(audioContext, trackFilenames, onFinishedLoading) {
+    this.context = audioContext;
+    this.urlList = trackFilenames;
+    this.onload = onFinishedLoading;
     this.bufferList = new Array();
     this.loadCount = 0;
   }
 
   AudioLoader.prototype.loadBuffer = function(url, index) {
     
+    // If filename is undefined, set this buffer entry to null
+    // (which will represent audio silence -- 
+    // see https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/buffer)
+
+    if (url === undefined) {
+      this.bufferList.push(null);
+
+      // If the last URL, call the callback
+
+      if (++loader.loadCount == loader.urlList.length)
+        loader.onload(loader.bufferList);
+    }
+
     // Load buffer asynchronously
     
     var request = new XMLHttpRequest();
-    request.open("GET", url, true);
-    request.responseType = "arraybuffer";
+    request.open('GET', url, true);
+    request.responseType = 'arraybuffer';
 
     var loader = this;
 
@@ -747,10 +923,13 @@
         request.response,
         function(buffer) {
           if (!buffer) {
-            alert('error decoding file data: ' + url);
+            console.log('Error decoding file data: ' + url);
             return;
           }
           loader.bufferList[index] = buffer;
+
+          // If the last URL, call the callback
+
           if (++loader.loadCount == loader.urlList.length)
             loader.onload(loader.bufferList);
         },
@@ -766,6 +945,8 @@
 
     request.send();
   }
+
+  // Load all the URLs
 
   AudioLoader.prototype.load = function() {
     for (var i = 0; i < this.urlList.length; ++i)
@@ -920,8 +1101,13 @@
     //  If exists, create a shared AudioContext
     //  (only need one for whole page)
     
-    if ($('.' + AUDIO_VIZ_CLASS_NAME).length)
+    if ($('.' + AUDIO_VIZ_CLASS_NAME).length) {
       audioContext = getAudioContext();
+
+      if (!audioContext.createGain) {
+        audioContext.createGain = audioContext.createGainNode;
+      }
+    }
     
     // Find components and initialize each in turn
     
