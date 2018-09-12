@@ -22,7 +22,7 @@
 
   'use strict';
   
-  // Constants
+  // GLOBAL CONSTANTS
   
   let MAIN_CLASS_NAME = 'atalanta-notation',
       VIZ_CLASS_NAME = 'atalanta-notation-viz',
@@ -48,7 +48,7 @@
   // GLOBALS
   
   var audioContext;
-  
+
   // UTILITY FUNCTIONS
 
   // Workaround for Verovio not reading MEI tempo
@@ -587,13 +587,20 @@
 
       containerNode.querySelectorAll('.audio-track').forEach(trackNode => {
         let data = trackNode.dataset;
-        trackInfo.push({
-          mainFilename: data.mp3,
-          mainPan: parseFloat(data.pan) || 0,
-          mainGain: parseFloat(data.gain) || 1,
-          reverbFilename: data.reverbMp3,
-          reverbGain: parseFloat(data.reverbGain) || 1
-        });
+        trackInfo.push([
+          {
+            type: 'main',
+            filename: data.mp3,
+            pan: parseFloat(data.pan) || 0,
+            gain: parseFloat(data.gain) || 1,
+          },
+          {
+            type: 'reverb',
+            filename: data.reverbMp3,
+            pan: 0,
+            gain: parseFloat(data.reverbGain) || 1,
+          }
+        ]);
       });
       
       return trackInfo;
@@ -641,43 +648,45 @@
   
   function getViewAudioTrack(trackInfo) {
 
+   console.log("TRACKINFO");
+   console.log(trackInfo);
+
     let sounds = { main: {}, reverb: {} }; // Initialized in init()
 
     let bufferList, // A list of audio buffers (i.e. sound files)
         sources, // A list of sound sources which are hooked up to audio graphs
-        isMuted = false,
-        gainNode = null,
-        panNode = null;
+        gainNodes = [], // Array of gain nodes (main and reverb)
+        isMuted = false;
 
     // play() takes the buffers (audio sources) and 
     //  creates an audio graph out of each
+    // This is a method common to all Views
+    // The start time in MS
 
     function play(startTimeInMilliseconds) {
       
       // Take each buffer and connect to audio output
       
-      sources = bufferList.map((buffer) => {
+      sources = bufferList.map((buffer, index) => {
         
         // Get buffer source node
         
         let source = audioContext.createBufferSource();
         source.buffer = buffer;
-        
-        // Get gain node
-        
-        if (!audioContext.createGain)
-          audioContext.createGain = audioContext.createGainNode;
-        
-        gainNode = audioContext.createGain();
 
-        // Get pan node
+        let gainNode = audioContext.createGain();
+        gainNode.gain.value = trackInfo[index].gain;
+        gainNodes.push(gainNode);
 
-        panNode = audioContext.createStereoPanner();
+        let panNode = audioContext.createStereoPanner();
+        panNode.pan.value = trackInfo[index].pan;
         
         // Connect source node to gain node & gain to output
         
         source.connect(gainNode);
-        gainNode.connect(audioContext.destination);
+        gainNode.connect(panNode);
+        panNode.connect(audioContext.destination)
+        // gainNode.connect(audioContext.destination);
         
         return source;
       });
@@ -714,9 +723,15 @@
 
     function setGain(gain) {
       console.log("Setting gain to " + gain);
-      gainNode.gain.value = gain * gain;
+      gainNodes.forEach(
+        gainNode => gainNode.gain.value = gain * gain
+      );
+      // gainNode.gain.value = gain * gain;
     }
     
+    // Won't ever change in mid-play - so maybe 
+    //  not necessary as a stand-alone function
+
     function setPan(pan) {
       console.log("Setting pan to " + pan);
       // panNode.gain.value = pan; THIS NEEDS TO BE IMPLEMENTED
@@ -747,7 +762,7 @@
 
       // Create list of filenames for audio files (can't be undefined)
 
-      let trackFilenames = [trackInfo.mainFilename, trackInfo.reverbFilename];
+      let trackFilenames = trackInfo.map(track => track.filename);
 
       //let trackFilenames = [trackInfo.mainFilename, trackInfo.reverbFilename].filter(
       //  filename => filename !== undefined
@@ -1086,8 +1101,13 @@
     //  If exists, create a shared AudioContext
     //  (only need one for whole page)
     
-    if ($('.' + AUDIO_VIZ_CLASS_NAME).length)
+    if ($('.' + AUDIO_VIZ_CLASS_NAME).length) {
       audioContext = getAudioContext();
+
+      if (!audioContext.createGain) {
+        audioContext.createGain = audioContext.createGainNode;
+      }
+    }
     
     // Find components and initialize each in turn
     
