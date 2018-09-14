@@ -1,14 +1,14 @@
 
-    <div class="ata-music" data-mei="mei/Fuga 8.xml">
-      <div class="atalanta-notation-viz atalanta-notation-viz-cmn"></div>
-      <div class="atalanta-notation-viz atalanta-notation-viz-audio" 
+    <div class="ata-music" data-mei="../data/mei/Fuga 8.xml">
+      <div class="ata-viz-cmn"></div>
+      <div class="ata-viz-audio" 
             data-tempo="58">
             <div class="ata-audio-track" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
-                data-mp3="audio/08-A-58bpm-Dry.mp3" data-reverb-mp3="audio/08-A-58bpm-Reverb.mp3"></div>
+                data-mp3="../assets/audio/08-A-58bpm-Dry.mp3" data-reverb-mp3="../assets/audio/08-A-58bpm-Reverb.mp3"></div>
             <div class="ata-audio-track" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
-                data-mp3="audio/08-H-58bpm-Dry.mp3" data-reverb-mp3="audio/08-H-58bpm-Reverb.mp3"></div>
+                data-mp3="../assets/audio/08-H-58bpm-Dry.mp3" data-reverb-mp3="../assets/audio/08-H-58bpm-Reverb.mp3"></div>
             <div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
-                data-mp3="audio/08-P-58bpm-Dry.mp3" data-reverb-mp3="audio/08-P-58bpm-Reverb.mp3"></div>
+                data-mp3="../assets/audio/08-P-58bpm-Dry.mp3" data-reverb-mp3="../assets/audio/08-P-58bpm-Reverb.mp3"></div>
       </div>
-      <div class="atalanta-notation-viz atalanta-notation-viz-pianoroll"></div>
+      <div class="ata-viz-pianoroll"></div>
     </div>
