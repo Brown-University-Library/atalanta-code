@@ -24,8 +24,8 @@
   
   // GLOBAL CONSTANTS
   
-  let MAIN_CLASS_NAME = 'atalanta-notation',
-      VIZ_CLASS_NAME = 'atalanta-notation-viz',
+  let MAIN_CLASS_NAME = 'ata-music',
+      VIZ_CLASS_NAME = 'ata-viz',
       CMN_VIZ_CLASS_NAME = VIZ_CLASS_NAME + '-cmn',
       PIANO_ROLL_VIZ_CLASS_NAME = VIZ_CLASS_NAME + '-pianoroll',
       AUDIO_VIZ_CLASS_NAME = VIZ_CLASS_NAME + '-audio',
@@ -43,7 +43,7 @@
         barHeight: 5,
         pitchScale: 5
       },
-      TEMPO = 56; // Should be read from DOM
+      TEMPO = 56; // TODO: Should be read from DOM
 
   // GLOBALS
   

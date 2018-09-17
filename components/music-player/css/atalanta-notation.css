@@ -8,7 +8,7 @@ body {
 
 /* This is for the background (non-javascript) image */
 
-.atalanta-notation-viz-cmn {
+.ata-viz-cmn {
   width: 100%;
   /* height: 500px; */
   background: white no-repeat;
@@ -17,20 +17,20 @@ body {
   /* overflow: scroll; */
 }
 
-.atalanta-notation-viz-cmn .highlighted {
+.ata-viz-cmn .highlighted {
   fill: red;
 }
 
-.atalanta-notation-viz-cmn svg tspan {
+.ata-viz-cmn svg tspan {
   font-family: sans-serif !important;
 }
 
-.atalanta-notation-viz-cmn .music-pages {
+.ata-viz-cmn .music-pages {
   float: left;
   width: 100%;
 }
 
-.atalanta-notation-viz-cmn .music-pages .music-page {
+.ata-viz-cmn .music-pages .music-page {
   float: left;
   width: 50%;
   text-align: center;
@@ -39,27 +39,27 @@ body {
 
 /* Playing notes */
 
-.atalanta-notation svg .note {
+.ata-viz-cmn svg .note {
   transition: fill 0.2s;
 }
 
 /* Start / stop / mute buttons */
 
-.atalanta-notation .transport {
+.ata-music .transport {
   width: 100%;
   float: left;
   background: white;
   padding: 1em;
 }
 
-.atalanta-notation .transport button {
+.ata-music .transport button {
   background-size: contain;
   background-repeat: no-repeat;
   border: 0;
 }
 
-.atalanta-notation .transport .atalanta-notation-start,
-.atalanta-notation .transport .atalanta-notation-stop {
+.ata-music .transport .atalanta-notation-start,
+.ata-music .transport .atalanta-notation-stop {
   height: 100px;
   width: 100px;
   display: block;
@@ -67,21 +67,21 @@ body {
   margin-right: 50px;
 }
 
-.atalanta-notation .transport .atalanta-notation-start {
+.ata-music .transport .atalanta-notation-start {
   background-image: url('../img/baseline-play_circle_outline-24px.svg');
 }
 
-.atalanta-notation .transport .atalanta-notation-start.playing {
+.ata-music .transport .atalanta-notation-start.playing {
   display: none;
   /* background-image: url('../img/baseline-play_circle_outline-24px.svg'); */
 }
 
-.atalanta-notation .transport .atalanta-notation-stop {
+.ata-music .transport .atalanta-notation-stop {
   display: none;
   background-image: url('../img/baseline-pause_circle_outline-24px.svg');
 }
 
-.atalanta-notation .transport .atalanta-notation-stop.playing {
+.ata-music .transport .atalanta-notation-stop.playing {
   display: initial;
   background-image: url('../img/baseline-pause_circle_outline-24px.svg');
 }
@@ -109,24 +109,24 @@ body {
   background-image: url('../img/baseline-record_voice_over-mute-24px.svg');
 }
 
-.measure .staff {
+.ata-music .measure .staff {
   transition: opacity 0.6s;
 }
 
 /* Styles for piano roll view */
 
-.atalanta-notation-viz-pianoroll g {
+.ata-viz-pianoroll g {
   transition: all 2s;
 }
 
-.atalanta-notation-viz-pianoroll .voice-1 .note {
+.ata-viz-pianoroll .voice-1 .note {
   fill: #1f77b4;
 }
 
-.atalanta-notation-viz-pianoroll .voice-2 .note {
+.ata-viz-pianoroll .voice-2 .note {
   fill: #ff7f0e;
 }
 
-.atalanta-notation-viz-pianoroll .voice-3 .note {
+.ata-viz-pianoroll .voice-3 .note {
   fill: #2ca02c;
 }
