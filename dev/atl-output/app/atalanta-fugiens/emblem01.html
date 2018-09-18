@@ -8,6 +8,7 @@
 <!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
 	<script type="text/javascript" src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="../assets/js/vendors/verovio/verovio-toolkit.js"></script>
+	<script type="text/javascript" src="../assets/js/vendors/lity/lity.min.js"></script>
 	<script type="text/javascript" src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
 	<script type="text/javascript" src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
 	<script type="text/javascript" src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
@@ -285,11 +286,12 @@
 			<section class="section__music">
 				<div class="_music music--full">
  					<div class="atalanta-notation" data-mei="../data/mei/Fuga 1.xml">
-				    <div class="atalanta-notation-viz atalanta-notation-viz-cmn" style="background-image: url(../assets/img/default/music.png)"></div>
-				    <div class="atalanta-notation-viz atalanta-notation-viz-audio" data-tempo="240" data-mp3="../assets/audio/fugue 01 P.mp3;../assets/audio/fugue 01 A.mp3;../assets/audio/fugue 01 H.mp3">
+ 						<div class="atalanta-notation__switch"><a href="#visualize" data-lity>Visualize</a></div>
+				    	<div class="atalanta-notation-viz atalanta-notation-viz-cmn" style="background-image: url(../assets/img/default/music.png)"></div>
+				    	<div class="atalanta-notation-viz atalanta-notation-viz-audio" data-tempo="240" data-mp3="../assets/audio/fugue 01 P.mp3;../assets/audio/fugue 01 A.mp3;../assets/audio/fugue 01 H.mp3"></div>
+				    	<!-- Tracks separated by semicolons, audio files by commas -->
+				    	<div id="visualize" class="atalanta-notation-viz atalanta-notation-viz-pianoroll lity-hide" style="background:#fff"></div>
 				    </div>
-				    <!-- Tracks separated by semicolons, audio files by commas -->
-				    <div class="atalanta-notation-viz atalanta-notation-viz-pianoroll"></div>
 				</div>
 			</section>
 			<!-- Epigram -->
@@ -336,7 +338,7 @@
 								<br/>Unus is Heroum cunctos superare labores
 								<br/>Arte, manu, forti corpore, mente, potest.
 								<br/>Ne tibi sit <persName>C<hi rend="ligature">ae</hi>so</persName>, nec abortus inutilis ill<hi rend="tail">e</hi>,
-								<br/>Non <persName>Agrippa</persName>, bono sydere sed genitus.</div>
+								<br/>Non <persName>Agrippa</persName>, bono sydere sed genitus.
 							</div>
 						</div>
 					<div class="lang--german _epigram--german is-hidden">
@@ -348,7 +350,7 @@
 								<br/>kan allerhohen Helden Raht und That ubergehen weit
 								<br/>Durch kunst und star<hi rend="ligature">ck</hi>e Gewalt und seines Leibes Arbeit;
 								<br/>Schaw<pc>/</pc> daß er nich unziemlich vor der Zeit geboren werd<pc>/</pc>
-								<br/>Sondern in rechter Maß komme lebendig auff die Erd.</div>
+								<br/>Sondern in rechter Maß komme lebendig auff die Erd.
 							</div>
 						</div>
 					</div>
