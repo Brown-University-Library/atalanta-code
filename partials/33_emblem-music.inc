@@ -10,5 +10,7 @@
             <div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
                 data-mp3="../assets/audio/33-P-Nonebpm-Dry.mp3" data-reverb-mp3="../assets/audio/33-P-Nonebpm-Reverb.mp3"></div>
       </div>
-      <div class="ata-viz-pianoroll"></div>
+      <!--
+      <div class="ata-viz-pianoroll modal"></div>
+      -->
     </div>
