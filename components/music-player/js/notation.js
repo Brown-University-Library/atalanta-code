@@ -23,12 +23,14 @@
   'use strict';
   
   // GLOBAL CONSTANTS
-  
+  // TODO - should be const
+
   let MAIN_CLASS_NAME = 'ata-music',
-      VIZ_CLASS_NAME = 'ata-viz',
-      CMN_VIZ_CLASS_NAME = VIZ_CLASS_NAME + '-cmn',
-      PIANO_ROLL_VIZ_CLASS_NAME = VIZ_CLASS_NAME + '-pianoroll',
-      AUDIO_VIZ_CLASS_NAME = VIZ_CLASS_NAME + '-audio',
+      VIZ_CLASS_NAMES = {
+        CMN: 'ata-viz-cmn',
+        PIANO_ROLL: 'ata-viz-pianoroll',
+        AUDIO: 'ata-viz-audio'
+      },
       AUDIO_VIZ_MP3_ATTR_NAME = 'data-mp3',
       AUDIO_VIZ_TEMPO_ATTR_NAME = 'data-tempo',
       VEROVIO_OPTIONS = {
@@ -42,8 +44,7 @@
       PIANO_ROLL_OPTIONS = {
         barHeight: 5,
         pitchScale: 5
-      },
-      TEMPO = 56; // TODO: Should be read from DOM
+      };
 
   // GLOBALS
   
@@ -80,6 +81,7 @@
     //  indicated by the tempo attribute in the markup
     // THIS DOESN'T SEEM TO WORK
     
+    /*
     function setMeiTempo(meiData) {
       
       // Get tempo from child of main container 
@@ -97,6 +99,7 @@
       return meiData.replace(/\s+midi.bpm="[^"]"/g, '')
                     .replace(/<scoreDef\s+/, '<scoreDef midi.bpm="' + tempo + '" ');
     }
+    */
     
     // Create verovio toolkit object
 
@@ -119,6 +122,7 @@
 
             // verovioToolkit.loadData(setMeiTempo(meiData)); 
             // COMMENTED OUT ABOVE B/C VEROVIO DOESN'T SEEM TO BE READING THE TEMPO FROM THE MEI
+
             verovioToolkit.loadData(meiData);
             
             // Convert to MIDI to get timing info
@@ -152,7 +156,7 @@
     
     function init() {
       let meiFileURL = containerNode.attr('data-mei');
-      createVerovioObject(meiFileURL);
+      createVerovioObject(meiFileURL); // TODO: this actually loads all the views, etc. Very confusing!
     }
     
     init();
@@ -171,15 +175,19 @@
     function createViews() {
       
       let views = [];
-      
-      containerNode.find('.' + VIZ_CLASS_NAME).each(function () {
+
+      const VIZ_SELECTOR = Object.keys(VIZ_CLASS_NAMES)
+        .map(vizClassName => '.' + VIZ_CLASS_NAMES[vizClassName])
+        .join(', ');
+
+      containerNode.find(VIZ_SELECTOR).each(function () {
         let viewContainer = $(this);
 
-        if (viewContainer.hasClass(CMN_VIZ_CLASS_NAME)) {
+        if (viewContainer.hasClass(VIZ_CLASS_NAMES.CMN)) {
           views.push(ViewCMN(viewContainer, verovioToolkit));
-        } else if (viewContainer.hasClass(AUDIO_VIZ_CLASS_NAME)) {
+        } else if (viewContainer.hasClass(VIZ_CLASS_NAMES.AUDIO)) {
           views.push(ViewAudio(viewContainer));
-        } else if (viewContainer.hasClass(PIANO_ROLL_VIZ_CLASS_NAME)) {
+        } else if (viewContainer.hasClass(VIZ_CLASS_NAMES.PIANO_ROLL)) {
           views.push(ViewPianoRoll(viewContainer, verovioToolkit));
         } // ADD MORE VIEWS HERE AS THEY ARE CREATED
       });
@@ -344,17 +352,18 @@
   // OBJECT: CMN VIEW
   
   function ViewCMN(viewContainer, verovioToolkit) {
-/*
-                pageHeight = $(document).height() * 100 / zoom ;
-                pageWidth = $(window).width() * 100 / zoom ;
-                options = {
-                            pageHeight: pageHeight,
-                            pageWidth: pageWidth,
-                            scale: zoom,
-                            adjustPageHeight: true
-                        };
-                vrvToolkit.setOptions(options);
-  */  
+
+  /*
+    pageHeight = $(document).height() * 100 / zoom ;
+    pageWidth = $(window).width() * 100 / zoom ;
+    options = {
+                pageHeight: pageHeight,
+                pageWidth: pageWidth,
+                scale: zoom,
+                adjustPageHeight: true
+            };
+    vrvToolkit.setOptions(options);
+  */
     
     let zoom = 30,
         pageHeight = viewContainer.height() * 100 / zoom,
@@ -362,6 +371,9 @@
         highlightedNotes = [],
         HIGHLIGHT_COLOR = '#f00', // THIS MAY BE DEFUNCT
         HIGHLIGHTED_NOTE_CLASSNAME = 'highlighted';
+
+
+    alert('GFSKGFLSSFG');
 
     function removeFallbackImage() {
       viewContainer.css('background-image', 'none');
@@ -1097,11 +1109,21 @@
   
   function initWhenPageLoaded() {
     
+    // TODO: COMPLETELY TEMP - move to audio view initialization code
+    // TODO: This area assumes the possibility of multiple music
+    //  components on the page, each of which could have their own tempo.
+    //  This assumes only one tempo -- NEED TO CHANGE
+
+    window.TEMPO = parseInt(
+      document.getElementsByClassName(VIZ_CLASS_NAMES.AUDIO)[0]
+      .getAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME)
+    );
+
     // Check for audio players in the markup.
     //  If exists, create a shared AudioContext
     //  (only need one for whole page)
     
-    if ($('.' + AUDIO_VIZ_CLASS_NAME).length) {
+    if ($('.' + VIZ_CLASS_NAMES.AUDIO).length) {
       audioContext = getAudioContext();
 
       if (!audioContext.createGain) {
@@ -1109,7 +1131,7 @@
       }
     }
     
-    // Find components and initialize each in turn
+    // Find Components and initialize each in turn
     
     $('.' + MAIN_CLASS_NAME).each(createMusicComponent);
   }
@@ -1117,7 +1139,7 @@
   // MAIN, BEFORE PAGE LOAD
   
   function init() {
-    
+
     // ALSO REMEMBER TO LOAD MP3s RIGHT AWAY (you could also load MEIs as well)
     // TODO
     
