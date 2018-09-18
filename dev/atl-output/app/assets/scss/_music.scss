@@ -105,6 +105,13 @@
 
 /* Start / stop / mute buttons */
 
+.lity-hidden ._topnav {
+	z-index: 10;
+}
+button.lity-close {
+	top: 5.5rem;
+	right: 3rem;
+}
 .lity-container {
 	min-width: 100vw;
 }
