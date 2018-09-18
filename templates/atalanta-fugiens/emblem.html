@@ -6,10 +6,10 @@
 	<title>Furnace and Fugue: Atalanta Fugiens (Digital Edition)</title>
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" />
 	<script type="text/javascript" src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
 	<script type="text/javascript" src="../assets/js/vendors/verovio/verovio-toolkit.js"></script>
 	<script type="text/javascript" src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
 	<script type="text/javascript" src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
+	<script type="text/javascript" src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
 </head>
 <body>
 <!-- GLOBAL NAVIGATION -->
@@ -30,7 +30,7 @@
 		</nav>
 	</header>
 <!-- EMBLEM PAGE-->
-	<main class="emblem-page" data-id="5">
+	<main id="emblem-data" class="emblem-page" data-id="5">
 <!-- SIDENAV -->
 	<div class="_sidenav"></div>
 <!-- EMBLEM GRID -->
@@ -108,24 +108,10 @@
 			</section>
 			<!-- Image -->
 			<a name="image" id="basic-waypoint__1" class="section__image"></a>
-			<div class="section__image section--full panel--full">					
-				<div class="_image">
+			<div class="section__image">					
+				<div class="image--full">
 					<section class="image wrapper-section section">
-							<div class="image__picture section--single">
-								<img class="emblem__image--cropped" 
-									srcset="../assets/img/emblem-images_cropped/320/bdr698524_021_straightened.jpg 320w,
-											../assets/img/emblem-images_cropped/960/bdr698524_021_straightened.jpg 960w,
-											../assets/img/emblem-images_cropped/1600/bdr698524_021_straightened.jpg 1600w"
-									src="../assets/img/emblem-images_cropped/1600/bdr698524_021_straightened.jpg"
-									alt="Illustration" />
-							</div>
-					</section>
-				</div>
-			</div>
-			<div class="section__image section--full panel--right is-hidden">
-				<div class="_image">
-					<section class="image wrapper-section section">
-							<div class="image__picture section--single panel--right">
+							<div class="image__picture">
 								<img class="emblem__image--cropped" 
 									srcset="../assets/img/emblem-images_cropped/320/bdr698524_021_straightened.jpg 320w,
 											../assets/img/emblem-images_cropped/960/bdr698524_021_straightened.jpg 960w,
@@ -139,12 +125,11 @@
 			<!-- Music -->
 			<a name="music" id="basic-waypoint__2" class="section__music"></a>
 			<section class="section__music">
-				<div class="music--full">
+				<div class="_music music--full">
  					<div class="atalanta-notation" data-mei="../data/mei/Fuga 1.xml">
 				    <div class="atalanta-notation-viz atalanta-notation-viz-cmn" style="background-image: url(../assets/img/default/music.png)"></div>
 				    <div class="atalanta-notation-viz atalanta-notation-viz-audio" data-tempo="240" data-mp3="../assets/audio/fugue 01 P.mp3;../assets/audio/fugue 01 A.mp3;../assets/audio/fugue 01 H.mp3">
 				    </div>
-				    <!-- Tracks separated by semicolons, audio files by commas -->
 				    <div class="atalanta-notation-viz atalanta-notation-viz-pianoroll"></div>
 				</div>
 			</section>
@@ -212,10 +197,17 @@
 							</ul>
 						</div>
 					</div>
-					<div class="lang--english _discourse--english edition--facsimile text is-hidden"></div>
 					<div class="lang--english _discourse--english edition--normalized text"></div>
 				</div>
 				<div class="original text is-hidden">
+					<div class="switch-wrapper left">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
 					<div class="lang--latin _discourse--latin"></div>
 				</div>
 			</section>
@@ -229,11 +221,19 @@
 							</ul>
 						</div>
 					</div>
-					<div class="lang--english _discourse--english edition--facsimile text is-hidden"></div>
 					<div class="lang--english _discourse--english edition--normalized text"></div>
 				</div>
 				<div class="original text">
+					<div class="switch-wrapper right">
+						<div class="facsimile-normalized-switch">
+							<ul>
+								<li><a href="#">Facsimile</a></li>
+								<li class="is-selected"><a href="#">Normalized</a></li>
+							</ul>
+						</div>
+					</div>
 					<div class="lang--latin _discourse--latin"></div>
+					</div>
 				</div>
 			</section>
 		</div><!-- END EMBLEM -->
@@ -241,7 +241,7 @@
 <!-- JS -->
 	<script type="text/javascript" src="../assets/js/topnav.js"></script>
 	<script type="text/javascript" src="../assets/js/emblem.js"></script>
+	<script type="text/javascript" src="../assets/js/notation.js"></script>
 	<script type="text/javascript" src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
-  	<script type="text/javascript" src="../assets/js/notation.js"></script>
 </body>
 </html>

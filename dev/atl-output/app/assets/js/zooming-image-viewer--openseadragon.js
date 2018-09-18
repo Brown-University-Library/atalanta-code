@@ -32,7 +32,7 @@ $(function () {
 			sequenceMode: true, /* group an array of images */
 			showReferenceStrip: false, /* thumbnails */
 			// referenceStripScroll: 'vertical',
-			showNavigator: true, /* mini map */
+			showNavigator: false, /* mini map */
 			toolbar: "openseadragon-wrapper",
 			zoomInButton: "zoom-in",
 			zoomOutButton: "zoom-out",

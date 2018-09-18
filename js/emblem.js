@@ -33,15 +33,18 @@ $(function () {
 	var fullGermanText = '.panel--full .lang--german';
 	var leftGermanText = '.panel--left .lang--german';
 	var rightGermanText = '.panel--right .lang--german';
+	var fullLatinDiscourse = '.panel--full .lang--latin._discourse--latin';
+	var leftLatinDiscourse = '.panel--left .lang--latin._discourse--latin';
+	var rightLatinDiscourse = '.panel--right .lang--latin._discourse--latin';
 	/* switches */
 	var leftFacsimileSwitch = '.left .facsimile-normalized-switch ul li:nth-child(1)';
 	var rightFacsimileSwitch = '.right .facsimile-normalized-switch ul li:nth-child(1)';
 	var leftNormalizedSwitch = '.left .facsimile-normalized-switch ul li:nth-child(2)';
 	var rightNormalizedSwitch = '.right .facsimile-normalized-switch ul li:nth-child(2)';
-	// var leftLatinSwitch = '.panel--left .left .latin-german-switch ul li:nth-child(1)';
-	// var rightLatinSwitch = '.panel--right .right .latin-german-switch ul li:nth-child(1)';
-	// var leftGermanSwitch = '.panel--left .left .latin-german-switch ul li:nth-child(2)';
-	// var rightGermanSwitch = '.panel--right .right .latin-german-switch ul li:nth-child(2)';
+	var leftLatinSwitch = '.left .latin-german-switch ul li:nth-child(1)';
+	var rightLatinSwitch = '.right .latin-german-switch ul li:nth-child(1)';
+	var leftGermanSwitch = '.left .latin-german-switch ul li:nth-child(2)';
+	var rightGermanSwitch = '.right .latin-german-switch ul li:nth-child(2)';
 
 	/* emblem side nav */
 	var sideNav = '.wrapper-sidenav';
@@ -71,6 +74,8 @@ $(function () {
 	var sectionFullRight = '.section--full.panel--right';
 	var sectionFacsimile = '.section__facsimile';
 	var facsimileFull = '.facsimile--full';
+	var sectionImage = '.section__image';
+	var imageFull = '.image--full';
 	var sectionMusic = '.section__music';
 	var musicFull = '.music--full';
 	/* newer variables (grid2) */
@@ -149,7 +154,6 @@ $(function () {
 	});
 	/* text switches */
 	$(leftNormalizedSwitch).click(function() { // SELECT LEFT & FULL NORMALIZED SWITCH
-		console.log("I clicked left normalized");
 		if($(leftNormalizedSwitch).hasClass('is-selected')) {
 
 		}
@@ -164,7 +168,6 @@ $(function () {
 		return false;
 	});
 	$(rightNormalizedSwitch).click(function() { // SELECT RIGHT NORMALIZED SWITCH
-		console.log("I clicked right normalized");
 		if($(rightNormalizedSwitch).hasClass('is-selected')) {
 
 		}
@@ -177,7 +180,6 @@ $(function () {
 		return false;
 	});
 	$(leftFacsimileSwitch).click(function() { // SELECT LEFT & FULL FACSIMILE SWITCH
-		console.log("I clicked left facsimile");
 		if($(leftFacsimileSwitch).hasClass('is-selected')) {
 
 		}
@@ -192,7 +194,6 @@ $(function () {
 		return false;
 	});
 	$(rightFacsimileSwitch).click(function() { // SELECT RIGHT FACSIMILE SWITCH
-		console.log("I clicked right normalized");
 		if($(rightFacsimileSwitch).hasClass('is-selected')) {
 
 		}
@@ -204,41 +205,65 @@ $(function () {
 		}
 		return false;
 	});
-	// $(leftGermanSwitch).click(function() { // SELECT LEFT & FULL GERMAN SWITCH
-	// 	if($(leftGermanSwitch).hasClass('is-selected')) {
+	$(leftGermanSwitch).click(function() { // SELECT LEFT & FULL GERMAN SWITCH
+		if($(leftGermanSwitch).hasClass('is-selected')) {
 
-	// 	}
-	// 	else {
-	// 		$(leftGermanSwitch).addClass('is-selected'); // highlight german switch on left side
-	// 		$(leftLatinSwitch).removeClass('is-selected'); // remove highlight from latin on left side
-	// 		$(fullGermanText).addClass('edition--facsimile'); // switch German text to facsimile CSS
-	// 		$(fullGermanText).removeClass('edition--normalized'); // remove normalized CSS from German text
-	// 		$(leftGermanText).addClass('edition--facsimile'); // switch German text to facsimile CSS
-	// 		$(leftGermanText).removeClass('edition--normalized'); // remove normalized CSS from German text
-	// 	}
-	// 	return false;
-	// });
-	// $(rightGermanSwitch).click(function() { // SELECT RIGHT GERMAN SWITCH
-	// 	if($(rightGermanSwitch).hasClass('is-selected')) {
+		}
+		else {
+			$(leftGermanSwitch).addClass('is-selected'); // highlight german switch on left side
+			$(leftLatinSwitch).removeClass('is-selected'); // remove highlight from latin on left side
+			$(fullGermanText).removeClass('is-hidden'); // make full German text visible
+			$(fullLatinText).addClass('is-hidden'); // hide full Latin text
+			$(fullLatinDiscourse).removeClass('is-hidden'); // make full Latin discourse visible
+			$(leftGermanText).removeClass('is-hidden'); // make left German text visible
+			$(leftLatinText).addClass('is-hidden'); // hide left Latin text
+			$(leftLatinDiscourse).removeClass('is-hidden'); // make left Latin discourse visible
+		}
+		return false;
+	});
+	$(rightGermanSwitch).click(function() { // SELECT RIGHT GERMAN SWITCH
+		if($(rightGermanSwitch).hasClass('is-selected')) {
 
-	// 	}
-	// 	else {
-	// 		$(rightGermanSwitch).addClass('is-selected'); // highlight german switch on right side
-	// 		$(rightLatinSwitch).removeClass('is-selected'); // remove highlight from latin on right side
-	// 	}
-	// 	return false;
-	// });
-	// $(leftLatinSwitch).click(function() { // SELECT LEFT & FULL LATIN SWITCH
-	// 		$(leftLatinSwitch).addClass('is-selected'); // highlight Latin switch on left side
-	// 		$(leftGermanSwitch).removeClass('is-selected'); // remove highlight from German on left side
-	// 		return false;
-	// });
-	// $(rightLatinSwitch).click(function() { // SELECT RIGHT LATIN SWITCH
-	// 		$(rightLatinSwitch).addClass('is-selected'); // highlight Latin switch on right side
-	// 		$(rightGermanSwitch).removeClass('is-selected'); // remove highlight from German on right side
-	// 		return false;
-	// });
-// }
+		}
+		else {
+			$(rightGermanSwitch).addClass('is-selected'); // highlight german switch on left side
+			$(rightLatinSwitch).removeClass('is-selected'); // remove highlight from latin on right side
+			$(fullGermanText).removeClass('is-hidden'); // make full German text visible
+			$(fullLatinText).addClass('is-hidden'); // hide full Latin text
+			$(fullLatinDiscourse).removeClass('is-hidden'); // make full Latin discourse visible
+			$(rightGermanText).removeClass('is-hidden'); // make right German text visible
+			$(rightLatinText).addClass('is-hidden'); // hide right Latin text
+			$(rightLatinDiscourse).removeClass('is-hidden'); // make right Latin discourse visible
+		}
+		return false;
+	});
+	$(leftLatinSwitch).click(function() { // SELECT LEFT & FULL LATIN SWITCH
+		if($(leftLatinSwitch).hasClass('is-selected')) {
+
+		}
+		else {
+			$(leftLatinSwitch).addClass('is-selected'); // highlight Latin switch on left side
+			$(leftGermanSwitch).removeClass('is-selected'); // remove highlight from German on left side
+			$(fullLatinText).removeClass('is-hidden'); // make full Latin text visible
+			$(fullGermanText).addClass('is-hidden'); // hide full German text
+			$(leftLatinText).removeClass('is-hidden'); // make left Latin text visible
+			$(leftGermanText).addClass('is-hidden'); // hide left German text
+		}
+		return false;
+	});
+	$(rightLatinSwitch).click(function() { // SELECT RIGHT LATIN SWITCH
+		if($(rightLatinSwitch).hasClass('is-selected')) {
+
+		}
+		else {
+			$(rightLatinSwitch).addClass('is-selected'); // highlight Latin switch on right side
+			$(rightGermanSwitch).removeClass('is-selected'); // remove highlight from German on right side
+			$(fullLatinText).removeClass('is-hidden'); // make full Latin text visible
+			$(fullGermanText).addClass('is-hidden'); // hide full German text
+			$(rightLatinText).removeClass('is-hidden'); // make right Latin text visible
+			$(rightGermanText).addClass('is-hidden'); // hide right German text
+		}
+	});
 /* FUNCTIONS */
 	function checkState() {
 		console.log("I am checking the state");
@@ -307,7 +332,10 @@ $(function () {
 			showFacsimileFull();
 			console.log("Single Facsimile is ACTIVE and Double Facsimile is ACTIVE");
 		}
-		getDataState();
+		else {
+			console.log("NONE OF THE STATES APPLY!!!");
+		}
+		// getDataState();
 	}
 	function getDataState() {
 		// var mySingleData = document.querySelector('.subnav > ul li:nth-child(1)');
@@ -325,7 +353,7 @@ $(function () {
 	// var englishDoubleData;
 	// var latinDoubleData;
 	// var facsimileDoubleData;
-		updateDataState();
+		// updateDataState();
 	}
 	function updateDataState() {
 		var mySingleData = document.querySelector(singleViewBtn);
@@ -354,12 +382,8 @@ $(function () {
 		}
 	}
 	function onLoad() {
-		// $(doubleNav).toggleClass('is-hidden'); // hide last 3 language options for double view
-		// $(englishSingleView).toggleClass('is-active'); // highlight english translation as default single text
-		// $(latinDoubleView).toggleClass('is-active'); // highlight latin as default double text
 		sideNavSetNum();
 		checkState();
-		console.log("I loaded the page");
 	}
 	function processComparativeView() {
 		isActiveDouble();// reveal single view btn and hide comparative view btn
@@ -388,7 +412,8 @@ $(function () {
 			$(doubleNav).attr('data-state','inactive');
 			$(englishDoubleView).attr('data-state','active');
 		}
-		checkState();				
+		checkState();
+				
 		resetLanguagesOnRight(); // hide all full-width text or left half text, except image and music sections
 		showTranslationDouble(); // show english text in right half
 		if( $(englishDoubleView).hasClass('is-active') ) {
@@ -409,6 +434,7 @@ $(function () {
 			$(englishSingleView).attr('data-state','active');
 		}
 		checkState();
+
 		resetLanguagesOnLeft(); // hide all full-width text or left half text, except image and music sections
 		showTranslation(); // show english text in full-width or left half
 		if( $(englishSingleView).hasClass('is-active') ) { 
@@ -494,9 +520,13 @@ $(function () {
 		}
 	}
 	function resetFacsimile() {
-		console.log("I am in resetFacsimile()");
+		// console.log("I am in resetFacsimile()");
 		$(sectionMusic).removeClass(gridLeft); // remove left grid placement to reveal full music
 		$(sectionMusic).removeClass(gridRight); // remove right grid placement to reveal full music
+		$(sectionMusic).removeClass('is-hidden'); // show music
+		$(sectionImage).removeClass(gridLeft); // remove left grid placement to reveal full image
+		$(sectionImage).removeClass(gridRight); // remove right grid placement to reveal full image
+		$(sectionImage).removeClass('is-hidden'); // show image
 		$(sectionFacsimile).addClass('is-hidden'); // hide facsimile wrapper
 		$(sectionSingle).removeClass('is-hidden'); // show full/left panel content
 		$(sectionSingle).removeClass('panel--left'); // rename left panel step 1 (remove left panel class)
@@ -515,7 +545,7 @@ $(function () {
 		$(doubleOriginal).addClass('is-hidden'); // hide all latin/german text in right half
 	}
 	function showHalves() {
-		console.log("I am in showHalves()");
+		// console.log("I am in showHalves()");
 		resetFacsimile();
 		$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
 		$(sectionSingle).addClass('panel--left');
@@ -523,7 +553,7 @@ $(function () {
 		$(sectionFullRight).addClass('is-hidden');
 	}
 	function showHalvesSplit() {
-		console.log("I am in showHalvesSplit()");
+		// console.log("I am in showHalvesSplit()");
 		resetFacsimile();
 		$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
 		$(sectionSingle).addClass('panel--left'); // assign left half to single
@@ -533,8 +563,9 @@ $(function () {
 		$(sectionFullRight).removeClass('is-hidden'); // show right half
 	}
 	function showFacsimileFull() {
-		console.log("I am in showFacsimileFull()");
+		// console.log("I am in showFacsimileFull()");
 		$(sectionMusic).addClass('is-hidden'); // hide music
+		$(sectionImage).addClass('is-hidden'); // hide image
 		$(facsimileFull).removeClass(gridHalf); // make facsimile full width
 		$(sectionFacsimile).removeClass(gridLeft); // make facsimile full width
 		$(sectionFacsimile).removeClass(gridRight); // make facsimile full width
@@ -546,10 +577,13 @@ $(function () {
 		$(sideNav).addClass('is-hidden'); // hide sidenav when facsimile is active
 	}
 	function showFacsimileLeft() {
-		console.log("I am in showFacsimileLeft()");
+		// console.log("I am in showFacsimileLeft()");
 		$(sectionMusic).removeClass('is-hidden'); // reveal music
 		$(sectionMusic).addClass(gridRight); // place music on right half of grid
 		$(sectionMusic).removeClass(gridLeft); // remove music from left half of grid
+		$(sectionImage).removeClass('is-hidden'); // reveal image
+		$(sectionImage).addClass(gridRight); // place image on right half of grid
+		$(sectionImage).removeClass(gridLeft); // remove image from left half of grid
 		$(facsimileFull).addClass(gridHalf); // make facsimile half width (required because of fixed position in grid)
 		$(sectionFacsimile).removeClass(gridRight); // remove facsimile from right grid columns
 		$(sectionFacsimile).addClass(gridLeft); // add facsimile to left grid columns
@@ -563,10 +597,13 @@ $(function () {
 		$(imageSectionRight).removeClass('is-hidden'); // kludge to show right image
 	}
 	function showFacsimileRight() {
-		console.log("I am in showFacsimileRight()");
+		// console.log("I am in showFacsimileRight()");
 		$(sectionMusic).removeClass('is-hidden'); // reveal music
 		$(sectionMusic).addClass(gridLeft); // place music on left half of grid
 		$(sectionMusic).removeClass(gridRight); // remove music from right half of grid
+		$(sectionImage).removeClass('is-hidden'); // reveal image
+		$(sectionImage).addClass(gridLeft); // place image on left half of grid
+		$(sectionImage).removeClass(gridRight); // remove image from right half of grid
 		$(facsimileFull).addClass(gridHalf); // make facsimile half width (required because of fixed position in grid)
 		$(sectionFacsimile).removeClass(gridLeft); // remove facsimile from left grid columns
 		$(sectionFacsimile).addClass(gridRight); // add facsimile to right grid columns
@@ -579,9 +616,8 @@ $(function () {
 
 	}
 	function showFull() {
-		console.log("I am in showFull()");
+		// console.log("I am in showFull()");
 		resetFacsimile();
-
 		$(sectionDouble).addClass('is-hidden'); // show full / left half only
 		$(sideNav).removeClass('is-hidden'); // show sidenav in single page view
 	}
@@ -666,7 +702,6 @@ $(function () {
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__0'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
 				sideNavHighlightMotto();
 			}
@@ -682,7 +717,6 @@ $(function () {
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__1'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
 				sideNavHighlightImage();
 			}
@@ -698,7 +732,6 @@ $(function () {
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__2'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
 				sideNavHighlightMusic();
 			}
@@ -714,7 +747,6 @@ $(function () {
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__3'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
 				sideNavHighlightEpigram();
 			}
@@ -730,7 +762,6 @@ $(function () {
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__4'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			console.log('Direction: ' + direction);
 			if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
 				sideNavHighlightDiscourse();
 			}

@@ -106,19 +106,32 @@
 /* Start / stop / mute buttons */
 
 .atalanta-notation .transport {
-	background-color: $gray-light;
+/*	background-color: $gray-light;
+*/	
+	background-color: transparent;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: center;
 	grid-area: 1 / 1 / 2 / 13;
 	z-index: 10; /* music page SVG overlaps with transport controls */
 }
 
 .atalanta-notation .transport button {
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	border: 0;
+}
+.track-mute {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 110px;
+}
+.track-mute button {
+	font-size: .875rem;
+	line-height: 1rem;
 }
 
 .atalanta-notation .transport .atalanta-notation-start,
