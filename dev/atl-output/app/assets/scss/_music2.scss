@@ -1,3 +1,63 @@
+@import 'colors';
+@import 'utilities';
+
 body {
 	padding: 0;
+}
+
+.section__music {
+	font-family: $body-font_emblem;
+}
+.atalanta-notation {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+/*	display: flex;
+  	flex-direction: column;
+  	align-items: center;*/
+}
+.section__music.section--full.panel--left {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+}
+.section__music.section--full.panel--left .atalanta-notation {
+	grid-area: 1 / 1 / 2 / 13;
+	border: 5px solid pink;
+	.transport {
+		background-color: purple;
+		grid-area: 1 / 2 / 2 / 12;
+	}
+	.atalanta-notation-viz.atalanta-notation-viz-cmn {
+		background-color: blue;
+		grid-area: 3 / 1 / 4 / 13; /* will not work unless the page refreshes when comparative is selected ??? */
+	}
+	.atalanta-notation-viz-pianoroll {
+		grid-area: 4 / 2 / 5 / 12;
+	}
+}
+.section__music.section--full.panel--right { /* this doesn't display properly in the right panel ??? */
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+}
+.section__music.section--full.panel--right .atalanta-notation {
+	grid-area: 1 / 1 / 2 / 13;
+	border: 5px solid pink;
+	.transport {
+		background-color: purple;
+		grid-area: 1 / 2 / 2 / 12;
+	}
+	.atalanta-notation-viz.atalanta-notation-viz-cmn {
+		background-color: blue;
+		grid-area: 3 / 1 / 4 / 13; /* will not work unless the page refreshes when comparative is selected ??? */
+	}
+	.atalanta-notation-viz-pianoroll {
+		grid-area: 4 / 2 / 5 / 12;
+	}
+}
+.atalanta-notation-viz-pianoroll {
+/*	display: none;*/
+	grid-area: 4 / 2 / 5 / 12;
+	overflow: hidden;
 }

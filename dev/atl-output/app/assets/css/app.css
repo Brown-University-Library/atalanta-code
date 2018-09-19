@@ -522,9 +522,11 @@ main.home {
     color: #ffcd61; }
   main.home ul li span {
     color: #fff;
-    font-size: .875rem;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .09375rem;
     line-height: 1rem;
-    margin-top: .25rem; }
+    margin-top: .375rem; }
   main.home .intro-text {
     display: grid;
     grid-gap: 2rem;
@@ -1938,8 +1940,83 @@ body {
 .ata-viz-pianoroll .voice-3 .note {
   fill: #2ca02c; }
 
+/* NEUTRAL */
+/* COOL */
+/* WARM */
+/* PRODUCTION */
+/* NEUTRAL */
+/* COOL */
+/* WARM */
+/* PRODUCTION */
+.is-active {
+  background-color: #ffcd61 !important; }
+  .is-active a {
+    color: #222 !important; }
+
+.is-hidden {
+  display: none !important; }
+
+.is-selected {
+  border-bottom: 3px solid rgba(13, 0, 77, 0.9); }
+
+.is-sticky {
+  position: fixed; }
+
 body {
   padding: 0; }
+
+.section__music {
+  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif; }
+
+.atalanta-notation {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  /*	display: flex;
+  	flex-direction: column;
+  	align-items: center;*/ }
+
+.section__music.section--full.panel--left {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto; }
+
+.section__music.section--full.panel--left .atalanta-notation {
+  grid-area: 1 / 1 / 2 / 13;
+  border: 5px solid pink; }
+  .section__music.section--full.panel--left .atalanta-notation .transport {
+    background-color: purple;
+    grid-area: 1 / 2 / 2 / 12; }
+  .section__music.section--full.panel--left .atalanta-notation .atalanta-notation-viz.atalanta-notation-viz-cmn {
+    background-color: blue;
+    grid-area: 3 / 1 / 4 / 13;
+    /* will not work unless the page refreshes when comparative is selected ??? */ }
+  .section__music.section--full.panel--left .atalanta-notation .atalanta-notation-viz-pianoroll {
+    grid-area: 4 / 2 / 5 / 12; }
+
+.section__music.section--full.panel--right {
+  /* this doesn't display properly in the right panel ??? */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto; }
+
+.section__music.section--full.panel--right .atalanta-notation {
+  grid-area: 1 / 1 / 2 / 13;
+  border: 5px solid pink; }
+  .section__music.section--full.panel--right .atalanta-notation .transport {
+    background-color: purple;
+    grid-area: 1 / 2 / 2 / 12; }
+  .section__music.section--full.panel--right .atalanta-notation .atalanta-notation-viz.atalanta-notation-viz-cmn {
+    background-color: blue;
+    grid-area: 3 / 1 / 4 / 13;
+    /* will not work unless the page refreshes when comparative is selected ??? */ }
+  .section__music.section--full.panel--right .atalanta-notation .atalanta-notation-viz-pianoroll {
+    grid-area: 4 / 2 / 5 / 12; }
+
+.atalanta-notation-viz-pianoroll {
+  /*	display: none;*/
+  grid-area: 4 / 2 / 5 / 12;
+  overflow: hidden; }
 
 /* NEUTRAL */
 /* COOL */
