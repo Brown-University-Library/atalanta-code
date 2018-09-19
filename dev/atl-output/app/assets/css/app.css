@@ -2240,3 +2240,15 @@ button.lity-close {
   /* mobile phones are too small for a side by side view */
   ._sidenav {
     display: none; } }
+
+#emblem-data h1.title span.subst span.add {
+  margin-right: -8px; }
+
+.section__discourse {
+  margin-bottom: -3px; }
+
+.subnav li.subnav__views--single, .subnav li.subnav__views--double {
+  right: calc(50vw - 7rem); }
+
+.translation, .original {
+  margin-top: 5rem; }
