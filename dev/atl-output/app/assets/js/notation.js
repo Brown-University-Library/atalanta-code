@@ -491,14 +491,13 @@
         let musicPageA, musicPageB, SVGa, SVGb, firstSVG, secondSVG, heightSVGa, heightSVGb, widthSVGa, widthSVGb, scaleHeightSVGa, scaleWidthSVGa, scaleHeightSVGb, scaleWidthSVGb;
         musicPageA = '.music-page:nth-of-type(1)'; // music page element 1
         musicPageB = '.music-page:nth-of-type(2)'; // music page element 2
-        SVGa = '.music-pages:nth-child(1) > svg'; // music SVG 1
-        SVGb = '.music-pages:nth-child(2) > svg'; // music SVG 2
-        // $(SVGa).addClass('music-test');
-        // $(SVGb).addClass('music-test');
-        firstSVG = document.querySelector(SVGa);
-        secondSVG = document.querySelector(SVGb);
+        SVGa = '.music-page:nth-of-type(1) > svg'; // music SVG 1
+        SVGb = '.music-page:nth-of-type(2) > svg'; // music SVG 2
+        console.log("the first music SVG is " + SVGa);
         heightSVGa = $(firstSVG).attr('height'); // get SVG 1 height attribute
+        // console.log(heightSVGa);
         heightSVGb = $(secondSVG).attr('height'); // get SVG 2 height attribute
+        // console.log(heightSVGb);
         widthSVGa = $(firstSVG).attr('width'); // get SVG 1 width attribute (may not need)
         widthSVGb = $(secondSVG).attr('width'); // get SVG 2 width attribute (may not need)
         // console.log("my first SVG height is " + heightSVGa + " and width is " + widthSVGa);

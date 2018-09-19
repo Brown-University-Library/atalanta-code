@@ -2008,12 +2008,46 @@ body {
     background-color: blue;
     background: no-repeat;
     background-size: contain;
+    display: grid;
     grid-area: 3 / 1 / 4 / 13;
     /* will not work unless the page refreshes when comparative is selected ??? */
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
     overflow: hidden; }
   .section__music ._music .ata-music .ata-viz-pianoroll {
     grid-area: 4 / 2 / 5 / 12;
     overflow: hidden; }
+
+.ata-viz-cmn .music-pages .music-page {
+  text-align: center;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  overflow: hidden;
+  width: 100%;
+  /* where am I overwriting this from??? */ }
+
+.music-page > svg {
+  float: left;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0; }
+
+.music-pages {
+  display: grid;
+  grid-area: 1 / 1 / 2 / 13;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto; }
+
+.music-page:nth-of-type(1) {
+  grid-area: 1 / 1 / 2 / 13;
+  outline: 10px solid red;
+  background-color: orange; }
+
+.music-page:nth-of-type(2) {
+  grid-area: 2 / 1 / 3 / 13;
+  outline: 10px solid purple;
+  background-color: pink; }
 
 .lity-hidden ._topnav {
   z-index: 10; }
