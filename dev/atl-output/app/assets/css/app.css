@@ -1977,7 +1977,6 @@ body {
   grid-template-rows: auto; }
 
 .section__music ._music .ata-music {
-  outline: 5px solid orange;
   display: grid;
   grid-area: 1 / 1 / 2 / 13;
   grid-template-columns: repeat(12, 1fr);
@@ -2001,7 +2000,7 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    grid-area: 1 / 2 / 2 / 10;
+    grid-area: 1 / 2 / 2 / 12;
     z-index: 10;
     /* music page SVG overlaps with transport controls */ }
   .section__music ._music .ata-music .ata-viz-cmn {
@@ -2017,6 +2016,11 @@ body {
   .section__music ._music .ata-music .ata-viz-pianoroll {
     grid-area: 4 / 2 / 5 / 12;
     overflow: hidden; }
+
+.ata-viz-pianoroll.modal {
+  /* the lity modal takes the element out of the document flow while active */
+  padding: 4rem 0rem;
+  overflow: scroll; }
 
 .ata-viz-cmn .music-pages .music-page {
   text-align: center;
@@ -2037,24 +2041,23 @@ body {
   display: grid;
   grid-area: 1 / 1 / 2 / 13;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto; }
+  grid-template-rows: auto;
+  padding-bottom: 6rem; }
 
 .music-page:nth-of-type(1) {
   grid-area: 1 / 1 / 2 / 13;
-  outline: 10px solid red;
-  background-color: orange; }
+  margin-top: -8rem; }
 
 .music-page:nth-of-type(2) {
-  grid-area: 2 / 1 / 3 / 13;
-  outline: 10px solid purple;
-  background-color: pink; }
+  grid-area: 2 / 1 / 3 / 13; }
 
 .lity-hidden ._topnav {
-  z-index: 10; }
+  display: none;
+  /*	z-index: 1;*/ }
 
 button.lity-close {
-  top: 5.5rem;
-  right: 3rem; }
+  /*	top: 5.5rem;
+	right: 3rem;*/ }
 
 .lity-container {
   min-width: 100vw; }
@@ -2062,15 +2065,19 @@ button.lity-close {
 #visualize {
   padding: 3rem 0; }
 
-.atalanta-notation__switch {
-  grid-area: 1 / 10 / 2 / 13;
-  outline: 5px solid black;
-  font-size: 64px; }
-
 .atalanta-notation__switch a {
-  /*	width: 100%;*/
-  /*	height: 100%;*/
-  background-color: pink; }
+  width: 14rem;
+  height: 3rem;
+  padding: .5rem 3rem;
+  background-color: transparent;
+  border: 6px solid black;
+  border-radius: 10px;
+  color: #222;
+  font-size: 1.5rem; }
+
+.atalanta-notation__switch a:hover {
+  background-color: #ffcd61;
+  color: #000; }
 
 .ata-music .transport button {
   background-size: contain;
@@ -2105,6 +2112,12 @@ button.lity-close {
 .ata-music .transport .atalanta-notation-stop {
   height: 7rem;
   width: 7rem; }
+
+.ata-viz-cmn svg tspan {
+  /* WHAT IS THIS??? */
+  font-family: sans-serif !important;
+  font-size: 18rem;
+  /* ??? This is only to adjust spacing for overlapping verse */ }
 
 /* VENDOR SPECIFIC STYLES */
 @-moz-document url-prefix() {

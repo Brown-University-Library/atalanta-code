@@ -494,6 +494,8 @@
         SVGa = '.music-page:nth-of-type(1) > svg'; // music SVG 1
         SVGb = '.music-page:nth-of-type(2) > svg'; // music SVG 2
         console.log("the first music SVG is " + SVGa);
+        firstSVG = document.querySelector(SVGa);
+        secondSVG = document.querySelector(SVGb);
         heightSVGa = $(firstSVG).attr('height'); // get SVG 1 height attribute
         // console.log(heightSVGa);
         heightSVGb = $(secondSVG).attr('height'); // get SVG 2 height attribute
@@ -512,6 +514,9 @@
         scaleWidthSVGb = widthSVGb * smallestScale; // get scaled width of SVG 2
         // console.log("my scaled SVG a height is " + scaleHeightSVGa);
         // console.log("my scaled SVG a width is " + scaleWidthSVGa);
+        var musicPageAHeight = $(musicPageA).attr('height');
+        console.log("the height of music-page A div is " + musicPageAHeight);
+        console.log("the height of the SVG A element is " + scaleHeightSVGa);
         $(musicPageA).css("height", scaleHeightSVGa + "px"); // update height of music page element 1 to match scaled SVG 1 height
         $(musicPageB).css("height", scaleHeightSVGb + "px"); // update height of music page element 2 to match scaled SVG 2 height
         // firstSVG.setAttribute("viewBox", "0 0 " + scaleWidthSVGa + " " + scaleHeightSVGa);
