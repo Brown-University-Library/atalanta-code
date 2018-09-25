@@ -1,8 +1,10 @@
 $(function () {
 	var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
 	var startPage // the number of first page of current emblem
-	var pageTiles = "../data/json/page-view.json"; // file path to page view dzi files
-	var bookTiles = "../data/json/book-view.json"; // file path to book view dzi files
+	// var pageTiles = "../data/json/page-view.json"; // file path to page view dzi files
+	// var bookTiles = "../data/json/book-view.json"; // file path to book view dzi files
+	var pageTiles = "../data/json/pageView.json"; // file path to page view dzi files
+	var bookTiles = "../data/json/bookView.json"; // file path to book view dzi files
 	var pageView = $.getJSON(pageTiles, function(myJSON) { // get pageView.json file
 		pageView = pageView.responseJSON; // get array of page view URLS
 	})
@@ -29,6 +31,7 @@ $(function () {
 			animationTime: 1.5, /* smoother zooming with easing */
 			sequenceMode: true, /* group an array of images */
 			showReferenceStrip: false, /* thumbnails */
+			// referenceStripScroll: 'vertical',
 			showNavigator: false, /* mini map */
 			toolbar: "openseadragon-wrapper",
 			zoomInButton: "zoom-in",
@@ -39,5 +42,16 @@ $(function () {
 			nextButton: "next"
 		});
 		console.log(viewer);
+		
+		// var pageIndex = this.pageIndex - (this.mode === 'book' ? 2 : 1);
+		// 	if (this.mode === 'book')
 	});
 });
+
+
+
+// frontispiece = 9
+// epigram = 10
+// dedication = 11 - 13
+// preface = 14 - 19
+// emblem 1 = 20
