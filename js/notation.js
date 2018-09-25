@@ -22,15 +22,18 @@
 
   'use strict';
   
-  // Constants
-  
-  let MAIN_CLASS_NAME = 'atalanta-notation',
-      VIZ_CLASS_NAME = 'atalanta-notation-viz',
-      CMN_VIZ_CLASS_NAME = VIZ_CLASS_NAME + '-cmn',
-      PIANO_ROLL_VIZ_CLASS_NAME = VIZ_CLASS_NAME + '-pianoroll',
-      AUDIO_VIZ_CLASS_NAME = VIZ_CLASS_NAME + '-audio',
+  // GLOBAL CONSTANTS
+  // TODO - should be const
+
+  let MAIN_CLASS_NAME = 'ata-music',
+      VIZ_CLASS_NAMES = {
+        CMN: 'ata-viz-cmn',
+        PIANO_ROLL: 'ata-viz-pianoroll',
+        AUDIO: 'ata-viz-audio'
+      },
       AUDIO_VIZ_MP3_ATTR_NAME = 'data-mp3',
       AUDIO_VIZ_TEMPO_ATTR_NAME = 'data-tempo',
+      AUDIO_VIZ_TRACK_CLASSNAME = 'ata-audio-track',
       VEROVIO_OPTIONS = {
         pageHeight: 2000,
         pageWidth: 2000,
@@ -42,13 +45,12 @@
       PIANO_ROLL_OPTIONS = {
         barHeight: 5,
         pitchScale: 5
-      },
-      TEMPO = 56; // Should be read from DOM
+      };
 
   // GLOBALS
   
   var audioContext;
-  
+
   // UTILITY FUNCTIONS
 
   // Workaround for Verovio not reading MEI tempo
@@ -80,6 +82,7 @@
     //  indicated by the tempo attribute in the markup
     // THIS DOESN'T SEEM TO WORK
     
+    /*
     function setMeiTempo(meiData) {
       
       // Get tempo from child of main container 
@@ -97,6 +100,7 @@
       return meiData.replace(/\s+midi.bpm="[^"]"/g, '')
                     .replace(/<scoreDef\s+/, '<scoreDef midi.bpm="' + tempo + '" ');
     }
+    */
     
     // Create verovio toolkit object
 
@@ -119,6 +123,7 @@
 
             // verovioToolkit.loadData(setMeiTempo(meiData)); 
             // COMMENTED OUT ABOVE B/C VEROVIO DOESN'T SEEM TO BE READING THE TEMPO FROM THE MEI
+
             verovioToolkit.loadData(meiData);
             
             // Convert to MIDI to get timing info
@@ -152,7 +157,7 @@
     
     function init() {
       let meiFileURL = containerNode.attr('data-mei');
-      createVerovioObject(meiFileURL);
+      createVerovioObject(meiFileURL); // TODO: this actually loads all the views, etc. Very confusing!
     }
     
     init();
@@ -171,26 +176,28 @@
     function createViews() {
       
       let views = [];
-      
-      containerNode.find('.' + VIZ_CLASS_NAME).each(function () {
+
+      const VIZ_SELECTOR = Object.keys(VIZ_CLASS_NAMES)
+        .map(vizClassName => '.' + VIZ_CLASS_NAMES[vizClassName])
+        .join(', ');
+
+      containerNode.find(VIZ_SELECTOR).each(function () {
         let viewContainer = $(this);
 
-        if (viewContainer.hasClass(CMN_VIZ_CLASS_NAME)) {
+        if (viewContainer.hasClass(VIZ_CLASS_NAMES.CMN)) {
           views.push(ViewCMN(viewContainer, verovioToolkit));
-        } else if (viewContainer.hasClass(AUDIO_VIZ_CLASS_NAME)) {
+        } else if (viewContainer.hasClass(VIZ_CLASS_NAMES.AUDIO)) {
           views.push(ViewAudio(viewContainer));
-        } else if (viewContainer.hasClass(PIANO_ROLL_VIZ_CLASS_NAME)) {
+        } else if (viewContainer.hasClass(VIZ_CLASS_NAMES.PIANO_ROLL)) {
           views.push(ViewPianoRoll(viewContainer, verovioToolkit));
         } // ADD MORE VIEWS HERE AS THEY ARE CREATED
       });
-      
+
       return views;
     }
     
     function renderAllViews() {
-      views.forEach(function(view) {
-        view.render();
-      });
+      views.forEach(view => view.render());
     }
 
     function updateAllViews(timeInMilliseconds) {
@@ -344,17 +351,18 @@
   // OBJECT: CMN VIEW
   
   function ViewCMN(viewContainer, verovioToolkit) {
-/*
-                pageHeight = $(document).height() * 100 / zoom ;
-                pageWidth = $(window).width() * 100 / zoom ;
-                options = {
-                            pageHeight: pageHeight,
-                            pageWidth: pageWidth,
-                            scale: zoom,
-                            adjustPageHeight: true
-                        };
-                vrvToolkit.setOptions(options);
-  */  
+
+  /*
+    pageHeight = $(document).height() * 100 / zoom ;
+    pageWidth = $(window).width() * 100 / zoom ;
+    options = {
+                pageHeight: pageHeight,
+                pageWidth: pageWidth,
+                scale: zoom,
+                adjustPageHeight: true
+            };
+    vrvToolkit.setOptions(options);
+  */
     
     let zoom = 30,
         pageHeight = viewContainer.height() * 100 / zoom,
@@ -435,6 +443,7 @@
           // scale = (pageContainerWidth / svgWidth);
           scale = (pageContainerWidth / svgWidth)*1.15; // (CB) I made the scale slightly larger so I can make the verse text larger
 
+
         if (scale < smallestScale) smallestScale = scale;
 
         svgCodeForPages.push(pageSvgCode);
@@ -443,16 +452,23 @@
       // Add a transform property to the SVG to scale it to fit the containing div
       //  then attach page div to DOM
 
-      // pageContainers.forEach((pageContainer, pageIndex) => { // (CB) This results in very different layout in Chrome vs. Safari/Firefox
+      pageContainers.forEach((pageContainer, pageIndex) => {
 
-      //   let scaledPageSvgCode, svgHeight;
-      //     console.log("initial svg height is " + svgHeight);
-      //   scaledPageSvgCode = svgCodeForPages[pageIndex].replace(
-      //     /^<svg\s+/, 
-      //     `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
-      //   );
+        let scaledPageSvgCode, svgHeight;
 
-      //CB TEST
+        scaledPageSvgCode = svgCodeForPages[pageIndex].replace(
+          /^<svg\s+/, 
+          `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
+        );
+
+        svgHeight = (heightRE.exec(scaledPageSvgCode))[1] * smallestScale;
+
+        pageContainer.style.height = svgHeight;
+        pageContainer.innerHTML = scaledPageSvgCode;
+        scaleMusicPageElements(); // (CB) Test
+      });
+
+            //(CB) TEST
         pageContainers.forEach((pageContainer, pageIndex) => { // (CB) This results in a very different layout in Chrome vs. Safari/Firefox
 
         let scaledPageSvgCode, svgHeight;
@@ -473,14 +489,17 @@
 
       function scaleMusicPageElements() { // (CB) resize music page elements to match SVG heights
         let musicPageA, musicPageB, SVGa, SVGb, firstSVG, secondSVG, heightSVGa, heightSVGb, widthSVGa, widthSVGb, scaleHeightSVGa, scaleWidthSVGa, scaleHeightSVGb, scaleWidthSVGb;
-        musicPageA = '.music-page:nth-child(1)'; // music page element 1
-        musicPageB = '.music-page:nth-child(2)'; // music page element 2
-        SVGa = '.music-page:nth-child(1) svg'; // music SVG 1
-        SVGb = '.music-page:nth-child(2) svg'; // music SVG 2
+        musicPageA = '.music-page:nth-of-type(1)'; // music page element 1
+        musicPageB = '.music-page:nth-of-type(2)'; // music page element 2
+        SVGa = '.music-page:nth-of-type(1) > svg'; // music SVG 1
+        SVGb = '.music-page:nth-of-type(2) > svg'; // music SVG 2
+        console.log("the first music SVG is " + SVGa);
         firstSVG = document.querySelector(SVGa);
         secondSVG = document.querySelector(SVGb);
         heightSVGa = $(firstSVG).attr('height'); // get SVG 1 height attribute
+        // console.log(heightSVGa);
         heightSVGb = $(secondSVG).attr('height'); // get SVG 2 height attribute
+        // console.log(heightSVGb);
         widthSVGa = $(firstSVG).attr('width'); // get SVG 1 width attribute (may not need)
         widthSVGb = $(secondSVG).attr('width'); // get SVG 2 width attribute (may not need)
         // console.log("my first SVG height is " + heightSVGa + " and width is " + widthSVGa);
@@ -495,6 +514,9 @@
         scaleWidthSVGb = widthSVGb * smallestScale; // get scaled width of SVG 2
         // console.log("my scaled SVG a height is " + scaleHeightSVGa);
         // console.log("my scaled SVG a width is " + scaleWidthSVGa);
+        var musicPageAHeight = $(musicPageA).attr('height');
+        console.log("the height of music-page A div is " + musicPageAHeight);
+        console.log("the height of the SVG A element is " + scaleHeightSVGa);
         $(musicPageA).css("height", scaleHeightSVGa + "px"); // update height of music page element 1 to match scaled SVG 1 height
         $(musicPageB).css("height", scaleHeightSVGb + "px"); // update height of music page element 2 to match scaled SVG 2 height
         // firstSVG.setAttribute("viewBox", "0 0 " + scaleWidthSVGa + " " + scaleHeightSVGa);
@@ -614,14 +636,44 @@
     
     // Given the attribute string, returns an array-of-arrays
     //  [tracks][voices]
-    
-    function getMp3Filenames(mp3FilenameString) {
+    // DEFUNCT
+
+    function getMp3Filenames_DEFUNCT(mp3FilenameString) {
       
       return mp3FilenameString.split(';') // This should be a regex ...
                               .reduce(function (acc, x) {
                                 acc.push(x.split(','))
                                 return acc;
                               }, []);
+    }
+
+    function getTrackInfo(containerNode) {
+
+      let trackInfo = [];
+
+      const trackDomElements = Array.from(
+        containerNode.getElementsByClassName(AUDIO_VIZ_TRACK_CLASSNAME)
+      );
+
+      trackDomElements.forEach(trackNode => {
+        let data = trackNode.dataset;
+        trackInfo.push([
+          {
+            type: 'main',
+            filename: data.mp3,
+            pan: parseFloat(data.pan) || 0,
+            gain: parseFloat(data.gain) || 1,
+          },
+          {
+            type: 'reverb',
+            filename: data.reverbMp3,
+            pan: 0,
+            gain: parseFloat(data.reverbGain) || 1,
+          }
+        ]);
+      });
+      
+      return trackInfo;
     }
     
     function onMuteChange(muteStatusArray) {
@@ -633,15 +685,14 @@
     }
     
     function init() {
-      
-      // Load filenames for MP3 files from attribute
-      
-      let allTrackFilenames = getMp3Filenames(viewContainer.attr(AUDIO_VIZ_MP3_ATTR_NAME));
 
-      // Create objects for each track (main voice + reverb)
-      // TODO: implement reverb
-      
-      tracks = allTrackFilenames.map(getViewAudioTrack);
+      // Get track info from markup (MP3 filename, gain, pan, etc.)
+
+      let tracksInfo = getTrackInfo(viewContainer[0]);      
+
+      // Using tracksInfo, create track objects
+
+      tracks = tracksInfo.map(getViewAudioTrack);
       console.log(tracks);
       
       // Track object: volume, pan, mute, play, pause, jumpTo
@@ -663,37 +714,49 @@
   // The track object is responsible for playing and stopping an
   //  audio file for a single vocal part AND its reverb.
   // It also mutes when told
+  // The AudioTrack object is only owned and used by the Audio View
   
-  function getViewAudioTrack(trackFilenames) {
+  function getViewAudioTrack(trackInfo) {
 
-    let bufferList, 
-        bufferLoader, 
-        sources,
-        isMuted = false,
-        gainNode = null;
+   console.log("TRACKINFO");
+   console.log(trackInfo);
+
+    let sounds = { main: {}, reverb: {} }; // Initialized in init()
+
+    let bufferList, // A list of audio buffers (i.e. sound files)
+        sources, // A list of sound sources which are hooked up to audio graphs
+        gainNodes = [], // Array of gain nodes (main and reverb)
+        isMuted = false;
+
+    // play() takes the buffers (audio sources) and 
+    //  creates an audio graph out of each
+    // This is a method common to all Views
+    // The start time in MS
 
     function play(startTimeInMilliseconds) {
       
       // Take each buffer and connect to audio output
       
-      sources = bufferList.map((buffer) => {
+      sources = bufferList.map((buffer, index) => {
         
         // Get buffer source node
         
         let source = audioContext.createBufferSource();
         source.buffer = buffer;
-        
-        // Get gain node
-        
-        if (!audioContext.createGain)
-          audioContext.createGain = audioContext.createGainNode;
-        
-        gainNode = audioContext.createGain();
+
+        let gainNode = audioContext.createGain();
+        gainNode.gain.value = trackInfo[index].gain;
+        gainNodes.push(gainNode);
+
+        let panNode = audioContext.createStereoPanner();
+        panNode.pan.value = trackInfo[index].pan;
         
         // Connect source node to gain node & gain to output
         
         source.connect(gainNode);
-        gainNode.connect(audioContext.destination);
+        gainNode.connect(panNode);
+        panNode.connect(audioContext.destination)
+        // gainNode.connect(audioContext.destination);
         
         return source;
       });
@@ -728,16 +791,21 @@
       sources.forEach(source => source.stop(0));
     }
 
-    function finishedLoading(buffers) { 
-      bufferList = buffers;
-      console.log('Loaded audio files:' + trackFilenames);
-      // play(); // TEMP -- for testing
-    }
-    
     function setGain(gain) {
       console.log("Setting gain to " + gain);
-      gainNode.gain.value = gain * gain;
-    }    
+      gainNodes.forEach(
+        gainNode => gainNode.gain.value = gain * gain
+      );
+      // gainNode.gain.value = gain * gain;
+    }
+    
+    // Won't ever change in mid-play - so maybe 
+    //  not necessary as a stand-alone function
+
+    function setPan(pan) {
+      console.log("Setting pan to " + pan);
+      // panNode.gain.value = pan; THIS NEEDS TO BE IMPLEMENTED
+    }
     
     function mute(muteStatus) {
       isMuted = (muteStatus);
@@ -745,13 +813,45 @@
       setGain(muteStatus ? 0 : 1);
     }
 
-    function init() {
-      // Load audio
-      bufferLoader = new AudioLoader(audioContext, trackFilenames, finishedLoading);
-      bufferLoader.load();        
+    function init2(trackInfo) {
+
+      if (trackInfo.mainFilename !== undefined) {
+        sounds.main = {
+
+        }
+      }
+
+
+
+      sounds.reverb = {
+
+      }
     }
 
-    init();
+    function init(trackInfo) {
+
+      // Create list of filenames for audio files (can't be undefined)
+
+      let trackFilenames = trackInfo.map(track => track.filename);
+
+      //let trackFilenames = [trackInfo.mainFilename, trackInfo.reverbFilename].filter(
+      //  filename => filename !== undefined
+      //);
+
+      function onFinishedLoading(buffers) { 
+        bufferList = buffers;
+        console.log('Loaded audio files:' + trackFilenames);
+      }
+
+      // Load audio and call onFinishedLoading()
+
+      getAudioFromFilenames(audioContext, trackFilenames, onFinishedLoading);
+
+      //let bufferLoader = new AudioLoader(audioContext, trackFilenames, onFinishedLoading);
+      //bufferLoader.load();        
+    }
+
+    init(trackInfo);
 
     return {
       play: play,
@@ -760,26 +860,128 @@
     }
   }
   
+  // BUFFERLOADER 2
+
+
+  function getAudioFromFilenames(audioContext, audioFilenames, onFinishedLoading) {
+
+    let loadedCount = 0,
+        bufferList = [];
+
+    function endIfAllURLsResolved() {
+      loadedCount++;
+      if (loadedCount === audioFilenames.length - 1) {
+        onFinishedLoading(bufferList);
+      }
+    }
+
+    // Decode a file buffer into audio
+
+    function convertToAudioData(fileContents, bufferIndex) {
+
+      // If the decoding succeeds
+
+      function onDecodingSuccess(buffer) {
+        if (buffer) {
+          bufferList[bufferIndex] = buffer;
+        } else {
+          onDecodingError('unknown');
+        }
+
+        endIfAllURLsResolved();
+      }
+
+      // If the decoding doesn't succeed
+
+      function onDecodingError(error) {
+        console.error('decodeAudioData error', error);
+      }
+
+      // Do the decoding
+
+      audioContext.decodeAudioData(fileContents, onDecodingSuccess, onDecodingError);
+    }
+
+    // Given a filename, do an HTTP request for the (binary) file contents 
+    //  and then pass it to decodeAudioData() to convert it into audio data
+
+    function loadBuffer(audioFilename, bufferIndex) {
+    
+      let request = new XMLHttpRequest();
+
+      request.open('GET', audioFilename, true);
+      request.responseType = 'arraybuffer';
+
+      request.onload = function () {
+        let fileContents = request.response;
+        convertToAudioData(fileContents, bufferIndex);
+      }
+
+      request.onerror = function() {
+        console.log('XHR error loading ' + audioFilename);
+      }
+
+      request.send();
+    }
+
+    // Save a null audio buffer
+
+    function loadNullBuffer(bufferIndex) {
+      bufferList[bufferIndex] = null;
+      endIfAllURLsResolved();
+    }
+
+    // Given a URL, resolve it
+
+    function resolveURL(audioFilename, bufferIndex) {
+      if (audioFilename !== undefined) {
+        loadBuffer(audioFilename, bufferIndex);
+      } else {
+        loadNullBuffer(bufferIndex);
+      }
+    }
+
+    // Resolve all URLs
+
+    audioFilenames.forEach(resolveURL);
+  }
+
+
   // OBJECT: BUFFERLOADER
   
-  // Loads an audio buffer
+  // Given an array of filenames, loads them into buffers and calls
+  //   onFinishedLoading(bufferList)
   // Code from https://www.html5rocks.com/en/tutorials/webaudio/intro/
+  // TODO: rewrite this
   
-  function AudioLoader(context, urlList, callback) {
-    this.context = context;
-    this.urlList = urlList;
-    this.onload = callback;
+  function AudioLoader(audioContext, trackFilenames, onFinishedLoading) {
+    this.context = audioContext;
+    this.urlList = trackFilenames;
+    this.onload = onFinishedLoading;
     this.bufferList = new Array();
     this.loadCount = 0;
   }
 
   AudioLoader.prototype.loadBuffer = function(url, index) {
     
+    // If filename is undefined, set this buffer entry to null
+    // (which will represent audio silence -- 
+    // see https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/buffer)
+
+    if (url === undefined) {
+      this.bufferList.push(null);
+
+      // If the last URL, call the callback
+
+      if (++loader.loadCount == loader.urlList.length)
+        loader.onload(loader.bufferList);
+    }
+
     // Load buffer asynchronously
     
     var request = new XMLHttpRequest();
-    request.open("GET", url, true);
-    request.responseType = "arraybuffer";
+    request.open('GET', url, true);
+    request.responseType = 'arraybuffer';
 
     var loader = this;
 
@@ -791,10 +993,13 @@
         request.response,
         function(buffer) {
           if (!buffer) {
-            alert('error decoding file data: ' + url);
+            console.log('Error decoding file data: ' + url);
             return;
           }
           loader.bufferList[index] = buffer;
+
+          // If the last URL, call the callback
+
           if (++loader.loadCount == loader.urlList.length)
             loader.onload(loader.bufferList);
         },
@@ -810,6 +1015,8 @@
 
     request.send();
   }
+
+  // Load all the URLs
 
   AudioLoader.prototype.load = function() {
     for (var i = 0; i < this.urlList.length; ++i)
@@ -854,7 +1061,7 @@
   }
   
   
-  // OBJECT: Controller
+  // OBJECT: Controller (transport UI)
   
   function initControllers(containerNode, model, meiData) {
 
@@ -866,19 +1073,19 @@
     let playButton = document.createElement('button'),
       pauseButton =  document.createElement('button');
 
-    playButton.classList.add('atalanta-notation-start');
-    pauseButton.classList.add('atalanta-notation-stop');
+    playButton.classList.add('atalanta-notation-start'); // TODO: should not be a magic value
+    pauseButton.classList.add('atalanta-notation-stop'); // TODO: should not be a magic value
 
     playButton.onclick = function () {
       model.play();
-      playButton.classList.add('playing');
-      pauseButton.classList.add('playing');
+      playButton.classList.add('playing'); // TODO: should not be a magic value
+      pauseButton.classList.add('playing'); // TODO: should not be a magic value
     }
 
     pauseButton.onclick = function () {
       model.stop(); // TODO: not stop but pause
-      playButton.classList.remove('playing');
-      pauseButton.classList.remove('playing');
+      playButton.classList.remove('playing'); // TODO: should not be a magic value
+      pauseButton.classList.remove('playing'); // TODO: should not be a magic value
     }
     
     // Mute buttons
@@ -887,7 +1094,7 @@
     
     // Get mute button text from MEI
 
-    const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gi;
+    const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gis;
     let staffDefTxt, muteButtonTexts = [];
 
     while (staffDefTxt = voiceNameRE.exec(meiData)) {
@@ -905,22 +1112,44 @@
 
     muteButtons.forEach(muteButton => {
       muteButton.onclick = function() {
-        this.classList.toggle('mute');
-        let muteStatus = muteButtons.map(mb => mb.classList.contains('mute'));
+        this.classList.toggle('mute'); // TODO: should not be a magic value
+        let muteStatus = muteButtons.map(mb => mb.classList.contains('mute')); // TODO: should not be a magic value
         model.setMute(muteStatus);
       };
     })
 
     let muteButtonContainer = document.createElement('div');
-    muteButtonContainer.classList.add('track-mute');
+    muteButtonContainer.classList.add('track-mute'); // TODO: should not be a magic value
     muteButtons.forEach(muteButton => muteButtonContainer.appendChild(muteButton));
 
     // Attach buttons to DOM
     //  TODO: this shouldn't be here in this function - it should return a node
 
     let transportInterface = document.createElement('div');
-    transportInterface.classList.add('transport');
+    transportInterface.classList.add('transport'); // TODO: should not be a magic value
     [playButton, pauseButton, muteButtonContainer].forEach(x => transportInterface.appendChild(x));
+
+    // Popup button for modal
+    // TODO: THIS IS A KLUDGE -- FIX ME
+
+    let containerNodeAsDOM = containerNode[0],
+      modalTargets = containerNodeAsDOM.querySelectorAll('.modal');
+
+    if (modalTargets.length > 0) {
+
+      let target = modalTargets[0],
+       targetId = 'x' + Math.floor(Math.random() * 1000);
+
+      target.setAttribute('id', targetId);
+
+// <div class="atalanta-notation__switch"><a href="#visualize" data-lity>Visualize</a></div>
+
+      let modalViewLink = document.createElement('div');
+      modalViewLink.classList.add('atalanta-notation__switch'); // TODO: should not be a magic value
+      modalViewLink.innerHTML = `<a href="#${targetId}" data-lity>Visualize</a>`; // TODO: should not be a magic value
+      transportInterface.appendChild(modalViewLink);
+    }
+
     containerNode.prepend(transportInterface); // TODO: Don't need jQuery here ...
   }
   
@@ -960,14 +1189,33 @@
   
   function initWhenPageLoaded() {
     
+    // TODO: COMPLETELY TEMP - move to audio view initialization code
+    // TODO: This area assumes the possibility of multiple music
+    //  components on the page, each of which could have their own tempo.
+    //  BUT This code assumes only one tempo -- NEED TO CHANGE
+
+    window.TEMPO = parseInt(
+      document.getElementsByClassName(VIZ_CLASS_NAMES.AUDIO)[0]
+      .getAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME)
+    );
+
     // Check for audio players in the markup.
     //  If exists, create a shared AudioContext
     //  (only need one for whole page)
     
-    if ($('.' + AUDIO_VIZ_CLASS_NAME).length)
+    if ($('.' + VIZ_CLASS_NAMES.AUDIO).length) {
       audioContext = getAudioContext();
+
+      if (!audioContext.createGain) {
+        audioContext.createGain = audioContext.createGainNode;
+      }
+    }
+
+    // Look for modals and add lity-hide class
+
+    $('.modal').addClass('lity-hide'); // TODO: No magic values!!
     
-    // Find components and initialize each in turn
+    // Find Components and initialize each in turn
     
     $('.' + MAIN_CLASS_NAME).each(createMusicComponent);
   }
@@ -975,7 +1223,7 @@
   // MAIN, BEFORE PAGE LOAD
   
   function init() {
-    
+
     // ALSO REMEMBER TO LOAD MP3s RIGHT AWAY (you could also load MEIs as well)
     // TODO
     

@@ -21,9 +21,6 @@ main.home {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
-  em {
-  	font-style: oblique;
-  }
   .hero {
     background-color: $orange-red;
     color: #fff;
@@ -43,7 +40,7 @@ main.home {
     padding-bottom: 20vh;
   }
   .hero-text h1 {
-    font-family: Garamond, Georgia, serif;
+    font-family: $secondary-display-font_emblem;
     font-size: 7rem;
     height: auto;
     line-height: 7rem;
@@ -103,9 +100,11 @@ main.home {
   }
   ul li span {
     color: #fff;
-    font-size: .875rem;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: .09375rem;
     line-height: 1rem;
-    margin-top: .25rem;
+    margin-top: .375rem;
   }
   .intro-text {
     display: grid;
@@ -130,5 +129,27 @@ main.home {
   }
   .intro-text a:hover {
   	color: $orange-red_darker;
+  }
+}
+
+/* BREAKPOINTS */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  main.home .hero-text {
+    transform: translate(6vw, 0);
+    padding-bottom: 20vh;
+  }
+  main.home .hero-text h1 {
+    font-size: 3rem;
+    line-height: 3.25rem;
+    width: 130%;
+  }
+  main.home .hero-text h5 {
+    width: 80%;
+  }
+  main.home .intro-text p {
+    grid-area: 1 / 2 / 2 / 12;
+  }
+  main.home .intro-text a {
+    grid-area: 2 / 2 / 3 / 12;
   }
 }
