@@ -22,8 +22,33 @@
 
 }
 .facsimile--full.grid--half #tools {
-	top: 93vh;
+	background-color: transparent;
+	text-align: center;
+	top: 45vh;
+	#zoom-in {
+		display: none !important;
+	}
+	#zoom-out {
+		display: none !important;
+	}
+	#previous {
+		background-color: $black_transparent;
+/*		outline: 5px solid red;*/
+		padding: .75rem;
+		position: absolute !important;
+/*		left: -48vw !important;*/
+		left: -46vw !important;
+		min-width: 3rem;
+	}
+	#next {
+		background-color: $black_transparent;
+		padding: .75rem;
+		position: absolute !important;
+		right: 1vw !important;
+		min-width: 3rem;
+	}
 }
+
 #tools a {
 	color: $aqua;
 	padding: 0 .25rem;

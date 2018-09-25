@@ -1,5 +1,6 @@
 /* NEUTRAL */
 $black: #222;
+$black_transparent: hsla(0, 0%, 13%, .4);
 $white: #fff;
 $gray: #282828;
 $dark-gray: #777;
@@ -20,7 +21,7 @@ $mauve: #64283D;
 /* PRODUCTION */
 $blue-light: #DAE4EC;
 $gray-dark: #333333;
-$gray-dark_transparent: hsla(0, 0%, 20%, .99);
+$gray-dark_transparent: hsla(0, 0%, 20%, .97);
 $gray-medium: #989898;
 $gray-light: #F1F1F1;
 $orange-red: #DC4929;
@@ -30,3 +31,4 @@ $orange-yellow_brighter: hsla(41, 100%, 69%, 1);
 $text-body: #4C4C4C;
 $royal-blue: hsla(250, 100%, 15%, .90);
 $aqua: #3DF2BF;
+$aqua_darker: hsla(163, 87%, 30%, 1);

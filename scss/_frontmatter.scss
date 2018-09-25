@@ -2,8 +2,12 @@
 @import 'utilities';
 
 .frontmatter section {
-	font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
+	font-family: $body-font_emblem;
 	height: auto;
 	min-height: calc(100vh - 3.125rem); /* subtracts topnav height */
 	padding: 2rem;
 }
+/**.displayregioncontainer {
+	top: 200px;
+	outline: 20px solid orange;
+}*/
