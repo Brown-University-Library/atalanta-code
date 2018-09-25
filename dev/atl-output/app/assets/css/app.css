@@ -938,7 +938,8 @@ main.emblem-page {
 
 .section__discourse {
   grid-row-start: 5;
-  grid-row-end: 6; }
+  grid-row-end: 6;
+  margin-bottom: -3px; }
 
 .section__motto.panel--left, .section__epigram.panel--left, .section__discourse.panel--left {
   /* needs a better solution now that I'm using a background image ??? */
@@ -1826,7 +1827,6 @@ div.margin-note.line2 {
 .lity-hide {
   display: none; }
 
-/*@import 'music';*/
 body {
   /* background-color: #ddd; */
   padding: 3em; }
@@ -2241,16 +2241,3 @@ button.lity-close {
   /* mobile phones are too small for a side by side view */
   ._sidenav {
     display: none; } }
-
-#emblem-data h1.title span.subst span.add {
-  margin-right: -8px; }
-
-.section__discourse {
-  margin-bottom: -3px; }
-
-/*.subnav li.subnav__views--single, .subnav li.subnav__views--double {
-	right: calc(50vw - 7rem);
-}
-.translation, .original {
-	margin-top: 5rem;
-}*/

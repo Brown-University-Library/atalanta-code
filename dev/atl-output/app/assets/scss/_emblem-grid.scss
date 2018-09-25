@@ -82,7 +82,8 @@ main.emblem-page {
 }
 .section__discourse {
 	grid-row-start: 5;
-	grid-row-end: 6;	
+	grid-row-end: 6;
+	margin-bottom: -3px;
 }
 .section__motto.panel--left, .section__epigram.panel--left, .section__discourse.panel--left { /* needs a better solution now that I'm using a background image ??? */
 /*	border-right: 5px solid white;*/
