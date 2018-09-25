@@ -23,14 +23,17 @@
   'use strict';
   
   // GLOBAL CONSTANTS
-  
+  // TODO - should be const
+
   let MAIN_CLASS_NAME = 'ata-music',
-      VIZ_CLASS_NAME = 'ata-viz',
-      CMN_VIZ_CLASS_NAME = VIZ_CLASS_NAME + '-cmn',
-      PIANO_ROLL_VIZ_CLASS_NAME = VIZ_CLASS_NAME + '-pianoroll',
-      AUDIO_VIZ_CLASS_NAME = VIZ_CLASS_NAME + '-audio',
+      VIZ_CLASS_NAMES = {
+        CMN: 'ata-viz-cmn',
+        PIANO_ROLL: 'ata-viz-pianoroll',
+        AUDIO: 'ata-viz-audio'
+      },
       AUDIO_VIZ_MP3_ATTR_NAME = 'data-mp3',
       AUDIO_VIZ_TEMPO_ATTR_NAME = 'data-tempo',
+      AUDIO_VIZ_TRACK_CLASSNAME = 'ata-audio-track',
       VEROVIO_OPTIONS = {
         pageHeight: 2000,
         pageWidth: 2000,
@@ -42,8 +45,7 @@
       PIANO_ROLL_OPTIONS = {
         barHeight: 5,
         pitchScale: 5
-      },
-      TEMPO = 56; // TODO: Should be read from DOM
+      };
 
   // GLOBALS
   
@@ -80,6 +82,7 @@
     //  indicated by the tempo attribute in the markup
     // THIS DOESN'T SEEM TO WORK
     
+    /*
     function setMeiTempo(meiData) {
       
       // Get tempo from child of main container 
@@ -97,6 +100,7 @@
       return meiData.replace(/\s+midi.bpm="[^"]"/g, '')
                     .replace(/<scoreDef\s+/, '<scoreDef midi.bpm="' + tempo + '" ');
     }
+    */
     
     // Create verovio toolkit object
 
@@ -119,6 +123,7 @@
 
             // verovioToolkit.loadData(setMeiTempo(meiData)); 
             // COMMENTED OUT ABOVE B/C VEROVIO DOESN'T SEEM TO BE READING THE TEMPO FROM THE MEI
+
             verovioToolkit.loadData(meiData);
             
             // Convert to MIDI to get timing info
@@ -152,7 +157,7 @@
     
     function init() {
       let meiFileURL = containerNode.attr('data-mei');
-      createVerovioObject(meiFileURL);
+      createVerovioObject(meiFileURL); // TODO: this actually loads all the views, etc. Very confusing!
     }
     
     init();
@@ -171,26 +176,28 @@
     function createViews() {
       
       let views = [];
-      
-      containerNode.find('.' + VIZ_CLASS_NAME).each(function () {
+
+      const VIZ_SELECTOR = Object.keys(VIZ_CLASS_NAMES)
+        .map(vizClassName => '.' + VIZ_CLASS_NAMES[vizClassName])
+        .join(', ');
+
+      containerNode.find(VIZ_SELECTOR).each(function () {
         let viewContainer = $(this);
 
-        if (viewContainer.hasClass(CMN_VIZ_CLASS_NAME)) {
+        if (viewContainer.hasClass(VIZ_CLASS_NAMES.CMN)) {
           views.push(ViewCMN(viewContainer, verovioToolkit));
-        } else if (viewContainer.hasClass(AUDIO_VIZ_CLASS_NAME)) {
+        } else if (viewContainer.hasClass(VIZ_CLASS_NAMES.AUDIO)) {
           views.push(ViewAudio(viewContainer));
-        } else if (viewContainer.hasClass(PIANO_ROLL_VIZ_CLASS_NAME)) {
+        } else if (viewContainer.hasClass(VIZ_CLASS_NAMES.PIANO_ROLL)) {
           views.push(ViewPianoRoll(viewContainer, verovioToolkit));
         } // ADD MORE VIEWS HERE AS THEY ARE CREATED
       });
-      
+
       return views;
     }
     
     function renderAllViews() {
-      views.forEach(function(view) {
-        view.render();
-      });
+      views.forEach(view => view.render());
     }
 
     function updateAllViews(timeInMilliseconds) {
@@ -344,17 +351,18 @@
   // OBJECT: CMN VIEW
   
   function ViewCMN(viewContainer, verovioToolkit) {
-/*
-                pageHeight = $(document).height() * 100 / zoom ;
-                pageWidth = $(window).width() * 100 / zoom ;
-                options = {
-                            pageHeight: pageHeight,
-                            pageWidth: pageWidth,
-                            scale: zoom,
-                            adjustPageHeight: true
-                        };
-                vrvToolkit.setOptions(options);
-  */  
+
+  /*
+    pageHeight = $(document).height() * 100 / zoom ;
+    pageWidth = $(window).width() * 100 / zoom ;
+    options = {
+                pageHeight: pageHeight,
+                pageWidth: pageWidth,
+                scale: zoom,
+                adjustPageHeight: true
+            };
+    vrvToolkit.setOptions(options);
+  */
     
     let zoom = 30,
         pageHeight = viewContainer.height() * 100 / zoom,
@@ -585,7 +593,11 @@
 
       let trackInfo = [];
 
-      containerNode.querySelectorAll('.audio-track').forEach(trackNode => {
+      const trackDomElements = Array.from(
+        containerNode.getElementsByClassName(AUDIO_VIZ_TRACK_CLASSNAME)
+      );
+
+      trackDomElements.forEach(trackNode => {
         let data = trackNode.dataset;
         trackInfo.push([
           {
@@ -991,7 +1003,7 @@
   }
   
   
-  // OBJECT: Controller
+  // OBJECT: Controller (transport UI)
   
   function initControllers(containerNode, model, meiData) {
 
@@ -1003,19 +1015,19 @@
     let playButton = document.createElement('button'),
       pauseButton =  document.createElement('button');
 
-    playButton.classList.add('atalanta-notation-start');
-    pauseButton.classList.add('atalanta-notation-stop');
+    playButton.classList.add('atalanta-notation-start'); // TODO: should not be a magic value
+    pauseButton.classList.add('atalanta-notation-stop'); // TODO: should not be a magic value
 
     playButton.onclick = function () {
       model.play();
-      playButton.classList.add('playing');
-      pauseButton.classList.add('playing');
+      playButton.classList.add('playing'); // TODO: should not be a magic value
+      pauseButton.classList.add('playing'); // TODO: should not be a magic value
     }
 
     pauseButton.onclick = function () {
       model.stop(); // TODO: not stop but pause
-      playButton.classList.remove('playing');
-      pauseButton.classList.remove('playing');
+      playButton.classList.remove('playing'); // TODO: should not be a magic value
+      pauseButton.classList.remove('playing'); // TODO: should not be a magic value
     }
     
     // Mute buttons
@@ -1042,22 +1054,44 @@
 
     muteButtons.forEach(muteButton => {
       muteButton.onclick = function() {
-        this.classList.toggle('mute');
-        let muteStatus = muteButtons.map(mb => mb.classList.contains('mute'));
+        this.classList.toggle('mute'); // TODO: should not be a magic value
+        let muteStatus = muteButtons.map(mb => mb.classList.contains('mute')); // TODO: should not be a magic value
         model.setMute(muteStatus);
       };
     })
 
     let muteButtonContainer = document.createElement('div');
-    muteButtonContainer.classList.add('track-mute');
+    muteButtonContainer.classList.add('track-mute'); // TODO: should not be a magic value
     muteButtons.forEach(muteButton => muteButtonContainer.appendChild(muteButton));
 
     // Attach buttons to DOM
     //  TODO: this shouldn't be here in this function - it should return a node
 
     let transportInterface = document.createElement('div');
-    transportInterface.classList.add('transport');
+    transportInterface.classList.add('transport'); // TODO: should not be a magic value
     [playButton, pauseButton, muteButtonContainer].forEach(x => transportInterface.appendChild(x));
+
+    // Popup button for modal
+    // TODO: THIS IS A KLUDGE -- FIX ME
+
+    let containerNodeAsDOM = containerNode[0],
+      modalTargets = containerNodeAsDOM.querySelectorAll('.modal');
+
+    if (modalTargets.length > 0) {
+
+      let target = modalTargets[0],
+       targetId = 'x' + Math.floor(Math.random() * 1000);
+
+      target.setAttribute('id', targetId);
+
+// <div class="atalanta-notation__switch"><a href="#visualize" data-lity>Visualize</a></div>
+
+      let modalViewLink = document.createElement('div');
+      modalViewLink.classList.add('atalanta-notation__switch'); // TODO: should not be a magic value
+      modalViewLink.innerHTML = `<a href="#${targetId}" data-lity>Visualize</a>`; // TODO: should not be a magic value
+      transportInterface.appendChild(modalViewLink);
+    }
+
     containerNode.prepend(transportInterface); // TODO: Don't need jQuery here ...
   }
   
@@ -1097,19 +1131,33 @@
   
   function initWhenPageLoaded() {
     
+    // TODO: COMPLETELY TEMP - move to audio view initialization code
+    // TODO: This area assumes the possibility of multiple music
+    //  components on the page, each of which could have their own tempo.
+    //  BUT This code assumes only one tempo -- NEED TO CHANGE
+
+    window.TEMPO = parseInt(
+      document.getElementsByClassName(VIZ_CLASS_NAMES.AUDIO)[0]
+      .getAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME)
+    );
+
     // Check for audio players in the markup.
     //  If exists, create a shared AudioContext
     //  (only need one for whole page)
     
-    if ($('.' + AUDIO_VIZ_CLASS_NAME).length) {
+    if ($('.' + VIZ_CLASS_NAMES.AUDIO).length) {
       audioContext = getAudioContext();
 
       if (!audioContext.createGain) {
         audioContext.createGain = audioContext.createGainNode;
       }
     }
+
+    // Look for modals and add lity-hide class
+
+    $('.modal').addClass('lity-hide'); // TODO: No magic values!!
     
-    // Find components and initialize each in turn
+    // Find Components and initialize each in turn
     
     $('.' + MAIN_CLASS_NAME).each(createMusicComponent);
   }
@@ -1117,7 +1165,7 @@
   // MAIN, BEFORE PAGE LOAD
   
   function init() {
-    
+
     // ALSO REMEMBER TO LOAD MP3s RIGHT AWAY (you could also load MEIs as well)
     // TODO
     
