@@ -469,22 +469,22 @@
       });
 
             //(CB) TEST
-        pageContainers.forEach((pageContainer, pageIndex) => { // (CB) This results in a very different layout in Chrome vs. Safari/Firefox
+      //   pageContainers.forEach((pageContainer, pageIndex) => { // (CB) This results in a very different layout in Chrome vs. Safari/Firefox
 
-        let scaledPageSvgCode, svgHeight;
-          // console.log("initial svg height is " + svgHeight);
-        scaledPageSvgCode = svgCodeForPages[pageIndex].replace(
-          /^<svg\s+/, 
-          `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
-        );
+      //   let scaledPageSvgCode, svgHeight;
+      //     // console.log("initial svg height is " + svgHeight);
+      //   scaledPageSvgCode = svgCodeForPages[pageIndex].replace(
+      //     /^<svg\s+/, 
+      //     `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
+      //   );
 
-        svgHeight = (heightRE.exec(scaledPageSvgCode))[1] * smallestScale;
-          // console.log("new svg height is " + svgHeight);
-        pageContainer.style.height = svgHeight;
-          // console.log("final svg height is " + svgHeight);
-        pageContainer.innerHTML = scaledPageSvgCode;
-        scaleMusicPageElements();
-      });
+      //   svgHeight = (heightRE.exec(scaledPageSvgCode))[1] * smallestScale;
+      //     // console.log("new svg height is " + svgHeight);
+      //   pageContainer.style.height = svgHeight;
+      //     // console.log("final svg height is " + svgHeight);
+      //   pageContainer.innerHTML = scaledPageSvgCode;
+      //   scaleMusicPageElements();
+      // });
 
 
       function scaleMusicPageElements() { // (CB) resize music page elements to match SVG heights
