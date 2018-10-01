@@ -29,6 +29,7 @@ $(function () {
 			animationTime: 1.5, /* smoother zooming with easing */
 			sequenceMode: true, /* group an array of images */
 			showReferenceStrip: false, /* thumbnails */
+			// referenceStripScroll: 'vertical',
 			showNavigator: false, /* mini map */
 			toolbar: "openseadragon-wrapper",
 			zoomInButton: "zoom-in",
@@ -38,6 +39,5 @@ $(function () {
 			previousButton: "previous",
 			nextButton: "next"
 		});
-		console.log(viewer);
 	});
 });
