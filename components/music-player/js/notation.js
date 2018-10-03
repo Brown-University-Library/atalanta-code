@@ -31,6 +31,7 @@
         PIANO_ROLL: 'ata-viz-pianoroll',
         AUDIO: 'ata-viz-audio'
       },
+      VIZ_REFRESH_INTERVAL = 100, // in ms
       AUDIO_VIZ_MP3_ATTR_NAME = 'data-mp3',
       AUDIO_VIZ_TEMPO_ATTR_NAME = 'data-tempo',
       AUDIO_VIZ_TRACK_CLASSNAME = 'ata-audio-track',
@@ -59,6 +60,14 @@
   function scaleTime(timeInMilliseconds) {
     const TIME_SCALE = TEMPO * 4;
     return timeInMilliseconds * (TIME_SCALE / 60);
+  }
+
+  // For the audio player, need to convert back to MS
+  // TODO: make this better
+
+  function unscaleTime(scaledTime) {
+    const TIME_SCALE = TEMPO * 4;
+    return scaledTime / (TIME_SCALE / 60);
   }
 
   function beatsToMilliseconds(beats) {
@@ -598,9 +607,11 @@
     //     at the timeInMilliseconds
     
     function update(timeInMilliseconds) {
-      
       if (!isPlaying) {
-        tracks.forEach((track) => track.play(timeInMilliseconds));
+        console.log(`***************** AUDIO time ${unscaleTime(timeInMilliseconds)}`);
+        let unscaledTime = unscaleTime(timeInMilliseconds);
+        // tracks.forEach((track) => track.play(timeInMilliseconds));
+        tracks.forEach((track) => track.play(unscaledTime));
         isPlaying = true;
       }
     }
@@ -609,7 +620,7 @@
     
     function stop() {
       console.log("STOP TRACKS");
-      tracks.forEach((track) => track.stop());
+      tracks.forEach(track => track.stop());
       isPlaying = false;
     }
     
@@ -754,11 +765,12 @@
       // Start audio
 
       console.log("TRACK IS BEING PLAYED starting at time " + startTimeInMilliseconds);
-      // console.log(bufferList);
-      sources.forEach((source) => {
+      sources.forEach(source => {
         console.log("START SOURCE: ");
         console.log(source.start);
-        source.start(startTimeInMilliseconds / 1000);
+        console.log(`IS MUTED = ${isMuted}`);
+        source.start(0, startTimeInMilliseconds / 1000);
+        mute(!isMuted);
         // AudioBufferSourceNode.start([when][, offset][, duration]);
       });
     }
@@ -1006,17 +1018,18 @@
   
   function Model(viewManager) {
 
-    let timerId, startTime;
+    let timerId, startTime, 
+      pauseTimePassed = 0;
     
     // "Play" means to schedule updates for views
     // Start time is set to beginning
     
     function play() {
-      startTime = new Date().valueOf();
-      timerId = setInterval(function(){
+      startTime = (new Date().valueOf()) - pauseTimePassed;
+      timerId = setInterval(() => {
         let timePassed = (new Date().valueOf()) - startTime;
         viewManager.update(timePassed);
-      }, 100); // TODO - SHOULD NOT BE HARD CODED
+      }, VIZ_REFRESH_INTERVAL);
     }
     
     // "Stop" means stop the scheduled updates
@@ -1025,6 +1038,8 @@
     function stop() {
       clearInterval(timerId);
       timerId = undefined;
+      pauseTimePassed = (new Date().valueOf()) - startTime;
+      console.log(`Pausing at ${pauseTimePassed}`);
       viewManager.stop();
     }
     
