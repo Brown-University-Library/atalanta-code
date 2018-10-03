@@ -1801,6 +1801,18 @@ main.home {
   .subnav li.subnav__views--single a, .subnav li.subnav__views--double a {
     color: #222; }
 
+.subnav__views--single a span {
+  background-image: url("../icons/icon_single-page-with-text.svg");
+  background-repeat: no-repeat;
+  height: 2rem;
+  width: 1.9rem; }
+
+.subnav__views--double a span {
+  background-image: url("../icons/icon_double-page-with-text.svg");
+  background-repeat: no-repeat;
+  height: 2rem;
+  width: 3.8rem; }
+
 .subnav__options--option {
   height: 60%; }
 
@@ -2398,6 +2410,27 @@ button.lity-close {
   font-family: sans-serif !important;
   font-size: 18rem;
   /* ??? This is only to adjust spacing for overlapping verse */ }
+
+.ata-music .transport .atalanta-notation-start {
+  background-image: url("../icons/baseline-play_circle_outline-24px.svg"); }
+
+.ata-music .transport .atalanta-notation-start.playing {
+  display: none;
+  /*   background-image: url('../assets/icons/baseline-play_circle_outline-24px.svg'); */ }
+
+.ata-music .transport .atalanta-notation-stop {
+  background-image: url("../icons/baseline-pause_circle_outline-24px.svg"); }
+
+.ata-music .transport .atalanta-notation-stop.playing {
+  background-image: url("../icons/baseline-pause_circle_outline-24px.svg"); }
+
+/* Mute buttons */
+.atalanta-notation-mute-track {
+  /*  background-image: url('../icons/baseline-record_voice_over-24px.svg');*/
+  background-image: url("../icons/icon_profile-volume-outline.svg"); }
+
+.atalanta-notation-mute-track.mute {
+  background-image: url("../icons/baseline-record_voice_over-mute-24px.svg"); }
 
 /* VENDOR SPECIFIC STYLES */
 @-moz-document url-prefix() {
