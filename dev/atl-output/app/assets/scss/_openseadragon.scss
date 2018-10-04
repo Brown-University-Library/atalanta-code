@@ -32,20 +32,36 @@
 		display: none !important;
 	}
 	#previous {
-		background-color: $black_transparent;
-/*		outline: 5px solid red;*/
-		padding: .75rem;
+				outline: 5px solid red;
+/*		background-color: $black_transparent;
+		background-image: url('../icons/icon_arrow-left-lineart.svg');
+		background-position: center;
+		background-repeat: no-repeat;*/
+		background-color: green;
+		mask-image: url('../icons/icon_arrow-left-lineart.svg');
+		mask-position: center;
+		mask-repeat: no-repeat;
+		min-height: 2rem;
+		padding: 1rem;
 		position: absolute !important;
 /*		left: -48vw !important;*/
-		left: -46vw !important;
-		min-width: 3rem;
+		left: -47vw !important;
+		min-width: 2rem;
+	}
+	#previous svg {
+		color: green;
 	}
 	#next {
+				outline: 5px solid red;
 		background-color: $black_transparent;
-		padding: .75rem;
+		background-image: url('../icons/icon_arrow-right-lineart.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+				min-height: 2rem;
+		padding: 1rem;
 		position: absolute !important;
 		right: 1vw !important;
-		min-width: 3rem;
+		min-width: 2rem;
 	}
 }
 
