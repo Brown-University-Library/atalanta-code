@@ -96,12 +96,12 @@ button.lity-close {
 	height: 3rem;
 	padding: .5rem 3rem;
 	background-color: transparent;
-	border: 6px solid black;
+	border: 2px solid $black;
 	border-radius: 10px;
 	color: $black;
 	font-size: 1.5rem;
 }
-.atalanta-notation__switch a:hover {
+.atalanta-notation__switch a:hover, .atalanta-notation__switch a:focus {
 	background-color: $orange-yellow_brighter;
 	color: #000;
 }
@@ -133,31 +133,48 @@ button.lity-close {
 }
 
 .ata-music .transport .atalanta-notation-start {
-  background-image: url('../icons/baseline-play_circle_outline-24px.svg');
+	background-image: url('../icons/icon_play-outline.svg');
+}
+.ata-music .transport .atalanta-notation-start:hover, .ata-music .transport .atalanta-notation-start:focus {
+	background-image: url('../icons/icon_play-filled.svg');
+	transition: .3s;
 }
 
 .ata-music .transport .atalanta-notation-start.playing {
   display: none;
-/*   background-image: url('../assets/icons/baseline-play_circle_outline-24px.svg'); */
 }
 
 .ata-music .transport .atalanta-notation-stop {
-  background-image: url('../icons/baseline-pause_circle_outline-24px.svg');
+	background-image: url('../icons/icon_pause-outline.svg');
 }
+/*.ata-music .transport .atalanta-notation-stop:hover {
+	background-image: url('../icons/icon_pause-filled.svg');
+	transition: .3s;
+}*/
 
 .ata-music .transport .atalanta-notation-stop.playing {
-  background-image: url('../icons/baseline-pause_circle_outline-24px.svg');
+	background-image: url('../icons/icon_pause-outline.svg');
+}
+.ata-music .transport .atalanta-notation-stop.playing:hover, .ata-music .transport .atalanta-notation-stop.playing:focus {
+	background-image: url('../icons/icon_pause-filled.svg');
+	transition: .3s;
 }
 
 /* Mute buttons */
 
 .atalanta-notation-mute-track {
-/*  background-image: url('../icons/baseline-record_voice_over-24px.svg');*/
-  background-image: url('../icons/icon_profile-volume-outline.svg');
+	background-image: url('../icons/icon_profile-volume-outline.svg');
 }
-
+.atalanta-notation-mute-track:hover, .atalanta-notation-mute-track:focus {
+	background-image: url('../icons/icon_profile-volume-filled.svg');
+	transition: .3s;
+}
 .atalanta-notation-mute-track.mute {
-  background-image: url('../icons/baseline-record_voice_over-mute-24px.svg');
+	background-image: url('../icons/icon_profile-mute-outline.svg');
+}
+.atalanta-notation-mute-track.mute:hover {
+	background-image: url('../icons/icon_profile-mute-filled.svg');
+	transition: .3s;
 }
 
 /* VENDOR SPECIFIC STYLES */

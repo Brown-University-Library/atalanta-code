@@ -8,6 +8,53 @@
 #openseadragon-wrapper canvas {
 	cursor: pointer;
 }
+.facsimile--full #openseadragon-wrapper #tools span a#previous, #openseadragon-wrapper #tools span a#zoom-in,  #openseadragon-wrapper #tools span a#zoom-out, #openseadragon-wrapper #tools span a#next {
+	display: flex !important;
+}
+#tools>span {
+/*	outline: 5px solid white;*/
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	width: 19rem;
+}
+#tools a {
+/*	outline: 1px solid orange;*/
+	display: flex !important;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: $aqua;
+/*	flex-grow: 1;*/
+	flex: 1 0 0px;
+	font-size: .875rem;
+	padding: 0 .25rem;
+/*	min-width: 4rem;*/
+}
+#tools a span {
+	display: block;
+	text-align: center;
+}
+#tools a:hover, #tools a:focus {
+	color: $orange-yellow;
+}
+#tools a:active {
+	color: $gray-medium;
+}
+	#icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline {
+		stroke: $aqua;
+		stroke-width: 10;
+	}
+	#next:hover, #next:focus {
+		#icon_arrow-right-lineart polyline {
+			stroke: $orange-yellow;
+		}
+	}
+	#previous:hover, #previous:focus {
+		#icon_arrow-left-lineart polyline {
+			stroke: $orange-yellow;
+		}
+	}
 .facsimile--full #tools {
 	background-color: $black;
 	max-width: 25rem;
@@ -16,7 +63,11 @@
 	right: 0;
 	top: 40%;
 	z-index: 1000;
-	#next {
+	#icon_arrow-left-lineart, #icon_arrow-right-lineart {
+		width: 2rem;
+		height: 4rem;
+	}
+	#next, #previous {
 /*		background-image: url('../icons/icon_arrow-right-lineart.svg');
 		display: flex;
 		flex-direction: column;
@@ -35,16 +86,13 @@
 .displayregion {
 
 }
+.facsimile--full.grid--half #openseadragon-wrapper #tools span a#zoom-in, .facsimile--full.grid--half #openseadragon-wrapper #tools span a#zoom-out {
+	display: none !important;
+}
 .facsimile--full.grid--half #tools {
 	background-color: transparent;
 	text-align: center;
-	top: calc(50vh - 9.375rem); /* 50vh - 7.625 (combined height of topnav and subnav) - 2rem (half of the height of the arrow tools) */
-	#zoom-in {
-		display: none !important;
-	}
-	#zoom-out {
-		display: none !important;
-	}
+	top: calc(50vh - 9.375rem); /* 50vh - 7.625rem (combined height of topnav and subnav) - 2rem (half of the height of the arrow tools) */
 	#previous, #next {
 		background-color: $black_transparent;
 		display: flex;
@@ -64,11 +112,11 @@
 	#next {
 		right: 1vw !important;
 	}
-	#icon_arrow-left-lineart, #icon_arrow-right-lineart {
+/*	#icon_arrow-left-lineart, #icon_arrow-right-lineart {
 		width: 2rem;
 		height: 4rem;
-	}
-	#icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline {
+	}*/
+/*	#icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline {
 		stroke: $aqua;
 		stroke-width: 10;
 	}
@@ -81,15 +129,5 @@
 		#icon_arrow-left-lineart polyline {
 			stroke: $orange-yellow;
 		}
-	}
-}
-#tools a {
-	color: $aqua;
-	padding: 0 .25rem;
-}
-#tools a:hover {
-	color: $orange-yellow;
-}
-#tools a:active {
-	color: $gray-medium;
+	}*/
 }
