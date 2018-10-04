@@ -1305,6 +1305,13 @@
     if ($('.' + VIZ_CLASS_NAMES.AUDIO).length) {
       audioContext = getAudioContext();
 
+      // Polfill for StereoPannerNode (for Safari) from
+      // https://github.com/mohayonao/stereo-panner-node/
+
+      if (!audioContext.createStereoPanner) {
+        StereoPannerNode.polyfill();
+      }
+
       if (!audioContext.createGain) {
         audioContext.createGain = audioContext.createGainNode;
       }
