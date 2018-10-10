@@ -2534,9 +2534,6 @@ button.lity-close {
   bottom: 0;
   z-index: 1000; }
 
-.facsimile--full #openseadragon-wrapper #tools span a#previous, #openseadragon-wrapper #tools span a#zoom-in, #openseadragon-wrapper #tools span a#zoom-out, #openseadragon-wrapper #tools span a#next {
-  /*	display: flex !important;*/ }
-
 #tools > span {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2688,49 +2685,21 @@ button.lity-close {
   background-color: transparent;
   text-align: center;
   top: calc(50vh - 9.375rem);
-  /* 50vh - 7.625rem (combined height of topnav and subnav) - 2rem (half of the height of the arrow tools) */
-  /*	#icon_arrow-left-lineart, #icon_arrow-right-lineart {
-		width: 2rem;
-		height: 4rem;
-	}*/
-  /*	#icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline {
-		stroke: $aqua;
-		stroke-width: 10;
-	}
-	#next:hover, #next:focus {
-		#icon_arrow-right-lineart polyline {
-			stroke: $orange-yellow;
-		}
-	}
-	#previous:hover, #previous:focus {
-		#icon_arrow-left-lineart polyline {
-			stroke: $orange-yellow;
-		}
-	}*/ }
+  /* 50vh - 7.625rem (combined height of topnav and subnav) - 2rem (half of the height of the arrow tools) */ }
   .facsimile--full.grid--half #tools #previous, .facsimile--full.grid--half #tools #next {
     background-color: rgba(33, 33, 33, 0.4);
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    height: 3rem;
-    max-height: 4rem;
-    padding: .5rem;
-    position: absolute !important;
-    width: 3rem;
-    max-width: 4rem; }
+    padding: .5rem 1rem;
+    position: absolute !important; }
   .facsimile--full.grid--half #tools #previous {
     left: -46.8vw !important; }
   .facsimile--full.grid--half #tools #next {
     right: 1vw !important; }
+  .facsimile--full.grid--half #tools #previous span, .facsimile--full.grid--half #tools #next span {
+    display: none; }
+  .facsimile--full.grid--half #tools svg {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
 
 /***     Breakpoints     ***/
 /* large  -  desktop */
