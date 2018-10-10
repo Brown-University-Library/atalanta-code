@@ -8,28 +8,32 @@
 #openseadragon-wrapper canvas {
 	cursor: pointer;
 }
+#tools {
+	background-color: $black;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+}
 .facsimile--full #openseadragon-wrapper #tools span a#previous, #openseadragon-wrapper #tools span a#zoom-in,  #openseadragon-wrapper #tools span a#zoom-out, #openseadragon-wrapper #tools span a#next {
-	display: flex !important;
+/*	display: flex !important;*/
 }
 #tools>span {
-/*	outline: 5px solid white;*/
 	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	width: 19rem;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 45vh;
+	padding: 0 1rem;
 }
 #tools a {
-/*	outline: 1px solid orange;*/
 	display: flex !important;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	color: $aqua;
-/*	flex-grow: 1;*/
 	flex: 1 0 0px;
 	font-size: .875rem;
 	padding: 0 .25rem;
-/*	min-width: 4rem;*/
 }
 #tools a span {
 	display: block;
@@ -37,51 +41,90 @@
 }
 #tools a:hover, #tools a:focus {
 	color: $orange-yellow;
+	transition: .3s;
 }
 #tools a:active {
 	color: $gray-medium;
+	transition: .3s;
 }
-	#icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline {
-		stroke: $aqua;
-		stroke-width: 10;
-	}
-	#next:hover, #next:focus {
-		#icon_arrow-right-lineart polyline {
-			stroke: $orange-yellow;
-		}
-	}
-	#previous:hover, #previous:focus {
-		#icon_arrow-left-lineart polyline {
-			stroke: $orange-yellow;
-		}
-	}
-.facsimile--full #tools {
-	background-color: $black;
-	max-width: 25rem;
-	padding: 1rem;
-	position: absolute;
-	right: 0;
-	top: 40%;
-	z-index: 1000;
-	#icon_arrow-left-lineart, #icon_arrow-right-lineart {
-		width: 2rem;
-		height: 4rem;
-	}
-	#next, #previous {
-/*		background-image: url('../icons/icon_arrow-right-lineart.svg');
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 5rem;
-		height: 5rem;*/
-/*		svg {
-			display: none;
-		}*/
-		span {
-			display: block;
-		}
+#icon_arrow-left-lineart, #icon_arrow-right-lineart {
+	width: 2rem;
+	height: 4rem;
+}
+#icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline, #icon_zoom-in-lineart g#handle path, #icon_zoom-in-lineart g#symbol path, #icon_zoom-out-lineart g#handle path, #icon_zoom-out-lineart g#symbol line {
+	stroke: $aqua;
+}
+#icon_zoom-in-lineart g#glass path, #icon_zoom-out-lineart g#glass path {
+	fill: $aqua;
+}
+#icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline {
+	stroke-width: 10;
+}
+#next:hover, #next:focus {
+	#icon_arrow-right-lineart polyline {
+		stroke: $orange-yellow;
+		transition: .3s;
 	}
 }
+#next:active {
+	#icon_arrow-right-lineart polyline {
+		stroke: $gray-medium;
+		transition: .3s;
+	}
+}
+#previous:hover, #previous:focus {
+	#icon_arrow-left-lineart polyline {
+		stroke: $orange-yellow;
+		transition: .3s;
+	}
+}
+#previous:active {
+	#icon_arrow-left-lineart polyline {
+		stroke: $gray-medium;
+		transition: .3s;
+	}
+}
+#zoom-in:hover, #zoom-in:focus {
+	#icon_zoom-in-lineart g#handle path, #icon_zoom-in-lineart g#symbol path {
+		stroke: $orange-yellow;
+		transition: .3s;
+	}
+	#icon_zoom-in-lineart g#glass path {
+		fill: $orange-yellow;
+		transition: .3s;
+	}
+}
+#zoom-in:active {
+	#icon_zoom-in-lineart g#handle path, #icon_zoom-in-lineart g#symbol path {
+		stroke: $gray-medium;
+		transition: .3s;
+	}
+	#icon_zoom-in-lineart g#glass path {
+		fill: $gray-medium;
+		transition: .3s;
+	}
+}
+#zoom-out:hover, #zoom-out:focus {
+	#icon_zoom-out-lineart g#handle path, #icon_zoom-out-lineart g#symbol line {
+		stroke: $orange-yellow;
+		transition: .3s;
+	}
+	#icon_zoom-out-lineart g#glass path {
+		fill: $orange-yellow;
+		transition: .3s;
+	}
+}
+#zoom-out:active {
+	#icon_zoom-out-lineart g#handle path, #icon_zoom-out-lineart g#symbol line {
+		stroke: $gray-medium;
+		transition: .3s;
+	}
+	#icon_zoom-out-lineart g#glass path {
+		fill: $gray-medium;
+		transition: .3s;
+	}
+}
+
 
 .displayregion {
 
