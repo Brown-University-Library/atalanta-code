@@ -9,18 +9,23 @@
 	cursor: pointer;
 }
 #tools {
-	background-color: $black;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	position: absolute;
-	right: 0;
 	bottom: 0;
 	z-index: 1000;
+	width: 100%;
 }
 #tools>span {
+	background-color: $black_transparent;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: space-between;
-	height: 25vh;
-	padding: 0 1rem;
+	height: 8vh;
+	padding: 0 .5rem;
+	width: 10rem;
 }
 #tools a {
 	display: flex !important;
@@ -31,13 +36,10 @@
 	flex: 1 0 0px;
 	font-size: .875rem;
 	padding: 0 .25rem;
-	outline: 1px solid red;
-/*	width: 50px;*/
 }
 #tools a span {
 	display: block;
 	text-align: center;
-/*	width: 200px;*/
 }
 #tools a:hover, #tools a:focus {
 	color: $orange-yellow;
@@ -124,45 +126,50 @@
 		transition: .3s;
 	}
 }
-#previous, #next {
-	position: absolute !important;
-	width: 50px;
+.facsimile--full {
+	#previous, #next {
+	background-color: $black_transparent;
+	height: 7rem;
+	position: fixed !important;
+	top: 48vh;
+	width: 5rem;
 }
 	#previous {
-		right: 94vw !important;
-		top: -25vh !important;
-
+		left: 0;
 	}
 	#next {
-		right: 2.2vw !important;
-		top: -25vh !important;
+		right: 0;
 	}
+}
 .displayregion {
 
 }
 .facsimile--full.grid--half #openseadragon-wrapper #tools span a#zoom-in, .facsimile--full.grid--half #openseadragon-wrapper #tools span a#zoom-out {
 	display: none !important;
 }
-.facsimile--full.grid--half #tools {
-	background-color: transparent;
-	text-align: center;
-	top: calc(50vh - 9.375rem); /* 50vh - 7.625rem (combined height of topnav and subnav) - 2rem (half of the height of the arrow tools) */
+.facsimile--full.grid--half {
+	#tools, #tools>span {
+		background-color: transparent;
+		width: auto;
+	}
 	#previous, #next {
-		background-color: $black_transparent;
-		padding: .5rem 1rem;
-		position: absolute !important;
-	}
-	#previous {
-		left: -46.8vw !important;
-
-	}
-	#next {
-		right: 1vw !important;
+		height: 5rem;
+		width: 3rem;
 	}
 	#previous span, #next span {
 		display: none;
 	}
 	svg {
 		transform: scale(1);
+	}
+}
+.section__facsimile.grid--right .facsimile--full.grid--half {
+	#previous {
+		left: 50%;
+	}
+}
+.section__facsimile.grid--left .facsimile--full.grid--half {
+	#next {
+		right: 50%;
 	}
 }
