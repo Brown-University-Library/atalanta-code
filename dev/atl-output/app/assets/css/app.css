@@ -2548,7 +2548,7 @@ button.lity-close {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  height: 45vh;
+  height: 25vh;
   padding: 0 1rem; }
 
 #tools a {
@@ -2575,11 +2575,14 @@ button.lity-close {
   -ms-flex: 1 0 0px;
   flex: 1 0 0px;
   font-size: .875rem;
-  padding: 0 .25rem; }
+  padding: 0 .25rem;
+  outline: 1px solid red;
+  /*	width: 50px;*/ }
 
 #tools a span {
   display: block;
-  text-align: center; }
+  text-align: center;
+  /*	width: 200px;*/ }
 
 #tools a:hover, #tools a:focus {
   color: #FFB000;
@@ -2677,6 +2680,18 @@ button.lity-close {
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; }
+
+#previous, #next {
+  position: absolute !important;
+  width: 50px; }
+
+#previous {
+  right: 94vw !important;
+  top: -25vh !important; }
+
+#next {
+  right: 2.2vw !important;
+  top: -25vh !important; }
 
 .facsimile--full.grid--half #openseadragon-wrapper #tools span a#zoom-in, .facsimile--full.grid--half #openseadragon-wrapper #tools span a#zoom-out {
   display: none !important; }
