@@ -173,3 +173,29 @@
 		right: 50%;
 	}
 }
+/***     Breakpoints     ***/
+/* small  -  mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	#tools {
+		background-color: $black_transparent;
+	}
+	#tools>span {
+		background-color: transparent;
+	}
+	#tools a span {
+		display: none;
+	}
+	#tools svg {
+		transform: scale(.6);
+		transform-origin: 50% 50%;
+	}
+	.facsimile--full #previous, .facsimile--full #next,  {
+		background-color: transparent;
+		height: 4rem;
+		top: calc(100vh - 8rem);
+		width: 2rem;
+		svg {
+			transform: scale(.5);
+		}
+	}
+}
