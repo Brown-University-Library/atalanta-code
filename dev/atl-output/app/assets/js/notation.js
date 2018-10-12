@@ -622,8 +622,8 @@
 
 
         pageContainer.innerHTML = scaledPageSvgCode;
-        console.log("this is my SVG height: " + height);
-        console.log("this is my SVG width: " + width);
+        //console.log("this is my SVG height: " + height);
+        //console.log("this is my SVG width: " + width);
         scaleMusicPageElements(pageIndex); // (CB)
       });
 
@@ -633,36 +633,26 @@
         if ( pageIndex < 1 ){
           musicPageA = '.music-page:nth-of-type(1)'; // music page element 1
           SVGa = '.music-page:nth-of-type(1) > svg'; // music SVG 1
-          console.log("the first music SVG is " + SVGa);
+          //console.log("the first music SVG is " + SVGa);
           firstSVG = document.querySelector(SVGa);
           heightSVGa = $(firstSVG).attr('viewBox'); // get SVG 1 height attribute
-          console.log("this is the viewBox of my function's SVGa: " + heightSVGa);
+          //console.log("this is the viewBox of my function's SVGa: " + heightSVGa);
           viewBoxHeightA = heightSVGa.split(' '); // split string of viewBox attributes from SVG 1 into an array
-          console.log("my fourth SVGa value after the split is: " + viewBoxHeightA[3]); // get the SVG 1 viewBox height value from the array
-          heightSVGa = viewBoxHeightA[3];
-          console.log("the viewBox height value now becomes heightSVGa=" + heightSVGa);
-          //console.log("the smallest scale is: " + smallestScale);
-          //scaleHeightSVGa = heightSVGa * smallestScale; // get scaled height of SVG 1
-          //scaleHeightSVGa = heightSVGa * 1; // get scaled height of SVG 1
-          //console.log("my scaled SVGa height is " + scaleHeightSVGa);
-          //$(musicPageA).css("height", scaleHeightSVGa + "px"); // update height of music page element 1 to match scaled SVG 1 height
+          //console.log("my fourth SVGa value after the split is: " + viewBoxHeightA[3]); // get the SVG 1 viewBox height value from the array
+          heightSVGa = viewBoxHeightA[3]; // get the height of the SVG 1 viewBox from the array of values
+          //console.log("the viewBox height value now becomes heightSVGa=" + heightSVGa);
           $(musicPageA).attr("height", heightSVGa + "px"); // set height of SVG 1 .music-page wrapper to SVG 1 height
         }
         else if ( pageIndex >= 1 ){
           musicPageB = '.music-page:nth-of-type(2)'; // music page element 2
           SVGb = '.music-page:nth-of-type(2) > svg'; // music SVG 2
-          console.log("the second music SVG is " + SVGb);
+          //console.log("the second music SVG is " + SVGb);
           secondSVG = document.querySelector(SVGb);
           heightSVGb = $(secondSVG).attr('viewBox'); // get SVG 2 height attribute
-          console.log("this is the viewBox of my function's SVGb: " + heightSVGb);
+          //console.log("this is the viewBox of my function's SVGb: " + heightSVGb);
           viewBoxHeightB = heightSVGb.split(' '); // split string of viewBox attributes from SVG 2 into an array
-          console.log("my fourth SVGa value after the split is: " + viewBoxHeightB[3]); // get the SVG 2 viewBox height value from the array
-          heightSVGb = viewBoxHeightB[3];
-          //console.log("the smallest scale is: " + smallestScale);
-          //scaleHeightSVGb = heightSVGb * smallestScale; // get scaled height of SVG 2
-          //scaleHeightSVGb = heightSVGb * 1; // get scaled height of SVG 2
-          //console.log("my scaled SVGb height is " + scaleHeightSVGb);
-          //$(musicPageB).css("height", scaleHeightSVGb + "px"); // update height of music page element 2 to match scaled SVG 2 height
+          //console.log("my fourth SVGa value after the split is: " + viewBoxHeightB[3]); // get the SVG 2 viewBox height value from the array
+          heightSVGb = viewBoxHeightB[3]; // get the height of the SVG 2 viewBox from the array of values
           $(musicPageB).attr("height", heightSVGb + "px"); // set height of SVG 2 .music-page wrapper to SVG 2 height
         }
       }
