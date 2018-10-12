@@ -25,28 +25,29 @@
   // GLOBAL CONSTANTS
   // TODO - should be const
 
-  let MAIN_CLASS_NAME = 'ata-music',
-      VIZ_CLASS_NAMES = {
-        CMN: 'ata-viz-cmn',
-        PIANO_ROLL: 'ata-viz-pianoroll',
-        AUDIO: 'ata-viz-audio'
-      },
-      VIZ_REFRESH_INTERVAL = 100, // in ms
-      AUDIO_VIZ_MP3_ATTR_NAME = 'data-mp3',
-      AUDIO_VIZ_TEMPO_ATTR_NAME = 'data-tempo',
-      AUDIO_VIZ_TRACK_CLASSNAME = 'ata-audio-track',
-      VEROVIO_OPTIONS = {
-        pageHeight: 2000,
-        pageWidth: 2000,
-        scale: 30,
-        ignoreLayout: 1,
-        adjustPageHeight: 1
-        // adjustPageHeight: true
-      },
-      PIANO_ROLL_OPTIONS = {
-        barHeight: 5,
-        pitchScale: 5
-      };
+  const MAIN_CLASS_NAME = 'ata-music',
+    VIZ_CLASS_NAMES = {
+      CMN: 'ata-viz-cmn',
+      PIANO_ROLL: 'ata-viz-pianoroll',
+      AUDIO: 'ata-viz-audio'
+    },
+    VIZ_REFRESH_INTERVAL = 100, // in ms
+    AUDIO_VIZ_MP3_ATTR_NAME = 'data-mp3',
+    AUDIO_VIZ_TEMPO_ATTR_NAME = 'data-tempo',
+    AUDIO_VIZ_TRACK_CLASSNAME = 'ata-audio-track',
+    VEROVIO_OPTIONS = {
+      pageHeight: 2000,
+      pageWidth: 2000,
+      scale: 30,
+      ignoreLayout: 1,
+      adjustPageHeight: 1
+      // adjustPageHeight: true
+    },
+    PIANO_ROLL_OPTIONS = {
+      barHeight: 5,
+      pitchScale: 5,
+      HILIGHT_CLASS: 'highlighted'
+    };
 
   // GLOBALS
   
@@ -144,7 +145,11 @@
             let viewManager = ViewManager(containerNode, verovioToolkit),
                 model = Model(viewManager, verovioToolkit);
             
+            // Controller for main window and modals
+
             initControllers(containerNode, model, meiData);
+            let modalContainers = containerNode.find('.modal');
+            initControllers(modalContainers, model, meiData);
 
             // Create onclick events to jump to time
             // TODO: test this
@@ -246,10 +251,23 @@
 
   function ViewPianoRoll(viewContainer, verovioToolkit) {
 
-    let rectId = 'note-rect-' + Math.floor(Math.random() * 10000),
-        noteInfo = getNoteInfo(verovioToolkit);
+    const VIZ_INSTANCE_ID = Math.floor(Math.random() * 10000),
+        rectId = 'note-rect-' + VIZ_INSTANCE_ID;
+    
+    let noteInfo = getNoteInfo(verovioToolkit),
+        highlightedNotes = [];
+
+    // Given a note ID, return a unique version for this viz
+
+    function getLocalNoteID(noteId) {
+      return `${noteId}-pianoroll-${VIZ_INSTANCE_ID}`;
+    }
+
+    // Get information on each note in turn from MEI
+    // Return a data object with notes, min/max pitches, last note time
 
     function getNoteInfo(verovioToolkit) {
+
       let mei = getMEI(verovioToolkit.getMEI()),
           meiNotes = Array.from(mei.querySelectorAll('note')),
           notes = [], 
@@ -257,24 +275,25 @@
           minPitch = Number.POSITIVE_INFINITY, 
           lastNoteTime = 0;
 
-      // Get information on each note in turn
-
-      meiNotes.forEach((meiNote) => {
+      meiNotes.forEach(meiNote => {
 
         let [dur, id, pitch] = ['dur', 'xml:id', 'pnum'].map(a => meiNote.getAttribute(a)),
-            startTime = scaleTime(verovioToolkit.getTimeForElement(id)),
-            durTime, voiceNumber;
+            startTime = scaleTime(verovioToolkit.getTimeForElement(id));
 
         if (dur === 'long') dur = 0.5; // If note duration marked 'long', make it 8 beats
-        durTime = beatsToMilliseconds((1 / dur) * 4); // 1/4 note = 1 beat
+        let durTime = beatsToMilliseconds((1 / dur) * 4); // 1/4 note = 1 beat
 
         // Get voice number from staff position
 
         let ancestor = meiNote;
-        do { ancestor = ancestor.parentElement } while (ancestor !== null && ancestor.nodeName !== 'staff');
-        voiceNumber = (ancestor !== null && ancestor.getAttribute('n') !== null) 
-                      ? Number.parseInt(ancestor.getAttribute('n')) 
-                      : 0; // If not specified, put into voice 0
+
+        do { 
+          ancestor = ancestor.parentElement 
+        } while (ancestor !== null && ancestor.nodeName !== 'staff');
+
+        let voiceNumber = (ancestor !== null && ancestor.getAttribute('n') !== null) 
+          ? Number.parseInt(ancestor.getAttribute('n')) 
+          : 0; // If not specified, put into voice 0
 
         notes.push({ 
           dur: durTime, 
@@ -299,23 +318,39 @@
 
     function render() {
 
-      let getSvg = (elem) => document.createElementNS('http://www.w3.org/2000/svg', elem),
-          rectDef = getSvg('rect'),
-          defs = getSvg('defs'),
-          svg = getSvg('svg');
+      let getSvg = elem => document.createElementNS('http://www.w3.org/2000/svg', elem);
 
-      svg.setAttribute('width', '100%');
-      svg.setAttribute('height', '100%');
-      
-      // Set up SVG defs
+      // Create root svg element
 
-      rectDef.setAttribute('class', 'note');
-      rectDef.setAttribute('id', rectId);
-      rectDef.setAttribute('height', PIANO_ROLL_OPTIONS.barHeight);
-      defs.appendChild(rectDef);
-      svg.appendChild(defs);
+      function getSvgElement() {
 
-      // Create bars
+        let svg = getSvg('svg');
+        svg.setAttribute('width', '100%');
+        svg.setAttribute('height', '100%');
+        
+        // Set up SVG defs
+  
+        const rectDef = getSvg('rect'),
+          defs = getSvg('defs');
+  
+        rectDef.setAttribute('class', 'note');
+        rectDef.setAttribute('id', rectId);
+        rectDef.setAttribute('height', PIANO_ROLL_OPTIONS.barHeight);
+        defs.appendChild(rectDef);
+        svg.appendChild(defs);
+
+        return svg;
+      }
+
+      // Create transport bar - TODO: UNUSED
+
+      function getTransportBar() {
+        const b = document.createElement('button');
+        b.innerText = 'PRESS';
+        return b;
+      }
+
+      // Create note bars (color strips)
 
       function makeBarFromMeiNote(note, noteInfo) {
 
@@ -327,30 +362,101 @@
         rect.setAttribute('height', PIANO_ROLL_OPTIONS.barHeight);
         rect.setAttribute('x', scaleTimeForDisplay(note.startTime));
         rect.setAttribute('y', (noteInfo.maxPitch - note.pitch) * PIANO_ROLL_OPTIONS.pitchScale);
+        rect.setAttribute('id', getLocalNoteID(note.id));
 
         return rect;
       }
 
-      noteInfo.notes
-        .reduce((voices, note) => {
-          voices[note.voiceNumber].push(makeBarFromMeiNote(note, noteInfo));
-          return voices;
-        }, [[],[],[],[]])
-        .map((voice, voiceNumber) => { 
-          let voiceSvgGroup = getSvg('g');
-          voiceSvgGroup.setAttribute('class', `voice-${voiceNumber}`);
-          voice.forEach(note => voiceSvgGroup.appendChild(note));
-          svg.appendChild(voiceSvgGroup);
-        });
+      let svg = getSvgElement();
 
-      // Attach to container
+      // Collect an array of arrays of SVG rectanges by voice
 
-      viewContainer.get(0).appendChild(svg);
+      let svgRectanglesByVoice = noteInfo.notes.reduce((voices, note) => {
+        voices[note.voiceNumber].push(makeBarFromMeiNote(note, noteInfo));
+        return voices;
+      }, [[],[],[],[]]);
+
+      // Create a <g> for each voice, and put SVG rectanges into it
+
+      svgRectanglesByVoice.map((voice, voiceNumber) => { 
+        let voiceSvgGroup = getSvg('g');
+        voiceSvgGroup.setAttribute('class', `voice-${voiceNumber}`);
+        voice.forEach(note => voiceSvgGroup.appendChild(note));
+        svg.appendChild(voiceSvgGroup);
+      });
+
+      // Attach the transport bar and SVG to container
+      // TODO: currently not using local getTransportBar() function
+
+      const viewContainerNode = viewContainer.get(0);
+      // viewContainerNode.appendChild(getTransportBar());
+      viewContainerNode.appendChild(svg);
     }
+
+    function centerPianoRollOn(svgRect) {
+
+      const svg = svgRect.closest('svg'),
+        viewBoxWidth = 500,
+        viewBoxHeight = viewBoxWidth,
+        viewBoxHorizCenter = viewBoxWidth / 2,
+        xCoord = svgRect.getBBox().x,
+        xOffset = viewBoxHorizCenter - xCoord;
+/*
+      svg.setAttribute(
+        'viewBox', 
+        `${xOffset} 0 ${viewBoxWidth} ${viewBoxHeight}`
+      ); */
+
+      Array.from(svg.querySelectorAll('g')).forEach(
+        voiceGroup => voiceGroup.setAttribute(
+          'transform',
+          `translate(${xOffset} 0)`
+        )
+      );
+    }
+
+
+    function update(timeInMilliseconds) {
+
+      // Turn off currently highlighted notes
+      
+      highlightedNotes.forEach(
+        note => note.classList.remove(PIANO_ROLL_OPTIONS.HILIGHT_CLASS)
+      );
+      
+      highlightedNotes = [];
+      let rightMostNote;
+      
+      verovioToolkit.getElementsAtTime(timeInMilliseconds).notes.forEach(
+        note => {
+          // console.log(`NOTE ABCD`);
+          // console.log(document.getElementById(getLocalNoteID(note)));
+          let highLightedNote = document.getElementById(getLocalNoteID(note));
+          highLightedNote.classList.add(PIANO_ROLL_OPTIONS.HILIGHT_CLASS);
+          console.log(highLightedNote);
+          highlightedNotes.push(highLightedNote);
+
+          if (rightMostNote === undefined) {
+            rightMostNote = highLightedNote
+          }
+
+          const highLightedNoteX = highLightedNote.getBBox().x,
+            currRightMostNoteX = rightMostNote.getBBox().x;
+
+          if (highLightedNoteX > currRightMostNoteX) {
+            rightMostNote = highLightedNote;
+          }
+        }
+      );
+
+      centerPianoRollOn(rightMostNote);
+    }
+
+
 
     return {
       render: render,
-      update: () => {},
+      update: update,
       stop: () => {},
       onMuteChange: () => {}
     }
@@ -476,8 +582,7 @@
           /^<svg\s+/, 
           // `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
           // `<svg transform-origin="0 0" transform="scale(${smallestScale * CRYSTALS_CONSTANT})" ` 
-          // `<svg transform-origin="0 0" transform="scale(1)" ` // Not sure why this is necessary
-          `<svg transform-origin="0 0" transform="scale(${CRYSTALS_CONSTANT})" ` // (CB)
+          `<svg transform-origin="0 0" transform="scale(1)" ` // Not sure why this is necessary
         );
 
         // scaledPageSvgCode = svgCodeForPages[pageIndex]; // ONLY USE IF ABOVE IS COMMENTED OUT
@@ -510,44 +615,7 @@
 
 
         pageContainer.innerHTML = scaledPageSvgCode;
-        scaleMusicPageElements(); // (CB)
       });
-
-      function scaleMusicPageElements() { // (CB) resize music page wrapper elements to match SVG heights
-        let musicPageA, musicPageB, SVGa, SVGb, firstSVG, secondSVG, heightSVGa, heightSVGb, widthSVGa, widthSVGb, scaleHeightSVGa, scaleWidthSVGa, scaleHeightSVGb, scaleWidthSVGb;
-        musicPageA = '.music-page:nth-of-type(1)'; // music page element 1
-        musicPageB = '.music-page:nth-of-type(2)'; // music page element 2
-        SVGa = '.music-page:nth-of-type(1) > svg'; // music SVG 1
-        SVGb = '.music-page:nth-of-type(2) > svg'; // music SVG 2
-        console.log("the first music SVG is " + SVGa);
-        firstSVG = document.querySelector(SVGa);
-        secondSVG = document.querySelector(SVGb);
-        heightSVGa = $(firstSVG).attr('height'); // get SVG 1 height attribute
-        // console.log(heightSVGa);
-        heightSVGb = $(secondSVG).attr('height'); // get SVG 2 height attribute
-        // console.log(heightSVGb);
-        widthSVGa = $(firstSVG).attr('width'); // get SVG 1 width attribute (may not need)
-        widthSVGb = $(secondSVG).attr('width'); // get SVG 2 width attribute (may not need)
-        // console.log("my first SVG height is " + heightSVGa + " and width is " + widthSVGa);
-        // console.log("my second SVG height is " + heightSVGb + " and width is " + widthSVGb);
-        heightSVGa = parseInt(heightSVGa, 10); // convert string to integer to remove px
-        widthSVGa = parseInt(widthSVGa, 10);
-        heightSVGb = parseInt(heightSVGb, 10);
-        widthSVGb = parseInt(widthSVGb, 10);
-        scaleHeightSVGa = heightSVGa * smallestScale; // get scaled height of SVG 1
-        scaleWidthSVGa = widthSVGa * smallestScale; // get scaled width of SVG 1
-        scaleHeightSVGb = heightSVGb * smallestScale; // get scaled height of SVG 2
-        scaleWidthSVGb = widthSVGb * smallestScale; // get scaled width of SVG 2
-        // console.log("my scaled SVG a height is " + scaleHeightSVGa);
-        // console.log("my scaled SVG a width is " + scaleWidthSVGa);
-        // var musicPageAHeight = $(musicPageA).attr('height');
-        // console.log("the height of music-page A div is " + musicPageAHeight);
-        // console.log("the height of the SVG A element is " + scaleHeightSVGa);
-        $(musicPageA).css("height", scaleHeightSVGa + "px"); // update height of music page element 1 to match scaled SVG 1 height
-        $(musicPageB).css("height", scaleHeightSVGb + "px"); // update height of music page element 2 to match scaled SVG 2 height
-        // firstSVG.setAttribute("viewBox", "0 0 " + scaleWidthSVGa + " " + scaleHeightSVGa);
-        // firstSVG.setAttribute("viewBox", "0 0 800 1500");
-      }
 
       // Fill with music SVG
 /*
@@ -582,12 +650,10 @@
         note => note.classList.remove(HIGHLIGHTED_NOTE_CLASSNAME)
       );
       
-      // Highlight notes
-      
       highlightedNotes = [];
       
       verovioToolkit.getElementsAtTime(timeInMilliseconds).notes.forEach(
-        (note) => {
+        note => {
           let highLightedNote = document.getElementById(note);
           highLightedNote.classList.add(HIGHLIGHTED_NOTE_CLASSNAME);
           highlightedNotes.push(highLightedNote);
@@ -1094,6 +1160,7 @@
   
   
   // OBJECT: Controller (transport UI)
+  // meiData is passed for the voice names
   
   function initControllers(containerNode, model, meiData) {
 
@@ -1159,7 +1226,7 @@
 
     let transportInterface = document.createElement('div');
     transportInterface.classList.add('transport'); // TODO: should not be a magic value
-    [playButton, pauseButton, muteButtonContainer].forEach(x => transportInterface.appendChild(x));
+    [playButton, pauseButton, muteButtonContainer].forEach(but => transportInterface.appendChild(but));
 
     // Popup button for modal
     // TODO: THIS IS A KLUDGE -- FIX ME
@@ -1237,6 +1304,13 @@
     
     if ($('.' + VIZ_CLASS_NAMES.AUDIO).length) {
       audioContext = getAudioContext();
+
+      // Polfill for StereoPannerNode (for Safari) from
+      // https://github.com/mohayonao/stereo-panner-node/
+
+      if (!audioContext.createStereoPanner) {
+        StereoPannerNode.polyfill();
+      }
 
       if (!audioContext.createGain) {
         audioContext.createGain = audioContext.createGainNode;
