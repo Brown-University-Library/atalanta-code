@@ -340,12 +340,9 @@ div[data-nav='home'] .topnav__identity {
 .move-out {
   left: -50vh; }
 
-/*.move-in__bkg {
-	background-color: hsla(0, 0%, 10%, .8);
-}
-.move-out__bkg {
-	background-color: hsla(0, 0%, 90%, .3);
-}*/
+.lity-hidden ._topnav {
+  display: none; }
+
 /*** Breakpoints ***/
 /* small  -  mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -2135,9 +2132,6 @@ body {
   background-color: white;
   /* overflow: scroll; */ }
 
-.ata-viz-cmn .highlighted {
-  fill: red; }
-
 .ata-viz-cmn svg tspan {
   font-family: sans-serif !important; }
 
@@ -2155,42 +2149,49 @@ body {
 
 /* Playing notes */
 .ata-viz-cmn svg .note {
-  -webkit-transition: fill 0.2s;
-  -o-transition: fill 0.2s;
-  transition: fill 0.2s; }
+  -webkit-transition: fill 0.3s, stroke-width 0.3s;
+  -o-transition: fill 0.3s, stroke-width 0.3s;
+  transition: fill 0.3s, stroke-width 0.3s; }
+
+.ata-viz-cmn svg .note.highlighted {
+  fill: red; }
+
+.ata-viz-cmn svg .note.highlighted path {
+  stroke-width: 50;
+  stroke: red; }
 
 /* Start / stop / mute buttons */
-.ata-music .transport {
+.transport {
   width: 100%;
   float: left;
   background: white;
   padding: 1em; }
 
-.ata-music .transport button {
+.transport button {
   background-size: contain;
   background-repeat: no-repeat;
   border: 0; }
 
-.ata-music .transport .atalanta-notation-start,
-.ata-music .transport .atalanta-notation-stop {
+.transport .atalanta-notation-start,
+.transport .atalanta-notation-stop {
   height: 100px;
   width: 100px;
   display: block;
   float: left;
   margin-right: 50px; }
 
-.ata-music .transport .atalanta-notation-start {
+.transport .atalanta-notation-start {
   background-image: url("../img/baseline-play_circle_outline-24px.svg"); }
 
-.ata-music .transport .atalanta-notation-start.playing {
+.transport .atalanta-notation-start.playing {
   display: none;
   /* background-image: url('../img/baseline-play_circle_outline-24px.svg'); */ }
 
-.ata-music .transport .atalanta-notation-stop {
+.transport .atalanta-notation-stop {
   display: none;
   background-image: url("../img/baseline-pause_circle_outline-24px.svg"); }
 
-.ata-music .transport .atalanta-notation-stop.playing {
+.transport .atalanta-notation-stop.playing {
   display: initial;
   background-image: url("../img/baseline-pause_circle_outline-24px.svg"); }
 
@@ -2223,16 +2224,33 @@ body {
 .ata-viz-pianoroll g {
   -webkit-transition: all 2s;
   -o-transition: all 2s;
-  transition: all 2s; }
+  transition: all 2s;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear; }
 
-.ata-viz-pianoroll .voice-1 .note {
+.ata-viz-pianoroll g.voice-1 .note {
   fill: #1f77b4; }
 
-.ata-viz-pianoroll .voice-2 .note {
+.ata-viz-pianoroll g.voice-2 .note {
   fill: #ff7f0e; }
 
-.ata-viz-pianoroll .voice-3 .note {
+.ata-viz-pianoroll g.voice-3 .note {
   fill: #2ca02c; }
+
+.ata-viz-pianoroll g rect.note {
+  -webkit-transition: fill 0.2s;
+  -o-transition: fill 0.2s;
+  transition: fill 0.2s;
+  stroke-width: 0;
+  stroke: red;
+  -webkit-transition: stroke-width 0.5s linear, fill 0.4s ease;
+  -o-transition: stroke-width 0.5s linear, fill 0.4s ease;
+  transition: stroke-width 0.5s linear, fill 0.4s ease; }
+
+.ata-viz-pianoroll g rect.note.highlighted {
+  fill: red;
+  stroke-width: 5px; }
 
 /* NEUTRAL */
 /* COOL */
@@ -2323,7 +2341,7 @@ body {
   transform-origin: 0 0;
   overflow: hidden;
   width: 100%;
-  /* where am I overwriting this from??? */ }
+  /* where am I overriding this from??? */ }
 
 .music-page > svg {
   float: left;
@@ -2342,13 +2360,12 @@ body {
   grid-area: 1 / 1 / 2 / 13;
   margin-top: -8rem; }
 
+.grid--left .music-page:nth-of-type(1), .grid--right .music-page:nth-of-type(1) {
+  margin-top: -4rem; }
+
 .music-page:nth-of-type(2) {
   grid-area: 2 / 1 / 3 / 13;
   margin-top: -4rem; }
-
-.lity-hidden ._topnav {
-  display: none;
-  /*	z-index: 1;*/ }
 
 button.lity-close {
   /*	top: 5.5rem;
@@ -2466,6 +2483,37 @@ button.lity-close {
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/@document */
   .music-page svg {
     margin-left: 1rem; } }
+
+/*** BREAKPOINTS ***/
+/* medium-large - laptop */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .section__music ._music .ata-music .transport {
+    grid-area: 1 / 2 / 2 / 10; }
+  .music-page:nth-of-type(1) {
+    margin-top: -6rem; } }
+
+/* medium - tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .section__music ._music .ata-music .transport {
+    grid-area: 1 / 1 / 2 / 13; }
+  .music-page:nth-of-type(1) {
+    margin-top: -4rem; } }
+
+/* small - mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .atalanta-notation__switch {
+    display: none; } }
+
+@media screen and (min-width: 510px) and (max-width: 767px) {
+  .music-page:nth-of-type(1) {
+    margin-top: -4rem; } }
+
+@media screen and (min-width: 320px) and (max-width: 509px) {
+  .music-page:nth-of-type(1) {
+    margin-top: -2rem; } }
+
+@media screen and (max-width: 319px) {
+  /* the music section is seriously broken at this point */ }
 
 /* NEUTRAL */
 /* COOL */
