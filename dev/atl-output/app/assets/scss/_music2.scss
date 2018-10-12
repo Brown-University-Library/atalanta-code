@@ -70,6 +70,9 @@ body {
 	grid-area: 1 / 1 / 2 / 13;
 	margin-top: -8rem;
 }
+.grid--left .music-page:nth-of-type(1), .grid--right .music-page:nth-of-type(1) {
+	margin-top: -4rem;
+}
 .music-page:nth-of-type(2) {
 	grid-area: 2 / 1 / 3 / 13;
 	margin-top: -4rem;

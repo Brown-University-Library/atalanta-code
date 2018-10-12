@@ -582,8 +582,8 @@
           /^<svg\s+/, 
           // `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
           // `<svg transform-origin="0 0" transform="scale(${smallestScale * CRYSTALS_CONSTANT})" ` 
-          //`<svg transform-origin="0 0" transform="scale(1)" ` // Not sure why this is necessary
-          `<svg transform-origin="0 0" transform="scale(${CRYSTALS_CONSTANT})" ` // (CB)
+          `<svg transform-origin="0 0" transform="scale(1)" ` // Not sure why this is necessary
+          //`<svg transform-origin="0 0" transform="scale(${CRYSTALS_CONSTANT})" ` // (CB) this will only work if I also multiply each viewBox height by 1.5, after getting that value for the container height
         );
 
         // scaledPageSvgCode = svgCodeForPages[pageIndex]; // ONLY USE IF ABOVE IS COMMENTED OUT
@@ -607,9 +607,15 @@
         // Add viewBox attribute
         // viewBox="0 0 w h"
 
+        /* (CB) see replacement below
         scaledPageSvgCode = scaledPageSvgCode.replace(
           /^\s*<svg\s/i,
           `<svg viewBox="0 0 ${width} ${height}" `
+        )
+        */
+        scaledPageSvgCode = scaledPageSvgCode.replace( // (CB) trying to center the non-scaled SVG
+          /^\s*<svg\s/i,
+          `<svg viewBox="-200 0 ${width} ${height}" `
         )
 
         // TEMP - END
@@ -618,14 +624,12 @@
         pageContainer.innerHTML = scaledPageSvgCode;
         console.log("this is my SVG height: " + height);
         console.log("this is my SVG width: " + width);
-        // console.log("the pageContainer is " + pageContainer);
-        // console.log("the pageIndex is " + pageIndex);
         scaleMusicPageElements(pageIndex); // (CB)
       });
 
       function scaleMusicPageElements(pageIndex) { // (CB) resize music page wrapper elements to match SVG heights
         let myInterval, musicPageA, musicPageB, SVGa, SVGb, firstSVG, secondSVG, heightSVGa, heightSVGb, viewBoxHeightA, viewBoxHeightB, scaleHeightSVGa, scaleWidthSVGa, scaleHeightSVGb, scaleWidthSVGb;
-        console.log("the pageIndex is " + pageIndex);
+        console.log("the pageIndex is " + pageIndex); // pageIndex 0 renders SVG 1 and pageIndex 1 renders SVG 2
         if ( pageIndex < 1 ){
           musicPageA = '.music-page:nth-of-type(1)'; // music page element 1
           SVGa = '.music-page:nth-of-type(1) > svg'; // music SVG 1
@@ -661,24 +665,6 @@
           //$(musicPageB).css("height", scaleHeightSVGb + "px"); // update height of music page element 2 to match scaled SVG 2 height
           $(musicPageB).attr("height", heightSVGb + "px"); // set height of SVG 2 .music-page wrapper to SVG 2 height
         }
-
-
-
-/*
-        heightSVGa = parseInt(heightSVGa, 10); // convert string to integer to remove px
-        heightSVGb = parseInt(heightSVGb, 10);
-*/
-        
-
-/*
-        // var musicPageAHeight = $(musicPageA).attr('height');
-        // console.log("the height of music-page A div is " + musicPageAHeight);
-        // console.log("the height of the SVG A element is " + scaleHeightSVGa);
-        $(musicPageA).css("height", scaleHeightSVGa + "px"); // update height of music page element 1 to match scaled SVG 1 height
-        $(musicPageB).css("height", scaleHeightSVGb + "px"); // update height of music page element 2 to match scaled SVG 2 height
-        // firstSVG.setAttribute("viewBox", "0 0 " + scaleWidthSVGa + " " + scaleHeightSVGa);
-        // firstSVG.setAttribute("viewBox", "0 0 800 1500");
-*/
       }
 
       // Fill with music SVG
