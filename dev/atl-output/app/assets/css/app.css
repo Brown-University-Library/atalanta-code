@@ -2399,6 +2399,26 @@ button.lity-close {
   font-size: 18rem;
   /* ??? This is only to adjust spacing for overlapping verse */ }
 
+.ata-music .transport .atalanta-notation-start {
+  background-image: url("../icons/baseline-play_circle_outline-24px.svg"); }
+
+.ata-music .transport .atalanta-notation-start.playing {
+  display: none;
+  /*   background-image: url('../assets/icons/baseline-play_circle_outline-24px.svg'); */ }
+
+.ata-music .transport .atalanta-notation-stop {
+  background-image: url("../icons/baseline-pause_circle_outline-24px.svg"); }
+
+.ata-music .transport .atalanta-notation-stop.playing {
+  background-image: url("../icons/baseline-pause_circle_outline-24px.svg"); }
+
+/* Mute buttons */
+.atalanta-notation-mute-track {
+  background-image: url("../icons/baseline-record_voice_over-24px.svg"); }
+
+.atalanta-notation-mute-track.mute {
+  background-image: url("../icons/baseline-record_voice_over-mute-24px.svg"); }
+
 /* VENDOR SPECIFIC STYLES */
 @-moz-document url-prefix() {
   /* https://developer.mozilla.org/en-US/docs/Web/CSS/@document */
