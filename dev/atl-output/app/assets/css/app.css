@@ -2120,9 +2120,6 @@ body {
   background-color: white;
   /* overflow: scroll; */ }
 
-.ata-viz-cmn .highlighted {
-  fill: red; }
-
 .ata-viz-cmn svg tspan {
   font-family: sans-serif !important; }
 
@@ -2140,42 +2137,49 @@ body {
 
 /* Playing notes */
 .ata-viz-cmn svg .note {
-  -webkit-transition: fill 0.2s;
-  -o-transition: fill 0.2s;
-  transition: fill 0.2s; }
+  -webkit-transition: fill 0.3s, stroke-width 0.3s;
+  -o-transition: fill 0.3s, stroke-width 0.3s;
+  transition: fill 0.3s, stroke-width 0.3s; }
+
+.ata-viz-cmn svg .note.highlighted {
+  fill: red; }
+
+.ata-viz-cmn svg .note.highlighted path {
+  stroke-width: 50;
+  stroke: red; }
 
 /* Start / stop / mute buttons */
-.ata-music .transport {
+.transport {
   width: 100%;
   float: left;
   background: white;
   padding: 1em; }
 
-.ata-music .transport button {
+.transport button {
   background-size: contain;
   background-repeat: no-repeat;
   border: 0; }
 
-.ata-music .transport .atalanta-notation-start,
-.ata-music .transport .atalanta-notation-stop {
+.transport .atalanta-notation-start,
+.transport .atalanta-notation-stop {
   height: 100px;
   width: 100px;
   display: block;
   float: left;
   margin-right: 50px; }
 
-.ata-music .transport .atalanta-notation-start {
+.transport .atalanta-notation-start {
   background-image: url("../img/baseline-play_circle_outline-24px.svg"); }
 
-.ata-music .transport .atalanta-notation-start.playing {
+.transport .atalanta-notation-start.playing {
   display: none;
   /* background-image: url('../img/baseline-play_circle_outline-24px.svg'); */ }
 
-.ata-music .transport .atalanta-notation-stop {
+.transport .atalanta-notation-stop {
   display: none;
   background-image: url("../img/baseline-pause_circle_outline-24px.svg"); }
 
-.ata-music .transport .atalanta-notation-stop.playing {
+.transport .atalanta-notation-stop.playing {
   display: initial;
   background-image: url("../img/baseline-pause_circle_outline-24px.svg"); }
 
@@ -2208,16 +2212,33 @@ body {
 .ata-viz-pianoroll g {
   -webkit-transition: all 2s;
   -o-transition: all 2s;
-  transition: all 2s; }
+  transition: all 2s;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear; }
 
-.ata-viz-pianoroll .voice-1 .note {
+.ata-viz-pianoroll g.voice-1 .note {
   fill: #1f77b4; }
 
-.ata-viz-pianoroll .voice-2 .note {
+.ata-viz-pianoroll g.voice-2 .note {
   fill: #ff7f0e; }
 
-.ata-viz-pianoroll .voice-3 .note {
+.ata-viz-pianoroll g.voice-3 .note {
   fill: #2ca02c; }
+
+.ata-viz-pianoroll g rect.note {
+  -webkit-transition: fill 0.2s;
+  -o-transition: fill 0.2s;
+  transition: fill 0.2s;
+  stroke-width: 0;
+  stroke: red;
+  -webkit-transition: stroke-width 0.5s linear, fill 0.4s ease;
+  -o-transition: stroke-width 0.5s linear, fill 0.4s ease;
+  transition: stroke-width 0.5s linear, fill 0.4s ease; }
+
+.ata-viz-pianoroll g rect.note.highlighted {
+  fill: red;
+  stroke-width: 5px; }
 
 /* NEUTRAL */
 /* COOL */
