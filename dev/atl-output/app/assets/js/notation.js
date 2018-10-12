@@ -582,7 +582,8 @@
           /^<svg\s+/, 
           // `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
           // `<svg transform-origin="0 0" transform="scale(${smallestScale * CRYSTALS_CONSTANT})" ` 
-          `<svg transform-origin="0 0" transform="scale(1)" ` // Not sure why this is necessary
+          //`<svg transform-origin="0 0" transform="scale(1)" ` // Not sure why this is necessary
+          `<svg transform-origin="0 0" transform="scale(${CRYSTALS_CONSTANT})" ` // (CB)
         );
 
         // scaledPageSvgCode = svgCodeForPages[pageIndex]; // ONLY USE IF ABOVE IS COMMENTED OUT
@@ -615,7 +616,63 @@
 
 
         pageContainer.innerHTML = scaledPageSvgCode;
+        console.log("this is my SVG height: " + height);
+        console.log("this is my SVG width: " + width);
+        // console.log("the pageContainer is " + pageContainer);
+        // console.log("the pageIndex is " + pageIndex);
+        scaleMusicPageElements(pageIndex); // (CB)
       });
+
+      function scaleMusicPageElements(pageIndex) { // (CB) resize music page wrapper elements to match SVG heights
+        let myInterval, musicPageA, musicPageB, SVGa, SVGb, firstSVG, secondSVG, heightSVGa, heightSVGb, viewBoxHeightA, viewBoxHeightB, scaleHeightSVGa, scaleWidthSVGa, scaleHeightSVGb, scaleWidthSVGb;
+        console.log("the pageIndex is " + pageIndex);
+        if ( pageIndex < 1 ){
+          musicPageA = '.music-page:nth-of-type(1)'; // music page element 1
+          SVGa = '.music-page:nth-of-type(1) > svg'; // music SVG 1
+          console.log("the first music SVG is " + SVGa);
+          firstSVG = document.querySelector(SVGa);
+          heightSVGa = $(firstSVG).attr('viewBox'); // get SVG 1 height attribute
+          console.log("this is the viewBox of my function's SVGa: " + heightSVGa);
+          viewBoxHeightA = heightSVGa.split(' '); // split string of viewBox attributes from SVG 1 into an array
+          console.log("my fourth SVGa value after the split is: " + viewBoxHeightA[3]); // get the SVG 1 viewBox height value from the array
+          heightSVGa = viewBoxHeightA;
+          //console.log("the smallest scale is: " + smallestScale);
+          //scaleHeightSVGa = heightSVGa * smallestScale; // get scaled height of SVG 1
+          //console.log("my scaled SVFa height is " + scaleHeightSVGa);
+        }
+        else if ( pageIndex >= 1 ){
+          musicPageB = '.music-page:nth-of-type(2)'; // music page element 2
+          SVGb = '.music-page:nth-of-type(2) > svg'; // music SVG 2
+          console.log("the second music SVG is " + SVGb);
+          secondSVG = document.querySelector(SVGb);
+          heightSVGb = $(secondSVG).attr('viewBox'); // get SVG 2 height attribute
+          console.log("this is the viewBox of my function's SVGb: " + heightSVGb);
+          viewBoxHeightB = heightSVGb.split(' '); // split string of viewBox attributes from SVG 2 into an array
+          console.log("my fourth SVGa value after the split is: " + viewBoxHeightB[3]); // get the SVG 2 viewBox height value from the array
+          heightSVGb = viewBoxHeightB;
+          //console.log("the smallest scale is: " + smallestScale);
+          //scaleHeightSVGb = heightSVGb * smallestScale; // get scaled height of SVG 2
+          //console.log("my scaled SVGb height is " + scaleHeightSVGb);
+        }
+
+
+
+/*
+        heightSVGa = parseInt(heightSVGa, 10); // convert string to integer to remove px
+        heightSVGb = parseInt(heightSVGb, 10);
+*/
+        
+
+/*
+        // var musicPageAHeight = $(musicPageA).attr('height');
+        // console.log("the height of music-page A div is " + musicPageAHeight);
+        // console.log("the height of the SVG A element is " + scaleHeightSVGa);
+        $(musicPageA).css("height", scaleHeightSVGa + "px"); // update height of music page element 1 to match scaled SVG 1 height
+        $(musicPageB).css("height", scaleHeightSVGb + "px"); // update height of music page element 2 to match scaled SVG 2 height
+        // firstSVG.setAttribute("viewBox", "0 0 " + scaleWidthSVGa + " " + scaleHeightSVGa);
+        // firstSVG.setAttribute("viewBox", "0 0 800 1500");
+*/
+      }
 
       // Fill with music SVG
 /*
