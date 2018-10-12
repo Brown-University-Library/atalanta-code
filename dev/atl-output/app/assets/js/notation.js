@@ -628,8 +628,8 @@
       });
 
       function scaleMusicPageElements(pageIndex) { // (CB) resize music page wrapper elements to match SVG heights
-        let myInterval, musicPageA, musicPageB, SVGa, SVGb, firstSVG, secondSVG, heightSVGa, heightSVGb, viewBoxHeightA, viewBoxHeightB, scaleHeightSVGa, scaleWidthSVGa, scaleHeightSVGb, scaleWidthSVGb;
-        console.log("the pageIndex is " + pageIndex); // pageIndex 0 renders SVG 1 and pageIndex 1 renders SVG 2
+        let musicPageA, musicPageB, SVGa, SVGb, firstSVG, secondSVG, heightSVGa, heightSVGb, viewBoxHeightA, viewBoxHeightB;
+        //console.log("the pageIndex is " + pageIndex); // pageIndex 0 renders SVG 1 and pageIndex 1 renders SVG 2
         if ( pageIndex < 1 ){
           musicPageA = '.music-page:nth-of-type(1)'; // music page element 1
           SVGa = '.music-page:nth-of-type(1) > svg'; // music SVG 1
