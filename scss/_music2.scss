@@ -53,7 +53,7 @@ body {
   text-align: center;
   transform-origin: 0 0;
   overflow: hidden;
-  width: 100%; /* where am I overwriting this from??? */
+  width: 100%; /* where am I overriding this from??? */
 }
 .music-page > svg {
 	float: left;
@@ -70,13 +70,12 @@ body {
 	grid-area: 1 / 1 / 2 / 13;
 	margin-top: -8rem;
 }
+.grid--left .music-page:nth-of-type(1), .grid--right .music-page:nth-of-type(1) {
+	margin-top: -4rem;
+}
 .music-page:nth-of-type(2) {
 	grid-area: 2 / 1 / 3 / 13;
 	margin-top: -4rem;
-}
-.lity-hidden ._topnav {
-	display: none;
-/*	z-index: 1;*/
 }
 button.lity-close {
 /*	top: 5.5rem;
@@ -96,12 +95,12 @@ button.lity-close {
 	height: 3rem;
 	padding: .5rem 3rem;
 	background-color: transparent;
-	border: 6px solid black;
+	border: 2px solid $black;
 	border-radius: 10px;
 	color: $black;
 	font-size: 1.5rem;
 }
-.atalanta-notation__switch a:hover {
+.atalanta-notation__switch a:hover, .atalanta-notation__switch a:focus {
 	background-color: $orange-yellow_brighter;
 	color: #000;
 }
@@ -132,11 +131,94 @@ button.lity-close {
   font-size: 18rem; /* ??? This is only to adjust spacing for overlapping verse */
 }
 
+.ata-music .transport .atalanta-notation-start {
+	background-image: url('../icons/icon_play-outline.svg');
+}
+.ata-music .transport .atalanta-notation-start:hover, .ata-music .transport .atalanta-notation-start:focus {
+	background-image: url('../icons/icon_play-filled.svg');
+	transition: .3s;
+}
+
+.ata-music .transport .atalanta-notation-start.playing {
+  display: none;
+}
+
+.ata-music .transport .atalanta-notation-stop {
+	background-image: url('../icons/icon_pause-outline.svg');
+}
+/*.ata-music .transport .atalanta-notation-stop:hover {
+	background-image: url('../icons/icon_pause-filled.svg');
+	transition: .3s;
+}*/
+
+.ata-music .transport .atalanta-notation-stop.playing {
+	background-image: url('../icons/icon_pause-outline.svg');
+}
+.ata-music .transport .atalanta-notation-stop.playing:hover, .ata-music .transport .atalanta-notation-stop.playing:focus {
+	background-image: url('../icons/icon_pause-filled.svg');
+	transition: .3s;
+}
+
+/* Mute buttons */
+
+.atalanta-notation-mute-track {
+	background-image: url('../icons/icon_profile-volume-outline.svg');
+}
+.atalanta-notation-mute-track:hover, .atalanta-notation-mute-track:focus {
+	background-image: url('../icons/icon_profile-volume-filled.svg');
+	transition: .3s;
+}
+.atalanta-notation-mute-track.mute {
+	background-image: url('../icons/icon_profile-mute-outline.svg');
+}
+.atalanta-notation-mute-track.mute:hover {
+	background-image: url('../icons/icon_profile-mute-filled.svg');
+	transition: .3s;
+}
+
 /* VENDOR SPECIFIC STYLES */
 @-moz-document url-prefix() { /* https://developer.mozilla.org/en-US/docs/Web/CSS/@document */
 	.music-page svg {
 		margin-left: 1rem;
 	}
+}
+/*** BREAKPOINTS ***/
+/* medium-large - laptop */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+	.section__music ._music .ata-music .transport {
+		grid-area: 1 / 2 / 2 / 10;
+	}
+	.music-page:nth-of-type(1) {
+		margin-top: -6rem;
+	}
+}
+/* medium - tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.section__music ._music .ata-music .transport {
+		grid-area: 1 / 1 / 2 / 13;
+	}
+	.music-page:nth-of-type(1) {
+		margin-top: -4rem;
+	}
+}
+/* small - mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.atalanta-notation__switch {
+		display: none;
+	}
+}
+@media screen and (min-width: 510px) and (max-width: 767px) {
+	.music-page:nth-of-type(1) {
+		margin-top: -4rem;
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 509px) {
+	.music-page:nth-of-type(1) {
+		margin-top: -2rem;
+	}	
+}
+@media screen and (max-width: 319px) {
+	/* the music section is seriously broken at this point */
 }
 
 

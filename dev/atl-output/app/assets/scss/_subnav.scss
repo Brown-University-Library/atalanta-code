@@ -94,6 +94,18 @@
 .subnav__views--double {
 
 }
+.subnav__views--single a span {
+	background-image: url('../icons/icon_single-page-with-text.svg');
+	background-repeat: no-repeat;
+	height: 2rem;
+	width: 1.9rem;
+}
+.subnav__views--double a span {
+	background-image: url('../icons/icon_double-page-with-text.svg');
+	background-repeat: no-repeat;
+	height: 2rem;
+	width: 3.8rem;
+}
 .subnav__options--option {
 	height: 60%;
 }
