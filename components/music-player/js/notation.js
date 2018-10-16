@@ -25,27 +25,29 @@
   // GLOBAL CONSTANTS
   // TODO - should be const
 
-  let MAIN_CLASS_NAME = 'ata-music',
-      VIZ_CLASS_NAMES = {
-        CMN: 'ata-viz-cmn',
-        PIANO_ROLL: 'ata-viz-pianoroll',
-        AUDIO: 'ata-viz-audio'
-      },
-      AUDIO_VIZ_MP3_ATTR_NAME = 'data-mp3',
-      AUDIO_VIZ_TEMPO_ATTR_NAME = 'data-tempo',
-      AUDIO_VIZ_TRACK_CLASSNAME = 'ata-audio-track',
-      VEROVIO_OPTIONS = {
-        pageHeight: 2000,
-        pageWidth: 2000,
-        scale: 30,
-        ignoreLayout: 1,
-        adjustPageHeight: 1
-        // adjustPageHeight: true
-      },
-      PIANO_ROLL_OPTIONS = {
-        barHeight: 5,
-        pitchScale: 5
-      };
+  const MAIN_CLASS_NAME = 'ata-music',
+    VIZ_CLASS_NAMES = {
+      CMN: 'ata-viz-cmn',
+      PIANO_ROLL: 'ata-viz-pianoroll',
+      AUDIO: 'ata-viz-audio'
+    },
+    VIZ_REFRESH_INTERVAL = 100, // in ms
+    AUDIO_VIZ_MP3_ATTR_NAME = 'data-mp3',
+    AUDIO_VIZ_TEMPO_ATTR_NAME = 'data-tempo',
+    AUDIO_VIZ_TRACK_CLASSNAME = 'ata-audio-track',
+    VEROVIO_OPTIONS = {
+      pageHeight: 2000,
+      pageWidth: 2000,
+      scale: 30,
+      ignoreLayout: 1,
+      adjustPageHeight: 1
+      // adjustPageHeight: true
+    },
+    PIANO_ROLL_OPTIONS = {
+      barHeight: 5,
+      pitchScale: 5,
+      HILIGHT_CLASS: 'highlighted'
+    };
 
   // GLOBALS
   
@@ -59,6 +61,14 @@
   function scaleTime(timeInMilliseconds) {
     const TIME_SCALE = TEMPO * 4;
     return timeInMilliseconds * (TIME_SCALE / 60);
+  }
+
+  // For the audio player, need to convert back to MS
+  // TODO: make this better
+
+  function unscaleTime(scaledTime) {
+    const TIME_SCALE = TEMPO * 4;
+    return scaledTime / (TIME_SCALE / 60);
   }
 
   function beatsToMilliseconds(beats) {
@@ -135,7 +145,11 @@
             let viewManager = ViewManager(containerNode, verovioToolkit),
                 model = Model(viewManager, verovioToolkit);
             
+            // Controller for main window and modals
+
             initControllers(containerNode, model, meiData);
+            let modalContainers = containerNode.find('.modal');
+            initControllers(modalContainers, model, meiData);
 
             // Create onclick events to jump to time
             // TODO: test this
@@ -237,10 +251,23 @@
 
   function ViewPianoRoll(viewContainer, verovioToolkit) {
 
-    let rectId = 'note-rect-' + Math.floor(Math.random() * 10000),
-        noteInfo = getNoteInfo(verovioToolkit);
+    const VIZ_INSTANCE_ID = Math.floor(Math.random() * 10000),
+        rectId = 'note-rect-' + VIZ_INSTANCE_ID;
+    
+    let noteInfo = getNoteInfo(verovioToolkit),
+        highlightedNotes = [];
+
+    // Given a note ID, return a unique version for this viz
+
+    function getLocalNoteID(noteId) {
+      return `${noteId}-pianoroll-${VIZ_INSTANCE_ID}`;
+    }
+
+    // Get information on each note in turn from MEI
+    // Return a data object with notes, min/max pitches, last note time
 
     function getNoteInfo(verovioToolkit) {
+
       let mei = getMEI(verovioToolkit.getMEI()),
           meiNotes = Array.from(mei.querySelectorAll('note')),
           notes = [], 
@@ -248,24 +275,25 @@
           minPitch = Number.POSITIVE_INFINITY, 
           lastNoteTime = 0;
 
-      // Get information on each note in turn
-
-      meiNotes.forEach((meiNote) => {
+      meiNotes.forEach(meiNote => {
 
         let [dur, id, pitch] = ['dur', 'xml:id', 'pnum'].map(a => meiNote.getAttribute(a)),
-            startTime = scaleTime(verovioToolkit.getTimeForElement(id)),
-            durTime, voiceNumber;
+            startTime = scaleTime(verovioToolkit.getTimeForElement(id));
 
         if (dur === 'long') dur = 0.5; // If note duration marked 'long', make it 8 beats
-        durTime = beatsToMilliseconds((1 / dur) * 4); // 1/4 note = 1 beat
+        let durTime = beatsToMilliseconds((1 / dur) * 4); // 1/4 note = 1 beat
 
         // Get voice number from staff position
 
         let ancestor = meiNote;
-        do { ancestor = ancestor.parentElement } while (ancestor !== null && ancestor.nodeName !== 'staff');
-        voiceNumber = (ancestor !== null && ancestor.getAttribute('n') !== null) 
-                      ? Number.parseInt(ancestor.getAttribute('n')) 
-                      : 0; // If not specified, put into voice 0
+
+        do { 
+          ancestor = ancestor.parentElement 
+        } while (ancestor !== null && ancestor.nodeName !== 'staff');
+
+        let voiceNumber = (ancestor !== null && ancestor.getAttribute('n') !== null) 
+          ? Number.parseInt(ancestor.getAttribute('n')) 
+          : 0; // If not specified, put into voice 0
 
         notes.push({ 
           dur: durTime, 
@@ -290,23 +318,39 @@
 
     function render() {
 
-      let getSvg = (elem) => document.createElementNS('http://www.w3.org/2000/svg', elem),
-          rectDef = getSvg('rect'),
-          defs = getSvg('defs'),
-          svg = getSvg('svg');
+      let getSvg = elem => document.createElementNS('http://www.w3.org/2000/svg', elem);
 
-      svg.setAttribute('width', '100%');
-      svg.setAttribute('height', '100%');
-      
-      // Set up SVG defs
+      // Create root svg element
 
-      rectDef.setAttribute('class', 'note');
-      rectDef.setAttribute('id', rectId);
-      rectDef.setAttribute('height', PIANO_ROLL_OPTIONS.barHeight);
-      defs.appendChild(rectDef);
-      svg.appendChild(defs);
+      function getSvgElement() {
 
-      // Create bars
+        let svg = getSvg('svg');
+        svg.setAttribute('width', '100%');
+        svg.setAttribute('height', '100%');
+        
+        // Set up SVG defs
+  
+        const rectDef = getSvg('rect'),
+          defs = getSvg('defs');
+  
+        rectDef.setAttribute('class', 'note');
+        rectDef.setAttribute('id', rectId);
+        rectDef.setAttribute('height', PIANO_ROLL_OPTIONS.barHeight);
+        defs.appendChild(rectDef);
+        svg.appendChild(defs);
+
+        return svg;
+      }
+
+      // Create transport bar - TODO: UNUSED
+
+      function getTransportBar() {
+        const b = document.createElement('button');
+        b.innerText = 'PRESS';
+        return b;
+      }
+
+      // Create note bars (color strips)
 
       function makeBarFromMeiNote(note, noteInfo) {
 
@@ -318,30 +362,101 @@
         rect.setAttribute('height', PIANO_ROLL_OPTIONS.barHeight);
         rect.setAttribute('x', scaleTimeForDisplay(note.startTime));
         rect.setAttribute('y', (noteInfo.maxPitch - note.pitch) * PIANO_ROLL_OPTIONS.pitchScale);
+        rect.setAttribute('id', getLocalNoteID(note.id));
 
         return rect;
       }
 
-      noteInfo.notes
-        .reduce((voices, note) => {
-          voices[note.voiceNumber].push(makeBarFromMeiNote(note, noteInfo));
-          return voices;
-        }, [[],[],[],[]])
-        .map((voice, voiceNumber) => { 
-          let voiceSvgGroup = getSvg('g');
-          voiceSvgGroup.setAttribute('class', `voice-${voiceNumber}`);
-          voice.forEach(note => voiceSvgGroup.appendChild(note));
-          svg.appendChild(voiceSvgGroup);
-        });
+      let svg = getSvgElement();
 
-      // Attach to container
+      // Collect an array of arrays of SVG rectanges by voice
 
-      viewContainer.get(0).appendChild(svg);
+      let svgRectanglesByVoice = noteInfo.notes.reduce((voices, note) => {
+        voices[note.voiceNumber].push(makeBarFromMeiNote(note, noteInfo));
+        return voices;
+      }, [[],[],[],[]]);
+
+      // Create a <g> for each voice, and put SVG rectanges into it
+
+      svgRectanglesByVoice.map((voice, voiceNumber) => { 
+        let voiceSvgGroup = getSvg('g');
+        voiceSvgGroup.setAttribute('class', `voice-${voiceNumber}`);
+        voice.forEach(note => voiceSvgGroup.appendChild(note));
+        svg.appendChild(voiceSvgGroup);
+      });
+
+      // Attach the transport bar and SVG to container
+      // TODO: currently not using local getTransportBar() function
+
+      const viewContainerNode = viewContainer.get(0);
+      // viewContainerNode.appendChild(getTransportBar());
+      viewContainerNode.appendChild(svg);
     }
+
+    function centerPianoRollOn(svgRect) {
+
+      const svg = svgRect.closest('svg'),
+        viewBoxWidth = 500,
+        viewBoxHeight = viewBoxWidth,
+        viewBoxHorizCenter = viewBoxWidth / 2,
+        xCoord = svgRect.getBBox().x,
+        xOffset = viewBoxHorizCenter - xCoord;
+/*
+      svg.setAttribute(
+        'viewBox', 
+        `${xOffset} 0 ${viewBoxWidth} ${viewBoxHeight}`
+      ); */
+
+      Array.from(svg.querySelectorAll('g')).forEach(
+        voiceGroup => voiceGroup.setAttribute(
+          'transform',
+          `translate(${xOffset} 0)`
+        )
+      );
+    }
+
+
+    function update(timeInMilliseconds) {
+
+      // Turn off currently highlighted notes
+      
+      highlightedNotes.forEach(
+        note => note.classList.remove(PIANO_ROLL_OPTIONS.HILIGHT_CLASS)
+      );
+      
+      highlightedNotes = [];
+      let rightMostNote;
+      
+      verovioToolkit.getElementsAtTime(timeInMilliseconds).notes.forEach(
+        note => {
+          // console.log(`NOTE ABCD`);
+          // console.log(document.getElementById(getLocalNoteID(note)));
+          let highLightedNote = document.getElementById(getLocalNoteID(note));
+          highLightedNote.classList.add(PIANO_ROLL_OPTIONS.HILIGHT_CLASS);
+          console.log(highLightedNote);
+          highlightedNotes.push(highLightedNote);
+
+          if (rightMostNote === undefined) {
+            rightMostNote = highLightedNote
+          }
+
+          const highLightedNoteX = highLightedNote.getBBox().x,
+            currRightMostNoteX = rightMostNote.getBBox().x;
+
+          if (highLightedNoteX > currRightMostNoteX) {
+            rightMostNote = highLightedNote;
+          }
+        }
+      );
+
+      centerPianoRollOn(rightMostNote);
+    }
+
+
 
     return {
       render: render,
-      update: () => {},
+      update: update,
       stop: () => {},
       onMuteChange: () => {}
     }
@@ -410,6 +525,9 @@
           pageNumber, 
           svgCode = '';
 
+      // Regular expressions to extract the width/height
+      //  generated by Verovio
+
       const widthRE = /^\s*<svg\s+[^>]*width="(\d+)px"/i,
             heightRE = /^\s*<svg\s+[^>]*height="(\d+)px"/i;
 
@@ -434,6 +552,7 @@
           svgCodeForPages = [];
 
       // Generate SVG code, calculate scale for each page
+      //  and keep track of the smallest scale overall
 
       pageContainers.forEach((pageContainer, pageNumber) => {
 
@@ -450,18 +569,51 @@
       // Add a transform property to the SVG to scale it to fit the containing div
       //  then attach page div to DOM
 
+      const CRYSTALS_CONSTANT = 1.15; // Crystal wants the notation a little bit bigger...
+
       pageContainers.forEach((pageContainer, pageIndex) => {
 
         let scaledPageSvgCode, svgHeight;
 
+        // TODO: Why is the next statement necessary? Why do we need to scale by 1?
+        // (it becomes very small otherwise)
+
         scaledPageSvgCode = svgCodeForPages[pageIndex].replace(
           /^<svg\s+/, 
-          `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
+          // `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
+          // `<svg transform-origin="0 0" transform="scale(${smallestScale * CRYSTALS_CONSTANT})" ` 
+          `<svg transform-origin="0 0" transform="scale(1)" ` // Not sure why this is necessary
         );
+
+        // scaledPageSvgCode = svgCodeForPages[pageIndex]; // ONLY USE IF ABOVE IS COMMENTED OUT
 
         svgHeight = (heightRE.exec(scaledPageSvgCode))[1] * smallestScale;
 
         pageContainer.style.height = svgHeight;
+
+
+        // TEMP - START - TODO: Clean this up if it works
+
+        let width = (widthRE.exec(scaledPageSvgCode))[1],
+            height = (heightRE.exec(scaledPageSvgCode))[1];
+
+        // Get rid of width and height attributes
+
+        scaledPageSvgCode = scaledPageSvgCode
+          .replace(/^\s*(<svg[^>]+)\s+(?:width)\s*=\s*"[^"]*"/i, '$1')
+          .replace(/^\s*(<svg[^>]+)\s+(?:height)\s*=\s*"[^"]*"/i, '$1');
+
+        // Add viewBox attribute
+        // viewBox="0 0 w h"
+
+        scaledPageSvgCode = scaledPageSvgCode.replace(
+          /^\s*<svg\s/i,
+          `<svg viewBox="0 0 ${width} ${height}" `
+        )
+
+        // TEMP - END
+
+
         pageContainer.innerHTML = scaledPageSvgCode;
       });
 
@@ -498,12 +650,10 @@
         note => note.classList.remove(HIGHLIGHTED_NOTE_CLASSNAME)
       );
       
-      // Highlight notes
-      
       highlightedNotes = [];
       
       verovioToolkit.getElementsAtTime(timeInMilliseconds).notes.forEach(
-        (note) => {
+        note => {
           let highLightedNote = document.getElementById(note);
           highLightedNote.classList.add(HIGHLIGHTED_NOTE_CLASSNAME);
           highlightedNotes.push(highLightedNote);
@@ -561,9 +711,11 @@
     //     at the timeInMilliseconds
     
     function update(timeInMilliseconds) {
-      
       if (!isPlaying) {
-        tracks.forEach((track) => track.play(timeInMilliseconds));
+        console.log(`***************** AUDIO time ${unscaleTime(timeInMilliseconds)}`);
+        let unscaledTime = unscaleTime(timeInMilliseconds);
+        // tracks.forEach((track) => track.play(timeInMilliseconds));
+        tracks.forEach((track) => track.play(unscaledTime));
         isPlaying = true;
       }
     }
@@ -572,7 +724,7 @@
     
     function stop() {
       console.log("STOP TRACKS");
-      tracks.forEach((track) => track.stop());
+      tracks.forEach(track => track.stop());
       isPlaying = false;
     }
     
@@ -717,11 +869,12 @@
       // Start audio
 
       console.log("TRACK IS BEING PLAYED starting at time " + startTimeInMilliseconds);
-      // console.log(bufferList);
-      sources.forEach((source) => {
+      sources.forEach(source => {
         console.log("START SOURCE: ");
         console.log(source.start);
-        source.start(startTimeInMilliseconds / 1000);
+        console.log(`IS MUTED = ${isMuted}`);
+        source.start(0, startTimeInMilliseconds / 1000);
+        mute(!isMuted);
         // AudioBufferSourceNode.start([when][, offset][, duration]);
       });
     }
@@ -969,17 +1122,18 @@
   
   function Model(viewManager) {
 
-    let timerId, startTime;
+    let timerId, startTime, 
+      pauseTimePassed = 0;
     
     // "Play" means to schedule updates for views
     // Start time is set to beginning
     
     function play() {
-      startTime = new Date().valueOf();
-      timerId = setInterval(function(){
+      startTime = (new Date().valueOf()) - pauseTimePassed;
+      timerId = setInterval(() => {
         let timePassed = (new Date().valueOf()) - startTime;
         viewManager.update(timePassed);
-      }, 100); // TODO - SHOULD NOT BE HARD CODED
+      }, VIZ_REFRESH_INTERVAL);
     }
     
     // "Stop" means stop the scheduled updates
@@ -988,6 +1142,8 @@
     function stop() {
       clearInterval(timerId);
       timerId = undefined;
+      pauseTimePassed = (new Date().valueOf()) - startTime;
+      console.log(`Pausing at ${pauseTimePassed}`);
       viewManager.stop();
     }
     
@@ -1004,6 +1160,7 @@
   
   
   // OBJECT: Controller (transport UI)
+  // meiData is passed for the voice names
   
   function initControllers(containerNode, model, meiData) {
 
@@ -1069,7 +1226,7 @@
 
     let transportInterface = document.createElement('div');
     transportInterface.classList.add('transport'); // TODO: should not be a magic value
-    [playButton, pauseButton, muteButtonContainer].forEach(x => transportInterface.appendChild(x));
+    [playButton, pauseButton, muteButtonContainer].forEach(but => transportInterface.appendChild(but));
 
     // Popup button for modal
     // TODO: THIS IS A KLUDGE -- FIX ME
@@ -1147,6 +1304,13 @@
     
     if ($('.' + VIZ_CLASS_NAMES.AUDIO).length) {
       audioContext = getAudioContext();
+
+      // Polfill for StereoPannerNode (for Safari) from
+      // https://github.com/mohayonao/stereo-panner-node/
+
+      if (!audioContext.createStereoPanner) {
+        StereoPannerNode.polyfill();
+      }
 
       if (!audioContext.createGain) {
         audioContext.createGain = audioContext.createGainNode;
