@@ -21,7 +21,7 @@
 }
 
 /* small  -  mobile */
-@media screen and (min-width: 320px) and (max-width: 767px) { /* mobile phones are too small for a side by side view */
+@media screen and (min-width: 320px) and (max-width: 767px) {
 	._sidenav {
 		display: none;
 	}
