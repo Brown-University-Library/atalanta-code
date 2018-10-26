@@ -20,10 +20,10 @@ $(function () {
 	var latinDoubleData;
 	var facsimileDoubleData;
 	/* emblem languages */
-	var singleTranslation = '.section--single .translation';
-	var singleOriginal = '.section--single .original';
-	var doubleTranslation = '.section--double .translation';
-	var doubleOriginal = '.section--double .original';
+	var singleTranslation = '.section--single div.translation';
+	var singleOriginal = '.section--single div.original';
+	var doubleTranslation = '.section--double div.translation';
+	var doubleOriginal = '.section--double div.original';
 	var fullEnglishText = '.panel--full .lang--english';
 	var leftEnglishText = '.panel--left .lang--english';
 	var rightEnglishText = '.panel--right .lang--english';
