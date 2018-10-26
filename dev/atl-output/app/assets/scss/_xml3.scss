@@ -70,7 +70,7 @@ h3.title {
     margin-left: 0;
 }
 
-.reg {
+span.regularized {
     color: #222;
 }
 
@@ -172,7 +172,7 @@ div.translation, div.original {
 .panel--left div.translation, .panel--left div.original, .panel--right div.translation, .panel--right div.original {
 	margin-top: 3.5rem;
 }
-.lang--english._motto--english , .lang--latin._motto--latin, .lang--german._motto--german {
+.lang--english._motto--english, .lang--latin._motto--latin, .lang--german._motto--german {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: 1fr;
@@ -190,15 +190,19 @@ div.title, div.fugue, ._motto--latin div.image {
 	grid-area: 1 / 2 / 2 / 12;
 	margin-top: 1rem;
 }
-h1.title, ._motto--latin h1, ._motto--german h1 {
+h1.title {
 	font-family: $display-font_emblem;
 	font-size: 2.625rem;
 	font-weight: 600;
 	line-height: 3.25rem;
+	br {
+		display: none;
+	}
 }
-.panel--left h1.title, .panel--left ._motto--latin h1, .panel--left ._motto--german h1, .panel--right h1.title, .panel--right ._motto--latin h1, .panel--right ._motto--german h1 {
+.panel--left h1.title, .panel--right h1.title {
 	font-size: 2rem;
 	line-height: 2.5rem;
+	background-color: pink;
 }
 h3.title {
 	font-family: $body-font_emblem;
@@ -209,7 +213,7 @@ h3.title {
 h3.title .italics {
 	font-style: oblique;
 }
-h3.title .reg, h1.title .reg {
+h3.title span.regularized, h1.title span.regularized {
 	color: #fff;
 }
 div.epigram {
@@ -220,7 +224,7 @@ div.epigram {
 h3.epigram, ._epigram--latin h3, ._epigram--german h3 {
 	grid-area: 1 / 5 / 2 / 10;
 }
-h3.epigram .reg, .verse-epigram .reg {
+h3.epigram span.regularized, .verse-epigram span.regularized {
 	color: #fff;
 }
 .panel--left h3.epigram, .panel--right h3.epigram {
