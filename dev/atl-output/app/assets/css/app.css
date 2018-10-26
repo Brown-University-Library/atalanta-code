@@ -1205,8 +1205,7 @@ h1.title {
 
 .panel--left h1.title, .panel--right h1.title {
   font-size: 2rem;
-  line-height: 2.5rem;
-  background-color: pink; }
+  line-height: 2.5rem; }
 
 h3.title {
   font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
