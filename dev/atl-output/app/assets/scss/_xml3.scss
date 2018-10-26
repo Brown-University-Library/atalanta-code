@@ -369,6 +369,15 @@ div.margin-note span.note-mark {
 	display: inline-block;
 }
 
+
+/*********** TESTS *************/
+.lang--latin._discourse--latin .pb {
+	display: none;
+}
+.discourse.la .pb {
+	display: none !important;
+}
+
 /****************************************/
 
 /*.discourse h3.title {

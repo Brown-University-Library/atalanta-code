@@ -1358,6 +1358,13 @@ div.margin-note.line2 {
 .section__discourse .edition--facsimile span.pb {
   display: inline-block; }
 
+/*********** TESTS *************/
+.lang--latin._discourse--latin .pb {
+  display: none; }
+
+.discourse.la .pb {
+  display: none !important; }
+
 /****************************************/
 /*.discourse h3.title {
 	grid-area: 1 / 4 / 2 / 13;
