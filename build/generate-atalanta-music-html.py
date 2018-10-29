@@ -1,7 +1,7 @@
 import os
 import re
 
-OUTPUT_TO_SCREEN = False # To write to files, set to False
+OUTPUT_TO_SCREEN = False # To write to files (in the current directory), set to False
 
 
 MP3_DIRECTORY = '/Users/patrickrashleigh/Documents/Atalanta/atalanta-media/audio/emblem-music/MP3'
@@ -47,11 +47,11 @@ for emblemNumber in range(1,51):
       <div class="atalanta-notation-viz atalanta-notation-viz-audio" 
             data-tempo="{TEMPO}">
             <div class="{AUDIO_TRACK_CLASSNAME}" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
-                data-mp3="{VOICE_A_MP3_DRY}" data-reverb-mp3="{VOICE_A_MP3_REVERB}"></div>
-            <div class="{AUDIO_TRACK_CLASSNAME}" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
-                data-mp3="{VOICE_H_MP3_DRY}" data-reverb-mp3="{VOICE_H_MP3_REVERB}"></div>
-            <div class="{AUDIO_TRACK_CLASSNAME}" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
                 data-mp3="{VOICE_P_MP3_DRY}" data-reverb-mp3="{VOICE_P_MP3_REVERB}"></div>
+            <div class="{AUDIO_TRACK_CLASSNAME}" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
+                data-mp3="{VOICE_A_MP3_DRY}" data-reverb-mp3="{VOICE_A_MP3_REVERB}"></div>
+            <div class="{AUDIO_TRACK_CLASSNAME}" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
+                data-mp3="{VOICE_H_MP3_DRY}" data-reverb-mp3="{VOICE_H_MP3_REVERB}"></div>
       </div>
       <div class="atalanta-notation-viz atalanta-notation-viz-pianoroll"></div>
     </div>'''.format(
