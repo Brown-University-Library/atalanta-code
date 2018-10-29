@@ -1195,6 +1195,22 @@ div.title, div.fugue, ._motto--latin div.image {
   grid-area: 1 / 2 / 2 / 12;
   margin-top: 1rem; }
 
+._frontispiece--english {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto; }
+  ._frontispiece--english div.ab {
+    grid-column: 4 / 10;
+    grid-row: auto;
+    outline: 2px solid blue; }
+
+.panel--right ._frontispiece--english {
+  background-color: #fff; }
+  .panel--right ._frontispiece--english div.ab {
+    grid-column: 2 / 11;
+    grid-row: auto;
+    outline: 2px solid blue; }
+
 h1.title {
   font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif;
   font-size: 2.625rem;
