@@ -190,22 +190,26 @@ div.title, div.fugue, ._motto--latin div.image {
 	grid-area: 1 / 2 / 2 / 12;
 	margin-top: 1rem;
 }
-._frontispiece--english {
+._frontispiece--english, ._dedication--english, ._preface--english {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
-	div.ab {
-		grid-column: 4 / 10;
-		grid-row: auto;
-		outline: 2px solid blue;
+	grid-area: 1 / 1 / 2 / 13;
+	div.title, div.epigram, div.dedication, div.preface {
+		grid-area: 1 / 3 / 2 / 11;
 	}
 }
-.panel--right ._frontispiece--english {
-	background-color: $white;
-	div.ab {
-		grid-column: 2 / 11;
-		grid-row: auto;
-		outline: 2px solid blue;
+.panel--right ._frontispiece--english, .panel--right ._dedication--english, .panel--right ._preface--english {
+	div.title, div.epigram, div.dedication, div.preface  {
+		grid-area: 1 / 1 / 2 / 13;
+		padding: 0 3rem;
+	}
+}
+/*** ??? REMOVE IN VERSION 3 ??? ***/
+.panel--left ._frontispiece--english, .panel--left ._dedication--english, .panel--left ._preface--english {
+	div.title, div.epigram, div.dedication, div.preface  {
+		grid-area: 1 / 1 / 2 / 13;
+		padding: 0 3rem;
 	}
 }
 h1.title {

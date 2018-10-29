@@ -1195,21 +1195,22 @@ div.title, div.fugue, ._motto--latin div.image {
   grid-area: 1 / 2 / 2 / 12;
   margin-top: 1rem; }
 
-._frontispiece--english {
+._frontispiece--english, ._dedication--english, ._preface--english {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto; }
-  ._frontispiece--english div.ab {
-    grid-column: 4 / 10;
-    grid-row: auto;
-    outline: 2px solid blue; }
+  grid-template-rows: auto;
+  grid-area: 1 / 1 / 2 / 13; }
+  ._frontispiece--english div.title, ._frontispiece--english div.epigram, ._frontispiece--english div.dedication, ._frontispiece--english div.preface, ._dedication--english div.title, ._dedication--english div.epigram, ._dedication--english div.dedication, ._dedication--english div.preface, ._preface--english div.title, ._preface--english div.epigram, ._preface--english div.dedication, ._preface--english div.preface {
+    grid-area: 1 / 3 / 2 / 11; }
 
-.panel--right ._frontispiece--english {
-  background-color: #fff; }
-  .panel--right ._frontispiece--english div.ab {
-    grid-column: 2 / 11;
-    grid-row: auto;
-    outline: 2px solid blue; }
+.panel--right ._frontispiece--english div.title, .panel--right ._frontispiece--english div.epigram, .panel--right ._frontispiece--english div.dedication, .panel--right ._frontispiece--english div.preface, .panel--right ._dedication--english div.title, .panel--right ._dedication--english div.epigram, .panel--right ._dedication--english div.dedication, .panel--right ._dedication--english div.preface, .panel--right ._preface--english div.title, .panel--right ._preface--english div.epigram, .panel--right ._preface--english div.dedication, .panel--right ._preface--english div.preface {
+  grid-area: 1 / 1 / 2 / 13;
+  padding: 0 3rem; }
+
+/*** ??? REMOVE IN VERSION 3 ??? ***/
+.panel--left ._frontispiece--english div.title, .panel--left ._frontispiece--english div.epigram, .panel--left ._frontispiece--english div.dedication, .panel--left ._frontispiece--english div.preface, .panel--left ._dedication--english div.title, .panel--left ._dedication--english div.epigram, .panel--left ._dedication--english div.dedication, .panel--left ._dedication--english div.preface, .panel--left ._preface--english div.title, .panel--left ._preface--english div.epigram, .panel--left ._preface--english div.dedication, .panel--left ._preface--english div.preface {
+  grid-area: 1 / 1 / 2 / 13;
+  padding: 0 3rem; }
 
 h1.title {
   font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif;
