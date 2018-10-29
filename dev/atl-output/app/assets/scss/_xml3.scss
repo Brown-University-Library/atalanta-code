@@ -13,6 +13,7 @@ body{
     font-family: $body-font_emblem;
 }
 
+/*********** EMBLEM *************/
 .epigram {
 	margin-top: 0;
 	text-align: left;
@@ -189,28 +190,6 @@ div.title, div.fugue, ._motto--latin div.image {
 .panel--left div.title, .panel--left div.fugue, .panel--left ._motto--latin div.image, .panel--right div.title, .panel--right div.fugue, .panel--right ._motto--latin div.image {
 	grid-area: 1 / 2 / 2 / 12;
 	margin-top: 1rem;
-}
-._frontispiece--english, ._dedication--english, ._preface--english {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: auto;
-	grid-area: 1 / 1 / 2 / 13;
-	div.title, div.epigram, div.dedication, div.preface {
-		grid-area: 1 / 3 / 2 / 11;
-	}
-}
-.panel--right ._frontispiece--english, .panel--right ._dedication--english, .panel--right ._preface--english {
-	div.title, div.epigram, div.dedication, div.preface  {
-		grid-area: 1 / 1 / 2 / 13;
-		padding: 0 3rem;
-	}
-}
-/*** ??? REMOVE IN VERSION 3 ??? ***/
-.panel--left ._frontispiece--english, .panel--left ._dedication--english, .panel--left ._preface--english {
-	div.title, div.epigram, div.dedication, div.preface  {
-		grid-area: 1 / 1 / 2 / 13;
-		padding: 0 3rem;
-	}
 }
 h1.title {
 	font-family: $display-font_emblem;
@@ -390,7 +369,38 @@ div.margin-note span.note-mark {
 .section__discourse .edition--facsimile span.pb {
 	display: inline-block;
 }
+/*********** END OF EMBLEM *************/
 
+/*********** FRONTMATTER *************/
+.section__frontispiece .lang--english, .section__frontispiece .lang--latin {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+	grid-area: 1 / 1 / 2 / 13;
+	div.title, div.epigram, div.dedication, div.preface, div.pref-epigram.la, div.epigram.la, div.preface, div.verse-discourse {
+		grid-area: 1 / 3 / 2 / 11;
+	}
+	div.epigram.la {
+		display: block;
+	}
+}
+.section__frontispiece.panel--right .lang--english, .section__frontispiece.panel--right .lang--latin {
+	div.title, div.epigram, div.dedication, div.preface, div.pref-epigram.la, div.epigram.la, div.preface, div.verse-discourse  {
+		grid-area: 1 / 1 / 2 / 13;
+		padding: 0 3rem;
+	}
+}
+/*** ??? REMOVE IN VERSION 3 ??? ***/
+.section__frontispiece.panel--left .lang--english, .section__frontispiece.panel--left .lang--latin  {
+	div.title, div.epigram, div.dedication, div.preface, div.pref-epigram.la, div.epigram.la, div.preface, div.verse-discourse  {
+		grid-area: 1 / 1 / 2 / 13;
+		padding: 0 3rem;
+	}
+}
+.section__frontispiece div.verse-epigram {
+	grid-area: 1 / 1 / 2 / 13;
+}
+/*********** END OF FRONTMATTER *************/
 
 /*********** TESTS *************/
 .lang--latin._discourse--latin .pb {
