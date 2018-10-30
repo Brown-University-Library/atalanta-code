@@ -22,12 +22,15 @@ body{
 	grid-area: 1 / 1 / 2 / 2;
 	margin-left: 100px;
 }
-
-
+.section__discourse .panel--right span.note-mark:nth-of-type(2) {
+	grid-area: 1 / 2 / 3 / 3;
+	outline: 1px solid red;
+	margin-left: 0;
+}
 /********** END OF ENGLISH XML ISSUES **************/
 
 
-/*********** ENGLISH EMBLEM *************/
+/*********** ENGLISH EMBLEM OVERRIDES *************/
 .epigram {
 	margin-top: 0;
 	text-align: left;
@@ -38,7 +41,6 @@ h3.discourse {
     text-align: left;
     font-style: normal;
 }
-
 .verse-epigram {
     margin-top: 0;
     text-align: left;
@@ -180,9 +182,9 @@ cite {
 	margin: 0 .25rem;
 	white-space: nowrap;
 }
-/*.subst {
-	margin-right: -.75rem;
-}*/
+/*********** END OF ENGLISH EMBLEM OVERRIDES *************/
+
+/*********** EMBLEM TEXT LAYOUT *************/
 div.translation, div.original {
 	margin-top: 2.5rem;
 }
@@ -278,7 +280,7 @@ h3.epigram span.regularized, .verse-epigram span.regularized {
 div.discourse, ._discourse--latin div.discourse {
 	display: grid;
 	grid-area: 2 / 4 / 3 / 13;
-	grid-gap: 2rem;
+	grid-gap: 0;
 	grid-template-columns: 4fr 2fr;
 	grid-template-rows: auto;
 	h3 {
@@ -305,22 +307,22 @@ div.discourse, ._discourse--latin div.discourse {
 		line-height: 1.8;
 	}
 }
-/*._discourse--latin div.discourse {
-	grid-area: 3 / 4 / 4 / 13;
-	grid-gap: 0;
-	.discourse-p1 {
+.panel--left div.discourse, .panel--right div.discourse, .panel--left ._discourse--latin div.discourse, .panel--right ._discourse--latin div.discourse {
+	grid-area: 2 / 2 / 3 / 13;
+	grid-template-columns: repeat(12, 1fr);
+	h3 {
 		grid-area: 1 / 1 / 2 / 2;
 	}
+	.discourse-p1 {
+		grid-area: 2 / 1 / 3 / 8;
+	}
 	.discourse-p2 {
-		grid-area: 3 / 1 / 4 / 2;
+		grid-area: 3 / 1 / 4 / 8;
 	}
-	.pb.Maier1618 {
-		grid-area: 2 / 1 / 3 / 2;
-		margin-top: 0;
+	div.margin-note {
+		left: 85vw;
+		padding-right: 1rem;
 	}
-}*/
-.edition--facsimile div.discourse .pb {
-	margin-top: 0;
 }
 div.margin-note {
 	display: inline-block;
@@ -333,53 +335,12 @@ div.margin-note {
 div.margin-note.line2 {
 	display: block;
 }
-div.margin-note span.note-mark {
-
-}
-.panel--left span.note-mark, .panel--right span.note-mark, .panel--left div.margin-note, .panel--right div.margin-note {
-	display: none;
-}
 /*.panel--left div.margin-note {  This is only worth the effort on large desktops ???
 	left: calc(50vw - 10%);
 	padding-right: .5rem;
 	width: 10vw;
 }*/
-.panel--left .pb, .panel--right .pb {
-	grid-area: 1 / 2 / 2 / 13;
-}
-.panel--left .pb.Meier, .panel--right .pb.Meier {
-	grid-area: 1 / 4 / 2 / 13;
-}
-.panel--left ._discourse--latin .pb.Maier1618, .panel--right ._discourse--latin .pb.Maier1618 {
-	grid-area: 1 / 2 / 2 / 13;
-}
-.panel--left div.discourse, .panel--right div.discourse {
-	grid-area: 2 / 2 / 3 / 13;
-	grid-gap: 0;
-	grid-template-columns: repeat(12, 1fr);
-	h3 {
-		grid-area: 1 / 1 / 2 / 12;
-	}
-/*	.ab {
-		grid-area: 2 / 1 / 3 / 12;
-	}*/
-}
-.panel--left ._discourse--latin h3.discourse, .panel--right ._discourse--latin h3.discourse  {
-	grid-area: 2 / 2 / 3 / 12;
-}
-.panel--left ._discourse--latin div.discourse, .panel--right ._discourse--latin div.discourse {
-	grid-area: 3 / 2 / 4 / 13;
-	grid-template-columns: repeat(12, 1fr);
-	.discourse-p1 {
-		grid-area: 1 / 1 / 2 / 12;
-	}
-	.discourse-p2 {
-		grid-area: 3 / 1 / 4 / 12;
-	}
-	.pb.Maier1618 {
-		grid-area: 2 / 1 / 3 / 12;
-	}
-}
+
 .section__discourse .edition--normalized span.pb {
 /*	display: none;*/
 }
