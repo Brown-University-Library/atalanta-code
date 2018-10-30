@@ -1,0 +1,542 @@
+@import 'colors';
+@import 'utilities';
+
+@page {
+	margin-top: 0;
+}
+
+body{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 0;
+    font-family: $body-font_emblem;
+}
+
+/*********** ENGLISH EMBLEM *************/
+.epigram {
+	margin-top: 0;
+	text-align: left;
+    font-style: normal;
+}
+
+h3.discourse {
+    text-align: left;
+    font-style: normal;
+}
+
+.verse-epigram {
+    margin-top: 0;
+    text-align: left;
+    margin-left: 0;
+    font-style: normal;
+}
+
+.verse-discourse {
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+/*    display: none;
+    color: #b5b5b5;*/
+    color: green;
+}
+h1.title {
+	text-align: left;
+}
+h3.title {
+    margin-top: 0;
+    text-align: left;
+}
+
+.pb {
+	color: #222;
+	display: none;
+}
+
+.pb:before{
+    color: #222;
+}
+
+.pb:after{
+    color: #222;
+}
+
+.milestone{
+	display: none;
+}
+
+.choice {
+    background-color: transparent;
+    margin-left: 0;
+}
+
+span.regularized {
+    color: #222;
+}
+
+.subst {
+    background-color: transparent;
+    margin-left: 0;
+ }
+
+.del{
+    text-decoration: none;
+}
+
+.add:before{
+	display: none;
+}
+
+.add:after{
+	display: none;
+}
+
+.unclear:before{
+	display: none;
+}
+
+.unclear:after{
+    display: none;
+}
+
+.fw{
+	display: none;
+}
+
+.margin-note{
+    float: none;
+    margin-left: 0;
+    outline: none;
+    width: auto;
+    padding-left: 0;
+}
+
+.note-mark{
+    color: #222;
+}
+
+.help{
+    display: none;
+}
+
+/********************************/
+cite {
+  font-style: oblique;
+ }
+.edition--normalized {
+	.del {
+		display: none;
+	}
+	.italics {
+		font-style: normal;
+	}
+	span.original {
+		display: none;
+	}
+/*	.pb, .ab.pb {
+		display: none;
+	}*/
+}
+.edition--facsimile {
+	.del {
+		display: none;
+	}
+	.italics {
+		font-style: oblique;
+	}
+	.pb:before{
+    content: "––– Page: ";
+	}
+
+	.pb:after{
+	    content: " –––"
+	}
+	span.regularized {
+		display: none;
+	}
+}
+.pc { /* what is .pc ??? */
+	white-space: nowrap;
+}
+.milestone {
+	color: $gray-medium;
+	margin: 0 .25rem;
+	white-space: nowrap;
+}
+/*.subst {
+	margin-right: -.75rem;
+}*/
+div.translation, div.original {
+	margin-top: 2.5rem;
+}
+.panel--left div.translation, .panel--left div.original, .panel--right div.translation, .panel--right div.original {
+	margin-top: 3.5rem;
+}
+.lang--english._motto--english, .lang--latin._motto--latin, .lang--german._motto--german {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 1fr;
+}
+.panel--left .lang--english._motto--english , .panel--left .lang--latin._motto--latin, .panel--left .lang--german._motto--german, .panel--right .lang--english._motto--english , .panel--right .lang--latin._motto--latin, .panel--right .lang--german._motto--german {
+
+}
+div.title, div.fugue, ._motto--latin div.image {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	grid-area: 1 / 4 / 2 / 10;
+}
+.panel--left div.title, .panel--left div.fugue, .panel--left ._motto--latin div.image, .panel--right div.title, .panel--right div.fugue, .panel--right ._motto--latin div.image {
+	grid-area: 1 / 2 / 2 / 12;
+	margin-top: 1rem;
+}
+h1.title {
+	font-family: $display-font_emblem;
+	font-size: 2.625rem;
+	font-weight: 600;
+	line-height: 3.25rem;
+	br {
+		display: none;
+	}
+}
+.panel--left h1.title, .panel--right h1.title {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h3.title {
+	font-family: $body-font_emblem;
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+h3.title .italics {
+	font-style: oblique;
+}
+h3.title span.regularized, h1.title span.regularized {
+	color: #fff;
+}
+div.epigram {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+}
+h3.epigram, ._epigram--latin h3, ._epigram--german h3 {
+	grid-area: 1 / 5 / 2 / 10;
+}
+h3.epigram span.regularized, .verse-epigram span.regularized {
+	color: #fff;
+}
+.panel--left h3.epigram, .panel--right h3.epigram {
+	grid-area: 1 / 3 / 2 / 11;
+}
+.verse-epigram {
+	font-size: 1.5rem;
+	grid-area: 2 / 5 / 3 / 10;
+	line-height: 2.5rem;
+}
+.panel--left .verse-epigram, .panel--right .verse-epigram {
+	grid-area: 2 / 3 / 3 / 11;
+}
+.section__discourse div.translation, .section__discourse div.original {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+	margin-bottom: 8rem;
+}
+.section__discourse .switch-wrapper {
+	grid-area: 1 / 1 / 2 / 13;
+}
+.section__discourse div.original .switch-wrapper .facsimile-normalized-switch {
+	display: none;
+}
+._discourse--english, ._discourse--latin {
+	display: grid;
+	grid-area: 2 / 1 / 3 / 13;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+}
+.pb, ._discourse--latin .pb {
+	display: inline-block;
+	font-size: .75rem;
+	grid-area: 1 / 4 / 2 / 11;
+}
+.pb.Meier {
+	grid-area: 1 / 5 / 2 / 11;
+}
+._discourse--latin .pb.Maier1618 {
+	grid-area: 1 / 4 / 2 / 11;
+}
+._discourse--latin h3.discourse {
+	grid-area: 2 / 4 / 3 / 11;
+}
+div.discourse, ._discourse--latin div.discourse {
+	display: grid;
+	grid-area: 2 / 4 / 3 / 13;
+	grid-gap: 2rem;
+	grid-template-columns: 4fr 2fr;
+	grid-template-rows: auto;
+	h3 {
+		grid-area: 1 / 1 / 2 / 3;
+	}
+	.ab {
+		font-size: 1.25rem;
+		grid-area: 2 / 1 / 3 / 2;
+		line-height: 2rem;
+	}
+	.pb {
+		display: block;
+		margin-top: 2rem;
+	}
+}
+._discourse--latin div.discourse {
+	grid-area: 3 / 4 / 4 / 13;
+	grid-gap: 0;
+	.discourse-p1 {
+		grid-area: 1 / 1 / 2 / 2;
+	}
+	.discourse-p2 {
+		grid-area: 3 / 1 / 4 / 2;
+	}
+	.pb.Maier1618 {
+		grid-area: 2 / 1 / 3 / 2;
+		margin-top: 0;
+	}
+}
+.edition--facsimile div.discourse .pb {
+	margin-top: 0;
+}
+div.margin-note {
+	display: inline-block;
+	padding-right: 2rem;
+	position: absolute;
+	/*left: 75rem;*/
+	left: 80vw;
+}
+div.margin-note.line2 {
+	display: block;
+}
+div.margin-note span.note-mark {
+
+}
+.panel--left span.note-mark, .panel--right span.note-mark, .panel--left div.margin-note, .panel--right div.margin-note {
+	display: none;
+}
+/*.panel--left div.margin-note {  This is only worth the effort on large desktops ???
+	left: calc(50vw - 10%);
+	padding-right: .5rem;
+	width: 10vw;
+}*/
+.panel--left .pb, .panel--right .pb {
+	grid-area: 1 / 2 / 2 / 13;
+}
+.panel--left .pb.Meier, .panel--right .pb.Meier {
+	grid-area: 1 / 4 / 2 / 13;
+}
+.panel--left ._discourse--latin .pb.Maier1618, .panel--right ._discourse--latin .pb.Maier1618 {
+	grid-area: 1 / 2 / 2 / 13;
+}
+.panel--left div.discourse, .panel--right div.discourse {
+	grid-area: 2 / 2 / 3 / 13;
+	grid-gap: 0;
+	grid-template-columns: repeat(12, 1fr);
+	h3 {
+		grid-area: 1 / 1 / 2 / 12;
+	}
+	.ab {
+		grid-area: 2 / 1 / 3 / 12;
+	}
+}
+.panel--left ._discourse--latin h3.discourse, .panel--right ._discourse--latin h3.discourse  {
+	grid-area: 2 / 2 / 3 / 12;
+}
+.panel--left ._discourse--latin div.discourse, .panel--right ._discourse--latin div.discourse {
+	grid-area: 3 / 2 / 4 / 13;
+	grid-template-columns: repeat(12, 1fr);
+	.discourse-p1 {
+		grid-area: 1 / 1 / 2 / 12;
+	}
+	.discourse-p2 {
+		grid-area: 3 / 1 / 4 / 12;
+	}
+	.pb.Maier1618 {
+		grid-area: 2 / 1 / 3 / 12;
+	}
+}
+.section__discourse .edition--normalized span.pb {
+/*	display: none;*/
+}
+.section__discourse .edition--facsimile span.pb {
+	display: inline-block;
+}
+/*********** END OF ENGLISH EMBLEM *************/
+
+/*********** LATIN/GERMAN EMBLEM *************/
+h3.epigram {
+	text-indent: 0;
+}
+div.epigram.la h3.title, div.epigram.de h3.title {
+	grid-area: 1 / 3 / 2 / 11;
+	line-height: 5rem; /* ??? this needs a fix to account for every break. */
+	text-align: center;
+	text-indent: 0;
+}
+.original .verse-epigram {
+	grid-area: 2 / 3 / 3 / 11;
+	line-height: 1rem; /* ??? this needs a fix to account for every break. */
+	text-align: center;
+	text-indent: 0;
+	span {
+		margin: 0;
+	}
+}
+/*********** END OF LATIN/GERMAN EMBLEM *************/
+
+/*********** FRONTMATTER *************/
+.section__frontispiece .lang--english, .section__frontispiece .lang--latin {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+	grid-area: 1 / 1 / 2 / 13;
+	div.title, div.epigram, div.dedication, div.preface, div.pref-epigram.la, div.epigram.la, div.preface, div.verse-discourse {
+		grid-area: 1 / 3 / 2 / 11;
+	}
+	div.epigram.la {
+		display: block;
+	}
+}
+.section__frontispiece.panel--right .lang--english, .section__frontispiece.panel--right .lang--latin {
+	div.title, div.epigram, div.dedication, div.preface, div.pref-epigram.la, div.epigram.la, div.preface, div.verse-discourse  {
+		grid-area: 1 / 1 / 2 / 13;
+		padding: 0 3rem;
+	}
+}
+/*** ??? REMOVE IN VERSION 3 ??? ***/
+.section__frontispiece.panel--left .lang--english, .section__frontispiece.panel--left .lang--latin  {
+	div.title, div.epigram, div.dedication, div.preface, div.pref-epigram.la, div.epigram.la, div.preface, div.verse-discourse  {
+		grid-area: 1 / 1 / 2 / 13;
+		padding: 0 3rem;
+	}
+}
+.section__frontispiece div.verse-epigram {
+	grid-area: 1 / 1 / 2 / 13;
+}
+/*********** END OF FRONTMATTER *************/
+
+/*********** TESTS *************/
+.lang--latin._discourse--latin .pb {
+	display: none;
+}
+.discourse.la .pb {
+	display: none !important;
+}
+
+/****************************************/
+
+/*.discourse h3.title {
+	grid-area: 1 / 4 / 2 / 13;
+}
+.note-mark {
+	grid-area: 1 / 4 / 2 / 13;
+}
+.margin-note {
+	outline: 5px solid red;
+	grid-area: 1 / 11 / 2 / 13;
+}
+.margin-note .note-mark {
+	grid-area: 1 / 11 / 2 / 13;
+}
+.discourse-p1 {
+	display: grid;
+	font-size: 1rem;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 1;
+	grid-area: 2 / 4 / 3 / 13;
+}
+.discourse-p1 > .note-mark {
+	outline: 2px solid green;
+	grid-area: 2 / 1 / 3 / 2;
+}
+.discourse-p1 .margin-note {
+	outline: 5px solid green;
+	grid-area: 2 / 2 / 3 / 3;
+}
+.discourse-p1 .margin-note .note-mark{
+	grid-area: 2 / 2 / 3 / 3;
+}
+.discourse-p2 .note-mark {
+	grid-area: 3 / 4 / 4 / 10;
+}*/
+/* BREAKPOINTS */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+/*	.subst {
+		margin-right: -.5rem;
+	}*/
+	div.title {
+		grid-area: 1 / 2 / 2 / 12;
+	}
+	h1.title {
+		font-size: 2rem;
+		line-height: 2.125rem;
+	}
+	h3.title {
+		font-size: .825rem;
+		line-height: 1.5rem;
+	}
+	.pb {
+		grid-area: 1 / 1 / 2 / 13;
+	}
+	.pb.Meier {
+		grid-area: 1 / 4 / 2 / 13;
+	}
+	.pb.Maier1618 {
+		grid-area: 1 / 1 / 2 / 13;
+	}
+	.verse-epigram {
+		font-size: 1.125rem;
+		grid-area: 2 / 1 / 3 / 13;
+		line-height: 1.875rem;
+		padding: 0 .5rem 0 1rem;
+	}
+	._discourse--english, ._discourse--latin {
+		margin: 0 1rem;
+	}
+	div.discourse, ._discourse--latin div.discourse {
+		grid-area: 2 / 1 / 3 / 13;
+		grid-template-columns: repeat(12, 1fr);
+		h3 {
+			grid-area: 1 / 1 / 2 / 13;
+		}
+		.ab {
+			grid-area: 2 / 1 / 3 / 13;
+		}
+	}
+	._discourse--latin div.discourse {
+	grid-area: 3 / 4 / 4 / 13;
+	grid-gap: 0;
+	.discourse-p1 {
+		grid-area: 1 / 1 / 2 / 2;
+	}
+	.discourse-p2 {
+		grid-area: 3 / 1 / 4 / 2;
+	}
+	.pb.Maier1618 {
+		grid-area: 2 / 1 / 3 / 2;
+	}
+}
+	span.note-mark, div.margin-note {
+		display: none;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.verse-epigram {
+		font-size: 1.5rem;
+		grid-area: 2 / 4 / 3 / 12;
+		line-height: 2.5rem;
+	}
+	.panel--left .verse-epigram, .panel--right .verse-epigram {
+		grid-area: 2 / 3 / 3 / 11;
+	}
+}
