@@ -13,6 +13,20 @@ body{
     font-family: $body-font_emblem;
 }
 
+/********** ENGLISH XML ISSUES **************/
+.section__discourse h3.title {
+	display: none;
+}
+.section__discourse span.note-mark:nth-of-type(2) {
+	background-color: $error;
+	grid-area: 1 / 1 / 2 / 2;
+	margin-left: 100px;
+}
+
+
+/********** END OF ENGLISH XML ISSUES **************/
+
+
 /*********** ENGLISH EMBLEM *************/
 .epigram {
 	margin-top: 0;
@@ -258,17 +272,6 @@ h3.epigram span.regularized, .verse-epigram span.regularized {
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
 }
-.pb, ._discourse--latin .pb {
-	display: inline-block;
-	font-size: .75rem;
-	grid-area: 1 / 4 / 2 / 11;
-}
-.pb.Meier {
-	grid-area: 1 / 5 / 2 / 11;
-}
-._discourse--latin .pb.Maier1618 {
-	grid-area: 1 / 4 / 2 / 11;
-}
 ._discourse--latin h3.discourse {
 	grid-area: 2 / 4 / 3 / 11;
 }
@@ -279,19 +282,30 @@ div.discourse, ._discourse--latin div.discourse {
 	grid-template-columns: 4fr 2fr;
 	grid-template-rows: auto;
 	h3 {
-		grid-area: 1 / 1 / 2 / 3;
+		font-size: 1.25rem;
+		grid-area: 1 / 1 / 2 / 2;
+		line-height: 1.8;
+	}
+	.discourse-p1 {
+		grid-area: 2 / 1 / 3 / 2;
+	}
+	.discourse-p2 {
+		grid-area: 3 / 1 / 4 / 2;
 	}
 	.ab {
 		font-size: 1.25rem;
-		grid-area: 2 / 1 / 3 / 2;
-		line-height: 2rem;
+		line-height: 1.8;
+		span {
+			font-size: 1.25rem;
+			line-height: 1.8;
+		}
 	}
-	.pb {
-		display: block;
-		margin-top: 2rem;
+	.margin-note {
+		font-size: 1.25rem;
+		line-height: 1.8;
 	}
 }
-._discourse--latin div.discourse {
+/*._discourse--latin div.discourse {
 	grid-area: 3 / 4 / 4 / 13;
 	grid-gap: 0;
 	.discourse-p1 {
@@ -304,12 +318,13 @@ div.discourse, ._discourse--latin div.discourse {
 		grid-area: 2 / 1 / 3 / 2;
 		margin-top: 0;
 	}
-}
+}*/
 .edition--facsimile div.discourse .pb {
 	margin-top: 0;
 }
 div.margin-note {
 	display: inline-block;
+	line-height: 2rem;
 	padding-right: 2rem;
 	position: absolute;
 	/*left: 75rem;*/
@@ -345,9 +360,9 @@ div.margin-note span.note-mark {
 	h3 {
 		grid-area: 1 / 1 / 2 / 12;
 	}
-	.ab {
+/*	.ab {
 		grid-area: 2 / 1 / 3 / 12;
-	}
+	}*/
 }
 .panel--left ._discourse--latin h3.discourse, .panel--right ._discourse--latin h3.discourse  {
 	grid-area: 2 / 2 / 3 / 12;
@@ -434,46 +449,8 @@ div.epigram.la h3.title, div.epigram.de h3.title {
 }
 
 /****************************************/
-
-/*.discourse h3.title {
-	grid-area: 1 / 4 / 2 / 13;
-}
-.note-mark {
-	grid-area: 1 / 4 / 2 / 13;
-}
-.margin-note {
-	outline: 5px solid red;
-	grid-area: 1 / 11 / 2 / 13;
-}
-.margin-note .note-mark {
-	grid-area: 1 / 11 / 2 / 13;
-}
-.discourse-p1 {
-	display: grid;
-	font-size: 1rem;
-	grid-template-columns: 3fr 1fr;
-	grid-template-rows: 1;
-	grid-area: 2 / 4 / 3 / 13;
-}
-.discourse-p1 > .note-mark {
-	outline: 2px solid green;
-	grid-area: 2 / 1 / 3 / 2;
-}
-.discourse-p1 .margin-note {
-	outline: 5px solid green;
-	grid-area: 2 / 2 / 3 / 3;
-}
-.discourse-p1 .margin-note .note-mark{
-	grid-area: 2 / 2 / 3 / 3;
-}
-.discourse-p2 .note-mark {
-	grid-area: 3 / 4 / 4 / 10;
-}*/
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {
-/*	.subst {
-		margin-right: -.5rem;
-	}*/
 	div.title {
 		grid-area: 1 / 2 / 2 / 12;
 	}
@@ -485,15 +462,6 @@ div.epigram.la h3.title, div.epigram.de h3.title {
 		font-size: .825rem;
 		line-height: 1.5rem;
 	}
-	.pb {
-		grid-area: 1 / 1 / 2 / 13;
-	}
-	.pb.Meier {
-		grid-area: 1 / 4 / 2 / 13;
-	}
-	.pb.Maier1618 {
-		grid-area: 1 / 1 / 2 / 13;
-	}
 	.verse-epigram {
 		font-size: 1.125rem;
 		grid-area: 2 / 1 / 3 / 13;
@@ -504,28 +472,19 @@ div.epigram.la h3.title, div.epigram.de h3.title {
 		margin: 0 1rem;
 	}
 	div.discourse, ._discourse--latin div.discourse {
+		background-color: $error;
 		grid-area: 2 / 1 / 3 / 13;
 		grid-template-columns: repeat(12, 1fr);
-		h3 {
-			grid-area: 1 / 1 / 2 / 13;
+		h3.discourse {
+			grid-area: 1 / 2 / 2 / 12;
 		}
-		.ab {
-			grid-area: 2 / 1 / 3 / 13;
+		.discourse-p1 {
+			grid-area: 2 / 2 / 3 / 12;
+		}
+		.discourse-p2 {
+			grid-area: 3 / 2 / 4 / 12;
 		}
 	}
-	._discourse--latin div.discourse {
-	grid-area: 3 / 4 / 4 / 13;
-	grid-gap: 0;
-	.discourse-p1 {
-		grid-area: 1 / 1 / 2 / 2;
-	}
-	.discourse-p2 {
-		grid-area: 3 / 1 / 4 / 2;
-	}
-	.pb.Maier1618 {
-		grid-area: 2 / 1 / 3 / 2;
-	}
-}
 	span.note-mark, div.margin-note {
 		display: none;
 	}
@@ -538,5 +497,12 @@ div.epigram.la h3.title, div.epigram.de h3.title {
 	}
 	.panel--left .verse-epigram, .panel--right .verse-epigram {
 		grid-area: 2 / 3 / 3 / 11;
+	}
+	div.discourse, ._discourse--latin div.discourse {
+		grid-area: 2 / 2 / 3 / 13;
+	}
+	div.margin-note {
+		left: 75vw;
+		padding-right: 1rem;
 	}
 }
