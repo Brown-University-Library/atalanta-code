@@ -15,16 +15,25 @@ body{
 
 /********** ENGLISH XML ISSUES **************/
 .section__discourse h3.title {
-	display: none;
+/*	display: none;*/
+	background-color: $error;
+} /* ??? I won't need this after we sort out the h3.title issue in the English discourse */
+.section__discourse .discourse.la h3.title {
+	background-color: transparent;
+} /* ??? I won't need this after we sort out the h3.title issue in the English discourse */
+.section__discourse.panel--left div.discourse, .section__discourse.panel--right div.discourse {
+	h3.title {
+		background-color: $error;
+	}
 }
 .section__discourse span.note-mark:nth-of-type(2) {
 	background-color: $error;
 	grid-area: 1 / 1 / 2 / 2;
 	margin-left: 100px;
 }
-.section__discourse .panel--right span.note-mark:nth-of-type(2) {
+.section__discourse.panel--right span.note-mark:nth-of-type(2) {
+	background-color: $error;
 	grid-area: 1 / 2 / 3 / 3;
-	outline: 1px solid red;
 	margin-left: 0;
 }
 /********** END OF ENGLISH XML ISSUES **************/
@@ -277,63 +286,70 @@ h3.epigram span.regularized, .verse-epigram span.regularized {
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
 }
-._discourse--latin h3.discourse {
-	grid-area: 2 / 4 / 3 / 11;
-}
-div.discourse, ._discourse--latin div.discourse {
+div.discourse {
 	display: grid;
-	grid-area: 2 / 4 / 3 / 13;
+	grid-column: 4 / 13;
 	grid-gap: 0;
 	grid-template-columns: 4fr 2fr;
 	grid-template-rows: auto;
-	h3 {
+	h3.discourse, h3.title {
 		font-size: 1.25rem;
-		grid-area: 1 / 1 / 2 / 2;
-		line-height: 1.8;
+		font-weight: 400;
+		grid-column: 1 / 2;
+		line-height: 2rem;
 	}
-	.discourse-p1 {
-		grid-area: 2 / 1 / 3 / 2;
+	h3.discourse:nth-of-type(2), h3.title:nth-of-type(2) {
+		margin-top: 3rem;
+		margin-bottom: -2rem;
 	}
-	.discourse-p2 {
-		grid-area: 3 / 1 / 4 / 2;
+	.discourse-p1, .discourse-p2 {
+		font-size: 1.25rem;
+		grid-column: 1 / 2;
+		line-height: 2rem;
+		span {
+			font-size: 1.25rem;
+			line-height: 2rem;
+		}
 	}
 	.ab {
 		font-size: 1.25rem;
-		line-height: 1.8;
+		line-height: 2rem;
 		span {
 			font-size: 1.25rem;
-			line-height: 1.8;
+			line-height: 2rem;
 		}
 	}
-	.margin-note {
+	div.margin-note {
+		display: inline-block;
 		font-size: 1.25rem;
-		line-height: 1.8;
+		line-height: 2rem;
+		padding-right: 2rem;
+		position: absolute;
+		left: 80vw;
 	}
 }
-.panel--left div.discourse, .panel--right div.discourse, .panel--left ._discourse--latin div.discourse, .panel--right ._discourse--latin div.discourse {
-	grid-area: 2 / 2 / 3 / 13;
+.panel--left div.discourse, .panel--right div.discourse {
+	grid-column: 2 / 13;
+/*	grid-area: 2 / 2 / 3 / 13;*/
 	grid-template-columns: repeat(12, 1fr);
-	h3 {
-		grid-area: 1 / 1 / 2 / 2;
+	h3.discourse, h3.title {
+		background-color: $error;
 	}
-	.discourse-p1 {
-		grid-area: 2 / 1 / 3 / 8;
+	.discourse-p1, .discourse-p2 {
+		grid-column: 1 / 8;
 	}
-	.discourse-p2 {
-		grid-area: 3 / 1 / 4 / 8;
+}
+.panel--left div.discourse {
+ 	div.margin-note {
+		left: 35vw;
+		width: 13vw;
 	}
+}
+.panel--right div.discourse {
 	div.margin-note {
 		left: 85vw;
 		padding-right: 1rem;
 	}
-}
-div.margin-note {
-	display: inline-block;
-	line-height: 2rem;
-	padding-right: 2rem;
-	position: absolute;
-	/*left: 75rem;*/
-	left: 80vw;
 }
 div.margin-note.line2 {
 	display: block;
@@ -356,12 +372,9 @@ div.margin-note.line2 {
 div.edition--facsimile span.underline2 {
 	border-bottom: 2px solid $dark-gray;
 }
-
-
 /*********** END OF ENGLISH EMBLEM STYLES *************/
 
-
-/*********** LATIN/GERMAN EMBLEM *************/
+/*********** LATIN/GERMAN EMBLEM LAYOUT *************/
 h3.epigram {
 	text-indent: 0;
 }
@@ -380,7 +393,7 @@ div.epigram.la h3.title, div.epigram.de h3.title {
 		margin: 0;
 	}
 }
-/*********** END OF LATIN/GERMAN EMBLEM *************/
+/*********** END OF LATIN/GERMAN EMBLEM LAYOUT *************/
 
 /*********** FRONTMATTER *************/
 .section__frontispiece .lang--english, .section__frontispiece .lang--latin {
@@ -422,7 +435,7 @@ div.epigram.la h3.title, div.epigram.de h3.title {
 }
 
 /****************************************/
-/* BREAKPOINTS */
+/***************** BREAKPOINTS *****************/
 @media screen and (min-width: 320px) and (max-width: 767px) {
 	div.title {
 		grid-area: 1 / 2 / 2 / 12;
@@ -444,18 +457,18 @@ div.epigram.la h3.title, div.epigram.de h3.title {
 	._discourse--english, ._discourse--latin {
 		margin: 0 1rem;
 	}
-	div.discourse, ._discourse--latin div.discourse {
+	div.discourse {
 		background-color: $error;
-		grid-area: 2 / 1 / 3 / 13;
+		grid-column: 1 / 13;
 		grid-template-columns: repeat(12, 1fr);
-		h3.discourse {
-			grid-area: 1 / 2 / 2 / 12;
+		h3.discourse, h3.title {
+			grid-column: 2 / 12;
 		}
-		.discourse-p1 {
-			grid-area: 2 / 2 / 3 / 12;
+		.discourse-p1, .discourse-p2 {
+			grid-column: 2 / 12;
 		}
-		.discourse-p2 {
-			grid-area: 3 / 2 / 4 / 12;
+		span.note-mark, div.margin-note {
+			display: none;
 		}
 	}
 	span.note-mark, div.margin-note {
@@ -471,11 +484,16 @@ div.epigram.la h3.title, div.epigram.de h3.title {
 	.panel--left .verse-epigram, .panel--right .verse-epigram {
 		grid-area: 2 / 3 / 3 / 11;
 	}
-	div.discourse, ._discourse--latin div.discourse {
-		grid-area: 2 / 2 / 3 / 13;
+	div.discourse {
+		grid-column: 2 / 13;
 	}
 	div.margin-note {
 		left: 75vw;
 		padding-right: 1rem;
+	}
+	.panel--left div.discourse, .panel--right div.discourse {
+		span.note-mark, div.margin-note {
+			display: none;
+		}
 	}
 }
