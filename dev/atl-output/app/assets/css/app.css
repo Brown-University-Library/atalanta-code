@@ -1342,6 +1342,9 @@ cite {
 .edition--facsimile span.regularized {
   display: none; }
 
+span.underline2 {
+  border-bottom: none; }
+
 .pc {
   /* what is .pc ??? */
   white-space: nowrap; }
@@ -1509,7 +1512,12 @@ div.margin-note.line2 {
 .section__discourse .edition--facsimile span.pb {
   display: inline-block; }
 
-/*********** END OF ENGLISH EMBLEM *************/
+/*********** END OF ENGLISH EMBLEM LAYOUT *************/
+/*********** ENGLISH EMBLEM STYLES *************/
+div.edition--facsimile span.underline2 {
+  border-bottom: 2px solid #777; }
+
+/*********** END OF ENGLISH EMBLEM STYLES *************/
 /*********** LATIN/GERMAN EMBLEM *************/
 h3.epigram {
   text-indent: 0; }
