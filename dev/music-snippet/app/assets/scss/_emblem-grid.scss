@@ -1,0 +1,206 @@
+@import 'utilities';
+@import 'colors';
+
+main.emblem-page {
+	background-color: $black;
+	background-image: url("../img/default/bkg-illustration.png");
+	/*background-repeat: no-repeat;*/
+	/*background-size: cover;*/
+	background-size: contain;
+	display: grid;
+	grid-template-columns: repeat( 4, 1fr);
+	grid-template-rows: 1fr;
+	font-family: $body-font_emblem;
+	font-size: 1rem;
+	min-height: calc(100vh - 3.125rem);
+	line-height: 1.5rem;
+	margin-top: $topnav-h;
+	padding: 0 0 .125rem 0;
+}
+.emblem {
+	margin-top: $subnav-h;
+	display: grid;
+	grid-area: 1 / 1 / 2 / 5;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: repeat(5, fit-content(100%));
+	min-height: 100vh;
+	width: 100%;
+}
+.emblem section {
+	background-color: hsla(0, 0%, 100%, .97);
+	padding: 1rem 0;
+}
+.emblem section.section__motto, .emblem .section__image section, .emblem section.section__epigram {
+	background-color: $gray-dark_transparent;
+	color: $white;
+}
+.panel--full {
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+.panel--left {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.panel--right {
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+.section__motto {
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+.section__image {
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	.image__picture {
+		display: grid;
+		justify-content: center;
+		padding-bottom: 1rem;
+	}
+	img {
+		max-width: 30rem;
+	}
+}
+.section__music {
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+.music--full {
+/*	width: 100%;*/
+}
+.section__epigram {
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+.emblem section.section__epigram {
+	padding: 3rem 0 6rem 0;
+}
+.section__discourse {
+	grid-row-start: 5;
+	grid-row-end: 6;
+	margin-bottom: -3px;
+}
+.section__motto.panel--left, .section__epigram.panel--left, .section__discourse.panel--left { /* needs a better solution now that I'm using a background image ??? */
+/*	border-right: 5px solid white;*/
+}
+.section__motto.panel--right, .section__epigram.panel--right, .section__discourse.panel--right {
+/*	border-left: 5px solid white;*/
+}
+.section__facsimile {
+	grid-column-start: 1;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 2;
+/*	grid-area: 1 / 1 / 1 / 5;*/
+	margin-top: $subnav-h;
+	/*padding-top: $subnav-h;*/
+}
+.frontmatter section.facsimile, .frontmatter section._facsimile {
+	padding: 0;
+}
+.facsimile--full {
+	background-color: $black;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+}
+.grid--left {
+	grid-column-start: 1;
+	grid-column-end: 3;
+/*	grid-area: 1 / 1 / 2 / 3;*/
+}
+.grid--right {
+	grid-column-start: 3;
+	grid-column-end: 5;
+/*	grid-area: 1 / 3 / 2 / 5;*/
+}
+.grid--half {
+	width: 50%;
+	background-color: silver;
+}
+.switch-wrapper {
+/*	border: 1px solid green;*/
+	display: flex;
+	justify-content: center;
+	top: 0;
+	min-height: 1.25rem;
+	margin-bottom: 1.5rem;
+	width: 100%;
+}
+.latin-german-switch, .facsimile-normalized-switch {
+/*	border: 1px solid red;*/
+	display: flex;
+	align-self: flex-start;
+	justify-content: center;
+	height: 1.25rem;
+	width: 8rem;
+	ul {
+/*		border: 1px solid blue;*/
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		width: 100%;
+		li {
+/*			border: 1px solid green;*/
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: .75em;
+			margin: 0 .25rem;
+			width: 100%;
+			a {
+				color: $black;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				width: 100%;
+			}
+			a:hover {
+				color: $aqua_darker;
+			}
+		}
+		li.is-selected {
+			border-bottom: 3px solid $aqua;
+			margin-bottom: -3px;
+		}
+	}
+}
+.section__motto .switch-wrapper, .section__epigram .switch-wrapper{
+	li {
+
+	}
+	li.is-selected {
+		border-bottom: 3px solid $aqua;
+	}
+	a {
+		color: $white;
+	}
+	a:hover {
+		color: $aqua;
+	}
+}
+
+/* BREAKPOINTS */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.emblem {
+		margin-top: 0;
+	}
+	.emblem__image--cropped {
+		width: 100%;
+	}
+	main.emblem-page {
+		padding: 0 0 $subnav-h 0;
+	}
+	.section__facsimile {
+		margin-top: 0;
+		margin-bottom: $subnav-h;
+
+	}
+}

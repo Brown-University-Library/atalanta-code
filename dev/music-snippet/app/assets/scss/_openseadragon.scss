@@ -1,0 +1,201 @@
+@import 'colors';
+@import 'utilities';
+
+#openseadragon-wrapper {
+	height: calc(100vh - 7.625rem); /* currently, the combined height of the topnav and subnav is 7.625rem */
+	background-color: $black;
+}
+#openseadragon-wrapper canvas {
+	cursor: pointer;
+}
+#tools {
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	z-index: 1000;
+	width: 100%;
+}
+#tools>span {
+	background-color: $black_transparent;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 8vh;
+	padding: 0 .5rem;
+	width: 10rem;
+}
+#tools a {
+	display: flex !important;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: $aqua;
+	flex: 1 0 0px;
+	font-size: .875rem;
+	padding: 0 .25rem;
+}
+#tools a span {
+	display: block;
+	text-align: center;
+}
+#tools a:hover, #tools a:focus {
+	color: $orange-yellow;
+	transition: .3s;
+}
+#tools a:active {
+	color: $gray-medium;
+	transition: .3s;
+}
+#icon_arrow-left-lineart, #icon_arrow-right-lineart {
+	width: 2rem;
+	height: 4rem;
+}
+#icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline, #icon_zoom-in-lineart g#handle path, #icon_zoom-in-lineart g#symbol path, #icon_zoom-out-lineart g#handle path, #icon_zoom-out-lineart g#symbol line {
+	stroke: $aqua;
+}
+#icon_zoom-in-lineart g#glass path, #icon_zoom-out-lineart g#glass path {
+	fill: $aqua;
+}
+#icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline {
+	stroke-width: 10;
+}
+#next:hover, #next:focus {
+	#icon_arrow-right-lineart polyline {
+		stroke: $orange-yellow;
+		transition: .3s;
+	}
+}
+#next:active {
+	#icon_arrow-right-lineart polyline {
+		stroke: $gray-medium;
+		transition: .3s;
+	}
+}
+#previous:hover, #previous:focus {
+	#icon_arrow-left-lineart polyline {
+		stroke: $orange-yellow;
+		transition: .3s;
+	}
+}
+#previous:active {
+	#icon_arrow-left-lineart polyline {
+		stroke: $gray-medium;
+		transition: .3s;
+	}
+}
+#zoom-in:hover, #zoom-in:focus {
+	#icon_zoom-in-lineart g#handle path, #icon_zoom-in-lineart g#symbol path {
+		stroke: $orange-yellow;
+		transition: .3s;
+	}
+	#icon_zoom-in-lineart g#glass path {
+		fill: $orange-yellow;
+		transition: .3s;
+	}
+}
+#zoom-in:active {
+	#icon_zoom-in-lineart g#handle path, #icon_zoom-in-lineart g#symbol path {
+		stroke: $gray-medium;
+		transition: .3s;
+	}
+	#icon_zoom-in-lineart g#glass path {
+		fill: $gray-medium;
+		transition: .3s;
+	}
+}
+#zoom-out:hover, #zoom-out:focus {
+	#icon_zoom-out-lineart g#handle path, #icon_zoom-out-lineart g#symbol line {
+		stroke: $orange-yellow;
+		transition: .3s;
+	}
+	#icon_zoom-out-lineart g#glass path {
+		fill: $orange-yellow;
+		transition: .3s;
+	}
+}
+#zoom-out:active {
+	#icon_zoom-out-lineart g#handle path, #icon_zoom-out-lineart g#symbol line {
+		stroke: $gray-medium;
+		transition: .3s;
+	}
+	#icon_zoom-out-lineart g#glass path {
+		fill: $gray-medium;
+		transition: .3s;
+	}
+}
+.facsimile--full {
+	#previous, #next {
+	background-color: $black_transparent;
+	height: 7rem;
+	position: fixed !important;
+	top: 48vh;
+	width: 5rem;
+}
+	#previous {
+		left: 0;
+	}
+	#next {
+		right: 0;
+	}
+}
+.displayregion {
+
+}
+.facsimile--full.grid--half #openseadragon-wrapper #tools span a#zoom-in, .facsimile--full.grid--half #openseadragon-wrapper #tools span a#zoom-out {
+	display: none !important;
+}
+.facsimile--full.grid--half {
+	#tools, #tools>span {
+		background-color: transparent;
+		width: auto;
+	}
+	#previous, #next {
+		height: 5rem;
+		width: 3rem;
+	}
+	#previous span, #next span {
+		display: none;
+	}
+	svg {
+		transform: scale(1);
+	}
+}
+.section__facsimile.grid--right .facsimile--full.grid--half {
+	#previous {
+		left: 50%;
+	}
+}
+.section__facsimile.grid--left .facsimile--full.grid--half {
+	#next {
+		right: 50%;
+	}
+}
+/***     Breakpoints     ***/
+/* small  -  mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	#tools {
+		background-color: $black_transparent;
+	}
+	#tools>span {
+		background-color: transparent;
+	}
+	#tools a span {
+		display: none;
+	}
+	#tools svg {
+		transform: scale(.6);
+		transform-origin: 50% 50%;
+	}
+	.facsimile--full #previous, .facsimile--full #next,  {
+		background-color: transparent;
+		height: 4rem;
+		top: calc(100vh - 8rem);
+		width: 2rem;
+		svg {
+			transform: scale(.5);
+		}
+	}
+}

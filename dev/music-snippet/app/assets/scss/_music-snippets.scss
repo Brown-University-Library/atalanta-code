@@ -1,0 +1,75 @@
+@import 'colors';
+@import 'utilities';
+
+section.music-snippet {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+	h1 {
+		grid-column: 1 / 13;
+		text-align: center;
+	}
+	p {
+		font-size: 1.25rem;
+		grid-column: 4 / 10;
+		line-height: 1.8;
+	}
+	div.ata-music {
+		display: grid;
+		grid-column: 1 / 13;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: auto;
+	}
+/*	div.transport {
+		display: grid;
+		grid-column: 4 / 10;
+		grid-template-columns: repeat(11, 1fr);
+		grid-template-rows: auto;
+		width: auto;
+		z-index: 10;
+	}
+	button.atalanta-notation-start, button.atalanta-notation-stop {
+		grid-column: 3 / 5;
+		margin-right: 0;
+		background-position: center;
+		background-size: 5rem;
+	}
+	div.track-mute {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		grid-column: 5 / 10;
+	}*/
+	div.transport {
+		background-color: $orange-red;
+		display: flex;
+/*		flex-direction: row;*/
+		align-items: center;
+		justify-content: space-around;
+		grid-column: 4/10;
+		width: auto;
+		z-index: 10;
+	}
+	button.atalanta-notation-start, button.atalanta-notation-stop {
+		margin-right: 0;
+		background-position: center;
+		background-size: 6rem;
+	}
+	div.track-mute {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	button.atalanta-notation-mute-track {
+/*		outline: 2px solid orange;*/
+
+	}
+	div.ata-viz-cmn {
+		grid-column: 1 / 13;
+	}
+	div.music-pages {
+		margin-top: 3rem;
+		padding-bottom: 0;
+	}
+
+}
