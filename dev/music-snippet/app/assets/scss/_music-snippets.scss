@@ -1,75 +1,96 @@
 @import 'colors';
 @import 'utilities';
 
-section.music-snippet {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: auto;
-	h1 {
-		grid-column: 1 / 13;
-		text-align: center;
+body {
+	padding: 0;
+}
+
+@supports (display: grid) {
+	section.music-snippet {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		h1 {
+			margin: 3rem 0;
+			text-align: center;
+		}
+		p {
+			font-size: 1.25rem;
+			line-height: 1.8;
+			width: 50vw;
+		}
+		div.ata-music {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-between;
+			overflow: hidden;
+			margin: 1rem 0;
+			width: 100vw;
+		}
+		div.transport {
+			background-color: $orange-red;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			width: 50vw;
+			z-index: 10; /* the SVG that Verovio outputs overlaps with the transport controls */
+		}
+		button.atalanta-notation-start, button.atalanta-notation-stop {
+			margin-right: 0;
+			background-position: center;
+			background-size: 6rem;
+		}
+		div.track-mute {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		button.atalanta-notation-mute-track {
+
+		}
+		div.music-pages {
+			padding-bottom: 5rem;
+		}
+		div.music-page {
+			transform-origin: center;
+			transform: translate(42%, -30%);
+		}
+		div.music-page > svg {
+			transform: scale(1.6);
+		}
 	}
-	p {
-		font-size: 1.25rem;
-		grid-column: 4 / 10;
-		line-height: 1.8;
-	}
-	div.ata-music {
+}
+
+
+
+@supports (display: grid) {
+	section.music-snippet {
 		display: grid;
-		grid-column: 1 / 13;
 		grid-template-columns: repeat(12, 1fr);
 		grid-template-rows: auto;
+		h1 {
+			grid-column: 1 / 13;
+		}
+		p {
+			grid-column: 4 / 10;
+		}
+		div.ata-music {
+			display: grid;
+			grid-column: 1 / 13;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: auto;
+		}
+		div.transport {
+			grid-column: 4/10;
+			width: auto;
+		}
+		div.ata-viz-cmn {
+			grid-column: 1 / 13;
+		}
+		div.music-pages {
+			padding-bottom: 4rem;
+		}
 	}
-/*	div.transport {
-		display: grid;
-		grid-column: 4 / 10;
-		grid-template-columns: repeat(11, 1fr);
-		grid-template-rows: auto;
-		width: auto;
-		z-index: 10;
-	}
-	button.atalanta-notation-start, button.atalanta-notation-stop {
-		grid-column: 3 / 5;
-		margin-right: 0;
-		background-position: center;
-		background-size: 5rem;
-	}
-	div.track-mute {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		grid-column: 5 / 10;
-	}*/
-	div.transport {
-		background-color: $orange-red;
-		display: flex;
-/*		flex-direction: row;*/
-		align-items: center;
-		justify-content: space-around;
-		grid-column: 4/10;
-		width: auto;
-		z-index: 10;
-	}
-	button.atalanta-notation-start, button.atalanta-notation-stop {
-		margin-right: 0;
-		background-position: center;
-		background-size: 6rem;
-	}
-	div.track-mute {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	button.atalanta-notation-mute-track {
-/*		outline: 2px solid orange;*/
-
-	}
-	div.ata-viz-cmn {
-		grid-column: 1 / 13;
-	}
-	div.music-pages {
-		margin-top: 3rem;
-		padding-bottom: 0;
-	}
-
 }
