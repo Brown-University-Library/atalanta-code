@@ -48,7 +48,8 @@
 
   // GLOBALS
   
-  var audioContext;
+  var audioContext, 
+    verovioToolkit = new verovio.toolkit();
 
   // UTILITY FUNCTIONS
 
@@ -113,8 +114,7 @@
 
     function createVerovioObject(meiFileURL) {
       
-      let verovioToolkit = new verovio.toolkit();
-      window.v = verovioToolkit; // TODO - this is temp
+      // let verovioToolkit = new verovio.toolkit();
 
       // Load the MEI file using a HTTP GET
       
@@ -222,12 +222,12 @@
     }
     
     function stopAllViews() {
-      views.forEach((view) => view.stop())
+      views.forEach(view => view.stop())
     }
     
     function setMute(muteStatus) {
       console.log("MUTE CHANGE FOR ALL VIEWS");
-      views.forEach((view) => view.onMuteChange(muteStatus));
+      views.forEach(view => view.onMuteChange(muteStatus));
     }
     
     function init() {
@@ -430,7 +430,6 @@
 
           if (highLightedNote !== null) {
             highLightedNote.classList.add(PIANO_ROLL_OPTIONS.HILIGHT_CLASS);
-            console.log(highLightedNote);
             highlightedNotes.push(highLightedNote);
 
             if (rightMostNote === undefined) {
@@ -665,12 +664,10 @@
       
       // TODO: THIS SHOULD BE HANDLED BY CSS
       
-      console.log("MUTE CHANGE FOR CMN");
-
       muteStatus.forEach((mute, index) => {
-        $('.measure .staff:nth-of-type(' + (index + 1) + ')')
+        viewContainer.find('.measure .staff:nth-of-type(' + (index + 1) + ')')
           .attr('opacity', mute ? '0.2': '1.0');
-        $('.measure .barLineAttr path:nth-of-type(' + (index + 1) + ')')
+        viewContainer.find('.measure .barLineAttr path:nth-of-type(' + (index + 1) + ')')
           .attr('opacity', mute ? '0.2': '1.0');
       })
       
@@ -1120,15 +1117,19 @@
   
   // OBJECT: MODEL
   
-  function Model(viewManager) {
+  function Model(viewManager, verovioToolkit) {
 
     let timerId, startTime, 
-      pauseTimePassed = 0;
+      pauseTimePassed = 0,
+      mei = verovioToolkit.getMEI();
     
     // "Play" means to schedule updates for views
     // Start time is set to beginning
     
     function play() {
+      verovioToolkit.loadData(mei); // this is rendundant with
+      verovioToolkit.renderToMidi(); // line 137 & 141
+
       startTime = (new Date().valueOf()) - pauseTimePassed;
       timerId = setInterval(() => {
         let timePassed = (new Date().valueOf()) - startTime;
@@ -1202,7 +1203,7 @@
 
     let muteButtons = muteButtonTexts.map(muteButtonText => {
       let buttonElem = document.createElement('button');
-      buttonElem.classList.add('atalanta-notation-mute-track');
+      buttonElem.classList.add('atalanta-notation-mute-track'); // TODO: should not be a magic value
       buttonElem.innerText = muteButtonText;
       return buttonElem;
     });
