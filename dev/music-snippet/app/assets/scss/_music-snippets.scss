@@ -5,61 +5,114 @@ body {
 	padding: 0;
 }
 
-@supports (display: grid) {
-	section.music-snippet {
+section.music-snippet {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 8rem;
+	h1 {
+		margin: 3rem 0;
+		text-align: center;
+	}
+	p {
+		font-size: 1.25rem;
+		line-height: 1.8;
+		margin-bottom: 1.25rem;
+		width: 50vw;
+	}
+	div.ata-music {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		h1 {
-			margin: 3rem 0;
-			text-align: center;
-		}
-		p {
-			font-size: 1.25rem;
-			line-height: 1.8;
-			width: 50vw;
-		}
-		div.ata-music {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: space-between;
-			overflow: hidden;
-			margin: 1rem 0;
-			width: 100vw;
-		}
-		div.transport {
-			background-color: $orange-red;
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-			width: 50vw;
-			z-index: 10; /* the SVG that Verovio outputs overlaps with the transport controls */
-		}
-		button.atalanta-notation-start, button.atalanta-notation-stop {
-			margin-right: 0;
-			background-position: center;
-			background-size: 6rem;
-		}
-		div.track-mute {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		button.atalanta-notation-mute-track {
+		justify-content: space-between;
+		overflow: hidden;
+		margin: 1rem 0;
+		width: 100vw;
+	}
+	div.transport {
+		background-color: $orange-red;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		width: 50vw;
+		z-index: 10; /* the SVG that Verovio outputs overlaps with the transport controls */
+	}
+	div.transport > button {
+		flex-grow: 1;
+	}
+	button.atalanta-notation-start, button.atalanta-notation-stop {
+		margin-right: 0;
+		background-position: center;
+		background-size: 6rem;
+	}
+	div.transport button.atalanta-notation-start {
+		background-image: url('../icons/icon_play-outline.svg');
+		filter: hue-rotate(166deg) saturate(.32);
+		/* starting fill hsla(41, 100%, 69%, 1) $orange-yellow_bright */
+		/* rotated fill hsla(207, 32%, 89%, 1) $blue_light */
+	}
+	div.transport button.atalanta-notation-start:hover, .ata-music .transport .atalanta-notation-start:focus {
+		background-image: url('../icons/icon_play-filled.svg');
+		transition: .3s;
+	}
+	div.transport button.atalanta-notation-start.playing {
+	  display: none;
+	}
 
-		}
-		div.music-pages {
-			padding-bottom: 5rem;
-		}
-		div.music-page {
-			transform-origin: center;
-			transform: translate(42%, -30%);
-		}
-		div.music-page > svg {
-			transform: scale(1.6);
-		}
+	div.transport button.atalanta-notation-stop {
+		/*background-image: url('../icons/icon_pause-outline.svg');*/
+		background-image: url('../icons/icon_pause-filled.svg');
+		filter: hue-rotate(166deg) saturate(.32);
+	}
+	div.transport button.atalanta-notation-stop.playing {
+		background-image: url('../icons/icon_pause-filled.svg');
+	}
+	div.transport button.atalanta-notation-stop.playing:hover, .ata-music .transport .atalanta-notation-stop.playing:focus {
+		background-image: url('../icons/icon_pause-filled.svg');
+		filter: hue-rotate(166deg) saturate(.1);
+		transition: .3s;
+	}
+	div.transport .track-mute {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	div.transport button.atalanta-notation-mute-track {
+		background-image: url('../icons/icon_profile-volume-outline.svg');
+		filter: hue-rotate(166deg) saturate(.32);
+	}
+	div.transport button.atalanta-notation-mute-track:hover, div.transport button.atalanta-notation-mute-track:focus {
+		background-image: url('../icons/icon_profile-volume-filled.svg');
+		transition: .3s;
+	}
+	div.transport button.atalanta-notation-mute-track.mute {
+		background-image: url('../icons/icon_profile-mute-outline.svg');
+	}
+	div.transport button.atalanta-notation-mute-track.mute:hover, div.transport button.atalanta-notation-mute-track.mute:focus {
+		background-image: url('../icons/icon_profile-mute-filled.svg');
+		transition: .3s;
+	}
+	div.music-pages {
+		padding-bottom: 5rem;
+	}
+	div.music-page {
+		transform-origin: center;
+		transform: translate(55%, -30%);
+	}
+	div.music-page > svg {
+		transform: scale(1.6);
+	}
+	div.atalanta-notation__switch {
+		display: none;
+	}
+	.ata-viz-cmn svg .note.highlighted {
+	  fill: $aqua_darker;
+	}
+
+	.ata-viz-cmn svg .note.highlighted path {
+	  stroke-width: 80;
+	  stroke: $aqua_darker;
 	}
 }
 
