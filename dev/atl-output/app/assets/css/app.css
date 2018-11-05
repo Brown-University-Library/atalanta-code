@@ -80,10 +80,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 .is-active {
   background-color: #ffcd61 !important; }
@@ -99,15 +97,11 @@ table {
 .is-sticky {
   position: fixed; }
 
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 .is-active {
   background-color: #ffcd61 !important; }
@@ -128,10 +122,10 @@ body {
   font-family: 'GTAmericaTrial', Helvetica, Arial, sans-serif;
   font-size: 16px; }
   body a {
-    color: #C9A2A2;
+    color: rgba(13, 0, 77, 0.9);
     text-decoration: none; }
   body a:hover {
-    color: #64283D; }
+    color: #0a8f69; }
 
 header {
   margin-top: 0; }
@@ -141,10 +135,8 @@ h1 {
   font-weight: 600;
   line-height: 4rem; }
 
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 button {
   background-color: transparent;
@@ -153,7 +145,7 @@ button {
   padding: 0; }
 
 .btn {
-  background-color: #989DAC;
+  background-color: #333333;
   border-radius: .25rem;
   color: #fff;
   display: -webkit-box;
@@ -169,7 +161,7 @@ button {
   height: 2.5rem; }
 
 .btn:hover {
-  background-color: #DCE1E9;
+  background-color: #989898;
   color: #222; }
 
 .btn p {
@@ -182,10 +174,8 @@ button {
   align-self: center;
   font-size: .825rem; }
 
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 .is-active {
   background-color: #ffcd61 !important; }
@@ -201,10 +191,8 @@ button {
 .is-sticky {
   position: fixed; }
 
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 .topnav {
   background-color: #222;
@@ -277,7 +265,7 @@ div[data-nav='home'] .topnav__identity {
   z-index: 20000000; }
 
 .toc {
-  background-color: #282828;
+  background-color: #333333;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -374,10 +362,8 @@ div[data-nav='home'] .topnav__identity {
 /* large  -  desktop */
 /* extra-large */
 /* xxl */
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 .is-active {
   background-color: #ffcd61 !important; }
@@ -393,10 +379,8 @@ div[data-nav='home'] .topnav__identity {
 .is-sticky {
   position: fixed; }
 
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 main.emblem-page {
   background-color: #222;
@@ -627,218 +611,6 @@ main.emblem-page {
   .section__facsimile {
     margin-top: 0;
     margin-bottom: 4.5rem; } }
-
-/* NEUTRAL */
-/* COOL */
-/* WARM */
-/* TESTING */
-/* PRODUCTION */
-/* NEUTRAL */
-/* COOL */
-/* WARM */
-/* TESTING */
-/* PRODUCTION */
-.is-active {
-  background-color: #ffcd61 !important; }
-  .is-active a {
-    color: #222 !important; }
-
-.is-hidden {
-  display: none !important; }
-
-.is-selected {
-  border-bottom: 3px solid rgba(13, 0, 77, 0.9); }
-
-.is-sticky {
-  position: fixed; }
-
-.wrapper-sidenav {
-  background-color: #222;
-  height: 13.5rem;
-  margin-left: 1.825rem;
-  padding: 0 0 1rem 0;
-  position: fixed;
-  top: 9rem;
-  width: 9rem;
-  z-index: 20; }
-
-.sidenav ul li {
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
-  font-size: .825rem;
-  font-weight: 600;
-  cursor: pointer;
-  /*	font-size: .825rem;*/ }
-  .sidenav ul li a {
-    color: #fff; }
-
-.sidenav .sidenav__navigation {
-  background-color: #989DAC;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  font-weight: 800;
-  width: 9rem; }
-  .sidenav .sidenav__navigation li {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    height: 2.5rem;
-    min-width: 1.75rem; }
-    .sidenav .sidenav__navigation li :hover {
-      background-color: #989DAC;
-      color: #DCE1E9; }
-    .sidenav .sidenav__navigation li a {
-      color: #222;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      height: 100%;
-      width: 100%; }
-
-.sidenav .sidenav__options {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start; }
-  .sidenav .sidenav__options li {
-    color: #fff;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    height: 2rem;
-    /*padding-bottom: .125rem;*/ }
-    .sidenav .sidenav__options li :hover {
-      background-color: #DCE1E9;
-      color: #222; }
-    .sidenav .sidenav__options li :active {
-      background-color: #7694C0; }
-    .sidenav .sidenav__options li a {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      height: 100%;
-      width: 100%; }
-
-.sidenav--is-active {
-  background-color: #777D94; }
-
-ul.sidenav__options li.sidenav--is-active a:hover {
-  background-color: #777D94;
-  color: #fff; }
-
-main.emblem-page.frontmatter .wrapper-sidenav {
-  height: 24px; }
-  main.emblem-page.frontmatter .wrapper-sidenav .sidenav__options {
-    display: none; }
-
-/* http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/ */
-/* https://github.com/twbs/bootstrap/issues/1768#issuecomment-46519033 */
-/*	 *[id]:before { 
-	  display: block; 
-	  content: " "; 
-	  margin-top: 300px; 
-	  height: 300px; 
-	  visibility: hidden;
-	} */
-/*	section:before { 
-	  display: block; 
-	  content: " "; 
-	  margin-top: -10px; 
-	  height: 100px; 
-	  visibility: hidden;
-	} */
-/**[id]:before {
-background-color: blue !important;
-  position: relative;
-  padding: 1rem;
-  border-top: 200px solid red;
-  margin-top: -10px;
-  background-clip: padding-box;
-}
-*/
-/*	*[id]:before { 
-	  display: block; 
-	  content: " ";
-	  height: 180px; 
-	  visibility: hidden; 
-	}*/
-.jumplink--kludge {
-  outline: 5px solid red;
-  /*	position: relative;
-	padding: 1rem;
-	border-top: 180px solid transparent;*/
-  /*margin-top: -180px*/
-  /*	background-clip: padding-box;*/
-  margin-top: 180px; }
-
-/* BREAKPOINTS */
-/*----- SIDENAV -- SMALL LAPTOPS -----*/
-@media screen and (min-width: 768px) and (max-width: 999px) {
-  .wrapper-sidenav {
-    margin-left: .5rem;
-    width: 9rem; }
-  .sidenav .sidenav__navigation {
-    width: 9rem; } }
-
-/*----- SIDENAV -- SMALL LAPTOPS -----*/
-@media screen and (min-width: 1000px) and (max-width: 1300px) {
-  .wrapper-sidenav {
-    margin-left: 1rem; } }
 
 /*
  * CSS for Transcription of English translation of Atalanta. Designed mostly for proofreading.
@@ -1175,15 +947,11 @@ span.raised {
 .help {
   color: red; }
 
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 .is-active {
   background-color: #ffcd61 !important; }
@@ -1209,6 +977,41 @@ body {
   line-height: 0;
   font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif; }
 
+/*
+
+FRONTISPIECE	 
+._frontispiece--english			div.titlePage {}
+._frontispiece--latin			div.pref-epigram.la {}
+
+AUTHOR'S EPIGRAM
+._author-epigram--english		div.epigram {}					???
+._author-epigram--latin			div.epigram.la {}				???
+
+DEDICATION
+._dedication--english			div.dedication {}
+								div.dedication {}
+._dedication--latin				div.preface {}					???
+
+PREFACE
+._preface--english				div.discourse {}				???
+._preface--latin				div.preface.la {}				???
+
+EMBLEM MOTTO
+._motto--english				???
+._motto--latin					div.image.la
+._motto--german					div.fugue.de
+
+EMBLEM EPIGRAM
+._epigram--english				div.epigram						???
+._epigram--latin				div.epigram.la 					???
+._epigram--german				div.epigram.de 					???
+
+EMBLEM DISCOURSE
+._discourse--english			div.discourse					???
+._discourse--latin				span.pb.atalanta-fugiens
+								div.discourse.la 				???
+
+*/
 /********** ENGLISH XML ISSUES **************/
 .section__discourse h3.title {
   /*	display: none;*/
@@ -1526,7 +1329,7 @@ div.margin-note.line2 {
 /*********** END OF ENGLISH EMBLEM LAYOUT *************/
 /*********** ENGLISH EMBLEM STYLES *************/
 div.edition--facsimile span.underline2 {
-  border-bottom: 2px solid #777; }
+  border-bottom: 2px solid #333333; }
 
 /*********** END OF ENGLISH EMBLEM STYLES *************/
 /*********** LATIN/GERMAN EMBLEM LAYOUT *************/
@@ -1661,15 +1464,11 @@ div.epigram .verse-epigram > span:last-child {
   .panel--left div.discourse span.note-mark, .panel--left div.discourse div.margin-note, .panel--right div.discourse span.note-mark, .panel--right div.discourse div.margin-note {
     display: none; } }
 
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 .is-active {
   background-color: #ffcd61 !important; }
@@ -1685,21 +1484,6 @@ div.epigram .verse-epigram > span:last-child {
 .is-sticky {
   position: fixed; }
 
-/*main.home-page {
-	background-color: $white;
-	font-family: $body-font_emblem, Helvetica, Arial, sans-serif;
-	font-size: 1.25rem;
-	min-height: calc(100vh - 3.125rem);
-	line-height: 2rem;
-	margin-top: $topnav-h;
-	padding: 2rem;
-	a {
-		color: $black;
-	}
-	a:hover {
-		color: $dusty-blue;
-	}
-}*/
 main.home {
   background-color: #F1F1F1;
   display: grid;
@@ -1858,10 +1642,8 @@ main.home {
   main.home .intro-text a {
     grid-area: 2 / 2 / 3 / 12; } }
 
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 .is-active {
   background-color: #ffcd61 !important; }
@@ -1877,10 +1659,8 @@ main.home {
 .is-sticky {
   position: fixed; }
 
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 .subnav {
   display: -webkit-box;
@@ -2036,50 +1816,8 @@ main.home {
 .subnav__options--option {
   height: 60%; }
 
-/*.toggle {
-	background-color: $dusty-blue;
-	border-radius: .125rem;
-	border: 1px solid $dusty-blue-dk;
-	box-shadow: inset 0 0 .25rem $light-gray;
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	padding: .5rem .125rem;
-	width: 20%;
-	max-height: 2.75rem;
-	a {
-		background-color: inherit;
-		border-radius: .125rem;
-		display: flex;
-		justify-content: center;
-		flex-grow: 1;
-		min-width: 50%;
-	}
-	.selected {
-		background-color: $dusty-blue-lt;
-		border: 1px solid $dusty-blue-dk;
-		box-shadow: inset 0 0 .75rem $light-gray;
-		padding: .75rem 1rem;
-		p {
-			color: $black;
-		}
-	}
-	.not-selected {
-		background-color: inherit;
-		padding: .825rem 1rem;
-	}
-	.not-selected:hover {
-		background-color: $dusty-blue-lt;
-		border: 1px solid $dusty-blue-dk;
-		box-shadow: inset 0 0 .75rem $light-gray;
-		padding: .75rem 1rem;
-		p {
-			color: $black;
-		}
-	}
-}*/
 .is-inactive {
-  background-color: #eee !important;
+  background-color: #989898 !important;
   pointer-events: none !important; }
   .is-inactive a {
     color: #222 !important; }
@@ -2093,11 +1831,7 @@ main.home {
     height: auto;
     margin-top: 0 !important;
     position: fixed;
-    bottom: 0;
-    /*		transform: translate3d(0, 130vh, 0);
-		-webkit-transform: translate3d(0, 130vh, 0);
-		transition: transform .25s linear;
-		-webkit-transition: transform .25s linear;*/ }
+    bottom: 0; }
     .subnav ul {
       -webkit-box-pack: center;
       -webkit-justify-content: center;
@@ -2472,15 +2206,11 @@ body {
   fill: red;
   stroke-width: 5px; }
 
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 .is-active {
   background-color: #ffcd61 !important; }
@@ -2737,15 +2467,11 @@ button.lity-close {
 @media screen and (max-width: 319px) {
   /* the music section is seriously broken at this point */ }
 
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 .is-active {
   background-color: #ffcd61 !important; }
@@ -2772,15 +2498,11 @@ button.lity-close {
 	top: 200px;
 	outline: 20px solid orange;
 }*/
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
-/* NEUTRAL */
-/* COOL */
-/* WARM */
 /* TESTING */
+/* DEVELOPMENT */
 /* PRODUCTION */
 .is-active {
   background-color: #ffcd61 !important; }

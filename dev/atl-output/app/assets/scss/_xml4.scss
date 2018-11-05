@@ -12,6 +12,41 @@ body{
     line-height: 0;
     font-family: $body-font_emblem;
 }
+/*
+
+FRONTISPIECE	 
+._frontispiece--english			div.titlePage {}
+._frontispiece--latin			div.pref-epigram.la {}
+
+AUTHOR'S EPIGRAM
+._author-epigram--english		div.epigram {}					???
+._author-epigram--latin			div.epigram.la {}				???
+
+DEDICATION
+._dedication--english			div.dedication {}
+								div.dedication {}
+._dedication--latin				div.preface {}					???
+
+PREFACE
+._preface--english				div.discourse {}				???
+._preface--latin				div.preface.la {}				???
+
+EMBLEM MOTTO
+._motto--english				???
+._motto--latin					div.image.la
+._motto--german					div.fugue.de
+
+EMBLEM EPIGRAM
+._epigram--english				div.epigram						???
+._epigram--latin				div.epigram.la 					???
+._epigram--german				div.epigram.de 					???
+
+EMBLEM DISCOURSE
+._discourse--english			div.discourse					???
+._discourse--latin				span.pb.atalanta-fugiens
+								div.discourse.la 				???
+
+*/
 
 /********** ENGLISH XML ISSUES **************/
 .section__discourse h3.title {
@@ -373,7 +408,7 @@ div.margin-note.line2 {
 
 /*********** ENGLISH EMBLEM STYLES *************/
 div.edition--facsimile span.underline2 {
-	border-bottom: 2px solid $dark-gray;
+	border-bottom: 2px solid $gray-dark;
 }
 /*********** END OF ENGLISH EMBLEM STYLES *************/
 
