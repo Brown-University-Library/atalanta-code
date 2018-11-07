@@ -1642,15 +1642,9 @@ main.home {
   main.home .intro-text a {
     grid-area: 2 / 2 / 3 / 12; } }
 
-<<<<<<< HEAD
 /*@import 'subnav';*/
-/* NEUTRAL */
-/* COOL */
-/* WARM */
-=======
 /* TESTING */
 /* DEVELOPMENT */
->>>>>>> master
 /* PRODUCTION */
 .is-active {
   background-color: #ffcd61 !important; }
@@ -1713,7 +1707,6 @@ main.home {
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center;
-<<<<<<< HEAD
       font-size: 1rem;
       height: 40px;
       padding: 0 1rem;
@@ -1729,156 +1722,6 @@ main.home {
 
 .subnav-v3__emblem-language {
   right: 0; }
-=======
-      height: 3.5rem;
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-      flex: 1 0 auto; }
-      .subnav ul li a {
-        color: #222;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%; }
-    .subnav ul li:hover {
-      background-color: #ffcd61; }
-      .subnav ul li:hover a {
-        color: #222; }
-    .subnav ul li:nth-child(1) {
-      -webkit-box-ordinal-group: 2;
-      -webkit-order: 1;
-      -ms-flex-order: 1;
-      order: 1; }
-    .subnav ul li:nth-child(2) {
-      -webkit-box-ordinal-group: 4;
-      -webkit-order: 3;
-      -ms-flex-order: 3;
-      order: 3; }
-    .subnav ul li:nth-child(3) {
-      -webkit-box-ordinal-group: 5;
-      -webkit-order: 4;
-      -ms-flex-order: 4;
-      order: 4; }
-    .subnav ul li:nth-child(4) {
-      -webkit-box-ordinal-group: 6;
-      -webkit-order: 5;
-      -ms-flex-order: 5;
-      order: 5; }
-    .subnav ul li:nth-child(5) {
-      -webkit-box-ordinal-group: 3;
-      -webkit-order: 2;
-      -ms-flex-order: 2;
-      order: 2; }
-    .subnav ul li:nth-child(6) {
-      -webkit-box-ordinal-group: 7;
-      -webkit-order: 6;
-      -ms-flex-order: 6;
-      order: 6; }
-    .subnav ul li:nth-child(7) {
-      -webkit-box-ordinal-group: 8;
-      -webkit-order: 7;
-      -ms-flex-order: 7;
-      order: 7; }
-    .subnav ul li:nth-child(8) {
-      -webkit-box-ordinal-group: 9;
-      -webkit-order: 8;
-      -ms-flex-order: 8;
-      order: 8; }
-
-/*.subnav__views--single, .subnav__views--double  {
-	box-sizing: border-box;
-	cursor: pointer;
-	height: 40%;
-	width: 50%;
-}*/
-.subnav li.subnav__views--single, .subnav li.subnav__views--double {
-  /*border-right: .25rem solid $white;*/
-  background-color: #fff;
-  border: 2px solid #222;
-  border-radius: 5px;
-  height: 3rem;
-  width: 14rem;
-  position: absolute;
-  right: 2rem;
-  top: 5.625rem; }
-  .subnav li.subnav__views--single a, .subnav li.subnav__views--double a {
-    color: #222; }
-
-.subnav__views--single a span {
-  background-image: url("../icons/icon_single-page-with-text.svg");
-  background-repeat: no-repeat;
-  height: 2rem;
-  width: 1.9rem; }
-
-.subnav__views--double a span {
-  background-image: url("../icons/icon_double-page-with-text.svg");
-  background-repeat: no-repeat;
-  height: 2rem;
-  width: 3.8rem; }
-
-.subnav__options--option {
-  height: 60%; }
-
-.is-inactive {
-  background-color: #989898 !important;
-  pointer-events: none !important; }
-  .is-inactive a {
-    color: #222 !important; }
-
-/*** Breakpoints ***/
-/* small  -  mobile */
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .emblem {
-    margin-top: 0; }
-  .subnav {
-    height: auto;
-    margin-top: 0 !important;
-    position: fixed;
-    bottom: 0; }
-    .subnav ul {
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      padding: .5rem; }
-  .subnav__views--single, .subnav__views--double {
-    display: none !important; }
-  .wrapper-sidenav {
-    display: none !important; }
-  /*	.subnav--open {
-		transform: translate3d(0, 93vh, 0);
-		-webkit-transform: translate3d(0, 93vh, 0);
-		transition: transform .25s linear;
-		-webkit-transition: transform .25s linear;		
-	}
-	.subnav__btn {
-		position: fixed;
-		top: 0;
-		z-index: 10;
-
-		transform: translate3d(0, 93.5vh, 0);
-		-webkit-transform: translate3d(0, 93.5vh, 0);
-		transition: transform .25s linear;
-		-webkit-transition: transform .25s linear;
-	}
-	.subnav__btn--open {
-		transform: translate3d(0, 83.5vh, 0);
-		-webkit-transform: translate3d(0, 83.5vh, 0);
-		transition: transform .25s linear;
-		-webkit-transition: transform .25s linear;	
-	}*/ }
->>>>>>> master
 
 /*! Lity - v2.3.1 - 2018-04-20
 * http://sorgalla.com/lity/
