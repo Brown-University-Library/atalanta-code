@@ -2,6 +2,15 @@
 ################
 node_modules
 
+# Gulp #
+################
+atl-output/gulpfile.js
+atl-output/package.json
+atl-output/package-lock.json
+emblem-music-snippet/gulpfile.js
+emblem-music-snippet/package.json
+emblem-music-snippet/package-lock.json
+
 fonts
 
 atl-demo-site

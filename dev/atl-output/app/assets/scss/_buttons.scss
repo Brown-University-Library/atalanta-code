@@ -7,7 +7,7 @@ button {
 	padding: 0;
 }
 .btn {
-	background-color: $dusty-blue;
+	background-color: $gray-dark;
 	border-radius: .25rem;
 	color: $white;
 	display: flex;
@@ -17,7 +17,7 @@ button {
 	height: 2.5rem;
 }
 .btn:hover {
-	background-color: $dusty-blue-lt;
+	background-color: $gray-medium;
 	color: $black;
 }
 .btn p {

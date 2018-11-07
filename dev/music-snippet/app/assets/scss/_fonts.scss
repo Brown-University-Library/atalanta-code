@@ -1,0 +1,35 @@
+/* Usual */
+@import url("https://use.typekit.net/utc2ige.css");
+
+@font-face {
+    font-family: 'GTAmericaTrial'; /* regular */
+    src: url('../fonts/GT-America-Trial-Regular.eot');
+    src: url('../fonts/GT-America-Trial-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GT-America-Trial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GTAmericaTrial'; /* italic */
+    src: url('../fonts/GT-America-Trial-Regular-Italic.eot');
+    src: url('../fonts/GT-America-Trial-Regular-Italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GT-America-Trial-Regular-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'GTAmericaTrial'; /* bold */
+    src: url('../fonts/GT-America-Trial-Medium.eot');
+    src: url('../fonts/GT-America-Trial-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GT-America-Trial-Medium.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GTAmericaTrial'; /* bold italic */
+    src: url('../fonts/GT-America-Trial-Medium-Italic.eot');
+    src: url('../fonts/GT-America-Trial-Medium-Italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GT-America-Trial-Medium-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
