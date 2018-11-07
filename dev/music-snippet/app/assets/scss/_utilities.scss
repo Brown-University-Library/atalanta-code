@@ -1,0 +1,25 @@
+@import 'colors';
+
+.is-active {
+	background-color: $orange-yellow_brighter !important;
+	a {
+		color: $black !important;
+	}
+}
+.is-hidden {
+	display: none !important;
+}
+.is-selected {
+	border-bottom: 3px solid $royal-blue;
+}
+.is-sticky {
+	position: fixed;
+}
+
+$topnav-h: 3.125rem;
+$subnav-h: 4.5rem;
+$emblemnav-h: 7.625rem;
+
+$body-font_emblem: 'GTAmericaTrial', 'Avenir', Helvetica, Arial, sans-serif;
+$display-font_emblem: 'GTAmericaTrial', 'Usual', Helvetica, Arial, sans-serif;
+$secondary-display-font_emblem: 'GT Sectra', Garamond, Georgia, serif;

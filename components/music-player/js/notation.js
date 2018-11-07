@@ -1,20 +1,16 @@
 
 /*
 
+
+  TODO LIST:
+  - Need to read the length of the audio buffer (https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/duration)
+    then end the playback and reset to beginning
+  - Only one instance of Verovio is possible, which means that only one set of notation
+    can be animated on a page; look into whether the Verovio instance can be discarded
+    (or data re-loaded) upon playback. One issue: are the SVG element IDs the same each time?
+
   The tempo is being read from the DOM but the tempo is not taking hold
   in terms of what's being returned for timing in Verovio
-  
-  Try editing the sample MEI directly and putting in the tempo there; maybe the regex method 
-  isn't doing it
-  
-  (Didn't work - defaulting to 60 BPM)
-  
-  Have to implement update(time) functions for the CMN view
-  
-  Have to give the model a play() method that starts a setInterval that tells the view 
-  manager to updateAllViews
-  
-  May want to have a Verovio-type API for other visualizations (e.g. )
 
 */
 
@@ -47,11 +43,13 @@
       barHeight: 5,
       pitchScale: 5,
       HILIGHT_CLASS: 'highlighted'
-    };
+    },
+    VISUALIZE_BUTTON_TEXT = 'Show piano roll';
 
   // GLOBALS
   
-  var audioContext;
+  var audioContext, 
+    verovioToolkit = new verovio.toolkit();
 
   // UTILITY FUNCTIONS
 
@@ -116,8 +114,7 @@
 
     function createVerovioObject(meiFileURL) {
       
-      let verovioToolkit = new verovio.toolkit();
-      window.v = verovioToolkit; // TODO - this is temp
+      // let verovioToolkit = new verovio.toolkit();
 
       // Load the MEI file using a HTTP GET
       
@@ -225,12 +222,12 @@
     }
     
     function stopAllViews() {
-      views.forEach((view) => view.stop())
+      views.forEach(view => view.stop())
     }
     
     function setMute(muteStatus) {
       console.log("MUTE CHANGE FOR ALL VIEWS");
-      views.forEach((view) => view.onMuteChange(muteStatus));
+      views.forEach(view => view.onMuteChange(muteStatus));
     }
     
     function init() {
@@ -429,27 +426,29 @@
       
       verovioToolkit.getElementsAtTime(timeInMilliseconds).notes.forEach(
         note => {
-          // console.log(`NOTE ABCD`);
-          // console.log(document.getElementById(getLocalNoteID(note)));
           let highLightedNote = document.getElementById(getLocalNoteID(note));
-          highLightedNote.classList.add(PIANO_ROLL_OPTIONS.HILIGHT_CLASS);
-          console.log(highLightedNote);
-          highlightedNotes.push(highLightedNote);
 
-          if (rightMostNote === undefined) {
-            rightMostNote = highLightedNote
-          }
+          if (highLightedNote !== null) {
+            highLightedNote.classList.add(PIANO_ROLL_OPTIONS.HILIGHT_CLASS);
+            highlightedNotes.push(highLightedNote);
 
-          const highLightedNoteX = highLightedNote.getBBox().x,
-            currRightMostNoteX = rightMostNote.getBBox().x;
-
-          if (highLightedNoteX > currRightMostNoteX) {
-            rightMostNote = highLightedNote;
+            if (rightMostNote === undefined) {
+              rightMostNote = highLightedNote
+            }
+  
+            const highLightedNoteX = highLightedNote.getBBox().x,
+              currRightMostNoteX = rightMostNote.getBBox().x;
+  
+            if (highLightedNoteX > currRightMostNoteX) {
+              rightMostNote = highLightedNote;
+            }
           }
         }
       );
 
-      centerPianoRollOn(rightMostNote);
+      if (rightMostNote != undefined) {
+        centerPianoRollOn(rightMostNote);
+      }
     }
 
 
@@ -509,7 +508,7 @@
 
       let VEROVIO_OPTIONS_2 = { // TEMP - should use the one above
         pageHeight: 3000,
-        pageWidth: 2500, // this just seems to clip; doesn't actually effect notation layouot
+        pageWidth: 2500, // this just seems to clip; doesn't actually effect notation layout
         // scale: 33, // 10 => 300 px wide; 20 => 600 px wide
         // scale: scale,
         // ignoreLayout: 1,
@@ -665,12 +664,10 @@
       
       // TODO: THIS SHOULD BE HANDLED BY CSS
       
-      console.log("MUTE CHANGE FOR CMN");
-
       muteStatus.forEach((mute, index) => {
-        $('.measure .staff:nth-of-type(' + (index + 1) + ')')
+        viewContainer.find('.measure .staff:nth-of-type(' + (index + 1) + ')')
           .attr('opacity', mute ? '0.2': '1.0');
-        $('.measure .barLineAttr path:nth-of-type(' + (index + 1) + ')')
+        viewContainer.find('.measure .barLineAttr path:nth-of-type(' + (index + 1) + ')')
           .attr('opacity', mute ? '0.2': '1.0');
       })
       
@@ -1120,15 +1117,19 @@
   
   // OBJECT: MODEL
   
-  function Model(viewManager) {
+  function Model(viewManager, verovioToolkit) {
 
     let timerId, startTime, 
-      pauseTimePassed = 0;
+      pauseTimePassed = 0,
+      mei = verovioToolkit.getMEI();
     
     // "Play" means to schedule updates for views
     // Start time is set to beginning
     
     function play() {
+      verovioToolkit.loadData(mei); // this is rendundant with
+      verovioToolkit.renderToMidi(); // line 137 & 141
+
       startTime = (new Date().valueOf()) - pauseTimePassed;
       timerId = setInterval(() => {
         let timePassed = (new Date().valueOf()) - startTime;
@@ -1202,7 +1203,7 @@
 
     let muteButtons = muteButtonTexts.map(muteButtonText => {
       let buttonElem = document.createElement('button');
-      buttonElem.classList.add('atalanta-notation-mute-track');
+      buttonElem.classList.add('atalanta-notation-mute-track'); // TODO: should not be a magic value
       buttonElem.innerText = muteButtonText;
       return buttonElem;
     });
@@ -1219,7 +1220,13 @@
 
     let muteButtonContainer = document.createElement('div');
     muteButtonContainer.classList.add('track-mute'); // TODO: should not be a magic value
-    muteButtons.forEach(muteButton => muteButtonContainer.appendChild(muteButton));
+
+    // Only attach mute buttons if more than one voice
+    // TODO: shouldn't generate mute buttons if not needed
+
+    if (muteButtons.length > 1) {
+      muteButtons.forEach(muteButton => muteButtonContainer.appendChild(muteButton));
+    }
 
     // Attach buttons to DOM
     //  TODO: this shouldn't be here in this function - it should return a node
@@ -1245,7 +1252,7 @@
 
       let modalViewLink = document.createElement('div');
       modalViewLink.classList.add('atalanta-notation__switch'); // TODO: should not be a magic value
-      modalViewLink.innerHTML = `<a href="#${targetId}" data-lity>Visualize</a>`; // TODO: should not be a magic value
+      modalViewLink.innerHTML = `<a href="#${targetId}" data-lity>${VISUALIZE_BUTTON_TEXT}</a>`; // TODO: should not be a magic value
       transportInterface.appendChild(modalViewLink);
     }
 
@@ -1317,7 +1324,7 @@
       }
     }
 
-    // Look for modals and add lity-hide class
+    // Look for modals and if they exist add lity-hide class
 
     $('.modal').addClass('lity-hide'); // TODO: No magic values!!
     
