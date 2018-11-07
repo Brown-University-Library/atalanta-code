@@ -118,11 +118,17 @@
             let viewManager = ViewManager(containerNode, verovioToolkit),
                 model = Model(viewManager, verovioToolkit);
             
-            // Controller for main window and modals
+            // Controller for main window
 
             initControllers(containerNode, model, meiData);
+            
+            // Controller for modals
+
             let modalContainers = containerNode.find('.modal');
-            initControllers(modalContainers, model, meiData);
+
+            if (modalContainers.length) {
+              initControllers(modalContainers, model, meiData);
+            }
 
             // Create onclick events to jump to time
             // TODO: test this
