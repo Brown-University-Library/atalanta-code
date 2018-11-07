@@ -85,30 +85,6 @@
     // Get rid of default content for browsers with no javascript
     
     containerNode.css('backgroundImage', 'none');
-
-    // Take MEI code, remove tempo information, replace with that tempo
-    //  indicated by the tempo attribute in the markup
-    // THIS DOESN'T SEEM TO WORK
-    
-    /*
-    function setMeiTempo(meiData) {
-      
-      // Get tempo from child of main container 
-      // TODO: also look in main container
-      
-      let tempoValue = Number(containerNode.find('*[' + AUDIO_VIZ_TEMPO_ATTR_NAME + ']')
-                                           .attr(AUDIO_VIZ_TEMPO_ATTR_NAME)),
-          tempo =  tempoValue === NaN ? 60 : tempoValue;
-
-      console.log("Tempo read from DOM: " + tempo);
-      
-      // Take out existing tempo data
-      //  and insert new tempo data
-      
-      return meiData.replace(/\s+midi.bpm="[^"]"/g, '')
-                    .replace(/<scoreDef\s+/, '<scoreDef midi.bpm="' + tempo + '" ');
-    }
-    */
     
     // Create verovio toolkit object
 
@@ -229,6 +205,17 @@
       console.log("MUTE CHANGE FOR ALL VIEWS");
       views.forEach(view => view.onMuteChange(muteStatus));
     }
+
+    function getDuration() {
+
+      let viewWithDuration = views.find(
+        view => view.getDuration !== undefined
+      );
+
+      return viewWithDuration !== undefined 
+        ? viewWithDuration.getDuration()
+        : Number.POSITIVE_INFINITY;
+    }
     
     function init() {
       views = createViews();
@@ -240,7 +227,8 @@
     return {
       update: updateAllViews,
       stop: stopAllViews,
-      setMute: setMute
+      setMute: setMute,
+      getDuration: getDuration
     };
   }
   
@@ -738,6 +726,8 @@
                               }, []);
     }
 
+    // Get information about an audio track from the markup
+
     function getTrackInfo(containerNode) {
 
       let trackInfo = [];
@@ -774,6 +764,16 @@
       console.log(muteStatusArray);
       muteStatusArray.forEach((muteStatus, i) => tracks[i].mute(muteStatus));
     }
+
+    function getLongestDuration() {
+      let duration;
+      let longestDuration = tracks.reduce((longestDuration, track) => {
+        duration = track.getDuration();
+        return duration > longestDuration ? duration : longestDuration;
+      }, 0);
+
+      return longestDuration;
+    }
     
     function init() {
 
@@ -796,7 +796,8 @@
       render: function () {},
       update: update,
       stop: stop,
-      onMuteChange: onMuteChange
+      onMuteChange: onMuteChange,
+      getDuration: getLongestDuration
     }
   }
   
@@ -905,6 +906,17 @@
       setGain(muteStatus ? 0 : 1);
     }
 
+    // Find the longest duration of the buffers
+
+    function getLongestDuration() {
+
+      let longestDuration = bufferList.reduce((longestDuration, buffer) => {
+        return buffer.duration > longestDuration ? buffer.duration : longestDuration
+      }, 0);
+
+      return longestDuration * 1000; // Convert to ms
+    }
+
     function init2(trackInfo) {
 
       if (trackInfo.mainFilename !== undefined) {
@@ -912,8 +924,6 @@
 
         }
       }
-
-
 
       sounds.reverb = {
 
@@ -948,12 +958,12 @@
     return {
       play: play,
       stop: stop,
-      mute: mute
+      mute: mute,
+      getDuration: getLongestDuration
     }
   }
   
   // BUFFERLOADER 2
-
 
   function getAudioFromFilenames(audioContext, audioFilenames, onFinishedLoading) {
 
@@ -1121,20 +1131,36 @@
 
     let timerId, startTime, 
       pauseTimePassed = 0,
+      functionsToCallOnReset = [],
       mei = verovioToolkit.getMEI();
     
     // "Play" means to schedule updates for views
     // Start time is set to beginning
     
     function play() {
+
       verovioToolkit.loadData(mei); // this is rendundant with
       verovioToolkit.renderToMidi(); // line 137 & 141
 
+      let maxDuration = viewManager.getDuration();
+
       startTime = (new Date().valueOf()) - pauseTimePassed;
-      timerId = setInterval(() => {
+
+      function updateTicker() {
+
         let timePassed = (new Date().valueOf()) - startTime;
-        viewManager.update(timePassed);
-      }, VIZ_REFRESH_INTERVAL);
+
+        // If time has passed the duration of the longest audio
+        //   clip, then rewind and stop
+
+        if (timePassed < maxDuration) {
+          viewManager.update(timePassed);
+        } else {
+          reset();
+        }
+      }
+
+      timerId = setInterval(updateTicker, VIZ_REFRESH_INTERVAL);
     }
     
     // "Stop" means stop the scheduled updates
@@ -1147,6 +1173,18 @@
       console.log(`Pausing at ${pauseTimePassed}`);
       viewManager.stop();
     }
+
+    // "Reset" means to stop and rewind to beginning
+
+    function reset() {
+      stop();
+      pauseTimePassed = 0;
+      functionsToCallOnReset.forEach(f => f());
+    }
+
+    function callOnReset(func) {
+      functionsToCallOnReset.push(func);
+    }
     
     function setMute(muteStatus) {
       viewManager.setMute(muteStatus);
@@ -1155,7 +1193,8 @@
     return {
       play: play,
       stop: stop,
-      setMute: setMute
+      setMute: setMute,
+      callOnReset: callOnReset
     };
   }
   
@@ -1187,6 +1226,14 @@
       playButton.classList.remove('playing'); // TODO: should not be a magic value
       pauseButton.classList.remove('playing'); // TODO: should not be a magic value
     }
+
+    // Tell Model what to do if reset 
+    // (i.e. when the audio runs out)
+
+    model.callOnReset(function () {
+      playButton.classList.remove('playing'); // TODO: should not be a magic value
+      pauseButton.classList.remove('playing'); // TODO: should not be a magic value
+    });
     
     // Mute buttons
 
@@ -1247,8 +1294,6 @@
        targetId = 'x' + Math.floor(Math.random() * 1000);
 
       target.setAttribute('id', targetId);
-
-// <div class="atalanta-notation__switch"><a href="#visualize" data-lity>Visualize</a></div>
 
       let modalViewLink = document.createElement('div');
       modalViewLink.classList.add('atalanta-notation__switch'); // TODO: should not be a magic value
