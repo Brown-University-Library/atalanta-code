@@ -1,16 +1,20 @@
 
 /*
 
-
-  TODO LIST:
-  - Need to read the length of the audio buffer (https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/duration)
-    then end the playback and reset to beginning
-  - Only one instance of Verovio is possible, which means that only one set of notation
-    can be animated on a page; look into whether the Verovio instance can be discarded
-    (or data re-loaded) upon playback. One issue: are the SVG element IDs the same each time?
-
   The tempo is being read from the DOM but the tempo is not taking hold
   in terms of what's being returned for timing in Verovio
+  
+  Try editing the sample MEI directly and putting in the tempo there; maybe the regex method 
+  isn't doing it
+  
+  (Didn't work - defaulting to 60 BPM)
+  
+  Have to implement update(time) functions for the CMN view
+  
+  Have to give the model a play() method that starts a setInterval that tells the view 
+  manager to updateAllViews
+  
+  May want to have a Verovio-type API for other visualizations (e.g. )
 
 */
 
@@ -43,13 +47,11 @@
       barHeight: 5,
       pitchScale: 5,
       HILIGHT_CLASS: 'highlighted'
-    },
-    VISUALIZE_BUTTON_TEXT = 'Show piano roll';
+    };
 
   // GLOBALS
   
-  var audioContext, 
-    verovioToolkit = new verovio.toolkit();
+  var audioContext;
 
   // UTILITY FUNCTIONS
 
@@ -114,7 +116,8 @@
 
     function createVerovioObject(meiFileURL) {
       
-      // let verovioToolkit = new verovio.toolkit();
+      let verovioToolkit = new verovio.toolkit();
+      window.v = verovioToolkit; // TODO - this is temp
 
       // Load the MEI file using a HTTP GET
       
@@ -222,12 +225,12 @@
     }
     
     function stopAllViews() {
-      views.forEach(view => view.stop())
+      views.forEach((view) => view.stop())
     }
     
     function setMute(muteStatus) {
       console.log("MUTE CHANGE FOR ALL VIEWS");
-      views.forEach(view => view.onMuteChange(muteStatus));
+      views.forEach((view) => view.onMuteChange(muteStatus));
     }
     
     function init() {
@@ -426,29 +429,27 @@
       
       verovioToolkit.getElementsAtTime(timeInMilliseconds).notes.forEach(
         note => {
+          // console.log(`NOTE ABCD`);
+          // console.log(document.getElementById(getLocalNoteID(note)));
           let highLightedNote = document.getElementById(getLocalNoteID(note));
+          highLightedNote.classList.add(PIANO_ROLL_OPTIONS.HILIGHT_CLASS);
+          console.log(highLightedNote);
+          highlightedNotes.push(highLightedNote);
 
-          if (highLightedNote !== null) {
-            highLightedNote.classList.add(PIANO_ROLL_OPTIONS.HILIGHT_CLASS);
-            highlightedNotes.push(highLightedNote);
+          if (rightMostNote === undefined) {
+            rightMostNote = highLightedNote
+          }
 
-            if (rightMostNote === undefined) {
-              rightMostNote = highLightedNote
-            }
-  
-            const highLightedNoteX = highLightedNote.getBBox().x,
-              currRightMostNoteX = rightMostNote.getBBox().x;
-  
-            if (highLightedNoteX > currRightMostNoteX) {
-              rightMostNote = highLightedNote;
-            }
+          const highLightedNoteX = highLightedNote.getBBox().x,
+            currRightMostNoteX = rightMostNote.getBBox().x;
+
+          if (highLightedNoteX > currRightMostNoteX) {
+            rightMostNote = highLightedNote;
           }
         }
       );
 
-      if (rightMostNote != undefined) {
-        centerPianoRollOn(rightMostNote);
-      }
+      centerPianoRollOn(rightMostNote);
     }
 
 
@@ -508,7 +509,7 @@
 
       let VEROVIO_OPTIONS_2 = { // TEMP - should use the one above
         pageHeight: 3000,
-        pageWidth: 2500, // this just seems to clip; doesn't actually effect notation layout
+        pageWidth: 2500, // this just seems to clip; doesn't actually effect notation layouot
         // scale: 33, // 10 => 300 px wide; 20 => 600 px wide
         // scale: scale,
         // ignoreLayout: 1,
@@ -582,6 +583,7 @@
           // `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
           // `<svg transform-origin="0 0" transform="scale(${smallestScale * CRYSTALS_CONSTANT})" ` 
           `<svg transform-origin="0 0" transform="scale(1)" ` // Not sure why this is necessary
+          //`<svg transform-origin="0 0" transform="scale(${CRYSTALS_CONSTANT})" ` // (CB) this will only work if I also multiply each viewBox height by 1.5, after getting that value for the container height
         );
 
         // scaledPageSvgCode = svgCodeForPages[pageIndex]; // ONLY USE IF ABOVE IS COMMENTED OUT
@@ -605,16 +607,55 @@
         // Add viewBox attribute
         // viewBox="0 0 w h"
 
+        /* (CB) see replacement below
         scaledPageSvgCode = scaledPageSvgCode.replace(
           /^\s*<svg\s/i,
           `<svg viewBox="0 0 ${width} ${height}" `
+        )
+        */
+        scaledPageSvgCode = scaledPageSvgCode.replace( // (CB) trying to center the non-scaled SVG
+          /^\s*<svg\s/i,
+          `<svg viewBox="-200 0 ${width} ${height}" `
         )
 
         // TEMP - END
 
 
         pageContainer.innerHTML = scaledPageSvgCode;
+        //console.log("this is my SVG height: " + height);
+        //console.log("this is my SVG width: " + width);
+        scaleMusicPageElements(pageIndex); // (CB)
       });
+
+      function scaleMusicPageElements(pageIndex) { // (CB) resize music page wrapper elements to match SVG heights
+        let musicPageA, musicPageB, SVGa, SVGb, firstSVG, secondSVG, heightSVGa, heightSVGb, viewBoxHeightA, viewBoxHeightB;
+        //console.log("the pageIndex is " + pageIndex); // pageIndex 0 renders SVG 1 and pageIndex 1 renders SVG 2
+        if ( pageIndex < 1 ){
+          musicPageA = '.music-page:nth-of-type(1)'; // music page element 1
+          SVGa = '.music-page:nth-of-type(1) > svg'; // music SVG 1
+          //console.log("the first music SVG is " + SVGa);
+          firstSVG = document.querySelector(SVGa);
+          heightSVGa = $(firstSVG).attr('viewBox'); // get SVG 1 height attribute
+          //console.log("this is the viewBox of my function's SVGa: " + heightSVGa);
+          viewBoxHeightA = heightSVGa.split(' '); // split string of viewBox attributes from SVG 1 into an array
+          //console.log("my fourth SVGa value after the split is: " + viewBoxHeightA[3]); // get the SVG 1 viewBox height value from the array
+          heightSVGa = viewBoxHeightA[3]; // get the height of the SVG 1 viewBox from the array of values
+          //console.log("the viewBox height value now becomes heightSVGa=" + heightSVGa);
+          $(musicPageA).attr("height", heightSVGa + "px"); // set height of SVG 1 .music-page wrapper to SVG 1 height
+        }
+        else if ( pageIndex >= 1 ){
+          musicPageB = '.music-page:nth-of-type(2)'; // music page element 2
+          SVGb = '.music-page:nth-of-type(2) > svg'; // music SVG 2
+          //console.log("the second music SVG is " + SVGb);
+          secondSVG = document.querySelector(SVGb);
+          heightSVGb = $(secondSVG).attr('viewBox'); // get SVG 2 height attribute
+          //console.log("this is the viewBox of my function's SVGb: " + heightSVGb);
+          viewBoxHeightB = heightSVGb.split(' '); // split string of viewBox attributes from SVG 2 into an array
+          //console.log("my fourth SVGa value after the split is: " + viewBoxHeightB[3]); // get the SVG 2 viewBox height value from the array
+          heightSVGb = viewBoxHeightB[3]; // get the height of the SVG 2 viewBox from the array of values
+          $(musicPageB).attr("height", heightSVGb + "px"); // set height of SVG 2 .music-page wrapper to SVG 2 height
+        }
+      }
 
       // Fill with music SVG
 /*
@@ -664,10 +705,12 @@
       
       // TODO: THIS SHOULD BE HANDLED BY CSS
       
+      console.log("MUTE CHANGE FOR CMN");
+
       muteStatus.forEach((mute, index) => {
-        viewContainer.find('.measure .staff:nth-of-type(' + (index + 1) + ')')
+        $('.measure .staff:nth-of-type(' + (index + 1) + ')')
           .attr('opacity', mute ? '0.2': '1.0');
-        viewContainer.find('.measure .barLineAttr path:nth-of-type(' + (index + 1) + ')')
+        $('.measure .barLineAttr path:nth-of-type(' + (index + 1) + ')')
           .attr('opacity', mute ? '0.2': '1.0');
       })
       
@@ -1117,19 +1160,15 @@
   
   // OBJECT: MODEL
   
-  function Model(viewManager, verovioToolkit) {
+  function Model(viewManager) {
 
     let timerId, startTime, 
-      pauseTimePassed = 0,
-      mei = verovioToolkit.getMEI();
+      pauseTimePassed = 0;
     
     // "Play" means to schedule updates for views
     // Start time is set to beginning
     
     function play() {
-      verovioToolkit.loadData(mei); // this is rendundant with
-      verovioToolkit.renderToMidi(); // line 137 & 141
-
       startTime = (new Date().valueOf()) - pauseTimePassed;
       timerId = setInterval(() => {
         let timePassed = (new Date().valueOf()) - startTime;
@@ -1203,7 +1242,7 @@
 
     let muteButtons = muteButtonTexts.map(muteButtonText => {
       let buttonElem = document.createElement('button');
-      buttonElem.classList.add('atalanta-notation-mute-track'); // TODO: should not be a magic value
+      buttonElem.classList.add('atalanta-notation-mute-track');
       buttonElem.innerText = muteButtonText;
       return buttonElem;
     });
@@ -1220,13 +1259,7 @@
 
     let muteButtonContainer = document.createElement('div');
     muteButtonContainer.classList.add('track-mute'); // TODO: should not be a magic value
-
-    // Only attach mute buttons if more than one voice
-    // TODO: shouldn't generate mute buttons if not needed
-
-    if (muteButtons.length > 1) {
-      muteButtons.forEach(muteButton => muteButtonContainer.appendChild(muteButton));
-    }
+    muteButtons.forEach(muteButton => muteButtonContainer.appendChild(muteButton));
 
     // Attach buttons to DOM
     //  TODO: this shouldn't be here in this function - it should return a node
@@ -1252,7 +1285,7 @@
 
       let modalViewLink = document.createElement('div');
       modalViewLink.classList.add('atalanta-notation__switch'); // TODO: should not be a magic value
-      modalViewLink.innerHTML = `<a href="#${targetId}" data-lity>${VISUALIZE_BUTTON_TEXT}</a>`; // TODO: should not be a magic value
+      modalViewLink.innerHTML = `<a href="#${targetId}" data-lity>Visualize</a>`; // TODO: should not be a magic value
       transportInterface.appendChild(modalViewLink);
     }
 
@@ -1324,7 +1357,7 @@
       }
     }
 
-    // Look for modals and if they exist add lity-hide class
+    // Look for modals and add lity-hide class
 
     $('.modal').addClass('lity-hide'); // TODO: No magic values!!
     
