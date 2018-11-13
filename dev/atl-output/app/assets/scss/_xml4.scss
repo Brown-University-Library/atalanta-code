@@ -32,8 +32,10 @@ PREFACE
 ._preface--latin				div.preface.la {}				???
 
 EMBLEM MOTTO
-._motto--english				???
-._motto--latin					div.image.la
+._motto--english				???											h3.title
+																			h1.title
+._motto--latin					div.image.la 								h3.title
+																			h1.title
 ._motto--german					div.fugue.de
 
 EMBLEM EPIGRAM
@@ -286,24 +288,47 @@ div.epigram {
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
 /*	h3.epigram, ._epigram--latin h3, ._epigram--german h3 {*/
-	h3.epigram {
+/*	h3.epigram {
 		grid-area: 1 / 2 / 2 / 12;
 		text-align: center;
+	}*/
+	h3.title {
+		grid-column: 2 / 12;
+		text-align: center;
+		text-indent: 0;
 	}
-	h3.epigram span.regularized, .verse-epigram span.regularized {
+/*	h3.epigram span.regularized, .verse-epigram span.regularized {
+		color: #fff;
+	}*/
+	.verse-epigram span.regularized {
 		color: #fff;
 	}
 	.panel--left h3.epigram, .panel--right h3.epigram {
-		grid-area: 1 / 3 / 2 / 11;
+		grid-column: 1 / 3 / 2 / 11;
 	}
 	.verse-epigram {
 		font-size: 1.5rem;
-		grid-area: 2 / 2 / 3 / 12;
+/*		grid-area: 2 / 2 / 3 / 12;*/
+		grid-column: 2 / 12;
 		line-height: 2.5rem;
 		text-align: center;
 	}
 	.panel--left .verse-epigram, .panel--right .verse-epigram {
 		grid-area: 2 / 3 / 3 / 11;
+	}
+}
+.edition--facsimile div.epigram {
+	h3.title {
+		grid-column: 5 / 10;
+		text-align: left;
+		text-indent: 20%;
+	}
+	.verse-epigram {
+		grid-column: 5 / 10;
+		text-align: left;
+	}
+	.panel--left .verse-epigram, .panel--right .verse-epigram {
+		grid-column: 3 / 12;
 	}
 }
 .section__discourse div.translation, .section__discourse div.original {
