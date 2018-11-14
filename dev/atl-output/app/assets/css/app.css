@@ -2,34 +2,34 @@
 /* Usual */
 @import url("https://use.typekit.net/utc2ige.css");
 @font-face {
-  font-family: 'GTAmericaTrial';
+  font-family: 'GTAmerica';
   /* regular */
-  src: url("../fonts/GT-America-Trial-Regular.eot");
-  src: url("../fonts/GT-America-Trial-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Trial-Regular.woff") format("woff");
+  src: url("../fonts/GT-America-Regular.eot");
+  src: url("../fonts/GT-America-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'GTAmericaTrial';
+  font-family: 'GTAmerica';
   /* italic */
-  src: url("../fonts/GT-America-Trial-Regular-Italic.eot");
-  src: url("../fonts/GT-America-Trial-Regular-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Trial-Regular-Italic.woff") format("woff");
+  src: url("../fonts/GT-America-Regular-Italic.eot");
+  src: url("../fonts/GT-America-Regular-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Regular-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic; }
 
 @font-face {
-  font-family: 'GTAmericaTrial';
-  /* bold */
-  src: url("../fonts/GT-America-Trial-Medium.eot");
+  font-family: 'GTAmerica';
+  /* semibold */
+  src: url("../fonts/GT-America-Medium.eot");
   src: url("../fonts/GT-America-Trial-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Trial-Medium.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
-  font-family: 'GTAmericaTrial';
-  /* bold italic */
-  src: url("../fonts/GT-America-Trial-Medium-Italic.eot");
-  src: url("../fonts/GT-America-Trial-Medium-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Trial-Medium-Italic.woff") format("woff");
+  font-family: 'GTAmerica';
+  /* semibold italic */
+  src: url("../fonts/GT-America-Medium-Italic.eot");
+  src: url("../fonts/GT-America-Medium-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Medium-Italic.woff") format("woff");
   font-weight: bold;
   font-style: italic; }
 
@@ -244,7 +244,7 @@ button {
     width: 45px; }
 
 .topnav__identity a {
-  font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif;
+  font-family: "GTAmerica", "Usual", Helvetica, Arial, sans-serif;
   font-weight: 500; }
 
 div[data-nav='home'] .topnav {
@@ -302,7 +302,7 @@ div[data-nav='home'] .topnav__identity {
   .toc__items li {
     color: #fff;
     cursor: default;
-    font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
+    font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.5rem;
@@ -391,7 +391,7 @@ main.emblem-page {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   min-height: calc(100vh - 3.125rem);
   line-height: 1.5rem;
@@ -977,7 +977,7 @@ body {
   margin-left: 0;
   margin-right: 0;
   line-height: 0;
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif; }
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif; }
 
 /* .edition--original, .edition--regularized */
 /*
@@ -1205,7 +1205,7 @@ section.section__motto div.title, section.section__motto div.fugue, section.sect
   grid-column: 4 / 10; }
 
 section.section__motto .translation h1.title, section.section__motto .original h1.title {
-  font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif;
+  font-family: "GTAmerica", "Usual", Helvetica, Arial, sans-serif;
   font-size: 2.625rem;
   font-weight: 600;
   line-height: 3.25rem;
@@ -1219,7 +1219,7 @@ section.section__motto .translation .edition--facsimile h1.title br, section.sec
   display: none; }
 
 section.section__motto .translation h3.title, section.section__motto .original h3.title {
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1691,7 +1691,7 @@ main.home {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
   height: 4.5rem;
@@ -2211,7 +2211,7 @@ body {
   outline: 10px solid red; }
 
 .section__music {
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif; }
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif; }
 
 .section__music ._music {
   display: grid;
@@ -2445,7 +2445,6 @@ button.lity-close {
 @media screen and (max-width: 319px) {
   /* the music section is seriously broken at this point */ }
 
-/*@import 'music-snippets';*/
 /* TESTING */
 /* DEVELOPMENT */
 /* PRODUCTION */
@@ -2467,7 +2466,7 @@ button.lity-close {
   position: fixed; }
 
 .frontmatter section {
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   height: auto;
   min-height: calc(100vh - 3.125rem);
   /* subtracts topnav height */
