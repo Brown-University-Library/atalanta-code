@@ -3,11 +3,6 @@
 
 
   TODO LIST:
-  - Need to read the length of the audio buffer (https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer/duration)
-    then end the playback and reset to beginning
-  - Only one instance of Verovio is possible, which means that only one set of notation
-    can be animated on a page; look into whether the Verovio instance can be discarded
-    (or data re-loaded) upon playback. One issue: are the SVG element IDs the same each time?
 
   The tempo is being read from the DOM but the tempo is not taking hold
   in terms of what's being returned for timing in Verovio
@@ -1247,7 +1242,7 @@
     
     // Get mute button text from MEI
 
-    const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gis;
+    const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gi;
     let staffDefTxt, muteButtonTexts = [];
 
     while (staffDefTxt = voiceNameRE.exec(meiData)) {
