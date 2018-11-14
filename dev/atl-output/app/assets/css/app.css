@@ -2,34 +2,34 @@
 /* Usual */
 @import url("https://use.typekit.net/utc2ige.css");
 @font-face {
-  font-family: 'GTAmericaTrial';
+  font-family: 'GTAmerica';
   /* regular */
-  src: url("../fonts/GT-America-Trial-Regular.eot");
-  src: url("../fonts/GT-America-Trial-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Trial-Regular.woff") format("woff");
+  src: url("../fonts/GT-America-Regular.eot");
+  src: url("../fonts/GT-America-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'GTAmericaTrial';
+  font-family: 'GTAmerica';
   /* italic */
-  src: url("../fonts/GT-America-Trial-Regular-Italic.eot");
-  src: url("../fonts/GT-America-Trial-Regular-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Trial-Regular-Italic.woff") format("woff");
+  src: url("../fonts/GT-America-Regular-Italic.eot");
+  src: url("../fonts/GT-America-Regular-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Regular-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic; }
 
 @font-face {
-  font-family: 'GTAmericaTrial';
-  /* bold */
-  src: url("../fonts/GT-America-Trial-Medium.eot");
+  font-family: 'GTAmerica';
+  /* semibold */
+  src: url("../fonts/GT-America-Medium.eot");
   src: url("../fonts/GT-America-Trial-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Trial-Medium.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 
 @font-face {
-  font-family: 'GTAmericaTrial';
-  /* bold italic */
-  src: url("../fonts/GT-America-Trial-Medium-Italic.eot");
-  src: url("../fonts/GT-America-Trial-Medium-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Trial-Medium-Italic.woff") format("woff");
+  font-family: 'GTAmerica';
+  /* semibold italic */
+  src: url("../fonts/GT-America-Medium-Italic.eot");
+  src: url("../fonts/GT-America-Medium-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Medium-Italic.woff") format("woff");
   font-weight: bold;
   font-style: italic; }
 
@@ -244,7 +244,7 @@ button {
     width: 45px; }
 
 .topnav__identity a {
-  font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif;
+  font-family: "GTAmerica", "Usual", Helvetica, Arial, sans-serif;
   font-weight: 500; }
 
 div[data-nav='home'] .topnav {
@@ -302,7 +302,7 @@ div[data-nav='home'] .topnav__identity {
   .toc__items li {
     color: #fff;
     cursor: default;
-    font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
+    font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.5rem;
@@ -391,7 +391,7 @@ main.emblem-page {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   min-height: calc(100vh - 3.125rem);
   line-height: 1.5rem;
@@ -494,20 +494,17 @@ main.emblem-page {
 
 .grid--left {
   grid-column-start: 1;
-  grid-column-end: 3;
-  /*	grid-area: 1 / 1 / 2 / 3;*/ }
+  grid-column-end: 3; }
 
 .grid--right {
   grid-column-start: 3;
-  grid-column-end: 5;
-  /*	grid-area: 1 / 3 / 2 / 5;*/ }
+  grid-column-end: 5; }
 
 .grid--half {
   width: 50%;
   background-color: silver; }
 
 .switch-wrapper {
-  /*	border: 1px solid green;*/
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -521,8 +518,7 @@ main.emblem-page {
   margin-bottom: 1.5rem;
   width: 100%; }
 
-.latin-german-switch, .facsimile-normalized-switch {
-  /*	border: 1px solid red;*/
+.facsimile-normalized-switch, .latin-german-switch {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -536,8 +532,7 @@ main.emblem-page {
   justify-content: center;
   height: 1.25rem;
   width: 8rem; }
-  .latin-german-switch ul, .facsimile-normalized-switch ul {
-    /*		border: 1px solid blue;*/
+  .facsimile-normalized-switch ul, .latin-german-switch ul {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -551,45 +546,52 @@ main.emblem-page {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     width: 100%; }
-    .latin-german-switch ul li, .facsimile-normalized-switch ul li {
-      /*			border: 1px solid green;*/
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: .75em;
-      margin: 0 .25rem;
-      width: 100%; }
-      .latin-german-switch ul li a, .facsimile-normalized-switch ul li a {
-        color: #222;
-        cursor: pointer;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%; }
-      .latin-german-switch ul li a:hover, .facsimile-normalized-switch ul li a:hover {
-        color: #0a8f69; }
-    .latin-german-switch ul li.is-selected, .facsimile-normalized-switch ul li.is-selected {
-      border-bottom: 3px solid #3DF2BF;
-      margin-bottom: -3px; }
+  .facsimile-normalized-switch li, .latin-german-switch li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: .75em;
+    margin: 0 .25rem;
+    width: 100%; }
+  .facsimile-normalized-switch li.is-selected, .latin-german-switch li.is-selected {
+    border-bottom: 3px solid #3DF2BF;
+    margin-bottom: -3px; }
+  .facsimile-normalized-switch a, .latin-german-switch a {
+    color: #222;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%; }
+  .facsimile-normalized-switch a:hover, .latin-german-switch a:hover {
+    color: #0a8f69; }
+
+.latin-german-switch {
+  width: 20rem; }
+
+.section__discourse .latin-german-switch {
+  width: 15rem; }
+  .section__discourse .latin-german-switch li:nth-of-type(3) {
+    display: none; }
 
 .section__motto .switch-wrapper li.is-selected, .section__epigram .switch-wrapper li.is-selected {
   border-bottom: 3px solid #3DF2BF; }
@@ -975,8 +977,9 @@ body {
   margin-left: 0;
   margin-right: 0;
   line-height: 0;
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif; }
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif; }
 
+/* .edition--original, .edition--regularized */
 /*
 
 FRONTISPIECE	 
@@ -997,8 +1000,10 @@ PREFACE
 ._preface--latin				div.preface.la {}				???
 
 EMBLEM MOTTO
-._motto--english				???
-._motto--latin					div.image.la
+._motto--english				???											h3.title
+																			h1.title
+._motto--latin					div.image.la 								h3.title
+																			h1.title
 ._motto--german					div.fugue.de
 
 EMBLEM EPIGRAM
@@ -1028,7 +1033,9 @@ EMBLEM DISCOURSE
 .section__discourse span.note-mark:nth-of-type(2) {
   /*	background-color: $error;*/
   grid-area: 1 / 1 / 2 / 2;
-  margin-left: 100px; }
+  /* this isn't aligning because the span isn't part of the h3.title and is pushed to another grid cell */
+  margin-left: 100px;
+  margin-bottom: -3rem; }
 
 .section__discourse.panel--right span.note-mark:nth-of-type(2) {
   /*	background-color: $error;*/
@@ -1037,6 +1044,9 @@ EMBLEM DISCOURSE
 
 /********** END OF ENGLISH XML ISSUES **************/
 /*********** ENGLISH EMBLEM OVERRIDES *************/
+.italic {
+  font-style: oblique; }
+
 .epigram {
   margin-top: 0;
   text-align: left;
@@ -1071,7 +1081,8 @@ h3.title {
 
 .pb {
   color: #222;
-  display: none; }
+  display: none;
+  margin-top: 0; }
 
 .pb:before {
   color: #222; }
@@ -1139,19 +1150,28 @@ cite {
   .edition--normalized span.original {
     display: none; }
 
-.edition--facsimile .del {
+.edition--facsimile {
+  /*	.pb:before{
+    content: "––– Page: ";
+	}
+
+	.pb:after{
+	    content: " –––"
+	}*/ }
+  .edition--facsimile .del {
+    display: none; }
+  .edition--facsimile .italics {
+    font-style: oblique; }
+  .edition--facsimile span.regularized {
+    display: none; }
+
+.edition--original span.v-line, .edition--regularized span.v-line {
+  line-height: 2; }
+
+.edition--original span.regularized {
   display: none; }
 
-.edition--facsimile .italics {
-  font-style: oblique; }
-
-.edition--facsimile .pb:before {
-  content: "––– Page: "; }
-
-.edition--facsimile .pb:after {
-  content: " –––"; }
-
-.edition--facsimile span.regularized {
+.edition--regularized span.original {
   display: none; }
 
 span.underline2 {
@@ -1167,7 +1187,7 @@ span.underline2 {
   white-space: nowrap; }
 
 /*********** END OF ENGLISH EMBLEM OVERRIDES *************/
-/*********** EMBLEM TEXT LAYOUT *************/
+/*********** EMBLEM LAYOUT *************/
 div.translation, div.original {
   margin-top: 2.5rem; }
 
@@ -1179,201 +1199,194 @@ div.translation, div.original {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr; }
 
-div.title, div.fugue, ._motto--latin div.image {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  grid-area: 1 / 4 / 2 / 10; }
+/* MOTTO - ENGLISH/LATIN/GERMAN */
+section.section__motto div.title, section.section__motto div.fugue, section.section__motto ._motto--latin div.image {
+  /*		grid-area: 1 / 4 / 2 / 10;*/
+  grid-column: 4 / 10; }
 
-.panel--left div.title, .panel--left div.fugue, .panel--left ._motto--latin div.image, .panel--right div.title, .panel--right div.fugue, .panel--right ._motto--latin div.image {
+section.section__motto .translation h1.title, section.section__motto .original h1.title {
+  font-family: "GTAmerica", "Usual", Helvetica, Arial, sans-serif;
+  font-size: 2.625rem;
+  font-weight: 600;
+  line-height: 3.25rem;
+  text-align: center; }
+
+section.section__motto .translation h1.title br, section.section__motto .original h1.title br, section.section__motto .translation h3.title br, section.section__motto .original h3.title br {
+  display: none; }
+
+section.section__motto .translation .edition--facsimile h1.title br, section.section__motto .translation .edition--facsimile h3.title br {
+  /*		display: block;*/
+  display: none; }
+
+section.section__motto .translation h3.title, section.section__motto .original h3.title {
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center; }
+
+section.section__motto .original .fugue.de h3.title {
+  visibility: hidden; }
+
+section.section__motto .translation h3.title .italics, section.section__motto .original h3.title .italics {
+  font-style: oblique; }
+
+section.section__motto .translation h3.title span.regularized, section.section__motto .translation h1.title span.regularized {
+  color: #fff; }
+
+section.section__motto .panel--left div.title, section.section__motto .panel--left div.fugue, section.section__motto .panel--left ._motto--latin div.image, section.section__motto .panel--right div.title, section.section__motto .panel--right div.fugue, section.section__motto .panel--right ._motto--latin div.image {
   grid-area: 1 / 2 / 2 / 12;
   margin-top: 1rem; }
 
-h1.title {
-  font-family: "GTAmericaTrial", "Usual", Helvetica, Arial, sans-serif;
-  font-size: 2.625rem;
-  font-weight: 600;
-  line-height: 3.25rem; }
-  h1.title br {
-    display: none; }
-
-.panel--left h1.title, .panel--right h1.title {
+section.section__motto .panel--left .translation h1.title, section.section__motto .panel--left .original h1.title, section.section__motto .panel--right .translation h1.title, section.section__motto .panel--right .original h1.title {
   font-size: 2rem;
   line-height: 2.5rem; }
 
-h3.title {
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.5rem; }
+/* EPIGRAM - ENGLISH/LATIN/GERMAN */
+section.section__epigram .translation div.epigram, section.section__epigram .original div.epigram {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto; }
 
-h3.title .italics {
-  font-style: oblique; }
+section.section__epigram .translation h3.title, section.section__epigram .original h3.title {
+  font-weight: 500;
+  grid-column: 2 / 12;
+  text-align: center;
+  text-indent: 0; }
 
-h3.title span.regularized, h1.title span.regularized {
+section.section__epigram .translation .edition--facsimile h3.title {
+  text-align: left;
+  text-indent: 20%; }
+
+section.section__epigram h3.title span.regularized, section.section__epigram .verse-epigram span.regularized {
   color: #fff; }
 
-div.epigram {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-  /*	h3.epigram, ._epigram--latin h3, ._epigram--german h3 {*/ }
-  div.epigram h3.epigram {
-    grid-area: 1 / 2 / 2 / 12;
-    text-align: center; }
-  div.epigram h3.epigram span.regularized, div.epigram .verse-epigram span.regularized {
-    color: #fff; }
-  div.epigram .panel--left h3.epigram, div.epigram .panel--right h3.epigram {
-    grid-area: 1 / 3 / 2 / 11; }
-  div.epigram .verse-epigram {
-    font-size: 1.5rem;
-    grid-area: 2 / 2 / 3 / 12;
-    line-height: 2.5rem;
-    text-align: center; }
-  div.epigram .panel--left .verse-epigram, div.epigram .panel--right .verse-epigram {
-    grid-area: 2 / 3 / 3 / 11; }
+section.section__epigram .translation .verse-epigram, section.section__epigram .original .verse-epigram {
+  font-size: 1.5rem;
+  grid-column: 2 / 12;
+  text-align: center; }
 
-.section__discourse div.translation, .section__discourse div.original {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-  margin-bottom: 8rem; }
+section.section__epigram .translation .verse-epigram {
+  line-height: 1.5; }
 
-.section__discourse .switch-wrapper {
-  grid-area: 1 / 1 / 2 / 13; }
+section.section__epigram .original .verse-epigram {
+  line-height: 1.5;
+  text-indent: 0; }
 
-.section__discourse div.original .switch-wrapper .facsimile-normalized-switch {
+section.section__epigram .translation .edition--facsimile .verse-epigram {
+  grid-column: 3/ 13;
+  text-align: left; }
+
+section.section__epigram .original .verse-epigram span {
+  /*line-height: 0;*/
+  margin: 0; }
+
+section.section__epigram .original .verse-epigram > span:nth-child(2) {
+  /*		background-color: $error;*/
+  padding-top: 1.25rem; }
+
+section.section__epigram .original .verse-epigram > span:last-child {
+  /*		background-color: $error;*/
+  padding-bottom: 1.25rem; }
+
+section.section__epigram .original div.epigram.la .verse-epigram span.original > br {
   display: none; }
 
-._discourse--english, ._discourse--latin {
-  display: grid;
-  grid-area: 2 / 1 / 3 / 13;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto; }
+section.section__epigram.panel--left .translation .edition--facsimile h3.title, section.section__epigram.panel--right .translation .edition--facsimile h3.title {
+  text-indent: 40%; }
 
-div.discourse {
-  display: grid;
-  grid-column: 4 / 13;
-  grid-gap: 0;
-  grid-template-columns: 4fr 2fr;
-  grid-template-rows: auto; }
-  div.discourse h3.discourse, div.discourse h3.title {
+section.section__epigram.panel--left .original .verse-epigram > span, section.section__epigram.panel--right .original .verse-epigram > span {
+  /*		background-color: $error;*/
+  line-height: 1;
+  margin-bottom: -1.375rem; }
+
+section.section__epigram.panel--left .original .verse-epigram > span:nth-child(2), section.section__epigram.panel--right .original .verse-epigram > span:nth-child(2) {
+  /*		background-color: $error;*/
+  padding-top: .25rem; }
+
+/* DISCOURSE - ENGLISH/LATIN */
+section.section__discourse {
+  /*	.edition--facsimile span.pb {
+		display: inline-block;
+	}*/ }
+  section.section__discourse div.translation, section.section__discourse div.original {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    margin-bottom: 8rem; }
+  section.section__discourse .switch-wrapper {
+    grid-column: 1 / 13; }
+  section.section__discourse div.original .switch-wrapper .facsimile-normalized-switch {
+    display: none; }
+  section.section__discourse ._discourse--english, section.section__discourse ._discourse--latin {
+    display: grid;
+    grid-column: 1 / 13;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto; }
+  section.section__discourse div.discourse {
+    display: grid;
+    grid-column: 4 / 13;
+    grid-gap: 0;
+    grid-template-columns: 4fr 2fr;
+    grid-template-rows: auto; }
+  section.section__discourse .edition--facsimile div.discourse {
+    grid-column: 3 / 13; }
+  section.section__discourse h3.title {
     font-size: 1.25rem;
     font-weight: 400;
     grid-column: 1 / 2;
-    line-height: 2rem; }
-  div.discourse h3.discourse:nth-of-type(2), div.discourse h3.title:nth-of-type(2) {
+    line-height: 2; }
+  section.section__discourse h3.title:nth-of-type(2) {
     margin-top: 3rem;
     margin-bottom: -2rem; }
-  div.discourse .discourse-p1, div.discourse .discourse-p2 {
+  section.section__discourse div.original h3.title:nth-of-type(2) {
+    margin-bottom: 0; }
+  section.section__discourse ._discourse--english .ab, section.section__discourse ._discourse--latin .discourse-p1, section.section__discourse ._discourse--latin .discourse-p2 {
     font-size: 1.25rem;
     grid-column: 1 / 2;
-    line-height: 2rem; }
-    div.discourse .discourse-p1 span, div.discourse .discourse-p2 span {
-      font-size: 1.25rem;
-      line-height: 2rem; }
-  div.discourse .ab {
-    font-size: 1.25rem;
-    line-height: 2rem; }
-    div.discourse .ab span {
-      font-size: 1.25rem;
-      line-height: 2rem; }
-  div.discourse div.margin-note {
+    line-height: 2;
+    /*		span {
+			font-size: 1.25rem;
+			line-height: 2;
+		}*/ }
+  section.section__discourse ._discourse--english.edition--normalized .ab:nth-of-type(3) {
+    margin-top: 2.5rem; }
+  section.section__discourse div.margin-note {
     display: inline-block;
     font-size: 1.25rem;
-    line-height: 2rem;
+    line-height: 2;
     padding-right: 2rem;
     position: absolute;
     left: 80vw; }
+  section.section__discourse div.margin-note.line2 {
+    display: block; }
 
-.panel--left div.discourse, .panel--right div.discourse {
+section.section__discourse.panel--left div.discourse, section.section__discourse.panel--right div.discourse {
   grid-column: 2 / 13;
-  /*	grid-area: 2 / 2 / 3 / 13;*/
   grid-template-columns: repeat(12, 1fr); }
-  .panel--left div.discourse h3.discourse, .panel--left div.discourse h3.title, .panel--right div.discourse h3.discourse, .panel--right div.discourse h3.title {
-    /*		background-color: $error;*/ }
-  .panel--left div.discourse .discourse-p1, .panel--left div.discourse .discourse-p2, .panel--right div.discourse .discourse-p1, .panel--right div.discourse .discourse-p2 {
-    grid-column: 1 / 8; }
 
-.panel--left div.discourse div.margin-note {
+section.section__discourse.panel--left ._discourse--english .ab, section.section__discourse.panel--left ._discourse--latin .discourse-p1, section.section__discourse.panel--left ._discourse--latin .discourse-p2, section.section__discourse.panel--right ._discourse--english .ab, section.section__discourse.panel--right ._discourse--latin .discourse-p1, section.section__discourse.panel--right ._discourse--latin .discourse-p2 {
+  grid-column: 1 / 8; }
+
+section.section__discourse.panel--left div.discourse div.margin-note {
   left: 35vw;
   width: 13vw; }
-
-.panel--right div.discourse div.margin-note {
-  left: 85vw;
-  padding-right: 1rem; }
-
-div.margin-note.line2 {
-  display: block; }
 
 /*.panel--left div.margin-note {  This is only worth the effort on large desktops ???
 	left: calc(50vw - 10%);
 	padding-right: .5rem;
 	width: 10vw;
 }*/
-.section__discourse .edition--normalized span.pb {
-  /*	display: none;*/ }
+section.section__discourse.panel--right div.discourse div.margin-note {
+  left: 85vw;
+  padding-right: 1rem; }
 
-.section__discourse .edition--facsimile span.pb {
-  display: inline-block; }
-
-/*********** END OF ENGLISH EMBLEM LAYOUT *************/
+/*********** END OF EMBLEM LAYOUT *************/
 /*********** ENGLISH EMBLEM STYLES *************/
-div.edition--facsimile span.underline2 {
+.translation div.edition--facsimile span.underline2 {
   border-bottom: 2px solid #333333; }
 
 /*********** END OF ENGLISH EMBLEM STYLES *************/
-/*********** LATIN/GERMAN EMBLEM LAYOUT *************/
-h3.epigram {
-  text-indent: 0; }
-
-div.epigram.la h3.title, div.epigram.de h3.title {
-  font-weight: 500;
-  /*	grid-area: 1 / 5 / 2 / 10;*/
-  grid-area: 1 / 2 / 2 / 12;
-  text-align: center;
-  text-indent: 0; }
-
-div.epigram .verse-epigram span {
-  line-height: 0rem;
-  /* ??? Need a fix to account for the <br> between lines */ }
-
-div.epigram .verse-epigram > span:nth-child(2) {
-  /*		background-color: $error;*/
-  padding-top: 1.25rem; }
-
-div.epigram .verse-epigram > span:last-child {
-  /*		background-color: $error;*/
-  padding-bottom: 1.25rem; }
-
-.panel--left div.epigram .verse-epigram > span, .panel--right div.epigram .verse-epigram > span {
-  /*		background-color: $error;*/
-  line-height: 1.5rem;
-  margin-bottom: -1.375rem; }
-
-.panel--left div.epigram .verse-epigram > span:nth-child(2), .panel--right div.epigram .verse-epigram > span:nth-child(2) {
-  /*		background-color: $error;*/
-  padding-top: .25rem; }
-
-.original .verse-epigram {
-  grid-area: 2 / 3 / 3 / 11;
-  line-height: 1rem;
-  /* ??? this needs a fix to account for every break. */
-  text-align: center;
-  text-indent: 0; }
-  .original .verse-epigram span {
-    margin: 0; }
-
-/*********** END OF LATIN/GERMAN EMBLEM LAYOUT *************/
 /*********** FRONTMATTER *************/
 .section__frontispiece .lang--english, .section__frontispiece .lang--latin {
   display: grid;
@@ -1408,60 +1421,63 @@ div.epigram .verse-epigram > span:last-child {
 /****************************************/
 /***************** BREAKPOINTS *****************/
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .section__motto > div.original {
+  section.section__motto > div.original {
     margin-top: .5rem; }
-  div.title {
-    grid-area: 1 / 1 / 2 / 13;
-    padding: 0 .75rem; }
-  .section__motto div.image, .section__motto div.fugue {
+  section.section__motto div.title, section.section__motto div.image.la, section.section__motto div.fugue.de {
     grid-column: 1 / 13;
     padding: 0 .75rem; }
-  .section__motto h1.title {
+  section.section__motto .translation h1.title, section.section__motto .original h1.title {
     font-size: 2rem;
-    line-height: 2.125rem; }
-  .section__motto h3.title {
-    font-size: .825rem;
-    line-height: 1.5rem; }
-  .verse-epigram {
+    line-height: 1.25; }
+  section.section__motto .translation h3.title, section.section__motto .original h3.title {
+    font-size: .875rem;
+    line-height: 1.5; }
+  section.section__epigram .translation h3.title, section.section__epigram .original h3.title {
+    grid-column: 1 / 13; }
+  section.section__epigram .translation .verse-epigram, section.section__epigram .original .verse-epigram {
     font-size: 1.125rem;
-    grid-area: 2 / 1 / 3 / 13;
-    line-height: 1.875rem;
+    grid-column: 1 / 13;
+    line-height: 2;
     padding: 0 .5rem 0 1rem; }
-  div.epigram .verse-epigram {
-    grid-area: 2 / 1 / 3 / 13; }
-  div.epigram .verse-epigram > span {
-    line-height: 1.5rem;
+  section.section__epigram .translation .verse-epigram > span, section.section__epigram .original .verse-epigram > span {
+    line-height: 1;
     margin-bottom: -1.5rem; }
-  ._discourse--english, ._discourse--latin {
+  section.section__discourse .translation ._discourse--english, section.section__discourse .translation ._discourse--latin, section.section__discourse .original ._discourse--english, section.section__discourse .original ._discourse--latin {
     margin: 0 1rem; }
-  div.discourse {
+  section.section__discourse .translation div.discourse, section.section__discourse .original div.discourse {
     /*		background-color: $error;*/
     grid-column: 1 / 13;
     grid-template-columns: repeat(12, 1fr); }
-    div.discourse h3.discourse, div.discourse h3.title {
-      grid-column: 1 / 13;
-      padding: 0 .25rem; }
-    div.discourse .discourse-p1, div.discourse .discourse-p2 {
-      grid-column: 1 / 13;
-      padding: 0 .25rem; }
-    div.discourse span.note-mark, div.discourse div.margin-note {
-      display: none; }
-  span.note-mark, div.margin-note {
+  section.section__discourse .translation h3.title, section.section__discourse .original h3.title {
+    grid-column: 1 / 13;
+    padding: 0 .25rem; }
+  section.section__discourse .translation ._discourse--english .ab, section.section__discourse .translation ._discourse--latin .discourse-p1, section.section__discourse .translation ._discourse--latin .discourse-p2, section.section__discourse .original ._discourse--english .ab, section.section__discourse .original ._discourse--latin .discourse-p1, section.section__discourse .original ._discourse--latin .discourse-p2 {
+    grid-column: 1 / 13;
+    padding: 0 .25rem; }
+  section.section__discourse .translation span.note-mark, section.section__discourse .translation div.margin-note, section.section__discourse .original span.note-mark, section.section__discourse .original div.margin-note {
     display: none; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .verse-epigram {
+  section.section__motto div.title, section.section__motto div.image.la, section.section__motto div.fugue.de {
+    grid-column: 1 / 13;
+    padding: 0 1.25rem; }
+  section.section__epigram .translation .verse-epigram, section.section__epigram .original .verse-epigram {
     font-size: 1.5rem;
-    grid-area: 2 / 4 / 3 / 12;
-    line-height: 2.5rem; }
-  .panel--left .verse-epigram, .panel--right .verse-epigram {
-    grid-area: 2 / 3 / 3 / 11; }
-  div.discourse {
+    grid-column: 2 / 12;
+    line-height: 2; }
+  section.section__epigram .original .verse-epigram span {
+    line-height: 2;
+    margin: 0; }
+  section.section__epigram .original .verse-epigram br {
+    display: none; }
+  section.section__epigram.panel--left .translation .verse-epigram, section.section__epigram.panel--left .original .verse-epigram, section.section__epigram.panel--right .translation .verse-epigram, section.section__epigram.panel--right .original .verse-epigram {
+    grid-column: 3 / 11; }
+  section.section__discourse .translation div.discourse, section.section__discourse .original div.discourse {
     grid-column: 2 / 13; }
-  div.margin-note {
+  section.section__discourse .translation div.margin-note, section.section__discourse .original div.margin-note {
     left: 75vw;
     padding-right: 1rem; }
-  .panel--left div.discourse span.note-mark, .panel--left div.discourse div.margin-note, .panel--right div.discourse span.note-mark, .panel--right div.discourse div.margin-note {
+  section.section__discourse.panel--left .translation span.note-mark, section.section__discourse.panel--left .translation div.margin-note, section.section__discourse.panel--left .original span.note-mark, section.section__discourse.panel--left .original div.margin-note, section.section__discourse.panel--right .translation span.note-mark, section.section__discourse.panel--right .translation div.margin-note, section.section__discourse.panel--right .original span.note-mark, section.section__discourse.panel--right .original div.margin-note {
     display: none; } }
 
 /* TESTING */
@@ -1675,7 +1691,7 @@ main.home {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
   height: 4.5rem;
@@ -1701,95 +1717,88 @@ main.home {
     justify-content: space-around;
     padding: .5rem 3rem;
     width: 100%; }
-    .subnav ul li {
-      border-radius: 5px;
-      color: #222;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      height: 3.5rem;
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-      flex: 1 0 auto; }
-      .subnav ul li a {
-        color: #222;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%; }
-    .subnav ul li:hover {
-      background-color: #ffcd61; }
-      .subnav ul li:hover a {
-        color: #222; }
-    .subnav ul li:nth-child(1) {
-      -webkit-box-ordinal-group: 2;
-      -webkit-order: 1;
-      -ms-flex-order: 1;
-      order: 1; }
-    .subnav ul li:nth-child(2) {
-      -webkit-box-ordinal-group: 4;
-      -webkit-order: 3;
-      -ms-flex-order: 3;
-      order: 3; }
-    .subnav ul li:nth-child(3) {
-      -webkit-box-ordinal-group: 5;
-      -webkit-order: 4;
-      -ms-flex-order: 4;
-      order: 4; }
-    .subnav ul li:nth-child(4) {
-      -webkit-box-ordinal-group: 6;
-      -webkit-order: 5;
-      -ms-flex-order: 5;
-      order: 5; }
-    .subnav ul li:nth-child(5) {
-      -webkit-box-ordinal-group: 3;
-      -webkit-order: 2;
-      -ms-flex-order: 2;
-      order: 2; }
-    .subnav ul li:nth-child(6) {
-      -webkit-box-ordinal-group: 7;
-      -webkit-order: 6;
-      -ms-flex-order: 6;
-      order: 6; }
-    .subnav ul li:nth-child(7) {
-      -webkit-box-ordinal-group: 8;
-      -webkit-order: 7;
-      -ms-flex-order: 7;
-      order: 7; }
-    .subnav ul li:nth-child(8) {
-      -webkit-box-ordinal-group: 9;
-      -webkit-order: 8;
-      -ms-flex-order: 8;
-      order: 8; }
+  .subnav li {
+    border-radius: 5px;
+    color: #222;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 3.5rem;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto; }
+  .subnav li:nth-child(1) {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1; }
+  .subnav li:nth-child(2) {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3; }
+  .subnav li:nth-child(3) {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4; }
+  .subnav li:nth-child(4) {
+    -webkit-box-ordinal-group: 6;
+    -webkit-order: 5;
+    -ms-flex-order: 5;
+    order: 5; }
+  .subnav li:nth-child(5) {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2; }
+  .subnav li:nth-child(6) {
+    -webkit-box-ordinal-group: 7;
+    -webkit-order: 6;
+    -ms-flex-order: 6;
+    order: 6; }
+  .subnav li:nth-child(7) {
+    -webkit-box-ordinal-group: 8;
+    -webkit-order: 7;
+    -ms-flex-order: 7;
+    order: 7; }
+  .subnav li:nth-child(8) {
+    -webkit-box-ordinal-group: 9;
+    -webkit-order: 8;
+    -ms-flex-order: 8;
+    order: 8; }
+  .subnav li:hover {
+    background-color: #ffcd61; }
+  .subnav li:hover a {
+    color: #222; }
+  .subnav a {
+    color: #222;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%; }
 
-/*.subnav__views--single, .subnav__views--double  {
-	box-sizing: border-box;
-	cursor: pointer;
-	height: 40%;
-	width: 50%;
-}*/
 .subnav li.subnav__views--single, .subnav li.subnav__views--double {
-  /*border-right: .25rem solid $white;*/
   background-color: #fff;
   border: 2px solid #222;
   border-radius: 5px;
@@ -1841,39 +1850,8 @@ main.home {
   .subnav__views--single, .subnav__views--double {
     display: none !important; }
   .wrapper-sidenav {
-    display: none !important; }
-  /*	.subnav--open {
-		transform: translate3d(0, 93vh, 0);
-		-webkit-transform: translate3d(0, 93vh, 0);
-		transition: transform .25s linear;
-		-webkit-transition: transform .25s linear;		
-	}
-	.subnav__btn {
-		position: fixed;
-		top: 0;
-		z-index: 10;
+    display: none !important; } }
 
-		transform: translate3d(0, 93.5vh, 0);
-		-webkit-transform: translate3d(0, 93.5vh, 0);
-		transition: transform .25s linear;
-		-webkit-transition: transform .25s linear;
-	}
-	.subnav__btn--open {
-		transform: translate3d(0, 83.5vh, 0);
-		-webkit-transform: translate3d(0, 83.5vh, 0);
-		transition: transform .25s linear;
-		-webkit-transition: transform .25s linear;	
-	}*/ }
-
-/* medium  -  tablet */
-/* medium-large */
-/* large  -  laptop */
-/* large  -  desktop */
-/*@media screen and (min-width: 1500px) and (max-width: 1999px) {
-	
-}*/
-/* extra-large */
-/* xxl */
 /*! Lity - v2.3.1 - 2018-04-20
 * http://sorgalla.com/lity/
 * Copyright (c) 2015-2018 Jan Sorgalla; Licensed MIT */
@@ -2233,7 +2211,7 @@ body {
   outline: 10px solid red; }
 
 .section__music {
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif; }
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif; }
 
 .section__music ._music {
   display: grid;
@@ -2488,7 +2466,7 @@ button.lity-close {
   position: fixed; }
 
 .frontmatter section {
-  font-family: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   height: auto;
   min-height: calc(100vh - 3.125rem);
   /* subtracts topnav height */
