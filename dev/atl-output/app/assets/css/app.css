@@ -1388,28 +1388,110 @@ section.section__discourse.panel--right div.discourse div.margin-note {
 
 /*********** END OF ENGLISH EMBLEM STYLES *************/
 /*********** FRONTMATTER *************/
-.section__frontispiece .lang--english, .section__frontispiece .lang--latin {
+section.section__frontispiece div.translation, section.section__frontispiece div.original {
+  background-image: none;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-  grid-area: 1 / 1 / 2 / 13; }
-  .section__frontispiece .lang--english div.title, .section__frontispiece .lang--english div.epigram, .section__frontispiece .lang--english div.dedication, .section__frontispiece .lang--english div.preface, .section__frontispiece .lang--english div.pref-epigram.la, .section__frontispiece .lang--english div.epigram.la, .section__frontispiece .lang--english div.preface, .section__frontispiece .lang--english div.verse-discourse, .section__frontispiece .lang--latin div.title, .section__frontispiece .lang--latin div.epigram, .section__frontispiece .lang--latin div.dedication, .section__frontispiece .lang--latin div.preface, .section__frontispiece .lang--latin div.pref-epigram.la, .section__frontispiece .lang--latin div.epigram.la, .section__frontispiece .lang--latin div.preface, .section__frontispiece .lang--latin div.verse-discourse {
-    grid-area: 1 / 3 / 2 / 11; }
-  .section__frontispiece .lang--english div.epigram.la, .section__frontispiece .lang--latin div.epigram.la {
-    display: block; }
+  grid-template-rows: auto; }
+  section.section__frontispiece div.translation .switch-wrapper, section.section__frontispiece div.original .switch-wrapper {
+    grid-column: 1 / 13; }
+  section.section__frontispiece div.translation .page-break--atalanta-fugiens, section.section__frontispiece div.translation .page-break--beinecke, section.section__frontispiece div.original .page-break--atalanta-fugiens, section.section__frontispiece div.original .page-break--beinecke {
+    grid-column: 1 / 13; }
+  section.section__frontispiece div.translation ._frontispiece--english, section.section__frontispiece div.original ._frontispiece--english {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-column: 1 / 13;
+    font-size: 1.5rem;
+    line-height: 2; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--facsimile div.titlePage, section.section__frontispiece div.original ._frontispiece--english.edition--facsimile div.titlePage {
+    grid-column: 4 / 10;
+    text-align: center; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--normalized div.titlePage, section.section__frontispiece div.original ._frontispiece--english.edition--normalized div.titlePage {
+    grid-column: 4 / 10;
+    text-align: center; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab, section.section__frontispiece div.original ._frontispiece--english.edition--normalized .ab {
+    font-size: 1.5rem; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--facsimile .ab, section.section__frontispiece div.original ._frontispiece--english.edition--facsimile .ab {
+    font-size: 1.5rem; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(1), section.section__frontispiece div.original ._frontispiece--english.edition--normalized .ab:nth-of-type(1) {
+    font-family: "GTSectra";
+    font-size: 2rem;
+    margin-top: 2rem; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--facsimile .ab:nth-of-type(1), section.section__frontispiece div.original ._frontispiece--english.edition--facsimile .ab:nth-of-type(1) {
+    font-family: "GTSectra";
+    font-size: 2rem;
+    margin-top: 2rem; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2), section.section__frontispiece div.original ._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
+    font-family: "GTSectra";
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 2rem; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--facsimile .ab:nth-of-type(2), section.section__frontispiece div.original ._frontispiece--english.edition--facsimile .ab:nth-of-type(2) {
+    font-family: "GTSectra";
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 2rem; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(3), section.section__frontispiece div.original ._frontispiece--english.edition--normalized .ab:nth-of-type(3) {
+    text-align: left; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--facsimile .ab:nth-of-type(3), section.section__frontispiece div.original ._frontispiece--english.edition--facsimile .ab:nth-of-type(3) {
+    text-align: left;
+    padding-left: 4rem; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--facsimile .ab:nth-of-type(3) > span:nth-child(1), section.section__frontispiece div.original ._frontispiece--english.edition--facsimile .ab:nth-of-type(3) > span:nth-child(1) {
+    margin-left: -2rem; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(4), section.section__frontispiece div.original ._frontispiece--english.edition--normalized .ab:nth-of-type(4) {
+    /*		font-family: "GTSectra";*/
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-top: 2rem; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--facsimile .ab:nth-of-type(4), section.section__frontispiece div.original ._frontispiece--english.edition--facsimile .ab:nth-of-type(4) {
+    /*		font-family: "GTSectra";*/
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-top: 2rem; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(5), section.section__frontispiece div.original ._frontispiece--english.edition--normalized .ab:nth-of-type(5) {
+    /*		font-family: "GTSectra";*/
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem; }
+  section.section__frontispiece div.translation ._frontispiece--english.edition--facsimile .ab:nth-of-type(5), section.section__frontispiece div.original ._frontispiece--english.edition--facsimile .ab:nth-of-type(5) {
+    /*		font-family: "GTSectra";*/
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem; }
+  section.section__frontispiece div.translation .edition--normalized span.original, section.section__frontispiece div.original .edition--normalized span.original {
+    display: none; }
 
-.section__frontispiece.panel--right .lang--english div.title, .section__frontispiece.panel--right .lang--english div.epigram, .section__frontispiece.panel--right .lang--english div.dedication, .section__frontispiece.panel--right .lang--english div.preface, .section__frontispiece.panel--right .lang--english div.pref-epigram.la, .section__frontispiece.panel--right .lang--english div.epigram.la, .section__frontispiece.panel--right .lang--english div.preface, .section__frontispiece.panel--right .lang--english div.verse-discourse, .section__frontispiece.panel--right .lang--latin div.title, .section__frontispiece.panel--right .lang--latin div.epigram, .section__frontispiece.panel--right .lang--latin div.dedication, .section__frontispiece.panel--right .lang--latin div.preface, .section__frontispiece.panel--right .lang--latin div.pref-epigram.la, .section__frontispiece.panel--right .lang--latin div.epigram.la, .section__frontispiece.panel--right .lang--latin div.preface, .section__frontispiece.panel--right .lang--latin div.verse-discourse {
-  grid-area: 1 / 1 / 2 / 13;
-  padding: 0 3rem; }
+.section__frontispiece .lang--english, .section__frontispiece .lang--latin {
+  /*	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+	grid-area: 1 / 1 / 2 / 13;*/
+  /*	div.title, div.epigram, div.dedication, div.preface, div.pref-epigram.la, div.epigram.la, div.preface, div.verse-discourse {
+		grid-area: 1 / 3 / 2 / 11;
+	}*/
+  /*	div.epigram.la {
+		display: block;
+	}*/ }
 
+/*.section__frontispiece.panel--right .lang--english, .section__frontispiece.panel--right .lang--latin {
+	div.title, div.epigram, div.dedication, div.preface, div.pref-epigram.la, div.epigram.la, div.preface, div.verse-discourse  {
+		grid-area: 1 / 1 / 2 / 13;
+		padding: 0 3rem;
+	}
+}*/
 /*** ??? REMOVE IN VERSION 3 ??? ***/
-.section__frontispiece.panel--left .lang--english div.title, .section__frontispiece.panel--left .lang--english div.epigram, .section__frontispiece.panel--left .lang--english div.dedication, .section__frontispiece.panel--left .lang--english div.preface, .section__frontispiece.panel--left .lang--english div.pref-epigram.la, .section__frontispiece.panel--left .lang--english div.epigram.la, .section__frontispiece.panel--left .lang--english div.preface, .section__frontispiece.panel--left .lang--english div.verse-discourse, .section__frontispiece.panel--left .lang--latin div.title, .section__frontispiece.panel--left .lang--latin div.epigram, .section__frontispiece.panel--left .lang--latin div.dedication, .section__frontispiece.panel--left .lang--latin div.preface, .section__frontispiece.panel--left .lang--latin div.pref-epigram.la, .section__frontispiece.panel--left .lang--latin div.epigram.la, .section__frontispiece.panel--left .lang--latin div.preface, .section__frontispiece.panel--left .lang--latin div.verse-discourse {
-  grid-area: 1 / 1 / 2 / 13;
-  padding: 0 3rem; }
-
-.section__frontispiece div.verse-epigram {
-  grid-area: 1 / 1 / 2 / 13; }
-
+/*.section__frontispiece.panel--left .lang--english, .section__frontispiece.panel--left .lang--latin  {
+	div.title, div.epigram, div.dedication, div.preface, div.pref-epigram.la, div.epigram.la, div.preface, div.verse-discourse  {
+		grid-area: 1 / 1 / 2 / 13;
+		padding: 0 3rem;
+	}
+}*/
+/*.section__frontispiece div.verse-epigram {
+	grid-area: 1 / 1 / 2 / 13;
+}*/
 /*********** END OF FRONTMATTER *************/
 /*********** TESTS *************/
 .lang--latin._discourse--latin .pb {

@@ -490,34 +490,134 @@ section.section__discourse.panel--right div.discourse {
 
 
 /*********** FRONTMATTER *************/
-.section__frontispiece .lang--english, .section__frontispiece .lang--latin {
+section.section__frontispiece div.translation, section.section__frontispiece div.original {
+	background-image: none;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
-	grid-area: 1 / 1 / 2 / 13;
-	div.title, div.epigram, div.dedication, div.preface, div.pref-epigram.la, div.epigram.la, div.preface, div.verse-discourse {
+	.switch-wrapper {
+		grid-column: 1 / 13;
+	}
+	.page-break--atalanta-fugiens, .page-break--beinecke {
+		grid-column: 1 / 13;
+	}
+	._frontispiece--english {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: auto;
+		grid-column: 1 / 13;
+		font-size: 1.5rem;
+		line-height: 2;
+	}
+	._frontispiece--english.edition--facsimile div.titlePage {
+		grid-column: 4 / 10;
+		text-align: center;
+	}
+	._frontispiece--english.edition--normalized div.titlePage {
+		grid-column: 4 / 10;
+		text-align: center;
+	}
+	._frontispiece--english.edition--normalized .ab {
+		font-size: 1.5rem;
+	}
+	._frontispiece--english.edition--facsimile .ab {
+		font-size: 1.5rem;
+	}
+	._frontispiece--english.edition--normalized .ab:nth-of-type(1) {
+		font-family: "GTSectra";
+		font-size: 2rem;
+		margin-top: 2rem;
+	}
+	._frontispiece--english.edition--facsimile .ab:nth-of-type(1) {
+		font-family: "GTSectra";
+		font-size: 2rem;
+		margin-top: 2rem;
+	}
+	._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
+		font-family: "GTSectra";
+		font-size: 4rem;
+		font-weight: 600;
+		line-height: 1.25;
+		margin-bottom: 2rem;
+	}
+	._frontispiece--english.edition--facsimile .ab:nth-of-type(2) {
+		font-family: "GTSectra";
+		font-size: 4rem;
+		font-weight: 800;
+		line-height: 1.25;
+		margin-bottom: 2rem;
+	}
+	._frontispiece--english.edition--normalized .ab:nth-of-type(3) {
+		text-align: left;
+	}
+	._frontispiece--english.edition--facsimile .ab:nth-of-type(3) {
+		text-align: left;
+		padding-left: 4rem;
+	}
+	._frontispiece--english.edition--facsimile .ab:nth-of-type(3) > span:nth-child(1) {
+		margin-left: -2rem;
+		
+	}
+	._frontispiece--english.edition--normalized .ab:nth-of-type(4) {
+/*		font-family: "GTSectra";*/
+		font-size: 2rem;
+		line-height: 1.5;
+		margin-top: 2rem;
+	}
+	._frontispiece--english.edition--facsimile .ab:nth-of-type(4) {
+/*		font-family: "GTSectra";*/
+		font-size: 2rem;
+		line-height: 1.5;
+		margin-top: 2rem;
+	}
+	._frontispiece--english.edition--normalized .ab:nth-of-type(5) {
+/*		font-family: "GTSectra";*/
+		font-size: 2rem;
+		line-height: 1.5;
+		margin-bottom: 2rem;
+	}
+	._frontispiece--english.edition--facsimile .ab:nth-of-type(5) {
+/*		font-family: "GTSectra";*/
+		font-size: 2rem;
+		line-height: 1.5;
+		margin-bottom: 2rem;
+	}
+
+	.edition--normalized {
+		span.original {
+			display: none;
+		}
+	}
+}
+
+.section__frontispiece .lang--english, .section__frontispiece .lang--latin {
+/*	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+	grid-area: 1 / 1 / 2 / 13;*/
+/*	div.title, div.epigram, div.dedication, div.preface, div.pref-epigram.la, div.epigram.la, div.preface, div.verse-discourse {
 		grid-area: 1 / 3 / 2 / 11;
-	}
-	div.epigram.la {
+	}*/
+/*	div.epigram.la {
 		display: block;
-	}
+	}*/
 }
-.section__frontispiece.panel--right .lang--english, .section__frontispiece.panel--right .lang--latin {
+/*.section__frontispiece.panel--right .lang--english, .section__frontispiece.panel--right .lang--latin {
 	div.title, div.epigram, div.dedication, div.preface, div.pref-epigram.la, div.epigram.la, div.preface, div.verse-discourse  {
 		grid-area: 1 / 1 / 2 / 13;
 		padding: 0 3rem;
 	}
-}
+}*/
 /*** ??? REMOVE IN VERSION 3 ??? ***/
-.section__frontispiece.panel--left .lang--english, .section__frontispiece.panel--left .lang--latin  {
+/*.section__frontispiece.panel--left .lang--english, .section__frontispiece.panel--left .lang--latin  {
 	div.title, div.epigram, div.dedication, div.preface, div.pref-epigram.la, div.epigram.la, div.preface, div.verse-discourse  {
 		grid-area: 1 / 1 / 2 / 13;
 		padding: 0 3rem;
 	}
-}
-.section__frontispiece div.verse-epigram {
+}*/
+/*.section__frontispiece div.verse-epigram {
 	grid-area: 1 / 1 / 2 / 13;
-}
+}*/
 /*********** END OF FRONTMATTER *************/
 
 /*********** TESTS *************/
