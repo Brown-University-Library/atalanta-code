@@ -2,11 +2,11 @@
 @import 'colors';
 
 main.emblem-page {
-	background-color: $black;
-	background-image: url("../img/default/bkg-illustration.png");
+	background: $white;
+/*	background-image: url("../img/default/bkg-illustration.png");*/
 	/*background-repeat: no-repeat;*/
 	/*background-size: cover;*/
-	background-size: contain;
+/*	background-size: contain;*/
 	display: grid;
 	grid-template-columns: repeat( 4, 1fr);
 	grid-template-rows: 1fr;
@@ -23,7 +23,6 @@ main.emblem-page {
 	grid-area: 1 / 1 / 2 / 5;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: repeat(5, fit-content(100%));
-	min-height: 100vh;
 	width: 100%;
 }
 .emblem section {
