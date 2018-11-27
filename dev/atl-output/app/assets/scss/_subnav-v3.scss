@@ -1,0 +1,78 @@
+@import 'utilities';
+@import 'colors';
+
+.subnav-v3 {
+	background-color: $gray-dark;
+/*	display: flex;
+	align-items: center;
+	justify-content: center;*/
+	display: block;
+	font-family: $body-font_emblem;
+	font-size: 1.125rem;
+	font-weight: 500;
+	height: $subnav-h;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+}
+.subnav-v3__emblem-view, .subnav-v3__emblem-language {
+	display: inline-block;
+	height: $subnav-h;
+	position: absolute;
+	button {
+		background-color: $orange-yellow_brighter;
+		color: $text-body;
+		font: $body-font_emblem;
+		font-size: 1rem;
+		height: $subnav-h;
+		text-align: left;
+		padding: 0 1rem;
+		width: 300px;
+	}
+	ul {
+		background-color: $white;
+		height: auto;
+		width: 300px;
+
+	}
+	li {
+		outline: 1px solid orange;
+		height: 40px;
+
+		a {
+			color: $text-body;
+			display: flex;
+			align-items: center;
+			font-size: 1rem;
+			height: 40px;
+			padding: 0 1rem;
+			width: calc( 100% - 2rem);
+			
+		}
+	}
+	li:hover, li:focus {
+		a {
+			background-color: $orange-yellow_brighter;
+			transition: .2s;
+		}
+	}
+}
+.subnav-v3__emblem-view {
+	left: 0;
+}
+.subnav-v3__emblem-language {
+	right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

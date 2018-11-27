@@ -1160,7 +1160,7 @@ main.emblem-page {
   padding: 0 0 .125rem 0; }
 
 .emblem {
-  margin-top: 4.5rem;
+  margin-top: 3.125rem;
   display: grid;
   grid-area: 1 / 1 / 2 / 5;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1241,7 +1241,7 @@ main.emblem-page {
   grid-row-start: 1;
   grid-row-end: 2;
   /*	grid-area: 1 / 1 / 1 / 5;*/
-  margin-top: 4.5rem;
+  margin-top: 3.125rem;
   /*padding-top: $subnav-h;*/ }
 
 .frontmatter section.facsimile, .frontmatter section._facsimile {
@@ -1370,7 +1370,7 @@ main.emblem-page {
   .emblem__image--cropped {
     width: 100%; }
   main.emblem-page {
-    padding: 0 0 4.5rem 0; }
+    padding: 0 0 3.125rem 0; }
   .section__facsimile {
     margin-top: 0;
     margin-bottom: 4.5rem; } }
@@ -1814,6 +1814,66 @@ EMBLEM DISCOURSE
 .italic {
   font-style: oblique; }
 
+/*
+
+FRONTISPIECE	 
+._frontispiece--english			div.titlePage {}
+._frontispiece--latin			div.pref-epigram.la {}
+
+AUTHOR'S EPIGRAM
+._author-epigram--english		div.epigram {}					???
+._author-epigram--latin			div.epigram.la {}				???
+
+DEDICATION
+._dedication--english			div.dedication {}
+								div.dedication {}
+._dedication--latin				div.preface {}					???
+
+PREFACE
+._preface--english				div.discourse {}				???
+._preface--latin				div.preface.la {}				???
+
+EMBLEM MOTTO
+._motto--english				???
+._motto--latin					div.image.la
+._motto--german					div.fugue.de
+
+EMBLEM EPIGRAM
+._epigram--english				div.epigram						???
+._epigram--latin				div.epigram.la 					???
+._epigram--german				div.epigram.de 					???
+
+EMBLEM DISCOURSE
+._discourse--english			div.discourse					???
+._discourse--latin				span.pb.atalanta-fugiens
+								div.discourse.la 				???
+
+*/
+/********** ENGLISH XML ISSUES **************/
+.section__discourse h3.title {
+  /*	display: none;*/
+  /*	background-color: $error;*/ }
+
+/* ??? I won't need this after we sort out the h3.title issue in the English discourse */
+.section__discourse .discourse.la h3.title {
+  background-color: transparent; }
+
+/* ??? I won't need this after we sort out the h3.title issue in the English discourse */
+.section__discourse.panel--left div.discourse h3.title, .section__discourse.panel--right div.discourse h3.title {
+  /*		background-color: $error;*/ }
+
+.section__discourse span.note-mark:nth-of-type(2) {
+  /*	background-color: $error;*/
+  grid-area: 1 / 1 / 2 / 2;
+  margin-left: 100px; }
+
+.section__discourse.panel--right span.note-mark:nth-of-type(2) {
+  /*	background-color: $error;*/
+  grid-area: 1 / 2 / 3 / 3;
+  margin-left: 0; }
+
+/********** END OF ENGLISH XML ISSUES **************/
+/*********** ENGLISH EMBLEM OVERRIDES *************/
 .epigram {
   margin-top: 0;
   text-align: left;
@@ -2473,11 +2533,25 @@ main.home {
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
-  height: 4.5rem;
+  height: 3.125rem;
   width: 100%;
   position: fixed;
   z-index: 100; }
-  .subnav ul {
+
+.subnav-v3__emblem-view, .subnav-v3__emblem-language {
+  display: inline-block;
+  height: 3.125rem;
+  position: absolute; }
+  .subnav-v3__emblem-view button, .subnav-v3__emblem-language button {
+    background-color: #ffcd61;
+    color: #4C4C4C;
+    font: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    height: 3.125rem;
+    text-align: left;
+    padding: 0 1rem;
+    width: 300px; }
+  .subnav-v3__emblem-view ul, .subnav-v3__emblem-language ul {
     background-color: #fff;
     display: -webkit-box;
     display: -webkit-flex;
@@ -2630,6 +2704,236 @@ main.home {
     display: none !important; }
   .wrapper-sidenav {
     display: none !important; } }
+/* 
+    height: auto;
+    width: 300px; }
+  .subnav-v3__emblem-view li, .subnav-v3__emblem-language li {
+    outline: 1px solid orange;
+    height: 40px; }
+    .subnav-v3__emblem-view li a, .subnav-v3__emblem-language li a {
+      color: #4C4C4C;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      font-size: 1rem;
+      height: 40px;
+      padding: 0 1rem;
+      width: calc( 100% - 2rem); }
+  .subnav-v3__emblem-view li:hover a, .subnav-v3__emblem-view li:focus a, .subnav-v3__emblem-language li:hover a, .subnav-v3__emblem-language li:focus a {
+    background-color: #ffcd61;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
+
+.subnav-v3__emblem-view {
+  left: 0; }
+
+.subnav-v3__emblem-language {
+  right: 0; }
+*/
+/*! Lity - v2.3.1 - 2018-04-20
+* http://sorgalla.com/lity/
+* Copyright (c) 2015-2018 Jan Sorgalla; Licensed MIT */
+/*.lity {
+  z-index: 9990;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+  background: #0b0b0b;
+  background: rgba(0, 0, 0, 0.9);
+  outline: none !important;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; }
+
+.lity.lity-opened {
+  opacity: 1; }
+
+.lity.lity-closed {
+  opacity: 0; }
+
+.lity * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.lity-wrap {
+  z-index: 9990;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  outline: none !important; }
+
+.lity-wrap:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; }
+
+.lity-loader {
+  z-index: 9991;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.8em;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; }
+
+.lity-loading .lity-loader {
+  opacity: 1; }
+
+.lity-container {
+  z-index: 9992;
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  display: inline-block;
+  white-space: normal;
+  max-width: 100%;
+  max-height: 100%;
+  outline: none !important; }
+
+.lity-content {
+  z-index: 9993;
+  width: 100%;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease; }
+
+.lity-loading .lity-content,
+.lity-closed .lity-content {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8); }
+
+.lity-content:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  right: 0;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
+
+.lity-close {
+  z-index: 9994;
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  -webkit-appearance: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  padding: 0;
+  color: #fff;
+  font-style: normal;
+  font-size: 35px;
+  font-family: Arial, Baskerville, monospace;
+  line-height: 35px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  border: 0;
+  background: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.lity-close::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.lity-close:hover,
+.lity-close:focus,
+.lity-close:active,
+.lity-close:visited {
+  text-decoration: none;
+  text-align: center;
+  padding: 0;
+  color: #fff;
+  font-style: normal;
+  font-size: 35px;
+  font-family: Arial, Baskerville, monospace;
+  line-height: 35px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  border: 0;
+  background: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.lity-close:active {
+  top: 1px; }
+*/
+/* Image */
+/*.lity-image img {
+  max-width: 100%;
+  display: block;
+  line-height: 0;
+  border: 0; }
+*/
+/* iFrame */
+/*.lity-iframe .lity-container,
+.lity-youtube .lity-container,
+.lity-vimeo .lity-container,
+.lity-facebookvideo .lity-container,
+.lity-googlemaps .lity-container {
+  width: 100%;
+  max-width: 964px; }
+
+.lity-iframe-container {
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  overflow: auto;
+  pointer-events: auto;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-overflow-scrolling: touch; }
+
+.lity-iframe-container iframe {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  background: #000; }
+
+.lity-hide {
+  display: none; }
+emblem-v3-test */
 
 body {
   /* background-color: #ddd; */
