@@ -1,6 +1,9 @@
 $(function () {
 /* VARIABLES */
 	/* emblem nav */
+	var layoutComparativeBtn = 'li.dropdown--layout:nth-child(1)';
+	var layoutDigitalEditionBtn = 'li.dropdown--layout:nth-child(2)';
+	var layoutBookBtn = 'li.dropdown--layout:nth-child(3)';
 	var singleNav = '.subnav > ul li:nth-child(n + 2):nth-child(-n + 4)';
 	var doubleNav = '.subnav > ul li:nth-last-child(-n + 3)';
 	var singleViewBtn = '.subnav > ul li:nth-child(1)';
@@ -88,6 +91,31 @@ $(function () {
 	onLoad(); // DISPLAY EMBLEM MENU AND DEFAULT OPTIONS ON PAGE LOAD
 
 /* EVENTS */
+	/* layouts */
+	$(layoutComparativeBtn).click(function() { // PROCESS COMPARATIVE LAYOUT
+		processLayoutComparative();
+		return false;
+	});
+	$(layoutDigitalEditionBtn).click(function() { // PROCESS DIGITAL EDITION LAYOUT
+		processLayoutDigitalEdition();
+		return false;
+	});
+	$(layoutBookBtn).click(function() { // PROCESS BOOK LAYOUT
+		processLayoutBook();
+		return false;
+	});
+	function processLayoutComparative() {
+		$(layoutComparativeBtn).attr('data-state', 'active'); // make comparative layout state active
+		$(layoutComparativeBtn).siblings().attr('data-state', 'inactive'); // make single and book layout states inactive
+	}
+	function processLayoutDigitalEdition() {
+		$(layoutDigitalEditionBtn).attr('data-state', 'active'); // make comparative layout state active
+		$(layoutDigitalEditionBtn).siblings().attr('data-state', 'inactive'); // make single and book layout states inactive
+	}
+	function processLayoutBook() {
+		$(layoutBookBtn).attr('data-state', 'active'); // make comparative layout state active
+		$(layoutBookBtn).siblings().attr('data-state', 'inactive'); // make single and book layout states inactive
+	}
 	/* pages */
 	$(doubleViewBtn).click(function() { // PROCESS COMPARATIVE VIEW PAGE
 		processComparativeView();
@@ -368,7 +396,7 @@ $(function () {
 		else {
 			$(singleViewBtn).addClass('is-hidden'); // hide single view btn
 			$(doubleViewBtn).removeClass('is-hidden'); // reveal comparative view btn
-			$(doubleNav).addClass('is-hidden'); // hide last 3 language options for comparative view
+			// $(doubleNav).addClass('is-hidden'); // hide last 3 language options for comparative view
 		}
 	}
 	function isActiveDouble() { // when comparative view is selected, reveal single view switch and reveal comparative nav
@@ -378,7 +406,7 @@ $(function () {
 		else {
 			$(doubleViewBtn).addClass('is-hidden'); // hide comparative view btn
 			$(singleViewBtn).removeClass('is-hidden'); // reveal single view btn
-			$(doubleNav).removeClass('is-hidden'); // reveal last 3 language options for comparative view
+			// $(doubleNav).removeClass('is-hidden'); // reveal last 3 language options for comparative view
 		}
 	}
 	function onLoad() {
@@ -409,7 +437,7 @@ $(function () {
 			
 		}
 		else if ($(englishDoubleView).attr("data-state")===("inactive")) {
-			$(doubleNav).attr('data-state','inactive');
+			// $(doubleNav).attr('data-state','inactive');
 			$(englishDoubleView).attr('data-state','active');
 		}
 		checkState();
@@ -420,7 +448,7 @@ $(function () {
 
 		}
 		else {
-			$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
+			// $(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
 			$(englishDoubleView).addClass('is-active'); // highlight selected view option in nav
 		}
 	}
@@ -430,7 +458,7 @@ $(function () {
 			
 		}
 		else if ($(englishSingleView).attr("data-state")===("inactive")) {
-			$(singleNav).attr('data-state','inactive');
+			// $(singleNav).attr('data-state','inactive');
 			$(englishSingleView).attr('data-state','active');
 		}
 		checkState();
@@ -441,7 +469,7 @@ $(function () {
 
 		}
 		else {
-			$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
+			// $(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
 			$(englishSingleView).addClass('is-active'); // highlight selected view option in single nav
 		}
 	}
@@ -450,7 +478,7 @@ $(function () {
 			
 		}
 		else if ($(facsimileDoubleView).attr("data-state")===("inactive")) {
-			$(doubleNav).attr('data-state','inactive');
+			// $(doubleNav).attr('data-state','inactive');
 			$(facsimileDoubleView).attr('data-state','active');
 		}
 		checkState();		
@@ -458,7 +486,7 @@ $(function () {
 
 		}
 		else { 
-			$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
+			// $(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
 			$(facsimileDoubleView).addClass('is-active'); // highlight selected view option in nav
 		}
 	}
@@ -467,7 +495,7 @@ $(function () {
 			
 		}
 		else if ($(facsimileSingleView).attr("data-state")===("inactive")) {
-			$(singleNav).attr('data-state','inactive');
+			// $(singleNav).attr('data-state','inactive');
 			$(facsimileSingleView).attr('data-state','active');
 		}
 		checkState();
@@ -475,7 +503,7 @@ $(function () {
 
 		}
 		else {
-			$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
+			// $(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
 			$(facsimileSingleView).addClass('is-active'); // highlight selected view option in nav
 		}
 	}
@@ -485,7 +513,7 @@ $(function () {
 			
 		}
 		else if ($(latinDoubleView).attr("data-state")===("inactive")) {
-			$(doubleNav).attr('data-state','inactive');
+			// $(doubleNav).attr('data-state','inactive');
 			$(latinDoubleView).attr('data-state','active');
 		}
 		checkState();
@@ -495,7 +523,7 @@ $(function () {
 
 		}
 		else {
-			$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
+			// $(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
 			$(latinDoubleView).addClass('is-active'); // highlight selected view option in nav
 		}
 	}
@@ -505,7 +533,7 @@ $(function () {
 			
 		}
 		else if ($(latinSingleView).attr("data-state")===("inactive")) {
-			$(singleNav).attr('data-state','inactive');
+			// $(singleNav).attr('data-state','inactive');
 			$(latinSingleView).attr('data-state','active');
 		}
 		checkState();
@@ -515,7 +543,7 @@ $(function () {
 
 		}
 		else {
-			$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
+			// $(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
 			$(latinSingleView).addClass('is-active'); // highlight selected view option in single nav
 		}
 	}
