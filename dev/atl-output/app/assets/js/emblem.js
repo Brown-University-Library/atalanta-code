@@ -4,10 +4,21 @@ $(function () {
 	var layoutComparativeBtn = 'li.dropdown--layout:nth-child(1)';
 	var layoutDigitalEditionBtn = 'li.dropdown--layout:nth-child(2)';
 	var layoutBookBtn = 'li.dropdown--layout:nth-child(3)';
+
+
 	var singleNav = '.subnav > ul li:nth-child(n + 2):nth-child(-n + 4)';
 	var doubleNav = '.subnav > ul li:nth-last-child(-n + 3)';
 	var singleViewBtn = '.subnav > ul li:nth-child(1)';
 	var doubleViewBtn = '.subnav > ul li:nth-child(5)';
+
+
+	var languageEnglishOrigBtn = 'li.dropdown--language:nth-of-type(1)';
+	var languageEnglishNormBtn = 'li.dropdown--language:nth-of-type(2)';
+	var languageLatinOrigBtn = 'li.dropdown--language:nth-of-type(3)';
+	var languageLatinRegBtn = 'li.dropdown--language:nth-of-type(4)';
+	var languageGermanBtn = 'li.dropdown--language:nth-of-type(5)';
+
+
 	var englishSingleView = '.subnav > ul li:nth-child(2)';
 	var latinSingleView = '.subnav > ul li:nth-child(3)';
 	var facsimileSingleView = '.subnav > ul li:nth-child(4)';
@@ -107,30 +118,30 @@ $(function () {
 
 /* EVENTS */
 	/* layouts */
-	$(layoutComparativeBtn).click(function() { // PROCESS COMPARATIVE LAYOUT
-		processLayoutComparative();
+	$(layoutComparativeBtn).click(function() { // COMPARATIVE LAYOUT SELECTED
+		selectLayoutComparative();
 		checkState();
 		return false;
 	});
-	$(layoutDigitalEditionBtn).click(function() { // PROCESS DIGITAL EDITION LAYOUT
-		processLayoutDigitalEdition();
+	$(layoutDigitalEditionBtn).click(function() { // DIGITAL EDITION LAYOUT SELECTED
+		selectLayoutDigitalEdition();
 		checkState();
 		return false;
 	});
-	$(layoutBookBtn).click(function() { // PROCESS BOOK LAYOUT
-		processLayoutBook();
+	$(layoutBookBtn).click(function() { // BOOK LAYOUT SELECTED
+		selectLayoutBook();
 		checkState();
 		return false;
 	});
-	function processLayoutComparative() {
+	function selectLayoutComparative() {
 		$(layoutComparativeBtn).attr('data-state', 'active'); // make comparative layout state active
 		$(layoutComparativeBtn).siblings().attr('data-state', 'inactive'); // make digital edition and book layout states inactive
 	}
-	function processLayoutDigitalEdition() {
+	function selectLayoutDigitalEdition() {
 		$(layoutDigitalEditionBtn).attr('data-state', 'active'); // make digital edition layout state active
 		$(layoutDigitalEditionBtn).siblings().attr('data-state', 'inactive'); // make comparative and book layout states inactive
 	}
-	function processLayoutBook() {
+	function selectLayoutBook() {
 		$(layoutBookBtn).attr('data-state', 'active'); // make book layout state active
 		$(layoutBookBtn).siblings().attr('data-state', 'inactive'); // make comparative and digital edition layout states inactive
 	}
@@ -144,6 +155,60 @@ $(function () {
 	// 	return false;
 	// });
 	/* languages */
+	$(languageEnglishOrigBtn).click(function() { // ENGLISH ORIGINAL TEXT SELECTED
+		// process english original
+		selectLangEnglishOrig();
+		checkState();
+		return false;
+	});
+	$(languageEnglishNormBtn).click(function() { // ENGLISH NORMALIZED TEXT SELECTED
+		// process english normalized
+		selectLangEnglishNorm();
+		checkState();
+		return false;
+	});
+	$(languageLatinOrigBtn).click(function() { // LATIN ORIGINAL TEXT SELECTED
+		// process latin original
+		selectLangLatinOrig();
+		checkState();
+		return false;
+	});
+	$(languageLatinRegBtn).click(function() { // LATIN REGULARIZED TEXT SELECTED
+		// process latin regularized
+		selectLangLatinReg();
+		checkState();
+		return false;
+	});
+	$(languageGermanBtn).click(function() { // GERMAN TEXT SELECTED
+		// process german
+		selectLangGerman();
+		checkState();
+		return false;
+	});
+	function selectLangEnglishOrig() {
+		$(languageEnglishOrigBtn).attr('data-lang', 'active'); // make English Original Button active
+		$(languageEnglishOrigBtn).siblings().attr('data-lang', 'inactive'); // make non English Original Buttons inactive
+	}
+	function selectLangEnglishNorm() {
+		$(languageEnglishNormBtn).attr('data-lang', 'active'); // make English Normalized Button active
+		$(languageEnglishNormBtn).siblings().attr('data-lang', 'inactive'); // make non English Normalized Buttons inactive
+	}
+	function selectLangLatinOrig() {
+		$(languageLatinOrigBtn).attr('data-lang', 'active'); // make Latin Original Button active
+		$(languageLatinOrigBtn).siblings().attr('data-lang', 'inactive'); // make non Latin Original Buttons inactive
+	}
+	function selectLangLatinReg() {
+		$(languageLatinRegBtn).attr('data-lang', 'active'); // make Latin Regularized Button active
+		$(languageLatinRegBtn).siblings().attr('data-lang', 'inactive'); // make non Latin Regularized Buttons inactive
+	}
+	function selectLangGerman() {
+		$(languageGermanBtn).attr('data-lang', 'active'); // make Latin German Button active
+		$(languageGermanBtn).siblings().attr('data-lang', 'inactive'); // make non Latin German Buttons inactive
+	}
+
+
+
+
 	$(englishSingleView).click(function() { // ACTIVATE SINGLE ENGLISH
 		processEnglishSingle();
 		return false;
@@ -452,7 +517,7 @@ $(function () {
 		checkState();
 	}
 	function processGerman() {
-		if ( $(languageEGerman.attr("data-state")===("active") ) {
+		if ( $(languageGerman).attr("data-state")===("active") ) {
 
 		}
 		else if ( $(languageGerman).attr("data-state")===("inactive") ) {

@@ -71,11 +71,11 @@
 			<div class="subnav-v3__emblem-language">
 				<button class="dropdown" type="button" aria-haspopup="true" aria-expanded="false" data-component="dropdown">Language: Modernized English<span class="dropdown__caret"></span></button>
 				<ul class="dropdown__menu" role="menu">
-					<li><a class="dropdown__menu-item" role="menuitem" href="#">Original English</a></li>
-					<li><a class="dropdown__menu-item" role="menuitem" href="#">Modernized English</a></li>
-					<li><a class="dropdown__menu-item" role="menuitem" href="#">Original Latin</a></li>
-					<li><a class="dropdown__menu-item" role="menuitem" href="#">Normalized Latin</a></li>
-					<li><a class="dropdown__menu-item" role="menuitem" href="#">Original German</a></li>
+					<li class="dropdown--language" data-lang="inactive"><a class="dropdown__menu-item" role="menuitem" href="#">Original English</a></li>
+					<li class="dropdown--language" data-lang="active"><a class="dropdown__menu-item" role="menuitem" href="#">Modernized English</a></li>
+					<li class="dropdown--language" data-lang="inactive"><a class="dropdown__menu-item" role="menuitem" href="#">Original Latin</a></li>
+					<li class="dropdown--language" data-lang="inactive"><a class="dropdown__menu-item" role="menuitem" href="#">Normalized Latin</a></li>
+					<li class="dropdown--language" data-lang="inactive"><a class="dropdown__menu-item" role="menuitem" href="#">Original German</a></li>
 				</ul>
 			</div>
 		</div>
@@ -121,7 +121,7 @@
 		<div class="emblem">
 			<!-- Motto -->
 			<a name="motto" id="basic-waypoint__0" class="section__motto"></a>
-			<section class="section__motto section--single panel--full">
+			<section class="section__motto section--single panel--right">
 				<div class="translation">
 <!-- 					<div class="switch-wrapper left">
 						<div class="facsimile-normalized-switch">
@@ -132,15 +132,15 @@
 						</div>
 					</div> -->
 					<div class="lang--english _motto--english edition--normalized" lang="en-US">
-<div class="title">
-                		<h3 class="title">
-                        	<span class="original"><br></span><span class="regularized"></span><span class="italics">the first <span class="original">Embleme </span><span class="regularized">Emblem</span>. Of the Secrets of Nature.</span>
-                    	</h3>
-                        <h1 class="title">
-                        	<span class="original"><br></span><span class="regularized"></span><span class="italics"><span class="del"><span class="unclear">4 chars</span> </span><span class="subst"><span class="del"><span class="unclear">1 char</span></span><span class="add">W</span></span>ind <span class="original">carryed </span><span class="regularized">carried</span> him in his belly <span class="pc">- - - -</span>
-							</span>
-						</h1>
-</div>
+						<div class="title">
+                			<h3 class="title">
+                        		<span class="original"><br></span><span class="regularized"></span><span class="italics">the first <span class="original">Embleme </span><span class="regularized">Emblem</span>. Of the Secrets of Nature.</span>
+                    		</h3>
+	                        <h1 class="title">
+	                        	<span class="original"><br></span><span class="regularized"></span><span class="italics"><span class="del"><span class="unclear">4 chars</span> </span><span class="subst"><span class="del"><span class="unclear">1 char</span></span><span class="add">W</span></span>ind <span class="original">carryed </span><span class="regularized">carried</span> him in his belly <span class="pc">- - - -</span>
+								</span>
+							</h1>
+						</div>
 					</div>
                 </div>
 				<div class="original is-hidden">
@@ -225,7 +225,7 @@
 			<!-- Image -->
 			<a name="image" id="basic-waypoint__1" class="section__image"></a>
 			<div class="section__image">					
-				<div class="image--full">
+				<div class="image--full grid--right">
 					<section class="image wrapper-section section">
 							<div class="image__picture">
 								<img class="emblem__image--cropped" 
@@ -241,7 +241,7 @@
 			<!-- Music -->
 			<a name="music" id="basic-waypoint__2" class="section__music"></a>
 			<section class="section__music">
-				<div class="_music music--full">
+				<div class="_music music--full grid--right">
 					<div class="ata-music" data-mei="../data/mei/Fuga 6.xml">
 		      			<div class="ata-viz-cmn" lang="la"></div>
 		      			<div class="ata-viz-audio" data-tempo="56">
@@ -258,7 +258,7 @@
 			</section>
 			<!-- Epigram -->
 			<a name="epigram" id="basic-waypoint__3" class="section__epigram"></a>
-			<section class="section__epigram section--single panel--full">
+			<section class="section__epigram section--single panel--right">
 				<div class="translation">
 <!-- 					<div class="switch-wrapper left">
 						<div class="facsimile-normalized-switch">
@@ -267,7 +267,7 @@
 								<li class="is-selected"><a href="#">Modernized</a></li>
 							</ul>
 						</div>
-					</div>
+					</div> -->
 					<div class="lang--english _epigram--english edition--normalized" lang="en-US">
 		                <div class="epigram">
                             <h3 class="title">the first <span class="original">Epigramme </span><span class="regularized">Epigram</span>.</h3>
@@ -330,7 +330,7 @@
 							</ul>
 						</div>
 					</div> -->
-					<div class="lang--english _epigram--english edition--normalized" lang="en-US">
+					<!-- <div class="lang--english _epigram--english edition--normalized" lang="en-US">
 		                <div class="epigram">
                             <h3 class="title">the first <span class="original">Epigramme </span><span class="regularized">Epigram</span>.</h3>
                             <div class="verse-epigram">
@@ -343,8 +343,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-				<div class="original">
+                </div> -->
+				<!-- <div class="original">
 					<div class="switch-wrapper right">
 						<div class="latin-german-switch">
 							<ul>
@@ -384,7 +384,7 @@
 			</section> -->
 			<!-- Discourse -->
 			<a name="discourse" id="basic-waypoint__4" class="section__discourse"></a>
-			<section class="section__discourse section--single panel--full">
+			<section class="section__discourse section--single panel--right">
 				<div class="translation">
 <!-- 					<div class="switch-wrapper left">
 						<div class="facsimile-normalized-switch">
