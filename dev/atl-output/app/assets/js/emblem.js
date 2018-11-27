@@ -23,22 +23,31 @@ $(function () {
 	var latinDoubleData;
 	var facsimileDoubleData;
 	/* emblem languages */
-	var singleTranslation = '.section--single div.translation';
-	var singleOriginal = '.section--single div.original';
-	var doubleTranslation = '.section--double div.translation';
-	var doubleOriginal = '.section--double div.original';
-	var fullEnglishText = '.panel--full .lang--english';
-	var leftEnglishText = '.panel--left .lang--english';
-	var rightEnglishText = '.panel--right .lang--english';
-	var fullLatinText = '.panel--full .lang--latin';
-	var leftLatinText = '.panel--left .lang--latin';
-	var rightLatinText = '.panel--right .lang--latin';
-	var fullGermanText = '.panel--full .lang--german';
-	var leftGermanText = '.panel--left .lang--german';
-	var rightGermanText = '.panel--right .lang--german';
-	var fullLatinDiscourse = '.panel--full .lang--latin._discourse--latin';
-	var leftLatinDiscourse = '.panel--left .lang--latin._discourse--latin';
-	var rightLatinDiscourse = '.panel--right .lang--latin._discourse--latin';
+	var textTranslated = '.section--single div.translation';
+	var textOriginal = '.section--single div.original';
+
+	// var singleTranslation = '.section--single div.translation';
+	// var singleOriginal = '.section--single div.original';
+	// var doubleTranslation = '.section--double div.translation';
+	// var doubleOriginal = '.section--double div.original';
+
+	var languageEnglishOriginal = '.lang--english.edition--original';
+	var languageEnglishNormalized = '.lang--english.edition--normalized';
+	var languageLatinOriginal = '.lang--latin.edition--original';
+	var languageLatinRegularized = '.lang--latin.edition--regularized';
+	var languageGerman = '.lang--german';
+	// var fullEnglishText = '.panel--full .lang--english';
+	// var leftEnglishText = '.panel--left .lang--english';
+	// var rightEnglishText = '.panel--right .lang--english';
+	// var fullLatinText = '.panel--full .lang--latin';
+	// var leftLatinText = '.panel--left .lang--latin';
+	// var rightLatinText = '.panel--right .lang--latin';
+	// var fullGermanText = '.panel--full .lang--german';
+	// var leftGermanText = '.panel--left .lang--german';
+	// var rightGermanText = '.panel--right .lang--german';
+	// var fullLatinDiscourse = '.panel--full .lang--latin._discourse--latin';
+	// var leftLatinDiscourse = '.panel--left .lang--latin._discourse--latin';
+	// var rightLatinDiscourse = '.panel--right .lang--latin._discourse--latin';
 	/* switches */
 	var leftFacsimileSwitch = '.left .facsimile-normalized-switch ul li:nth-child(1)';
 	var rightFacsimileSwitch = '.right .facsimile-normalized-switch ul li:nth-child(1)';
@@ -311,9 +320,54 @@ $(function () {
 		console.log("my new data state is " + myTest);
 	}
 	function onLoad() {
-		sideNavSetNum();
 		checkState();
 	}
+	function processEnglishOriginal() {
+		if ( $(languageEnglishOriginal).attr("data-state")===("active") ) {
+
+		}
+		else if ( $(languageEnglishOriginal).attr("data-state")===("inactive") ) {
+			$(languageEnglishOriginal).attr('data-state','active');
+		}
+		checkState();
+	}
+	function processEnglishNormalized() {
+		if ( $(languageEnglishNormalized).attr("data-state")===("active") ) {
+
+		}
+		else if ( $(languageEnglishNormalized).attr("data-state")===("inactive") ) {
+			$(languageEnglishNormalized).attr('data-state','active');
+		}
+		checkState();
+	}
+	function processLatinOriginal() {
+		if ( $(languageLatinOriginal).attr("data-state")===("active") ) {
+
+		}
+		else if ( $(languageLatinOriginal).attr("data-state")===("inactive") ) {
+			$(languageLatinOriginal).attr('data-state','active');
+		}
+		checkState();
+	}
+	function processLatinRegularized() {
+		if ( $(languageLatinRegularized).attr("data-state")===("active") ) {
+
+		}
+		else if ( $(languageLatinRegularized).attr("data-state")===("inactive") ) {
+			$(languageLatinRegularized).attr('data-state','active');
+		}
+		checkState();
+	}
+	function processGerman() {
+		if ( $(languageEGerman.attr("data-state")===("active") ) {
+
+		}
+		else if ( $(languageGerman).attr("data-state")===("inactive") ) {
+			$(languageGerman).attr('data-state','active');
+		}
+		checkState();
+	}
+
 	function processEnglishDouble() {
 		if ($(englishDoubleView).attr("data-state")===("active")) {
 
@@ -446,15 +500,16 @@ $(function () {
 		$(sectionFullLeft).removeClass('panel--left');
 		$(sectionFull).removeClass('is-hidden');
 		$(sectionFullRight).addClass('is-hidden');
+		console.log("THIS IS HAPPENING");
 	}
-	function resetLanguagesOnLeft() {		
-		$(singleTranslation).addClass('is-hidden'); // hide full-width/left-half english text
-		$(singleOriginal).addClass('is-hidden'); // hide full-width/left-half original language text
-	}
-	function resetLanguagesOnRight() {
-		$(doubleTranslation).addClass('is-hidden'); // hide all english text in right half
-		$(doubleOriginal).addClass('is-hidden'); // hide all latin/german text in right half
-	}
+	// function resetLanguagesOnLeft() {		
+	// 	$(singleTranslation).addClass('is-hidden'); // hide full-width/left-half english text
+	// 	$(singleOriginal).addClass('is-hidden'); // hide full-width/left-half original language text
+	// }
+	// function resetLanguagesOnRight() {
+	// 	$(doubleTranslation).addClass('is-hidden'); // hide all english text in right half
+	// 	$(doubleOriginal).addClass('is-hidden'); // hide all latin/german text in right half
+	// }
 	function showDigitalEditionRight() {
 		// console.log("I am in showHalves()");
 		resetFacsimile();
@@ -462,16 +517,6 @@ $(function () {
 		$(sectionSingle).addClass('panel--left');
 		$(sectionDouble).removeClass('is-hidden');
 		$(sectionFullRight).addClass('is-hidden');
-	}
-	function showHalvesSplit() {
-		// console.log("I am in showHalvesSplit()");
-		resetFacsimile();
-		$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
-		$(sectionSingle).addClass('panel--left'); // assign left half to single
-		$(sectionDouble).removeClass('is-hidden'); // show left half
-		$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel name)
-		$(sectionFull).removeClass('panel--full'); // rename full panel step 2 (remove full panel name)
-		$(sectionFullRight).removeClass('is-hidden'); // show right half
 	}
 	function showFacsimileFull() {
 		// console.log("I am in showFacsimileFull()");
@@ -499,11 +544,11 @@ $(function () {
 		$(sectionFacsimile).removeClass(gridRight); // remove facsimile from right grid columns
 		$(sectionFacsimile).addClass(gridLeft); // add facsimile to left grid columns
 		$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
-		$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel name)
+		$(sectionFull).addClass('panel--right'); // rename full panel step 1 (add right panel name)
 		$(sectionFull).removeClass('panel--full'); // rename full panel step 2 (remove full panel name)
 		$(sectionFullRight).removeClass('is-hidden');  // show right half
-		$(sectionSingle).addClass('is-hidden'); // hide full/left panel wrapper
-		$(sectionFullLeft).addClass('is-hidden'); // hide full/left panel content
+		$(sectionSingle).removeClass('is-hidden'); // hide full/right panel wrapper
+		// $(sectionFullLeft).addClass('is-hidden'); // hide full/left panel content
 		$(imageSectionRight).removeClass('panel--left'); // kludge to show right image
 		$(imageSectionRight).removeClass('is-hidden'); // kludge to show right image
 	}
@@ -549,44 +594,44 @@ $(function () {
 		$(musicSideNav).siblings().removeClass('sidenav--is-active');
 		$(musicSideNav).addClass('sidenav--is-active');
 	}
-	function sideNavSetNum() {
-		if (dataID === 1) {
-			$(prevBtn).addClass('is-hidden'); // do not display previous button on first emblem
-			$(nextBtn).removeClass('is-hidden'); // display next button
-			$(nextBtn).attr("href", "author-epigram.html"); // update the next button to link to the next emblem
-			$(emblemNumTextArea).text("Frontispiece"); // update the emblem title to reflect the current emblem number
-		}
-		else if (dataID === 2) {
-			$(prevBtn).attr("href", "frontispiece.html"); // update the previous button to link to the previous emblem
-			$(nextBtn).attr("href", "dedication.html"); // update the next button to link to the next emblem
-			$(emblemNumTextArea).text("Author's Epigram"); // update the emblem title to reflect the current emblem number	
-		}
-		else if (dataID === 3) {
-			$(prevBtn).attr("href", "author-epigram.html"); // update the previous button to link to the previous emblem
-			$(nextBtn).attr("href", "preface.html"); // update the next button to link to the next emblem
-			$(emblemNumTextArea).text("Dedication"); // update the emblem title to reflect the current emblem number
-		}
-		else if (dataID === 4) {
-			$(prevBtn).attr("href", "dedication.html"); // update the previous button to link to the previous emblem
-			$(nextBtn).attr("href", "emblem01.html"); // update the next button to link to the next emblem
-			$(emblemNumTextArea).text("Preface"); // update the emblem title to reflect the current emblem number
-		}
-		else if (dataID === 5) {
-			$(prevBtn).attr("href", "preface.html"); // update the previous button to link to the previous emblem
-			$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
-			$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-		}
-		else if (dataID > 5 && dataID < 55) {
-			$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
-			$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
-			$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-		}
-		else if (dataID === 55) {
-			$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
-			$(nextBtn).addClass('is-hidden'); // do not display next button
-			$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-		}	
-	}
+	// function sideNavSetNum() {
+	// 	if (dataID === 1) {
+	// 		$(prevBtn).addClass('is-hidden'); // do not display previous button on first emblem
+	// 		$(nextBtn).removeClass('is-hidden'); // display next button
+	// 		$(nextBtn).attr("href", "author-epigram.html"); // update the next button to link to the next emblem
+	// 		$(emblemNumTextArea).text("Frontispiece"); // update the emblem title to reflect the current emblem number
+	// 	}
+	// 	else if (dataID === 2) {
+	// 		$(prevBtn).attr("href", "frontispiece.html"); // update the previous button to link to the previous emblem
+	// 		$(nextBtn).attr("href", "dedication.html"); // update the next button to link to the next emblem
+	// 		$(emblemNumTextArea).text("Author's Epigram"); // update the emblem title to reflect the current emblem number	
+	// 	}
+	// 	else if (dataID === 3) {
+	// 		$(prevBtn).attr("href", "author-epigram.html"); // update the previous button to link to the previous emblem
+	// 		$(nextBtn).attr("href", "preface.html"); // update the next button to link to the next emblem
+	// 		$(emblemNumTextArea).text("Dedication"); // update the emblem title to reflect the current emblem number
+	// 	}
+	// 	else if (dataID === 4) {
+	// 		$(prevBtn).attr("href", "dedication.html"); // update the previous button to link to the previous emblem
+	// 		$(nextBtn).attr("href", "emblem01.html"); // update the next button to link to the next emblem
+	// 		$(emblemNumTextArea).text("Preface"); // update the emblem title to reflect the current emblem number
+	// 	}
+	// 	else if (dataID === 5) {
+	// 		$(prevBtn).attr("href", "preface.html"); // update the previous button to link to the previous emblem
+	// 		$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
+	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
+	// 	}
+	// 	else if (dataID > 5 && dataID < 55) {
+	// 		$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
+	// 		$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
+	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
+	// 	}
+	// 	else if (dataID === 55) {
+	// 		$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
+	// 		$(nextBtn).addClass('is-hidden'); // do not display next button
+	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
+	// 	}	
+	// }
 		
 
 	/*** MOTTO WAYPOINT ***/
