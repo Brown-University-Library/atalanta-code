@@ -94,37 +94,40 @@ $(function () {
 	/* layouts */
 	$(layoutComparativeBtn).click(function() { // PROCESS COMPARATIVE LAYOUT
 		processLayoutComparative();
+		checkState();
 		return false;
 	});
 	$(layoutDigitalEditionBtn).click(function() { // PROCESS DIGITAL EDITION LAYOUT
 		processLayoutDigitalEdition();
+		checkState();
 		return false;
 	});
 	$(layoutBookBtn).click(function() { // PROCESS BOOK LAYOUT
 		processLayoutBook();
+		checkState();
 		return false;
 	});
 	function processLayoutComparative() {
 		$(layoutComparativeBtn).attr('data-state', 'active'); // make comparative layout state active
-		$(layoutComparativeBtn).siblings().attr('data-state', 'inactive'); // make single and book layout states inactive
+		$(layoutComparativeBtn).siblings().attr('data-state', 'inactive'); // make digital edition and book layout states inactive
 	}
 	function processLayoutDigitalEdition() {
-		$(layoutDigitalEditionBtn).attr('data-state', 'active'); // make comparative layout state active
-		$(layoutDigitalEditionBtn).siblings().attr('data-state', 'inactive'); // make single and book layout states inactive
+		$(layoutDigitalEditionBtn).attr('data-state', 'active'); // make digital edition layout state active
+		$(layoutDigitalEditionBtn).siblings().attr('data-state', 'inactive'); // make comparative and book layout states inactive
 	}
 	function processLayoutBook() {
-		$(layoutBookBtn).attr('data-state', 'active'); // make comparative layout state active
-		$(layoutBookBtn).siblings().attr('data-state', 'inactive'); // make single and book layout states inactive
+		$(layoutBookBtn).attr('data-state', 'active'); // make book layout state active
+		$(layoutBookBtn).siblings().attr('data-state', 'inactive'); // make comparative and digital edition layout states inactive
 	}
 	/* pages */
-	$(doubleViewBtn).click(function() { // PROCESS COMPARATIVE VIEW PAGE
-		processComparativeView();
-		return false;
-	});
-	$(singleViewBtn).click(function() { // PROCESS SINGLE VIEW PAGE
-		processSingleView()
-		return false;
-	});
+	// $(doubleViewBtn).click(function() { // PROCESS COMPARATIVE VIEW PAGE
+	// 	processComparativeView();
+	// 	return false;
+	// });
+	// $(singleViewBtn).click(function() { // PROCESS SINGLE VIEW PAGE
+	// 	processSingleView()
+	// 	return false;
+	// });
 	/* languages */
 	$(englishSingleView).click(function() { // ACTIVATE SINGLE ENGLISH
 		processEnglishSingle();
@@ -150,35 +153,6 @@ $(function () {
 		processFacsimileDouble();
 		return false;
 
-	});
-	/* sidenav */
-	$(sideNavArrows).click(function() {
-		console.log("I clicked the sidenav");
-		checkState();
-	});
-	$(sideNavOption).click(function() {
-		$(this).siblings().removeClass('sidenav--is-active'); // remove bkg highlight from all li
-		$(this).addClass('sidenav--is-active'); // add bkg highlight to currently selected li
-	// 	if($(this).children("a").attr("href")===("#motto")) {
-	// 		$('section.section__motto').siblings().removeClass('jumplink--kludge');
-	// 		$('section.section__motto').addClass('jumplink--kludge');
-	// 		$('.emblem').css("margin-top", "0");
-	// 		console.log("motto!");
-	// 	}
-	// 	else if($(this).children("a").attr("href")===("#image")) {
-	// 		$('.section__image').siblings().removeClass('jumplink--kludge');
-	// 		$('div.section__image').addClass('jumplink--kludge');
-	// 		console.log("image!");
-	// 	}
-	// 	else if($(this).children("a").attr("href")===("#music")) {
-	// 		console.log("music!");
-	// 	}
-	// 	else if($(this).children("a").attr("href")===("#epigram")) {
-	// 		console.log("epigram!");
-	// 	}
-	// 	else if($(this).children("a").attr("href")===("#discourse")) {
-	// 		console.log("discourse!");
-	// 	}
 	});
 	/* text switches */
 	$(leftNormalizedSwitch).click(function() { // SELECT LEFT & FULL NORMALIZED SWITCH
@@ -294,71 +268,18 @@ $(function () {
 	});
 /* FUNCTIONS */
 	function checkState() {
-		console.log("I am checking the state");
-		// if single and english are active
-		if ( $(singleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') ) {
-			showFull();
-			console.log("Single English is ACTIVE");
-		}
-		// if single and latin are active
-		else if ( $(singleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') ) {
-			showFull();
-			console.log("Single Latin is ACTIVE");
-		}
-		// if single and facsimile are active
-		else if ( $(singleViewBtn).attr('data-state')===('active') && $(facsimileSingleView).attr('data-state')===('active') ) {
-			showFacsimileFull();
-			console.log("Single Facsimile is ACTIVE");
-		}
-		// if double and SingleEnglish and DoubleEnglish are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') && $(englishDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			console.log("Single English is ACTIVE and Double English is ACTIVE");
-		}
-		// if double and SingleEnglish and DoubleLatin are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') && $(latinDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			console.log("Single English is ACTIVE and Double Latin is ACTIVE");
-		}
-		// if double and SingleEnglish and DoubleFacsimile are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') && $(facsimileDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			showFacsimileRight();
-			console.log("Single English is ACTIVE and Double Facsimile is ACTIVE");
-		}
-		// if double and SingleLatin and DoubleEnglish are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') && $(englishDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			console.log("Single Latin is ACTIVE and Double English is ACTIVE");
-		}
-		// if double and SingleLatin and DoubleLatin are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') && $(latinDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			console.log("Single Latin is ACTIVE and Double Latin is ACTIVE");
-		}
-		// if double and SingleLatin and DoubleFacsimile are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') && $(facsimileDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			showFacsimileRight();
-			console.log("Single Latin is ACTIVE and Double Facsimile is ACTIVE");
-		}
-		// if double and SingleFacsimile and DoubleEnglish are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(facsimileSingleView).attr('data-state')===('active') && $(englishDoubleView).attr('data-state')===('active') ) {
-			showHalves();
+		if ( $(layoutComparativeBtn).attr('data-state')===('active') ) {
+			showDigitalEditionRight();
 			showFacsimileLeft();
-			console.log("Single Facsimile is ACTIVE and Double English is ACTIVE");
+			console.log("Comparative Layout is ACTIVE");
 		}
-		// if double and SingleFacsimile and DoubleLatin are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(facsimileSingleView).attr('data-state')===('active') && $(latinDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			showFacsimileLeft();
-			console.log("Single Facsimile is ACTIVE and Double Latin is ACTIVE");
+		else if ( $(layoutDigitalEditionBtn).attr('data-state')===('active') ) { // if digital edition layout is active
+			showFull();
+			console.log("Digital Edition Layout is ACTIVE");
 		}
-		// if double and SingleFacsimile and DoubleFacsimile are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(facsimileSingleView).attr('data-state')===('active') && $(facsimileDoubleView).attr('data-state')===('active') ) {
-			showHalves();
+		else if ( $(layoutBookBtn).attr('data-state')===('active') ) { // if book is active
 			showFacsimileFull();
-			console.log("Single Facsimile is ACTIVE and Double Facsimile is ACTIVE");
+			console.log("Book Layout is ACTIVE");
 		}
 		else {
 			console.log("NONE OF THE STATES APPLY!!!");
@@ -389,47 +310,9 @@ $(function () {
 		var myTest = $(singleViewBtn).attr('data-state');
 		console.log("my new data state is " + myTest);
 	}
-	function isActiveSingle() { // when single view is selected, reveal comparative view switch but hide comparative nav
-		if( $(singleViewBtn).hasClass('is-hidden') ) {
-
-		}
-		else {
-			$(singleViewBtn).addClass('is-hidden'); // hide single view btn
-			$(doubleViewBtn).removeClass('is-hidden'); // reveal comparative view btn
-			// $(doubleNav).addClass('is-hidden'); // hide last 3 language options for comparative view
-		}
-	}
-	function isActiveDouble() { // when comparative view is selected, reveal single view switch and reveal comparative nav
-		if( $(doubleViewBtn).hasClass('is-hidden') ) {
-
-		}
-		else {
-			$(doubleViewBtn).addClass('is-hidden'); // hide comparative view btn
-			$(singleViewBtn).removeClass('is-hidden'); // reveal single view btn
-			// $(doubleNav).removeClass('is-hidden'); // reveal last 3 language options for comparative view
-		}
-	}
 	function onLoad() {
 		sideNavSetNum();
 		checkState();
-	}
-	function processComparativeView() {
-		isActiveDouble();// reveal single view btn and hide comparative view btn
-		doubleData = 'active';
-		$(doubleViewBtn).attr('data-state','active'); // make comparative view state active
-		singleData = 'inactive';
-		$(singleViewBtn).attr('data-state','inactive'); // make single view state inactive
-		$(sideNav).addClass('is-hidden'); // hide sidenav in comparative view
-		checkState(); // check state of all subnav options to reveal correct panels/languages
-	}
-	function processSingleView() {
-		isActiveSingle();// reveal comparative view btn and hide single view btn
-		singleData = 'active';
-		$(singleViewBtn).attr('data-state', 'active'); // make single view state active
-		doubleData = 'inactive';
-		$(doubleViewBtn).attr('data-state', 'inactive'); // make comparative view state inactive
-		$(sideNav).removeClass('is-hidden'); // show sidenav in single view
-		checkState(); // check state of all subnav options to reveal correct panels/languages
 	}
 	function processEnglishDouble() {
 		if ($(englishDoubleView).attr("data-state")===("active")) {
@@ -572,7 +455,7 @@ $(function () {
 		$(doubleTranslation).addClass('is-hidden'); // hide all english text in right half
 		$(doubleOriginal).addClass('is-hidden'); // hide all latin/german text in right half
 	}
-	function showHalves() {
+	function showDigitalEditionRight() {
 		// console.log("I am in showHalves()");
 		resetFacsimile();
 		$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
@@ -623,25 +506,6 @@ $(function () {
 		$(sectionFullLeft).addClass('is-hidden'); // hide full/left panel content
 		$(imageSectionRight).removeClass('panel--left'); // kludge to show right image
 		$(imageSectionRight).removeClass('is-hidden'); // kludge to show right image
-	}
-	function showFacsimileRight() {
-		// console.log("I am in showFacsimileRight()");
-		$(sectionMusic).removeClass('is-hidden'); // reveal music
-		$(sectionMusic).addClass(gridLeft); // place music on left half of grid
-		$(sectionMusic).removeClass(gridRight); // remove music from right half of grid
-		$(sectionImage).removeClass('is-hidden'); // reveal image
-		$(sectionImage).addClass(gridLeft); // place image on left half of grid
-		$(sectionImage).removeClass(gridRight); // remove image from right half of grid
-		$(facsimileFull).addClass(gridHalf); // make facsimile half width (required because of fixed position in grid)
-		$(sectionFacsimile).removeClass(gridLeft); // remove facsimile from left grid columns
-		$(sectionFacsimile).addClass(gridRight); // add facsimile to right grid columns
-		$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
-		$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel class)
-		$(sectionFull).removeClass('panel--full'); // rename full panel step 1 (add left panel class)
-		$(sectionFullLeft).removeClass('is-hidden'); // show left half
-		$(sectionDouble).addClass('is-hidden'); // hide right panel wrapper
-		$(sectionFullRight).addClass('is-hidden'); // hide right panel content
-
 	}
 	function showFull() {
 		// console.log("I am in showFull()");
