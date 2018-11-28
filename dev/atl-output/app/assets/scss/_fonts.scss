@@ -2,34 +2,66 @@
 @import url("https://use.typekit.net/utc2ige.css");
 
 @font-face {
-    font-family: 'GTAmericaTrial'; /* regular */
-    src: url('../fonts/GT-America-Trial-Regular.eot');
-    src: url('../fonts/GT-America-Trial-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/GT-America-Trial-Regular.woff') format('woff');
+    font-family: 'GTAmerica'; /* regular */
+    src: url('../fonts/GT-America-Standard-Regular.eot');
+    src: url('../fonts/GT-America-Standard-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GT-America-Standard-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'GTAmericaTrial'; /* italic */
-    src: url('../fonts/GT-America-Trial-Regular-Italic.eot');
-    src: url('../fonts/GT-America-Trial-Regular-Italic.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/GT-America-Trial-Regular-Italic.woff') format('woff');
+    font-family: 'GTAmerica'; /* italic */
+    src: url('../fonts/GT-America-Regular-Standard-Italic.eot');
+    src: url('../fonts/GT-America-Regular-Standard-Italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GT-America-Regular-Standard-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
 @font-face {
-    font-family: 'GTAmericaTrial'; /* bold */
-    src: url('../fonts/GT-America-Trial-Medium.eot');
-    src: url('../fonts/GT-America-Trial-Medium.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/GT-America-Trial-Medium.woff') format('woff');
+    font-family: 'GTAmerica'; /* semibold */
+    src: url('../fonts/GT-America-Standard-Medium.eot');
+    src: url('../fonts/GT-America-Standard-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GT-America-Standard-Medium.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
-    font-family: 'GTAmericaTrial'; /* bold italic */
-    src: url('../fonts/GT-America-Trial-Medium-Italic.eot');
-    src: url('../fonts/GT-America-Trial-Medium-Italic.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/GT-America-Trial-Medium-Italic.woff') format('woff');
-    font-weight: bold;
+    font-family: 'GTAmerica'; /* semibold italic */
+    src: url('../fonts/GT-America-Medium-Standard-Italic.eot');
+    src: url('../fonts/GT-America-Medium-Standard-Italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GT-America-Medium-Standard-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'GTAmericaBold'; /* bold */
+    src: url('../fonts/GT-America-Standard-Bold.eot');
+    src: url('../fonts/GT-America-Standard-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GT-America-Standard-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GTAmericaBold'; /* bold italic */
+    src: url('../fonts/GT-America-Standard-Bold-Italic.eot');
+    src: url('../fonts/GT-America-Standard-Bold-Italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GT-America-Standard-Bold-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'GTSectraDisplayBold'; /* regular */
+    src: url('../fnts/GT-Sectra-Display-Bold.eot');
+    src: url('../fnts/GT-Sectra-Display-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fnts/GT-Sectra-Display-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GTSectraDisplayBold'; /* italic */
+    src: url('../fnts/GT-Sectra-Display-Bold-Italic.eot');
+    src: url('../fnts/GT-Sectra-Display-Bold-Italic.eot?#iefix') format('embedded-opentype'),
+         url('../fnts/GT-Sectra-Display-Bold-Italic.woff') format('woff');
+    font-weight: normal;
     font-style: italic;
 }
