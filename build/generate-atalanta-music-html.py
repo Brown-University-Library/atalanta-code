@@ -58,7 +58,7 @@ for emblemNumber in range(1,51):
   vLabels = VOICE_ORDER[emblemNumber]
 
   html = '''
-    <div class="{MAIN_CLASSNAME}" data-mei="{TEI_FILENAME}">
+    <div class="{MAIN_CLASSNAME}" data-mei="{MEI_FILENAME}">
       <div class="{CMN_VIZ_CLASSNAME}"></div>
       <div class="{AUDIO_VIZ_CLASSNAME}" data-tempo="{TEMPO}">
         <div class="{AUDIO_TRACK_CLASSNAME}" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
@@ -71,7 +71,7 @@ for emblemNumber in range(1,51):
       <div class="{PIANOROLL_VIZ_CLASSNAME} modal"></div>
     </div>'''.format(
     MAIN_CLASSNAME = CON['MAIN_MUSIC_CLASSNAME'],
-    TEI_FILENAME = CON['MEI_DIRECTORY_WEB'] + 'Fuga ' + str(emblemNumber) + '.xml',
+    MEI_FILENAME = CON['MEI_DIRECTORY_WEB'] + 'Fuga ' + forceTwoDigits(emblemNumber) + '.xml',
     PIANOROLL_VIZ_CLASSNAME = CON['VIZ_PIANOROLL_CLASSNAME'],
     CMN_VIZ_CLASSNAME = CON['VIZ_CMN_CLASSNAME'],
     AUDIO_VIZ_CLASSNAME = CON['VIZ_AUDIO_CLASSNAME'],
