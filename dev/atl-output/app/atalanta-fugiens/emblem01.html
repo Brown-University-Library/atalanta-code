@@ -5,8 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Furnace and Fugue: Atalanta Fugiens (Digital Edition)</title>
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css">
+	<link type="text/css" rel="stylesheet" media="screen" href="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.css">
 <!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
 	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.js"></script>
 	<script src="../assets/js/vendors/verovio/verovio-toolkit.js"></script>
 	<script src="../assets/js/stereo-panner-node.min.js"></script>
 	<script src="../assets/js/vendors/lity/lity.min.js"></script>
@@ -45,7 +47,23 @@
 		</div>
 <!-- EMBLEM NAVIGATION -->
 		<div class="subnav-v3">
-				<ul class="vertical menu accordion-menu" data-accordion-menu data-submenu-toggle>
+			<form action="#">
+				<fieldset>
+					<label for="layout">Select a Layout</label>
+					<select name="layout" id="layout">
+						<option selected="selected" data-layout="active">Comparative</option>
+						<option data-layout="inactive">Digital Edition</option>
+						<option data-layout="inactive">Book Image</option>
+					</select>
+				</fieldset>
+			</form>
+
+
+
+
+
+
+<!-- 				<ul class="vertical menu accordion-menu" data-accordion-menu data-submenu-toggle>
 					<li class="is-dropdown-submenu-parent">
 						<a href="#">Layout: <span>View 1</span></a>
 						<ul class="menu vertical nested">
@@ -55,7 +73,7 @@
 						</ul>
 					</li>
 
-				</ul>
+				</ul> -->
 <!-- 			<div class="subnav-v3__emblem-view">
 				<button class="dropdown" type="button" aria-haspopup="true" aria-expanded="false" data-component="dropdown">VIEW GOES HERE<span class="dropdown__caret"></span></button>
 				<ul class="dropdown__menu" role="menu">

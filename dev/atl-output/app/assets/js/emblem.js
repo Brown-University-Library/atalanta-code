@@ -6,9 +6,9 @@ $(function () {
 	var languageLatinOrigBtn = 'li.dropdown--language:nth-of-type(3)';
 	var languageLatinRegBtn = 'li.dropdown--language:nth-of-type(4)';
 	var languageGermanBtn = 'li.dropdown--language:nth-of-type(5)';
-	var layoutComparativeBtn = 'li.dropdown--layout:nth-child(1)';
-	var layoutDigitalEditionBtn = 'li.dropdown--layout:nth-child(2)';
-	var layoutBookBtn = 'li.dropdown--layout:nth-child(3)';
+	var layoutComparativeBtn = 'select#layout:nth-child(1)';
+	var layoutDigitalEditionBtn = 'select#layout:nth-child(2)';
+	var layoutBookBtn = 'select#layout:nth-child(3)';
 	/* emblem languages */
 	var fullEnglishText = '.section--single .lang--english';
 	var fullGermanText = '.section--single .lang--german';
