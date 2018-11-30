@@ -602,16 +602,16 @@
         // Add viewBox attribute
         // viewBox="0 0 w h"
 
-        /* (CB) see replacement below
+        //(CB) replace this with the one below once music player is complete
         scaledPageSvgCode = scaledPageSvgCode.replace(
           /^\s*<svg\s/i,
           `<svg viewBox="0 0 ${width} ${height}" `
         )
-        */
-        scaledPageSvgCode = scaledPageSvgCode.replace( // (CB) trying to center the non-scaled SVG
-          /^\s*<svg\s/i,
-          `<svg viewBox="-200 0 ${width} ${height}" `
-        )
+        
+        // scaledPageSvgCode = scaledPageSvgCode.replace( // (CB) trying to center the non-scaled SVG
+        //   /^\s*<svg\s/i,
+        //   `<svg viewBox="-200 0 ${width} ${height}" `
+        // )
 
         // TEMP - END
 
