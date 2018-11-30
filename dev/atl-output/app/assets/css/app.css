@@ -2122,6 +2122,10 @@ body {
   /* background-color: #ddd; */
   padding: 3em; }
 
+/* Audio definition elements are hidden */
+.ata-viz-audio {
+  display: none; }
+
 /* CMN Visualization */
 /* This is for the background (non-javascript) image */
 .ata-viz-cmn {
