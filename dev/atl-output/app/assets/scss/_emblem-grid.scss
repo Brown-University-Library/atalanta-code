@@ -78,7 +78,7 @@ main.emblem-page {
 	grid-row-end: 5;
 }
 .emblem section.section__epigram {
-	padding: 4rem 0;
+	padding: 3rem 0 6rem 0;
 }
 .section__discourse {
 	grid-row-start: 5;
@@ -112,19 +112,16 @@ main.emblem-page {
 .grid--left {
 	grid-column-start: 1;
 	grid-column-end: 3;
-/*	grid-area: 1 / 1 / 2 / 3;*/
 }
 .grid--right {
 	grid-column-start: 3;
 	grid-column-end: 5;
-/*	grid-area: 1 / 3 / 2 / 5;*/
 }
 .grid--half {
 	width: 50%;
 	background-color: silver;
 }
 .switch-wrapper {
-/*	border: 1px solid green;*/
 	display: flex;
 	justify-content: center;
 	top: 0;
@@ -132,50 +129,53 @@ main.emblem-page {
 	margin-bottom: 1.5rem;
 	width: 100%;
 }
-.latin-german-switch, .facsimile-normalized-switch {
-/*	border: 1px solid red;*/
+.facsimile-normalized-switch, .latin-german-switch {
 	display: flex;
 	align-self: flex-start;
 	justify-content: center;
 	height: 1.25rem;
 	width: 8rem;
 	ul {
-/*		border: 1px solid blue;*/
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
 		width: 100%;
-		li {
-/*			border: 1px solid green;*/
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: .75em;
-			margin: 0 .25rem;
-			width: 100%;
-			a {
-				color: $black;
-				cursor: pointer;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				height: 100%;
-				width: 100%;
-			}
-			a:hover {
-				color: $aqua_darker;
-			}
-		}
-		li.is-selected {
-			border-bottom: 3px solid $aqua;
-			margin-bottom: -3px;
-		}
+	}
+	li {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: .75em;
+		margin: 0 .25rem;
+		width: 100%;
+	}
+	li.is-selected {
+		border-bottom: 3px solid $aqua;
+		margin-bottom: -3px;
+	}
+	a {
+		color: $black;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+	}
+	a:hover {
+		color: $aqua_darker;
+	}
+}
+.latin-german-switch {
+	width: 20rem;
+}
+.section__discourse .latin-german-switch {
+	width: 15rem;
+	li:nth-of-type(3) {
+		display: none;
 	}
 }
 .section__motto .switch-wrapper, .section__epigram .switch-wrapper{
-	li {
-
-	}
 	li.is-selected {
 		border-bottom: 3px solid $aqua;
 	}

@@ -1,0 +1,22 @@
+/* TESTING */
+$error: hsla(11, 72%, 82%, .4);
+
+/* DEVELOPMENT */
+$aqua: #3DF2BF;
+$aqua_darker: hsla(163, 87%, 28%, 1);
+$royal-blue: hsla(250, 100%, 15%, .90);
+
+/* PRODUCTION */
+$black: #222;
+$black_transparent: hsla(0, 0%, 13%, .4);
+$blue-light: #DAE4EC;
+$gray-dark: #333333;
+$gray-dark_transparent: hsla(0, 0%, 20%, .97);
+$gray-medium: #989898;
+$gray-light: #F1F1F1;
+$orange-red: #DC4929;
+$orange-red_darker: hsla(11, 72%, 42%, 1);
+$orange-yellow: #FFB000;
+$orange-yellow_brighter: hsla(41, 100%, 69%, 1);
+$text-body: #4C4C4C;
+$white: #fff;
