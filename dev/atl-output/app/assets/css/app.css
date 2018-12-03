@@ -12,8 +12,8 @@
 @font-face {
   font-family: 'GTAmerica';
   /* italic */
-  src: url("../fonts/GT-America-Regular-Standard-Italic.eot");
-  src: url("../fonts/GT-America-Regular-Standard-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Regular-Standard-Italic.woff") format("woff");
+  src: url("../fonts/GT-America-Standard-Regular-Italic.eot");
+  src: url("../fonts/GT-America-Standard-Regular-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Standard-Regular-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic; }
 
@@ -28,8 +28,8 @@
 @font-face {
   font-family: 'GTAmerica';
   /* semibold italic */
-  src: url("../fonts/GT-America-Medium-Standard-Italic.eot");
-  src: url("../fonts/GT-America-Medium-Standard-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Medium-Standard-Italic.woff") format("woff");
+  src: url("../fonts/GT-America-Standard-Medium-Italic.eot");
+  src: url("../fonts/GT-America-Standard-Medium-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Standard-Medium-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic; }
 
@@ -681,40 +681,23 @@ html.lity-active body {
   z-index: 10000; }
 
 /*FLEX LAYOUT*/
-/*	.topnav__contents {
-		display: flex;
-		flex-direction: row;
-		height: 100%;
-		width: 100%;
-}
-.topnav__contents .section-break {
-
-}
-.topnav__contents__atalanta-fugiens {
-	flex: 0 0 40%;
-}
-.topnav__contents__atalanta-essays {
-	flex: 0 0 60%;
-}
-.topnav__contents__atalanta-images,
-.topnav__contents__atalanta-front,
-.topnav__contents__atalanta-back {
-	flex: 0 0 33.3333%;
-}
-*/
-/*GRID LAYOUT*/
 .topnav__contents {
-  /*	outline: 5px solid black;*/
   color: #fff;
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
   font-family: "GTAmerica", "Usual", Helvetica, Arial, sans-serif;
   font-size: 2.5rem;
   height: 100%;
   line-height: 1;
-  padding: 2rem 4rem; }
+  padding: 1rem 4rem;
+  width: 100%; }
   .topnav__contents a {
     color: #fff; }
   .topnav__contents a:hover {
@@ -723,67 +706,97 @@ html.lity-active body {
 
 .topnav__contents .section-break {
   background: #222;
-  grid-column: 1 / 13;
-  grid-row: 2 / 3;
+  -webkit-flex-basis: calc(100% - 8rem);
+  -ms-flex-preferred-size: calc(100% - 8rem);
+  flex-basis: calc(100% - 8rem);
   height: 1px;
   min-height: 1px;
   max-height: 4px; }
 
 .topnav__contents__atalanta-fugiens,
 .topnav__contents__atalanta-essays {
-  grid-row: 1 / 2;
-  min-height: 50vh; }
+  height: 50vh;
+  max-height: calc(62vh - 2rem); }
 
 .topnav__contents__atalanta-fugiens {
-  grid-column: 1 / 5;
-  margin-right: -4rem; }
+  -webkit-flex-basis: calc(40% - 8rem);
+  -ms-flex-preferred-size: calc(40% - 8rem);
+  flex-basis: calc(40% - 8rem);
+  margin-right: 4rem; }
 
 .topnav__contents__atalanta-essays {
-  grid-column: 6 / 13; }
+  -webkit-flex-basis: calc(60% - 8rem);
+  -ms-flex-preferred-size: calc(60% - 8rem);
+  flex-basis: calc(60% - 8rem);
+  margin-left: 4rem; }
 
 .topnav__contents__atalanta-images,
 .topnav__contents__atalanta-front,
 .topnav__contents__atalanta-back {
-  grid-row: 3 / 4;
-  min-height: 20vh;
-  margin-bottom: 5rem; }
+  height: 30vh;
+  max-height: calc(38vh - 4rem); }
 
-.topnav__contents__atalanta-images {
-  grid-column: 1 / 5; }
-
-.topnav__contents__atalanta-front {
-  grid-column: 5 / 9; }
+.topnav__contents__atalanta-front,
+.topnav__contents__atalanta-back {
+  -webkit-flex-basis: calc(30% - 6rem);
+  -ms-flex-preferred-size: calc(30% - 6rem);
+  flex-basis: calc(30% - 6rem);
+  margin-left: 4rem;
+  margin-right: 4rem; }
 
 .topnav__contents__atalanta-back {
-  grid-column: 9 / 13; }
+  margin-left: 0rem;
+  margin-right: 5rem; }
 
-.topnav__contents > div > ul {
-  display: grid;
-  grid-gap: 1.5rem;
-  grid-template-columns: auto; }
+.topnav__contents__atalanta-images {
+  -webkit-flex-basis: calc(40% - 6rem);
+  -ms-flex-preferred-size: calc(40% - 6rem);
+  flex-basis: calc(40% - 6rem);
+  margin-right: 2rem; }
 
-/*	.contents--primary {
-		display: grid;
-		grid-gap: 50px;
-		grid-template-columns: 2fr 3fr;
-		grid-template-rows: auto;
-		height: 60%;
-	}
-	.contents--secondary {
-		display: grid;
-		grid-gap: 50px;
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: auto;
-		height: 40%;
-	}*/
+/*GRID LAYOUT*/
 /*.topnav__contents {
-	.toc__content {
-		height: 100%;
-	}
-
-	.toc__content li {
-		display: block;
-	}
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+}
+.topnav__contents .section-break {
+	grid-column: 1 / 13;
+	grid-row: 2 / 3;
+}
+.topnav__contents__atalanta-fugiens, 
+.topnav__contents__atalanta-essays {
+	grid-row: 1 / 2;
+	min-height: 50vh;	
+}
+.topnav__contents__atalanta-fugiens {
+	grid-column: 1 / 5;
+	margin-right: -4rem;
+}
+.topnav__contents__atalanta-essays {
+	grid-column: 6 / 13;
+}
+.topnav__contents__atalanta-images, 
+.topnav__contents__atalanta-front, 
+.topnav__contents__atalanta-back {
+	grid-row: 3 / 4;
+	min-height: 20vh;
+	margin-bottom: 5rem;
+}
+.topnav__contents__atalanta-images {
+	grid-column: 1 / 5;
+}
+.topnav__contents__atalanta-front {
+	grid-column: 5 / 9;	
+}
+.topnav__contents__atalanta-back {
+	grid-column: 9 / 13;
+}
+.topnav__contents > div > ul {
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-columns: auto;
 }*/
 .topnav__contents > ul {
   /*		display: flex;
@@ -808,76 +821,73 @@ html.lity-active body {
 /*	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;*/
-/* FLEX LAYOUT */
-/*	.toc__heading {
-		flex: 0 0 10%;
-	}
-		.toc__subheading {
-		flex: 0 0 10%;
-	}
-		.toc__description {
-		flex: 0 0 15%;
-	}
-		.toc__content {
-		flex: 0 0 65%;
-		}
-*/
 nav.topnav__contents .topnav__contents__atalanta-fugiens,
 nav.topnav__contents .topnav__contents__atalanta-essays,
 nav.topnav__contents .topnav__contents__atalanta-images,
 nav.topnav__contents .topnav__contents__atalanta-front,
 nav.topnav__contents .topnav__contents__atalanta-back {
   /*outline: 2px solid black;*/
-  /*	color: $white;
-	font-family: $body-font_emblem;
-	font-size: 1rem;
-	font-weight: 400;
-	line-height: 1.5;
-
-	display: flex;
-	flex-direction: column;
-	height: 100%;*/ }
-
-.toc__heading {
-  font-size: 1.5rem;
-  line-height: 1.25; }
-
-.topnav__contents .toc__description {
-  color: #111;
+  color: #fff;
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
-  font-size: 1.125rem;
-  font-weight: 500; }
-
-.toc__subheading {
   font-size: 1rem;
-  line-height: 1.2;
-  margin-top: -1rem; }
-
-.toc__description {
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 400;
+  height: 100%;
   line-height: 1.5; }
+  nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__heading,
+  nav.topnav__contents .topnav__contents__atalanta-essays .toc__heading,
+  nav.topnav__contents .topnav__contents__atalanta-images .toc__heading,
+  nav.topnav__contents .topnav__contents__atalanta-front .toc__heading,
+  nav.topnav__contents .topnav__contents__atalanta-back .toc__heading {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 1.25rem; }
+  nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__subheading,
+  nav.topnav__contents .topnav__contents__atalanta-essays .toc__subheading,
+  nav.topnav__contents .topnav__contents__atalanta-images .toc__subheading,
+  nav.topnav__contents .topnav__contents__atalanta-front .toc__subheading,
+  nav.topnav__contents .topnav__contents__atalanta-back .toc__subheading {
+    font-size: 1rem;
+    line-height: 1;
+    margin-top: -.625rem;
+    margin-bottom: 1.25rem; }
+  nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__description,
+  nav.topnav__contents .topnav__contents__atalanta-essays .toc__description,
+  nav.topnav__contents .topnav__contents__atalanta-images .toc__description,
+  nav.topnav__contents .topnav__contents__atalanta-front .toc__description,
+  nav.topnav__contents .topnav__contents__atalanta-back .toc__description {
+    color: #111;
+    font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 1.25rem; }
+  nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content,
+  nav.topnav__contents .topnav__contents__atalanta-essays .toc__content,
+  nav.topnav__contents .topnav__contents__atalanta-images .toc__content,
+  nav.topnav__contents .topnav__contents__atalanta-front .toc__content,
+  nav.topnav__contents .topnav__contents__atalanta-back .toc__content {
+    font-size: 1.125rem;
+    line-height: 1.2; }
 
-.toc__content {
-  font-size: 1rem;
-  line-height: 1.2; }
-
+/* FLEX LAYOUT */
+/* DIGITAL EDITION */
 nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  height: 38vh;
+  max-height: 38vh; }
 
 nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li {
-  /*		outline: 1px solid white;*/
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -890,21 +900,37 @@ nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 20%;
-  -ms-flex: 0 0 20%;
-  flex: 0 0 20%;
-  padding: 5px 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 10%;
+  -ms-flex: 1 0 10%;
+  flex: 1 0 10%;
+  /*padding: 5px 0;*/
   text-align: center; }
 
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li:nth-child(1),
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li:nth-child(2),
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li:nth-child(3),
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li:nth-child(4) {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 24.9%;
-  -ms-flex: 0 0 24.9%;
-  flex: 0 0 24.9%; }
+nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li:nth-of-type(1),
+nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li:nth-of-type(2),
+nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li:nth-of-type(3),
+nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li:nth-of-type(4) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 25%;
+  -ms-flex: 1 0 25%;
+  flex: 1 0 25%; }
 
 nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li a {
   display: -webkit-box;
@@ -918,79 +944,64 @@ nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li a {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  line-height: 1.2; }
 
 nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li a:hover {
   margin-bottom: -2px; }
 
+/* ESSAYS */
 nav.topnav__contents .topnav__contents__atalanta-essays .toc__content ul {
   direction: ltr;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, 1fr); }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li {
-  min-height: 1rem;
-  padding: .25rem 1rem .5rem 0; }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content ul li:nth-child(n+1):nth-child(-n+4) {
-  grid-column: 1 / 2; }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content ul li:nth-child(n+5):nth-child(-n+8) {
-  grid-column: 2 / 3; }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content ul li:nth-child(5) {
-  grid-row: 1 / 2; }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content ul li:nth-child(6) {
-  grid-row: 2 / 3; }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content ul li:nth-child(7) {
-  grid-row: 3 / 4; }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content ul li:nth-child(8) {
-  grid-row: 4 / 5; }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li a {
-  display: block;
-  line-height: 1.5;
-  margin-bottom: .5rem; }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li span {
-  color: #111;
-  font-size: .875rem;
-  font-weight: 500; }
-
-nav.topnav__contents .topnav__contents__atalanta-essays a:hover {
-  border-bottom: none; }
-
-nav.topnav__contents .topnav__contents__atalanta-images ul .toc__content ul,
-nav.topnav__contents .topnav__contents__atalanta-front ul .toc__content ul,
-nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  /*		min-height: 30vh;*/ }
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  height: 40vh;
+  max-height: 60vh; }
 
+nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li {
+  display: inline-block;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 25%;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  width: calc(50% - 1rem); }
+
+nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li:nth-child(n+1):nth-child(-n+4) {
+  margin-right: 1rem; }
+
+nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li:nth-child(n+5):nth-child(-n+8) {
+  margin-left: 1rem; }
+
+nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li a {
+  line-height: 1.2; }
+
+nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li span {
+  color: #111;
+  display: block;
+  font-size: .875rem;
+  font-weight: 500;
+  margin-top: .5rem; }
+
+/* IMAGES, MINI ESSAYS, ETC. */
 nav.topnav__contents .topnav__contents__atalanta-images ul .toc__content ul li,
 nav.topnav__contents .topnav__contents__atalanta-front ul .toc__content ul li,
 nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
-  padding: 1rem 0; }
+  margin-bottom: 1.75rem; }
 
 /*nav.topnav__contents div .toc__content ul {
 		height: 100%;
@@ -1010,81 +1021,71 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
 		flex: 0 0 25%;
 	}
 }*/
+/*
 .toc-wrapper {
-  display: none;
-  height: 100vh;
-  overflow: auto;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 20000000; }
-
+	display: none;
+	height: 100vh;
+	overflow: auto;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 20000000;
+}
 .toc {
-  background-color: #333333;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  height: auto;
-  padding: 2rem;
-  width: 20%; }
-
+	background-color: $gray_dark;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: auto;
+	padding: 2rem;
+	width: 20%;
+}
 .toc__items {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  height: auto;
-  width: 100%; }
-  .toc__items li {
-    color: #fff;
-    cursor: default;
-    font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.5rem;
-    padding-left: 2rem;
-    text-align: left; }
-  .toc__items a {
-    color: #fff; }
-  .toc__items a:hover {
-    color: #ffcd61; }
-  .toc__items .toc__heading {
-    color: #FFB000;
-    font-size: 1.125rem;
-    font-weight: 500;
-    padding: .825rem 0 .325rem .5rem; }
-  .toc__items .toc__heading a {
-    color: #FFB000; }
-  .toc__items .toc__heading a:hover {
-    color: #ffcd61; }
-  .toc__items .toc__essay {
-    margin-bottom: .75rem; }
-  .toc__items .toc__byline {
-    display: block;
-    font-size: .825rem;
-    font-style: italic; }
-
-/*** Breakpoints ***/
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: auto;
+	width: 100%;
+	li {
+		color: $white;
+		cursor: default;
+		font-family: $body-font_emblem;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.5rem;
+		padding-left: 2rem;
+		text-align: left;
+	}
+	a {
+		color: $white;
+	}
+	a:hover {
+		color: $yellow_bright;
+	}
+	.toc__heading  {
+		color: $orange-yellow;
+		font-size: 1.125rem;
+		font-weight: 500;
+		padding: .825rem 0 .325rem .5rem;
+	}
+	.toc__heading a {
+		color: $orange-yellow;
+	}
+	.toc__heading a:hover {
+		color: $yellow_bright;
+	}
+	.toc__essay {
+		margin-bottom: .75rem;
+	}
+	.toc__byline {
+		display: block;
+		font-size: .825rem;
+		font-style: italic;
+	}
+}*/
+/*** MEDIA QUERIES ***/
+/*** BREAKPOINTS ***/
 /* small  -  mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .topnav ul {
@@ -1160,7 +1161,7 @@ main.emblem-page {
   padding: 0 0 .125rem 0; }
 
 .emblem {
-  margin-top: 3.125rem;
+  margin-top: 4.5rem;
   display: grid;
   grid-area: 1 / 1 / 2 / 5;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1241,7 +1242,7 @@ main.emblem-page {
   grid-row-start: 1;
   grid-row-end: 2;
   /*	grid-area: 1 / 1 / 1 / 5;*/
-  margin-top: 3.125rem;
+  margin-top: 4.5rem;
   /*padding-top: $subnav-h;*/ }
 
 .frontmatter section.facsimile, .frontmatter section._facsimile {
@@ -1370,7 +1371,7 @@ main.emblem-page {
   .emblem__image--cropped {
     width: 100%; }
   main.emblem-page {
-    padding: 0 0 3.125rem 0; }
+    padding: 0 0 4.5rem 0; }
   .section__facsimile {
     margin-top: 0;
     margin-bottom: 4.5rem; } }
@@ -1814,66 +1815,6 @@ EMBLEM DISCOURSE
 .italic {
   font-style: oblique; }
 
-/*
-
-FRONTISPIECE	 
-._frontispiece--english			div.titlePage {}
-._frontispiece--latin			div.pref-epigram.la {}
-
-AUTHOR'S EPIGRAM
-._author-epigram--english		div.epigram {}					???
-._author-epigram--latin			div.epigram.la {}				???
-
-DEDICATION
-._dedication--english			div.dedication {}
-								div.dedication {}
-._dedication--latin				div.preface {}					???
-
-PREFACE
-._preface--english				div.discourse {}				???
-._preface--latin				div.preface.la {}				???
-
-EMBLEM MOTTO
-._motto--english				???
-._motto--latin					div.image.la
-._motto--german					div.fugue.de
-
-EMBLEM EPIGRAM
-._epigram--english				div.epigram						???
-._epigram--latin				div.epigram.la 					???
-._epigram--german				div.epigram.de 					???
-
-EMBLEM DISCOURSE
-._discourse--english			div.discourse					???
-._discourse--latin				span.pb.atalanta-fugiens
-								div.discourse.la 				???
-
-*/
-/********** ENGLISH XML ISSUES **************/
-.section__discourse h3.title {
-  /*	display: none;*/
-  /*	background-color: $error;*/ }
-
-/* ??? I won't need this after we sort out the h3.title issue in the English discourse */
-.section__discourse .discourse.la h3.title {
-  background-color: transparent; }
-
-/* ??? I won't need this after we sort out the h3.title issue in the English discourse */
-.section__discourse.panel--left div.discourse h3.title, .section__discourse.panel--right div.discourse h3.title {
-  /*		background-color: $error;*/ }
-
-.section__discourse span.note-mark:nth-of-type(2) {
-  /*	background-color: $error;*/
-  grid-area: 1 / 1 / 2 / 2;
-  margin-left: 100px; }
-
-.section__discourse.panel--right span.note-mark:nth-of-type(2) {
-  /*	background-color: $error;*/
-  grid-area: 1 / 2 / 3 / 3;
-  margin-left: 0; }
-
-/********** END OF ENGLISH XML ISSUES **************/
-/*********** ENGLISH EMBLEM OVERRIDES *************/
 .epigram {
   margin-top: 0;
   text-align: left;
@@ -2491,6 +2432,7 @@ main.home {
   main.home .intro-text a {
     grid-area: 2 / 2 / 3 / 12; } }
 
+/*@import 'subnav';*/
 /* PRODUCTION */
 /* TESTING */
 /* DEVELOPMENT */
@@ -2517,201 +2459,42 @@ main.home {
 /*$gray-medium: #989898;*/
 /*$orange-red_darker: hsla(11, 72%, 42%, 1);*/
 /*$text-body: #4C4C4C;*/
-.subnav {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.subnav-v3 {
+  background-color: #333333;
+  /*	display: flex;
+	align-items: center;
+	justify-content: center;*/
+  display: block;
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
-  height: 3.125rem;
+  height: 4.5rem;
   width: 100%;
   position: fixed;
   z-index: 100; }
 
 .subnav-v3__emblem-view, .subnav-v3__emblem-language {
   display: inline-block;
-  height: 3.125rem;
+  height: 4.5rem;
   position: absolute; }
   .subnav-v3__emblem-view button, .subnav-v3__emblem-language button {
     background-color: #ffcd61;
-    color: #4C4C4C;
-    font: "GTAmericaTrial", "Avenir", Helvetica, Arial, sans-serif;
+    color: #333;
+    font: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
     font-size: 1rem;
-    height: 3.125rem;
+    height: 4.5rem;
     text-align: left;
     padding: 0 1rem;
     width: 300px; }
   .subnav-v3__emblem-view ul, .subnav-v3__emblem-language ul {
     background-color: #fff;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    padding: .5rem 3rem;
-    width: 100%; }
-  .subnav li {
-    border-radius: 5px;
-    color: #222;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 3.5rem;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto; }
-  .subnav li:nth-child(1) {
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-    order: 1; }
-  .subnav li:nth-child(2) {
-    -webkit-box-ordinal-group: 4;
-    -webkit-order: 3;
-    -ms-flex-order: 3;
-    order: 3; }
-  .subnav li:nth-child(3) {
-    -webkit-box-ordinal-group: 5;
-    -webkit-order: 4;
-    -ms-flex-order: 4;
-    order: 4; }
-  .subnav li:nth-child(4) {
-    -webkit-box-ordinal-group: 6;
-    -webkit-order: 5;
-    -ms-flex-order: 5;
-    order: 5; }
-  .subnav li:nth-child(5) {
-    -webkit-box-ordinal-group: 3;
-    -webkit-order: 2;
-    -ms-flex-order: 2;
-    order: 2; }
-  .subnav li:nth-child(6) {
-    -webkit-box-ordinal-group: 7;
-    -webkit-order: 6;
-    -ms-flex-order: 6;
-    order: 6; }
-  .subnav li:nth-child(7) {
-    -webkit-box-ordinal-group: 8;
-    -webkit-order: 7;
-    -ms-flex-order: 7;
-    order: 7; }
-  .subnav li:nth-child(8) {
-    -webkit-box-ordinal-group: 9;
-    -webkit-order: 8;
-    -ms-flex-order: 8;
-    order: 8; }
-  .subnav li:hover {
-    background-color: #ffcd61; }
-  .subnav li:hover a {
-    color: #222; }
-  .subnav a {
-    color: #222;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%; }
-
-.subnav li.subnav__views--single, .subnav li.subnav__views--double {
-  background-color: #fff;
-  border: 2px solid #222;
-  border-radius: 5px;
-  height: 3rem;
-  width: 14rem;
-  position: absolute;
-  right: 2rem;
-  top: 5.625rem; }
-  .subnav li.subnav__views--single a, .subnav li.subnav__views--double a {
-    color: #222; }
-
-.subnav__views--single a span {
-  background-image: url("../icons/icon_single-page-with-text.svg");
-  background-repeat: no-repeat;
-  height: 2rem;
-  width: 1.9rem; }
-
-.subnav__views--double a span {
-  background-image: url("../icons/icon_double-page-with-text.svg");
-  background-repeat: no-repeat;
-  height: 2rem;
-  width: 3.8rem; }
-
-.subnav__options--option {
-  height: 60%; }
-
-.is-inactive {
-  background-color: #808080 !important;
-  pointer-events: none !important; }
-  .is-inactive a {
-    color: #222 !important; }
-
-/*** Breakpoints ***/
-/* small  -  mobile */
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .emblem {
-    margin-top: 0; }
-  .subnav {
-    height: auto;
-    margin-top: 0 !important;
-    position: fixed;
-    bottom: 0; }
-    .subnav ul {
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      padding: .5rem; }
-  .subnav__views--single, .subnav__views--double {
-    display: none !important; }
-  .wrapper-sidenav {
-    display: none !important; } }
-/* 
     height: auto;
     width: 300px; }
   .subnav-v3__emblem-view li, .subnav-v3__emblem-language li {
     outline: 1px solid orange;
     height: 40px; }
     .subnav-v3__emblem-view li a, .subnav-v3__emblem-language li a {
-      color: #4C4C4C;
+      color: #333;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -2735,205 +2518,6 @@ main.home {
 
 .subnav-v3__emblem-language {
   right: 0; }
-*/
-/*! Lity - v2.3.1 - 2018-04-20
-* http://sorgalla.com/lity/
-* Copyright (c) 2015-2018 Jan Sorgalla; Licensed MIT */
-/*.lity {
-  z-index: 9990;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  white-space: nowrap;
-  background: #0b0b0b;
-  background: rgba(0, 0, 0, 0.9);
-  outline: none !important;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease; }
-
-.lity.lity-opened {
-  opacity: 1; }
-
-.lity.lity-closed {
-  opacity: 0; }
-
-.lity * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.lity-wrap {
-  z-index: 9990;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-  outline: none !important; }
-
-.lity-wrap:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.25em; }
-
-.lity-loader {
-  z-index: 9991;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  margin-top: -0.8em;
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease; }
-
-.lity-loading .lity-loader {
-  opacity: 1; }
-
-.lity-container {
-  z-index: 9992;
-  position: relative;
-  text-align: left;
-  vertical-align: middle;
-  display: inline-block;
-  white-space: normal;
-  max-width: 100%;
-  max-height: 100%;
-  outline: none !important; }
-
-.lity-content {
-  z-index: 9993;
-  width: 100%;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  -o-transition: -o-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease; }
-
-.lity-loading .lity-content,
-.lity-closed .lity-content {
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8); }
-
-.lity-content:after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  display: block;
-  right: 0;
-  width: auto;
-  height: auto;
-  z-index: -1;
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
-
-.lity-close {
-  z-index: 9994;
-  width: 35px;
-  height: 35px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  -webkit-appearance: none;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-  padding: 0;
-  color: #fff;
-  font-style: normal;
-  font-size: 35px;
-  font-family: Arial, Baskerville, monospace;
-  line-height: 35px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  border: 0;
-  background: none;
-  outline: none;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-
-.lity-close::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
-.lity-close:hover,
-.lity-close:focus,
-.lity-close:active,
-.lity-close:visited {
-  text-decoration: none;
-  text-align: center;
-  padding: 0;
-  color: #fff;
-  font-style: normal;
-  font-size: 35px;
-  font-family: Arial, Baskerville, monospace;
-  line-height: 35px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  border: 0;
-  background: none;
-  outline: none;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-
-.lity-close:active {
-  top: 1px; }
-*/
-/* Image */
-/*.lity-image img {
-  max-width: 100%;
-  display: block;
-  line-height: 0;
-  border: 0; }
-*/
-/* iFrame */
-/*.lity-iframe .lity-container,
-.lity-youtube .lity-container,
-.lity-vimeo .lity-container,
-.lity-facebookvideo .lity-container,
-.lity-googlemaps .lity-container {
-  width: 100%;
-  max-width: 964px; }
-
-.lity-iframe-container {
-  width: 100%;
-  height: 0;
-  padding-top: 56.25%;
-  overflow: auto;
-  pointer-events: auto;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-overflow-scrolling: touch; }
-
-.lity-iframe-container iframe {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  background: #000; }
-
-.lity-hide {
-  display: none; }
-emblem-v3-test */
 
 body {
   /* background-color: #ddd; */
