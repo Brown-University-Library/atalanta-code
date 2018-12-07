@@ -5,16 +5,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Furnace and Fugue: Atalanta Fugiens (Digital Edition)</title>
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css">
+	<link type="text/css" rel="stylesheet" media="screen" href="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.css">
 <!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
 	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.js"></script>
 	<script src="../assets/js/vendors/verovio/verovio-toolkit.js"></script>
-	<script src="../assets/js/stereo-panner-node.min.js"></script>
 	<script src="../assets/js/vendors/lity/lity.min.js"></script>
+	<script src="../assets/js/stereo-panner-node.min.js"></script>
 	<script src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
 	<script src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
 	<script src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
 </head>
-<body>
+<body class="emblem-body">
 <!-- GLOBAL NAVIGATION -->
 	<header data-page-type="digital edition">
 		<div class="_topnav">
@@ -44,7 +46,30 @@
 			</nav>
 		</div>
 <!-- EMBLEM NAVIGATION -->
-
+		<nav class="subnav-v3">
+			<form action="#">
+				<fieldset>
+					<label for="layout">Select a Layout</label>
+					<select name="layout" id="layout">
+						<option selected="selected" class="dropdown--layout" data-layout="active" value="compare">Comparative Layout</option>
+						<option class="dropdown--layout" data-layout="inactive" value="digital-edition">Digital Edition Layout</option>
+						<option class="dropdown--layout" data-layout="inactive" value="zooming-image">Book Image Layout</option>
+					</select>
+				</fieldset>
+			</form>
+			<form action="#">
+				<fieldset>
+					<label for="language">Select a Language</label>
+					<select name="language" id="language">
+						<option class="dropdown--language" data-language="inactive" value="english_original">Original English</option>
+						<option  selected="selected" class="dropdown--language" data-language="active" value="english_modern">Modernized English</option>
+						<option class="dropdown--language" data-language="inactive" value="latin_original">Original Latin</option>
+						<option class="dropdown--language" data-language="inactive" value="latin_normal">Normalized Latin</option>
+						<option class="dropdown--language" data-language="inactive" value="german">German</option>
+					</select>
+				</fieldset>
+			</form>
+		</nav>
 	</header>
 <!-- EMBLEM PAGE-->
 	<main id="emblem-data" class="emblem-page" data-id="5">
@@ -75,52 +100,27 @@
 		<div class="emblem">
 			<!-- Motto -->
 			<a name="motto" id="basic-waypoint__0" class="section__motto"></a>
-			<section class="section__motto section--single panel--full">
+			<section class="section__motto section--single panel--right">
 				<div class="translation">
-<!-- 					<div class="switch-wrapper left">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div> -->
 					<div class="lang--english _motto--english edition--normalized" lang="en-US">
-<div class="title">
-                		<h3 class="title">
-                        	<span class="original"><br></span><span class="regularized"></span><span class="italics">the first <span class="original">Embleme </span><span class="regularized">Emblem</span>. Of the Secrets of Nature.</span>
-                    	</h3>
-                        <h1 class="title">
-                        	<span class="original"><br></span><span class="regularized"></span><span class="italics"><span class="del"><span class="unclear">4 chars</span> </span><span class="subst"><span class="del"><span class="unclear">1 char</span></span><span class="add">W</span></span>ind <span class="original">carryed </span><span class="regularized">carried</span> him in his belly <span class="pc">- - - -</span>
-							</span>
-						</h1>
-</div>
+						<div class="title">
+                			<h3 class="title">
+                        		<span class="original"><br></span><span class="regularized"></span><span class="italics">the first <span class="original">Embleme </span><span class="regularized">Emblem</span>. Of the Secrets of Nature.</span>
+                    		</h3>
+	                        <h1 class="title">
+	                        	<span class="original"><br></span><span class="regularized"></span><span class="italics"><span class="del"><span class="unclear">4 chars</span> </span><span class="subst"><span class="del"><span class="unclear">1 char</span></span><span class="add">W</span></span>ind <span class="original">carryed </span><span class="regularized">carried</span> him in his belly <span class="pc">- - - -</span>
+								</span>
+							</h1>
+						</div>
 					</div>
                 </div>
 				<div class="original is-hidden">
-<!-- 					<div class="switch-wrapper left">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div> -->
-					<div class="lang--latin _motto--latin">
+					<div class="lang--latin _motto--latin edition--regularized" lang="la">
 			            <div class="image la">
 			               <h3 class="title">Emblema I. De secretis Naturae.</h3>
 			               <h1 class="title"><span class="original"><br/></span>Portavit eum ventus in ventre suo.</h1> 
 			            </div>
 					</div>
-					<div class="lang--latin _motto--latin edition--regularized" lang="la">
-						<div class="image la">
-                            <h3 class="title">Emblema I. De secretis Naturae.</h3>
-                            <h1 class="title">
-                  				<br>Portavit eum ventus in ventre suo.
-               				</h1>
-                        </div>
-                    </div>
 					<div class="lang--german _motto--german is-hidden" lang="de">
 						<div class="fugue de">
                				<h3 class="title">FUGA I. in Quarta, infra.</h3>
@@ -129,57 +129,10 @@
               		</div>
 				</div>
 			</section>
-			<!-- <section class="section__motto section--double panel--right is-hidden">
-				<div class="translation is-hidden">
-					<div class="switch-wrapper right">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--english _motto--english edition--normalized" lang="en-US">
-						<div class="title">
-						    <h3 class="title">
-								<span class="italics">the first <span class="original">Embleme </span><span class="regularized">Emblem</span>. Of the Secrets of Nature.</span>
-							</h3>
-							<h1 class="title">
-								<span class="del"><span class="unclear">4 chars</span> </span><span class="subst"><span class="del"><span class="unclear">1 char</span></span><span class="add">W</span></span>ind <span class="original">carryed </span><span class="regularized">carried</span> him in his belly <span class="pc">- - - -</span>
-							</h1>
-						</div>
-					</div>
-				</div>
-				<div class="original">
-					<div class="switch-wrapper right">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--latin _motto--latin edition--regularized" lang="la">
-			            <div class="image la">
-			               <h3 class="title">Emblema I. De secretis Naturae.</h3>
-			               <h1 class="title"><span class="original"><br/></span>Portavit eum ventus in ventre suo.</h1> 
-			            </div>
-					</div>
-					<div class="lang--german _motto--german is-hidden" lang="de">
-						<div class="fugue de">
-                            <h3 class="title">FUGA I. in Quarta, infra.</h3>
-                            <h1 class="title">
-                  				<br>Es hat ihn der Wind getragen im Bauche.
-               				</h1>
-                        </div>
-                    </div>
-                </div>
-			</section>
 			<!-- Image -->
 			<a name="image" id="basic-waypoint__1" class="section__image"></a>
 			<div class="section__image">					
-				<div class="image--full">
+				<div class="image--full grid--right">
 					<section class="image wrapper-section section">
 							<div class="image__picture">
 								<img class="emblem__image--cropped" 
@@ -196,32 +149,24 @@
 			<a name="music" id="basic-waypoint__2" class="section__music"></a>
 			<section class="section__music">
 				<div class="_music music--full">
-					<div class="ata-music" data-mei="../data/mei/Fuga 6.xml">
-		      			<div class="ata-viz-cmn" lang="la"></div>
-		      			<div class="ata-viz-audio" data-tempo="56">
-				            <div class="ata-audio-track" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
-				                data-mp3="../assets/audio/06-A-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-A-56bpm-Reverb.mp3"></div>
-				            <div class="ata-audio-track" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
-				                data-mp3="../assets/audio/06-H-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-H-56bpm-Reverb.mp3"></div>
-				            <div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
-				                data-mp3="../assets/audio/06-P-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-P-56bpm-Reverb.mp3"></div>
-				      	</div>
-				      <div class="ata-viz-pianoroll modal" style="background:#fff"></div>
+				    <div class="ata-music" data-mei="../data/mei/Fuga 01.xml">
+				      <div class="ata-viz-cmn"></div>
+				      <div class="ata-viz-audio" data-tempo="56">
+				        <div class="ata-audio-track" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
+				            data-mp3="../assets/audio/01-A-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/01-A-56bpm-Reverb.mp3"></div>
+				        <div class="ata-audio-track" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
+				            data-mp3="../assets/audio/01-H-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/01-H-56bpm-Reverb.mp3"></div>
+				        <div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
+				            data-mp3="../assets/audio/01-P-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/01-P-56bpm-Reverb.mp3"></div>
+				      </div>
+				      <div class="ata-viz-pianoroll modal"></div>
 				    </div>
     			</div>
 			</section>
 			<!-- Epigram -->
 			<a name="epigram" id="basic-waypoint__3" class="section__epigram"></a>
-			<section class="section__epigram section--single panel--full">
+			<section class="section__epigram section--single panel--right">
 				<div class="translation">
-<!-- 					<div class="switch-wrapper left">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div>
 					<div class="lang--english _epigram--english edition--normalized" lang="en-US">
 		                <div class="epigram">
                             <h3 class="title">the first <span class="original">Epigramme </span><span class="regularized">Epigram</span>.</h3>
@@ -237,15 +182,6 @@
                     </div>
                 </div>
 				<div class="original is-hidden">
-<!-- 					<div class="switch-wrapper left">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>  -->
 					<div class="lang--latin _epigram--latin edition--regularized" lang="la">
 						<div class="epigram la">
 			               <h3 class="title">Epigramma I.</h3>
@@ -274,80 +210,10 @@
 					</div>
 				</div>
 			</section>
-			<!-- <section class="section__epigram section--double panel--right is-hidden">
-				<div class="translation is-hidden">
-					<div class="switch-wrapper right">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div> -->
-					<div class="lang--english _epigram--english edition--normalized" lang="en-US">
-		                <div class="epigram">
-                            <h3 class="title">the first <span class="original">Epigramme </span><span class="regularized">Epigram</span>.</h3>
-                            <div class="verse-epigram">
-                                <br>If Boreas once expand his windy <span class="original">wombe </span><span class="regularized">womb</span>,
-                                <br>That <span class="original">th' </span><span class="regularized">the</span> Infant in the world alive may come,
-                                <br>His <span class="original">prowesse </span><span class="regularized">prowess</span> will the Heroes all <span class="original">outdoe </span><span class="regularized">outdo</span>
-                                <br>In art, in hand, in mind, and body too.
-                                <br><span class="original">Thinke </span><span class="regularized">Think</span> him <span class="original">noe </span><span class="regularized">no</span> Cæso, nor abortive brood,
-                                <br>Nor yet Agrippa, for his <span class="original">starre </span><span class="regularized">star</span> was good.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-				<div class="original">
-					<div class="switch-wrapper right">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--latin _epigram--latin edition--regularized" lang="la">
-						<div class="epigram la">
-							<h3>Epigramma I.</h3>
-							<div class="verse-epigram">
-								<br/>Embryo ventos<hi rend="circumflex">a</hi> BORE<hi rend="ligature">AE</hi> qui clauditur alvo,</l>
-								<br/>Vivus in hanc lucem si semel ortus erit;
-								<br/>Unus is Heroum cunctos superare labores
-								<br/>Arte, manu, forti corpore, mente, potest.
-								<br/>Ne tibi sit <persName>C<hi rend="ligature">ae</hi>so</persName>, nec abortus inutilis ill<hi rend="tail">e</hi>,
-								<br/>Non <persName>Agrippa</persName>, bono sydere sed genitus.
-							</div>
-						</div>
-					</div>
-					<div class="lang--german _epigram--german is-hidden">
-						<div class="epigram de" lang="de">
-			               <h3 class="title">I. Epigrammatis Latini versio Germanica.</h3>
-			               <div class="verse-epigram">
-			                  <span class="original"><br/></span><span class="v-line">Die Fruche im Buach deß Winds/ welche noch verborgen lebet/</span>
-			                  <span class="original"><br/></span><span class="v-line-indent">So ferne in dieses Liecht die selbe wirt erhebet/</span>
-			                  <span class="original"><br/></span><span class="v-line">kan allerhohen Helden Raht und That ubergehen weit</span>
-			                  <span class="original"><br/></span><span class="v-line-indent">Durch kunst und starcke Gewalt und seines Leibes Arbeit;</span>
-			                  <span class="original"><br/></span><span class="v-line">Schaw/ daß er nich unziemlich vor der Zeit geboren werd/</span>
-			                  <span class="original"><br/></span><span class="v-line-indent">Sondern in rechter Maß komme lebendig auff die Erd.</span>
-			               </div>
-			            </div>
-					</div>
-				</div>
-			</section> -->
 			<!-- Discourse -->
 			<a name="discourse" id="basic-waypoint__4" class="section__discourse"></a>
-			<section class="section__discourse section--single panel--full">
+			<section class="section__discourse section--single panel--right">
 				<div class="translation">
-<!-- 					<div class="switch-wrapper left">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div> -->
 					<div class="lang--english _discourse--english edition--normalized text" lang="en-US">
                         <div class="discourse">
                             <span class="milestone">014</span>
@@ -435,16 +301,6 @@
                         </div>
                     </div>
                 </div>
-			<!-- 	<div class="original text is-hidden">
-					<div class="switch-wrapper left">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div> -->
 					<div class="lang--latin _discourse--latin edition--regularized" lang="la">
 						<span class="pb atalanta-fugiens">14</span>
 			            <div class="discourse la">
@@ -500,7 +356,7 @@
 			                     <span class="original"><br/></span>nascitur:</span> <span class="milestone atalanta-fugiens">e01-18</span> Et gradu 8. <span class="italic">spiritus aërei siml in aërem scandentes se diligunt, ut
 			                     <span class="original"><br/></span>Hermes</span> inquit, <span class="italic">portavit illum ventus in ventre suo: Quia generatio ge<span class="original">-<br/></span>niti nostri fit in aëre <span class="original">&amp;</span> nascens in aëre sapienter nascitur: Ascendit enim à
 			                     <span class="original"><br/></span>terra in c<span class="original">œ</span><span class="regularized">[oe]</span>lum, iterúmque descendit in terram conquirendo vim superio<span class="original">-<br/></span>rem <span class="original">&amp;</span> inferiorem.</span>
-							</div>                        
+							        </div>                        
 			            </div>
 					</div>
 				</div>
@@ -514,22 +370,3 @@
 	<script src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
