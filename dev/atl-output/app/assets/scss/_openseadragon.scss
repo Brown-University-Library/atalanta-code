@@ -153,6 +153,7 @@
 		width: auto;
 	}
 	#previous, #next {
+		display: none;
 		height: 5rem;
 		width: 3rem;
 	}
@@ -172,6 +173,9 @@
 	#next {
 		right: 50%;
 	}
+}
+.section__facsimile.grid--left .facsimile--full.grid--half #tools {
+	display: none;
 }
 /***     Breakpoints     ***/
 /* small  -  mobile */

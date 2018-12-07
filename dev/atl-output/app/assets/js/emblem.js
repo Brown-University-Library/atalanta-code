@@ -6,9 +6,9 @@ $(function () {
 	var languageLatinOrigBtn = 'li.dropdown--language:nth-of-type(3)';
 	var languageLatinRegBtn = 'li.dropdown--language:nth-of-type(4)';
 	var languageGermanBtn = 'li.dropdown--language:nth-of-type(5)';
-	var layoutComparativeBtn = 'select#layout:nth-child(1)';
-	var layoutDigitalEditionBtn = 'select#layout:nth-child(2)';
-	var layoutBookBtn = 'select#layout:nth-child(3)';
+	var layoutComparativeBtn = 'option.dropdown--layout:nth-of-type(1)';
+	var layoutDigitalEditionBtn = 'option.dropdown--layout:nth-of-type(2)';
+	var layoutBookBtn = 'option.dropdown--layout:nth-of-type(3)';
 	/* emblem languages */
 	var fullEnglishText = '.section--single .lang--english';
 	var fullGermanText = '.section--single .lang--german';
@@ -64,6 +64,17 @@ $(function () {
 
 /* EVENTS */
 	/* layout buttons */
+	// $('#layout').selectmenu({
+	// 	change: function( event, data )
+	// 	{
+	// 		if( data===1 ) {
+	// 			console.log("1");
+	// 		}
+	// 		else if( data===2 ) {
+	// 			console.log("2");
+	// 		}
+	// 	}
+	// })
 	$(layoutComparativeBtn).click(function() { // COMPARATIVE LAYOUT SELECTED
 		selectLayoutComparative();
 		checkState();

@@ -1,0 +1,31 @@
+.subnav-v3 {
+	form {
+		padding-left: 2rem;
+		width: 50vw;
+	}
+/*	fieldset {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		height: 7rem;
+	}*/
+	label {
+		color: $white;
+		display: block;
+		display: none;
+		margin: 1rem 0;
+	}
+	select#layout {
+		background-color: $white;
+		border-radius: 0;
+		font-size: 1rem;
+		height: 2.5rem;
+		margin-top: .75rem;
+		width: 20rem;
+	}
+}
+
+option {
+	width: 500px;
+}

@@ -218,6 +218,33 @@ button {
   align-self: center;
   font-size: .825rem; }
 
+.subnav-v3 {
+  /*	fieldset {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		height: 7rem;
+	}*/ }
+  .subnav-v3 form {
+    padding-left: 2rem;
+    width: 50vw; }
+  .subnav-v3 label {
+    color: #fff;
+    display: block;
+    display: none;
+    margin: 1rem 0; }
+  .subnav-v3 select#layout {
+    background-color: #fff;
+    border-radius: 0;
+    font-size: 1rem;
+    height: 2.5rem;
+    margin-top: .75rem;
+    width: 20rem; }
+
+option {
+  width: 500px; }
+
 /*! Lity - v2.3.1 - 2018-04-20
 * http://sorgalla.com/lity/
 * Copyright (c) 2015-2018 Jan Sorgalla; Licensed MIT */
@@ -3180,6 +3207,7 @@ button.lity-close {
   width: auto; }
 
 .facsimile--full.grid--half #previous, .facsimile--full.grid--half #next {
+  display: none;
   height: 5rem;
   width: 3rem; }
 
@@ -3196,6 +3224,9 @@ button.lity-close {
 
 .section__facsimile.grid--left .facsimile--full.grid--half #next {
   right: 50%; }
+
+.section__facsimile.grid--left .facsimile--full.grid--half #tools {
+  display: none; }
 
 /***     Breakpoints     ***/
 /* small  -  mobile */
