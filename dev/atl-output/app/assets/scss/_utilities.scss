@@ -1,7 +1,7 @@
 @import 'colors';
 
 .is-active {
-	background-color: $orange-yellow_brighter !important;
+	background-color: $yellow_bright !important;
 	a {
 		color: $black !important;
 	}
@@ -19,7 +19,13 @@
 $topnav-h: 3.125rem;
 $subnav-h: 4.5rem;
 $emblemnav-h: 7.625rem;
+$gap: .75rem;
+$topnav-z: 100000;
+$drawer-z: 10000;
 
+$body-font: 'GTAmerica', 'Avenir', Helvetica, Arial, sans-serif;
 $body-font_emblem: 'GTAmerica', 'Avenir', Helvetica, Arial, sans-serif;
+$display-font: 'GTSectraDisplayBold', Garamond, Georgia, serif;
+$display-font_secondary: 'GTAmericaBold', 'Avenir', Helvetica, Arial, sans-serif;
 $display-font_emblem: 'GTAmerica', 'Usual', Helvetica, Arial, sans-serif;
-$secondary-display-font_emblem: 'GT Sectra', Garamond, Georgia, serif;
+$secondary-display-font_emblem: 'GTSectraDisplayBold', Garamond, Georgia, serif;

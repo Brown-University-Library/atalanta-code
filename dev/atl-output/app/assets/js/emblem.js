@@ -1,6 +1,9 @@
 $(function () {
 /* VARIABLES */
 	/* emblem nav */
+	var layoutComparativeBtn = 'li.dropdown--layout:nth-child(1)';
+	var layoutDigitalEditionBtn = 'li.dropdown--layout:nth-child(2)';
+	var layoutBookBtn = 'li.dropdown--layout:nth-child(3)';
 	var singleNav = '.subnav > ul li:nth-child(n + 2):nth-child(-n + 4)';
 	var doubleNav = '.subnav > ul li:nth-last-child(-n + 3)';
 	var singleViewBtn = '.subnav > ul li:nth-child(1)';
@@ -20,22 +23,31 @@ $(function () {
 	var latinDoubleData;
 	var facsimileDoubleData;
 	/* emblem languages */
-	var singleTranslation = '.section--single div.translation';
-	var singleOriginal = '.section--single div.original';
-	var doubleTranslation = '.section--double div.translation';
-	var doubleOriginal = '.section--double div.original';
-	var fullEnglishText = '.panel--full .lang--english';
-	var leftEnglishText = '.panel--left .lang--english';
-	var rightEnglishText = '.panel--right .lang--english';
-	var fullLatinText = '.panel--full .lang--latin';
-	var leftLatinText = '.panel--left .lang--latin';
-	var rightLatinText = '.panel--right .lang--latin';
-	var fullGermanText = '.panel--full .lang--german';
-	var leftGermanText = '.panel--left .lang--german';
-	var rightGermanText = '.panel--right .lang--german';
-	var fullLatinDiscourse = '.panel--full .lang--latin._discourse--latin';
-	var leftLatinDiscourse = '.panel--left .lang--latin._discourse--latin';
-	var rightLatinDiscourse = '.panel--right .lang--latin._discourse--latin';
+	var textTranslated = '.section--single div.translation';
+	var textOriginal = '.section--single div.original';
+
+	// var singleTranslation = '.section--single div.translation';
+	// var singleOriginal = '.section--single div.original';
+	// var doubleTranslation = '.section--double div.translation';
+	// var doubleOriginal = '.section--double div.original';
+
+	var languageEnglishOriginal = '.lang--english.edition--original';
+	var languageEnglishNormalized = '.lang--english.edition--normalized';
+	var languageLatinOriginal = '.lang--latin.edition--original';
+	var languageLatinRegularized = '.lang--latin.edition--regularized';
+	var languageGerman = '.lang--german';
+	// var fullEnglishText = '.panel--full .lang--english';
+	// var leftEnglishText = '.panel--left .lang--english';
+	// var rightEnglishText = '.panel--right .lang--english';
+	// var fullLatinText = '.panel--full .lang--latin';
+	// var leftLatinText = '.panel--left .lang--latin';
+	// var rightLatinText = '.panel--right .lang--latin';
+	// var fullGermanText = '.panel--full .lang--german';
+	// var leftGermanText = '.panel--left .lang--german';
+	// var rightGermanText = '.panel--right .lang--german';
+	// var fullLatinDiscourse = '.panel--full .lang--latin._discourse--latin';
+	// var leftLatinDiscourse = '.panel--left .lang--latin._discourse--latin';
+	// var rightLatinDiscourse = '.panel--right .lang--latin._discourse--latin';
 	/* switches */
 	var leftFacsimileSwitch = '.left .facsimile-normalized-switch ul li:nth-child(1)';
 	var rightFacsimileSwitch = '.right .facsimile-normalized-switch ul li:nth-child(1)';
@@ -94,15 +106,43 @@ $(function () {
 	onLoad(); // DISPLAY EMBLEM MENU AND DEFAULT OPTIONS ON PAGE LOAD
 
 /* EVENTS */
+	/* layouts */
+	$(layoutComparativeBtn).click(function() { // PROCESS COMPARATIVE LAYOUT
+		processLayoutComparative();
+		checkState();
+		return false;
+	});
+	$(layoutDigitalEditionBtn).click(function() { // PROCESS DIGITAL EDITION LAYOUT
+		processLayoutDigitalEdition();
+		checkState();
+		return false;
+	});
+	$(layoutBookBtn).click(function() { // PROCESS BOOK LAYOUT
+		processLayoutBook();
+		checkState();
+		return false;
+	});
+	function processLayoutComparative() {
+		$(layoutComparativeBtn).attr('data-state', 'active'); // make comparative layout state active
+		$(layoutComparativeBtn).siblings().attr('data-state', 'inactive'); // make digital edition and book layout states inactive
+	}
+	function processLayoutDigitalEdition() {
+		$(layoutDigitalEditionBtn).attr('data-state', 'active'); // make digital edition layout state active
+		$(layoutDigitalEditionBtn).siblings().attr('data-state', 'inactive'); // make comparative and book layout states inactive
+	}
+	function processLayoutBook() {
+		$(layoutBookBtn).attr('data-state', 'active'); // make book layout state active
+		$(layoutBookBtn).siblings().attr('data-state', 'inactive'); // make comparative and digital edition layout states inactive
+	}
 	/* pages */
-	$(doubleViewBtn).click(function() { // PROCESS COMPARATIVE VIEW PAGE
-		processComparativeView();
-		return false;
-	});
-	$(singleViewBtn).click(function() { // PROCESS SINGLE VIEW PAGE
-		processSingleView()
-		return false;
-	});
+	// $(doubleViewBtn).click(function() { // PROCESS COMPARATIVE VIEW PAGE
+	// 	processComparativeView();
+	// 	return false;
+	// });
+	// $(singleViewBtn).click(function() { // PROCESS SINGLE VIEW PAGE
+	// 	processSingleView()
+	// 	return false;
+	// });
 	/* languages */
 	$(englishSingleView).click(function() { // ACTIVATE SINGLE ENGLISH
 		processEnglishSingle();
@@ -128,35 +168,6 @@ $(function () {
 		processFacsimileDouble();
 		return false;
 
-	});
-	/* sidenav */
-	$(sideNavArrows).click(function() {
-		console.log("I clicked the sidenav");
-		checkState();
-	});
-	$(sideNavOption).click(function() {
-		$(this).siblings().removeClass('sidenav--is-active'); // remove bkg highlight from all li
-		$(this).addClass('sidenav--is-active'); // add bkg highlight to currently selected li
-	// 	if($(this).children("a").attr("href")===("#motto")) {
-	// 		$('section.section__motto').siblings().removeClass('jumplink--kludge');
-	// 		$('section.section__motto').addClass('jumplink--kludge');
-	// 		$('.emblem').css("margin-top", "0");
-	// 		console.log("motto!");
-	// 	}
-	// 	else if($(this).children("a").attr("href")===("#image")) {
-	// 		$('.section__image').siblings().removeClass('jumplink--kludge');
-	// 		$('div.section__image').addClass('jumplink--kludge');
-	// 		console.log("image!");
-	// 	}
-	// 	else if($(this).children("a").attr("href")===("#music")) {
-	// 		console.log("music!");
-	// 	}
-	// 	else if($(this).children("a").attr("href")===("#epigram")) {
-	// 		console.log("epigram!");
-	// 	}
-	// 	else if($(this).children("a").attr("href")===("#discourse")) {
-	// 		console.log("discourse!");
-	// 	}
 	});
 	/* text switches */
 	$(leftNormalizedSwitch).click(function() { // SELECT LEFT & FULL NORMALIZED SWITCH
@@ -359,71 +370,18 @@ $(function () {
 	});
 /* FUNCTIONS */
 	function checkState() {
-		console.log("I am checking the state");
-		// if single and english are active
-		if ( $(singleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') ) {
-			showFull();
-			console.log("Single English is ACTIVE");
-		}
-		// if single and latin are active
-		else if ( $(singleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') ) {
-			showFull();
-			console.log("Single Latin is ACTIVE");
-		}
-		// if single and facsimile are active
-		else if ( $(singleViewBtn).attr('data-state')===('active') && $(facsimileSingleView).attr('data-state')===('active') ) {
-			showFacsimileFull();
-			console.log("Single Facsimile is ACTIVE");
-		}
-		// if double and SingleEnglish and DoubleEnglish are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') && $(englishDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			console.log("Single English is ACTIVE and Double English is ACTIVE");
-		}
-		// if double and SingleEnglish and DoubleLatin are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') && $(latinDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			console.log("Single English is ACTIVE and Double Latin is ACTIVE");
-		}
-		// if double and SingleEnglish and DoubleFacsimile are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(englishSingleView).attr('data-state')===('active') && $(facsimileDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			showFacsimileRight();
-			console.log("Single English is ACTIVE and Double Facsimile is ACTIVE");
-		}
-		// if double and SingleLatin and DoubleEnglish are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') && $(englishDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			console.log("Single Latin is ACTIVE and Double English is ACTIVE");
-		}
-		// if double and SingleLatin and DoubleLatin are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') && $(latinDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			console.log("Single Latin is ACTIVE and Double Latin is ACTIVE");
-		}
-		// if double and SingleLatin and DoubleFacsimile are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(latinSingleView).attr('data-state')===('active') && $(facsimileDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			showFacsimileRight();
-			console.log("Single Latin is ACTIVE and Double Facsimile is ACTIVE");
-		}
-		// if double and SingleFacsimile and DoubleEnglish are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(facsimileSingleView).attr('data-state')===('active') && $(englishDoubleView).attr('data-state')===('active') ) {
-			showHalves();
+		if ( $(layoutComparativeBtn).attr('data-state')===('active') ) {
+			showDigitalEditionRight();
 			showFacsimileLeft();
-			console.log("Single Facsimile is ACTIVE and Double English is ACTIVE");
+			console.log("Comparative Layout is ACTIVE");
 		}
-		// if double and SingleFacsimile and DoubleLatin are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(facsimileSingleView).attr('data-state')===('active') && $(latinDoubleView).attr('data-state')===('active') ) {
-			showHalves();
-			showFacsimileLeft();
-			console.log("Single Facsimile is ACTIVE and Double Latin is ACTIVE");
+		else if ( $(layoutDigitalEditionBtn).attr('data-state')===('active') ) { // if digital edition layout is active
+			showFull();
+			console.log("Digital Edition Layout is ACTIVE");
 		}
-		// if double and SingleFacsimile and DoubleFacsimile are active
-		else if ( $(doubleViewBtn).attr('data-state')===('active') && $(facsimileSingleView).attr('data-state')===('active') && $(facsimileDoubleView).attr('data-state')===('active') ) {
-			showHalves();
+		else if ( $(layoutBookBtn).attr('data-state')===('active') ) { // if book is active
 			showFacsimileFull();
-			console.log("Single Facsimile is ACTIVE and Double Facsimile is ACTIVE");
+			console.log("Book Layout is ACTIVE");
 		}
 		else {
 			console.log("NONE OF THE STATES APPLY!!!");
@@ -454,55 +412,62 @@ $(function () {
 		var myTest = $(singleViewBtn).attr('data-state');
 		console.log("my new data state is " + myTest);
 	}
-	function isActiveSingle() { // when single view is selected, reveal comparative view switch but hide comparative nav
-		if( $(singleViewBtn).hasClass('is-hidden') ) {
-
-		}
-		else {
-			$(singleViewBtn).addClass('is-hidden'); // hide single view btn
-			$(doubleViewBtn).removeClass('is-hidden'); // reveal comparative view btn
-			$(doubleNav).addClass('is-hidden'); // hide last 3 language options for comparative view
-		}
-	}
-	function isActiveDouble() { // when comparative view is selected, reveal single view switch and reveal comparative nav
-		if( $(doubleViewBtn).hasClass('is-hidden') ) {
-
-		}
-		else {
-			$(doubleViewBtn).addClass('is-hidden'); // hide comparative view btn
-			$(singleViewBtn).removeClass('is-hidden'); // reveal single view btn
-			$(doubleNav).removeClass('is-hidden'); // reveal last 3 language options for comparative view
-		}
-	}
 	function onLoad() {
-		sideNavSetNum();
 		checkState();
 	}
-	function processComparativeView() {
-		isActiveDouble();// reveal single view btn and hide comparative view btn
-		doubleData = 'active';
-		$(doubleViewBtn).attr('data-state','active'); // make comparative view state active
-		singleData = 'inactive';
-		$(singleViewBtn).attr('data-state','inactive'); // make single view state inactive
-		$(sideNav).addClass('is-hidden'); // hide sidenav in comparative view
-		checkState(); // check state of all subnav options to reveal correct panels/languages
+	function processEnglishOriginal() {
+		if ( $(languageEnglishOriginal).attr("data-state")===("active") ) {
+
+		}
+		else if ( $(languageEnglishOriginal).attr("data-state")===("inactive") ) {
+			$(languageEnglishOriginal).attr('data-state','active');
+		}
+		checkState();
 	}
-	function processSingleView() {
-		isActiveSingle();// reveal comparative view btn and hide single view btn
-		singleData = 'active';
-		$(singleViewBtn).attr('data-state', 'active'); // make single view state active
-		doubleData = 'inactive';
-		$(doubleViewBtn).attr('data-state', 'inactive'); // make comparative view state inactive
-		$(sideNav).removeClass('is-hidden'); // show sidenav in single view
-		checkState(); // check state of all subnav options to reveal correct panels/languages
+	function processEnglishNormalized() {
+		if ( $(languageEnglishNormalized).attr("data-state")===("active") ) {
+
+		}
+		else if ( $(languageEnglishNormalized).attr("data-state")===("inactive") ) {
+			$(languageEnglishNormalized).attr('data-state','active');
+		}
+		checkState();
 	}
+	function processLatinOriginal() {
+		if ( $(languageLatinOriginal).attr("data-state")===("active") ) {
+
+		}
+		else if ( $(languageLatinOriginal).attr("data-state")===("inactive") ) {
+			$(languageLatinOriginal).attr('data-state','active');
+		}
+		checkState();
+	}
+	function processLatinRegularized() {
+		if ( $(languageLatinRegularized).attr("data-state")===("active") ) {
+
+		}
+		else if ( $(languageLatinRegularized).attr("data-state")===("inactive") ) {
+			$(languageLatinRegularized).attr('data-state','active');
+		}
+		checkState();
+	}
+	function processGerman() {
+		if ( $(languageEGerman.attr("data-state")===("active") ) {
+
+		}
+		else if ( $(languageGerman).attr("data-state")===("inactive") ) {
+			$(languageGerman).attr('data-state','active');
+		}
+		checkState();
+	}
+
 	function processEnglishDouble() {
 		if ($(englishDoubleView).attr("data-state")===("active")) {
 
 			
 		}
 		else if ($(englishDoubleView).attr("data-state")===("inactive")) {
-			$(doubleNav).attr('data-state','inactive');
+			// $(doubleNav).attr('data-state','inactive');
 			$(englishDoubleView).attr('data-state','active');
 		}
 		checkState();
@@ -513,7 +478,7 @@ $(function () {
 
 		}
 		else {
-			$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
+			// $(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
 			$(englishDoubleView).addClass('is-active'); // highlight selected view option in nav
 		}
 	}
@@ -523,7 +488,7 @@ $(function () {
 			
 		}
 		else if ($(englishSingleView).attr("data-state")===("inactive")) {
-			$(singleNav).attr('data-state','inactive');
+			// $(singleNav).attr('data-state','inactive');
 			$(englishSingleView).attr('data-state','active');
 		}
 		checkState();
@@ -534,7 +499,7 @@ $(function () {
 
 		}
 		else {
-			$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
+			// $(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
 			$(englishSingleView).addClass('is-active'); // highlight selected view option in single nav
 		}
 	}
@@ -543,7 +508,7 @@ $(function () {
 			
 		}
 		else if ($(facsimileDoubleView).attr("data-state")===("inactive")) {
-			$(doubleNav).attr('data-state','inactive');
+			// $(doubleNav).attr('data-state','inactive');
 			$(facsimileDoubleView).attr('data-state','active');
 		}
 		checkState();		
@@ -551,7 +516,7 @@ $(function () {
 
 		}
 		else { 
-			$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
+			// $(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
 			$(facsimileDoubleView).addClass('is-active'); // highlight selected view option in nav
 		}
 	}
@@ -560,7 +525,7 @@ $(function () {
 			
 		}
 		else if ($(facsimileSingleView).attr("data-state")===("inactive")) {
-			$(singleNav).attr('data-state','inactive');
+			// $(singleNav).attr('data-state','inactive');
 			$(facsimileSingleView).attr('data-state','active');
 		}
 		checkState();
@@ -568,7 +533,7 @@ $(function () {
 
 		}
 		else {
-			$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
+			// $(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
 			$(facsimileSingleView).addClass('is-active'); // highlight selected view option in nav
 		}
 	}
@@ -578,7 +543,7 @@ $(function () {
 			
 		}
 		else if ($(latinDoubleView).attr("data-state")===("inactive")) {
-			$(doubleNav).attr('data-state','inactive');
+			// $(doubleNav).attr('data-state','inactive');
 			$(latinDoubleView).attr('data-state','active');
 		}
 		checkState();
@@ -588,7 +553,7 @@ $(function () {
 
 		}
 		else {
-			$(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
+			// $(doubleNav).removeClass('is-active'); // remove highlight from other options in double nav
 			$(latinDoubleView).addClass('is-active'); // highlight selected view option in nav
 		}
 	}
@@ -598,7 +563,7 @@ $(function () {
 			
 		}
 		else if ($(latinSingleView).attr("data-state")===("inactive")) {
-			$(singleNav).attr('data-state','inactive');
+			// $(singleNav).attr('data-state','inactive');
 			$(latinSingleView).attr('data-state','active');
 		}
 		checkState();
@@ -608,7 +573,7 @@ $(function () {
 
 		}
 		else {
-			$(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
+			// $(singleNav).removeClass('is-active'); // remove highlight from other options in single nav
 			$(latinSingleView).addClass('is-active'); // highlight selected view option in single nav
 		}
 	}
@@ -628,32 +593,23 @@ $(function () {
 		$(sectionFullLeft).removeClass('panel--left');
 		$(sectionFull).removeClass('is-hidden');
 		$(sectionFullRight).addClass('is-hidden');
+		console.log("THIS IS HAPPENING");
 	}
-	function resetLanguagesOnLeft() {		
-		$(singleTranslation).addClass('is-hidden'); // hide full-width/left-half english text
-		$(singleOriginal).addClass('is-hidden'); // hide full-width/left-half original language text
-	}
-	function resetLanguagesOnRight() {
-		$(doubleTranslation).addClass('is-hidden'); // hide all english text in right half
-		$(doubleOriginal).addClass('is-hidden'); // hide all latin/german text in right half
-	}
-	function showHalves() {
+	// function resetLanguagesOnLeft() {		
+	// 	$(singleTranslation).addClass('is-hidden'); // hide full-width/left-half english text
+	// 	$(singleOriginal).addClass('is-hidden'); // hide full-width/left-half original language text
+	// }
+	// function resetLanguagesOnRight() {
+	// 	$(doubleTranslation).addClass('is-hidden'); // hide all english text in right half
+	// 	$(doubleOriginal).addClass('is-hidden'); // hide all latin/german text in right half
+	// }
+	function showDigitalEditionRight() {
 		// console.log("I am in showHalves()");
 		resetFacsimile();
 		$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
 		$(sectionSingle).addClass('panel--left');
 		$(sectionDouble).removeClass('is-hidden');
 		$(sectionFullRight).addClass('is-hidden');
-	}
-	function showHalvesSplit() {
-		// console.log("I am in showHalvesSplit()");
-		resetFacsimile();
-		$(sectionSingle).removeClass('panel--full'); // switch from full to left and right halves
-		$(sectionSingle).addClass('panel--left'); // assign left half to single
-		$(sectionDouble).removeClass('is-hidden'); // show left half
-		$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel name)
-		$(sectionFull).removeClass('panel--full'); // rename full panel step 2 (remove full panel name)
-		$(sectionFullRight).removeClass('is-hidden'); // show right half
 	}
 	function showFacsimileFull() {
 		// console.log("I am in showFacsimileFull()");
@@ -681,32 +637,13 @@ $(function () {
 		$(sectionFacsimile).removeClass(gridRight); // remove facsimile from right grid columns
 		$(sectionFacsimile).addClass(gridLeft); // add facsimile to left grid columns
 		$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
-		$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel name)
+		$(sectionFull).addClass('panel--right'); // rename full panel step 1 (add right panel name)
 		$(sectionFull).removeClass('panel--full'); // rename full panel step 2 (remove full panel name)
 		$(sectionFullRight).removeClass('is-hidden');  // show right half
-		$(sectionSingle).addClass('is-hidden'); // hide full/left panel wrapper
-		$(sectionFullLeft).addClass('is-hidden'); // hide full/left panel content
+		$(sectionSingle).removeClass('is-hidden'); // hide full/right panel wrapper
+		// $(sectionFullLeft).addClass('is-hidden'); // hide full/left panel content
 		$(imageSectionRight).removeClass('panel--left'); // kludge to show right image
 		$(imageSectionRight).removeClass('is-hidden'); // kludge to show right image
-	}
-	function showFacsimileRight() {
-		// console.log("I am in showFacsimileRight()");
-		$(sectionMusic).removeClass('is-hidden'); // reveal music
-		$(sectionMusic).addClass(gridLeft); // place music on left half of grid
-		$(sectionMusic).removeClass(gridRight); // remove music from right half of grid
-		$(sectionImage).removeClass('is-hidden'); // reveal image
-		$(sectionImage).addClass(gridLeft); // place image on left half of grid
-		$(sectionImage).removeClass(gridRight); // remove image from right half of grid
-		$(facsimileFull).addClass(gridHalf); // make facsimile half width (required because of fixed position in grid)
-		$(sectionFacsimile).removeClass(gridLeft); // remove facsimile from left grid columns
-		$(sectionFacsimile).addClass(gridRight); // add facsimile to right grid columns
-		$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
-		$(sectionFull).addClass('panel--left'); // rename full panel step 1 (add left panel class)
-		$(sectionFull).removeClass('panel--full'); // rename full panel step 1 (add left panel class)
-		$(sectionFullLeft).removeClass('is-hidden'); // show left half
-		$(sectionDouble).addClass('is-hidden'); // hide right panel wrapper
-		$(sectionFullRight).addClass('is-hidden'); // hide right panel content
-
 	}
 	function showFull() {
 		// console.log("I am in showFull()");
@@ -750,44 +687,44 @@ $(function () {
 		$(musicSideNav).siblings().removeClass('sidenav--is-active');
 		$(musicSideNav).addClass('sidenav--is-active');
 	}
-	function sideNavSetNum() {
-		if (dataID === 1) {
-			$(prevBtn).addClass('is-hidden'); // do not display previous button on first emblem
-			$(nextBtn).removeClass('is-hidden'); // display next button
-			$(nextBtn).attr("href", "author-epigram.html"); // update the next button to link to the next emblem
-			$(emblemNumTextArea).text("Frontispiece"); // update the emblem title to reflect the current emblem number
-		}
-		else if (dataID === 2) {
-			$(prevBtn).attr("href", "frontispiece.html"); // update the previous button to link to the previous emblem
-			$(nextBtn).attr("href", "dedication.html"); // update the next button to link to the next emblem
-			$(emblemNumTextArea).text("Author's Epigram"); // update the emblem title to reflect the current emblem number	
-		}
-		else if (dataID === 3) {
-			$(prevBtn).attr("href", "author-epigram.html"); // update the previous button to link to the previous emblem
-			$(nextBtn).attr("href", "preface.html"); // update the next button to link to the next emblem
-			$(emblemNumTextArea).text("Dedication"); // update the emblem title to reflect the current emblem number
-		}
-		else if (dataID === 4) {
-			$(prevBtn).attr("href", "dedication.html"); // update the previous button to link to the previous emblem
-			$(nextBtn).attr("href", "emblem01.html"); // update the next button to link to the next emblem
-			$(emblemNumTextArea).text("Preface"); // update the emblem title to reflect the current emblem number
-		}
-		else if (dataID === 5) {
-			$(prevBtn).attr("href", "preface.html"); // update the previous button to link to the previous emblem
-			$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
-			$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-		}
-		else if (dataID > 5 && dataID < 55) {
-			$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
-			$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
-			$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-		}
-		else if (dataID === 55) {
-			$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
-			$(nextBtn).addClass('is-hidden'); // do not display next button
-			$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-		}	
-	}
+	// function sideNavSetNum() {
+	// 	if (dataID === 1) {
+	// 		$(prevBtn).addClass('is-hidden'); // do not display previous button on first emblem
+	// 		$(nextBtn).removeClass('is-hidden'); // display next button
+	// 		$(nextBtn).attr("href", "author-epigram.html"); // update the next button to link to the next emblem
+	// 		$(emblemNumTextArea).text("Frontispiece"); // update the emblem title to reflect the current emblem number
+	// 	}
+	// 	else if (dataID === 2) {
+	// 		$(prevBtn).attr("href", "frontispiece.html"); // update the previous button to link to the previous emblem
+	// 		$(nextBtn).attr("href", "dedication.html"); // update the next button to link to the next emblem
+	// 		$(emblemNumTextArea).text("Author's Epigram"); // update the emblem title to reflect the current emblem number	
+	// 	}
+	// 	else if (dataID === 3) {
+	// 		$(prevBtn).attr("href", "author-epigram.html"); // update the previous button to link to the previous emblem
+	// 		$(nextBtn).attr("href", "preface.html"); // update the next button to link to the next emblem
+	// 		$(emblemNumTextArea).text("Dedication"); // update the emblem title to reflect the current emblem number
+	// 	}
+	// 	else if (dataID === 4) {
+	// 		$(prevBtn).attr("href", "dedication.html"); // update the previous button to link to the previous emblem
+	// 		$(nextBtn).attr("href", "emblem01.html"); // update the next button to link to the next emblem
+	// 		$(emblemNumTextArea).text("Preface"); // update the emblem title to reflect the current emblem number
+	// 	}
+	// 	else if (dataID === 5) {
+	// 		$(prevBtn).attr("href", "preface.html"); // update the previous button to link to the previous emblem
+	// 		$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
+	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
+	// 	}
+	// 	else if (dataID > 5 && dataID < 55) {
+	// 		$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
+	// 		$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
+	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
+	// 	}
+	// 	else if (dataID === 55) {
+	// 		$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
+	// 		$(nextBtn).addClass('is-hidden'); // do not display next button
+	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
+	// 	}	
+	// }
 		
 
 	/*** MOTTO WAYPOINT ***/
