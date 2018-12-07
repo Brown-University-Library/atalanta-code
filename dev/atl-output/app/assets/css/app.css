@@ -226,6 +226,15 @@ button {
 		flex-direction: column;
 		height: 7rem;
 	}*/
+  /*	select#layout,
+	select#language {
+		background-color: $white;
+		border-radius: 0;
+		font-size: 1rem;
+		height: 2.5rem;
+		margin-top: .75rem;
+		width: 20rem;
+	}*/
   /*	.ui-state-active,
 	.ui-widget-content .ui-state-active,
 	.ui-widget-header .ui-state-active,
@@ -244,21 +253,19 @@ a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover { background: red;}*/ }
   .subnav-v3 form {
-    padding-left: 2rem;
     position: fixed;
-    width: 50vw; }
+    width: calc(50vw - 2rem); }
+  .subnav-v3 form:nth-of-type(1) {
+    left: 0;
+    padding-left: 2rem; }
+  .subnav-v3 form:nth-of-type(2) {
+    padding-right: 2rem;
+    right: 0; }
   .subnav-v3 label {
     color: #fff;
     display: block;
     display: none;
     margin: 1rem 0; }
-  .subnav-v3 select#layout {
-    background-color: #fff;
-    border-radius: 0;
-    font-size: 1rem;
-    height: 2.5rem;
-    margin-top: .75rem;
-    width: 20rem; }
   .subnav-v3 .ui-icon-background,
   .subnav-v3 .ui-state-active .ui-icon-background {
     border: #003eff;
@@ -291,48 +298,56 @@ option {
   width: 2rem !important;
   /*	float: left !important;*/ }
 
-.ui-selectmenu-icon {
-  background: pink !important; }
-
-#layout-button {
+#layout-button,
+#language-button {
+  background-color: #fff;
+  border-radius: 0;
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-  #layout-button .ui-selectmenu-icon {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 1rem;
+  height: 2rem;
+  margin-top: .75rem;
+  width: 15rem; }
+  #layout-button .ui-selectmenu-icon,
+  #language-button .ui-selectmenu-icon {
+    background: pink !important;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    outline: 1px solid red;
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
     -ms-flex-order: 2;
     order: 2; }
-  #layout-button .ui-selectmenu-text {
+  #layout-button .ui-selectmenu-text,
+  #language-button .ui-selectmenu-text {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    /*		align-items: flex-start;
-		justify-content: center;
-		vertical-align: center;*/
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
     -ms-flex-order: 1;
-    order: 1;
-    /*		height: 2rem;*/
-    /*		outline: 1px solid red;*/
-    padding-top: .375rem; }
+    order: 1; }
 
+#language-button {
+  float: right; }
+
+/*	#language-button {
+		display: flex;
+		align-items: flex-end;
+		outline: 5px solid red;
+	}*/
 /*! Lity - v2.3.1 - 2018-04-20
 * http://sorgalla.com/lity/
 * Copyright (c) 2015-2018 Jan Sorgalla; Licensed MIT */

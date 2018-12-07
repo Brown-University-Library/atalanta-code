@@ -1,11 +1,11 @@
 $(function () {
 /* VARIABLES */
 	/* emblem nav */
-	var languageEnglishOrigBtn = 'li.dropdown--language:nth-of-type(1)';
-	var languageEnglishNormBtn = 'li.dropdown--language:nth-of-type(2)';
-	var languageLatinOrigBtn = 'li.dropdown--language:nth-of-type(3)';
-	var languageLatinRegBtn = 'li.dropdown--language:nth-of-type(4)';
-	var languageGermanBtn = 'li.dropdown--language:nth-of-type(5)';
+	var languageEnglishOrigBtn = 'option.dropdown--language:nth-of-type(1)';
+	var languageEnglishNormBtn = 'option.dropdown--language:nth-of-type(2)';
+	var languageLatinOrigBtn = 'option.dropdown--language:nth-of-type(3)';
+	var languageLatinRegBtn = 'option.dropdown--language:nth-of-type(4)';
+	var languageGermanBtn = 'option.dropdown--language:nth-of-type(5)';
 	var layoutComparativeBtn = 'option.dropdown--layout:nth-of-type(1)';
 	var layoutDigitalEditionBtn = 'option.dropdown--layout:nth-of-type(2)';
 	var layoutBookBtn = 'option.dropdown--layout:nth-of-type(3)';
@@ -63,146 +63,103 @@ $(function () {
 	onLoad(); // DISPLAY EMBLEM MENU AND DEFAULT OPTIONS ON PAGE LOAD
 
 /* EVENTS */
-	/* layout buttons */
-	// $('#layout').selectmenu({
-	// 	change: function( event, data )
-	// 	{
-	// 		if( data===1 ) {
-	// 			console.log("1");
-	// 		}
-	// 		else if( data===2 ) {
-	// 			console.log("2");
-	// 		}
-	// 	}
-	// })
 
-// 	$("#layout").change(function() {
-//   		console.log("I clicked on the layout menu");
-// });
-// function myFunction(value) {
-// 	var values = {
-// 		'1': function() {
-// 			console.log("1");
-// 		},
-// 		'2': function() {
-// 			console.log("2");
-// 		},
-// 		'3': function() {
-// 			console.log("3");
-// 		}
-// 	};
-// 	return(values[value])();
-
-// }
-
-function myFunction(value) {
-	var values = {
-		'1': function() {
-			console.log("1");
-			selectLayoutComparative();
-			checkState();
-		},
-		'2': function() {
-			console.log("2");
-					selectLayoutDigitalEdition();
-		checkState();
-		},
-		'3': function() {
-			console.log("3");
-					selectLayoutBook();
-		checkState();
-		}
-	};
-	return(values[value])();
-}
-$("#layout").selectmenu({
-  change: function(event, ui) {}
-});
+// $(".ui-selectmenu-text")
+	/* layout menu */
+	$("#layout").selectmenu({
+	  change: function(event, ui) {}
+	});	
+	$( "#layout" ).on( "selectmenuchange", function( event, ui ) {
+	  selectLayout(ui.item.value);
+	});
+	/* language menu */
+	$("#language").selectmenu({
+	  change: function(event, ui) {}
+	});	
+	$("#language").on( "selectmenuchange", function( event, ui ) {
+	  selectLanguage(ui.item.value);
+	});
 	
-$( "#layout" ).on( "selectmenuchange", function( event, ui ) {
-  myFunction(ui.item.value);
-});
+	// $(layoutComparativeBtn).click(function() { // COMPARATIVE LAYOUT SELECTED
+	// 	selectLayoutComparative();
+	// 	checkState();
+	// 	return false;
+	// });
+	// $(layoutDigitalEditionBtn).click(function() { // DIGITAL EDITION LAYOUT SELECTED
+	// 	selectLayoutDigitalEdition();
+	// 	checkState();
+	// 	return false;
+	// });
+	// $(layoutBookBtn).click(function() { // BOOK LAYOUT SELECTED
+	// 	selectLayoutBook();
+	// 	checkState();
+	// 	return false;
+	// });
+	// /* language buttons */
+	// $(languageEnglishOrigBtn).click(function() { // ENGLISH ORIGINAL TEXT SELECTED
+	// 	if( $(languageEnglishOrigBtn).attr('data-language') === 'active' ) {
+	// 	}
+	// 	else if ( $(languageEnglishOrigBtn).attr('data-language') === 'inactive' ) {
+	// 		selectLangEnglishOrig();
+	// 		checkState();
+	// 	}
+	// 	else {
+	// 		console.log("ERROR, no language is selected");
+	// 	}
+	// 	return false;
+	// });
+	// $(languageEnglishNormBtn).click(function() { // ENGLISH NORMALIZED TEXT SELECTED
+	// 	if( $(languageEnglishNormBtn).attr('data-language') === 'active' ) {
 
-	$(layoutComparativeBtn).click(function() { // COMPARATIVE LAYOUT SELECTED
-		selectLayoutComparative();
-		checkState();
-		return false;
-	});
-	$(layoutDigitalEditionBtn).click(function() { // DIGITAL EDITION LAYOUT SELECTED
-		selectLayoutDigitalEdition();
-		checkState();
-		return false;
-	});
-	$(layoutBookBtn).click(function() { // BOOK LAYOUT SELECTED
-		selectLayoutBook();
-		checkState();
-		return false;
-	});
-	/* language buttons */
-	$(languageEnglishOrigBtn).click(function() { // ENGLISH ORIGINAL TEXT SELECTED
-		if( $(languageEnglishOrigBtn).attr('data-language') === 'active' ) {
-		}
-		else if ( $(languageEnglishOrigBtn).attr('data-language') === 'inactive' ) {
-			selectLangEnglishOrig();
-			checkState();
-		}
-		else {
-			console.log("ERROR, no language is selected");
-		}
-		return false;
-	});
-	$(languageEnglishNormBtn).click(function() { // ENGLISH NORMALIZED TEXT SELECTED
-		if( $(languageEnglishNormBtn).attr('data-language') === 'active' ) {
+	// 	}
+	// 	else if ( $(languageEnglishNormBtn).attr('data-language') === 'inactive' ) {
+	// 		selectLangEnglishNorm();
+	// 		checkState();
+	// 	}
+	// 	else {
+	// 		console.log("ERROR, no language is selected");
+	// 	}
+	// 	return false;
+	// });
+	// $(languageLatinOrigBtn).click(function() { // LATIN ORIGINAL TEXT SELECTED
+	// 	if( $(languageLatinOrigBtn).attr('data-language') === 'active' ) {
 
-		}
-		else if ( $(languageEnglishNormBtn).attr('data-language') === 'inactive' ) {
-			selectLangEnglishNorm();
-			checkState();
-		}
-		else {
-			console.log("ERROR, no language is selected");
-		}
-		return false;
-	});
-	$(languageLatinOrigBtn).click(function() { // LATIN ORIGINAL TEXT SELECTED
-		if( $(languageLatinOrigBtn).attr('data-language') === 'active' ) {
+	// 	}
+	// 	else if ( $(languageLatinOrigBtn).attr('data-language') === 'inactive' ) {
+	// 		selectLangLatinOrig();
+	// 		checkState();
+	// 	}
+	// 	else {
+	// 		console.log("ERROR, no language is selected");
+	// 	}
+	// 	return false;
+	// });
+	// $(languageLatinRegBtn).click(function() { // LATIN REGULARIZED TEXT SELECTED
+	// 	if( $(languageLatinRegBtn).attr('data-language') === 'active' ) {
 
-		}
-		else if ( $(languageLatinOrigBtn).attr('data-language') === 'inactive' ) {
-			selectLangLatinOrig();
-			checkState();
-		}
-		else {
-			console.log("ERROR, no language is selected");
-		}
-		return false;
-	});
-	$(languageLatinRegBtn).click(function() { // LATIN REGULARIZED TEXT SELECTED
-		if( $(languageLatinRegBtn).attr('data-language') === 'active' ) {
+	// 	}
+	// 	else if ( $(languageLatinRegBtn).attr('data-language') === 'inactive' ) {
+	// 		selectLangLatinReg();
+	// 		checkState();
+	// 	}
+	// 	else {
+	// 		console.log("ERROR, no language is selected");
+	// 	}
+	// 	return false;
+	// });
+	// $(languageGermanBtn).click(function() { // GERMAN TEXT SELECTED
+	// 	if( $(languageGermanBtn).attr('data-language') === 'active' ) {
 
-		}
-		else if ( $(languageLatinRegBtn).attr('data-language') === 'inactive' ) {
-			selectLangLatinReg();
-			checkState();
-		}
-		else {
-			console.log("ERROR, no language is selected");
-		}
-		return false;
-	});
-	$(languageGermanBtn).click(function() { // GERMAN TEXT SELECTED
-		if( $(languageGermanBtn).attr('data-language') === 'active' ) {
-
-		}
-		else if ( $(languageGermanBtn).attr('data-language') === 'inactive' ) {
-			selectLangGerman();
-			checkState();
-		}
-		else {
-			console.log("ERROR, no language is selected");
-		}
-		return false;
-	});
+	// 	}
+	// 	else if ( $(languageGermanBtn).attr('data-language') === 'inactive' ) {
+	// 		selectLangGerman();
+	// 		checkState();
+	// 	}
+	// 	else {
+	// 		console.log("ERROR, no language is selected");
+	// 	}
+	// 	return false;
+	// });
 
 
 
@@ -273,6 +230,11 @@ $( "#layout" ).on( "selectmenuchange", function( event, ui ) {
 		$(languageEnglishNormBtn).siblings().attr('data-language', 'inactive'); // make non English Normalized Buttons inactive
 		switchTextToEnglishNorm();
 	}
+	function selectLangGerman() {
+		$(languageGermanBtn).attr('data-language', 'active'); // make Latin German Button active
+		$(languageGermanBtn).siblings().attr('data-language', 'inactive'); // make non Latin German Buttons inactive
+		switchTextToGerman();
+	}
 	function selectLangLatinOrig() {
 		$(languageLatinOrigBtn).attr('data-language', 'active'); // make Latin Original Button active
 		$(languageLatinOrigBtn).siblings().attr('data-language', 'inactive'); // make non Latin Original Buttons inactive
@@ -283,12 +245,57 @@ $( "#layout" ).on( "selectmenuchange", function( event, ui ) {
 		$(languageLatinRegBtn).siblings().attr('data-language', 'inactive'); // make non Latin Regularized Buttons inactive
 		switchTextToLatinReg();
 	}
-	function selectLangGerman() {
-		$(languageGermanBtn).attr('data-language', 'active'); // make Latin German Button active
-		$(languageGermanBtn).siblings().attr('data-language', 'inactive'); // make non Latin German Buttons inactive
-		switchTextToGerman();
+	function selectLanguage(value) {
+		var values = {
+			'english_original': function() {
+				// console.log("english_original");
+				selectLangEnglishOrig();
+				// checkState();
+			},
+			'english_modern': function() {
+				// console.log("english_modern");
+				selectLangEnglishNorm();
+				// checkState();
+			},
+			'latin_original': function() {
+				// console.log("latin_original");
+				selectLangLatinOrig();
+				// checkState();
+			},
+			'latin_normal': function() {
+				// console.log("latin_normal");
+				selectLangLatinReg();
+				// checkState();
+			},
+			'german': function() {
+				// console.log("german");
+				selectLangGerman();
+				// checkState();
+			}
+		};
+		return(values[value])();
 	}
 	/* page layout */
+	function selectLayout(value) {
+		var values = {
+			'compare': function() {
+				// console.log("compare");
+				selectLayoutComparative();
+				checkState();
+			},
+			'digital-edition': function() {
+				// console.log("digital-edition");
+				selectLayoutDigitalEdition();
+				checkState();
+			},
+			'zooming-image': function() {
+				// console.log("zooming-image");
+				selectLayoutBook();
+				checkState();
+			}
+		};
+		return(values[value])();
+	}
 	function selectLayoutComparative() {
 		$(layoutComparativeBtn).attr('data-layout', 'active'); // make comparative layout state active
 		$(layoutComparativeBtn).siblings().attr('data-layout', 'inactive'); // make digital edition and book layout states inactive
