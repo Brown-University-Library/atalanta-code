@@ -1160,7 +1160,7 @@ main.emblem-page {
   padding: 0 0 .125rem 0; }
 
 .emblem {
-  margin-top: 4.5rem;
+  margin-top: 3.125rem;
   display: grid;
   grid-area: 1 / 1 / 2 / 5;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1241,7 +1241,7 @@ main.emblem-page {
   grid-row-start: 1;
   grid-row-end: 2;
   /*	grid-area: 1 / 1 / 1 / 5;*/
-  margin-top: 4.5rem;
+  margin-top: 3.125rem;
   /*padding-top: $subnav-h;*/ }
 
 .frontmatter section.facsimile, .frontmatter section._facsimile {
@@ -1370,10 +1370,10 @@ main.emblem-page {
   .emblem__image--cropped {
     width: 100%; }
   main.emblem-page {
-    padding: 0 0 4.5rem 0; }
+    padding: 0 0 3.125rem 0; }
   .section__facsimile {
     margin-top: 0;
-    margin-bottom: 4.5rem; } }
+    margin-bottom: 3.125rem; } }
 
 /*
  * CSS for Transcription of English translation of Atalanta. Designed mostly for proofreading.
@@ -2431,7 +2431,6 @@ main.home {
   main.home .intro-text a {
     grid-area: 2 / 2 / 3 / 12; } }
 
-/*@import 'subnav';*/
 /* PRODUCTION */
 /* TESTING */
 /* DEVELOPMENT */
@@ -2460,67 +2459,110 @@ main.home {
 /*$text-body: #4C4C4C;*/
 .subnav-v3 {
   background-color: #333333;
-  /*	display: flex;
-	align-items: center;
-	justify-content: center;*/
   display: block;
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
-  height: 4.5rem;
+  height: 3.125rem;
   width: 100%;
   position: fixed;
   z-index: 100; }
+  .subnav-v3 form {
+    position: fixed;
+    width: calc(50vw - 2rem); }
+  .subnav-v3 form:nth-of-type(1) {
+    left: 0;
+    padding-left: .125rem; }
+  .subnav-v3 form:nth-of-type(2) {
+    padding-right: .125rem;
+    right: 0; }
+  .subnav-v3 label {
+    color: #fff;
+    display: block;
+    display: none;
+    margin: 1rem 0; }
 
-.subnav-v3__emblem-view, .subnav-v3__emblem-language {
-  display: inline-block;
-  height: 4.5rem;
-  position: absolute; }
-  .subnav-v3__emblem-view button, .subnav-v3__emblem-language button {
-    background-color: #ffcd61;
-    color: #333;
-    font: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
-    font-size: 1rem;
-    height: 4.5rem;
-    text-align: left;
-    padding: 0 1rem;
-    width: 300px; }
-  .subnav-v3__emblem-view ul, .subnav-v3__emblem-language ul {
-    background-color: #fff;
-    height: auto;
-    width: 300px; }
-  .subnav-v3__emblem-view li, .subnav-v3__emblem-language li {
-    outline: 1px solid orange;
-    height: 40px; }
-    .subnav-v3__emblem-view li a, .subnav-v3__emblem-language li a {
-      color: #333;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      font-size: 1rem;
-      height: 40px;
-      padding: 0 1rem;
-      width: calc( 100% - 2rem); }
-  .subnav-v3__emblem-view li:hover a, .subnav-v3__emblem-view li:focus a, .subnav-v3__emblem-language li:hover a, .subnav-v3__emblem-language li:focus a {
-    background-color: #ffcd61;
-    -webkit-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s; }
+.emblem-body .ui-selectmenu-menu {
+  position: fixed !important; }
 
-.subnav-v3__emblem-view {
-  left: 0; }
+.emblem-body .ui-selectmenu-menu.ui-selectmenu-open ul li div {
+  height: 3rem;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
-.subnav-v3__emblem-language {
-  right: 0; }
+.emblem-body .ui-selectmenu-menu.ui-selectmenu-open ul li div.ui-state-active {
+  background: #FFB000;
+  border: none;
+  color: #333; }
 
-.subnav-v3 > ul {
-  background-color: pink;
-  width: 15vw; }
+.emblem-body #language-button {
+  float: right; }
+
+.emblem-body #layout-button,
+.emblem-body #language-button {
+  background-color: #FFB000;
+  border: none;
+  border-radius: 0;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 1rem;
+  height: 2rem;
+  margin-top: .125rem;
+  width: 15rem; }
+
+.emblem-body #layout-button:active,
+.emblem-body #language-button:active {
+  color: rgba(33, 33, 33, 0.4); }
+
+.emblem-body .ui-icon {
+  height: 2rem !important;
+  width: 2rem !important; }
+
+.emblem-body .ui-selectmenu-icon {
+  /*		background: pink !important;*/
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2; }
+
+.emblem-body .ui-selectmenu-icon.custom-icon {
+  background-image: url("../icons/icon_dropdown-arrow.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  -webkit-transform: rotate(-90deg) scale(0.7) translateX(20%);
+  -ms-transform: rotate(-90deg) scale(0.7) translateX(20%);
+  transform: rotate(-90deg) scale(0.7) translateX(20%); }
+
+.emblem-body .ui-selectmenu-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1; }
 
 body {
   /* background-color: #ddd; */
@@ -2987,8 +3029,8 @@ button.lity-close {
   position: fixed; }
 
 #openseadragon-wrapper {
-  height: calc(100vh - 7.625rem);
-  /* currently, the combined height of the topnav and subnav is 7.625rem */
+  height: calc(100vh - 6.25rem);
+  /* currently, the combined height of the topnav and subnav is 6.25rem */
   background-color: #222; }
 
 #openseadragon-wrapper canvas {
@@ -3180,6 +3222,7 @@ button.lity-close {
   width: auto; }
 
 .facsimile--full.grid--half #previous, .facsimile--full.grid--half #next {
+  display: none;
   height: 5rem;
   width: 3rem; }
 
@@ -3196,6 +3239,9 @@ button.lity-close {
 
 .section__facsimile.grid--left .facsimile--full.grid--half #next {
   right: 50%; }
+
+.section__facsimile.grid--left .facsimile--full.grid--half #tools {
+  display: none; }
 
 /***     Breakpoints     ***/
 /* small  -  mobile */

@@ -2,7 +2,7 @@
 @import 'utilities';
 
 #openseadragon-wrapper {
-	height: calc(100vh - 7.625rem); /* currently, the combined height of the topnav and subnav is 7.625rem */
+	height: calc(100vh - 6.25rem); /* currently, the combined height of the topnav and subnav is 6.25rem */
 	background-color: $black;
 }
 #openseadragon-wrapper canvas {
@@ -153,6 +153,7 @@
 		width: auto;
 	}
 	#previous, #next {
+		display: none;
 		height: 5rem;
 		width: 3rem;
 	}
@@ -172,6 +173,9 @@
 	#next {
 		right: 50%;
 	}
+}
+.section__facsimile.grid--left .facsimile--full.grid--half #tools {
+	display: none;
 }
 /***     Breakpoints     ***/
 /* small  -  mobile */

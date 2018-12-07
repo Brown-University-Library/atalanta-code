@@ -3,9 +3,6 @@
 
 .subnav-v3 {
 	background-color: $gray-dark;
-/*	display: flex;
-	align-items: center;
-	justify-content: center;*/
 	display: block;
 	font-family: $body-font_emblem;
 	font-size: 1.125rem;
@@ -14,61 +11,84 @@
 	width: 100%;
 	position: fixed;
 	z-index: 100;
+	form {
+		position: fixed;
+		width: calc(50vw - 2rem);
+	}
+	form:nth-of-type(1) {
+		left: 0;
+		padding-left: .125rem;
+	}
+	form:nth-of-type(2) {
+		padding-right: .125rem;
+		right: 0;
+	}
+	label {
+		color: $white;
+		display: block;
+		display: none;
+		margin: 1rem 0;
+	}
 }
-.subnav-v3__emblem-view, .subnav-v3__emblem-language {
-	display: inline-block;
-	height: $subnav-h;
-	position: absolute;
-	button {
-		background-color: $orange-yellow_brighter;
-		color: $text-body;
-		font: $body-font_emblem;
-		font-size: 1rem;
-		height: $subnav-h;
-		text-align: left;
-		padding: 0 1rem;
-		width: 300px;
+.emblem-body {
+	.ui-selectmenu-menu {
+		position: fixed !important;
 	}
-	ul {
-		background-color: $white;
-		height: auto;
-		width: 300px;
-
-	}
-	li {
-		outline: 1px solid orange;
-		height: 40px;
-
-		a {
-			color: $text-body;
+	.ui-selectmenu-menu.ui-selectmenu-open ul {
+		li div {
+			height: 3rem;
+			font-size: 1rem;
 			display: flex;
 			align-items: center;
-			font-size: 1rem;
-			height: 40px;
-			padding: 0 1rem;
-			width: calc( 100% - 2rem);
-			
+		}
+		li div.ui-state-active {
+			background: $orange-yellow;
+			border: none;
+			color: $text_body;
 		}
 	}
-	li:hover, li:focus {
-		a {
-			background-color: $orange-yellow_brighter;
-			transition: .2s;
-		}
+	#language-button {
+		float: right;
 	}
-}
-.subnav-v3__emblem-view {
-	left: 0;
-}
-.subnav-v3__emblem-language {
-	right: 0;
+	#layout-button, 
+	#language-button {
+		background-color: $orange-yellow;
+		border: none;
+		border-radius: 0;
+		display: flex !important;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 1rem;
+		height: 2rem;
+		margin-top: .125rem;
+		width: 15rem;
+	}
+	#layout-button:active,
+	#language-button:active {
+		color: $black_transparent;
+	}
+	.ui-icon {
+		height: 2rem !important;
+		width: 2rem !important;
+	}
+	.ui-selectmenu-icon {
+	/*		background: pink !important;*/
+		display: flex;
+		order: 2;
+	}
+	.ui-selectmenu-icon.custom-icon {
+		background-image: url('../icons/icon_dropdown-arrow.svg') !important;
+		background-repeat: no-repeat !important;
+		background-size: contain !important;
+		transform: rotate(-90deg) scale(0.7) translateX(20%);
+	}
+	.ui-selectmenu-text {
+		display: flex;
+		order: 1;
+	}
 }
 
 
-.subnav-v3 > ul {
-	background-color: pink;
-	width: 15vw;
-}
 
 
 
