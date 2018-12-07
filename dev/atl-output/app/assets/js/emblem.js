@@ -22,7 +22,6 @@ $(function () {
 	var englishDoubleData;
 	var latinDoubleData;
 	var facsimileDoubleData;
-	
 	/* emblem languages */
 	var textTranslated = '.section--single div.translation';
 	var textOriginal = '.section--single div.original';
