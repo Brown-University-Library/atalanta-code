@@ -93,9 +93,15 @@ option {
 	margin-top: .75rem;
 	width: 15rem;
 	.ui-selectmenu-icon {
-		background: pink !important;
+/*		background: pink !important;*/
 		display: flex;
 		order: 2;
+	}
+	.ui-selectmenu-icon.custom-icon {
+		background-image: url('../icons/icon_dropdown-arrow.svg') !important;
+		background-repeat: no-repeat !important;
+		background-size: contain !important;
+		transform: rotate(-90deg) scale(0.7) translateX(20%);
 	}
 	.ui-selectmenu-text {
 		display: flex;

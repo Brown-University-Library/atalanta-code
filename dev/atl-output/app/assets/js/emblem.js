@@ -63,18 +63,18 @@ $(function () {
 	onLoad(); // DISPLAY EMBLEM MENU AND DEFAULT OPTIONS ON PAGE LOAD
 
 /* EVENTS */
-
-// $(".ui-selectmenu-text")
 	/* layout menu */
 	$("#layout").selectmenu({
-	  change: function(event, ui) {}
+	  change: function(event, ui) {},
+	  icons: { button: "custom-icon" }
 	});	
 	$( "#layout" ).on( "selectmenuchange", function( event, ui ) {
 	  selectLayout(ui.item.value);
 	});
 	/* language menu */
 	$("#language").selectmenu({
-	  change: function(event, ui) {}
+	  change: function(event, ui) {},
+	  icons: { button: "custom-icon" }
 	});	
 	$("#language").on( "selectmenuchange", function( event, ui ) {
 	  selectLanguage(ui.item.value);

@@ -320,7 +320,7 @@ option {
   width: 15rem; }
   #layout-button .ui-selectmenu-icon,
   #language-button .ui-selectmenu-icon {
-    background: pink !important;
+    /*		background: pink !important;*/
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -329,6 +329,14 @@ option {
     -webkit-order: 2;
     -ms-flex-order: 2;
     order: 2; }
+  #layout-button .ui-selectmenu-icon.custom-icon,
+  #language-button .ui-selectmenu-icon.custom-icon {
+    background-image: url("../icons/icon_dropdown-arrow.svg") !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    -webkit-transform: rotate(-90deg) scale(0.7) translateX(20%);
+    -ms-transform: rotate(-90deg) scale(0.7) translateX(20%);
+    transform: rotate(-90deg) scale(0.7) translateX(20%); }
   #layout-button .ui-selectmenu-text,
   #language-button .ui-selectmenu-text {
     display: -webkit-box;
