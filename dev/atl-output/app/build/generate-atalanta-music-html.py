@@ -4,7 +4,7 @@ import re
 OUTPUT_TO_SCREEN = False # To write to files (in the current directory), set to False
 
 
-MP3_DIRECTORY = '/Users/patrickrashleigh/Documents/Atalanta/development/atalanta-media/audio/emblem-music/mp3-new'
+MP3_DIRECTORY = '/Users/crystalbrusch/Documents/atalanta/development/atalanta-media/audio/emblem-music/mp3-new'
 MP3_FILES = os.listdir(MP3_DIRECTORY)
 BPM_RE = re.compile(r'^\d+-[AHP]-(\d+)bpm-(?:Dry|Reverb)[_\-\d]*\.mp3$')
 OUTPUT_FILENAME_SUFFIX = '_emblem-music.inc'

@@ -1,14 +1,13 @@
 
-    <div class="ata-music" data-mei="mei/Fuga 44.xml">
-      <div class="atalanta-notation-viz atalanta-notation-viz-cmn"></div>
-      <div class="atalanta-notation-viz atalanta-notation-viz-audio" 
-            data-tempo="None">
-            <div class="ata-audio-track" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
-                data-mp3="audio/44-P-Nonebpm-Dry.mp3" data-reverb-mp3="audio/44-P-Nonebpm-Reverb.mp3"></div>
-            <div class="ata-audio-track" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
-                data-mp3="audio/44-A-Nonebpm-Dry.mp3" data-reverb-mp3="audio/44-A-Nonebpm-Reverb.mp3"></div>
-            <div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
-                data-mp3="audio/44-H-Nonebpm-Dry.mp3" data-reverb-mp3="audio/44-H-Nonebpm-Reverb.mp3"></div>
+    <div class="ata-music" data-mei="../data/mei/Fuga 44.xml">
+      <div class="ata-viz-cmn"></div>
+      <div class="ata-viz-audio" data-tempo="54">
+        <div class="ata-audio-track" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
+            data-mp3="../assets/audio/44-P-54bpm-Dry.mp3" data-reverb-mp3="../assets/audio/44-P-54bpm-Reverb.mp3"></div>
+        <div class="ata-audio-track" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
+            data-mp3="../assets/audio/44-H-54bpm-Dry.mp3" data-reverb-mp3="../assets/audio/44-H-54bpm-Reverb.mp3"></div>
+        <div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
+            data-mp3="../assets/audio/44-A-54bpm-Dry.mp3" data-reverb-mp3="../assets/audio/44-A-54bpm-Reverb.mp3"></div>
       </div>
-      <div class="atalanta-notation-viz atalanta-notation-viz-pianoroll"></div>
+      <div class="ata-viz-pianoroll modal"></div>
     </div>
