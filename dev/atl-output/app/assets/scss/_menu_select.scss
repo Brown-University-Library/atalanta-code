@@ -1,6 +1,7 @@
 .subnav-v3 {
 	form {
 		padding-left: 2rem;
+		position: fixed;
 		width: 50vw;
 	}
 /*	fieldset {
@@ -24,8 +25,75 @@
 		margin-top: .75rem;
 		width: 20rem;
 	}
+/*	.ui-state-active,
+	.ui-widget-content .ui-state-active,
+	.ui-widget-header .ui-state-active,
+	a.ui-button:active,
+	.ui-button:active,
+	.ui-button.ui-state-active:hover {
+		border: 3px solid green;
+		background: pink !important;
+		color: white;
+	}
+
+	.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover { background: red;}*/
+
+.ui-icon-background,
+.ui-state-active .ui-icon-background {
+	border: #003eff;
+	background-color: #ffffff;
+}
 }
 
 option {
 	width: 500px;
 }
+.ui-selectmenu-menu {
+	position: fixed !important;
+}
+.ui-selectmenu-menu.ui-selectmenu-open ul {
+	li div {
+		height: 3rem;
+		font-size: 1rem;
+		display: flex;
+		align-items: center;
+	}
+	li div.ui-state-active {
+		border: none;
+		background: green;
+	}
+}
+.ui-icon {
+	height: 2rem !important;
+	width: 2rem !important;
+/*	float: left !important;*/
+}
+.ui-selectmenu-icon {
+	background: pink !important;
+}
+#layout-button {
+	display: flex !important;
+	align-items: flex-start;
+	justify-content: center;
+	.ui-selectmenu-icon {
+		display: flex;
+		outline: 1px solid red;
+		order: 2;
+	}
+	.ui-selectmenu-text {
+		display: flex;
+		/*		align-items: flex-start;
+		justify-content: center;
+		vertical-align: center;*/
+		order: 1;
+/*		height: 2rem;*/
+/*		outline: 1px solid red;*/
+		padding-top: .375rem;
+	}
+}
+

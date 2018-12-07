@@ -75,6 +75,54 @@ $(function () {
 	// 		}
 	// 	}
 	// })
+
+// 	$("#layout").change(function() {
+//   		console.log("I clicked on the layout menu");
+// });
+// function myFunction(value) {
+// 	var values = {
+// 		'1': function() {
+// 			console.log("1");
+// 		},
+// 		'2': function() {
+// 			console.log("2");
+// 		},
+// 		'3': function() {
+// 			console.log("3");
+// 		}
+// 	};
+// 	return(values[value])();
+
+// }
+
+function myFunction(value) {
+	var values = {
+		'1': function() {
+			console.log("1");
+			selectLayoutComparative();
+			checkState();
+		},
+		'2': function() {
+			console.log("2");
+					selectLayoutDigitalEdition();
+		checkState();
+		},
+		'3': function() {
+			console.log("3");
+					selectLayoutBook();
+		checkState();
+		}
+	};
+	return(values[value])();
+}
+$("#layout").selectmenu({
+  change: function(event, ui) {}
+});
+	
+$( "#layout" ).on( "selectmenuchange", function( event, ui ) {
+  myFunction(ui.item.value);
+});
+
 	$(layoutComparativeBtn).click(function() { // COMPARATIVE LAYOUT SELECTED
 		selectLayoutComparative();
 		checkState();

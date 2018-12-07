@@ -225,9 +225,27 @@ button {
 		justify-content: center;
 		flex-direction: column;
 		height: 7rem;
-	}*/ }
+	}*/
+  /*	.ui-state-active,
+	.ui-widget-content .ui-state-active,
+	.ui-widget-header .ui-state-active,
+	a.ui-button:active,
+	.ui-button:active,
+	.ui-button.ui-state-active:hover {
+		border: 3px solid green;
+		background: pink !important;
+		color: white;
+	}
+
+	.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover { background: red;}*/ }
   .subnav-v3 form {
     padding-left: 2rem;
+    position: fixed;
     width: 50vw; }
   .subnav-v3 label {
     color: #fff;
@@ -241,9 +259,79 @@ button {
     height: 2.5rem;
     margin-top: .75rem;
     width: 20rem; }
+  .subnav-v3 .ui-icon-background,
+  .subnav-v3 .ui-state-active .ui-icon-background {
+    border: #003eff;
+    background-color: #ffffff; }
 
 option {
   width: 500px; }
+
+.ui-selectmenu-menu {
+  position: fixed !important; }
+
+.ui-selectmenu-menu.ui-selectmenu-open ul li div {
+  height: 3rem;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.ui-selectmenu-menu.ui-selectmenu-open ul li div.ui-state-active {
+  border: none;
+  background: green; }
+
+.ui-icon {
+  height: 2rem !important;
+  width: 2rem !important;
+  /*	float: left !important;*/ }
+
+.ui-selectmenu-icon {
+  background: pink !important; }
+
+#layout-button {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  #layout-button .ui-selectmenu-icon {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    outline: 1px solid red;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2; }
+  #layout-button .ui-selectmenu-text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /*		align-items: flex-start;
+		justify-content: center;
+		vertical-align: center;*/
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    /*		height: 2rem;*/
+    /*		outline: 1px solid red;*/
+    padding-top: .375rem; }
 
 /*! Lity - v2.3.1 - 2018-04-20
 * http://sorgalla.com/lity/
