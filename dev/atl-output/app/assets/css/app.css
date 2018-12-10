@@ -2419,7 +2419,8 @@ section.section__frontispiece.panel--right div.original ._frontispiece--latin.ed
   position: fixed; }
 
 main.home {
-  background-color: #F1F1F1;
+  background-color: #dc4928;
+  color: #fff;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto; }
@@ -2545,24 +2546,28 @@ main.home {
     margin-top: .375rem; }
   main.home .intro-text {
     display: grid;
-    grid-gap: 2rem;
+    grid-gap: 1rem;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     grid-area: 3 / 1 / 4 / 13;
-    margin-top: -17vh;
+    height: 40vh;
+    margin-top: -5rem;
     padding: 3rem 0 6rem 0; }
   main.home .intro-text p {
     font-size: 1.375rem;
     grid-area: 1 / 4 / 2 / 10;
     line-height: 2rem; }
   main.home .intro-text a {
-    color: #dc4928;
+    color: #333;
     font-size: 1.125rem;
     font-weight: 600;
     grid-area: 2 / 4 / 3 / 10;
     text-decoration: none; }
   main.home .intro-text a:hover {
-    color: #ba4221; }
+    color: #fff;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
 
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -3481,6 +3486,71 @@ button.lity-close {
       -webkit-transform: scale(0.5);
       -ms-transform: scale(0.5);
       transform: scale(0.5); } }
+
+/* PRODUCTION */
+/* TESTING */
+/* DEVELOPMENT */
+/*$gray-medium: #989898;*/
+/*$orange-red_darker: hsla(11, 72%, 42%, 1);*/
+/*$text-body: #4C4C4C;*/
+/* PRODUCTION */
+/* TESTING */
+/* DEVELOPMENT */
+/*$gray-medium: #989898;*/
+/*$orange-red_darker: hsla(11, 72%, 42%, 1);*/
+/*$text-body: #4C4C4C;*/
+.is-active {
+  background-color: #ffcd61 !important; }
+  .is-active a {
+    color: #222 !important; }
+
+.is-hidden {
+  display: none !important; }
+
+.is-selected {
+  border-bottom: 3px solid rgba(13, 0, 77, 0.9); }
+
+.is-sticky {
+  position: fixed; }
+
+footer {
+  background-color: #333333;
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 600;
+  height: 20vh;
+  padding: 3rem 6rem;
+  width: calc(100vw - 12rem); }
+  footer .footer--main {
+    width: calc(60vw - 6rem); }
+  footer .footer--branding {
+    width: calc(40vw - 6rem); }
+  footer ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 20vh; }
+  footer li {
+    line-height: 2.8; }
+  footer li a {
+    color: #fff;
+    text-transform: uppercase; }
+  footer li a:hover {
+    color: #ffcd61; }
 
 /***     Breakpoints     ***/
 /* large  -  desktop */
