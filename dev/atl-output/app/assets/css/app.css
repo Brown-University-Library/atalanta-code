@@ -2833,6 +2833,7 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     grid-area: 1 / 2 / 2 / 12;
+    padding: 0;
     z-index: 10;
     /* music page SVG overlaps with transport controls */ }
   .section__music ._music .ata-music .ata-viz-cmn {
@@ -2848,6 +2849,16 @@ body {
   .section__music ._music .ata-music .ata-viz-pianoroll {
     grid-area: 4 / 2 / 5 / 12;
     overflow: hidden; }
+
+.section__music.grid--right ._music .ata-music .transport {
+  grid-area: 1 / 1 / 2 / 13; }
+
+.section__music.grid--right ._music .ata-music .atalanta-notation__switch a {
+  font-size: 1rem;
+  height: 8rem;
+  margin-left: 2rem;
+  padding: .5rem 1rem;
+  width: 8rem; }
 
 .ata-viz-pianoroll.modal {
   /* the lity modal takes the element out of the document flow while active */
