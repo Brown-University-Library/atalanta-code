@@ -2393,11 +2393,11 @@ main.home {
     background-clip: padding-box;
     background-color: #FFB000;
     background-image: url("../../assets/img/default/bkg_homepage.png");
-    background-position: center;
+    background-position: 85% center;
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: 1 / 2 / 2 / 3;
-    margin: -5.5rem 0 5.5rem 0; }
+    margin: -15rem 0 5.5rem 0; }
   main.home nav.home {
     background-color: #333333;
     color: #fff;
