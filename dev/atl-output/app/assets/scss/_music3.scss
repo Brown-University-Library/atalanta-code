@@ -46,6 +46,22 @@ body {
 		overflow: hidden;
 	}
 }
+.ata-viz-pianoroll .transport {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	.atalanta-notation-start {
+		background-image: url('../icons/icon_play-outline.svg');
+	}
+	.atalanta-notation-start:hover {
+		background-image: url('../icons/icon_play-filled.svg');
+		transition: .3s;
+	}
+	.atalanta-notation-stop {
+		background-image: url('../icons/icon_pause-outline.svg');
+	}
+}
 .atalanta-notation__switch {
 
 }
@@ -124,7 +140,8 @@ body {
 .ata-music .transport .atalanta-notation-stop.playing {
 	background-image: url('../icons/icon_pause-outline.svg');
 }
-.ata-music .transport .atalanta-notation-stop.playing:hover, .ata-music .transport .atalanta-notation-stop.playing:focus {
+.ata-music .transport .atalanta-notation-stop.playing:hover, 
+.ata-music .transport .atalanta-notation-stop.playing:focus {
 	background-image: url('../icons/icon_pause-filled.svg');
 	transition: .3s;
 }
@@ -132,7 +149,8 @@ body {
 .atalanta-notation-mute-track {
 	background-image: url('../icons/icon_profile-volume-outline.svg');
 }
-.atalanta-notation-mute-track:hover, .atalanta-notation-mute-track:focus {
+.atalanta-notation-mute-track:hover, 
+.atalanta-notation-mute-track:focus {
 	background-image: url('../icons/icon_profile-volume-filled.svg');
 	transition: .3s;
 }
@@ -159,6 +177,9 @@ body {
 button.lity-close {
 /*	top: 5.5rem;
 	right: 3rem;*/
+}
+.lity {
+	background-color: $white;
 }
 .lity-container {
 	min-width: 100vw;
