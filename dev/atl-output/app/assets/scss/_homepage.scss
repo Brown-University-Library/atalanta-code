@@ -41,11 +41,17 @@ main.home {
     width: 50%;
   }
   .hero-image {
+    background-clip: padding-box;
     background-color: $orange-yellow;
+    background-image: url("../../assets/img/default/bkg_homepage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-area: 1 / 2 / 2 / 3;
+    margin: -5.5rem 0 5.5rem 0;
   }
   nav.home {
-    background-color: $gray-dark_transparent;
+    background-color: $gray-dark;
     color: #fff;
     grid-area: 2 / 1 / 3 / 13;
     min-height: 20vh;
