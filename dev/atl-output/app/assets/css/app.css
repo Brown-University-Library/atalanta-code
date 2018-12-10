@@ -2550,8 +2550,7 @@ main.home {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     grid-area: 3 / 1 / 4 / 13;
-    height: 40vh;
-    margin-top: -5rem;
+    height: 45vh;
     padding: 3rem 0 6rem 0; }
   main.home .intro-text p {
     font-size: 1.375rem;
@@ -2571,6 +2570,9 @@ main.home {
 
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  main.home,
+  main.home .hero {
+    background-color: transparent; }
   main.home .hero-text {
     -webkit-transform: translate(6vw, 0);
     -ms-transform: translate(6vw, 0);
@@ -2582,10 +2584,32 @@ main.home {
     width: 130%; }
   main.home .hero-text h5 {
     width: 80%; }
+  main.home .hero-image {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    margin-left: -40vh; }
+  main.home .intro-text {
+    background-color: #dc4928; }
   main.home .intro-text p {
     grid-area: 1 / 2 / 2 / 12; }
   main.home .intro-text a {
-    grid-area: 2 / 2 / 3 / 12; } }
+    grid-area: 2 / 2 / 3 / 12; }
+  nav.home ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 60vh; }
+  nav.home ul li a {
+    padding-top: 0; }
+  .intro-text {
+    padding: 1rem 2rem;
+    height: 90vh; }
+  .intro-text p {
+    margin-top: -8rem; }
+  .intro-text a {
+    margin-top: 1rem; } }
 
 body {
   /* background-color: #ddd; */
@@ -3545,12 +3569,26 @@ footer {
     justify-content: center;
     height: 20vh; }
   footer li {
-    line-height: 2.8; }
+    line-height: 1.5;
+    padding: .5rem; }
   footer li a {
     color: #fff;
     text-transform: uppercase; }
   footer li a:hover {
     color: #ffcd61; }
+
+/* BREAKPOINTS */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  footer {
+    height: 30vh;
+    padding: 2rem;
+    width: calc(100vw - 4rem); }
+    footer .footer--main {
+      width: calc(60vw - 2rem); }
+    footer .footer--branding {
+      width: calc(40vw - 2rem); }
+    footer ul {
+      height: 30vh; } }
 
 /***     Breakpoints     ***/
 /* large  -  desktop */

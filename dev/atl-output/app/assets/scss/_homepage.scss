@@ -104,8 +104,7 @@ main.home {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     grid-area: 3 / 1 / 4 / 13;
-    height: 40vh;
-    margin-top: -5rem;
+    height: 45vh;
     padding: 3rem 0 6rem 0;
   }
   .intro-text p {
@@ -128,6 +127,10 @@ main.home {
 
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  main.home,
+  main.home .hero {
+    background-color: transparent;
+  }
   main.home .hero-text {
     transform: translate(6vw, 0);
     padding-bottom: 20vh;
@@ -140,10 +143,34 @@ main.home {
   main.home .hero-text h5 {
     width: 80%;
   }
+  main.home .hero-image {
+    filter: grayscale(100%);
+    margin-left: -40vh;
+  }
+  main.home .intro-text {
+    background-color: $red;
+  }
   main.home .intro-text p {
     grid-area: 1 / 2 / 2 / 12;
   }
   main.home .intro-text a {
     grid-area: 2 / 2 / 3 / 12;
+  }
+  nav.home ul {
+    flex-direction: column;
+    height: 60vh;
+  }
+  nav.home ul li a {
+    padding-top: 0;
+  }
+  .intro-text {
+    padding: 1rem 2rem;
+    height: 90vh;
+  }
+  .intro-text p {
+    margin-top: -8rem;
+  }
+  .intro-text a {
+    margin-top: 1rem;
   }
 }
