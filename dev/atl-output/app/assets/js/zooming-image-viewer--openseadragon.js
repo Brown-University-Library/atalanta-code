@@ -1,5 +1,6 @@
 $(function () {
 	var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
+	var myEmblemPage = $('.emblem-page').data("page");
 	var startPage // the number of first page of current emblem
 	// var pageTiles = "../data/json/page-view.json"; // file path to page view dzi files
 	// var bookTiles = "../data/json/book-view.json"; // file path to book view dzi files
@@ -12,41 +13,114 @@ $(function () {
 		bookView = bookView.responseJSON; // get array of book view URLS
 	})
 	.done(function() { // after all the image tiles are ready, display zoomable pages
+		getData();
+	});
+
+	function getData() {
+		myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
+		myEmblemPage = $('.emblem-page').data("page");
 		if (myEmblemDataNum <= 3) { // handle front matter (not in sets of 4)
 			startPage = myEmblemDataNum + 7;
+			showPages();
 		}
 		else if (myEmblemDataNum === 4) { // handle front matter: preface
 			startPage = myEmblemDataNum + 9;
+			showPages();
 		}
-		else if (myEmblemDataNum > 4) { // handle emblems (in sets of 4)
+		else if ( (myEmblemDataNum > 4) && (myEmblemPage === 'a') ) {
 			startPage = myEmblemDataNum * 4 - 1;
+			showPages();
 		}
-		var atalantaZoom = pageView; // current view mode (initially pageView)
-		var viewer = OpenSeadragon({
-			id: "openseadragon-wrapper",
-			tileSources: [atalantaZoom],
-			initialPage: startPage, // start viewer at first page of current emblem
-			autoResize: true, /***/
-            showHomeControl: false, /***/
-			animationTime: 1.5, /* smoother zooming with easing */
-			sequenceMode: true, /* group an array of images */
-			showReferenceStrip: false, /* thumbnails */
-			// referenceStripScroll: 'vertical',
-			showNavigator: false, /* mini map */
-			toolbar: "openseadragon-wrapper",
-			zoomInButton: "zoom-in",
-			zoomOutButton: "zoom-out",
-			homeButton: "home",
-			fullPageButton: "full-page",
-			previousButton: "previous",
-			nextButton: "next"
-		});
-		console.log(viewer);
+		else if ( (myEmblemDataNum > 4) && (myEmblemPage === 'b') ) {
+			startPage = myEmblemDataNum * 4;
+			showPages();
+		}
+		else if ( (myEmblemDataNum > 4) && (myEmblemPage === 'c') ) {
+			startPage = myEmblemDataNum * 4 + 1;
+			showPages();
+		}
+		else if ( (myEmblemDataNum > 4) && (myEmblemPage === 'd') ) {
+			startPage = myEmblemDataNum * 4 + 2;
+			showPages();
+		}
+		// else if (myEmblemDataNum > 4) { // handle emblems (in sets of 4)
+		// 	startPage = myEmblemDataNum * 4 - 1;
+		// }
+}
+
+function showPages() {
+	var atalantaZoom = pageView; // current view mode (initially pageView)
+	var viewer = OpenSeadragon({
+		id: "openseadragon-wrapper",
+		tileSources: [atalantaZoom],
+		initialPage: startPage, // start viewer at first page of current emblem
+		autoResize: true, /***/
+        showHomeControl: false, /***/
+		animationTime: 1.5, /* smoother zooming with easing */
+		sequenceMode: true, /* group an array of images */
+		showReferenceStrip: false, /* thumbnails */
+		// referenceStripScroll: 'vertical',
+		showNavigator: false, /* mini map */
+		toolbar: "openseadragon-wrapper",
+		zoomInButton: "zoom-in",
+		zoomOutButton: "zoom-out",
+		homeButton: "home",
+		fullPageButton: "full-page",
+		previousButton: "previous",
+		nextButton: "next"
+	});
+	console.log(viewer);	
+}
+
+
+		// if (myEmblemDataNum <= 3) { // handle front matter (not in sets of 4)
+		// 	startPage = myEmblemDataNum + 7;
+		// }
+		// else if (myEmblemDataNum === 4) { // handle front matter: preface
+		// 	startPage = myEmblemDataNum + 9;
+		// }
+		// else if ( (myEmblemDataNum > 4) && (myEmblemPage === 'a') ) {
+		// 	startPage = myEmblemDataNum * 4 - 1;
+		// }
+		// else if ( (myEmblemDataNum > 4) && (myEmblemPage === 'b') ) {
+		// 	startPage = myEmblemDataNum * 4;
+		// }
+		// else if ( (myEmblemDataNum > 4) && (myEmblemPage === 'c') ) {
+		// 	startPage = myEmblemDataNum * 4 + 1;
+		// }
+		// else if ( (myEmblemDataNum > 4) && (myEmblemPage === 'd') ) {
+		// 	startPage = myEmblemDataNum * 4 + 2;
+		// }
+		// // else if (myEmblemDataNum > 4) { // handle emblems (in sets of 4)
+		// // 	startPage = myEmblemDataNum * 4 - 1;
+		// // }
+		// var atalantaZoom = pageView; // current view mode (initially pageView)
+		// var viewer = OpenSeadragon({
+		// 	id: "openseadragon-wrapper",
+		// 	tileSources: [atalantaZoom],
+		// 	initialPage: startPage, // start viewer at first page of current emblem
+		// 	autoResize: true, /***/
+  //           showHomeControl: false, /***/
+		// 	animationTime: 1.5, /* smoother zooming with easing */
+		// 	sequenceMode: true, /* group an array of images */
+		// 	showReferenceStrip: false, /* thumbnails */
+		// 	// referenceStripScroll: 'vertical',
+		// 	showNavigator: false, /* mini map */
+		// 	toolbar: "openseadragon-wrapper",
+		// 	zoomInButton: "zoom-in",
+		// 	zoomOutButton: "zoom-out",
+		// 	homeButton: "home",
+		// 	fullPageButton: "full-page",
+		// 	previousButton: "previous",
+		// 	nextButton: "next"
+		// });
+		// console.log(viewer);
 		
 		// var pageIndex = this.pageIndex - (this.mode === 'book' ? 2 : 1);
 		// 	if (this.mode === 'book')
-	});
+	// });
 });
+
 
 
 
