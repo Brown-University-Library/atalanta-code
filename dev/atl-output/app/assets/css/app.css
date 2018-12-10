@@ -2345,7 +2345,7 @@ main.home {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto; }
   main.home .hero {
-    background-color: #DC4929;
+    background-color: #dc4928;
     color: #fff;
     display: grid;
     grid-template-columns: 3fr 4fr;
@@ -2391,7 +2391,7 @@ main.home {
     width: 50%; }
   main.home .hero-image {
     background-clip: padding-box;
-    background-color: #FFB000;
+    background-color: #ffae00;
     background-image: url("../../assets/img/default/bkg_homepage.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -2448,7 +2448,7 @@ main.home {
     text-align: center;
     width: 100%; }
   main.home ul li a {
-    color: #FFB000;
+    color: #ffae00;
     font-size: 1rem;
     letter-spacing: .125rem;
     line-height: 1.25rem;
@@ -2477,13 +2477,13 @@ main.home {
     grid-area: 1 / 4 / 2 / 10;
     line-height: 2rem; }
   main.home .intro-text a {
-    color: #DC4929;
+    color: #dc4928;
     font-size: 1.125rem;
     font-weight: 600;
     grid-area: 2 / 4 / 3 / 10;
     text-decoration: none; }
   main.home .intro-text a:hover {
-    color: #B84121; }
+    color: #ba4221; }
 
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {
