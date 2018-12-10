@@ -29,10 +29,19 @@ main.emblem-page {
 	background-color: hsla(0, 0%, 100%, .97);
 	padding: 1rem 0;
 }
-.emblem section.section__motto, .emblem .section__image section, .emblem section.section__epigram {
+.emblem section.section__motto, 
+.emblem .section__image section, 
+.emblem section.section__epigram {
 	background-color: $gray-dark_transparent;
 	color: $white;
 }
+.emblem section.section__motto.panel--right,
+.emblem .section__image.grid--right section,
+.emblem section.section__epigram.panel--right {
+	background-color: $white;
+	color: $text_body;
+}
+
 .panel--full {
 	grid-column-start: 1;
 	grid-column-end: 5;
@@ -79,6 +88,9 @@ main.emblem-page {
 .emblem section.section__epigram {
 	padding: 3rem 0 6rem 0;
 }
+.emblem section.section__epigram.panel--right {
+	padding: 0 0 9rem 0;
+}
 .section__discourse {
 	grid-row-start: 5;
 	grid-row-end: 6;
@@ -120,7 +132,7 @@ main.emblem-page {
 	width: 50%;
 	background-color: silver;
 }
-.switch-wrapper {
+/*.switch-wrapper {
 	display: flex;
 	justify-content: center;
 	top: 0;
@@ -184,7 +196,7 @@ main.emblem-page {
 	a:hover {
 		color: $aqua;
 	}
-}
+}*/
 
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {
