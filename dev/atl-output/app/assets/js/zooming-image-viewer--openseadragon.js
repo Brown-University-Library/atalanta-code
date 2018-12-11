@@ -1,4 +1,5 @@
 $(function () {
+	var musicControlPosition = '.transport';
 	var viewer
 	var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
 	var startPage // the number of first page of current emblem
@@ -89,16 +90,20 @@ $(function () {
 		element: document.getElementById('basic-waypoint__2'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 			if(direction === 'down') { // if scrolling down the page, change zooming page to 1/4
-				viewer.goToPage(myEmblemDataNum * 4 - 1);	
+				$(musicControlPosition).removeClass('is-unstuck');
+				viewer.goToPage(myEmblemDataNum * 4 - 1);
+				$(musicControlPosition).addClass('is-stuck');
 			}
 			else if (direction === 'up') { // if scrolling back up the page
+				$(musicControlPosition).addClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4);
+				$(musicControlPosition).removeClass('is-stuck');
 			}
 			else {
 				console.log("waypoints doesn't detect a scroll direction");
 			}
 		},
-		offset: 300, // moving the trigger location from 0 at the top of the viewport
+		offset: 250, // moving the trigger location from 0 at the top of the viewport
 	})
 
 	// /*** EPIGRAM WAYPOINT ***/
@@ -107,10 +112,14 @@ $(function () {
 		element: document.getElementById('basic-waypoint__3'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 			if(direction === 'down') { // if scrolling down the page, change zooming page to 2/4 if Latin/English is active or 1/4 if German is active
-				viewer.goToPage(myEmblemDataNum * 4);	
+				$(musicControlPosition).addClass('is-unstuck');
+				viewer.goToPage(myEmblemDataNum * 4);
+				$(musicControlPosition).removeClass('is-stuck');	
 			}
 			else { // if scrolling back up the page
+				$(musicControlPosition).removeClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4 - 1);
+				$(musicControlPosition).addClass('is-stuck');
 			}
 		},
 		offset: 300, // moving the trigger location from 0 at the top of the viewport

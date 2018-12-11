@@ -1,6 +1,24 @@
 @import 'colors';
 @import 'utilities';
 
+#my-offset-debug {
+  background-color: red;
+  height: 2px;
+  width: 100vw;
+  z-index: 1000; 
+}
+.is-stuck {
+  animation: fade-in .4s ease-out;
+  background-color: $white !important;
+  padding: 1rem 0 !important;
+  position: fixed;
+  top: 6.25rem;
+  width: 50vw;
+}
+.is-unstuck {
+	animation: fade-out-in .4s ease-out;
+}
+
 #openseadragon-wrapper {
 	height: calc(100vh - 6.25rem); /* currently, the combined height of the topnav and subnav is 6.25rem */
 	background-color: $black;
