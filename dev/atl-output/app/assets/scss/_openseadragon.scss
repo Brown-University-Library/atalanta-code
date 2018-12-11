@@ -13,7 +13,10 @@
   padding: 1rem 0 !important;
   position: fixed;
   top: 6.25rem;
-  width: 50vw;
+  width: 100vw;
+}
+.grid--right .is-stuck {
+	width: 50vw;
 }
 .is-unstuck {
 	animation: fade-out-in .4s ease-out;

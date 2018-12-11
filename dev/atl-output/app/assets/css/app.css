@@ -3503,6 +3503,9 @@ button.lity-close {
   padding: 1rem 0 !important;
   position: fixed;
   top: 6.25rem;
+  width: 100vw; }
+
+.grid--right .is-stuck {
   width: 50vw; }
 
 .is-unstuck {
