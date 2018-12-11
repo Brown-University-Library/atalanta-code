@@ -1,6 +1,31 @@
 @import 'colors';
 @import 'utilities';
 
+/* sticky music player controls */
+.is-stuck {
+  animation: fade-in .4s ease-out;
+  background-color: $white !important;
+  padding: 1rem 0 !important;
+  position: fixed;
+  top: 6.25rem;
+  width: 100vw;
+}
+.grid--right .is-stuck {
+	width: 50vw;
+}
+.lity-container .transport.is-stuck {
+	outline: 5px solid red;
+	position: relative;
+	padding: 0 !important;
+	top: 0;
+	animation: none;
+	background-color: transparent !important;
+
+}
+.is-unstuck {
+	animation: fade-out-in .4s ease-out;
+}
+
 body {
 	padding: 0;
 }
@@ -171,7 +196,7 @@ body {
 }
 /* piano roll */
 .ata-viz-pianoroll.modal { /* the lity modal takes the element out of the document flow while active */
-	padding: 4rem 0rem;
+	padding-bottom: 1rem;
 	overflow: scroll;
 }
 button.lity-close {
