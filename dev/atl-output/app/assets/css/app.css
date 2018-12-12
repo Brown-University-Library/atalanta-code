@@ -1319,7 +1319,8 @@ main.emblem-page {
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 3;
-  grid-row-end: 4; }
+  grid-row-end: 4;
+  height: 100%; }
 
 .music--full {
   /*	width: 100%;*/ }
@@ -3068,30 +3069,33 @@ body {
     opacity: 1; } }
 
 /* sticky music player controls */
-.is-stuck {
+.transport.is-stuck {
   -webkit-animation: fade-in .4s ease-out;
   animation: fade-in .4s ease-out;
   background-color: #fff !important;
-  padding: 1rem 0 !important;
+  padding: 0;
   position: fixed;
   top: 6.25rem;
   width: 100vw; }
 
-.grid--right .is-stuck {
+.grid--right .transport.is-stuck {
   width: 50vw; }
 
 .lity-container .transport.is-stuck {
-  outline: 5px solid red;
-  position: relative;
-  padding: 0 !important;
-  top: 0;
+  /*	outline: 5px solid red;*/
   -webkit-animation: none;
   animation: none;
-  background-color: transparent !important; }
+  background-color: transparent !important;
+  padding: 0 !important;
+  position: relative;
+  top: 0; }
 
-.is-unstuck {
+.transport.is-unstuck {
   -webkit-animation: fade-out-in .4s ease-out;
   animation: fade-out-in .4s ease-out; }
+
+.section__music.padding-hack {
+  padding-top: calc(20vh + 1rem + 15px); }
 
 body {
   padding: 0; }
@@ -3132,14 +3136,13 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     grid-area: 1 / 2 / 2 / 12;
-    height: 25vh;
-    min-height: 25vh;
-    max-height: 40vh;
+    height: 20vh;
+    margin-bottom: 1rem;
     padding: 0;
     z-index: 10;
     /* music page SVG overlaps with transport controls */ }
   .section__music ._music .ata-music .ata-viz-cmn {
-    background-color: blue;
+    /*		background-color: blue;*/
     background: no-repeat;
     background-size: contain;
     display: grid;
@@ -3169,7 +3172,8 @@ body {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  height: 15vh; }
   .ata-viz-pianoroll .transport .atalanta-notation-start {
     background-image: url("../icons/icon_play-outline.svg"); }
   .ata-viz-pianoroll .transport .atalanta-notation-start:hover {
@@ -3498,17 +3502,17 @@ button.lity-close {
   100% {
     opacity: 1; } }
 
-.my-offset-debug {
+/*.my-offset-debug {
   background-color: red;
   height: 5px;
   width: auto;
   left: 0;
-  z-index: 10000; }
-
+  z-index: 10000; 
+}*/
 #openseadragon-wrapper {
   height: calc(100vh - 6.25rem);
   /* currently, the combined height of the topnav and subnav is 6.25rem */
-  background-color: #222; }
+  background-color: #777; }
 
 #openseadragon-wrapper canvas {
   cursor: pointer; }

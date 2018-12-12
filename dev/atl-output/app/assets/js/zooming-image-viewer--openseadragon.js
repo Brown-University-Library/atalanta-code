@@ -93,19 +93,19 @@ $(function () {
 				$(musicControlPosition).removeClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4 - 1);
 				$(musicControlPosition).addClass('is-stuck');
-				$('.section__music').css('padding-top', '25vh');
+				$('.section__music').addClass('padding-hack');
 			}
 			else if (direction === 'up') { // if scrolling back up the page
 				$(musicControlPosition).addClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4);
 				$(musicControlPosition).removeClass('is-stuck');
-				$('.section__music').css('padding-top', '0');
+				$('.section__music').removeClass('padding-hack');
 			}
 			else {
 				console.log("waypoints doesn't detect a scroll direction");
 			}
 		},
-		offset: 250, // moving the trigger location from 0 at the top of the viewport
+		offset: 100, // moving the trigger location from 0 at the top of the viewport
 	})
 
 	// /*** EPIGRAM WAYPOINT ENGLISH / LATIN ***/
@@ -117,13 +117,13 @@ $(function () {
 				$(musicControlPosition).addClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4);
 				$(musicControlPosition).removeClass('is-stuck');
-				$('.section__music').css('padding-top', '0');	
+				$('.section__music').removeClass('padding-hack');
 			}
 			else { // if scrolling back up the page
 				$(musicControlPosition).removeClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4 - 1);
 				$(musicControlPosition).addClass('is-stuck');
-				$('.section__music').css('padding-top', '25vh');
+				$('.section__music').addClass('padding-hack');
 			}
 		},
 		offset: 300, // moving the trigger location from 0 at the top of the viewport
@@ -141,7 +141,7 @@ $(function () {
 				viewer.goToPage(myEmblemDataNum * 4);
 			}
 		},
-		offset: 300, // moving the trigger location from 0 at the top of the viewport
+		offset: 280, // moving the trigger location from 0 at the top of the viewport
 	})
 
 	// /*** DISCOURSE WAYPOINT 2 ENGLISH ***/
@@ -156,7 +156,7 @@ $(function () {
 				viewer.goToPage(myEmblemDataNum * 4 + 1);
 			}
 		},
-		offset: 300, // moving the trigger location from 0 at the top of the viewport
+		offset: 500, // moving the trigger location from 0 at the top of the viewport
 	})
 })
 
