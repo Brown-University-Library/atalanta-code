@@ -37,6 +37,13 @@ $(function () {
 	var gridLeft = 'grid--left';
 	var gridRight = 'grid--right';
 
+	// var thisEmblemPage = '.emblem-page';
+	// var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
+	// var myEmblemPage = $('.emblem-page').data("page");
+	// var startPage; // the number of first page of current emblem
+	// var newEmblemPageData;
+	// var viewer;
+
 	/* emblem side nav */
 	// var sideNav = '.wrapper-sidenav';
 	// var mottoSideNav = 'ul.sidenav__options > li:nth-child(1)';
@@ -79,88 +86,6 @@ $(function () {
 	$("#language").on( "selectmenuchange", function( event, ui ) {
 	  selectLanguage(ui.item.value);
 	});
-	
-	// $(layoutComparativeBtn).click(function() { // COMPARATIVE LAYOUT SELECTED
-	// 	selectLayoutComparative();
-	// 	checkState();
-	// 	return false;
-	// });
-	// $(layoutDigitalEditionBtn).click(function() { // DIGITAL EDITION LAYOUT SELECTED
-	// 	selectLayoutDigitalEdition();
-	// 	checkState();
-	// 	return false;
-	// });
-	// $(layoutBookBtn).click(function() { // BOOK LAYOUT SELECTED
-	// 	selectLayoutBook();
-	// 	checkState();
-	// 	return false;
-	// });
-	// /* language buttons */
-	// $(languageEnglishOrigBtn).click(function() { // ENGLISH ORIGINAL TEXT SELECTED
-	// 	if( $(languageEnglishOrigBtn).attr('data-language') === 'active' ) {
-	// 	}
-	// 	else if ( $(languageEnglishOrigBtn).attr('data-language') === 'inactive' ) {
-	// 		selectLangEnglishOrig();
-	// 		checkState();
-	// 	}
-	// 	else {
-	// 		console.log("ERROR, no language is selected");
-	// 	}
-	// 	return false;
-	// });
-	// $(languageEnglishNormBtn).click(function() { // ENGLISH NORMALIZED TEXT SELECTED
-	// 	if( $(languageEnglishNormBtn).attr('data-language') === 'active' ) {
-
-	// 	}
-	// 	else if ( $(languageEnglishNormBtn).attr('data-language') === 'inactive' ) {
-	// 		selectLangEnglishNorm();
-	// 		checkState();
-	// 	}
-	// 	else {
-	// 		console.log("ERROR, no language is selected");
-	// 	}
-	// 	return false;
-	// });
-	// $(languageLatinOrigBtn).click(function() { // LATIN ORIGINAL TEXT SELECTED
-	// 	if( $(languageLatinOrigBtn).attr('data-language') === 'active' ) {
-
-	// 	}
-	// 	else if ( $(languageLatinOrigBtn).attr('data-language') === 'inactive' ) {
-	// 		selectLangLatinOrig();
-	// 		checkState();
-	// 	}
-	// 	else {
-	// 		console.log("ERROR, no language is selected");
-	// 	}
-	// 	return false;
-	// });
-	// $(languageLatinRegBtn).click(function() { // LATIN REGULARIZED TEXT SELECTED
-	// 	if( $(languageLatinRegBtn).attr('data-language') === 'active' ) {
-
-	// 	}
-	// 	else if ( $(languageLatinRegBtn).attr('data-language') === 'inactive' ) {
-	// 		selectLangLatinReg();
-	// 		checkState();
-	// 	}
-	// 	else {
-	// 		console.log("ERROR, no language is selected");
-	// 	}
-	// 	return false;
-	// });
-	// $(languageGermanBtn).click(function() { // GERMAN TEXT SELECTED
-	// 	if( $(languageGermanBtn).attr('data-language') === 'active' ) {
-
-	// 	}
-	// 	else if ( $(languageGermanBtn).attr('data-language') === 'inactive' ) {
-	// 		selectLangGerman();
-	// 		checkState();
-	// 	}
-	// 	else {
-	// 		console.log("ERROR, no language is selected");
-	// 	}
-	// 	return false;
-	// });
-
 
 
 /* FUNCTIONS */
@@ -397,31 +322,25 @@ $(function () {
 		var myTest = $(singleViewBtn).attr('data-state');
 		console.log("my new data state is " + myTest);
 	}
-	
+	// function updateEmblemPageData() {
+	// 	var thisEmblemPageData = document.querySelector('.emblem-page');
+	// 	thisEmblemPageData.setAttribute("data-page", 'c');
+	// 	console.log("this emblem page is " + thisEmblemPageData.getAttribute('data-page'));
+	// 	newEmblemPageData = thisEmblemPageData.getAttribute('data-page');
+	// 	// getData();
+	// }
+
+// 	function getData() {
+// 		var theseEmblemPageData = document.querySelector('.emblem-page');
+// 		console.log("I'm getting data");
+// 		myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
+// 		myEmblemPage = theseEmblemPageData.getAttribute("data-page");
+// 		console.log("my emblem page is" + myEmblemPage);
+// 		processMyEmblemData();	
+// }
 
 /* SIDENAV */
 //http://jennamolby.com/how-to-display-dynamic-content-on-a-page-using-url-parameters/
-	// function sideNavHighlightDiscourse() {
-	// 	$(discourseSideNav).siblings().removeClass('sidenav--is-active');
-	// 	$(discourseSideNav).addClass('sidenav--is-active');
-	// }
-	// function sideNavHighlightEpigram() {
-	// 	$(epigramSideNav).siblings().removeClass('sidenav--is-active');
-	// 	$(epigramSideNav).addClass('sidenav--is-active');
-	// }
-	// function sideNavHighlightImage() {
-	// 	$(imageSideNav).siblings().removeClass('sidenav--is-active');
-	// 	$(imageSideNav).addClass('sidenav--is-active');
-	// }
-	// function sideNavHighlightMotto() {
-	// 	$(mottoSideNav).siblings().removeClass('sidenav--is-active');
-	// 	$(mottoSideNav).addClass('sidenav--is-active');
-	// }
-
-	// function sideNavHighlightMusic() {
-	// 	$(musicSideNav).siblings().removeClass('sidenav--is-active');
-	// 	$(musicSideNav).addClass('sidenav--is-active');
-	// }
 	// function sideNavSetNum() {
 	// 	if (dataID === 1) {
 	// 		$(prevBtn).addClass('is-hidden'); // do not display previous button on first emblem
@@ -460,83 +379,4 @@ $(function () {
 	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
 	// 	}	
 	// }
-		
-
-	/*** MOTTO WAYPOINT ***/
-	// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
-	// var waypoint = new Waypoint({
-	// 	element: document.getElementById('basic-waypoint__0'), // tells waypoint which DOM element's position to observe on scroll
-	// 	handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-	// 		if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-	// 			sideNavHighlightMotto();
-	// 		}
-	// 		else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-				
-	// 		}
-	// 	},
-	// 	offset: 150, // moving the trigger location from 0 at the top of the viewport
-	// })
-
-	// /*** IMAGE WAYPOINT ***/
-	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
-	// var waypoint = new Waypoint({
-	// 	element: document.getElementById('basic-waypoint__1'), // tells waypoint which DOM element's position to observe on scroll
-	// 	handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-	// 		if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-	// 			sideNavHighlightImage();
-	// 		}
-	// 		else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-	// 			sideNavHighlightMotto();
-	// 		}
-	// 	},
-	// 	offset: 300, // moving the trigger location from 0 at the top of the viewport
-	// })
-
-	// /*** MUSIC WAYPOINT ***/
-	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
-	// var waypoint = new Waypoint({
-	// 	element: document.getElementById('basic-waypoint__2'), // tells waypoint which DOM element's position to observe on scroll
-	// 	handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-	// 		if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-	// 			sideNavHighlightMusic();
-	// 		}
-	// 		else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-	// 			sideNavHighlightImage();
-	// 		}
-	// 	},
-	// 	offset: 300, // moving the trigger location from 0 at the top of the viewport
-	// })
-
-	// /*** EPIGRAM WAYPOINT ***/
-	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
-	// var waypoint = new Waypoint({
-	// 	element: document.getElementById('basic-waypoint__3'), // tells waypoint which DOM element's position to observe on scroll
-	// 	handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-	// 		if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-	// 			sideNavHighlightEpigram();
-	// 		}
-	// 		else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-	// 			sideNavHighlightMusic();
-	// 		}
-	// 	},
-	// 	offset: 300, // moving the trigger location from 0 at the top of the viewport
-	// })
-
-	// /*** DISCOURSE WAYPOINT ***/
-	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
-	// var waypoint = new Waypoint({
-	// 	element: document.getElementById('basic-waypoint__4'), // tells waypoint which DOM element's position to observe on scroll
-	// 	handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-	// 		if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-	// 			sideNavHighlightDiscourse();
-	// 		}
-	// 		else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-	// 			sideNavHighlightEpigram();
-	// 		}
-	// 	},
-	// 	offset: 300, // moving the trigger location from 0 at the top of the viewport
-	// })
-
-
-
 });

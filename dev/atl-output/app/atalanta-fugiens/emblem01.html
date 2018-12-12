@@ -51,9 +51,9 @@
 				<fieldset>
 					<label for="layout">Select a Layout</label>
 					<select name="layout" id="layout">
-						<option selected="selected" class="dropdown--layout" data-layout="active" value="compare">Comparative Layout</option>
-						<option class="dropdown--layout" data-layout="inactive" value="digital-edition">Digital Edition Layout</option>
-						<option class="dropdown--layout" data-layout="inactive" value="zooming-image">Book Image Layout</option>
+						<option selected="selected" class="dropdown--layout" data-layout="active" value="compare">Comparative View</option>
+						<option class="dropdown--layout" data-layout="inactive" value="digital-edition">Digital Edition</option>
+						<option class="dropdown--layout" data-layout="inactive" value="zooming-image">Original</option>
 					</select>
 				</fieldset>
 			</form>
@@ -99,8 +99,9 @@
 		</div>
 		<div class="emblem">
 			<!-- Motto -->
-			<a name="motto" id="basic-waypoint__0" class="section__motto"></a>
-			<section class="section__motto section--single panel--right">
+			<a name="motto" class="section__motto"></a>
+			<div class="my-offset-debug"></div>
+			<section id="basic-waypoint__0" class="section__motto section--single panel--right">
 				<div class="translation">
 					<div class="lang--english _motto--english edition--normalized" lang="en-US">
 						<div class="title">
@@ -130,8 +131,9 @@
 				</div>
 			</section>
 			<!-- Image -->
-			<a name="image" id="basic-waypoint__1" class="section__image"></a>
-			<div class="section__image">					
+			<a name="image" class="section__image"></a>
+			<div class="my-offset-debug"></div>
+			<div id="basic-waypoint__1" class="section__image">					
 				<div class="image--full grid--right">
 					<section class="image wrapper-section section">
 							<div class="image__picture">
@@ -146,8 +148,9 @@
 				</div>
 			</div>
 			<!-- Music -->
-			<a name="music" id="basic-waypoint__2" class="section__music"></a>
-			<section class="section__music">
+			<a name="music" id="basic-waypoint__2" id="my-offset-debug" class="section__music"></a>
+			<div class="my-offset-debug"></div>
+			<section id="basic-waypoint__2" class="section__music" style="background-color:green">
 				<div class="_music music--full">
 				    <div class="ata-music" data-mei="../data/mei/Fuga 6.xml">
 				      <div class="ata-viz-cmn"></div>
@@ -164,8 +167,9 @@
     			</div>
 			</section>
 			<!-- Epigram -->
-			<a name="epigram" id="basic-waypoint__3" class="section__epigram"></a>
-			<section class="section__epigram section--single panel--right">
+			<a name="epigram" class="section__epigram"></a>
+			<div class="my-offset-debug"></div>
+			<section id="basic-waypoint__3" class="section__epigram section--single panel--right">
 				<div class="translation">
 					<div class="lang--english _epigram--english edition--normalized" lang="en-US">
 		                <div class="epigram">
@@ -211,8 +215,9 @@
 				</div>
 			</section>
 			<!-- Discourse -->
-			<a name="discourse" id="basic-waypoint__4" class="section__discourse"></a>
-			<section class="section__discourse section--single panel--right">
+			<a name="discourse" class="section__discourse"></a>
+			<div class="my-offset-debug"></div>
+			<section id="basic-waypoint__4" class="section__discourse section--single panel--right">
 				<div class="translation">
 					<div class="lang--english _discourse--english edition--normalized text" lang="en-US">
                         <div class="discourse">
@@ -255,6 +260,7 @@
                                 <span class="original"><br></span><span class="regularized"></span>head and feet: for <span class="original">hee </span><span class="regularized">he</span> is windy, and <span class="original">flyes </span><span class="regularized">flies</span> through the <span class="original">aire </span><span class="regularized">air</span> as wind <span class="original">itselfe </span><span class="regularized">itself</span>,
                                 <span class="original"><br></span><span class="regularized"></span>as is <span class="original">coḿonly </span><span class="regularized">commonly</span> and really confirmed to the damage of many men;
                             </div>
+                            <div class="my-offset-debug"></div>
                             <div class="ab" id="basic-waypoint__5">
                             	<span class="milestone">015</span><span class="milestone">e01-10</span>but car<span class="original">=<br></span>rying a white wand girt with two Serpents <span class="original">crossewise </span><span class="regularized">crosswise</span>, which can draw <span class="original">soules </span><span class="regularized">souls</span>
                             	<span class="original"><br></span><span class="regularized"></span>out of <span class="original">bodyes </span><span class="regularized">bodies</span>, and bring them <span class="original">backe </span><span class="regularized">back</span> <span class="original">againe </span><span class="regularized">again</span>, and <span class="original">doe </span><span class="regularized">do</span> many such contrary
@@ -338,7 +344,8 @@
 			                     <span class="original"><br/></span>ipse ventus, ut in communi, multorum cum damno re ipsa con<span class="original">-<br/></span>
 			                </div>
 			               	<span class="pb atalanta-fugiens">15</span>
-			               	<h3 class="title" id="basic-waypoint__5">DISCURSUS I.</h3>
+			               	<div class="my-offset-debug"></div>
+			               	<h3 class="title" id="basic-waypoint__5>DISCURSUS I.</h3>
 			               	<div class="discourse-p2">
 			                     <span class="original"><br/></span>vincitur: <span class="milestone atalanta-fugiens">e01-10</span> At quia caduceum gestet binis serpentibus transversim
 			                     <span class="original"><br/></span>cinctum, qui animas ex corporibus ducat <span class="original">&amp;</span> reducat, <span class="original">&amp;</span> multa eius<span class="original">-<br/></span>modi contraria efficiat, Philosophici Mercurii symbolum optimè
@@ -366,7 +373,6 @@
 		</div><!-- END EMBLEM -->
 	</main> <!-- END OF EMBLEM PAGE -->
 <!-- JS -->
-	<script src="../assets/js/topnav.js"></script>
 	<script src="../assets/js/notation.js"></script>
 	<script src="../assets/js/emblem.js"></script>
 	<script src="../assets/js/zooming-image-viewer--openseadragon.js"></script>

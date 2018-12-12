@@ -132,6 +132,46 @@ table {
 .is-sticky {
   position: fixed; }
 
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes fade-out-in {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-out-in {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 /* PRODUCTION */
 /* TESTING */
 /* DEVELOPMENT */
@@ -157,6 +197,26 @@ table {
 
 .is-sticky {
   position: fixed; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out-in {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 body {
   background-color: #fff;
@@ -435,6 +495,26 @@ button {
 
 .is-sticky {
   position: fixed; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out-in {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /* PRODUCTION */
 /* TESTING */
@@ -1138,6 +1218,26 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
 .is-sticky {
   position: fixed; }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out-in {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 /* PRODUCTION */
 /* TESTING */
 /* DEVELOPMENT */
@@ -1229,7 +1329,9 @@ main.emblem-page {
   grid-row-end: 5; }
 
 .emblem section.section__epigram {
-  padding: 3rem 0 6rem 0; }
+  padding: 3rem 0 6rem 0;
+  height: 100%;
+  /*	min-height: 35vh;*/ }
 
 .emblem section.section__epigram.panel--right {
   padding: 0 0 9rem 0; }
@@ -1714,6 +1816,26 @@ span.raised {
 .is-sticky {
   position: fixed; }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out-in {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 @page {
   margin-top: 0; }
 
@@ -1936,6 +2058,7 @@ span.underline2 {
 /*********** EMBLEM LAYOUT *************/
 div.translation,
 div.original {
+  height: 100%;
   margin-top: 2.5rem; }
 
 .panel--left div.translation,
@@ -1943,6 +2066,11 @@ div.original {
 .panel--right div.translation,
 .panel--right div.original {
   margin-top: 3.5rem; }
+
+.lang--english,
+.lang--german,
+.lang--latin {
+  height: 100%; }
 
 .lang--english._motto--english,
 .lang--latin._motto--latin,
@@ -2418,6 +2546,26 @@ section.section__frontispiece.panel--right div.original ._frontispiece--latin.ed
 .is-sticky {
   position: fixed; }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out-in {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 main.home {
   background-color: #F1F1F1;
   display: grid;
@@ -2740,6 +2888,26 @@ body {
 .is-sticky {
   position: fixed; }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out-in {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 /* PRODUCTION */
 /* TESTING */
 /* DEVELOPMENT */
@@ -2879,6 +3047,52 @@ body {
 .is-sticky {
   position: fixed; }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out-in {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/* sticky music player controls */
+.is-stuck {
+  -webkit-animation: fade-in .4s ease-out;
+  animation: fade-in .4s ease-out;
+  background-color: #fff !important;
+  padding: 1rem 0 !important;
+  position: fixed;
+  top: 6.25rem;
+  width: 100vw; }
+
+.grid--right .is-stuck {
+  width: 50vw; }
+
+.lity-container .transport.is-stuck {
+  outline: 5px solid red;
+  position: relative;
+  padding: 0 !important;
+  top: 0;
+  -webkit-animation: none;
+  animation: none;
+  background-color: transparent !important; }
+
+.is-unstuck {
+  -webkit-animation: fade-out-in .4s ease-out;
+  animation: fade-out-in .4s ease-out; }
+
 body {
   padding: 0; }
 
@@ -2918,6 +3132,9 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     grid-area: 1 / 2 / 2 / 12;
+    height: 25vh;
+    min-height: 25vh;
+    max-height: 40vh;
     padding: 0;
     z-index: 10;
     /* music page SVG overlaps with transport controls */ }
@@ -3086,7 +3303,7 @@ body {
 /* piano roll */
 .ata-viz-pianoroll.modal {
   /* the lity modal takes the element out of the document flow while active */
-  padding: 4rem 0rem;
+  padding-bottom: 1rem;
   overflow: scroll; }
 
 button.lity-close {
@@ -3204,6 +3421,26 @@ button.lity-close {
 .is-sticky {
   position: fixed; }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out-in {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .frontmatter section {
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   height: auto;
@@ -3240,6 +3477,33 @@ button.lity-close {
 
 .is-sticky {
   position: fixed; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade-out-in {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.my-offset-debug {
+  background-color: red;
+  height: 5px;
+  width: auto;
+  left: 0;
+  z-index: 10000; }
 
 #openseadragon-wrapper {
   height: calc(100vh - 6.25rem);
