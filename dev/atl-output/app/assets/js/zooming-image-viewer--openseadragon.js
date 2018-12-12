@@ -93,11 +93,13 @@ $(function () {
 				$(musicControlPosition).removeClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4 - 1);
 				$(musicControlPosition).addClass('is-stuck');
+				$('.section__music').css('padding-top', '25vh');
 			}
 			else if (direction === 'up') { // if scrolling back up the page
 				$(musicControlPosition).addClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4);
 				$(musicControlPosition).removeClass('is-stuck');
+				$('.section__music').css('padding-top', '0');
 			}
 			else {
 				console.log("waypoints doesn't detect a scroll direction");
@@ -114,12 +116,14 @@ $(function () {
 			if(direction === 'down') { // if scrolling down the page, change zooming page to 2/4 if Latin/English is active or 1/4 if German is active
 				$(musicControlPosition).addClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4);
-				$(musicControlPosition).removeClass('is-stuck');	
+				$(musicControlPosition).removeClass('is-stuck');
+				$('.section__music').css('padding-top', '0');	
 			}
 			else { // if scrolling back up the page
 				$(musicControlPosition).removeClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4 - 1);
 				$(musicControlPosition).addClass('is-stuck');
+				$('.section__music').css('padding-top', '25vh');
 			}
 		},
 		offset: 300, // moving the trigger location from 0 at the top of the viewport
