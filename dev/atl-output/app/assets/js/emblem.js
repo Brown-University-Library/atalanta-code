@@ -52,6 +52,13 @@ $(function () {
 	// var newEmblemPageData;
 	// var viewer;
 
+	// var thisEmblemPage = '.emblem-page';
+	// var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
+	// var myEmblemPage = $('.emblem-page').data("page");
+	// var startPage; // the number of first page of current emblem
+	// var newEmblemPageData;
+	// var viewer;
+
 	/* emblem side nav */
 	// var sideNav = '.wrapper-sidenav';
 	// var mottoSideNav = 'ul.sidenav__options > li:nth-child(1)';
@@ -101,8 +108,6 @@ $(window).on('load', function() {
 	$("#language").on( "selectmenuchange", function( event, ui ) {
 	  selectLanguage(ui.item.value);
 	});
-
-
 
 /* FUNCTIONS */
 	function checkState() {
