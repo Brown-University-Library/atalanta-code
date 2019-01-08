@@ -93,20 +93,22 @@ $(function () {
 				$(musicControlPosition).removeClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4 - 1);
 				$(musicControlPosition).addClass('is-stuck');
+				$('.section__music').addClass('padding-hack');
 			}
 			else if (direction === 'up') { // if scrolling back up the page
 				$(musicControlPosition).addClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4);
 				$(musicControlPosition).removeClass('is-stuck');
+				$('.section__music').removeClass('padding-hack');
 			}
 			else {
 				console.log("waypoints doesn't detect a scroll direction");
 			}
 		},
-		offset: 250, // moving the trigger location from 0 at the top of the viewport
+		offset: 100, // moving the trigger location from 0 at the top of the viewport
 	})
 
-	// /*** EPIGRAM WAYPOINT ***/
+	// /*** EPIGRAM WAYPOINT ENGLISH / LATIN ***/
 	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__3'), // tells waypoint which DOM element's position to observe on scroll
@@ -114,12 +116,14 @@ $(function () {
 			if(direction === 'down') { // if scrolling down the page, change zooming page to 2/4 if Latin/English is active or 1/4 if German is active
 				$(musicControlPosition).addClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4);
-				$(musicControlPosition).removeClass('is-stuck');	
+				$(musicControlPosition).removeClass('is-stuck');
+				$('.section__music').removeClass('padding-hack');
 			}
 			else { // if scrolling back up the page
 				$(musicControlPosition).removeClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4 - 1);
 				$(musicControlPosition).addClass('is-stuck');
+				$('.section__music').addClass('padding-hack');
 			}
 		},
 		offset: 300, // moving the trigger location from 0 at the top of the viewport
@@ -137,10 +141,10 @@ $(function () {
 				viewer.goToPage(myEmblemDataNum * 4);
 			}
 		},
-		offset: 300, // moving the trigger location from 0 at the top of the viewport
+		offset: 280, // moving the trigger location from 0 at the top of the viewport
 	})
 
-	// /*** DISCOURSE WAYPOINT 2 ***/
+	// /*** DISCOURSE WAYPOINT 2 ENGLISH ***/
 	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__5'), // tells waypoint which DOM element's position to observe on scroll
@@ -152,11 +156,11 @@ $(function () {
 				viewer.goToPage(myEmblemDataNum * 4 + 1);
 			}
 		},
-		offset: 300, // moving the trigger location from 0 at the top of the viewport
+		offset: 500, // moving the trigger location from 0 at the top of the viewport
 	})
 })
 
-
+// BOOK PAGE NUMBERS W/O ZERO INDEX
 // frontispiece = 9
 // epigram = 10
 // dedication = 11 - 13
