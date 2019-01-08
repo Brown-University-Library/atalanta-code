@@ -258,6 +258,7 @@ span.underline2 {
 /*********** EMBLEM LAYOUT *************/
 div.translation, 
 div.original {
+	height: 100%;
 	margin-top: 2.5rem;
 }
 .panel--left div.translation, 
@@ -265,6 +266,11 @@ div.original {
 .panel--right div.translation, 
 .panel--right div.original {
 	margin-top: 3.5rem;
+}
+.lang--english, 
+.lang--german, 
+.lang--latin {
+	height: 100%;
 }
 .lang--english._motto--english, 
 .lang--latin._motto--latin, 
