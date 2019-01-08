@@ -36,6 +36,14 @@ $(function () {
 	var gridHalf = 'grid--half';
 	var gridLeft = 'grid--left';
 	var gridRight = 'grid--right';
+	/* other */
+	var musicNotation = '.music-pages';
+	var playButton = '.atalanta-notation-start';
+	var pauseButton = '.atalanta-notation-stop';
+	var muteVoice1 = '.atalanta-notation-mute-track:nth-of-type(1)';
+	var muteVoice2 = '.atalanta-notation-mute-track:nth-of-type(2)';
+	var muteVoice3 = '.atalanta-notation-mute-track:nth-of-type(3)';
+
 
 	// var thisEmblemPage = '.emblem-page';
 	// var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
@@ -64,10 +72,17 @@ $(function () {
 
 
 
-
-
 /* INITIALIZE */
 	onLoad(); // DISPLAY EMBLEM MENU AND DEFAULT OPTIONS ON PAGE LOAD
+
+/* APPLY ACCESSIBILITY FIXES AFTER ALL DYNAMIC CONTENT LOADS */
+$(window).on('load', function() {
+	setTimeout(function(){
+		// console.log("ALL ASSETS ARE LOADED!!!!")
+		musicAccessibility();
+	}, 2000);
+	
+});
 
 /* EVENTS */
 	/* layout menu */
@@ -86,6 +101,7 @@ $(function () {
 	$("#language").on( "selectmenuchange", function( event, ui ) {
 	  selectLanguage(ui.item.value);
 	});
+
 
 
 /* FUNCTIONS */
@@ -125,6 +141,14 @@ $(function () {
 	// var latinDoubleData;
 	// var facsimileDoubleData;
 		// updateDataState();
+	}
+	function musicAccessibility() {
+		$(musicNotation).attr('aria-hidden', 'true');
+		$(playButton).attr('aria-label', 'Play Music');
+		$(pauseButton).attr('aria-label', 'Pause Music');
+		$(muteVoice1).attr('aria-label', 'Play or Mute Voice 1');
+		$(muteVoice2).attr('aria-label', 'Play or Mute Voice 2');
+		$(muteVoice3).attr('aria-label', 'Play or Mute Voice 3');
 	}
 	function onLoad() {
 		checkState();
