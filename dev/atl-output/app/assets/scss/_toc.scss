@@ -1,0 +1,430 @@
+/* TOC MODAL */
+.drawer {
+	background-color: $orange-red;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: $drawer-z;
+}
+/*FLEX LAYOUT*/
+.topnav__contents {
+	color: $white;
+	display: flex;
+	flex-flow: row wrap;
+	font-family: $display-font_emblem;
+	font-size: 2.5rem;
+	height: 100%;
+	line-height: 1;
+	padding: 1rem 4rem;
+	width: 100%;
+	a {
+		color: $white;
+	}
+	a:hover {
+		border-bottom: 2px solid $black_pure;
+		color: $black_pure;
+	}
+}
+.topnav__contents .section-break {
+	background: $black;
+	flex-basis: calc(100% - 8rem);
+	height: 1px;
+	min-height: 1px;
+	max-height: 4px;
+}
+.topnav__contents__atalanta-fugiens, 
+.topnav__contents__atalanta-essays {
+	height: 50vh;
+	max-height: calc(62vh - 2rem);
+}
+.topnav__contents__atalanta-fugiens {
+	flex-basis: calc(40% - 8rem);
+	margin-right: 4rem;
+}
+.topnav__contents__atalanta-essays {
+	flex-basis: calc(60% - 8rem);
+	margin-left: 4rem;
+}
+.topnav__contents__atalanta-images, 
+.topnav__contents__atalanta-front,
+.topnav__contents__atalanta-back {
+	height: 30vh;
+	max-height: calc(38vh - 4rem);
+}
+.topnav__contents__atalanta-front,
+.topnav__contents__atalanta-back {
+	flex-basis: calc(30% - 6rem);
+	margin-left: 4rem;
+	margin-right: 4rem;
+}
+.topnav__contents__atalanta-back {
+	margin-left: 0rem;
+	margin-right: 5rem;
+}
+.topnav__contents__atalanta-images {
+	flex-basis: calc(40% - 6rem);
+	margin-right: 2rem;
+}
+
+/*GRID LAYOUT*/
+/*.topnav__contents {
+	display: grid;
+	grid-gap: 2rem;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+}
+.topnav__contents .section-break {
+	grid-column: 1 / 13;
+	grid-row: 2 / 3;
+}
+.topnav__contents__atalanta-fugiens, 
+.topnav__contents__atalanta-essays {
+	grid-row: 1 / 2;
+	min-height: 50vh;	
+}
+.topnav__contents__atalanta-fugiens {
+	grid-column: 1 / 5;
+	margin-right: -4rem;
+}
+.topnav__contents__atalanta-essays {
+	grid-column: 6 / 13;
+}
+.topnav__contents__atalanta-images, 
+.topnav__contents__atalanta-front, 
+.topnav__contents__atalanta-back {
+	grid-row: 3 / 4;
+	min-height: 20vh;
+	margin-bottom: 5rem;
+}
+.topnav__contents__atalanta-images {
+	grid-column: 1 / 5;
+}
+.topnav__contents__atalanta-front {
+	grid-column: 5 / 9;	
+}
+.topnav__contents__atalanta-back {
+	grid-column: 9 / 13;
+}
+.topnav__contents > div > ul {
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-columns: auto;
+}*/
+
+	.topnav__contents > ul {
+/*		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;*/
+	}
+/*	.topnav__contents div:nth-child(1) {
+		flex: 0 0 40%;
+		height: 60%;
+	}
+	.topnav__contents div:nth-child(2) {
+		flex: 0 0 60%;
+		height: 60%;
+	}
+	.topnav__contents div:nth-child(4), 
+	.topnav__contents div:nth-child(5), 
+	.topnav__contents div:nth-child(6), {
+		flex: 0 0 33.3333%;
+		height: 40%;
+	}*/
+
+/* GRID LAYOUT */
+/*	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;*/
+
+nav.topnav__contents .topnav__contents__atalanta-fugiens,
+nav.topnav__contents .topnav__contents__atalanta-essays,
+nav.topnav__contents .topnav__contents__atalanta-images,
+nav.topnav__contents .topnav__contents__atalanta-front,
+nav.topnav__contents .topnav__contents__atalanta-back {
+	/*outline: 2px solid black;*/
+
+	color: $white;
+	font-family: $body-font_emblem;
+	font-size: 1rem;
+	font-weight: 400;
+	height: 100%;
+	line-height: 1.5;
+	.toc__heading {
+		font-size: 1.5rem;
+		line-height: 1.25;
+		margin-bottom: 1.25rem;
+	}
+	.toc__subheading {
+		font-size: 1rem;
+		line-height: 1;
+		margin-top: -.625rem;
+		margin-bottom: 1.25rem;
+	}
+	.toc__description {
+		color: $black_dark;
+		font-family: $body-font_emblem;
+		font-size: 1.125rem;
+		font-weight: 500;
+		line-height: 1.5;
+		margin-bottom: 1.25rem;
+	}
+	.toc__content {
+		font-size: 1.125rem;
+		line-height: 1.2;
+	}
+}
+/* FLEX LAYOUT */
+/* DIGITAL EDITION */
+nav.topnav__contents .topnav__contents__atalanta-fugiens {
+	.toc__content ul {
+		display: flex;
+		flex-flow: column wrap;
+		align-content: stretch;
+		height: 38vh;
+		max-height: 38vh;
+	}
+	.toc__content ul li {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1 0 10%;
+		/*padding: 5px 0;*/
+		text-align: center;
+	}
+	.toc__content ul li:nth-of-type(1), 
+	.toc__content ul li:nth-of-type(2), 
+	.toc__content ul li:nth-of-type(3), 
+	.toc__content ul li:nth-of-type(4), {
+		display: flex;
+		flex-direction: column;
+		align-self: flex-start;
+		justify-content: space-between;
+		flex: 1 0 25%;
+	}
+	.toc__content ul li a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 1.2;
+	}
+	.toc__content ul li a:hover {
+		margin-bottom: -2px;
+	}
+}
+
+/* ESSAYS */
+nav.topnav__contents .topnav__contents__atalanta-essays {
+	.toc__content ul {
+		direction: ltr;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-flow: column wrap;
+		height: 40vh;
+		max-height: 60vh;
+	}
+	.toc__content li {
+		display: inline-block;
+		flex: 0 0 25%;
+		width: calc(50% - 1rem);
+	}
+	.toc__content li:nth-child(n+1):nth-child(-n+4) {
+		margin-right: 1rem;
+	}
+	.toc__content li:nth-child(n+5):nth-child(-n+8) {
+		margin-left: 1rem;
+	}
+	.toc__content li a {
+		line-height: 1.2;
+	}
+	.toc__content li span {
+		color: $black_dark;
+		display: block;
+		font-size: .875rem;
+		font-weight: 500;
+		margin-top: .5rem;
+	}
+}
+
+/* IMAGES, MINI ESSAYS, ETC. */
+nav.topnav__contents .topnav__contents__atalanta-images, 
+nav.topnav__contents .topnav__contents__atalanta-front, 
+nav.topnav__contents .topnav__contents__atalanta-back {
+	ul .toc__content ul {
+
+	}
+	ul .toc__content ul li {
+		margin-bottom: 1.75rem;
+	}
+}
+	
+
+
+/*nav.topnav__contents div .toc__content ul {
+		height: 100%;
+}
+.topnav__contents__atalanta-fugiens {
+	.toc__content ul li {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 20%;
+		text-align: center;
+	}
+	.toc__content ul li:nth-child(1), 
+	.toc__content ul li:nth-child(2), 
+	.toc__content ul li:nth-child(3), 
+	.toc__content ul li:nth-child(4), {
+		flex: 0 0 25%;
+	}
+}*/
+
+
+
+
+
+
+/*
+.toc-wrapper {
+	display: none;
+	height: 100vh;
+	overflow: auto;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 20000000;
+}
+.toc {
+	background-color: $gray_dark;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: auto;
+	padding: 2rem;
+	width: 20%;
+}
+.toc__items {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: auto;
+	width: 100%;
+	li {
+		color: $white;
+		cursor: default;
+		font-family: $body-font_emblem;
+		font-size: 1rem;
+		font-weight: 300;
+		line-height: 1.5rem;
+		padding-left: 2rem;
+		text-align: left;
+	}
+	a {
+		color: $white;
+	}
+	a:hover {
+		color: $yellow_bright;
+	}
+	.toc__heading  {
+		color: $orange-yellow;
+		font-size: 1.125rem;
+		font-weight: 500;
+		padding: .825rem 0 .325rem .5rem;
+	}
+	.toc__heading a {
+		color: $orange-yellow;
+	}
+	.toc__heading a:hover {
+		color: $yellow_bright;
+	}
+	.toc__essay {
+		margin-bottom: .75rem;
+	}
+	.toc__byline {
+		display: block;
+		font-size: .825rem;
+		font-style: italic;
+	}
+}*/
+
+/*** MEDIA QUERIES ***/
+@supports (display: grid) {
+	/*nav.topnav__contents .topnav__contents__atalanta-essays {
+		.toc__content ul {
+			display: grid;
+			grid-gap: 1.5rem;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: repeat(4, 1fr);
+		}
+		.toc__content li {
+			display: inline-block;
+			min-height: 1rem;
+			padding: .25rem 1rem .5rem 0;
+		}
+		.toc__content ul li:nth-child(n+1):nth-child(-n+4) {
+			grid-column: 1 / 2;
+		}
+		.toc__content ul li:nth-child(n+5):nth-child(-n+8) {
+			grid-column: 2 / 3;
+		}
+		.toc__content ul li:nth-child(5) {
+			grid-row: 1 / 2;
+		}
+		.toc__content ul li:nth-child(6) {
+			grid-row: 2 / 3;
+		}
+		.toc__content ul li:nth-child(7) {
+			grid-row: 3 / 4;
+		}
+		.toc__content ul li:nth-child(8) {
+			grid-row: 4 / 5;
+		}
+		.toc__content li span {
+			display: block;
+			margin-top: .5rem;
+		}
+	}*/
+}
+/*** BREAKPOINTS ***/
+
+/* small  -  mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	/*	.toc-wrapper {
+		overflow: scroll;
+		width: 100%;
+	}
+	.toc {
+		padding: 0;
+		width: 100%;
+	}
+	.toc__items {
+		width: 100%;
+	}
+	.toc__items li {
+		padding-left: 1.5rem;
+		padding-right: .5rem;
+	}*/
+}
+
+/* medium  -  tablet */
+@media screen and (min-width: 768px) and (max-width: 999px) {
+
+}
+
+/* large  -  desktop */
+@media screen and (min-width: 1500px) and (max-width: 1999px) {
+	
+}
+
+/* extra-large */
+@media screen and (min-width: 2000px) and (max-width: 2800px) {
+
+}
+
+/* xxl */
+@media screen and (min-width: 2801px) {
+
+}

@@ -1,6 +1,33 @@
 @import 'colors';
 @import 'utilities';
 
+/* sticky music player controls */
+.transport.is-stuck {
+  animation: fade-in .4s ease-out;
+  background-color: $white !important;
+  padding: 0;
+  position: fixed;
+  top: $emblemnav-h;
+  width: 100vw;
+}
+.grid--right .transport.is-stuck {
+	width: 50vw;
+}
+.lity-container .transport.is-stuck {
+/*	outline: 5px solid red;*/
+	animation: none;
+	background-color: transparent !important;
+	padding: 0 !important;
+	position: relative;
+	top: 0;
+}
+.transport.is-unstuck {
+	animation: fade-out-in .4s ease-out;
+}
+.section__music.padding-hack {
+	padding-top: calc(20vh + 1rem + 15px);
+}
+
 body {
 	padding: 0;
 }
@@ -28,11 +55,13 @@ body {
 		align-items: center;
 		justify-content: center;
 		grid-area: 1 / 2 / 2 / 12;
+		height: 20vh;
+		margin-bottom: 1rem;
 		padding: 0;
 		z-index: 10; /* music page SVG overlaps with transport controls */
 	}
 	.ata-viz-cmn {
-		background-color: blue;
+/*		background-color: blue;*/
 		background: no-repeat;
   		background-size: contain;
   		display: grid;
@@ -51,6 +80,7 @@ body {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	height: 15vh;
 	.atalanta-notation-start {
 		background-image: url('../icons/icon_play-outline.svg');
 	}
@@ -171,7 +201,7 @@ body {
 }
 /* piano roll */
 .ata-viz-pianoroll.modal { /* the lity modal takes the element out of the document flow while active */
-	padding: 4rem 0rem;
+	padding-bottom: 1rem;
 	overflow: scroll;
 }
 button.lity-close {
@@ -265,20 +295,3 @@ button.lity-close {
 @media screen and (max-width: 319px) {
 	/* the music section is seriously broken at this point */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -30,18 +30,20 @@ html.lity-active body {
 ._topnav[data-nav='essay'] {
 	.topnav__content ul li:nth-child(2) a {
 		border-bottom: 6px solid $red;
+		height: calc(3.125rem - 6px);
 	}
 	.topnav__content ul li:nth-child(2) a:hover {
-		color: $white;
+		color: $gray_medium;
 		margin-bottom: 0;
 	}
 }
 ._topnav[data-nav='images'] {
 	.topnav__content ul li:nth-child(3) a {
 		border-bottom: 6px solid $red;
+		height: calc(3.125rem - 6px);
 	}
 	.topnav__content ul li:nth-child(3) a:hover {
-		color: $white;
+		color: $gray_medium;
 		margin-bottom: 0;
 	}
 }
@@ -104,10 +106,10 @@ header[data-page-type='other'] {
 	li.topnav__logo button a svg {
 		transform: scale(.75);
 	}
-	li.topnav__logo svg text {
+	li.topnav__logo svg path {
 		fill: $gray_medium;
 	}
-	li.topnav__logo svg:hover text {
+	li.topnav__logo button:hover svg path {
 		fill: $red;
 		transition: .2s;
 	}
