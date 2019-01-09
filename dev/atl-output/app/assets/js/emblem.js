@@ -87,7 +87,7 @@ $(window).on('load', function() {
 	setTimeout(function(){
 		// console.log("ALL ASSETS ARE LOADED!!!!")
 		musicAccessibility();
-	}, 2000);
+	}, 3000);
 	
 });
 
