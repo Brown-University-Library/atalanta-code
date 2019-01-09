@@ -43,6 +43,10 @@ $(function () {
 	var muteVoice1 = '.atalanta-notation-mute-track:nth-of-type(1)';
 	var muteVoice2 = '.atalanta-notation-mute-track:nth-of-type(2)';
 	var muteVoice3 = '.atalanta-notation-mute-track:nth-of-type(3)';
+	var hamburgerMenuBtn = 'nav.topnav button';
+	var hamburgerMenuBtnClosed = 'topnav__hamburger--closed';
+	var hamburgerMenuBtnOpen = 'topnav__hamburger--open';
+	var hamburgerMenu = '.topnav > ul';
 
 
 	// var thisEmblemPage = '.emblem-page';
@@ -90,6 +94,40 @@ $(window).on('load', function() {
 	}, 3000);
 	
 });
+$(hamburgerMenuBtn).click(function() {
+	if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnClosed)) {
+		console.log("I AM OPENING THE HAMBURGER MENU");
+		$(hamburgerMenuBtn).removeClass('topnav__hamburger--closed');
+		$(hamburgerMenuBtn).addClass('topnav__hamburger--open');
+		$(hamburgerMenu).removeClass('topnav--slide-out');
+		$(hamburgerMenu).addClass('topnav--slide-in');
+	}
+	else if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnOpen)) {
+		console.log("I AM CLOSING THE HAMBURGER MENU");
+		$(hamburgerMenuBtn).removeClass('topnav__hamburger--open');
+		$(hamburgerMenuBtn).addClass('topnav__hamburger--closed');
+		$(hamburgerMenu).removeClass('topnav--slide-in');
+		$(hamburgerMenu).addClass('topnav--slide-out');
+	}
+	else {
+		console.log("THE HAMBURGER MENU HAS NO CLASS");
+	}
+});
+
+// $('.topnav__hamburger--closed').click(function() {
+// 	console.log("I OPENED THE HAMBURGER MENU");
+// 	$(hamburgerMenuBtn).addClass('topnav__hamburger--open');
+// 	$(hamburgerMenuBtn).removeClass('topnav__hamburger--closed');
+// 	$(hamburgerMenu).removeClass('topnav--slide-out');
+// 	$(hamburgerMenu).addClass('topnav--slide-in');
+// });
+// $('.topnav__hamburger--open').click(function() {
+// 	console.log("I CLOSED THE HAMBURGER MENU");
+// 	$(hamburgerMenuBtn).removeClass('topnav__hamburger--open');
+// 	$(hamburgerMenuBtn).addClass('topnav__hamburger--closed');
+// 	$(hamburgerMenu).removeClass('topnav--slide-in');
+// 	$(hamburgerMenu).addClass('topnav--slide-out');
+// });
 
 /* EVENTS */
 	/* layout menu */
