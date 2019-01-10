@@ -121,7 +121,7 @@ header[data-page-type='other'] {
 	}
 	li.topnav__logo a:hover, 
 	li.topnav__logo a:focus {
-		filter: saturate(.92); /* close to $red */
+		filter: grayscale(0);
 	}
 	li.topnav__content {
 /*		background-color: orange;*/
@@ -261,21 +261,24 @@ header[data-page-type='other'] {
 		}
 	}
 	.topnav > button {
-				background-image: url("../icons/fandf-logotype_red.svg");
-		background-size: 60%;
+		background-image: url("../icons/icon_hamburger-menu.svg");
+		background-size: 50%;
 		background-position: center;
 		background-repeat: no-repeat;
 		display: inline-block;
 		height: $topnav-h;
-		margin: 0 1rem;
 		position: absolute;
 		top: 0;
 		right: 0;
 		width: 75px;
 		z-index: 30;
 	}
+	.topnav > button.topnav__hamburger--open {
+		background-image: url("../icons/icon_X-close.svg");
+		background-size: 40%;
+		transition-delay: .15s;
+	}
 	.topnav > ul {
-		background-color: pink;
 		flex-direction: column;
 		flex-basis: 1;
 		justify-content: flex-start;
