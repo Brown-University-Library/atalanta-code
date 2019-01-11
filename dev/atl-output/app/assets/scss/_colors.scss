@@ -1,22 +1,39 @@
+/* PRODUCTION */
+$black: #222;
+$black_dark: #111;
+$black_pure: #000;
+$black_transparent: hsla(0, 0%, 13%, .4);
+$blue_light: #DAE4EC;
+$gray: #333333;
+$gray_light: hsla(0, 0%, 95%, 1);
+$gray_medium: hsla(0, 0%, 50%, 1);
+$gray_transparent: hsla(0, 0%, 20%, .97);
+$red: hsla(11, 72%, 51%, 1);
+$red_dark: hsla(13, 70%, 43%, 1);
+$text_body: hsla(0, 0%, 30%, 1);
+$white: hsla(0, 100%, 100%, 1);
+$yellow: hsla(41, 100%, 50%, 1);
+$yellow_bright: hsla(41, 100%, 69%, 1);
+
+
 /* TESTING */
 $error: hsla(11, 72%, 82%, .4);
 
 /* DEVELOPMENT */
 $aqua: #3DF2BF;
 $aqua_darker: hsla(163, 87%, 30%, 1);
-$royal-blue: hsla(250, 100%, 15%, .90);
-
-/* PRODUCTION */
-$black: #222;
-$black_transparent: hsla(0, 0%, 13%, .4);
 $blue-light: #DAE4EC;
 $gray-dark: #333333;
 $gray-dark_transparent: hsla(0, 0%, 20%, .97);
-$gray-medium: #989898;
+/*$gray-medium: #989898;*/
+$gray-medium: #808080;
 $gray-light: #F1F1F1;
 $orange-red: #DC4929;
-$orange-red_darker: hsla(11, 72%, 42%, 1);
+/*$orange-red_darker: hsla(11, 72%, 42%, 1);*/
+$orange-red_darker: #B84121;
 $orange-yellow: #FFB000;
 $orange-yellow_brighter: hsla(41, 100%, 69%, 1);
-$text-body: #4C4C4C;
+$royal-blue: hsla(250, 100%, 15%, .90);
+/*$text-body: #4C4C4C;*/
+$text-body: #333;
 $white: #fff;

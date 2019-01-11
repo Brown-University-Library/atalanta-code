@@ -3,130 +3,79 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Furnace and Fugue: Atalanta Fugiens (Digital Edition)</title>
+	<title>Furnace and Fugue: Atalanta fugiens (Digital Edition)</title>
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css">
+	<link type="text/css" rel="stylesheet" media="screen" href="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.css">
 <!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
 	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.js"></script>
 	<script src="../assets/js/vendors/verovio/verovio-toolkit.js"></script>
 	<script src="../assets/js/vendors/lity/lity.min.js"></script>
 	<script src="../assets/js/stereo-panner-node.min.js"></script>
 	<script src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
 	<script src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
+	<script src="js/waypoints/lib/shortcuts/sticky.min.js"></script>
+	<script src="js/waypoints/lib/waypoints.debug.js"></script> <!-- remove in production -->
 	<script src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
 </head>
-<body>
-<!-- <div class="trigger-debug" style="position: fixed; height: 2px; width: 100%; z-index: 5000000000; background-color: red; top: 150px;"></div>
-<div class="trigger-debug" style="position: fixed; height: 2px; width: 100%; z-index: 5000000000; background-color: green; top: 300px;"></div> -->
+<body class="emblem-body">
 <!-- GLOBAL NAVIGATION -->
-	<header>
-		<div class="_topnav">
+	<header data-page-type="digital edition">
+		<a class="a11y_skip-main" href="#emblem-data">Skip to main content</a>
+		<div class="_topnav" data-nav="digital edition">
 			<nav class="topnav">
+				<button aria-hidden="true" class="topnav__hamburger--closed"></button>
 				<ul>
-					<li class="my-trigger"><button><img class="toc-icon" src="../assets/icons/toc.png" alt="table of contents icon" /></button></li>
-					<li class="topnav__identity"><a href="../index.html">Furnace &amp; Fugue<span class="topnav__subdirectory">: Atalanta fugiens</span></a></li>
-<!-- 					<li></li> -->
-				</ul>
-			</nav>
-			<nav class='toc-wrapper'>
-				<ul class="toc">
-					<div class="toc__items">
-						<li class="toc__heading"><a href="../index.html">Home</a></li>
-						<li class="toc__heading"><a href="#">Front Matter</a></li>
-						<li><a href="#">Print Culture</a></li>
-						<li><a href="#">Maier's Biography</a></li>
-						<li><a href="#">Maier's Bibliography</a></li>
-						<li class="toc__heading"><a href="../atalanta-fugiens/af-toc.html">Atalanta fugiens</a></li>
-						<li><a href="../atalanta-fugiens/frontispiece.html">Frontispiece</a></li>
-						<li><a href="../atalanta-fugiens/author-epigram.html">Author's Epigram</a></li>
-						<li><a href="../atalanta-fugiens/dedication.html">Dedication</a></li>
-						<li><a href="../atalanta-fugiens/preface.html">Preface</a></li>
-						<li><a href="../atalanta-fugiens/emblem01.html">Emblem 1</a></li>
-						<li><a href="../atalanta-fugiens/emblem02.html">Emblem 2</a></li>
-						<li><a href="../atalanta-fugiens/emblem03.html">Emblem 3</a></li>
-						<li><a href="../atalanta-fugiens/emblem04.html">Emblem 4</a></li>
-						<li><a href="../atalanta-fugiens/emblem05.html">Emblem 5</a></li>
-						<li><a href="../atalanta-fugiens/emblem06.html">Emblem 6</a></li>
-						<li><a href="../atalanta-fugiens/emblem07.html">Emblem 7</a></li>
-						<li><a href="../atalanta-fugiens/emblem08.html">Emblem 8</a></li>
-						<li><a href="../atalanta-fugiens/emblem09.html">Emblem 9</a></li>
-						<li><a href="../atalanta-fugiens/emblem10.html">Emblem 10</a></li>
-						<li><a href="../atalanta-fugiens/emblem11.html">Emblem 11</a></li>
-						<li><a href="../atalanta-fugiens/emblem12.html">Emblem 12</a></li>
-						<li><a href="../atalanta-fugiens/emblem13.html">Emblem 13</a></li>
-						<li><a href="../atalanta-fugiens/emblem14.html">Emblem 14</a></li>
-						<li><a href="../atalanta-fugiens/emblem15.html">Emblem 15</a></li>
-						<li><a href="../atalanta-fugiens/emblem16.html">Emblem 16</a></li>
-						<li><a href="../atalanta-fugiens/emblem17.html">Emblem 17</a></li>
-						<li><a href="../atalanta-fugiens/emblem18.html">Emblem 18</a></li>
-						<li><a href="../atalanta-fugiens/emblem19.html">Emblem 19</a></li>
-						<li><a href="../atalanta-fugiens/emblem20.html">Emblem 20</a></li>
-						<li><a href="../atalanta-fugiens/emblem21.html">Emblem 21</a></li>
-						<li><a href="../atalanta-fugiens/emblem22.html">Emblem 22</a></li>
-						<li><a href="../atalanta-fugiens/emblem23.html">Emblem 23</a></li>
-						<li><a href="../atalanta-fugiens/emblem24.html">Emblem 24</a></li>
-						<li><a href="../atalanta-fugiens/emblem25.html">Emblem 25</a></li>
-						<li><a href="../atalanta-fugiens/emblem26.html">Emblem 26</a></li>
-						<li><a href="../atalanta-fugiens/emblem27.html">Emblem 27</a></li>
-						<li><a href="../atalanta-fugiens/emblem28.html">Emblem 28</a></li>
-						<li><a href="../atalanta-fugiens/emblem29.html">Emblem 29</a></li>
-						<li><a href="../atalanta-fugiens/emblem30.html">Emblem 30</a></li>
-						<li><a href="../atalanta-fugiens/emblem31.html">Emblem 31</a></li>
-						<li><a href="../atalanta-fugiens/emblem32.html">Emblem 32</a></li>
-						<li><a href="../atalanta-fugiens/emblem33.html">Emblem 33</a></li>
-						<li><a href="../atalanta-fugiens/emblem34.html">Emblem 34</a></li>
-						<li><a href="../atalanta-fugiens/emblem35.html">Emblem 35</a></li>
-						<li><a href="../atalanta-fugiens/emblem36.html">Emblem 36</a></li>
-						<li><a href="../atalanta-fugiens/emblem37.html">Emblem 37</a></li>
-						<li><a href="../atalanta-fugiens/emblem38.html">Emblem 38</a></li>
-						<li><a href="../atalanta-fugiens/emblem39.html">Emblem 39</a></li>
-						<li><a href="../atalanta-fugiens/emblem40.html">Emblem 40</a></li>
-						<li><a href="../atalanta-fugiens/emblem41.html">Emblem 41</a></li>
-						<li><a href="../atalanta-fugiens/emblem42.html">Emblem 42</a></li>
-						<li><a href="../atalanta-fugiens/emblem43.html">Emblem 43</a></li>
-						<li><a href="../atalanta-fugiens/emblem44.html">Emblem 44</a></li>
-						<li><a href="../atalanta-fugiens/emblem45.html">Emblem 45</a></li>
-						<li><a href="../atalanta-fugiens/emblem46.html">Emblem 46</a></li>
-						<li><a href="../atalanta-fugiens/emblem47.html">Emblem 47</a></li>
-						<li><a href="../atalanta-fugiens/emblem48.html">Emblem 48</a></li>
-						<li><a href="../atalanta-fugiens/emblem49.html">Emblem 49</a></li>
-						<li><a href="../atalanta-fugiens/emblem50.html">Emblem 50</a></li>
-						<li class="toc__heading"><a href="../atalanta-essays/essay-toc.html">Essays</a></li>
-						<li class="toc__essay"><a href="../atalanta-essays/essay-intro.html">Introduction</a><span class="toc__byline">by Donna Bilak and Tara Nummedal</span></li>
-						<li class="toc__essay"><a href="../atalanta-essays/essay1.html">Sound and Vision: The Alchemical Epistemology of Michael Maier's <cite>Atalanta fugiens</cite> (1618)</a><span class="toc__byline">by Tara Nummedal</span></li>
-						<li class="toc__essay"><a href="../atalanta-essays/essay2.html">Michael Maier and Mythoalchemy</a><span class="toc__byline">by Pete Forshaw</span></li>
-						<li class="toc__essay"><a href="../atalanta-essays/essay3.html">How Numbers (Mis)behaved in the Renaissance</a><span class="toc__byline">by Richard Oosterhoff</span></li>
-						<li class="toc__essay"><a href="../atalanta-essays/essay4.html">John Farmer’s Sundry Waies (1591): The English Origin of Michael Maier’s ‘Alchemical Fugues'</a><span class="toc__byline">by Loren Ludwig</span></li>
-						<li class="toc__essay"><a href="../atalanta-essays/essay5.html">Chasing Atalanta: Maier, Steganography, and the secrets of Nature</a><span class="toc__byline">by Donna Bilak</span></li>
-						<li class="toc__essay"><a href="../atalanta-essays/essay6.html">The Emblem in the Landscape: Matthaeus Merian's Etchings for <cite>Atalanta fugiens</cite></a><span class="toc__byline">by Michael Gaudio</span></li>
-						<li class="toc__essay"><a href="../atalanta-essays/essay7.html">Weight, Number, Measure: The Musical Universe of Michael Maier</a><span class="toc__byline">by Eric Bianchi</span></li>
-						<li class="toc__heading"><a href="#">Search</a></li>
-						<li class="toc__heading">Resources</li>
-						<li><a href="#">Process &amp; Acknowledgments</a></li>
-						<li><a href="#">Performance Edition</a></li>
-						<li><a href="#">Downloads</a></li>
-					</div>
+					<li class="topnav__logo">
+						<a aria-label="Return to Furnace and Fugue home" href="../index.html"></a>
+					</li>
+					<li class="topnav__content">
+						<ul>
+							<li><a href="../atalanta-fugiens/toc_af.html">Digital Edition</a></li>
+							<li><a href="../atalanta-essays/toc_essays.html">Essays</a></li>
+							<li><a href="../search/toc_image-search.html">Images</a></li>
+							<li><a href="../search/toc.html">Contents</a></li>
+						</ul>
+					</li>
+					<li class="topnav__search"><button><a href="../search/search.html">
+						<span class="icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 960 560" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:#fff; stroke-width:20;stroke-miterlimit:10;}</style><g id="handle"><g><path class="st0" d="M537.6,337.5l97,97L537.6,337.5z"/></g></g><g id="glass"><g><path class="st0" d="M480,153c33.9,0,65.8,13.2,89.8,37.2S607,246.1,607,280s-13.2,65.8-37.2,89.8S513.9,407,480,407s-65.8-13.2-89.8-37.2
+						S353,313.9,353,280s13.2-65.8,37.2-89.8S446.1,153,480,153 M480,143c-75.7,0-137,61.3-137,137s61.3,137,137,137s137-61.3,137-137
+						S555.7,143,480,143L480,143z"/></g></g></svg></span><span class="label">Search</span>
+					</a></button></li>
 				</ul>
 			</nav>
 		</div>
 <!-- EMBLEM NAVIGATION -->
-		<nav class="subnav">
-			<ul>
-				<li class="subnav__views--single is-hidden" data-state="active"><a href="#"><span></span>Single View</a></li>
-				<li class="subnav__options--option is-active" data-state="active"><a href="#">English</a></li>
-				<li class="subnav__options--option" data-state="inactive"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option" data-state="inactive"><a href="#">Original</a></li>
-				<li class="subnav__views--double" data-state="inactive"><a href="#"><span></span>Comparative View</a></li>
-				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">English</a></li>
-				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option is-hidden is-active" data-state="active"><a href="#">Original</a></li>
-			</ul>
+		<nav class="subnav-v3">
+			<form action="#">
+				<fieldset>
+					<label for="layout">Select a Layout</label>
+					<select name="layout" id="layout">
+						<option selected="selected" class="dropdown--layout" data-layout="active" value="compare">Comparative View</option>
+						<option class="dropdown--layout" data-layout="inactive" value="digital-edition">Digital Edition</option>
+						<option class="dropdown--layout" data-layout="inactive" value="zooming-image">Original</option>
+					</select>
+				</fieldset>
+			</form>
+			<form action="#">
+				<fieldset>
+					<label for="language">Select a Language</label>
+					<select name="language" id="language">
+						<option class="dropdown--language" data-language="inactive" value="english_original">Original English</option>
+						<option  selected="selected" class="dropdown--language" data-language="active" value="english_modern">Modernized English</option>
+						<option class="dropdown--language" data-language="inactive" value="latin_original">Original Latin</option>
+						<option class="dropdown--language" data-language="inactive" value="latin_normal">Normalized Latin</option>
+						<option class="dropdown--language" data-language="inactive" value="german">German</option>
+					</select>
+				</fieldset>
+			</form>
 		</nav>
 	</header>
 <!-- EMBLEM PAGE-->
-	<main id="emblem-data" class="emblem-page" data-id="5">
+	<main id="emblem-data" class="emblem-page" data-id="5" data-page="b">
 <!-- EMBLEM GRID -->
 		<!-- Facsimile -->
-		<div class="section__facsimile is-hidden">
+		<div aria-hidden="true" class="section__facsimile is-hidden">
 			<div class="facsimile--full">
 				<section class="_facsimile">
 					<!-- https://openseadragon.github.io/docs/ -->
@@ -150,86 +99,23 @@
 		</div>
 		<div class="emblem">
 			<!-- Motto -->
-			<a name="motto" id="basic-waypoint__0" class="section__motto"></a>
-			<section class="section__motto section--single panel--full">
+			<a name="motto" class="section__motto"></a>
+			<div class="my-offset-debug"></div>
+			<section id="basic-waypoint__0" class="section__motto section--single panel--right">
 				<div class="translation">
-					<div class="switch-wrapper left">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--english _motto--english edition--normalized" lang="en-US">
-<div class="title">
-                		<h3 class="title">
-                        	<span class="original"><br></span><span class="regularized"></span><span class="italics">the first <span class="original">Embleme </span><span class="regularized">Emblem</span>. Of the Secrets of Nature.</span>
-                    	</h3>
-                        <h1 class="title">
-                        	<span class="original"><br></span><span class="regularized"></span><span class="italics"><span class="del"><span class="unclear">4 chars</span> </span><span class="subst"><span class="del"><span class="unclear">1 char</span></span><span class="add">W</span></span>ind <span class="original">carryed </span><span class="regularized">carried</span> him in his belly <span class="pc">- - - -</span>
-							</span>
-						</h1>
-</div>
-					</div>
-                </div>
-				<div class="original is-hidden">
-					<div class="switch-wrapper left">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--latin _motto--latin edition--regularized" lang="la">
-						<div class="image la">
-                            <h3 class="title">Emblema I. De secretis Naturae.</h3>
-                            <h1 class="title">
-                  				<br>Portavit eum ventus in ventre suo.
-               				</h1>
-                        </div>
-                    </div>
-					<div class="lang--german _motto--german is-hidden" lang="de">
-						<div class="fugue de">
-               				<h3 class="title">FUGA I. in Quarta, infra.</h3>
-               				<h1 class="title"><span class="original"><br/></span>Es hat ihn der Wind getragen im Bauche.</h1>
-              			</div>
-              		</div>
-				</div>
-			</section>
-			<section class="section__motto section--double panel--right is-hidden">
-				<div class="translation is-hidden">
-					<div class="switch-wrapper right">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div>
 					<div class="lang--english _motto--english edition--normalized" lang="en-US">
 						<div class="title">
-						    <h3 class="title">
-								<span class="italics">the first <span class="original">Embleme </span><span class="regularized">Emblem</span>. Of the Secrets of Nature.</span>
-							</h3>
-							<h1 class="title">
-								<span class="del"><span class="unclear">4 chars</span> </span><span class="subst"><span class="del"><span class="unclear">1 char</span></span><span class="add">W</span></span>ind <span class="original">carryed </span><span class="regularized">carried</span> him in his belly <span class="pc">- - - -</span>
+                			<h3 class="title">
+                        		<span class="original"><br></span><span class="regularized"></span><span class="italics">the first <span class="original">Embleme </span><span class="regularized">Emblem</span>. Of the Secrets of Nature.</span>
+                    		</h3>
+	                        <h1 class="title">
+	                        	<span class="original"><br></span><span class="regularized"></span><span class="italics"><span class="del"><span class="unclear">4 chars</span> </span><span class="subst"><span class="del"><span class="unclear">1 char</span></span><span class="add">W</span></span>ind <span class="original">carryed </span><span class="regularized">carried</span> him in his belly <span class="pc">- - - -</span>
+								</span>
 							</h1>
 						</div>
 					</div>
-				</div>
-				<div class="original">
-					<div class="switch-wrapper right">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
+                </div>
+				<div class="original is-hidden">
 					<div class="lang--latin _motto--latin edition--regularized" lang="la">
 			            <div class="image la">
 			               <h3 class="title">Emblema I. De secretis Naturae.</h3>
@@ -238,18 +124,17 @@
 					</div>
 					<div class="lang--german _motto--german is-hidden" lang="de">
 						<div class="fugue de">
-                            <h3 class="title">FUGA I. in Quarta, infra.</h3>
-                            <h1 class="title">
-                  				<br>Es hat ihn der Wind getragen im Bauche.
-               				</h1>
-                        </div>
-                    </div>
-                </div>
+               				<h3 class="title">FUGA I. in Quarta, infra.</h3>
+               				<h1 class="title"><span class="original"><br/></span>Es hat ihn der Wind getragen im Bauche.</h1>
+              			</div>
+              		</div>
+				</div>
 			</section>
 			<!-- Image -->
-			<a name="image" id="basic-waypoint__1" class="section__image"></a>
-			<div class="section__image">					
-				<div class="image--full">
+			<a name="image" class="section__image"></a>
+			<div class="my-offset-debug"></div>
+			<div id="basic-waypoint__1" class="section__image">					
+				<div class="image--full grid--right">
 					<section class="image wrapper-section section">
 							<div class="image__picture">
 								<img class="emblem__image--cropped" 
@@ -263,35 +148,29 @@
 				</div>
 			</div>
 			<!-- Music -->
-			<a name="music" id="basic-waypoint__2" class="section__music"></a>
-			<section class="section__music">
+			<a name="music" id="basic-waypoint__2" id="my-offset-debug" class="section__music"></a>
+			<div class="my-offset-debug"></div>
+			<section id="basic-waypoint__2" class="section__music">
 				<div class="_music music--full">
-				    <div class="ata-music" data-mei="../data/mei/Fuga 01.xml">
-				      <div class="ata-viz-cmn"></div>
-				      <div class="ata-viz-audio" data-tempo="56">
-				        <div class="ata-audio-track" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
-				            data-mp3="../assets/audio/01-A-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/01-A-56bpm-Reverb.mp3"></div>
-				        <div class="ata-audio-track" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
-				            data-mp3="../assets/audio/01-H-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/01-H-56bpm-Reverb.mp3"></div>
-				        <div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
-				            data-mp3="../assets/audio/01-P-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/01-P-56bpm-Reverb.mp3"></div>
-				      </div>
-				      <div class="ata-viz-pianoroll modal"></div>
+				    <div class="ata-music" data-mei="../data/mei/Fuga 6.xml">
+				      <div aria-label="musical notation in three voices" class="ata-viz-cmn"></div>
+		      			<div class="ata-viz-audio" data-tempo="56">
+				            <div class="ata-audio-track" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
+				                data-mp3="../assets/audio/06-A-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-A-56bpm-Reverb.mp3"></div>
+				            <div class="ata-audio-track" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
+				                data-mp3="../assets/audio/06-H-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-H-56bpm-Reverb.mp3"></div>
+				            <div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
+				                data-mp3="../assets/audio/06-P-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-P-56bpm-Reverb.mp3"></div>
+				      	</div>
+				    	<div class="ata-viz-pianoroll modal"></div>
 				    </div>
     			</div>
 			</section>
 			<!-- Epigram -->
-			<a name="epigram" id="basic-waypoint__3" class="section__epigram"></a>
-			<section class="section__epigram section--single panel--full">
+			<a name="epigram" class="section__epigram"></a>
+			<div class="my-offset-debug"></div>
+			<section id="basic-waypoint__3" class="section__epigram section--single panel--right">
 				<div class="translation">
-					<div class="switch-wrapper left">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div>
 					<div class="lang--english _epigram--english edition--normalized" lang="en-US">
 		                <div class="epigram">
                             <h3 class="title">the first <span class="original">Epigramme </span><span class="regularized">Epigram</span>.</h3>
@@ -307,15 +186,6 @@
                     </div>
                 </div>
 				<div class="original is-hidden">
-					<div class="switch-wrapper left">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
 					<div class="lang--latin _epigram--latin edition--regularized" lang="la">
 						<div class="epigram la">
 			               <h3 class="title">Epigramma I.</h3>
@@ -344,80 +214,11 @@
 					</div>
 				</div>
 			</section>
-			<section class="section__epigram section--double panel--right is-hidden">
-				<div class="translation is-hidden">
-					<div class="switch-wrapper right">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--english _epigram--english edition--normalized" lang="en-US">
-		                <div class="epigram">
-                            <h3 class="title">the first <span class="original">Epigramme </span><span class="regularized">Epigram</span>.</h3>
-                            <div class="verse-epigram">
-                                <br>If Boreas once expand his windy <span class="original">wombe </span><span class="regularized">womb</span>,
-                                <br>That <span class="original">th' </span><span class="regularized">the</span> Infant in the world alive may come,
-                                <br>His <span class="original">prowesse </span><span class="regularized">prowess</span> will the Heroes all <span class="original">outdoe </span><span class="regularized">outdo</span>
-                                <br>In art, in hand, in mind, and body too.
-                                <br><span class="original">Thinke </span><span class="regularized">Think</span> him <span class="original">noe </span><span class="regularized">no</span> Cæso, nor abortive brood,
-                                <br>Nor yet Agrippa, for his <span class="original">starre </span><span class="regularized">star</span> was good.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-				<div class="original">
-					<div class="switch-wrapper right">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--latin _epigram--latin edition--regularized" lang="la">
-						<div class="epigram la">
-							<h3>Epigramma I.</h3>
-							<div class="verse-epigram">
-								<br/>Embryo ventos<hi rend="circumflex">a</hi> BORE<hi rend="ligature">AE</hi> qui clauditur alvo,</l>
-								<br/>Vivus in hanc lucem si semel ortus erit;
-								<br/>Unus is Heroum cunctos superare labores
-								<br/>Arte, manu, forti corpore, mente, potest.
-								<br/>Ne tibi sit <persName>C<hi rend="ligature">ae</hi>so</persName>, nec abortus inutilis ill<hi rend="tail">e</hi>,
-								<br/>Non <persName>Agrippa</persName>, bono sydere sed genitus.
-							</div>
-						</div>
-					</div>
-					<div class="lang--german _epigram--german is-hidden">
-						<div class="epigram de" lang="de">
-			               <h3 class="title">I. Epigrammatis Latini versio Germanica.</h3>
-			               <div class="verse-epigram">
-			                  <span class="original"><br/></span><span class="v-line">Die Fruche im Buach deß Winds/ welche noch verborgen lebet/</span>
-			                  <span class="original"><br/></span><span class="v-line-indent">So ferne in dieses Liecht die selbe wirt erhebet/</span>
-			                  <span class="original"><br/></span><span class="v-line">kan allerhohen Helden Raht und That ubergehen weit</span>
-			                  <span class="original"><br/></span><span class="v-line-indent">Durch kunst und starcke Gewalt und seines Leibes Arbeit;</span>
-			                  <span class="original"><br/></span><span class="v-line">Schaw/ daß er nich unziemlich vor der Zeit geboren werd/</span>
-			                  <span class="original"><br/></span><span class="v-line-indent">Sondern in rechter Maß komme lebendig auff die Erd.</span>
-			               </div>
-			            </div>
-					</div>
-				</div>
-			</section>
 			<!-- Discourse -->
-			<a name="discourse" id="basic-waypoint__4" class="section__discourse"></a>
-			<section class="section__discourse section--single panel--full">
+			<a name="discourse" class="section__discourse"></a>
+			<div class="my-offset-debug"></div>
+			<section id="basic-waypoint__4" class="section__discourse section--single panel--right">
 				<div class="translation">
-					<div class="switch-wrapper left">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div>
 					<div class="lang--english _discourse--english edition--normalized text" lang="en-US">
                         <div class="discourse">
                             <span class="milestone">014</span>
@@ -459,7 +260,7 @@
                                 <span class="original"><br></span><span class="regularized"></span>head and feet: for <span class="original">hee </span><span class="regularized">he</span> is windy, and <span class="original">flyes </span><span class="regularized">flies</span> through the <span class="original">aire </span><span class="regularized">air</span> as wind <span class="original">itselfe </span><span class="regularized">itself</span>,
                                 <span class="original"><br></span><span class="regularized"></span>as is <span class="original">coḿonly </span><span class="regularized">commonly</span> and really confirmed to the damage of many men;
                             </div>
-                            <div class="ab">
+                            <div class="ab" id="basic-waypoint__5">
                             	<span class="milestone">015</span><span class="milestone">e01-10</span>but car<span class="original">=<br></span>rying a white wand girt with two Serpents <span class="original">crossewise </span><span class="regularized">crosswise</span>, which can draw <span class="original">soules </span><span class="regularized">souls</span>
                             	<span class="original"><br></span><span class="regularized"></span>out of <span class="original">bodyes </span><span class="regularized">bodies</span>, and bring them <span class="original">backe </span><span class="regularized">back</span> <span class="original">againe </span><span class="regularized">again</span>, and <span class="original">doe </span><span class="regularized">do</span> many such contrary
                                 <span class="original"><br></span><span class="regularized"></span>things, <span class="original">hee </span><span class="regularized">he</span> exquisitely <span class="original">repræsents </span><span class="regularized">represents</span> the <span class="original">Philosophicall </span><span class="regularized">Philosophical</span> Mercury. <span class="milestone">e01-11</span>Mercury there<span class="original">=<br></span>fore is wind, which takes Sulphur or Dionysius, or, if you had rather, <span class="original">Æscu
@@ -505,16 +306,7 @@
                         </div>
                     </div>
                 </div>
-				<div class="original text is-hidden">
-					<div class="switch-wrapper left">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
+                <div class="original is-hidden">
 					<div class="lang--latin _discourse--latin edition--regularized" lang="la">
 						<span class="pb atalanta-fugiens">14</span>
 			            <div class="discourse la">
@@ -551,7 +343,7 @@
 			                     <span class="original"><br/></span>ipse ventus, ut in communi, multorum cum damno re ipsa con<span class="original">-<br/></span>
 			                </div>
 			               	<span class="pb atalanta-fugiens">15</span>
-			               	<h3 class="title">DISCURSUS I.</h3>
+			               	<h3 class="title" id="basic-waypoint__5">DISCURSUS I.</h3>
 			               	<div class="discourse-p2">
 			                     <span class="original"><br/></span>vincitur: <span class="milestone atalanta-fugiens">e01-10</span> At quia caduceum gestet binis serpentibus transversim
 			                     <span class="original"><br/></span>cinctum, qui animas ex corporibus ducat <span class="original">&amp;</span> reducat, <span class="original">&amp;</span> multa eius<span class="original">-<br/></span>modi contraria efficiat, Philosophici Mercurii symbolum optimè
@@ -570,229 +362,17 @@
 			                     <span class="original"><br/></span>nascitur:</span> <span class="milestone atalanta-fugiens">e01-18</span> Et gradu 8. <span class="italic">spiritus aërei siml in aërem scandentes se diligunt, ut
 			                     <span class="original"><br/></span>Hermes</span> inquit, <span class="italic">portavit illum ventus in ventre suo: Quia generatio ge<span class="original">-<br/></span>niti nostri fit in aëre <span class="original">&amp;</span> nascens in aëre sapienter nascitur: Ascendit enim à
 			                     <span class="original"><br/></span>terra in c<span class="original">œ</span><span class="regularized">[oe]</span>lum, iterúmque descendit in terram conquirendo vim superio<span class="original">-<br/></span>rem <span class="original">&amp;</span> inferiorem.</span>
-							</div>                        
+							</div>
+							</div>                       
 			            </div>
-					</div>
-				</div>
-			</section>
-			<section class="section__discourse section--double panel--right is-hidden">
-				<div class="translation is-hidden">
-					<div class="switch-wrapper right">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--english _discourse--english edition--normalized text" lang="en-US">
-						<span class="pb">9 | Beinecke</span>
-						<span class="pb Meier">14 | Maier</span>
-						<div class="discourse">
-							<h3 class="discourse">Discourse I.</h3>
-							<div class="ab">
-								<span class="milestone">e01-01</span>Hermes the most industrious inquisitor into every <span class="choice"><span class="original">naturall </span><span class="regularized">natural</span></span> secret doth
-		                        in his Smaragdine table elegantly, though concisely, describe the <span class="choice"><span class="original">naturalle </span><span class="regularized">natural</span></span> 
-		                        <span class="choice"><span class="original">worke </span><span class="regularized">work</span></span>, where amongst other things <span class="choice"><span class="original">hee </span><span class="regularized">he</span></span> sayth: the wind <span class="choice"><span class="original">carrys </span><span class="regularized">carries</span></span> him in his 
-		                        belly: as if <span class="choice"><span class="original">hee </span><span class="regularized">he</span></span> should say, <span class="choice"><span class="original">H<span class="underline2">ee</span> </span><span class="regularized">H<span class="underline2">e</span></span></span>, who<span class="underline2">se father</span> is <span class="underline2">Sol,</span> and mo<span class="underline2">ther</span> L<span class="underline2">una</span>, 
-		                        must, bef<span class="underline2">ore <span class="choice"><span class="original">hee </span><span class="regularized">he</span></span></span> ca<span class="underline2">n be</span> brou<span class="underline2">ght</span> to li<span class="underline2">ght,</span> be <span class="choice"><span class="original">c<span class="underline2">arryed</span> </span><span class="regularized">c<span class="underline2">arried</span></span></span> by wi<span class="underline2">ndy</span> fu<span class="underline2">mes,</span> <span class="underline2">even</span>
-		                        a<span class="underline2">s a</span> bird is <span class="underline2">caryed<span class="choice"><span class="original"> </span><span class="regularized">carried</span></span> by</span> the <span class="underline2"><span class="choice"><span class="original">aire </span><span class="regularized">air</span></span>, w</span>hen it <span class="choice"><span class="original">flyes </span><span class="regularized">flies</span></span>: <span class="milestone">e01-02</span><span class="underline2">now</span> <span class="underline2">from</span> fu<span class="underline2">mes</span> or w<span class="underline2">inds</span>, (which
-		                        are nothing <span class="choice"><span class="original">els </span><span class="regularized">else</span></span> but <span class="choice"><span class="original">aire </span><span class="regularized">air</span></span> moved) <span class="underline2">coagulated is produced water</span>, <span class="underline2">from which mixed</span>
-		                        <span class="underline2">with earth </span><span class="choice"><span class="original">doe </span><span class="regularized">do</span></span> pr<span class="underline2">oceed all <span class="choice"><span class="original">mineralls </span><span class="regularized">minerals</span></span> and <span class="choice"><span class="original">metalls </span><span class="regularized">metals</span></span></span>: <span class="milestone">e01-03</span>Yea these very things are
-		                        determined to consist and be <span class="choice"><span class="original">imediately </span><span class="regularized">immediately</span></span> coagulated of fumes: whether 
-		                        therefore it be ascribed to water or fume, the thing is the same, because
-		                        they are both the matter of wind: <span class="milestone">e01-04</span>the same may be <span class="choice"><span class="original">sayd </span><span class="regularized">said</span></span> of <span class="choice"><span class="original">mineralls </span><span class="regularized">minerals</span></span> 
-		                        and <span class="choice"><span class="original">metalls </span><span class="regularized">metals</span></span>, though more remotely: now the <span class="choice"><span class="original">quæstion </span><span class="regularized">question</span></span> is; <span class="underline2">who</span> <span class="underline2"><span class="choice"><span class="original">hee </span><span class="regularized">he</span></span> is</span>, that 
-		                        ought to be <span class="choice"><span class="original">carryd </span><span class="regularized">carried</span></span> by wind? <span class="milestone">e01-05</span>I answer, Chymically, it is <span class="underline2">Sulphur</span>, <span class="underline2">which i</span>s 
-		                        <span class="underline2"><span class="choice"><span class="original">carryd </span><span class="regularized">carried</span></span> in Argent vive</span>, as Lully in his <span class="choice"><span class="original">booke </span><span class="regularized">book</span></span>, Chapt 32 attests, and <span class="choice"><span class="original">alle </span><span class="regularized">all</span></span> the <span class="note-mark">*</span><div class="margin-note"><span class="note-mark">*</span>Lully there. The wind <span class="choice"><span class="original">carryes </span><span class="regularized">carries</span></span> him in his belly, that is, Sulphur is <span class="choice"><span class="original">carryd </span><span class="regularized">carried</span></span> in ☿. and Chap. 47. The Stone is fire <span class="choice"><span class="original">carryd </span><span class="regularized">carried</span></span> in the belly of aire<span class="pc">. . . . .</span></div>
-		                        rest; physically, it is an infant, which ought in a little time to be <span class="choice"><span class="original">borne </span><span class="regularized">born</span></span> into
-		                        the world: I say <span class="choice"><span class="original">allso </span><span class="regularized">also</span></span> Arithmetically, that it is the root of a Cube; Musically,
-		                        that it is the Disdiapason; Geometrically, that it is a punctum the <span class="choice"><span class="original">begining </span><span class="regularized">beginning</span></span>
-		                        of a running line; Astronomically, the center of the planets, <span class="choice"><span class="original">Saturne </span><span class="regularized">Saturn</span></span>,
-		                        Jupiter, and Mars: <span class="milestone">e01-06</span>though these be different subjects, yet if they be 
-		                        well <span class="choice"><span class="original">compard </span><span class="regularized">compared</span></span> together, they will easily demonstrate the offspring of wind,
-		                        which must be left to every mans industry more or <span class="choice"><span class="original">lesse </span><span class="regularized">less</span></span>. <span class="milestone">e01-07</span>But I indigitate
-		                        the matter more plainly thus: ev<span class="underline2">ery Mercury is compounded of fumes,</span> 
-		                        <span class="underline2">that is</span>, o<span class="underline2">f water elevating earth with it into an airy rarit</span>y, <span class="underline2">and of earth</span>
-		                        <span class="underline2">forcing <span class="choice"><span class="original">aire </span><span class="regularized">air</span></span> to</span> <span class="underline2"><span class="choice"><span class="original">returne </span><span class="regularized">return</span></span> into a <span class="choice"><span class="original">watry </span><span class="regularized">watery</span></span> earth</span> or <span class="underline2">earthy water:</span> <span class="milestone">e01-08</span>for <span class="underline2">the Ele</span><span class="underline2">ments being <span class="choice"><span class="original">alltogether </span><span class="regularized">altogether</span></span> in it,</span> and mixed, and subdued and re<span class="underline2">duced together</span>
-		                        <span class="underline2">into a viscous nature,</span> th<span class="underline2">ey <span class="choice"><span class="original">doe </span><span class="regularized">do</span></span> not easily recede one from the other</span>, <span class="superscript">1</span>but
-		                        <span class="superscript">3</span>either <span class="superscript">5</span>the <span class="superscript">6</span>volatile <span class="superscript">2</span><span class="choice"><span class="original">doe </span><span class="regularized">do</span></span> <span class="superscript">4</span>follow <span class="superscript">7</span>above, <span class="superscript">8</span>or <span class="choice"><span class="original">remayne </span><span class="regularized">remain</span></span> below with the fixed, the
-		                        first whereof is evident in <span class="choice"><span class="original">coḿon </span><span class="regularized">common</span></span> Mercury, the other in the <span class="choice"><span class="original">Philosophicall </span><span class="regularized">Philosophical</span></span>
-		                        and fixed <span class="choice"><span class="original">metalls </span><span class="regularized">metals</span></span>: in these the fixed Elements <span class="choice"><span class="original">doe </span><span class="regularized">do</span></span> <span class="choice"><span class="original">prædominate </span><span class="regularized">predominate</span></span> <span class="add">over</span> the volatile,
-		                        in <span class="underline2"><span class="superscript">^</span>that</span> the volatile oversway the fixed: <span class="milestone">e01-09</span>nor indeed is it without reason, that 
-		                        Mercury is <span class="choice"><span class="original">calld </span><span class="regularized">called</span></span> and reputed the messenger, interpreter, and as it were the
-		                        running intermediate minister of the other Gods, with wings fitted to his
-		                        head and feet: for <span class="choice"><span class="original">hee </span><span class="regularized">he</span></span> is windy, and <span class="choice"><span class="original">flyes </span><span class="regularized">flies</span></span> through the <span class="choice"><span class="original">aire </span><span class="regularized">air</span></span> as wind <span class="choice"><span class="original">itselfe </span><span class="regularized">itself</span></span>,
-		                        as is <span class="choice"><span class="original">coḿonly </span><span class="regularized">commonly</span></span> and really confirmed to the damage of many men; <span class="milestone">e01-10</span>but carrying a white wand girt with two Serpents <span class="choice"><span class="original">crossewise </span><span class="regularized">crosswise</span></span>, which can draw <span class="choice"><span class="original">soules </span><span class="regularized">souls</span></span>
-		                        out of <span class="choice"><span class="original">bodyes </span><span class="regularized">bodies</span></span>, and bring them <span class="choice"><span class="original">backe </span><span class="regularized">back</span></span> <span class="choice"><span class="original">againe </span><span class="regularized">again</span></span>, and <span class="choice"><span class="original">doe </span><span class="regularized">do</span></span> many such contrary
-		                        things, <span class="choice"><span class="original">hee </span><span class="regularized">he</span></span> exquisitely <span class="choice"><span class="original">repræsents </span><span class="regularized">represents</span></span> the <span class="choice"><span class="original">Philosophicall </span><span class="regularized">Philosophical</span></span> Mercury. <span class="milestone">e01-11</span>Mercury therefore is wind, which takes Sulphur or Dionysius, or, if you had rather, <span class="choice"><span class="original">Æscu
-		                        lapius </span><span class="regularized">Aesculapius</span></span>, beging yet an imperfect Embryo, out of the mothers belly, or even out<span class="note-mark">*</span><div class="margin-note"><span class="note-mark">*</span>becomes Volatile</div>
-		                        of the ashes of the mothers body burned, and <span class="choice"><span class="original">carryes </span><span class="regularized">carries</span></span> it thither, where it 
-		                        may <span class="underline2">be matured</span>; <span class="milestone">e01-12</span>and the Embryo is Sulphur, which is infused into <span class="note-mark">*</span><div class="margin-note"><span class="note-mark">*</span>digested &amp; fix'd</div>
-		                        the belly of Boreas by the <span class="choice"><span class="original">cælestiall </span><span class="regularized">celestial</span></span> <span class="choice"><span class="original">Sunne </span><span class="regularized">Sun</span></span>, that <span class="choice"><span class="original">hee </span><span class="regularized">he</span></span> may bring it 
-		                        forth being matured, who in the <span class="choice"><span class="original">compleat </span><span class="regularized">complete</span></span> time of his <span class="choice"><span class="original">cariage </span><span class="regularized">carriage</span></span> <span class="choice"><span class="original">produceth </span><span class="regularized">produces</span></span><span class="note-mark">*</span><div class="margin-note"><span class="note-mark">*</span>the White &amp; <span class="unclear">reddish</span>
-		                            <span class="unclear">or</span> 🜍</div>
-		                        twins, one with w<span class="underline2">hite <span class="choice"><span class="original">haire </span><span class="regularized">hair</span></span></span>, called Calais, the other with <span class="underline2">red</span>, named<span class="note-mark">*</span><div class="margin-note"><span class="note-mark">*</span>x a</div>
-		                        Zethe: <span class="milestone">e01-13</span>these <span class="choice"><span class="original">Sonns </span><span class="regularized">Sons</span></span> of Boreas were (as Orpheus the <span class="choice"><span class="original">Chymicall </span><span class="regularized">Chymical</span></span> poet writes)
-		                        
-		                        
-		                        <span class="pb">10 | Beinecke</span>
-		                        with Jason among the Argonauts to carry away the golden fleece from Colchos: and P<span class="underline2">hineus</span> the blind Prophet, infested by the <span class="underline2"><span class="choice"><span class="original">Harpyes </span><span class="regularized">Harpies</span></span></span>, could not be<span class="note-mark">*</span><div class="margin-note"><span class="note-mark">*</span><span class="unclear">Black </span></div>
-		                        freed, but by the <span class="choice"><span class="original">sayd </span><span class="regularized">said</span></span> <span class="choice"><span class="original">Sonns </span><span class="regularized">sons</span></span> of Boreas, for which <span class="choice"><span class="original">benefitt </span><span class="regularized">benefit</span></span> obtained from 
-		                        them, <span class="choice"><span class="original">hee </span><span class="regularized">he</span></span>, being <span class="choice"><span class="original">gratefull </span><span class="regularized">grateful</span></span>, declared the whole manner of the way to the
-		                        Argonauts: <span class="milestone">e01-14</span>But t<span class="underline2">he <span class="choice"><span class="original">Harpyes </span><span class="regularized">Harpies</span></span> are</span> <span class="choice"><span class="original">noe </span><span class="regularized">no</span></span> other, than cor<span class="underline2">rupting Sulphu</span>r, w<span class="underline2">hich</span>
-		                        <span class="underline2">is driven away by the <span class="choice"><span class="original">Sonns </span><span class="regularized">sons</span></span> of Boreas</span>, having <span class="choice"><span class="original">attaind </span><span class="regularized">attained</span></span> to full age, and of a
-		                        thing imperfect or molested with noxious birds is made perfect, not subject to that <span class="choice"><span class="original">evill </span><span class="regularized">evil</span></span>, which then <span class="choice"><span class="original">shews </span><span class="regularized">shows</span></span> to Jason the <span class="choice"><span class="original">Physitian </span><span class="regularized">Physician</span></span> the way to
-		                        <span class="choice"><span class="original">obtaine </span><span class="regularized">obtain</span></span> the golden fleece. <span class="milestone">e01-15</span>These winds our countryman Basill amongst
-		                        others <span class="choice"><span class="original">allso </span><span class="regularized">also</span></span> takes notice of, and plainly <span class="choice"><span class="original">sayth </span><span class="regularized">says</span></span>: <span class="subst"><span class="del">The</span><span class="add"><span class="underline2">A double</span></span></span><span class="underline2">wind</span> ought to <span class="subst"><span class="del">come</span><span class="add">arise</span></span>;<span class="note-mark">*</span><div class="margin-note"><span class="note-mark">*</span>absurdly described</div>
-		                        <span class="del">that</span>called Vulturnus, and <span class="subst"><span class="del">after that one</span><span class="add">; then a single wind</span></span>, ca<span class="underline2">lled Notu</span>s, which <span class="subst"><span class="del">must</span><span class="add">will</span></span>blow<span class="note-mark">*</span><div class="margin-note"><span class="note-mark">*</span>Naaman comes from the north</div>
-		                        from the East and South impetuously, whose motion ceasing, <span class="choice"><span class="original">soe </span><span class="regularized">so</span></span> as water to be made of <span class="choice"><span class="original">aire </span><span class="regularized">air</span></span>, you <span class="subst"><span class="del">may</span><span class="add">will</span></span>confidently <span class="choice"><span class="original">beleive </span><span class="regularized">believe</span></span>, th<span class="underline2">at a <span class="choice"><span class="original">corporall </span><span class="regularized">corporal</span></span></span> 
-		                        <span class="underline2">thing will be made of a <span class="choice"><span class="original">spirituall </span><span class="regularized">spiritual</span></span></span>. <span class="milestone">e01-16</span>And Ripley gate 8. <span class="choice"><span class="original">sayth </span><span class="regularized">says</span></span>, that 
-		                        our Infant ought to be <span class="choice"><span class="original">borne </span><span class="regularized">born</span></span> <span class="choice"><span class="original">againe </span><span class="regularized">again</span></span> in <span class="choice"><span class="original">aire </span><span class="regularized">air</span></span>, that is, in the belly of
-		                        wind: <span class="milestone">e01-17</span><span class="choice"><span class="original">Sayth </span><span class="regularized">Says</span></span> Scala Philosophorum, degree 6. after the same sense thus:
-		                        You must know that the <span class="choice"><span class="original">Sonne </span><span class="regularized">Son</span></span> of the wise is <span class="choice"><span class="original">borne </span><span class="regularized">born</span></span> in the <span class="choice"><span class="original">aire </span><span class="regularized">air</span></span>: <span class="milestone">e01-18</span>and
-		                        degree 8: Airy Spirits ascending together into the <span class="choice"><span class="original">aire </span><span class="regularized">air</span></span> <span class="choice"><span class="original">doe </span><span class="regularized">do</span></span> love <span class="subst"><span class="del">them</span><span class="add">one=</span></span>
-		                        <span class="subst"><span class="del">selves</span><span class="add">another</span></span>, as Hermes <span class="choice"><span class="original">sayth </span><span class="regularized">says</span></span>, the wind <span class="choice"><span class="original">carryd </span><span class="regularized">carried</span></span> him in its belly: because 
-		                        the generation of our <span class="choice"><span class="original">Sonne </span><span class="regularized">Son</span></span> is made in the <span class="choice"><span class="original">aire </span><span class="regularized">air</span></span>, and being <span class="choice"><span class="original">borne </span><span class="regularized">born</span></span> 
-		                        in the <span class="choice"><span class="original">aire </span><span class="regularized">air</span></span> is <span class="choice"><span class="original">borne </span><span class="regularized">born</span></span> wisely: for <span class="choice"><span class="original">hee </span><span class="regularized">he</span></span> ascends from earth to heaven, and
-		                        <span class="choice"><span class="original">againe </span><span class="regularized">again</span></span> descends to earth acquiring both the <span class="choice"><span class="original">superiour </span><span class="regularized">superior</span></span> and <span class="choice"><span class="original">inferiour </span><span class="regularized">inferior</span></span>
-		                        virtue. <span class="pc">- - - - - - - - - - - - -</span>
-							</div>
-						</div>	
-					</div>
-				</div>
-				<div class="original text">
-					<div class="switch-wrapper right">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--latin _discourse--latin edition--regularized" lang="la">
-						<span class="pb Maier1618">14</span>
-						<h3 class="discourse">DISCURSUS I</h3>
-						<div class="discourse">
-							<div class="discourse-p1">
-								<div class="ab">
-									<milestone unit="section" n="e01-01"/><persName ref="https://viaf.org/viaf/24571510/">Hermes</persName> omnis secreti naturalis indagator diligentissimus in
-									<br/>tabula sua smaragdina graphic<hi rend="grave">e</hi>, lic<hi rend="grave">e</hi>t succinct<hi rend="grave">e</hi>, describit opus
-									<br/>naturale, ubi inter alia inquit: <quote source="https://viaf.org/viaf/225064984"><hi rend="italic">Portavit eum ventus in ventre suo,</hi></quote> qua
-									<br/>si dicat, Ille, cu<choice><orig>j</orig><reg>i</reg></choice> pater est SOl, mater ver<hi rend="grave">o</hi> Luna, antequam in lu
-									<br/>cem edatur, portabitur <hi rend="grave">a</hi> fumis ventosis, quemadmodum avis ab
-									<br/>aëre, dum volat: <milestone unit="section" n="e01-02"/> Ex fumis autem seu ventis (qui sunt nihil aliud,
-									<br/>qu<hi rend="grave">a</hi>m aër motus) coagulatis fit aqua, ex qua cum terra mixta mi
-									<br/>neralia <g type="ampersand">et</g> metalla omnia: <milestone unit="section" n="e01-03"/> Im<hi rend="grave">o</hi> h<hi rend="ligature">ae</hi>c ipsa ex fumis constare <g type="ampersand">et</g> coagu
-									<br/>lari immediat<hi rend="grave">e</hi> statuuntur: Sive itaque in aquam seu fumum po
-									<br/>natur, eodem res redit, quia utraque venti materia est: <milestone unit="section" n="e01-04"/> Idem di
-									<br/>cendum de mineralibus <g type="ampersand">et</g> metallis, lic<hi rend="grave">e</hi>t magis remot<hi rend="grave">e</hi>: Qu<hi rend="ligature">ae</hi>ritur
-<!-- 										<note place="margin-left" >
-											<br/><persName ref="http://viaf.org/viaf/120696927"><expan><abbr>Lull<am>.</am></abbr><ex>ius</ex></expan></persName> <expan><abbr>ibi<am>.</am></abbr><ex>dem</ex></expan>
-											<br/><quote>portat il
-											<br/>lum ventus
-											<br/>in ventre
-											<br/>suo,</quote> hoc est,
-											<br/>sulfur por
-											<br/>tatur in ar
-											<br/>gento vivo.
-											<br/>Et <expan><abbr>C<am>.</am></abbr><ex>apite</ex></expan> <num type="ordinal" value="47">47</num>.
-											<br/><quote>Lapis est
-											<br/>ignis de
-											<br/>portatus  in
-											<br/>ventre aë
-											<br/>ris.</quote>                           
-										</note> -->
-									<br/>autem, quis ille sit, qui <hi rend="grave">a</hi> vento portari debeat? <milestone unit="section" n="e01-05"/> Respondeo, <hi rend="italic">chymi      
-									<br/>c<hi rend="grave">e</hi></hi>, est sulphur, quod portatur in argento vivo, ut <persName ref="http://viaf.org/viaf/120696927"><expan><abbr>Lull<am>.</am></abbr><ex>ius</ex></expan></persName> <title><expan><abbr>Codicill<am>.</am></abbr><ex>o</ex></expan></title>
-									<br/><expan><abbr>cap<am>.</am></abbr><ex>ite</ex></expan> <num type="ordinal" value="32">32.</num> testatur, c<hi rend="ligature">ae</hi>ter<hi rend="acute">i</hi>que omnes; <hi rend="italic">Physic<hi rend="grave">e></hi></hi>, est f<hi rend="ligature">oe</hi>tus, qui mox in lu
-									<br/>cem nasci debet: Dico <g type="ampersand">et</g> <hi rend="italic">Arithmetic<hi rend="grave">e</hi></hi>, quod sit radix Cubi; <hi rend="italic">Music<hi rend="grave">e</hi></hi>,
-									<br/>qu<hi rend="grave">o</hi>d sit Disdiapason; <hi rend="italic">Geometric<hi rend="grave">e</hi></hi>, qu<hi rend="grave">o</hi>d sit punctum line<hi rend="ligature">ae</hi> fluentis
-									<br/>principium, <hi rend="italic">Astronomic<hi rend="grave">e</hi></hi>, centrum <placeName>Saturni</placeName>, <placeName>Jovis</placeName> <g type="ampersand">et</g> <placeName>Martis</placeName>, plane
-									<br/>tarum: <milestone unit="section" n="e01-06"/> H<hi rend="ligature">ae</hi>c lic<hi rend="grave">e</hi>t diversa sine subiecta, tamen si bene inter se com
-									<br/>parentur, f<hi rend="ligature">oe</hi>tum venti facil<hi rend="grave">e</hi> demonstrabunt, qu<hi rend="grave">o</hi>d cuiuslibet in
-									<br/>dustri<hi rend="ligature">ae</hi> maiori aut minori relinquendum erit. <milestone unit="section" n="e01-07"/> At rem plani<hi rend="grave">u</hi>s sic
-									<br/>indigeto: Omnis Mercurius ex fumis est compositus, hoc est, ex
-									<br/> aqua sublevante terram secu in aëriam raritatem, <g type="ampersand">et</g> ex terra co
-									<br/>gente aërem redire in aqueam terram seu terream aquam: <milestone unit="section" n="e01-08"/> C<hi rend="grave">u</hi>m
-									<br/>enim Elementa in eo sine per omnia, <g type="ampersand">et</g> mixta, <g type="ampersand">et</g> invicem in quan
-									<br/>dam viscosam naturam conculcata <g type="ampersand">et</g> redacta, non facil<hi rend="grave">e</hi> ab invi
-									<br/>cem recedunt, sed vel volatilia sequuntur superi<hi rend="grave">us</hi>, vel apud fixa
-									<br/>inferi<hi rend="grave">u</hi>s manent, quorum primum in vulgari Mercurio, alterum
-									<br/>in Philosophico <g type="ampersand">et</g> metallis fixis apparet: In his Elementa fixa pr<hi rend="ligature">ae</hi>
-									<br/>dominantur volatilibus, in illo volatilia fixis. <milestone unit="section" n="e01-09"/> Nec ver<hi rend="grave">o</hi> <expan><abbr>absq<am>;</am></abbr><ex>ue</ex></expan> cau
-									<br/>sa est, cur Mercurius Deorum reliquorum nuncius, interpres <g type="ampersand">et</g>
-									<br/>quasi minister intermedius currens dicatur <g type="ampersand">et</g> habeatur, als ad
-									<br/>caput <g type="ampersand">et</g> pedes adaptatis: Ventosus enim est <g type="ampersand">et</g> volat per aëra, ut
-									<br/>ipse ventus, ut in communi, multorum cum damno re ipsa con
-								</div>
-							</div>
-							<span class="pb Maier1618">15</span>
-							<div class="discourse-p2">
-								<div class="ab">
-									<br/>vincitur: <milestone unit="section" n="e01-10"/> At quia caduceum gestet binis serpentibus transversim
-									<br/>cinctum, qui animas ex corporibus ducat <g type="ampersand">et</g> reducat, <g type="ampersand">et></g> multa eius
-									<br/>modi contraria efficiat, Philosophici Mercurii symbolum optim<hi rend="grave">e</hi>
-									<br/>exprimit. <milestone unit="section" n="e01-11"/> <persName>Mercurius</persName> itaque est ventus, qui sulfur seu <persName>Dionysium</persName>,
-									<br/>aut, si mavis, <persName><hi rend="ligature">Ae</hi>sculapium</persName> adhuc imperfectum f<hi rend="ligature">oe</hi>tum ex ventre
-									<br/>materno, vel etiam ex cineribus corporis materni combusti acci
-									<br/>piat <g type="ampersand">et</g> portet e<hi rend="grave">o</hi>, ubi maturari possit; <milestone unit="section" n="e01-12"/> Et Embryo est Sulfur, quod <hi rend="grave">a</hi>
-									<br/>Sole c<hi rend="ligature">oe</hi>lesti <hi rend="italic">Bore<hi rend="ligature">ae</hi></hi> vento infusum est, ut is maturatum pariat, qui
-									<br/>gestationis su<hi rend="ligature">ae</hi> absoluto tempore gemellos edit, unum albis ca
-									<br/>pillis, <persName>Calaim</persName> dictum, alterum rubris, <persName>Zeten</persName>: <milestone unit="section" n="e01-13"/> Hi <persName><hi rend="italic">Bore<hi rend="ligature">ae></hi></hi></persName> filii fu<hi rend="circumflex">e></hi>re
-									<br/>(ut <persName ref="http://viaf.org/viaf/309825473"><hi rend="italic">Orpheus</hi></persName> poëta Chymicus scribit) apud <persName><hi rend="italic">Jasonem</hi></persName> inter Argonau
-									<br/>tas ad vellus aureum <hi rend="grave">a</hi> <placeName ref="https://pleiades.stoa.org/places/863770"><hi rend="italic">Colchis</hi></placeName> auferendum: <persName><hi rend="italic">Phineus</hi></persName> ver<hi rend="grave">o</hi> vates c<hi rend="ligature">oe</hi>
-									<br/>cus ab <persName>Harpyjis</persName> infestatus, liberari non potuit, nisi <hi rend="grave">a</hi> dictis <persName><hi rend="italic">Bore<hi rend="ligature">ae</hi></hi></persName> fi
-									<br/>liis: Pro quo beneficio ab iis impetrato ille gratus <persName><hi rend="italic">Argonautis></hi></persName> o
-									<br/>mnem vi<hi rend="ligature">ae</hi> rationem declaravit. <milestone unit="section" n="e01-14"/> At <persName><hi rend="italic">Harpyj<hi rend="ligature">ae</hi></hi></persName> nihil aliud sunt, qu<hi rend="grave">a</hi>m
-									<br/>sulfur corrumpens, quod abigitur <hi rend="grave">a</hi> <persName><hi rend="italic">Bore<hi rend="ligature">ae</hi></hi></persName> filiis, c<hi rend="grave">u</hi>m ad justam <hi rend="ligature">ae></hi>
-									<br/>tatem pervenerint, <g type="ampersand">et</g> ex imperfecto seu molestato <hi rend="grave">a</hi> volatilibus
-									<br/>noxiis fit perfectum, illi malo non subjectum, quod deinde ad vel
-									<br/>lus aureum <persName><hi rend="italic">Jasoni</hi></persName> medico obtinendum viam indicat. <milestone unit="section" n="e01-15"/> Horum <expan><abbr>ve</abbr><ex>n</ex>
-									<br/><abbr>torum</abbr></expan> meminit <expan><abbr>quoq<am>;</am></abbr><ex>ue</ex></expan> inter alios <persName ref="http://viaf.org/viaf/31992530/"><hi rend="italic">Basilius</hi></persName> <hi rend="italic">nostras</hi>, qui cla<choice><orig>r</orig><corr>v</corr></choice><hi rend="grave">e></hi> <num type="ordinal">6</num>. inquit:
-									<br/><quote type="direct"><hi rend="italic">Nam geminus ventus venire debet, <persName>Vulturnus</persName> dictus, ac deinde simplex,
-									<br/><persName>Notus</persName> appellatus, qui ab oriente <g type="ampersand">et</g> meridie impetuos<hi rend="grave">e</hi> spirabunt, quorum
-									<br/>motione cessante, it aut ex aëre facta sit aqua, audacter confides, quod ex sp
-									<br/>rituali corporale fiet.</hi></quote> <milestone unit="section" n="e01-16"/> Et <persName ref="http://viaf.org/viaf/122334648"><hi rend="italic">Ripl<hi rend="ligature">ae</hi>us</hi></persName> <title><expan><abbr>port<am>.</am></abbr><ex>u</ex></expan></title> <num type="ordinal" value="8">8</num>. dicit <quote type="paraphrase">in aëre nostrum infan
-									<br/>tem debere renasci</quote>, hoc est, in ventre venti: <milestone unit="section" n="e01-17"/> Ad eundem sensum
-									<br/><title>scala <expan><abbr>philos<am>.</am></abbr><ex>ophorum</ex></expan></title> gradu. <num type="ordinal" value="6">6</num>. Et <quote><hi rend="italic">sciendum</hi></quote>, inquit, <quote><hi rend="italic">quod natus sapientis in aëre
-									<br/>nascitur:</hi></quote> <milestone unit="section" n="e01-18"/> Et gradu <num type="ordinal" value="8">8</num>. <quote><hi rend="italic">spiritus aërei siml in aërem scandentes se diligunt, ut
-									<br/><persName ref="https://viaf.org/viaf/24571510/">Hermes</persName></hi> inquit, <hi rend="italic"><quote>portavit illum ventus in ventre suo:</quote> Quia generatio ge
-									<br/>niti nostri fit in aëre <g type="ampersand">et</g> nascens in aëre sapienter nascitur: Ascendit enim <hi rend="grave">a></hi>
-									<br/>terra in c<hi rend="ligature">oe</hi>lum, iter<hi rend="acute">u</hi>mque descendit in terram conquirendo vim superio
-									<br/>rem <g type="ampersand">et</g> inferiorem.</hi></quote>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</section>
 		</div><!-- END EMBLEM -->
 	</main> <!-- END OF EMBLEM PAGE -->
 <!-- JS -->
-	<script src="../assets/js/topnav.js"></script>
 	<script src="../assets/js/notation.js"></script>
 	<script src="../assets/js/emblem.js"></script>
 	<script src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

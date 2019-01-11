@@ -1,0 +1,130 @@
+@import 'utilities';
+@import 'colors';
+
+.subnav {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	font-family: $body-font_emblem;
+	font-size: 1.125rem;
+	font-weight: 500;
+	height: $subnav-h;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	ul { 
+		background-color: $white;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		padding: .5rem 3rem;
+		width: 100%;
+	}
+	li {
+		border-radius: 5px;
+		color: $black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 3.5rem;
+		flex: 1 0 auto;
+	}
+	li:nth-child(1) {
+		order: 1;
+	}
+	li:nth-child(2) {
+		order: 3;
+	}	
+	li:nth-child(3) {
+		order: 4;
+	}
+	li:nth-child(4) {
+		order: 5;
+	}
+	li:nth-child(5) {
+		order: 2;
+	}
+	li:nth-child(6) {
+		order: 6;
+	}	
+	li:nth-child(7) {
+		order: 7;
+	}
+	li:nth-child(8) {
+		order: 8;
+	}
+	li:hover {
+		background-color: $orange-yellow_brighter;
+	}
+	li:hover a {
+		color: $black;
+	}
+	a {
+		color: $black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+	}
+}
+.subnav li.subnav__views--single, .subnav li.subnav__views--double {
+	background-color: $white;
+	border: 2px solid $black;
+	border-radius: 5px;
+	height: 3rem;
+	width: 14rem;
+	position: absolute;
+	right: 2rem;
+	top: 5.625rem;
+	a {
+		color: $black;
+	}
+}
+.subnav__views--single a span {
+	background-image: url('../icons/icon_single-page-with-text.svg');
+	background-repeat: no-repeat;
+	height: 2rem;
+	width: 1.9rem;
+}
+.subnav__views--double a span {
+	background-image: url('../icons/icon_double-page-with-text.svg');
+	background-repeat: no-repeat;
+	height: 2rem;
+	width: 3.8rem;
+}
+.subnav__options--option {
+	height: 60%;
+}
+.is-inactive {
+	background-color: $gray-medium !important;
+	pointer-events: none !important;
+	a {
+		color: $black !important;
+	}
+}
+
+/*** Breakpoints ***/
+/* small  -  mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.emblem {
+		margin-top: 0;
+	}
+	.subnav {
+		height: auto;
+		margin-top: 0 !important;
+		position: fixed;
+		bottom: 0;
+		ul {
+			justify-content: center;
+			padding: .5rem;
+		}
+	}
+	.subnav__views--single, .subnav__views--double {
+		display: none !important;
+	}
+	.wrapper-sidenav {
+		display: none !important;
+	}
+}
