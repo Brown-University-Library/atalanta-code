@@ -1,6 +1,7 @@
 
 /*
 
+<<<<<<< HEAD
   The tempo is being read from the DOM but the tempo is not taking hold
   in terms of what's being returned for timing in Verovio
   
@@ -15,6 +16,13 @@
   manager to updateAllViews
   
   May want to have a Verovio-type API for other visualizations (e.g. )
+=======
+
+  TODO LIST:
+
+  The tempo is being read from the DOM but the tempo is not taking hold
+  in terms of what's being returned for timing in Verovio
+>>>>>>> master
 
 */
 
@@ -31,6 +39,10 @@
       PIANO_ROLL: 'ata-viz-pianoroll',
       AUDIO: 'ata-viz-audio'
     },
+<<<<<<< HEAD
+=======
+    DEFAULT_TEMPO = 56, // If not defined in audio viz element
+>>>>>>> master
     VIZ_REFRESH_INTERVAL = 100, // in ms
     AUDIO_VIZ_MP3_ATTR_NAME = 'data-mp3',
     AUDIO_VIZ_TEMPO_ATTR_NAME = 'data-tempo',
@@ -47,11 +59,21 @@
       barHeight: 5,
       pitchScale: 5,
       HILIGHT_CLASS: 'highlighted'
+<<<<<<< HEAD
     };
 
   // GLOBALS
   
   var audioContext;
+=======
+    },
+    VISUALIZE_BUTTON_TEXT = 'Show piano roll';
+
+  // GLOBALS
+  
+  var audioContext, 
+    verovioToolkit = new verovio.toolkit();
+>>>>>>> master
 
   // UTILITY FUNCTIONS
 
@@ -87,6 +109,7 @@
     // Get rid of default content for browsers with no javascript
     
     containerNode.css('backgroundImage', 'none');
+<<<<<<< HEAD
 
     // Take MEI code, remove tempo information, replace with that tempo
     //  indicated by the tempo attribute in the markup
@@ -111,13 +134,19 @@
                     .replace(/<scoreDef\s+/, '<scoreDef midi.bpm="' + tempo + '" ');
     }
     */
+=======
+>>>>>>> master
     
     // Create verovio toolkit object
 
     function createVerovioObject(meiFileURL) {
       
+<<<<<<< HEAD
       let verovioToolkit = new verovio.toolkit();
       window.v = verovioToolkit; // TODO - this is temp
+=======
+      // let verovioToolkit = new verovio.toolkit();
+>>>>>>> master
 
       // Load the MEI file using a HTTP GET
       
@@ -133,23 +162,45 @@
 
             // verovioToolkit.loadData(setMeiTempo(meiData)); 
             // COMMENTED OUT ABOVE B/C VEROVIO DOESN'T SEEM TO BE READING THE TEMPO FROM THE MEI
+<<<<<<< HEAD
 
+=======
+            console.log(meiData);
+>>>>>>> master
             verovioToolkit.loadData(meiData);
             
             // Convert to MIDI to get timing info
             
             verovioToolkit.renderToMidi();
+<<<<<<< HEAD
+=======
+            // verovioToolkit.renderToMIDI();
+>>>>>>> master
             
             // Create views, model, controllers
             
             let viewManager = ViewManager(containerNode, verovioToolkit),
                 model = Model(viewManager, verovioToolkit);
             
+<<<<<<< HEAD
             // Controller for main window and modals
 
             initControllers(containerNode, model, meiData);
             let modalContainers = containerNode.find('.modal');
             initControllers(modalContainers, model, meiData);
+=======
+            // Controller for main window
+
+            initControllers(containerNode, model, meiData);
+            
+            // Controller for modals
+
+            let modalContainers = containerNode.find('.modal');
+
+            if (modalContainers.length) {
+              initControllers(modalContainers, model, meiData);
+            }
+>>>>>>> master
 
             // Create onclick events to jump to time
             // TODO: test this
@@ -225,12 +276,31 @@
     }
     
     function stopAllViews() {
+<<<<<<< HEAD
       views.forEach((view) => view.stop())
+=======
+      views.forEach(view => view.stop())
+>>>>>>> master
     }
     
     function setMute(muteStatus) {
       console.log("MUTE CHANGE FOR ALL VIEWS");
+<<<<<<< HEAD
       views.forEach((view) => view.onMuteChange(muteStatus));
+=======
+      views.forEach(view => view.onMuteChange(muteStatus));
+    }
+
+    function getDuration() {
+
+      let viewWithDuration = views.find(
+        view => view.getDuration !== undefined
+      );
+
+      return viewWithDuration !== undefined 
+        ? viewWithDuration.getDuration()
+        : Number.POSITIVE_INFINITY;
+>>>>>>> master
     }
     
     function init() {
@@ -243,7 +313,12 @@
     return {
       update: updateAllViews,
       stop: stopAllViews,
+<<<<<<< HEAD
       setMute: setMute
+=======
+      setMute: setMute,
+      getDuration: getDuration
+>>>>>>> master
     };
   }
   
@@ -429,6 +504,7 @@
       
       verovioToolkit.getElementsAtTime(timeInMilliseconds).notes.forEach(
         note => {
+<<<<<<< HEAD
           // console.log(`NOTE ABCD`);
           // console.log(document.getElementById(getLocalNoteID(note)));
           let highLightedNote = document.getElementById(getLocalNoteID(note));
@@ -445,11 +521,35 @@
 
           if (highLightedNoteX > currRightMostNoteX) {
             rightMostNote = highLightedNote;
+=======
+          let highLightedNote = document.getElementById(getLocalNoteID(note));
+
+          if (highLightedNote !== null) {
+            highLightedNote.classList.add(PIANO_ROLL_OPTIONS.HILIGHT_CLASS);
+            highlightedNotes.push(highLightedNote);
+
+            if (rightMostNote === undefined) {
+              rightMostNote = highLightedNote
+            }
+  
+            const highLightedNoteX = highLightedNote.getBBox().x,
+              currRightMostNoteX = rightMostNote.getBBox().x;
+  
+            if (highLightedNoteX > currRightMostNoteX) {
+              rightMostNote = highLightedNote;
+            }
+>>>>>>> master
           }
         }
       );
 
+<<<<<<< HEAD
       centerPianoRollOn(rightMostNote);
+=======
+      if (rightMostNote != undefined) {
+        centerPianoRollOn(rightMostNote);
+      }
+>>>>>>> master
     }
 
 
@@ -509,7 +609,11 @@
 
       let VEROVIO_OPTIONS_2 = { // TEMP - should use the one above
         pageHeight: 3000,
+<<<<<<< HEAD
         pageWidth: 2500, // this just seems to clip; doesn't actually effect notation layouot
+=======
+        pageWidth: 2500, // this just seems to clip; doesn't actually effect notation layout
+>>>>>>> master
         // scale: 33, // 10 => 300 px wide; 20 => 600 px wide
         // scale: scale,
         // ignoreLayout: 1,
@@ -528,8 +632,13 @@
       // Regular expressions to extract the width/height
       //  generated by Verovio
 
+<<<<<<< HEAD
       const widthRE = /^\s*<svg\s+[^>]*width="(\d+)px"/i,
             heightRE = /^\s*<svg\s+[^>]*height="(\d+)px"/i;
+=======
+      const widthRE = /^\s*<svg\s+[^>]*width="([\d\.]+)px"/i,
+            heightRE = /^\s*<svg\s+[^>]*height="([\d\.]+)px"/i;
+>>>>>>> master
 
       // Create page containers
 
@@ -557,10 +666,23 @@
       pageContainers.forEach((pageContainer, pageNumber) => {
 
         let pageContainerWidth = pageContainer.offsetWidth,
+<<<<<<< HEAD
           pageSvgCode = verovioToolkit.renderPage(pageNumber + 1),
           svgWidth = (widthRE.exec(pageSvgCode))[1],
           scale = (pageContainerWidth / svgWidth);
 
+=======
+          pageSvgCode = verovioToolkit.renderPage(pageNumber + 1);
+          //pageSvgCode = verovioToolkit.renderToSVG(pageNumber + 1);
+
+        console.log(pageSvgCode);
+
+        let svgWidth = (widthRE.exec(pageSvgCode))[1],
+          scale = (pageContainerWidth / svgWidth);
+
+
+
+>>>>>>> master
         if (scale < smallestScale) smallestScale = scale;
 
         svgCodeForPages.push(pageSvgCode);
@@ -583,7 +705,10 @@
           // `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
           // `<svg transform-origin="0 0" transform="scale(${smallestScale * CRYSTALS_CONSTANT})" ` 
           `<svg transform-origin="0 0" transform="scale(1)" ` // Not sure why this is necessary
+<<<<<<< HEAD
           //`<svg transform-origin="0 0" transform="scale(${CRYSTALS_CONSTANT})" ` // (CB) this will only work if I also multiply each viewBox height by 1.5, after getting that value for the container height
+=======
+>>>>>>> master
         );
 
         // scaledPageSvgCode = svgCodeForPages[pageIndex]; // ONLY USE IF ABOVE IS COMMENTED OUT
@@ -607,26 +732,46 @@
         // Add viewBox attribute
         // viewBox="0 0 w h"
 
+<<<<<<< HEAD
         /* (CB) see replacement below
+=======
+        //(CB) replace this with the one below once music player is complete
+>>>>>>> master
         scaledPageSvgCode = scaledPageSvgCode.replace(
           /^\s*<svg\s/i,
           `<svg viewBox="0 0 ${width} ${height}" `
         )
+<<<<<<< HEAD
         */
         scaledPageSvgCode = scaledPageSvgCode.replace( // (CB) trying to center the non-scaled SVG
           /^\s*<svg\s/i,
           `<svg viewBox="-200 0 ${width} ${height}" `
         )
+=======
+        
+        // scaledPageSvgCode = scaledPageSvgCode.replace( // (CB) trying to center the non-scaled SVG
+        //   /^\s*<svg\s/i,
+        //   `<svg viewBox="-200 0 ${width} ${height}" `
+        // )
+>>>>>>> master
 
         // TEMP - END
 
 
         pageContainer.innerHTML = scaledPageSvgCode;
+<<<<<<< HEAD
         //console.log("this is my SVG height: " + height);
         //console.log("this is my SVG width: " + width);
         scaleMusicPageElements(pageIndex); // (CB)
       });
 
+=======
+        //scaleMusicPageElements(pageIndex); // (CB) I don't think I need this anymore EDIT: See note below
+      });
+
+      /* (CB) I don't think I need this anymore EDIT: This is still needed at some aspect ratios, particularly when in comparative view to reduce the gap
+      // between the two music pages
+>>>>>>> master
       function scaleMusicPageElements(pageIndex) { // (CB) resize music page wrapper elements to match SVG heights
         let musicPageA, musicPageB, SVGa, SVGb, firstSVG, secondSVG, heightSVGa, heightSVGb, viewBoxHeightA, viewBoxHeightB;
         //console.log("the pageIndex is " + pageIndex); // pageIndex 0 renders SVG 1 and pageIndex 1 renders SVG 2
@@ -656,6 +801,10 @@
           $(musicPageB).attr("height", heightSVGb + "px"); // set height of SVG 2 .music-page wrapper to SVG 2 height
         }
       }
+<<<<<<< HEAD
+=======
+      */
+>>>>>>> master
 
       // Fill with music SVG
 /*
@@ -686,6 +835,7 @@
       // Turn off currently highlighted notes
       
       highlightedNotes.forEach(
+<<<<<<< HEAD
         // (note) => note.attr('fill', '#000').attr('stroke', '#000')
         note => note.classList.remove(HIGHLIGHTED_NOTE_CLASSNAME)
       );
@@ -695,6 +845,20 @@
       verovioToolkit.getElementsAtTime(timeInMilliseconds).notes.forEach(
         note => {
           let highLightedNote = document.getElementById(note);
+=======
+        note => note.classList.remove(HIGHLIGHTED_NOTE_CLASSNAME)
+      );
+
+      // Get new highighted notes and put a classname on them
+
+      highlightedNotes = [];
+      console.log(timeInMilliseconds);
+      window.VVV = verovioToolkit;
+      verovioToolkit.getElementsAtTime(timeInMilliseconds).notes.forEach(
+        noteId => {
+          console.log(noteId);
+          let highLightedNote = document.getElementById(noteId);
+>>>>>>> master
           highLightedNote.classList.add(HIGHLIGHTED_NOTE_CLASSNAME);
           highlightedNotes.push(highLightedNote);
         }
@@ -705,12 +869,19 @@
       
       // TODO: THIS SHOULD BE HANDLED BY CSS
       
+<<<<<<< HEAD
       console.log("MUTE CHANGE FOR CMN");
 
       muteStatus.forEach((mute, index) => {
         $('.measure .staff:nth-of-type(' + (index + 1) + ')')
           .attr('opacity', mute ? '0.2': '1.0');
         $('.measure .barLineAttr path:nth-of-type(' + (index + 1) + ')')
+=======
+      muteStatus.forEach((mute, index) => {
+        viewContainer.find('.measure .staff:nth-of-type(' + (index + 1) + ')')
+          .attr('opacity', mute ? '0.2': '1.0');
+        viewContainer.find('.measure .barLineAttr path:nth-of-type(' + (index + 1) + ')')
+>>>>>>> master
           .attr('opacity', mute ? '0.2': '1.0');
       })
       
@@ -781,6 +952,11 @@
                               }, []);
     }
 
+<<<<<<< HEAD
+=======
+    // Get information about an audio track from the markup
+
+>>>>>>> master
     function getTrackInfo(containerNode) {
 
       let trackInfo = [];
@@ -817,6 +993,19 @@
       console.log(muteStatusArray);
       muteStatusArray.forEach((muteStatus, i) => tracks[i].mute(muteStatus));
     }
+<<<<<<< HEAD
+=======
+
+    function getLongestDuration() {
+      let duration;
+      let longestDuration = tracks.reduce((longestDuration, track) => {
+        duration = track.getDuration();
+        return duration > longestDuration ? duration : longestDuration;
+      }, 0);
+
+      return longestDuration;
+    }
+>>>>>>> master
     
     function init() {
 
@@ -839,7 +1028,12 @@
       render: function () {},
       update: update,
       stop: stop,
+<<<<<<< HEAD
       onMuteChange: onMuteChange
+=======
+      onMuteChange: onMuteChange,
+      getDuration: getLongestDuration
+>>>>>>> master
     }
   }
   
@@ -948,6 +1142,20 @@
       setGain(muteStatus ? 0 : 1);
     }
 
+<<<<<<< HEAD
+=======
+    // Find the longest duration of the buffers
+
+    function getLongestDuration() {
+
+      let longestDuration = bufferList.reduce((longestDuration, buffer) => {
+        return buffer.duration > longestDuration ? buffer.duration : longestDuration
+      }, 0);
+
+      return longestDuration * 1000; // Convert to ms
+    }
+
+>>>>>>> master
     function init2(trackInfo) {
 
       if (trackInfo.mainFilename !== undefined) {
@@ -956,8 +1164,11 @@
         }
       }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> master
       sounds.reverb = {
 
       }
@@ -991,13 +1202,21 @@
     return {
       play: play,
       stop: stop,
+<<<<<<< HEAD
       mute: mute
+=======
+      mute: mute,
+      getDuration: getLongestDuration
+>>>>>>> master
     }
   }
   
   // BUFFERLOADER 2
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
   function getAudioFromFilenames(audioContext, audioFilenames, onFinishedLoading) {
 
     let loadedCount = 0,
@@ -1160,20 +1379,56 @@
   
   // OBJECT: MODEL
   
+<<<<<<< HEAD
   function Model(viewManager) {
 
     let timerId, startTime, 
       pauseTimePassed = 0;
+=======
+  function Model(viewManager, verovioToolkit) {
+
+    let timerId, startTime, 
+      pauseTimePassed = 0,
+      functionsToCallOnReset = [],
+      mei = verovioToolkit.getMEI();
+>>>>>>> master
     
     // "Play" means to schedule updates for views
     // Start time is set to beginning
     
     function play() {
+<<<<<<< HEAD
       startTime = (new Date().valueOf()) - pauseTimePassed;
       timerId = setInterval(() => {
         let timePassed = (new Date().valueOf()) - startTime;
         viewManager.update(timePassed);
       }, VIZ_REFRESH_INTERVAL);
+=======
+
+      verovioToolkit = new verovio.toolkit();
+      verovioToolkit.loadData(mei); // this is rendundant with
+      verovioToolkit.renderToMidi(); // line 137 & 141
+
+      let maxDuration = viewManager.getDuration();
+
+      startTime = (new Date().valueOf()) - pauseTimePassed;
+
+      function updateTicker() {
+
+        let timePassed = (new Date().valueOf()) - startTime;
+
+        // If time has passed the duration of the longest audio
+        //   clip, then rewind and stop
+
+        if (timePassed < maxDuration) {
+          viewManager.update(timePassed);
+        } else {
+          reset();
+        }
+      }
+
+      timerId = setInterval(updateTicker, VIZ_REFRESH_INTERVAL);
+>>>>>>> master
     }
     
     // "Stop" means stop the scheduled updates
@@ -1186,6 +1441,21 @@
       console.log(`Pausing at ${pauseTimePassed}`);
       viewManager.stop();
     }
+<<<<<<< HEAD
+=======
+
+    // "Reset" means to stop and rewind to beginning
+
+    function reset() {
+      stop();
+      pauseTimePassed = 0;
+      functionsToCallOnReset.forEach(f => f());
+    }
+
+    function callOnReset(func) {
+      functionsToCallOnReset.push(func);
+    }
+>>>>>>> master
     
     function setMute(muteStatus) {
       viewManager.setMute(muteStatus);
@@ -1194,7 +1464,12 @@
     return {
       play: play,
       stop: stop,
+<<<<<<< HEAD
       setMute: setMute
+=======
+      setMute: setMute,
+      callOnReset: callOnReset
+>>>>>>> master
     };
   }
   
@@ -1226,6 +1501,17 @@
       playButton.classList.remove('playing'); // TODO: should not be a magic value
       pauseButton.classList.remove('playing'); // TODO: should not be a magic value
     }
+<<<<<<< HEAD
+=======
+
+    // Tell Model what to do if reset 
+    // (i.e. when the audio runs out)
+
+    model.callOnReset(function () {
+      playButton.classList.remove('playing'); // TODO: should not be a magic value
+      pauseButton.classList.remove('playing'); // TODO: should not be a magic value
+    });
+>>>>>>> master
     
     // Mute buttons
 
@@ -1233,7 +1519,11 @@
     
     // Get mute button text from MEI
 
+<<<<<<< HEAD
     const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gis;
+=======
+    const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gi;
+>>>>>>> master
     let staffDefTxt, muteButtonTexts = [];
 
     while (staffDefTxt = voiceNameRE.exec(meiData)) {
@@ -1242,7 +1532,11 @@
 
     let muteButtons = muteButtonTexts.map(muteButtonText => {
       let buttonElem = document.createElement('button');
+<<<<<<< HEAD
       buttonElem.classList.add('atalanta-notation-mute-track');
+=======
+      buttonElem.classList.add('atalanta-notation-mute-track'); // TODO: should not be a magic value
+>>>>>>> master
       buttonElem.innerText = muteButtonText;
       return buttonElem;
     });
@@ -1259,7 +1553,17 @@
 
     let muteButtonContainer = document.createElement('div');
     muteButtonContainer.classList.add('track-mute'); // TODO: should not be a magic value
+<<<<<<< HEAD
     muteButtons.forEach(muteButton => muteButtonContainer.appendChild(muteButton));
+=======
+
+    // Only attach mute buttons if more than one voice
+    // TODO: shouldn't generate mute buttons if not needed
+
+    if (muteButtons.length > 1) {
+      muteButtons.forEach(muteButton => muteButtonContainer.appendChild(muteButton));
+    }
+>>>>>>> master
 
     // Attach buttons to DOM
     //  TODO: this shouldn't be here in this function - it should return a node
@@ -1281,11 +1585,17 @@
 
       target.setAttribute('id', targetId);
 
+<<<<<<< HEAD
 // <div class="atalanta-notation__switch"><a href="#visualize" data-lity>Visualize</a></div>
 
       let modalViewLink = document.createElement('div');
       modalViewLink.classList.add('atalanta-notation__switch'); // TODO: should not be a magic value
       modalViewLink.innerHTML = `<a href="#${targetId}" data-lity>Visualize</a>`; // TODO: should not be a magic value
+=======
+      let modalViewLink = document.createElement('div');
+      modalViewLink.classList.add('atalanta-notation__switch'); // TODO: should not be a magic value
+      modalViewLink.innerHTML = `<a href="#${targetId}" data-lity>${VISUALIZE_BUTTON_TEXT}</a>`; // TODO: should not be a magic value
+>>>>>>> master
       transportInterface.appendChild(modalViewLink);
     }
 
@@ -1333,10 +1643,25 @@
     //  components on the page, each of which could have their own tempo.
     //  BUT This code assumes only one tempo -- NEED TO CHANGE
 
+<<<<<<< HEAD
     window.TEMPO = parseInt(
       document.getElementsByClassName(VIZ_CLASS_NAMES.AUDIO)[0]
       .getAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME)
     );
+=======
+    let audioNode = document.getElementsByClassName(VIZ_CLASS_NAMES.AUDIO);
+    if (audioNode && audioNode[0].hasAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME)) {
+      window.TEMPO = parseInt(audioNode[0].getAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME));
+    } else {
+      window.TEMPO = DEFAULT_TEMPO;
+    }
+
+    /* OLD
+    window.TEMPO = parseInt(
+      document.getElementsByClassName(VIZ_CLASS_NAMES.AUDIO)[0]
+      .getAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME)
+    ); */
+>>>>>>> master
 
     // Check for audio players in the markup.
     //  If exists, create a shared AudioContext
@@ -1357,7 +1682,11 @@
       }
     }
 
+<<<<<<< HEAD
     // Look for modals and add lity-hide class
+=======
+    // Look for modals and if they exist add lity-hide class
+>>>>>>> master
 
     $('.modal').addClass('lity-hide'); // TODO: No magic values!!
     

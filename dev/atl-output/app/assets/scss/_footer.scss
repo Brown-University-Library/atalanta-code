@@ -1,0 +1,55 @@
+@import 'colors';
+@import 'utilities';
+
+footer {
+	background-color: $gray;
+	color: $white;
+	font-size: .75rem;
+	font-weight: 600;
+	height: 20vh;
+	padding: 3rem 6rem;
+	width: calc(100vw - 12rem);
+	.footer--main {
+		width: calc(60vw - 6rem);
+	}
+	.footer--branding {
+		width: calc(40vw - 6rem);
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		height: 20vh;
+	}
+	li {
+		line-height: 1.5;
+		padding: .5rem;
+	}
+	li a {
+		color: $white;
+		text-transform: uppercase;
+	}
+	li a:hover {
+		color: $yellow_bright;
+	}
+}
+
+/* BREAKPOINTS */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	footer {
+		height: 30vh;
+		padding: 2rem;
+		width: calc(100vw - 4rem);
+		.footer--main {
+			width: calc(60vw - 2rem);
+		}
+		.footer--branding {
+			width: calc(40vw - 2rem);
+		}
+		ul {
+			height: 30vh;
+		}
+	}
+
+}
