@@ -4,41 +4,42 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Furnace and Fugue: Atalanta fugiens (Digital Edition)</title>
-	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" />
-	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
-	<script src="../assets/js/vendors/verovio/verovio-toolkit.js"></script>
-	<script src="../assets/js/stereo-panner-node.min.js"></script>
-	<script src="../assets/js/vendors/lity/lity.min.js"></script>
-	<script src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
-	<script src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
-	<script src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
+	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css">
+	<link type="text/css" rel="stylesheet" media="screen" href="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.css">
 </head>
-<body>
-<!-- GLOBAL NAVIGATION -->
-	<header>
-		<div class="_topnav"></div>
-<!-- EMBLEM NAVIGATION -->
-		<nav class="subnav">
-			<ul>
-				<li class="subnav__views--single is-hidden" data-state="active"><a href="#"><span></span>Single View</a></li>
-				<li class="subnav__options--option is-active" data-state="active"><a href="#">English</a></li>
-				<li class="subnav__options--option" data-state="inactive"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option" data-state="inactive"><a href="#">Original</a></li>
-				<li class="subnav__views--double" data-state="inactive"><a href="#"><span></span>Comparative View</a></li>
-				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">English</a></li>
-				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option is-hidden is-active" data-state="active"><a href="#">Original</a></li>
-			</ul>
+<body class="emblem-body">
+	<header data-page-type="digital edition">
+		<a class="a11y_skip-main" href="#emblem-data">Skip to main content</a>
+		<div class="_topnav" data-nav="digital edition"></div>
+		<nav class="subnav-v3">
+			<form action="#">
+				<fieldset>
+					<label for="layout">Select a Layout</label>
+					<select name="layout" id="layout">
+						<option selected="selected" class="dropdown--layout" data-layout="active" value="compare">Comparative View</option>
+						<option class="dropdown--layout" data-layout="inactive" value="digital-edition">Digital Edition</option>
+						<option class="dropdown--layout" data-layout="inactive" value="zooming-image">Original</option>
+					</select>
+				</fieldset>
+			</form>
+			<form action="#">
+				<fieldset>
+					<label for="language">Select a Language</label>
+					<select name="language" id="language">
+						<option class="dropdown--language" data-language="inactive" value="english_original">Original English</option>
+						<option  selected="selected" class="dropdown--language" data-language="active" value="english_modern">Modernized English</option>
+						<option class="dropdown--language" data-language="inactive" value="latin_original">Original Latin</option>
+						<option class="dropdown--language" data-language="inactive" value="latin_normal">Normalized Latin</option>
+						<option class="dropdown--language" data-language="inactive" value="german">German</option>
+					</select>
+				</fieldset>
+			</form>
 		</nav>
 	</header>
-<!-- EMBLEM PAGE-->
-	<main id="emblem-data" class="emblem-page" data-id="5">
-<!-- EMBLEM GRID -->
-		<!-- Facsimile -->
-		<div class="section__facsimile is-hidden">
+	<main id="emblem-data" class="emblem-page" data-id="5" data-page="b">
+		<div aria-hidden="true" class="section__facsimile is-hidden">
 			<div class="facsimile--full">
 				<section class="_facsimile">
-					<!-- https://openseadragon.github.io/docs/ -->
 					<section class="facsimile">
 						<div id="openseadragon-wrapper">
 							<div id="tools">
@@ -47,9 +48,6 @@
 									<a id="previous" href="#previous" title="Previous" style="position: relative"><svg id="icon_arrow-left-lineart" data-name="icon_arrow-left-lineart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.6 250.2" transform="scale(1)" transform-origin="0 0"><title>export_icon_arrow-left-lineart</title><polyline points="126.9 1.8 3.5 125.1 126.9 248.5" fill="none" stroke="#000" stroke-miterlimit="50" stroke-width="5"/></svg><span>Previous</span></a>
 									<a id="zoom-in" href="#zoom-in" title="Zoom In" style="position: relative"><svg id="icon_zoom-in-lineart" data-name="icon_zoom-in-lineart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.1 299.9" transform="scale(.6)" transform-origin="50% 80%"><title>icon_magnifying-glass_zoom-in</title><g id="handle"><path d="M537.6,337.5l97,97Z" transform="translate(-343 -143)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="24"/></g><g id="glass"><path d="M480,153a127,127,0,1,1-89.8,37.2A126.2,126.2,0,0,1,480,153m0-10A137,137,0,1,0,617,280,137,137,0,0,0,480,143Z" transform="translate(-343 -143)"/></g><g id="symbol"><path d="M480,337.5v-115M422.5,280h115" transform="translate(-343 -143)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="12"/></g></svg><span>Zoom In</span></a>
 									<a id="zoom-out" href="#zoom-out" title="Zoom Out" style="position: relative"><svg id="icon_zoom-out-lineart" data-name="icon_zoom-out-lineart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.1 299.9" transform="scale(.6)" transform-origin="50% 80%"><title>icon_magnifying-glass_zoom-out</title><g id="handle"><path d="M537.6,337.5l97,97Z" transform="translate(-343 -143)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="24"/></g><g id="glass"><path d="M480,154a126,126,0,1,1-89.1,36.9A125.2,125.2,0,0,1,480,154m0-11A137,137,0,1,0,617,280,137,137,0,0,0,480,143Z" transform="translate(-343 -143)"/></g><g id="symbol"><line x1="79.5" y1="137" x2="194.5" y2="137" fill="none" stroke="#000" stroke-miterlimit="100" stroke-width="10"/></g></svg><span>Zoom Out</span></a>
-					<!-- 				<a id="home" href="#home" title="Go home" style="display: inline-block; position: relative;">Home</a> -->
-					<!-- 				<a id="home" href="#home" title="Home" style="display: inline-block; position: relative">Reset</a> -->
-					<!-- 				<a id="full-page" href="#full-page" title="Full Page" style="display: inline-block; position: relative">Full Page</a> -->
 								</span>
 							</div>
 						</div>
@@ -58,64 +56,21 @@
 			</div>
 		</div>
 		<div class="emblem">
-			<!-- Motto -->
-			<a name="motto" id="basic-waypoint__0" class="section__motto"></a>
-			<section class="section__motto section--single panel--full">
+			<a name="motto" class="section__motto"></a>
+			<section id="basic-waypoint__0" class="section__motto section--single panel--right">
 				<div class="translation">
-					<div class="switch-wrapper left">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
+					<div class="lang--english _motto--english edition--normalized" lang="en-US">
+						<div class="title"></div>
 					</div>
-					<div class="lang--english _motto--english edition--normalized" lang="en-US"></div>
                 </div>
 				<div class="original is-hidden">
-					<div class="switch-wrapper left">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
 					<div class="lang--latin _motto--latin edition--regularized" lang="la"></div>
 					<div class="lang--german _motto--german is-hidden" lang="de"></div>
 				</div>
 			</section>
-			<section class="section__motto section--double panel--right is-hidden">
-				<div class="translation is-hidden">
-					<div class="switch-wrapper right">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--english _motto--english edition--normalized" lang="en-US"></div>
-				</div>
-				<div class="original">
-					<div class="switch-wrapper right">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--latin _motto--latin edition--regularized" lang="la"></div>
-					<div class="lang--german _motto--german is-hidden" lang="de"></div>
-                </div>
-			</section>
-			<!-- Image -->
-			<a name="image" id="basic-waypoint__1" class="section__image"></a>
-			<div class="section__image">					
-				<div class="image--full">
+			<a name="image" class="section__image"></a>
+			<div id="basic-waypoint__1" class="section__image">					
+				<div class="image--full grid--right">
 					<section class="image wrapper-section section">
 							<div class="image__picture">
 								<img class="emblem__image--cropped" 
@@ -126,123 +81,42 @@
 					</section>
 				</div>
 			</div>
-			<!-- Music -->
-			<a name="music" id="basic-waypoint__2" class="section__music"></a>
-			<section class="section__music">
+			<a name="music" class="section__music"></a>
+			<section id="basic-waypoint__2" class="section__music">
 				<div class="_music music--full"></div>
 			</section>
-			<!-- Epigram -->
-			<a name="epigram" id="basic-waypoint__3" class="section__epigram"></a>
-			<section class="section__epigram section--single panel--full">
+			<a name="epigram" class="section__epigram"></a>
+			<section id="basic-waypoint__3" class="section__epigram section--single panel--right">
 				<div class="translation">
-					<div class="switch-wrapper left">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div>
 					<div class="lang--english _epigram--english edition--normalized" lang="en-US"></div>
                 </div>
 				<div class="original is-hidden">
-					<div class="switch-wrapper left">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
 					<div class="lang--latin _epigram--latin edition--regularized" lang="la"></div>
 					<div class="lang--german _epigram--german is-hidden" lang="de"></div>
 				</div>
 			</section>
-			<section class="section__epigram section--double panel--right is-hidden">
-				<div class="translation is-hidden">
-					<div class="switch-wrapper right">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--english _epigram--english edition--normalized" lang="en-US"></div>
-                </div>
-				<div class="original">
-					<div class="switch-wrapper right">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--latin _epigram--latin edition--regularized" lang="la"></div>
-					<div class="lang--german _epigram--german is-hidden" lang="de"></div>
-				</div>
-			</section>
-			<!-- Discourse -->
-			<a name="discourse" id="basic-waypoint__4" class="section__discourse"></a>
-			<section class="section__discourse section--single panel--full">
+			<a name="discourse" class="section__discourse"></a>
+			<section id="basic-waypoint__4" class="section__discourse section--single panel--right">
 				<div class="translation">
-					<div class="switch-wrapper left">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div>
 					<div class="lang--english _discourse--english edition--normalized text" lang="en-US"></div>
                 </div>
-				<div class="original text is-hidden">
-					<div class="switch-wrapper left">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
+                <div class="original is-hidden">
 					<div class="lang--latin _discourse--latin edition--regularized" lang="la"></div>
 				</div>
 			</section>
-			<section class="section__discourse section--double panel--right is-hidden">
-				<div class="translation is-hidden">
-					<div class="switch-wrapper right">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Modernized</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--english _discourse--english edition--normalized text" lang="en-US"></div>
-				</div>
-				<div class="original text">
-					<div class="switch-wrapper right">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--latin _discourse--latin edition--regularized" lang="la"></div>
-				</div>
-			</section>
-		</div><!-- END EMBLEM -->
-	</main> <!-- END OF EMBLEM PAGE -->
-<!-- JS -->
-	<script src="../assets/js/topnav.js"></script>
-	<script src="../assets/js/notation.js"></script>
+		</div>
+	</main>
+	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.js"></script>
+	<script src="../assets/js/vendors/verovio/verovio-toolkit.js"></script>
+	<script src="../assets/js/vendors/lity/lity.min.js"></script>
+	<script src="../assets/js/stereo-panner-node.min.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/shortcuts/sticky.min.js"></script>
+	<script src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
 	<script src="../assets/js/emblem.js"></script>
 	<script src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
+	<script src="../assets/js/notation.js"></script>
 </body>
 </html>
