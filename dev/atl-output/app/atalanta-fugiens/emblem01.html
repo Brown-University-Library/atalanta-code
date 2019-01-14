@@ -7,16 +7,6 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css">
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.css">
 <!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
-	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
-	<script src="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.js"></script>
-	<script src="../assets/js/vendors/verovio/verovio-toolkit.js"></script>
-	<script src="../assets/js/vendors/lity/lity.min.js"></script>
-	<script src="../assets/js/stereo-panner-node.min.js"></script>
-	<script src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
-	<script src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
-	<script src="js/waypoints/lib/shortcuts/sticky.min.js"></script>
-	<script src="js/waypoints/lib/waypoints.debug.js"></script> <!-- remove in production -->
-	<script src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
 </head>
 <body class="emblem-body">
 <!-- GLOBAL NAVIGATION -->
@@ -148,19 +138,19 @@
 				</div>
 			</div>
 			<!-- Music -->
-			<a name="music" id="basic-waypoint__2" id="my-offset-debug" class="section__music"></a>
+			<a name="music" class="section__music"></a>
 			<div class="my-offset-debug"></div>
 			<section id="basic-waypoint__2" class="section__music">
 				<div class="_music music--full">
-				    <div class="ata-music" data-mei="../data/mei/Fuga 6.xml">
+				    <div class="ata-music" data-mei="../data/mei/Fuga 06.xml">
 				      <div aria-label="musical notation in three voices" class="ata-viz-cmn"></div>
 		      			<div class="ata-viz-audio" data-tempo="56">
 				            <div class="ata-audio-track" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
-				                data-mp3="../assets/audio/06-A-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-A-56bpm-Reverb.mp3"></div>
-				            <div class="ata-audio-track" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
-				                data-mp3="../assets/audio/06-H-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-H-56bpm-Reverb.mp3"></div>
-				            <div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
 				                data-mp3="../assets/audio/06-P-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-P-56bpm-Reverb.mp3"></div>
+				            <div class="ata-audio-track" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
+				                data-mp3="../assets/audio/06-A-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-A-56bpm-Reverb.mp3"></div>
+				            <div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
+				                data-mp3="../assets/audio/06-H-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-H-56bpm-Reverb.mp3"></div>
 				      	</div>
 				    	<div class="ata-viz-pianoroll modal"></div>
 				    </div>
@@ -371,8 +361,18 @@
 		</div><!-- END EMBLEM -->
 	</main> <!-- END OF EMBLEM PAGE -->
 <!-- JS -->
-	<script src="../assets/js/notation.js"></script>
+	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.js"></script>
+	<script src="../assets/js/vendors/verovio/verovio-toolkit.js"></script>
+	<script src="../assets/js/vendors/lity/lity.min.js"></script>
+	<script src="../assets/js/stereo-panner-node.min.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/shortcuts/sticky.min.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/waypoints.debug.js"></script> <!-- remove in production -->
+	<script src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
 	<script src="../assets/js/emblem.js"></script>
 	<script src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
+	<script src="../assets/js/notation.js"></script>
 </body>
 </html>
