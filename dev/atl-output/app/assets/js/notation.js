@@ -1,20 +1,11 @@
 
 /*
 
+
+  TODO LIST:
+
   The tempo is being read from the DOM but the tempo is not taking hold
   in terms of what's being returned for timing in Verovio
-  
-  Try editing the sample MEI directly and putting in the tempo there; maybe the regex method 
-  isn't doing it
-  
-  (Didn't work - defaulting to 60 BPM)
-  
-  Have to implement update(time) functions for the CMN view
-  
-  Have to give the model a play() method that starts a setInterval that tells the view 
-  manager to updateAllViews
-  
-  May want to have a Verovio-type API for other visualizations (e.g. )
 
 */
 
@@ -31,6 +22,7 @@
       PIANO_ROLL: 'ata-viz-pianoroll',
       AUDIO: 'ata-viz-audio'
     },
+    DEFAULT_TEMPO = 56, // If not defined in audio viz element
     VIZ_REFRESH_INTERVAL = 100, // in ms
     AUDIO_VIZ_MP3_ATTR_NAME = 'data-mp3',
     AUDIO_VIZ_TEMPO_ATTR_NAME = 'data-tempo',
@@ -47,11 +39,13 @@
       barHeight: 5,
       pitchScale: 5,
       HILIGHT_CLASS: 'highlighted'
-    };
+    },
+    VISUALIZE_BUTTON_TEXT = 'Show piano roll';
 
   // GLOBALS
   
-  var audioContext;
+  var audioContext, 
+    verovioToolkit = new verovio.toolkit();
 
   // UTILITY FUNCTIONS
 
@@ -87,37 +81,12 @@
     // Get rid of default content for browsers with no javascript
     
     containerNode.css('backgroundImage', 'none');
-
-    // Take MEI code, remove tempo information, replace with that tempo
-    //  indicated by the tempo attribute in the markup
-    // THIS DOESN'T SEEM TO WORK
-    
-    /*
-    function setMeiTempo(meiData) {
-      
-      // Get tempo from child of main container 
-      // TODO: also look in main container
-      
-      let tempoValue = Number(containerNode.find('*[' + AUDIO_VIZ_TEMPO_ATTR_NAME + ']')
-                                           .attr(AUDIO_VIZ_TEMPO_ATTR_NAME)),
-          tempo =  tempoValue === NaN ? 60 : tempoValue;
-
-      console.log("Tempo read from DOM: " + tempo);
-      
-      // Take out existing tempo data
-      //  and insert new tempo data
-      
-      return meiData.replace(/\s+midi.bpm="[^"]"/g, '')
-                    .replace(/<scoreDef\s+/, '<scoreDef midi.bpm="' + tempo + '" ');
-    }
-    */
     
     // Create verovio toolkit object
 
     function createVerovioObject(meiFileURL) {
       
-      let verovioToolkit = new verovio.toolkit();
-      window.v = verovioToolkit; // TODO - this is temp
+      // let verovioToolkit = new verovio.toolkit();
 
       // Load the MEI file using a HTTP GET
       
@@ -133,23 +102,30 @@
 
             // verovioToolkit.loadData(setMeiTempo(meiData)); 
             // COMMENTED OUT ABOVE B/C VEROVIO DOESN'T SEEM TO BE READING THE TEMPO FROM THE MEI
-
+            console.log(meiData);
             verovioToolkit.loadData(meiData);
             
             // Convert to MIDI to get timing info
             
             verovioToolkit.renderToMidi();
+            // verovioToolkit.renderToMIDI();
             
             // Create views, model, controllers
             
             let viewManager = ViewManager(containerNode, verovioToolkit),
                 model = Model(viewManager, verovioToolkit);
             
-            // Controller for main window and modals
+            // Controller for main window
 
             initControllers(containerNode, model, meiData);
+            
+            // Controller for modals
+
             let modalContainers = containerNode.find('.modal');
-            initControllers(modalContainers, model, meiData);
+
+            if (modalContainers.length) {
+              initControllers(modalContainers, model, meiData);
+            }
 
             // Create onclick events to jump to time
             // TODO: test this
@@ -225,12 +201,23 @@
     }
     
     function stopAllViews() {
-      views.forEach((view) => view.stop())
+      views.forEach(view => view.stop())
     }
     
     function setMute(muteStatus) {
       console.log("MUTE CHANGE FOR ALL VIEWS");
-      views.forEach((view) => view.onMuteChange(muteStatus));
+      views.forEach(view => view.onMuteChange(muteStatus));
+    }
+
+    function getDuration() {
+
+      let viewWithDuration = views.find(
+        view => view.getDuration !== undefined
+      );
+
+      return viewWithDuration !== undefined 
+        ? viewWithDuration.getDuration()
+        : Number.POSITIVE_INFINITY;
     }
     
     function init() {
@@ -243,7 +230,8 @@
     return {
       update: updateAllViews,
       stop: stopAllViews,
-      setMute: setMute
+      setMute: setMute,
+      getDuration: getDuration
     };
   }
   
@@ -429,27 +417,29 @@
       
       verovioToolkit.getElementsAtTime(timeInMilliseconds).notes.forEach(
         note => {
-          // console.log(`NOTE ABCD`);
-          // console.log(document.getElementById(getLocalNoteID(note)));
           let highLightedNote = document.getElementById(getLocalNoteID(note));
-          highLightedNote.classList.add(PIANO_ROLL_OPTIONS.HILIGHT_CLASS);
-          console.log(highLightedNote);
-          highlightedNotes.push(highLightedNote);
 
-          if (rightMostNote === undefined) {
-            rightMostNote = highLightedNote
-          }
+          if (highLightedNote !== null) {
+            highLightedNote.classList.add(PIANO_ROLL_OPTIONS.HILIGHT_CLASS);
+            highlightedNotes.push(highLightedNote);
 
-          const highLightedNoteX = highLightedNote.getBBox().x,
-            currRightMostNoteX = rightMostNote.getBBox().x;
-
-          if (highLightedNoteX > currRightMostNoteX) {
-            rightMostNote = highLightedNote;
+            if (rightMostNote === undefined) {
+              rightMostNote = highLightedNote
+            }
+  
+            const highLightedNoteX = highLightedNote.getBBox().x,
+              currRightMostNoteX = rightMostNote.getBBox().x;
+  
+            if (highLightedNoteX > currRightMostNoteX) {
+              rightMostNote = highLightedNote;
+            }
           }
         }
       );
 
-      centerPianoRollOn(rightMostNote);
+      if (rightMostNote != undefined) {
+        centerPianoRollOn(rightMostNote);
+      }
     }
 
 
@@ -509,7 +499,7 @@
 
       let VEROVIO_OPTIONS_2 = { // TEMP - should use the one above
         pageHeight: 3000,
-        pageWidth: 2500, // this just seems to clip; doesn't actually effect notation layouot
+        pageWidth: 2500, // this just seems to clip; doesn't actually effect notation layout
         // scale: 33, // 10 => 300 px wide; 20 => 600 px wide
         // scale: scale,
         // ignoreLayout: 1,
@@ -528,8 +518,8 @@
       // Regular expressions to extract the width/height
       //  generated by Verovio
 
-      const widthRE = /^\s*<svg\s+[^>]*width="(\d+)px"/i,
-            heightRE = /^\s*<svg\s+[^>]*height="(\d+)px"/i;
+      const widthRE = /^\s*<svg\s+[^>]*width="([\d\.]+)px"/i,
+            heightRE = /^\s*<svg\s+[^>]*height="([\d\.]+)px"/i;
 
       // Create page containers
 
@@ -557,9 +547,15 @@
       pageContainers.forEach((pageContainer, pageNumber) => {
 
         let pageContainerWidth = pageContainer.offsetWidth,
-          pageSvgCode = verovioToolkit.renderPage(pageNumber + 1),
-          svgWidth = (widthRE.exec(pageSvgCode))[1],
+          pageSvgCode = verovioToolkit.renderPage(pageNumber + 1);
+          //pageSvgCode = verovioToolkit.renderToSVG(pageNumber + 1);
+
+        console.log(pageSvgCode);
+
+        let svgWidth = (widthRE.exec(pageSvgCode))[1],
           scale = (pageContainerWidth / svgWidth);
+
+
 
         if (scale < smallestScale) smallestScale = scale;
 
@@ -583,7 +579,6 @@
           // `<svg transform-origin="0 0" transform="scale(${smallestScale})" ` 
           // `<svg transform-origin="0 0" transform="scale(${smallestScale * CRYSTALS_CONSTANT})" ` 
           `<svg transform-origin="0 0" transform="scale(1)" ` // Not sure why this is necessary
-          //`<svg transform-origin="0 0" transform="scale(${CRYSTALS_CONSTANT})" ` // (CB) this will only work if I also multiply each viewBox height by 1.5, after getting that value for the container height
         );
 
         // scaledPageSvgCode = svgCodeForPages[pageIndex]; // ONLY USE IF ABOVE IS COMMENTED OUT
@@ -607,55 +602,16 @@
         // Add viewBox attribute
         // viewBox="0 0 w h"
 
-        /* (CB) see replacement below
         scaledPageSvgCode = scaledPageSvgCode.replace(
           /^\s*<svg\s/i,
           `<svg viewBox="0 0 ${width} ${height}" `
-        )
-        */
-        scaledPageSvgCode = scaledPageSvgCode.replace( // (CB) trying to center the non-scaled SVG
-          /^\s*<svg\s/i,
-          `<svg viewBox="-200 0 ${width} ${height}" `
         )
 
         // TEMP - END
 
 
         pageContainer.innerHTML = scaledPageSvgCode;
-        //console.log("this is my SVG height: " + height);
-        //console.log("this is my SVG width: " + width);
-        scaleMusicPageElements(pageIndex); // (CB)
       });
-
-      function scaleMusicPageElements(pageIndex) { // (CB) resize music page wrapper elements to match SVG heights
-        let musicPageA, musicPageB, SVGa, SVGb, firstSVG, secondSVG, heightSVGa, heightSVGb, viewBoxHeightA, viewBoxHeightB;
-        //console.log("the pageIndex is " + pageIndex); // pageIndex 0 renders SVG 1 and pageIndex 1 renders SVG 2
-        if ( pageIndex < 1 ){
-          musicPageA = '.music-page:nth-of-type(1)'; // music page element 1
-          SVGa = '.music-page:nth-of-type(1) > svg'; // music SVG 1
-          //console.log("the first music SVG is " + SVGa);
-          firstSVG = document.querySelector(SVGa);
-          heightSVGa = $(firstSVG).attr('viewBox'); // get SVG 1 height attribute
-          //console.log("this is the viewBox of my function's SVGa: " + heightSVGa);
-          viewBoxHeightA = heightSVGa.split(' '); // split string of viewBox attributes from SVG 1 into an array
-          //console.log("my fourth SVGa value after the split is: " + viewBoxHeightA[3]); // get the SVG 1 viewBox height value from the array
-          heightSVGa = viewBoxHeightA[3]; // get the height of the SVG 1 viewBox from the array of values
-          //console.log("the viewBox height value now becomes heightSVGa=" + heightSVGa);
-          $(musicPageA).attr("height", heightSVGa + "px"); // set height of SVG 1 .music-page wrapper to SVG 1 height
-        }
-        else if ( pageIndex >= 1 ){
-          musicPageB = '.music-page:nth-of-type(2)'; // music page element 2
-          SVGb = '.music-page:nth-of-type(2) > svg'; // music SVG 2
-          //console.log("the second music SVG is " + SVGb);
-          secondSVG = document.querySelector(SVGb);
-          heightSVGb = $(secondSVG).attr('viewBox'); // get SVG 2 height attribute
-          //console.log("this is the viewBox of my function's SVGb: " + heightSVGb);
-          viewBoxHeightB = heightSVGb.split(' '); // split string of viewBox attributes from SVG 2 into an array
-          //console.log("my fourth SVGa value after the split is: " + viewBoxHeightB[3]); // get the SVG 2 viewBox height value from the array
-          heightSVGb = viewBoxHeightB[3]; // get the height of the SVG 2 viewBox from the array of values
-          $(musicPageB).attr("height", heightSVGb + "px"); // set height of SVG 2 .music-page wrapper to SVG 2 height
-        }
-      }
 
       // Fill with music SVG
 /*
@@ -686,15 +642,18 @@
       // Turn off currently highlighted notes
       
       highlightedNotes.forEach(
-        // (note) => note.attr('fill', '#000').attr('stroke', '#000')
         note => note.classList.remove(HIGHLIGHTED_NOTE_CLASSNAME)
       );
-      
+
+      // Get new highighted notes and put a classname on them
+
       highlightedNotes = [];
-      
+      console.log(timeInMilliseconds);
+      window.VVV = verovioToolkit;
       verovioToolkit.getElementsAtTime(timeInMilliseconds).notes.forEach(
-        note => {
-          let highLightedNote = document.getElementById(note);
+        noteId => {
+          console.log(noteId);
+          let highLightedNote = document.getElementById(noteId);
           highLightedNote.classList.add(HIGHLIGHTED_NOTE_CLASSNAME);
           highlightedNotes.push(highLightedNote);
         }
@@ -705,12 +664,10 @@
       
       // TODO: THIS SHOULD BE HANDLED BY CSS
       
-      console.log("MUTE CHANGE FOR CMN");
-
       muteStatus.forEach((mute, index) => {
-        $('.measure .staff:nth-of-type(' + (index + 1) + ')')
+        viewContainer.find('.measure .staff:nth-of-type(' + (index + 1) + ')')
           .attr('opacity', mute ? '0.2': '1.0');
-        $('.measure .barLineAttr path:nth-of-type(' + (index + 1) + ')')
+        viewContainer.find('.measure .barLineAttr path:nth-of-type(' + (index + 1) + ')')
           .attr('opacity', mute ? '0.2': '1.0');
       })
       
@@ -781,6 +738,8 @@
                               }, []);
     }
 
+    // Get information about an audio track from the markup
+
     function getTrackInfo(containerNode) {
 
       let trackInfo = [];
@@ -817,6 +776,16 @@
       console.log(muteStatusArray);
       muteStatusArray.forEach((muteStatus, i) => tracks[i].mute(muteStatus));
     }
+
+    function getLongestDuration() {
+      let duration;
+      let longestDuration = tracks.reduce((longestDuration, track) => {
+        duration = track.getDuration();
+        return duration > longestDuration ? duration : longestDuration;
+      }, 0);
+
+      return longestDuration;
+    }
     
     function init() {
 
@@ -839,7 +808,8 @@
       render: function () {},
       update: update,
       stop: stop,
-      onMuteChange: onMuteChange
+      onMuteChange: onMuteChange,
+      getDuration: getLongestDuration
     }
   }
   
@@ -948,6 +918,17 @@
       setGain(muteStatus ? 0 : 1);
     }
 
+    // Find the longest duration of the buffers
+
+    function getLongestDuration() {
+
+      let longestDuration = bufferList.reduce((longestDuration, buffer) => {
+        return buffer.duration > longestDuration ? buffer.duration : longestDuration
+      }, 0);
+
+      return longestDuration * 1000; // Convert to ms
+    }
+
     function init2(trackInfo) {
 
       if (trackInfo.mainFilename !== undefined) {
@@ -955,8 +936,6 @@
 
         }
       }
-
-
 
       sounds.reverb = {
 
@@ -991,12 +970,12 @@
     return {
       play: play,
       stop: stop,
-      mute: mute
+      mute: mute,
+      getDuration: getLongestDuration
     }
   }
   
   // BUFFERLOADER 2
-
 
   function getAudioFromFilenames(audioContext, audioFilenames, onFinishedLoading) {
 
@@ -1160,20 +1139,41 @@
   
   // OBJECT: MODEL
   
-  function Model(viewManager) {
+  function Model(viewManager, verovioToolkit) {
 
     let timerId, startTime, 
-      pauseTimePassed = 0;
+      pauseTimePassed = 0,
+      functionsToCallOnReset = [],
+      mei = verovioToolkit.getMEI();
     
     // "Play" means to schedule updates for views
     // Start time is set to beginning
     
     function play() {
+
+      verovioToolkit = new verovio.toolkit();
+      verovioToolkit.loadData(mei); // this is rendundant with
+      verovioToolkit.renderToMidi(); // line 137 & 141
+
+      let maxDuration = viewManager.getDuration();
+
       startTime = (new Date().valueOf()) - pauseTimePassed;
-      timerId = setInterval(() => {
+
+      function updateTicker() {
+
         let timePassed = (new Date().valueOf()) - startTime;
-        viewManager.update(timePassed);
-      }, VIZ_REFRESH_INTERVAL);
+
+        // If time has passed the duration of the longest audio
+        //   clip, then rewind and stop
+
+        if (timePassed < maxDuration) {
+          viewManager.update(timePassed);
+        } else {
+          reset();
+        }
+      }
+
+      timerId = setInterval(updateTicker, VIZ_REFRESH_INTERVAL);
     }
     
     // "Stop" means stop the scheduled updates
@@ -1186,6 +1186,18 @@
       console.log(`Pausing at ${pauseTimePassed}`);
       viewManager.stop();
     }
+
+    // "Reset" means to stop and rewind to beginning
+
+    function reset() {
+      stop();
+      pauseTimePassed = 0;
+      functionsToCallOnReset.forEach(f => f());
+    }
+
+    function callOnReset(func) {
+      functionsToCallOnReset.push(func);
+    }
     
     function setMute(muteStatus) {
       viewManager.setMute(muteStatus);
@@ -1194,7 +1206,8 @@
     return {
       play: play,
       stop: stop,
-      setMute: setMute
+      setMute: setMute,
+      callOnReset: callOnReset
     };
   }
   
@@ -1226,6 +1239,14 @@
       playButton.classList.remove('playing'); // TODO: should not be a magic value
       pauseButton.classList.remove('playing'); // TODO: should not be a magic value
     }
+
+    // Tell Model what to do if reset 
+    // (i.e. when the audio runs out)
+
+    model.callOnReset(function () {
+      playButton.classList.remove('playing'); // TODO: should not be a magic value
+      pauseButton.classList.remove('playing'); // TODO: should not be a magic value
+    });
     
     // Mute buttons
 
@@ -1233,7 +1254,7 @@
     
     // Get mute button text from MEI
 
-    const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gis;
+    const voiceNameRE = /<staffDef\s+([^>]+\s+)?label="([^"]+)"/gi;
     let staffDefTxt, muteButtonTexts = [];
 
     while (staffDefTxt = voiceNameRE.exec(meiData)) {
@@ -1242,7 +1263,7 @@
 
     let muteButtons = muteButtonTexts.map(muteButtonText => {
       let buttonElem = document.createElement('button');
-      buttonElem.classList.add('atalanta-notation-mute-track');
+      buttonElem.classList.add('atalanta-notation-mute-track'); // TODO: should not be a magic value
       buttonElem.innerText = muteButtonText;
       return buttonElem;
     });
@@ -1259,7 +1280,13 @@
 
     let muteButtonContainer = document.createElement('div');
     muteButtonContainer.classList.add('track-mute'); // TODO: should not be a magic value
-    muteButtons.forEach(muteButton => muteButtonContainer.appendChild(muteButton));
+
+    // Only attach mute buttons if more than one voice
+    // TODO: shouldn't generate mute buttons if not needed
+
+    if (muteButtons.length > 1) {
+      muteButtons.forEach(muteButton => muteButtonContainer.appendChild(muteButton));
+    }
 
     // Attach buttons to DOM
     //  TODO: this shouldn't be here in this function - it should return a node
@@ -1281,11 +1308,9 @@
 
       target.setAttribute('id', targetId);
 
-// <div class="atalanta-notation__switch"><a href="#visualize" data-lity>Visualize</a></div>
-
       let modalViewLink = document.createElement('div');
       modalViewLink.classList.add('atalanta-notation__switch'); // TODO: should not be a magic value
-      modalViewLink.innerHTML = `<a href="#${targetId}" data-lity>Visualize</a>`; // TODO: should not be a magic value
+      modalViewLink.innerHTML = `<a href="#${targetId}" data-lity>${VISUALIZE_BUTTON_TEXT}</a>`; // TODO: should not be a magic value
       transportInterface.appendChild(modalViewLink);
     }
 
@@ -1333,10 +1358,18 @@
     //  components on the page, each of which could have their own tempo.
     //  BUT This code assumes only one tempo -- NEED TO CHANGE
 
+    let audioNode = document.getElementsByClassName(VIZ_CLASS_NAMES.AUDIO);
+    if (audioNode && audioNode[0].hasAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME)) {
+      window.TEMPO = parseInt(audioNode[0].getAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME));
+    } else {
+      window.TEMPO = DEFAULT_TEMPO;
+    }
+
+    /* OLD
     window.TEMPO = parseInt(
       document.getElementsByClassName(VIZ_CLASS_NAMES.AUDIO)[0]
       .getAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME)
-    );
+    ); */
 
     // Check for audio players in the markup.
     //  If exists, create a shared AudioContext
@@ -1357,7 +1390,7 @@
       }
     }
 
-    // Look for modals and add lity-hide class
+    // Look for modals and if they exist add lity-hide class
 
     $('.modal').addClass('lity-hide'); // TODO: No magic values!!
     
