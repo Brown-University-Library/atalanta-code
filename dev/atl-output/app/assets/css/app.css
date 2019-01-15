@@ -2943,6 +2943,7 @@ main.home {
   .intro-text a {
     margin-top: 1rem; } }
 
+/*@import 'music-snippets';*/
 body {
   /* background-color: #ddd; */
   padding: 3em; }
@@ -3611,11 +3612,7 @@ button.lity-close {
 @media screen and (max-width: 319px) {
   /* the music section is seriously broken at this point */ }
 
-<<<<<<< HEAD
-/*@import 'music-snippets';*/
-=======
 /* PRODUCTION */
->>>>>>> master
 /* TESTING */
 /* DEVELOPMENT */
 /*$gray-medium: #989898;*/
