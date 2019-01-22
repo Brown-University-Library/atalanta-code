@@ -37,7 +37,7 @@
 .topnav__contents__atalanta-fugiens, 
 .topnav__contents__atalanta-essays {
 	height: 50vh;
-	max-height: calc(62vh - 2rem);
+	max-height: calc(66vh - 2rem);
 }
 .topnav__contents__atalanta-fugiens {
 	flex-basis: calc(40% - 8rem);
@@ -51,7 +51,7 @@
 .topnav__contents__atalanta-front,
 .topnav__contents__atalanta-back {
 	height: 30vh;
-	max-height: calc(38vh - 4rem);
+	max-height: calc(34vh - 4rem);
 }
 .topnav__contents__atalanta-front,
 .topnav__contents__atalanta-back {
@@ -152,11 +152,14 @@ nav.topnav__contents .topnav__contents__atalanta-back {
 	height: 100%;
 	line-height: 1.5;
 	.toc__heading {
+		display: inline-block;
 		font-size: 1.5rem;
 		line-height: 1.25;
 		margin-bottom: 1.25rem;
+		margin-right: .75rem;
 	}
 	.toc__subheading {
+		display: inline-block;
 		font-size: 1rem;
 		line-height: 1;
 		margin-top: -.625rem;
@@ -185,23 +188,46 @@ nav.topnav__contents .topnav__contents__atalanta-fugiens {
 		height: 38vh;
 		max-height: 38vh;
 	}
-	.toc__content ul li {
+	.toc__content > ul li > ul {
+		flex-direction: row;
+		background-color: blue;
+	}
+	.toc__content ul.emblems {
+/*		flex-direction: column;
+		flex: 1 0 100%;*/
+		/*background-color: pink;*/
+		flex-direction: column;
+	}
+	.toc__content > ul > li:nth-of-type(1), 
+	.toc__content > ul > li:nth-of-type(2), 
+	.toc__content > ul > li:nth-of-type(3), 
+	.toc__content > ul > li:nth-of-type(4), {
 		display: flex;
+		flex-direction: column;
+		align-self: flex-start;
+		justify-content: space-between;
+		flex: 1 0 20%;
+		outline: 1px solid green;
+	}
+	.toc__content > ul > li:nth-of-type(5) {
+		flex-direction: row;
+		flex: 1 0 110%;
+		outline: 1px solid black;
+	}
+	.toc__content ul li.toc__heading--emblem {
+		flex: 1 0 100%;
+		padding-bottom: .75rem;
+		text-align: center;
+	}
+	.toc__content ul.emblems li {
+		display: flex;
+		align-self: center;
 		align-items: center;
 		justify-content: center;
 		flex: 1 0 10%;
 		/*padding: 5px 0;*/
 		text-align: center;
-	}
-	.toc__content ul li:nth-of-type(1), 
-	.toc__content ul li:nth-of-type(2), 
-	.toc__content ul li:nth-of-type(3), 
-	.toc__content ul li:nth-of-type(4), {
-		display: flex;
-		flex-direction: column;
-		align-self: flex-start;
-		justify-content: space-between;
-		flex: 1 0 25%;
+		outline: 1px solid yellow;
 	}
 	.toc__content ul li a {
 		display: flex;
