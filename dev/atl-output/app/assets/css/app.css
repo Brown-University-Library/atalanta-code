@@ -2314,111 +2314,117 @@ nav.topnav__contents .topnav__contents__atalanta-back {
 
 /* FLEX LAYOUT */
 /* DIGITAL EDITION */
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul {
+nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content > ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
   height: 38vh;
-  max-height: 38vh; }
+  max-height: 38vh;
+  width: 100%; }
 
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content > ul li > ul {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  background-color: blue; }
+nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__content--frontmatter {
+  border-right: 1px solid #222;
+  margin-right: .5rem;
+  width: 40%; }
 
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul.emblems {
-  /*		flex-direction: column;
-		flex: 1 0 100%;*/
-  /*background-color: pink;*/
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__content--digital-edition {
+  width: 60%; }
 
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content > ul > li:nth-of-type(1),
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content > ul > li:nth-of-type(2),
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content > ul > li:nth-of-type(3),
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content > ul > li:nth-of-type(4) {
+nav.topnav__contents .topnav__contents__atalanta-fugiens ul.atalanta-section {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 20%;
-  -ms-flex: 1 0 20%;
-  flex: 1 0 20%;
-  outline: 1px solid green; }
+  height: 100%;
+  width: 100%; }
 
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content > ul > li:nth-of-type(5) {
+nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__content--digital-edition ul.atalanta-section {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+nav.topnav__contents .topnav__contents__atalanta-fugiens ul.atalanta-section > li {
+  line-height: 1.4; }
+
+nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__content--frontmatter ul.atalanta-section li {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 25%;
+  -ms-flex: 1 0 25%;
+  flex: 1 0 25%; }
+
+nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__content--digital-edition ul.atalanta-section > li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 110%;
-  -ms-flex: 1 0 110%;
-  flex: 1 0 110%;
-  outline: 1px solid black; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li.toc__heading--emblem {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 100%;
-  -ms-flex: 1 0 100%;
-  flex: 1 0 100%;
-  padding-bottom: .75rem;
-  text-align: center; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul.emblems li {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 100%; }
+
+nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__subheading--emblem {
+  height: 5vh; }
+
+nav.topnav__contents .topnav__contents__atalanta-fugiens ul.toc__content--emblem-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 0;
+  -ms-flex: 1 0 0px;
+  flex: 1 0 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  height: 33vh; }
+
+nav.topnav__contents .topnav__contents__atalanta-fugiens ul.toc__content--emblem-list > li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 10%;
   -ms-flex: 1 0 10%;
   flex: 1 0 10%;
-  /*padding: 5px 0;*/
-  text-align: center;
-  outline: 1px solid yellow; }
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 2px; }
 
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li a {
+nav.topnav__contents .topnav__contents__atalanta-fugiens ul.toc__content--emblem-list > li a {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2433,7 +2439,7 @@ nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li a {
   justify-content: center;
   line-height: 1.2; }
 
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content ul li a:hover {
+nav.topnav__contents .topnav__contents__atalanta-fugiens ul.toc__content--emblem-list > li a:hover {
   margin-bottom: -2px; }
 
 /* ESSAYS */

@@ -181,61 +181,70 @@ nav.topnav__contents .topnav__contents__atalanta-back {
 /* FLEX LAYOUT */
 /* DIGITAL EDITION */
 nav.topnav__contents .topnav__contents__atalanta-fugiens {
-	.toc__content ul {
+	.toc__content {
+
+	}
+	.toc__content > ul {
 		display: flex;
-		flex-flow: column wrap;
-		align-content: stretch;
 		height: 38vh;
 		max-height: 38vh;
+		width: 100%;
 	}
-	.toc__content > ul li > ul {
-		flex-direction: row;
-		background-color: blue;
+	li.toc__content--frontmatter {
+		border-right: 1px solid $black;
+		margin-right: .5rem;
+		width: 40%;
 	}
-	.toc__content ul.emblems {
-/*		flex-direction: column;
-		flex: 1 0 100%;*/
-		/*background-color: pink;*/
-		flex-direction: column;
+	li.toc__content--digital-edition {
+		width: 60%;
 	}
-	.toc__content > ul > li:nth-of-type(1), 
-	.toc__content > ul > li:nth-of-type(2), 
-	.toc__content > ul > li:nth-of-type(3), 
-	.toc__content > ul > li:nth-of-type(4), {
+	ul.atalanta-section {
 		display: flex;
+		align-items: flex-start;
 		flex-direction: column;
-		align-self: flex-start;
 		justify-content: space-between;
-		flex: 1 0 20%;
-		outline: 1px solid green;
+		height: 100%;
+		width: 100%;
 	}
-	.toc__content > ul > li:nth-of-type(5) {
-		flex-direction: row;
-		flex: 1 0 110%;
-		outline: 1px solid black;
-	}
-	.toc__content ul li.toc__heading--emblem {
-		flex: 1 0 100%;
-		padding-bottom: .75rem;
-		text-align: center;
-	}
-	.toc__content ul.emblems li {
-		display: flex;
-		align-self: center;
+	li.toc__content--digital-edition ul.atalanta-section {
 		align-items: center;
-		justify-content: center;
-		flex: 1 0 10%;
-		/*padding: 5px 0;*/
-		text-align: center;
-		outline: 1px solid yellow;
 	}
-	.toc__content ul li a {
+	ul.atalanta-section > li {
+		line-height: 1.4;
+	}
+	li.toc__content--frontmatter ul.atalanta-section li {
+		flex: 1 0 25%;
+	}
+	li.toc__content--digital-edition ul.atalanta-section > li {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+	}
+	li.toc__subheading--emblem {
+		height: 5vh;
+	}
+	ul.toc__content--emblem-list {
+		display: flex;
+		flex: 1 0 0;
+  		flex-direction: column;
+  		flex-flow: column wrap;
+		height: 33vh;
+	}
+	ul.toc__content--emblem-list > li {
+		display: flex;
+  		align-items: center;
+  		flex: 1 0 10%;
+  		justify-content: center;
+  		padding: 0 2px;
+	}
+	ul.toc__content--emblem-list > li a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		line-height: 1.2;
 	}
-	.toc__content ul li a:hover {
+	ul.toc__content--emblem-list > li a:hover {
 		margin-bottom: -2px;
 	}
 }
