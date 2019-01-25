@@ -9,16 +9,13 @@
 </head>
 <body>
 <!-- GLOBAL NAVIGATION -->
-	<header>
-		<div class="_topnav">
+	<header data-page-type="search">
+		<div class="_topnav" data-nav="search">
 			<nav class="topnav">
+				<button aria-hidden="true" class="topnav__hamburger--closed"></button>
 				<ul>
 					<li class="topnav__logo">
-						<button>
-							<a href="../index.html">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.5 59.2" height="50px"><title>furnaceAndFugueLogo</title><g id="Layer_2" data-name="Layer 2"><g id="furnace_and_fugue_logo" data-name="furnace and fugue logo"><text transform="translate(0 45.8)" font-size="53.84" fill="#fff" font-family="GTSectraDisplay-Bold, GT Sectra Display" font-weight="700">f</text><text transform="translate(18.2 45.8)" font-size="42.24" fill="#fff" font-family="GTSectraDisplay-Bold, GT Sectra Display" font-weight="700">&amp;</text><text transform="translate(46.3 45.8)" font-size="53.84" fill="#fff" font-family="GTSectraDisplay-Bold, GT Sectra Display" font-weight="700">f</text></g></g></svg>
-							</a>
-						</button>
+						<a aria-label="Return to Furnace and Fugue home" href="../index.html"></a>
 					</li>
 					<li class="topnav__content">
 						<ul>
@@ -38,8 +35,18 @@
 		</div>
 	</header>
 	<main>
-		<h1>Furnace and Fugue</h1>
-		<h2>Text Search</h2>
+
+		<div class="search__modal">
+			<button class="close">x</button>
+			<h1>Furnace and Fugue</h1>
+			<h2>Text Search</h2>
+			<div class="search__bar">
+				<label class="label search__bar__label" for="search-field">Search</label>
+				<input type="text" id="search__bar__field">
+				<button class="submit" type="submit">Search</button>
+			</div>
+		</div>
+
 	</main>
 <!-- JS -->
 </body>

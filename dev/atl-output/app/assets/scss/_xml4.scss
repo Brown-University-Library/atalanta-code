@@ -50,711 +50,716 @@ EMBLEM DISCOURSE
 								div.discourse.la 				???
 
 */
-
-/********** ENGLISH XML ISSUES **************/
-.section__discourse h3.title {
-/*	display: none;*/
-/*	background-color: $error;*/
-} /* ??? I won't need this after we sort out the h3.title issue in the English discourse */
-.section__discourse .discourse.la h3.title {
-	background-color: transparent;
-} /* ??? I won't need this after we sort out the h3.title issue in the English discourse */
-.section__discourse.panel--left div.discourse, 
-.section__discourse.panel--right div.discourse {
-	h3.title {
-/*		background-color: $error;*/
+main.emblem-page {
+	/********** ENGLISH XML ISSUES **************/
+	.section__discourse h3.title {
+	/*	display: none;*/
+	/*	background-color: $error;*/
+	} /* ??? I won't need this after we sort out the h3.title issue in the English discourse */
+	.section__discourse .discourse.la h3.title {
+		background-color: transparent;
+	} /* ??? I won't need this after we sort out the h3.title issue in the English discourse */
+	.section__discourse.panel--left div.discourse, 
+	.section__discourse.panel--right div.discourse {
+		h3.title {
+	/*		background-color: $error;*/
+		}
 	}
-}
-.section__discourse span.note-mark:nth-of-type(2) {
-/*	background-color: $error;*/
-	grid-area: 1 / 1 / 2 / 2; /* this isn't aligning because the span isn't part of the h3.title and is pushed to another grid cell */
-	margin-left: 100px;
-	margin-bottom: -3rem;
-}
-.section__discourse.panel--right span.note-mark:nth-of-type(2) {
-/*	background-color: $error;*/
-	grid-area: 1 / 3 / 3 / 4;
-	margin-left: .5rem;
-}
-/********** END OF ENGLISH XML ISSUES **************/
-
-
-/*********** ENGLISH EMBLEM OVERRIDES *************/
-.italic {
-	font-style: oblique;
-}
-.epigram {
-	margin-top: 0;
-	text-align: left;
-    font-style: normal;
-}
-
-h3.discourse {
-    text-align: left;
-    font-style: normal;
-}
-.verse-epigram {
-    margin-top: 0;
-    text-align: left;
-    margin-left: 0;
-    font-style: normal;
-}
-
-.verse-discourse {
-    margin-top: 0;
-    margin-left: 0;
-    margin-bottom: 0;
-}
-
-h2 {
-/*    display: none;
-    color: #b5b5b5;*/
-    color: green;
-}
-h1.title {
-	text-align: left;
-}
-h3.title {
-    margin-top: 0;
-    text-align: left;
-}
-
-.pb {
-	color: #222;
-	display: none;
-	margin-top: 0;
-}
-
-.pb:before{
-    color: #222;
-}
-
-.pb:after{
-    color: #222;
-}
-
-.milestone{
-	display: none;
-}
-
-.choice {
-    background-color: transparent;
-    margin-left: 0;
-}
-
-span.regularized {
-    color: #222;
-}
-
-.subst {
-    background-color: transparent;
-    margin-left: 0;
- }
-
-.del{
-    text-decoration: none;
-}
-
-.add:before{
-	display: none;
-}
-
-.add:after{
-	display: none;
-}
-
-.unclear:before{
-	display: none;
-}
-
-.unclear:after{
-    display: none;
-}
-
-.fw{
-	display: none;
-}
-
-.margin-note{
-    float: none;
-    margin-left: 0;
-    outline: none;
-    width: auto;
-    padding-left: 0;
-}
-
-.note-mark{
-    color: #222;
-}
-
-.help{
-    display: none;
-}
-
-/********************************/
-cite {
-  font-style: oblique;
- }
-.edition--normalized {
-	.del {
-		display: none;
+	.section__discourse span.note-mark:nth-of-type(2) {
+	/*	background-color: $error;*/
+		grid-area: 1 / 1 / 2 / 2; /* this isn't aligning because the span isn't part of the h3.title and is pushed to another grid cell */
+		margin-left: 100px;
+		margin-bottom: -3rem;
 	}
-	.italics {
-		font-style: normal;
+	.section__discourse.panel--right span.note-mark:nth-of-type(2) {
+	/*	background-color: $error;*/
+		grid-area: 1 / 3 / 3 / 4;
+		margin-left: .5rem;
 	}
-	span.original {
-		display: none;
-	}
-/*	.pb, .ab.pb {
-		display: none;
-	}*/
-}
-.edition--facsimile {
-	.del {
-		display: none;
-	}
-	.italics {
+	/********** END OF ENGLISH XML ISSUES **************/
+
+
+	/*********** ENGLISH EMBLEM OVERRIDES *************/
+	.italic {
 		font-style: oblique;
 	}
-/*	.pb:before{
-    content: "––– Page: ";
+	.epigram {
+		margin-top: 0;
+		text-align: left;
+	    font-style: normal;
+	}
+
+	h3.discourse {
+	    text-align: left;
+	    font-style: normal;
+	}
+	.verse-epigram {
+	    margin-top: 0;
+	    text-align: left;
+	    margin-left: 0;
+	    font-style: normal;
+	}
+
+	.verse-discourse {
+	    margin-top: 0;
+	    margin-left: 0;
+	    margin-bottom: 0;
+	}
+
+	h2 {
+	/*    display: none;
+	    color: #b5b5b5;*/
+	    color: green;
+	}
+	h1.title {
+		text-align: left;
+	}
+	h3.title {
+	    margin-top: 0;
+	    text-align: left;
+	}
+
+	.pb {
+		color: #222;
+		display: none;
+		margin-top: 0;
+	}
+
+	.pb:before{
+	    color: #222;
 	}
 
 	.pb:after{
-	    content: " –––"
-	}*/
+	    color: #222;
+	}
+
+	.milestone{
+		display: none;
+	}
+
+	.choice {
+	    background-color: transparent;
+	    margin-left: 0;
+	}
+
 	span.regularized {
-		display: none;
+	    color: #222;
 	}
-}
-.edition--original, .edition--regularized {
-	span.v-line {
-		line-height: 2;
-	}
-}
-.edition--original {
-	span.regularized {
-		display: none;
-	}
-}
-.edition--regularized {
-	span.original {
-		display: none;
-	}
-}
-span.underline2 {
-	border-bottom: none;
-}
-.pc { /* what is .pc ??? */
-	white-space: nowrap;
-}
-.milestone {
-	color: $gray-medium;
-	margin: 0 .25rem;
-	white-space: nowrap;
-}
-/*********** END OF ENGLISH EMBLEM OVERRIDES *************/
 
-/*********** EMBLEM LAYOUT *************/
-div.translation, 
-div.original {
-	height: 100%;
-	margin-top: 2.5rem;
-}
-.panel--left div.translation, 
-.panel--left div.original, 
-.panel--right div.translation, 
-.panel--right div.original {
-	margin-top: 3.5rem;
-}
-.lang--english, 
-.lang--german, 
-.lang--latin {
-	height: 100%;
-}
-.lang--english._motto--english, 
-.lang--latin._motto--latin, 
-.lang--german._motto--german {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 1fr;
-}
-.panel--left .lang--english._motto--english , 
-.panel--left .lang--latin._motto--latin, 
-.panel--left .lang--german._motto--german, 
-.panel--right .lang--english._motto--english , 
-.panel--right .lang--latin._motto--latin, 
-.panel--right .lang--german._motto--german {
+	.subst {
+	    background-color: transparent;
+	    margin-left: 0;
+	 }
 
-}
-/* MOTTO - ENGLISH/LATIN/GERMAN */
-section.section__motto {
-	div.title, div.fugue, 
-	._motto--latin div.image {
-/*		grid-area: 1 / 4 / 2 / 10;*/
-		grid-column: 4 / 10;
+	.del{
+	    text-decoration: none;
 	}
-	.translation h1.title, 
-	.original h1.title {
-		font-family: $display-font_emblem;
-		font-size: 2.625rem;
-		font-weight: 600;
-		line-height: 3.25rem;
-		text-align: center;
-	}
-	.translation h1.title br, 
-	.original h1.title br, 
-	.translation h3.title br, 
-	.original h3.title br  {
-		display: none;
-	}
-	.translation .edition--facsimile h1.title br, 
-	.translation .edition--facsimile h3.title br {
-/*		display: block;*/
-		display: none;
-	}
-	.translation h3.title, 
-	.original h3.title {
-		font-family: $body-font_emblem;
-		font-weight: 600;
-		font-size: 1rem;
-		line-height: 1.5rem;
-		text-align: center;
-	}
-	.original .fugue.de h3.title {
-		visibility: hidden;
-	}
-	.translation h3.title .italics, 
-	.original h3.title .italics {
-		font-style: oblique;
-	}
-	.translation h3.title span.regularized, 
-	.translation h1.title span.regularized {
-		color: $white;
-	}
-}
-section.section__motto.panel--left, 
-section.section__motto.panel--right {
-	div.title, 
-	div.fugue, 
-	._motto--latin div.image {
-		grid-area: 1 / 2 / 2 / 12;
-		margin-top: 1rem;	
-	}
-	.translation h1.title, 
-	.original h1.title {
-		font-size: 2rem;
-		line-height: 2.5rem;
-	}
-	.translation h3.title span.regularized, 
-	.translation h1.title span.regularized {
-		color: $text_body;
-	}
-}
-/* EPIGRAM - ENGLISH/LATIN/GERMAN */
-section.section__epigram {
-	.translation div.epigram, 
-	.original div.epigram {
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: auto;
-	}
-	.translation h3.title, 
-	.original h3.title {
-		font-weight: 500;
-		grid-column: 2 / 12;
-		text-align: center;
-		text-indent: 0;
-	}
-	.translation .edition--facsimile h3.title {
-		text-align: left;
-		text-indent: 20%;
-	}
-	h3.title span.regularized, 
-	.verse-epigram span.regularized {
-		color: #fff;
-	}
-	.translation .verse-epigram, 
-	.original .verse-epigram {
-		font-size: 1.5rem;
-		grid-column: 2 / 12;
-		text-align: center;
-	}
-	.translation .verse-epigram {
-		line-height: 1.5;
-	}
-	.original .verse-epigram {
-		line-height: 1.5;
-		text-indent: 0;
-	}
-	.translation .edition--facsimile .verse-epigram {
-		grid-column: 3/ 13;
-		text-align: left;
-	}
-	.original .verse-epigram span {
-		/*line-height: 0;*/
-		margin: 0;
-	}
-	.original .de .verse-epigram > span {
-		line-height: 0;
-	}
-	.original .verse-epigram > span:nth-child(2) {
-/*		background-color: $error;*/
-		padding-top: 1.25rem;
-	}
-	.original .verse-epigram > span:last-child {
-/*		background-color: $error;*/
-		padding-bottom: 1.25rem;
-	}
-	.original div.epigram.la .verse-epigram span.original > br {
-		display: none;
-	}
-}
-section.section__epigram.panel--left, 
-section.section__epigram.panel--right {
-	.translation .edition--facsimile h3.title {
-		text-indent: 40%;
-	}
-	.original .verse-epigram > span {
-		/*		background-color: $error;*/
-		line-height: 2.5;
-		margin-bottom: -1.375rem;
-	}
-	.original .de .verse-epigram > span {
-		line-height: 1.2;
-	}
-	.original .verse-epigram > span:nth-child(2) {
-/*		background-color: $error;*/
-		padding-top: .25rem;
-	}
-	h3.title span.regularized, 
-	.verse-epigram span.regularized {
-		color: $text_body;
-	}
-}
 
-/* DISCOURSE - ENGLISH/LATIN */
-section.section__discourse {
-	div.translation, 
-	div.original {
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: auto;
-		margin-bottom: 8rem;		
-	}
-	.switch-wrapper {
-		grid-column: 1 / 13;
-	}
-	div.original .switch-wrapper .facsimile-normalized-switch {
+	.add:before{
 		display: none;
 	}
-	._discourse--english, 
-	._discourse--latin {
-		display: grid;
-		grid-column: 1 / 13;
-		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: auto;
+
+	.add:after{
+		display: none;
 	}
-	div.discourse {
-		display: grid;
-		grid-column: 4 / 13;
-		grid-gap: 0;
-		grid-template-columns: 4fr 2fr;
-		grid-template-rows: auto;
+
+	.unclear:before{
+		display: none;
 	}
-	.edition--facsimile div.discourse {
-		grid-column: 3 / 13;
+
+	.unclear:after{
+	    display: none;
 	}
-	h3.title {
-		font-size: 1.25rem;
-		font-weight: 400;
-		grid-column: 1 / 2;
-		line-height: 2;	
+
+	.fw{
+		display: none;
 	}
-	h3.title:nth-of-type(2) {
-		margin-top: 3rem;
-		margin-bottom: -2rem;
+
+	.margin-note{
+	    float: none;
+	    margin-left: 0;
+	    outline: none;
+	    width: auto;
+	    padding-left: 0;
 	}
-	div.original h3.title:nth-of-type(2) {
-		margin-bottom: 0;
+
+	.note-mark{
+	    color: #222;
 	}
-	._discourse--english .ab, 
-	._discourse--latin .discourse-p1, 
-	._discourse--latin .discourse-p2 {
-		font-size: 1.25rem;
-		grid-column: 1 / 2;
-		line-height: 2;
-/*		span {
-			font-size: 1.25rem;
-			line-height: 2;
+
+	.help{
+	    display: none;
+	}
+
+	/********************************/
+	cite {
+	  font-style: oblique;
+	 }
+	.edition--normalized {
+		.del {
+			display: none;
+		}
+		.italics {
+			font-style: normal;
+		}
+		span.original {
+			display: none;
+		}
+	/*	.pb, .ab.pb {
+			display: none;
 		}*/
 	}
-	._discourse--english.edition--normalized .ab:nth-of-type(3) {
+	.edition--facsimile {
+		.del {
+			display: none;
+		}
+		.italics {
+			font-style: oblique;
+		}
+	/*	.pb:before{
+	    content: "––– Page: ";
+		}
+
+		.pb:after{
+		    content: " –––"
+		}*/
+		span.regularized {
+			display: none;
+		}
+	}
+	.edition--original, .edition--regularized {
+		span.v-line {
+			line-height: 2;
+		}
+	}
+	.edition--original {
+		span.regularized {
+			display: none;
+		}
+	}
+	.edition--regularized {
+		span.original {
+			display: none;
+		}
+	}
+	span.underline2 {
+		border-bottom: none;
+	}
+	.pc { /* what is .pc ??? */
+		white-space: nowrap;
+	}
+	.milestone {
+		color: $gray-medium;
+		margin: 0 .25rem;
+		white-space: nowrap;
+	}
+	/*********** END OF ENGLISH EMBLEM OVERRIDES *************/
+
+	/*********** EMBLEM LAYOUT *************/
+	div.translation, 
+	div.original {
+		height: 100%;
 		margin-top: 2.5rem;
 	}
-	div.margin-note {
-		display: inline-block;
-		font-size: 1.25rem;
-		line-height: 2;
-		padding-right: 2rem;
-		position: absolute;
-		left: 80vw;
+	.panel--left div.translation, 
+	.panel--left div.original, 
+	.panel--right div.translation, 
+	.panel--right div.original {
+		margin-top: 3.5rem;
 	}
-	div.margin-note.line2 {
-		display: block;
+	.lang--english, 
+	.lang--german, 
+	.lang--latin {
+		height: 100%;
 	}
-/*	.edition--facsimile span.pb {
-		display: inline-block;
-	}*/
-}
-section.section__discourse.panel--left, 
-section.section__discourse.panel--right {
-	div.discourse {
-		grid-column: 2 / 13;
-		grid-template-columns: repeat(12, 1fr);
-	}
-	._discourse--english .ab, 
-	._discourse--latin .discourse-p1, 
-	._discourse--latin .discourse-p2 {
-		grid-column: 1 / 8;
-	}
-	h3.title {
-		grid-column: 1 / 4;
-	}
-	h3.title:nth-of-type(2) {
-		margin-bottom: 0;
-	}
-}
-section.section__discourse.panel--left div.discourse {
- 	div.margin-note {
-		left: 35vw;
-		width: 13vw;
-	}
-}
-/*.panel--left div.margin-note {  This is only worth the effort on large desktops ???
-	left: calc(50vw - 10%);
-	padding-right: .5rem;
-	width: 10vw;
-}*/
-section.section__discourse.panel--right div.discourse {
-	div.margin-note {
-		left: 85vw;
-		padding-right: 1rem;
-	}
-}
-/*********** END OF EMBLEM LAYOUT *************/
-
-/*********** ENGLISH EMBLEM STYLES *************/
-.translation div.edition--facsimile span.underline2 {
-	border-bottom: 2px solid $gray-dark;
-}
-/*********** END OF ENGLISH EMBLEM STYLES *************/
-
-
-/*********** FRONTMATTER *************/
-
-main.frontmatter {
-	background: $white;
-	.switch-wrapper .latin-german-switch ul li:nth-child(3) { /* remove german text swtich option from frontmatter */
-		display: none;
-	}
-	.pb {
-		display: none;
-	}
-}
-/* FRONTISPIECE */
-section.section__frontispiece div.translation, 
-section.section__frontispiece div.original {
-	background-image: none;
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: auto;
-	.switch-wrapper {
-		grid-column: 1 / 13;
-	}
-	.page-break--atalanta-fugiens, 
-	.page-break--beinecke {
-		grid-column: 1 / 13;
-	}
-	._frontispiece--english, 
-	._frontispiece--latin {
+	.lang--english._motto--english, 
+	.lang--latin._motto--latin, 
+	.lang--german._motto--german {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: auto;
-		grid-column: 1 / 13;
-		font-size: 1.5rem;
-		line-height: 2;
+		grid-template-rows: 1fr;
 	}
-	._frontispiece--english.edition--facsimile div.titlePage, 
-	._frontispiece--english.edition--normalized div.titlePage,
-	._frontispiece--latin.edition--original div.pref-epigram.la, 
-	._frontispiece--latin.edition--regularized div.pref-epigram.la {
-		grid-column: 4 / 10;
-		padding-bottom: 10rem;
-		text-align: center;
-	}
-	._frontispiece--latin.edition--regularized div.pref-epigram.la {
-		padding-top: 3rem;
-		padding-bottom: 0;
-	}
-	._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
-		font-family: $secondary-display-font_emblem;
-		font-size: 4rem;
-		font-weight: 600;
-		line-height: 1.25;
-		margin-bottom: 1rem;
-	}
-	._frontispiece--english .ab:nth-of-type(4) {
-		margin-top: 2rem;
-	}
-	._frontispiece--english.edition--normalized .ab:nth-of-type(5) {
-		margin-bottom: 2rem;
-	}
-}
-section.section__frontispiece.panel--left div.translation, 
-section.section__frontispiece.panel--left div.original, 
-section.section__frontispiece.panel--right div.translation, 
-section.section__frontispiece.panel--right div.original {
-	._frontispiece--english.edition--facsimile div.titlePage, 
-	._frontispiece--english.edition--normalized div.titlePage,
-	._frontispiece--latin.edition--original div.pref-epigram.la, 
-	._frontispiece--latin.edition--regularized div.pref-epigram.la {
-		grid-column: 2 / 12;
-		padding-bottom: 6rem;
-	}
-	._frontispiece--latin.edition--regularized div.pref-epigram.la {
-		padding-bottom: 0;
-	}
-}
+	.panel--left .lang--english._motto--english , 
+	.panel--left .lang--latin._motto--latin, 
+	.panel--left .lang--german._motto--german, 
+	.panel--right .lang--english._motto--english , 
+	.panel--right .lang--latin._motto--latin, 
+	.panel--right .lang--german._motto--german {
 
-/* AUTHOR'S EPIGRAM */
-
-/*********** END OF FRONTMATTER *************/
-
-/*********** TESTS *************/
-.lang--latin._discourse--latin .pb {
-	display: none;
-}
-.discourse.la .pb {
-	display: none !important;
-}
-/****************************************/
-
-/***************** BREAKPOINTS *****************/
-@media screen and (min-width: 320px) and (max-width: 767px) {
-	section.section__motto > div.original {
-		margin-top: .5rem;
 	}
+	/* MOTTO - ENGLISH/LATIN/GERMAN */
 	section.section__motto {
+		div.title, div.fugue, 
+		._motto--latin div.image {
+	/*		grid-area: 1 / 4 / 2 / 10;*/
+			grid-column: 4 / 10;
+		}
+		.translation h1.title, 
+		.original h1.title {
+			font-family: $display-font_emblem;
+			font-size: 2.625rem;
+			font-weight: 600;
+			line-height: 3.25rem;
+			text-align: center;
+		}
+		.translation h1.title br, 
+		.original h1.title br, 
+		.translation h3.title br, 
+		.original h3.title br  {
+			display: none;
+		}
+		.translation .edition--facsimile h1.title br, 
+		.translation .edition--facsimile h3.title br {
+	/*		display: block;*/
+			display: none;
+		}
+		.translation h3.title, 
+		.original h3.title {
+			font-family: $body-font_emblem;
+			font-weight: 600;
+			font-size: 1rem;
+			line-height: 1.5rem;
+			text-align: center;
+		}
+		.original .fugue.de h3.title {
+			visibility: hidden;
+		}
+		.translation h3.title .italics, 
+		.original h3.title .italics {
+			font-style: oblique;
+		}
+		.translation h3.title span.regularized, 
+		.translation h1.title span.regularized {
+			color: $white;
+		}
+	}
+	section.section__motto.panel--left, 
+	section.section__motto.panel--right {
 		div.title, 
-		div.image.la, 
-		div.fugue.de {
-			grid-column: 1 / 13;
-			padding: 0 .75rem;
+		div.fugue, 
+		._motto--latin div.image {
+			grid-area: 1 / 2 / 2 / 12;
+			margin-top: 1rem;	
 		}
 		.translation h1.title, 
 		.original h1.title {
 			font-size: 2rem;
-			line-height: 1.25;
+			line-height: 2.5rem;
+		}
+		.translation h3.title span.regularized, 
+		.translation h1.title span.regularized {
+			color: $text_body;
+		}
+	}
+	/* EPIGRAM - ENGLISH/LATIN/GERMAN */
+	section.section__epigram {
+		.translation div.epigram, 
+		.original div.epigram {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: auto;
 		}
 		.translation h3.title, 
 		.original h3.title {
-			font-size: .875rem;
+			font-weight: 500;
+			grid-column: 2 / 12;
+			text-align: center;
+			text-indent: 0;
+		}
+		.translation .edition--facsimile h3.title {
+			text-align: left;
+			text-indent: 20%;
+		}
+		h3.title span.regularized, 
+		.verse-epigram span.regularized {
+			color: #fff;
+		}
+		.translation .verse-epigram, 
+		.original .verse-epigram {
+			font-size: 1.5rem;
+			grid-column: 2 / 12;
+			text-align: center;
+		}
+		.translation .verse-epigram {
 			line-height: 1.5;
 		}
-	}
-	section.section__epigram .translation, 
-	section.section__epigram .original {
-		h3.title {
-			grid-column: 1 / 13;
+		.original .verse-epigram {
+			line-height: 1.5;
+			text-indent: 0;
 		}
-		.verse-epigram {
-			font-size: 1.125rem;
-			grid-column: 1 / 13;
-			line-height: 2;
-			padding: 0 .5rem 0 1rem;
+		.translation .edition--facsimile .verse-epigram {
+			grid-column: 3/ 13;
+			text-align: left;
 		}
-		.verse-epigram > span {
-			line-height: 1;
-			margin-bottom: -1.5rem;
+		.original .verse-epigram span {
+			/*line-height: 0;*/
+			margin: 0;
 		}
-	}
-	section.section__discourse .translation, 
-	section.section__discourse .original {
-		._discourse--english, ._discourse--latin {
-			margin: 0 1rem;
+		.original .de .verse-epigram > span {
+			line-height: 0;
 		}
-		div.discourse {
+		.original .verse-epigram > span:nth-child(2) {
 	/*		background-color: $error;*/
+			padding-top: 1.25rem;
+		}
+		.original .verse-epigram > span:last-child {
+	/*		background-color: $error;*/
+			padding-bottom: 1.25rem;
+		}
+		.original div.epigram.la .verse-epigram span.original > br {
+			display: none;
+		}
+	}
+	section.section__epigram.panel--left, 
+	section.section__epigram.panel--right {
+		.translation .edition--facsimile h3.title {
+			text-indent: 40%;
+		}
+		.original .verse-epigram > span {
+			/*		background-color: $error;*/
+			line-height: 2.5;
+			margin-bottom: -1.375rem;
+		}
+		.original .de .verse-epigram > span {
+			line-height: 1.2;
+		}
+		.original .verse-epigram > span:nth-child(2) {
+	/*		background-color: $error;*/
+			padding-top: .25rem;
+		}
+		h3.title span.regularized, 
+		.verse-epigram span.regularized {
+			color: $text_body;
+		}
+	}
+
+	/* DISCOURSE - ENGLISH/LATIN */
+	section.section__discourse {
+		div.translation, 
+		div.original {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: auto;
+			margin-bottom: 8rem;		
+		}
+		.switch-wrapper {
+			grid-column: 1 / 13;
+		}
+		div.original .switch-wrapper .facsimile-normalized-switch {
+			display: none;
+		}
+		._discourse--english, 
+		._discourse--latin {
+			display: grid;
 			grid-column: 1 / 13;
 			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: auto;
+		}
+		div.discourse {
+			display: grid;
+			grid-column: 4 / 13;
+			grid-gap: 0;
+			grid-template-columns: 4fr 2fr;
+			grid-template-rows: auto;
+		}
+		.edition--facsimile div.discourse {
+			grid-column: 3 / 13;
 		}
 		h3.title {
-			grid-column: 1 / 13;
-			padding: 0 .25rem;
+			font-size: 1.25rem;
+			font-weight: 400;
+			grid-column: 1 / 2;
+			line-height: 2;	
+		}
+		h3.title:nth-of-type(2) {
+			margin-top: 3rem;
+			margin-bottom: -2rem;
+		}
+		div.original h3.title:nth-of-type(2) {
+			margin-bottom: 0;
 		}
 		._discourse--english .ab, 
 		._discourse--latin .discourse-p1, 
 		._discourse--latin .discourse-p2 {
-			grid-column: 1 / 13;
-			padding: 0 .25rem;
+			font-size: 1.25rem;
+			grid-column: 1 / 2;
+			line-height: 2;
+	/*		span {
+				font-size: 1.25rem;
+				line-height: 2;
+			}*/
 		}
-		span.note-mark, 
+		._discourse--english.edition--normalized .ab:nth-of-type(3) {
+			margin-top: 2.5rem;
+		}
 		div.margin-note {
+			display: inline-block;
+			font-size: 1.25rem;
+			line-height: 2;
+			padding-right: 2rem;
+			position: absolute;
+			left: 80vw;
+		}
+		div.margin-note.line2 {
+			display: block;
+		}
+	/*	.edition--facsimile span.pb {
+			display: inline-block;
+		}*/
+	}
+	section.section__discourse.panel--left, 
+	section.section__discourse.panel--right {
+		div.discourse {
+			grid-column: 2 / 13;
+			grid-template-columns: repeat(12, 1fr);
+		}
+		._discourse--english .ab, 
+		._discourse--latin .discourse-p1, 
+		._discourse--latin .discourse-p2 {
+			grid-column: 1 / 8;
+		}
+		h3.title {
+			grid-column: 1 / 4;
+		}
+		h3.title:nth-of-type(2) {
+			margin-bottom: 0;
+		}
+	}
+	section.section__discourse.panel--left div.discourse {
+	 	div.margin-note {
+			left: 35vw;
+			width: 13vw;
+		}
+	}
+	/*.panel--left div.margin-note {  This is only worth the effort on large desktops ???
+		left: calc(50vw - 10%);
+		padding-right: .5rem;
+		width: 10vw;
+	}*/
+	section.section__discourse.panel--right div.discourse {
+		div.margin-note {
+			left: 85vw;
+			padding-right: 1rem;
+		}
+	}
+	/*********** END OF EMBLEM LAYOUT *************/
+
+	/*********** ENGLISH EMBLEM STYLES *************/
+	.translation div.edition--facsimile span.underline2 {
+		border-bottom: 2px solid $gray-dark;
+	}
+	/*********** END OF ENGLISH EMBLEM STYLES *************/
+
+
+	/*********** FRONTMATTER *************/
+
+	main.frontmatter {
+		background: $white;
+		.switch-wrapper .latin-german-switch ul li:nth-child(3) { /* remove german text swtich option from frontmatter */
 			display: none;
+		}
+		.pb {
+			display: none;
+		}
+	}
+	/* FRONTISPIECE */
+	section.section__frontispiece div.translation, 
+	section.section__frontispiece div.original {
+		background-image: none;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: auto;
+		.switch-wrapper {
+			grid-column: 1 / 13;
+		}
+		.page-break--atalanta-fugiens, 
+		.page-break--beinecke {
+			grid-column: 1 / 13;
+		}
+		._frontispiece--english, 
+		._frontispiece--latin {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: auto;
+			grid-column: 1 / 13;
+			font-size: 1.5rem;
+			line-height: 2;
+		}
+		._frontispiece--english.edition--facsimile div.titlePage, 
+		._frontispiece--english.edition--normalized div.titlePage,
+		._frontispiece--latin.edition--original div.pref-epigram.la, 
+		._frontispiece--latin.edition--regularized div.pref-epigram.la {
+			grid-column: 4 / 10;
+			padding-bottom: 10rem;
+			text-align: center;
+		}
+		._frontispiece--latin.edition--regularized div.pref-epigram.la {
+			padding-top: 3rem;
+			padding-bottom: 0;
+		}
+		._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
+			font-family: $secondary-display-font_emblem;
+			font-size: 4rem;
+			font-weight: 600;
+			line-height: 1.25;
+			margin-bottom: 1rem;
+		}
+		._frontispiece--english .ab:nth-of-type(4) {
+			margin-top: 2rem;
+		}
+		._frontispiece--english.edition--normalized .ab:nth-of-type(5) {
+			margin-bottom: 2rem;
+		}
+	}
+	section.section__frontispiece.panel--left div.translation, 
+	section.section__frontispiece.panel--left div.original, 
+	section.section__frontispiece.panel--right div.translation, 
+	section.section__frontispiece.panel--right div.original {
+		._frontispiece--english.edition--facsimile div.titlePage, 
+		._frontispiece--english.edition--normalized div.titlePage,
+		._frontispiece--latin.edition--original div.pref-epigram.la, 
+		._frontispiece--latin.edition--regularized div.pref-epigram.la {
+			grid-column: 2 / 12;
+			padding-bottom: 6rem;
+		}
+		._frontispiece--latin.edition--regularized div.pref-epigram.la {
+			padding-bottom: 0;
+		}
+	}
+
+	/* AUTHOR'S EPIGRAM */
+
+	/*********** END OF FRONTMATTER *************/
+
+	/*********** TESTS *************/
+	.lang--latin._discourse--latin .pb {
+		display: none;
+	}
+	.discourse.la .pb {
+		display: none !important;
+	}
+	/****************************************/
+}
+
+/***************** BREAKPOINTS *****************/
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	main.emblem-page {
+		section.section__motto > div.original {
+			margin-top: .5rem;
+		}
+		section.section__motto {
+			div.title, 
+			div.image.la, 
+			div.fugue.de {
+				grid-column: 1 / 13;
+				padding: 0 .75rem;
+			}
+			.translation h1.title, 
+			.original h1.title {
+				font-size: 2rem;
+				line-height: 1.25;
+			}
+			.translation h3.title, 
+			.original h3.title {
+				font-size: .875rem;
+				line-height: 1.5;
+			}
+		}
+		section.section__epigram .translation, 
+		section.section__epigram .original {
+			h3.title {
+				grid-column: 1 / 13;
+			}
+			.verse-epigram {
+				font-size: 1.125rem;
+				grid-column: 1 / 13;
+				line-height: 2;
+				padding: 0 .5rem 0 1rem;
+			}
+			.verse-epigram > span {
+				line-height: 1;
+				margin-bottom: -1.5rem;
+			}
+		}
+		section.section__discourse .translation, 
+		section.section__discourse .original {
+			._discourse--english, ._discourse--latin {
+				margin: 0 1rem;
+			}
+			div.discourse {
+		/*		background-color: $error;*/
+				grid-column: 1 / 13;
+				grid-template-columns: repeat(12, 1fr);
+			}
+			h3.title {
+				grid-column: 1 / 13;
+				padding: 0 .25rem;
+			}
+			._discourse--english .ab, 
+			._discourse--latin .discourse-p1, 
+			._discourse--latin .discourse-p2 {
+				grid-column: 1 / 13;
+				padding: 0 .25rem;
+			}
+			span.note-mark, 
+			div.margin-note {
+				display: none;
+			}
 		}
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-	section.section__motto {
-		div.title, 
-		div.image.la, 
-		div.fugue.de {
-			grid-column: 1 / 13;
-			padding: 0 1.25rem;
-		} 
-	}
-	section.section__epigram .translation, 
-	section.section__epigram .original {
-		.verse-epigram {
-			font-size: 1.5rem;
-			grid-column: 2 / 12;
-			line-height: 2;
+	main.emblem-page {
+		section.section__motto {
+			div.title, 
+			div.image.la, 
+			div.fugue.de {
+				grid-column: 1 / 13;
+				padding: 0 1.25rem;
+			} 
 		}
-	}
-	section.section__epigram .original {
-		.verse-epigram span {
-			line-height: 2;
-			margin: 0;
+		section.section__epigram .translation, 
+		section.section__epigram .original {
+			.verse-epigram {
+				font-size: 1.5rem;
+				grid-column: 2 / 12;
+				line-height: 2;
+			}
 		}
-		.verse-epigram br {
-			display: none;
+		section.section__epigram .original {
+			.verse-epigram span {
+				line-height: 2;
+				margin: 0;
+			}
+			.verse-epigram br {
+				display: none;
+			}
 		}
-	}
-	section.section__epigram.panel--left .translation, 
-	section.section__epigram.panel--left .original, 
-	section.section__epigram.panel--right .translation, 
-	section.section__epigram.panel--right .original {
-		.verse-epigram {
-			grid-column: 3 / 11;
+		section.section__epigram.panel--left .translation, 
+		section.section__epigram.panel--left .original, 
+		section.section__epigram.panel--right .translation, 
+		section.section__epigram.panel--right .original {
+			.verse-epigram {
+				grid-column: 3 / 11;
+			}
 		}
-	}
-	section.section__discourse .translation, 
-	section.section__discourse .original {
-		div.discourse {
-			grid-column: 2 / 13;
+		section.section__discourse .translation, 
+		section.section__discourse .original {
+			div.discourse {
+				grid-column: 2 / 13;
+			}
+			div.margin-note {
+				left: 75vw;
+				padding-right: 1rem;
+			}
 		}
-		div.margin-note {
-			left: 75vw;
-			padding-right: 1rem;
-		}
-	}
-	section.section__discourse.panel--left .translation, 
-	section.section__discourse.panel--left .original, 
-	section.section__discourse.panel--right .translation, 
-	section.section__discourse.panel--right .original {
-		span.note-mark, div.margin-note {
-			display: none;
+		section.section__discourse.panel--left .translation, 
+		section.section__discourse.panel--left .original, 
+		section.section__discourse.panel--right .translation, 
+		section.section__discourse.panel--right .original {
+			span.note-mark, div.margin-note {
+				display: none;
+			}
 		}
 	}
 }
