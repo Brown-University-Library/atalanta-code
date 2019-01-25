@@ -1,10 +1,11 @@
 @import 'colors';
 @import 'utilities';
 
+
+
 .search__modal {
 
-	background-color: $orange-red;;
-
+	background-color: $red_transparent;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
@@ -23,10 +24,7 @@
 
 	button.close, 
 	button.open {
-		display: flex;
-		align-items: center;
 		align-self: flex-end;
-		justify-content: center;
 		font-size: 3rem;
 		height: 50px;
 		width: 50px;
@@ -65,7 +63,7 @@
 		align-items: flex-start;
 		justify-content: center;
 		height: 5rem;
-		width: 70%;	
+		width: 80%;
 	}
 .search__bar__label, 
 input#search__bar__field, 
@@ -75,17 +73,39 @@ button.submit {
 
 	.search__bar__label {
 		outline: 5px solid red;
-		/*width: 10%;*/
+
+		flex: 0 0 15%;
+		display: none;
 	}
 	input#search__bar__field {
 		background-color: blue;
 
-		height: 5rem;
-		/*width: 80%;*/
+		flex: 1 0 70%;
 	}
 	button.submit {
 		outline: 5px solid red;
 
-		/*width: 10%;*/
+		flex: 0 0 15%;
 	}
 }
+
+
+
+
+/* Animation */
+	.search__modal--slide-in {
+		div.search__modal {
+			transform: translateY(800px);
+			transition: transform .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+		}
+	}
+	.search__modal--slide-out {
+		div.search__modal {
+			transform: translateY(-800px);
+			transition: transform .2s linear;
+		}
+	}
+	.search__modal {
+		position: fixed;
+		top: -400px;
+	}

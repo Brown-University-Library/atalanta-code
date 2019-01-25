@@ -25,7 +25,7 @@
 							<li><a href="../search/toc.html">Contents</a></li>
 						</ul>
 					</li>
-					<li class="topnav__search"><button><a href="../search/search.html">
+					<li class="topnav__search"><button class="topnav__search--closed"><a href="#">
 						<span class="icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 960 560" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:#fff; stroke-width:20;stroke-miterlimit:10;}</style><g id="handle"><g><path class="st0" d="M537.6,337.5l97,97L537.6,337.5z"/></g></g><g id="glass"><g><path class="st0" d="M480,153c33.9,0,65.8,13.2,89.8,37.2S607,246.1,607,280s-13.2,65.8-37.2,89.8S513.9,407,480,407s-65.8-13.2-89.8-37.2
 						S353,313.9,353,280s13.2-65.8,37.2-89.8S446.1,153,480,153 M480,143c-75.7,0-137,61.3-137,137s61.3,137,137,137s137-61.3,137-137
 						S555.7,143,480,143L480,143z"/></g></g></svg></span><span class="label">Search</span>
@@ -49,5 +49,33 @@
 
 	</main>
 <!-- JS -->
+	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function() {
+			$('.topnav__search button').click(function() {
+				if( $('.topnav__search button').hasClass('topnav__search--closed') ) {
+					
+					$('.topnav__search button').removeClass('topnav__search--closed');
+					$('.topnav__search button').addClass('topnav__search--open');
+					$('div.search__modal').addClass('search__modal--slide-in');
+					$('div.search__modal').removeClass('search__modal--slide-out');
+					console.log("I am openining the search bar");
+
+				}
+				else if( $('.topnav__search button').hasClass('topnav__search--open') ) {
+					console.log("The search bar is already closed");
+					$('.topnav__search button').removeClass('topnav__search--open');
+					$('.topnav__search button').addClass('topnav__search--closed');
+					$('div.search__modal').addClass('search__modal--slide-out');
+					$('div.search__modal').removeClass('search__modal--slide-in');
+
+				}
+				else {
+					console.log("THE SEARCH BUTTON HAS NO STATE");
+				}
+			});
+		});
+	</script>
+
 </body>
 </html>

@@ -2397,7 +2397,7 @@ main.home {
 
 /* TOC MODAL */
 .drawer {
-  background-color: #DC4929;
+  background-color: #dc4928;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -2870,13 +2870,13 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
 		color: $yellow_bright;
 	}
 	.toc__heading  {
-		color: $orange-yellow;
+		color: $yellow;
 		font-size: 1.125rem;
 		font-weight: 500;
 		padding: .825rem 0 .325rem .5rem;
 	}
 	.toc__heading a {
-		color: $orange-yellow;
+		color: $yellow;
 	}
 	.toc__heading a:hover {
 		color: $yellow_bright;
@@ -3097,7 +3097,7 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
     opacity: 1; } }
 
 .search__modal {
-  background-color: #DC4929;
+  background-color: rgba(255, 51, 5, 0.85);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3127,21 +3127,9 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
   z-index: 1000; }
   .search__modal button.close,
   .search__modal button.open {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
     font-size: 3rem;
     height: 50px;
     width: 50px;
@@ -3180,21 +3168,55 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
     -ms-flex-pack: center;
     justify-content: center;
     height: 5rem;
-    width: 70%; }
+    width: 80%; }
   .search__modal .search__bar__label,
   .search__modal input#search__bar__field,
   .search__modal button.submit {
     height: 5rem; }
   .search__modal .search__bar__label {
     outline: 5px solid red;
-    /*width: 10%;*/ }
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 15%;
+    -ms-flex: 0 0 15%;
+    flex: 0 0 15%;
+    display: none; }
   .search__modal input#search__bar__field {
     background-color: blue;
-    height: 5rem;
-    /*width: 80%;*/ }
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 70%;
+    -ms-flex: 1 0 70%;
+    flex: 1 0 70%; }
   .search__modal button.submit {
     outline: 5px solid red;
-    /*width: 10%;*/ }
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 15%;
+    -ms-flex: 0 0 15%;
+    flex: 0 0 15%; }
+
+/* Animation */
+.search__modal--slide-in div.search__modal {
+  -webkit-transform: translateY(800px);
+  -ms-transform: translateY(800px);
+  transform: translateY(800px);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: -webkit-transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+
+.search__modal--slide-out div.search__modal {
+  -webkit-transform: translateY(-800px);
+  -ms-transform: translateY(-800px);
+  transform: translateY(-800px);
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  -o-transition: transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear; }
+
+.search__modal {
+  position: fixed;
+  top: -400px; }
 
 /* PRODUCTION */
 /* TESTING */

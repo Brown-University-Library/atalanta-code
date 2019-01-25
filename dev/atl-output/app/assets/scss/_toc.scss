@@ -3,7 +3,7 @@
 
 /* TOC MODAL */
 .drawer {
-	background-color: $orange-red;
+	background-color: $red;
 	height: 100vh;
 	position: fixed;
 	top: 0;
@@ -402,13 +402,13 @@ nav.topnav__contents .topnav__contents__atalanta-back {
 		color: $yellow_bright;
 	}
 	.toc__heading  {
-		color: $orange-yellow;
+		color: $yellow;
 		font-size: 1.125rem;
 		font-weight: 500;
 		padding: .825rem 0 .325rem .5rem;
 	}
 	.toc__heading a {
-		color: $orange-yellow;
+		color: $yellow;
 	}
 	.toc__heading a:hover {
 		color: $yellow_bright;
