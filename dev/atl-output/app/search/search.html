@@ -35,13 +35,10 @@
 		</div>
 	</header>
 	<main>
-
-		<div class="search__modal">
-			<button class="close">x</button>
-			<h1>Furnace and Fugue</h1>
-			<h2>Text Search</h2>
+		<div class="search__modal" aria-hidden="true">
+			<button class="x-close"></button>
 			<div class="search__bar">
-				<label class="label search__bar__label" for="search-field">Search</label>
+				<label class="label search__bar__label" for="search-field">Enter your search below</label>
 				<input type="text" id="search__bar__field">
 				<button class="submit" type="submit">Search</button>
 			</div>
@@ -50,15 +47,17 @@
 	</main>
 <!-- JS -->
 	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
-	<script>
+<script>
 		$(function() {
 			$('.topnav__search button').click(function() {
 				if( $('.topnav__search button').hasClass('topnav__search--closed') ) {
 					
 					$('.topnav__search button').removeClass('topnav__search--closed');
 					$('.topnav__search button').addClass('topnav__search--open');
+			$('div.search__modal').attr('aria-hidden', 'false');
 					$('div.search__modal').addClass('search__modal--slide-in');
 					$('div.search__modal').removeClass('search__modal--slide-out');
+					$('body').addClass('no-scroll');
 					console.log("I am openining the search bar");
 
 				}
@@ -66,12 +65,39 @@
 					console.log("The search bar is already closed");
 					$('.topnav__search button').removeClass('topnav__search--open');
 					$('.topnav__search button').addClass('topnav__search--closed');
+$('div.search__modal').attr('aria-hidden', 'true');
 					$('div.search__modal').addClass('search__modal--slide-out');
 					$('div.search__modal').removeClass('search__modal--slide-in');
-
+					$('body').removeClass('no-scroll');
 				}
 				else {
 					console.log("THE SEARCH BUTTON HAS NO STATE");
+				}
+			});
+			$('button.x-close > svg').click(function(e) {
+				e.stopPropagation();
+				e.preventDefault();
+			});
+			$('button.x-close').click(function() {
+				console.log("I am clicking the search close button");
+				$('.topnav__search button').removeClass('topnav__search--open');
+				$('.topnav__search button').addClass('topnav__search--closed');
+		$('div.search__modal').attr('aria-hidden', 'true');
+				$('div.search__modal').addClass('search__modal--slide-out');
+				$('div.search__modal').removeClass('search__modal--slide-in');
+				$('body').removeClass('no-scroll');
+			});
+			$('input:text').focus(function() {
+				$(this).val('');
+			});
+			$(document).keydown(function(event) {
+				if(event.keyCode == 27) {
+					$('.topnav__search button').removeClass('topnav__search--open');
+					$('.topnav__search button').addClass('topnav__search--closed');
+		$('div.search__modal').attr('aria-hidden', 'true');
+					$('div.search__modal').addClass('search__modal--slide-out');
+					$('div.search__modal').removeClass('search__modal--slide-in');
+					$('body').removeClass('no-scroll');
 				}
 			});
 		});

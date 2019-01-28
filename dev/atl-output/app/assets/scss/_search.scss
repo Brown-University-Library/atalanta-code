@@ -1,111 +1,94 @@
 @import 'colors';
 @import 'utilities';
 
-
-
 .search__modal {
-
 	background-color: $red_transparent;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
+	height: calc(100% - 12rem);
 	margin: 0;
-	padding: 0;
-	border: 10px solid black;
-
-	height: 100%;
 	padding: 6rem 4rem;
 	position: fixed;
-/*	left: 0;
-	top: 0;*/
-	width: calc(100vw - (8rem + 20px);
+	width: calc(100vw - 8rem);
 	z-index: 1000;
-
-	button.close, 
-	button.open {
+	button.x-close {
 		align-self: flex-end;
-		font-size: 3rem;
-		height: 50px;
-		width: 50px;
-
-		outline: 5px solid blue;
+		background-image: url("../icons/icon_X-close.svg");
+		filter: invert(100%);
+		height: 3.125rem;
+		transform: scale(.7);
+		width: 3.125rem;
 	}
-	button.close {
-		
+	button.x-close:hover {
+		filter: invert(0%);
+		transition: .2s;
 	}
-	button.open {
-
-	}
-	h1 {
-		display: block;
-		outline: 2px solid black;
-
-		height: 100px;
-/*		position: absolute;
-		left: 0;
-		top: 100px;*/
-	}
-	h2 {
-		display: block;
-		outline: 2px solid gray;
-
-		height: 100px;
-/*		position: absolute;
-		left: 0;
-		top: 200px;*/
-	}
+	/*	button > * {
+	  pointer-events: none;
+	}*/
 	.search__bar {
-		outline: 5px solid green;
-		
 		display: flex;
 		flex-direction: row;
+		flex-wrap: wrap;
 		align-items: flex-start;
 		justify-content: center;
 		height: 5rem;
+		margin-top: 12rem;
 		width: 80%;
 	}
-.search__bar__label, 
-input#search__bar__field, 
-button.submit {
-	height: 5rem;
-}
-
+	.search__bar__label, 
+	input#search__bar__field, 
+	button.submit {
+		height: 5rem;
+	}
 	.search__bar__label {
-		outline: 5px solid red;
-
-		flex: 0 0 15%;
-		display: none;
+		display: flex;
+		align-items: center;
+		flex: 0 0 100%;
+		font-weight: bold;	
 	}
 	input#search__bar__field {
-		background-color: blue;
-
+		background-color: transparent;
+		border: none;
+		border-bottom: 2px solid $black;
+		color: $black;
 		flex: 1 0 70%;
+		font-size: 3.5rem;
+		outline: none;	
 	}
 	button.submit {
-		outline: 5px solid red;
-
+		background-color: $black;
+		border-bottom: 2px solid $black;
+		color: $gray_light;
 		flex: 0 0 15%;
+		font-size: 1rem;
+		height: calc(5rem + 4px);
+		text-transform: uppercase;
+	}
+	button.submit:hover,
+	button.submit:focus {
+		background-color: transparent;
+		border: 2px solid $black;
+		color: $black;
+		transition: background-color .2s;
+	}
+	button.submit:active {
+		background-color: $red_dark;
 	}
 }
 
-
-
-
 /* Animation */
-	.search__modal--slide-in {
-		div.search__modal {
-			transform: translateY(800px);
-			transition: transform .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-		}
-	}
-	.search__modal--slide-out {
-		div.search__modal {
-			transform: translateY(-800px);
-			transition: transform .2s linear;
-		}
-	}
 	.search__modal {
-		position: fixed;
-		top: -400px;
+	position: fixed;
+	top: -100%;
+	}
+	.search__modal.search__modal--slide-in {
+		transform: translateY(100%);
+		transition: transform .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);		
+	}
+	.search__modal.search__modal--slide-out {
+		transform: translateY(-100%);
+		transition: transform .3s linear;
 	}

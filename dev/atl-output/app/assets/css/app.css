@@ -132,6 +132,9 @@ table {
 .is-sticky {
   position: fixed; }
 
+.no-scroll {
+  overflow: hidden; }
+
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0; }
@@ -197,6 +200,9 @@ table {
 
 .is-sticky {
   position: fixed; }
+
+.no-scroll {
+  overflow: hidden; }
 
 @keyframes fade-in {
   0% {
@@ -2136,6 +2142,9 @@ a.ui-button:active,
 .is-sticky {
   position: fixed; }
 
+.no-scroll {
+  overflow: hidden; }
+
 @keyframes fade-in {
   0% {
     opacity: 0; }
@@ -2374,6 +2383,9 @@ main.home {
 
 .is-sticky {
   position: fixed; }
+
+.no-scroll {
+  overflow: hidden; }
 
 @keyframes fade-in {
   0% {
@@ -3076,6 +3088,9 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
 .is-sticky {
   position: fixed; }
 
+.no-scroll {
+  overflow: hidden; }
+
 @keyframes fade-in {
   0% {
     opacity: 0; }
@@ -3097,7 +3112,7 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
     opacity: 1; } }
 
 .search__modal {
-  background-color: rgba(255, 51, 5, 0.85);
+  background-color: rgba(234, 64, 26, 0.97);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3115,41 +3130,34 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  height: calc(100% - 12rem);
   margin: 0;
-  padding: 0;
-  border: 10px solid black;
-  height: 100%;
   padding: 6rem 4rem;
   position: fixed;
-  /*	left: 0;
-	top: 0;*/
-  width: calc(100vw - (8rem + 20px));
-  z-index: 1000; }
-  .search__modal button.close,
-  .search__modal button.open {
+  width: calc(100vw - 8rem);
+  z-index: 1000;
+  /*	button > * {
+	  pointer-events: none;
+	}*/ }
+  .search__modal button.x-close {
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end;
-    font-size: 3rem;
-    height: 50px;
-    width: 50px;
-    outline: 5px solid blue; }
-  .search__modal h1 {
-    display: block;
-    outline: 2px solid black;
-    height: 100px;
-    /*		position: absolute;
-		left: 0;
-		top: 100px;*/ }
-  .search__modal h2 {
-    display: block;
-    outline: 2px solid gray;
-    height: 100px;
-    /*		position: absolute;
-		left: 0;
-		top: 200px;*/ }
+    background-image: url("../icons/icon_X-close.svg");
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    height: 3.125rem;
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    width: 3.125rem; }
+  .search__modal button.x-close:hover {
+    -webkit-filter: invert(0%);
+    filter: invert(0%);
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
   .search__modal .search__bar {
-    outline: 5px solid green;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3159,6 +3167,9 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
@@ -3168,55 +3179,83 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
     -ms-flex-pack: center;
     justify-content: center;
     height: 5rem;
+    margin-top: 12rem;
     width: 80%; }
   .search__modal .search__bar__label,
   .search__modal input#search__bar__field,
   .search__modal button.submit {
     height: 5rem; }
   .search__modal .search__bar__label {
-    outline: 5px solid red;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    font-weight: bold; }
+  .search__modal input#search__bar__field {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #222;
+    color: #222;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 70%;
+    -ms-flex: 1 0 70%;
+    flex: 1 0 70%;
+    font-size: 3.5rem;
+    outline: none; }
+  .search__modal button.submit {
+    background-color: #222;
+    border-bottom: 2px solid #222;
+    color: #F1F1F1;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 15%;
     -ms-flex: 0 0 15%;
     flex: 0 0 15%;
-    display: none; }
-  .search__modal input#search__bar__field {
-    background-color: blue;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 70%;
-    -ms-flex: 1 0 70%;
-    flex: 1 0 70%; }
-  .search__modal button.submit {
-    outline: 5px solid red;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 15%;
-    -ms-flex: 0 0 15%;
-    flex: 0 0 15%; }
+    font-size: 1rem;
+    height: calc(5rem + 4px);
+    text-transform: uppercase; }
+  .search__modal button.submit:hover,
+  .search__modal button.submit:focus {
+    background-color: transparent;
+    border: 2px solid #222;
+    color: #222;
+    -webkit-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    transition: background-color .2s; }
+  .search__modal button.submit:active {
+    background-color: #ba4221; }
 
 /* Animation */
-.search__modal--slide-in div.search__modal {
-  -webkit-transform: translateY(800px);
-  -ms-transform: translateY(800px);
-  transform: translateY(800px);
-  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: -webkit-transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  -o-transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-transform 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
-
-.search__modal--slide-out div.search__modal {
-  -webkit-transform: translateY(-800px);
-  -ms-transform: translateY(-800px);
-  transform: translateY(-800px);
-  -webkit-transition: -webkit-transform .2s linear;
-  transition: -webkit-transform .2s linear;
-  -o-transition: transform .2s linear;
-  transition: transform .2s linear;
-  transition: transform .2s linear, -webkit-transform .2s linear; }
-
 .search__modal {
   position: fixed;
-  top: -400px; }
+  top: -100%; }
+
+.search__modal.search__modal--slide-in {
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: -webkit-transform 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition: transform 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-transform 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+
+.search__modal.search__modal--slide-out {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: -webkit-transform .3s linear;
+  transition: -webkit-transform .3s linear;
+  -o-transition: transform .3s linear;
+  transition: transform .3s linear;
+  transition: transform .3s linear, -webkit-transform .3s linear; }
 
 /* PRODUCTION */
 /* TESTING */
@@ -3237,6 +3276,9 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
 
 .is-sticky {
   position: fixed; }
+
+.no-scroll {
+  overflow: hidden; }
 
 @keyframes fade-in {
   0% {
@@ -3318,7 +3360,6 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   margin-bottom: 0; }
 
 .topnav {
-  /*	outline: 5px solid red;*/
   background-color: #333333;
   color: #808080;
   font-family: "GTAmericaBold", "Avenir", Helvetica, Arial, sans-serif;
@@ -3341,21 +3382,19 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   .topnav > button {
     display: none; }
   .topnav > ul {
-    /*		outline: 5px solid pink;*/
-    /*		background-color: pink;*/
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
@@ -3363,7 +3402,6 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   .topnav li {
     height: 3.125rem; }
   .topnav li.topnav__logo {
-    /*		background-color: purple;*/
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3402,8 +3440,6 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   .topnav li.topnav__logo a:focus {
     -webkit-filter: grayscale(0);
     filter: grayscale(0); }
-  .topnav li.topnav__content {
-    /*		background-color: orange;*/ }
   .topnav li.topnav__content ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3458,7 +3494,6 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     -o-transition: .2s;
     transition: .2s; }
   .topnav li.topnav__search {
-    /*		background-color: purple;*/
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3471,7 +3506,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end; }
-  .topnav li.topnav__search a {
+  .topnav li.topnav__search button {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3493,8 +3528,8 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     width: 2rem; }
   .topnav li.topnav__search svg .st0 {
     stroke: #808080; }
-  .topnav li.topnav__search a:hover svg .st0,
-  .topnav li.topnav__search a:focus svg .st0 {
+  .topnav li.topnav__search button:hover svg .st0,
+  .topnav li.topnav__search button:focus svg .st0 {
     stroke: #dc4928;
     -webkit-transition: .2s;
     -o-transition: .2s;
@@ -3702,6 +3737,9 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 
 .is-sticky {
   position: fixed; }
+
+.no-scroll {
+  overflow: hidden; }
 
 @keyframes fade-in {
   0% {
@@ -4241,6 +4279,9 @@ main.emblem-page {
 
 .is-sticky {
   position: fixed; }
+
+.no-scroll {
+  overflow: hidden; }
 
 @keyframes fade-in {
   0% {
@@ -5022,6 +5063,9 @@ body {
 .is-sticky {
   position: fixed; }
 
+.no-scroll {
+  overflow: hidden; }
+
 @keyframes fade-in {
   0% {
     opacity: 0; }
@@ -5180,6 +5224,9 @@ body {
 
 .is-sticky {
   position: fixed; }
+
+.no-scroll {
+  overflow: hidden; }
 
 @keyframes fade-in {
   0% {
@@ -5558,6 +5605,9 @@ button.lity-close {
 .is-sticky {
   position: fixed; }
 
+.no-scroll {
+  overflow: hidden; }
+
 @keyframes fade-in {
   0% {
     opacity: 0; }
@@ -5614,6 +5664,9 @@ button.lity-close {
 
 .is-sticky {
   position: fixed; }
+
+.no-scroll {
+  overflow: hidden; }
 
 @keyframes fade-in {
   0% {
@@ -5908,6 +5961,9 @@ button.lity-close {
 
 .is-sticky {
   position: fixed; }
+
+.no-scroll {
+  overflow: hidden; }
 
 @keyframes fade-in {
   0% {
