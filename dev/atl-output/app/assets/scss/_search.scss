@@ -7,12 +7,13 @@
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
+	font-family: $display-font_secondary;
 	height: calc(100% - 12rem);
 	margin: 0;
 	padding: 6rem 4rem;
 	position: fixed;
 	width: calc(100vw - 8rem);
-	z-index: 1000;
+	z-index: $searchbar-z;
 	button.x-close {
 		align-self: flex-end;
 		background-image: url("../icons/icon_X-close.svg");
@@ -25,9 +26,6 @@
 		filter: invert(0%);
 		transition: .2s;
 	}
-	/*	button > * {
-	  pointer-events: none;
-	}*/
 	.search__bar {
 		display: flex;
 		flex-direction: row;
@@ -59,12 +57,14 @@
 		outline: none;	
 	}
 	button.submit {
+		align-self: flex-end;
 		background-color: $black;
 		border-bottom: 2px solid $black;
 		color: $gray_light;
 		flex: 0 0 15%;
 		font-size: 1rem;
-		height: calc(5rem + 4px);
+		height: calc(3.5rem + 4px);
+		letter-spacing: .05em;
 		text-transform: uppercase;
 	}
 	button.submit:hover,
@@ -79,16 +79,62 @@
 	}
 }
 
-/* Animation */
-	.search__modal {
+/*** Animation ***/
+.search__modal {
 	position: fixed;
 	top: -100%;
+}
+.search__modal.search__modal--slide-in {
+	transform: translateY(100%);
+	transition: transform .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);		
+}
+.search__modal.search__modal--slide-out {
+	transform: translateY(-100%);
+	transition: transform .3s linear;
+}
+
+
+/*** BREAKPOINTS ***/
+/* specific */
+@media screen and (max-width: 999px) {
+	.search__modal {
+		padding: 6rem 2rem;
+		width: calc(100vw - 4rem);
+		.search__bar {
+			justify-content: flex-start;
+			width: 100%;
+		}
+	}	
+}
+
+/* small  -  mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.search__modal {
+		input#search__bar__field {
+			flex: 0 0 50%;
+		}
+		button.submit {
+			flex: 0 0 10%;
+		}
 	}
-	.search__modal.search__modal--slide-in {
-		transform: translateY(100%);
-		transition: transform .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);		
-	}
-	.search__modal.search__modal--slide-out {
-		transform: translateY(-100%);
-		transition: transform .3s linear;
-	}
+}
+
+/* medium  -  tablet */
+@media screen and (min-width: 768px) and (max-width: 999px) {
+	
+}
+
+/* large  -  desktop */
+@media screen and (min-width: 1500px) and (max-width: 1999px) {
+	
+}
+
+/* extra-large */
+@media screen and (min-width: 2000px) and (max-width: 2800px) {
+
+}
+
+/* xxl */
+@media screen and (min-width: 2801px) {
+
+}

@@ -35,13 +35,13 @@
 		position: fixed !important;
 	}
 	.ui-selectmenu-menu.ui-selectmenu-open ul {
-		li div {
+		li div {  /* change to .ui-selectmenu-text ??? */
 			height: 3rem;
 			font-size: 1rem;
 			display: flex;
 			align-items: center;
 		}
-		li div.ui-state-active {
+		li div.ui-state-active {  /* change to .ui-selectmenu-text.ui-state-active ??? */
 			background: $orange-yellow;
 			border: none;
 			color: $text_body;
@@ -68,18 +68,17 @@
 		color: $black_transparent;
 	}
 	.ui-icon {
-		height: 2rem !important;
-		width: 2rem !important;
+		height: 2rem;
+		width: 2rem;
 	}
 	.ui-selectmenu-icon {
-	/*		background: pink !important;*/
 		display: flex;
 		order: 2;
 	}
 	.ui-selectmenu-icon.custom-icon {
-		background-image: url('../icons/icon_dropdown-arrow.svg') !important;
-		background-repeat: no-repeat !important;
-		background-size: contain !important;
+		background-image: url('../icons/icon_dropdown-arrow.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
 		transform: rotate(-90deg) scale(0.7) translateX(20%);
 	}
 	.ui-selectmenu-text {
@@ -90,14 +89,60 @@
 
 
 
+/*** BREAKPOINTS ***/
+/* small  -  mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.subnav-v3 {
+		form:nth-of-type(1) {
+			padding-left: 0;
+		}
+		form:nth-of-type(2) {
+			padding-right: 0;
+		}
+	}
 
+	.emblem-body {
+		#layout-button, 
+		#language-button {
+			margin-right: 0;
+			padding: .5rem .25rem;
+			width: 9rem;
+		}
+		.ui-selectmenu-text {
+			align-items: center;
+			justify-content: center;
+			font-size: .75rem;
+			overflow-wrap: break-word;
+			text-align: center;
+			white-space: normal;
+			width: 6rem;
+		}
+		ul#layout-menu li:nth-of-type(1) {
+			display: none;
+		}
+		.ui-selectmenu-menu.ui-selectmenu-open ul li div {  /* change to .ui-selectmenu-text ??? */
+			font-size: .75rem;
+			padding-left: 1rem;
+		}
+	}
+}
 
+/* medium  -  tablet */
+@media screen and (min-width: 768px) and (max-width: 999px) {
+	
+}
+	
+/* large  -  desktop */
+@media screen and (min-width: 1500px) and (max-width: 1999px) {
+	
+}
 
+/* extra-large */
+@media screen and (min-width: 2000px) and (max-width: 2800px) {
 
+}
 
+/* xxl */
+@media screen and (min-width: 2801px) {
 
-
-
-
-
-
+}

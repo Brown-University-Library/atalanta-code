@@ -153,11 +153,17 @@ header[data-page-type='other'] {
 		justify-content: flex-end;
 	}
 	li.topnav__search button {
+		color: $gray_medium;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		width: 5.5rem;
 		height: $topnav-h;
+		width: 5.5rem;
+	}
+	li.topnav__search button:hover, 
+	li.topnav__search button:focus {
+		color: $red;
+		transition: .2s;
 	}
 	li.topnav__search svg {
 		transform: scale(2.5);
