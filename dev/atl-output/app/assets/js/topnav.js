@@ -4,6 +4,16 @@ $(function () {
 	var hamburgerMenuBtnClosed = 'topnav__hamburger--closed';
 	var hamburgerMenuBtnOpen = 'topnav__hamburger--open';
 	var hamburgerMenu = '.topnav > ul';
+	var animationMenuSlideIn = 'topnav--slide-in';
+	var animationMenuSlideOut = 'topnav--slide-out';
+	var topnavSearchBtn = '.topnav__search button';
+	var searchModalOpen = 'topnav__search--open';
+	var searchModalClosed = 'topnav__search--closed';
+	var searchModal = 'div.search__modal';
+	var animationSearchSlideIn = 'search__modal--slide-in';
+	var animationSearchSlideOut = 'search__modal--slide-out';
+	var xCloseBtn = 'button.x-close';
+	var xCloseBtnSVG = 'button.x-close > svg';
 	var $documentElement = $('html, body'),
 		$wrapper = $('.main'),
 		scrollTop;
@@ -12,16 +22,16 @@ $(function () {
 	/* topnav mobile menu */
 	$(hamburgerMenuBtn).click(function() {
 		if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnClosed)) {
-			$(hamburgerMenuBtn).removeClass('topnav__hamburger--closed');
-			$(hamburgerMenuBtn).addClass('topnav__hamburger--open');
-			$(hamburgerMenu).removeClass('topnav--slide-out');
-			$(hamburgerMenu).addClass('topnav--slide-in');
+			$(hamburgerMenuBtn).removeClass(hamburgerMenuBtnClosed);
+			$(hamburgerMenuBtn).addClass(hamburgerMenuBtnOpen);
+			$(hamburgerMenu).removeClass(animationMenuSlideOut);
+			$(hamburgerMenu).addClass(animationMenuSlideIn);
 		}
 		else if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnOpen)) {
-			$(hamburgerMenuBtn).removeClass('topnav__hamburger--open');
-			$(hamburgerMenuBtn).addClass('topnav__hamburger--closed');
-			$(hamburgerMenu).removeClass('topnav--slide-in');
-			$(hamburgerMenu).addClass('topnav--slide-out');
+			$(hamburgerMenuBtn).removeClass(hamburgerMenuBtnOpen);
+			$(hamburgerMenuBtn).addClass(hamburgerMenuBtnClosed);
+			$(hamburgerMenu).removeClass(animationMenuSlideIn);
+			$(hamburgerMenu).addClass(animationMenuSlideOut);
 		}
 		else {
 			console.log("THE HAMBURGER MENU HAS NO CLASS");
@@ -29,24 +39,22 @@ $(function () {
 	});
 
 	/* search topnav button and search bar submit */
-	$('.topnav__search button').click(function(event) {
-		if( $('.topnav__search button').hasClass('topnav__search--closed') ) {
-			$('.topnav__search button').removeClass('topnav__search--closed');
-			$('.topnav__search button').addClass('topnav__search--open');
-	$('div.search__modal').attr('aria-hidden', 'false');
-			$('div.search__modal').addClass('search__modal--slide-in');
-			$('div.search__modal').removeClass('search__modal--slide-out');
+	$(topnavSearchBtn).click(function(event) {
+		if( $(topnavSearchBtn).hasClass(searchModalClosed) ) {
+			$(topnavSearchBtn).removeClass(searchModalClosed);
+			$(topnavSearchBtn).addClass(searchModalOpen);
+			$(searchModal).attr('aria-hidden', 'false');
+			$(searchModal).addClass(animationSearchSlideIn);
+			$(searchModal).removeClass(animationSearchSlideOut);
 			$('body').addClass('no-scroll');
-			console.log("I am opening the search bar");
 			lockBody();
 		}
-		else if( $('.topnav__search button').hasClass('topnav__search--open') ) {
-			console.log("The search bar is already closed");
-			$('.topnav__search button').removeClass('topnav__search--open');
-			$('.topnav__search button').addClass('topnav__search--closed');
-	$('div.search__modal').attr('aria-hidden', 'true');
-			$('div.search__modal').addClass('search__modal--slide-out');
-			$('div.search__modal').removeClass('search__modal--slide-in');
+		else if( $(topnavSearchBtn).hasClass(searchModalOpen) ) {
+			$(topnavSearchBtn).removeClass(searchModalOpen);
+			$(topnavSearchBtn).addClass(searchModalClosed);
+			$(searchModal).attr('aria-hidden', 'true');
+			$(searchModal).addClass(animationSearchSlideOut);
+			$(searchModal).removeClass(animationSearchSlideIn);
 			$('body').removeClass('no-scroll');
 			unlockBody();
 		}
@@ -55,17 +63,17 @@ $(function () {
 		}
 		event.preventDefault();
 	});
-	$('button.x-close > svg').click(function(e) {
+	$(xCloseBtnSVG).click(function(e) {
 		e.stopPropagation();
 		e.preventDefault();
 	});
-	$('button.x-close').click(function() {
+	$(xCloseBtn).click(function() {
 		console.log("I am clicking the search close button");
-		$('.topnav__search button').removeClass('topnav__search--open');
-		$('.topnav__search button').addClass('topnav__search--closed');
-$('div.search__modal').attr('aria-hidden', 'true');
-		$('div.search__modal').addClass('search__modal--slide-out');
-		$('div.search__modal').removeClass('search__modal--slide-in');
+		$(topnavSearchBtn).removeClass(searchModalOpen);
+		$(topnavSearchBtn).addClass(searchModalClosed);
+		$(searchModal).attr('aria-hidden', 'true');
+		$(searchModal).addClass(animationSearchSlideOut);
+		$(searchModal).removeClass(animationSearchSlideIn);
 		$('body').removeClass('no-scroll');
 		unlockBody();
 	});
@@ -74,11 +82,11 @@ $('div.search__modal').attr('aria-hidden', 'true');
 	});
 	$(document).keydown(function(event) {
 		if(event.keyCode == 27) {
-			$('.topnav__search button').removeClass('topnav__search--open');
-			$('.topnav__search button').addClass('topnav__search--closed');
-$('div.search__modal').attr('aria-hidden', 'true');
-			$('div.search__modal').addClass('search__modal--slide-out');
-			$('div.search__modal').removeClass('search__modal--slide-in');
+			$(topnavSearchBtn).removeClass(searchModalOpen);
+			$(topnavSearchBtn).addClass(searchModalClosed);
+			$(searchModal).attr('aria-hidden', 'true');
+			$(searchModal).addClass(animationSearchSlideOut);
+			$(searchModal).removeClass(animationSearchSlideIn);
 			$('body').removeClass('no-scroll');
 			unlockBody();
 		}
