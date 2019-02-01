@@ -378,63 +378,9 @@
 	<script src="../assets/js/vendors/waypoints/lib/shortcuts/sticky.min.js"></script>
 	<script src="../assets/js/vendors/waypoints/lib/waypoints.debug.js"></script> <!-- remove in production -->
 	<script src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
+	<script src="../assets/js/topnav.js"></script>
 	<script src="../assets/js/emblem.js"></script>
 	<script src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
 	<script src="../assets/js/notation.js"></script>
-	<script>
-		$(function() {
-			$('.topnav__search button').click(function() {
-				if( $('.topnav__search button').hasClass('topnav__search--closed') ) {
-					
-					$('.topnav__search button').removeClass('topnav__search--closed');
-					$('.topnav__search button').addClass('topnav__search--open');
-			$('div.search__modal').attr('aria-hidden', 'false');
-					$('div.search__modal').addClass('search__modal--slide-in');
-					$('div.search__modal').removeClass('search__modal--slide-out');
-					$('body').addClass('no-scroll');
-					console.log("I am openining the search bar");
-
-				}
-				else if( $('.topnav__search button').hasClass('topnav__search--open') ) {
-					console.log("The search bar is already closed");
-					$('.topnav__search button').removeClass('topnav__search--open');
-					$('.topnav__search button').addClass('topnav__search--closed');
-$('div.search__modal').attr('aria-hidden', 'true');
-					$('div.search__modal').addClass('search__modal--slide-out');
-					$('div.search__modal').removeClass('search__modal--slide-in');
-					$('body').removeClass('no-scroll');
-				}
-				else {
-					console.log("THE SEARCH BUTTON HAS NO STATE");
-				}
-			});
-			$('button.x-close > svg').click(function(e) {
-				e.stopPropagation();
-				e.preventDefault();
-			});
-			$('button.x-close').click(function() {
-				console.log("I am clicking the search close button");
-				$('.topnav__search button').removeClass('topnav__search--open');
-				$('.topnav__search button').addClass('topnav__search--closed');
-		$('div.search__modal').attr('aria-hidden', 'true');
-				$('div.search__modal').addClass('search__modal--slide-out');
-				$('div.search__modal').removeClass('search__modal--slide-in');
-				$('body').removeClass('no-scroll');
-			});
-			$('input:text').focus(function() {
-				$(this).val('');
-			});
-			$(document).keydown(function(event) {
-				if(event.keyCode == 27) {
-					$('.topnav__search button').removeClass('topnav__search--open');
-					$('.topnav__search button').addClass('topnav__search--closed');
-		$('div.search__modal').attr('aria-hidden', 'true');
-					$('div.search__modal').addClass('search__modal--slide-out');
-					$('div.search__modal').removeClass('search__modal--slide-in');
-					$('body').removeClass('no-scroll');
-				}
-			});
-		});
-	</script>
 </body>
 </html>
