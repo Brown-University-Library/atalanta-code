@@ -14,6 +14,8 @@ $(function () {
 	var animationSearchSlideOut = 'search__modal--slide-out';
 	var xCloseBtn = 'button.x-close';
 	var xCloseBtnSVG = 'button.x-close > svg';
+	var searchQueryInput = 'input#search__bar__field';
+	var submitSearchBtn = '.search__modal button.submit';
 	var $documentElement = $('html, body'),
 		$wrapper = $('.main'),
 		scrollTop;
@@ -38,7 +40,7 @@ $(function () {
 		}
 	});
 
-	/* search topnav button and search bar submit */
+	/* search topnav button */
 	$(topnavSearchBtn).click(function(event) {
 		if( $(topnavSearchBtn).hasClass(searchModalClosed) ) {
 			$(topnavSearchBtn).removeClass(searchModalClosed);
@@ -77,8 +79,12 @@ $(function () {
 		$('body').removeClass('no-scroll');
 		unlockBody();
 	});
+	/* clear search text field on click/focus */
+	// $('input:text').focus(function() {
+	// 	$(this).val('');
+	// });
 	$('input:text').focus(function() {
-		$(this).val('');
+		clearSearchText();
 	});
 	$(document).keydown(function(event) {
 		if(event.keyCode == 27) {
@@ -91,6 +97,17 @@ $(function () {
 			unlockBody();
 		}
 	});
+	/* submit on enter */
+	/* https://stackoverflow.com/questions/10905345/pressing-enter-on-a-input-type-text-how */
+	$(searchQueryInput).bind("keypress", {}, keypressInBox);
+	function keypressInBox(event) {
+		var code = (event.keyCode ? event.keyCode : event.which);
+		if (code  == 13) {
+			event.preventDefault();
+			$(searchQueryInput).submit();
+			clearSearchText();
+		}
+	};
 
 /* FUNCTIONS */
 	/* prevent body scroll behind modal on iOS */
@@ -119,5 +136,10 @@ $(function () {
 		window.setTimeout(function() {
 			scrollTop = null;
 		}, 0);
+	}
+	/* clear text from search input field */
+	function clearSearchText() {
+		console.log($(searchQueryInput).val());
+		$(searchQueryInput).val('');
 	}
 });
