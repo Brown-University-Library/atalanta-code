@@ -49,6 +49,7 @@ $(function () {
 	var hamburgerMenu = '.topnav > ul';
 
 
+
 	// var thisEmblemPage = '.emblem-page';
 	// var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
 	// var myEmblemPage = $('.emblem-page').data("page");
@@ -94,25 +95,11 @@ $(window).on('load', function() {
 	}, 3000);
 	
 });
-$(hamburgerMenuBtn).click(function() {
-	if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnClosed)) {
-		console.log("I AM OPENING THE HAMBURGER MENU");
-		$(hamburgerMenuBtn).removeClass('topnav__hamburger--closed');
-		$(hamburgerMenuBtn).addClass('topnav__hamburger--open');
-		$(hamburgerMenu).removeClass('topnav--slide-out');
-		$(hamburgerMenu).addClass('topnav--slide-in');
-	}
-	else if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnOpen)) {
-		console.log("I AM CLOSING THE HAMBURGER MENU");
-		$(hamburgerMenuBtn).removeClass('topnav__hamburger--open');
-		$(hamburgerMenuBtn).addClass('topnav__hamburger--closed');
-		$(hamburgerMenu).removeClass('topnav--slide-in');
-		$(hamburgerMenu).addClass('topnav--slide-out');
-	}
-	else {
-		console.log("THE HAMBURGER MENU HAS NO CLASS");
-	}
-});
+if (matchMedia) {
+	const jsMediaQuery = window.matchMedia("screen and (min-width: 320px) and (max-width: 767px)");
+	jsMediaQuery.addListener(WidthChange); // detect when width of window changes
+	WidthChange(jsMediaQuery); // update emblem layout menu options on mobile
+}
 
 // $('.topnav__hamburger--closed').click(function() {
 // 	console.log("I OPENED THE HAMBURGER MENU");
@@ -130,12 +117,32 @@ $(hamburgerMenuBtn).click(function() {
 // });
 
 /* EVENTS */
-	/* layout menu */
+	/* topnav mobile menu */
+	$(hamburgerMenuBtn).click(function() {
+		if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnClosed)) {
+			console.log("I AM OPENING THE HAMBURGER MENU");
+			$(hamburgerMenuBtn).removeClass('topnav__hamburger--closed');
+			$(hamburgerMenuBtn).addClass('topnav__hamburger--open');
+			$(hamburgerMenu).removeClass('topnav--slide-out');
+			$(hamburgerMenu).addClass('topnav--slide-in');
+		}
+		else if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnOpen)) {
+			console.log("I AM CLOSING THE HAMBURGER MENU");
+			$(hamburgerMenuBtn).removeClass('topnav__hamburger--open');
+			$(hamburgerMenuBtn).addClass('topnav__hamburger--closed');
+			$(hamburgerMenu).removeClass('topnav--slide-in');
+			$(hamburgerMenu).addClass('topnav--slide-out');
+		}
+		else {
+			console.log("THE HAMBURGER MENU HAS NO CLASS");
+		}
+	});
+	/* emblem layout menu */
 	$("#layout").selectmenu({
 	  change: function(event, ui) {},
 	  icons: { button: "custom-icon" }
 	});	
-	$( "#layout" ).on( "selectmenuchange", function( event, ui ) {
+	$("#layout").on( "selectmenuchange", function( event, ui ) {
 	  selectLayout(ui.item.value);
 	});
 	/* language menu */
@@ -382,6 +389,18 @@ $(hamburgerMenuBtn).click(function() {
 		$(fullLatinText).addClass('edition--regularized'); // switch full Latin text to edition--regularized CSS
 		$(fullLatinText).removeClass('edition--original'); // remove edition--original CSS from full Latin text
 		showOriginalLanguage();
+	}
+	function WidthChange(jsMediaQuery) {
+		if(jsMediaQuery.matches) { // run on mobile devices/window widths
+			setTimeout(function(){
+				$('select#layout').val('digital-edition').selectmenu('refresh'); //change initial layout select menu option to digital edition
+			}, 100);
+			selectLayoutDigitalEdition(); // change page layout to digital edition
+			checkState(); // make necessary page updates based on layout selection
+		}
+		else {
+			// console.log("I am on a laptop or something");
+		}
 	}
 	function updateDataState() {
 		var mySingleData = document.querySelector(singleViewBtn);
