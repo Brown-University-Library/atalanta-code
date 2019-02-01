@@ -3735,14 +3735,12 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     position: fixed;
     top: 0; }
   .topnav li.topnav__search button {
-    width: 100vw; }
-  .topnav li.topnav__search a {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
     height: 3.125rem;
-    padding: 0 1rem;
+    padding: 0;
     width: 100vw; }
   .topnav li.topnav__search span.icon {
     display: none; }

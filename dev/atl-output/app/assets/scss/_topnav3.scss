@@ -301,7 +301,6 @@ header[data-page-type='other'] {
 		top: 0;
 		left: 0;
 		z-index: 20;
-
 	}
 	.topnav li.topnav__logo a {
 		background-position: center;
@@ -337,12 +336,9 @@ header[data-page-type='other'] {
 		top: 0;
 	}
 	.topnav li.topnav__search button {
-		width: 100vw;
-	}
-	.topnav li.topnav__search a {
 		justify-content: center;
 		height: $topnav-h;
-		padding: 0 1rem;
+		padding: 0;
 		width: 100vw;
 	}
 	.topnav li.topnav__search span.icon {
