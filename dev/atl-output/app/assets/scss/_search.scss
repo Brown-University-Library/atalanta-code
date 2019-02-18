@@ -48,9 +48,11 @@
 		font-weight: bold;	
 	}
 	input#search__bar__field {
+		appearance: none;
 		background-color: transparent;
 		border: none;
 		border-bottom: 2px solid $black;
+		border-radius: 0;
 		color: $black;
 		flex: 1 0 70%;
 		font-size: 3.5rem;
@@ -115,11 +117,29 @@
 /* small  -  mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
 	.search__modal {
+		height: calc(100% - 8rem);
+		padding: 4rem 1rem;
+		width: calc(100vw - 2rem);
+		button.x-close {
+			transform: scale(.5);
+		}
+		.search__bar {
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			margin-top: 4rem;
+			width: 100%;
+		}
 		input#search__bar__field {
-			flex: 0 0 50%;
+			background-color: white;
+			flex: 0 0 100%;
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+			width: 100%;
 		}
 		button.submit {
-			flex: 0 0 10%;
+			flex: 0 0 100%;
+			width: 100%;
 		}
 	}
 }

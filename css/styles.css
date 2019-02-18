@@ -3198,9 +3198,13 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
     flex: 0 0 100%;
     font-weight: bold; }
   .search__modal input#search__bar__field {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #222;
+    border-radius: 0;
     color: #222;
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 70%;
@@ -3281,16 +3285,44 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
 
 /* small  -  mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .search__modal input#search__bar__field {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 50%;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%; }
-  .search__modal button.submit {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 10%;
-    -ms-flex: 0 0 10%;
-    flex: 0 0 10%; } }
+  .search__modal {
+    height: calc(100% - 8rem);
+    padding: 4rem 1rem;
+    width: calc(100vw - 2rem); }
+    .search__modal button.x-close {
+      -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+      transform: scale(0.5); }
+    .search__modal .search__bar {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      margin-top: 4rem;
+      width: 100%; }
+    .search__modal input#search__bar__field {
+      background-color: white;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      width: 100%; }
+    .search__modal button.submit {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      width: 100%; } }
 
 /* medium  -  tablet */
 /* large  -  desktop */
