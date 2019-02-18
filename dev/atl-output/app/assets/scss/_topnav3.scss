@@ -190,6 +190,106 @@ header[data-page-type='other'] {
 	}
 }
 
+.search__modal {
+	background-color: $red_transparent;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	font-family: $display-font_secondary;
+	height: calc(100% - 12rem);
+	margin: 0;
+	padding: 6rem 4rem;
+	position: fixed;
+	width: calc(100vw - 8rem);
+	z-index: $searchbar-z;
+	button.x-close {
+		align-self: flex-end;
+		background-image: url("../icons/icon_X-close.svg");
+		filter: invert(100%);
+		height: 3.125rem;
+		transform: scale(.7);
+		width: 3.125rem;
+	}
+	button.x-close:hover {
+		filter: invert(0%);
+		transition: .2s;
+	}
+	.search__bar {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: center;
+		height: 5rem;
+		margin-top: 12rem;
+		width: 80%;
+	}
+	.search__bar__label, 
+	input#search__bar__field, 
+	button.submit {
+		height: 5rem;
+	}
+	.search__bar__label {
+		display: flex;
+		align-items: center;
+		flex: 0 0 100%;
+		font-weight: bold;	
+	}
+	input#search__bar__field {
+		appearance: none;
+		background-color: transparent;
+		border: none;
+		border-bottom: 2px solid $black;
+		border-radius: 0;
+		color: $black;
+		flex: 1 0 70%;
+		font-size: 3.5rem;
+		outline: none;	
+	}
+	input#search__bar__field::-webkit-search-cancel-button {
+		display: none;
+	}
+	button.submit {
+		align-self: flex-end;
+		background-color: $black;
+		border-bottom: 2px solid $black;
+		color: $gray_light;
+		flex: 0 0 15%;
+		font-size: 1rem;
+		height: calc(3.5rem + 4px);
+		letter-spacing: .05em;
+		text-transform: uppercase;
+	}
+	button.submit:hover,
+	button.submit:focus {
+		background-color: transparent;
+		border: 2px solid $black;
+		color: $black;
+		transition: background-color .2s;
+	}
+	button.submit:active {
+		background-color: $red_dark;
+	}
+}
+
+/*** Animation ***/
+.search__modal {
+	position: fixed;
+	top: -100%;
+}
+.search__modal.search__modal--slide-in {
+	display: flex;
+	transform: translateY(100%);
+	transition: display .1s, transform .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);		
+}
+.search__modal.search__modal--slide-out {
+	display: none;
+	transform: translateY(-100%);
+	transition: transform .3s linear, display .1s .4s;
+}
+
+
 /*** MEDIA QUERIES ***/
 @supports (display: grid) {
 /*	.topnav {
@@ -219,6 +319,18 @@ header[data-page-type='other'] {
 }
 
 /*** BREAKPOINTS ***/
+/* specific */
+@media screen and (max-width: 999px) {
+	.search__modal {
+		padding: 6rem 2rem;
+		width: calc(100vw - 4rem);
+		.search__bar {
+			justify-content: flex-start;
+			width: 100%;
+		}
+	}	
+}
+
 /* small  -  mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
 	/* Animation */
@@ -258,6 +370,7 @@ header[data-page-type='other'] {
 			transition: .2s;
 		}
 	}
+
 	.topnav > button {
 		background-image: url("../icons/icon_hamburger-menu.svg");
 		background-size: 50%;
@@ -347,6 +460,33 @@ header[data-page-type='other'] {
 	.topnav li.topnav__search span.label {
 		font-size: .875rem;
 	}
+
+	.search__modal {
+		height: calc(100% - 8rem);
+		padding: 4rem 1rem;
+		width: calc(100vw - 2rem);
+		button.x-close {
+			transform: scale(.5);
+		}
+		.search__bar {
+			flex-direction: column;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			margin-top: 4rem;
+			width: 100%;
+		}
+		input#search__bar__field {
+			background-color: white;
+			flex: 0 0 100%;
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+			width: 100%;
+		}
+		button.submit {
+			flex: 0 0 100%;
+			width: 100%;
+		}
+	}
 }
 
 /* medium  -  tablet */
@@ -370,6 +510,3 @@ header[data-page-type='other'] {
 @media screen and (min-width: 2801px) {
 
 }
-
-
-
