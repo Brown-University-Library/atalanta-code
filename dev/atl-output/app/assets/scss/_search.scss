@@ -88,12 +88,14 @@
 	top: -100%;
 }
 .search__modal.search__modal--slide-in {
+	display: flex;
 	transform: translateY(100%);
-	transition: transform .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);		
+	transition: display .1s, transform .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);		
 }
 .search__modal.search__modal--slide-out {
+	display: none;
 	transform: translateY(-100%);
-	transition: transform .3s linear;
+	transition: transform .3s linear, display .1s .4s;
 }
 
 
