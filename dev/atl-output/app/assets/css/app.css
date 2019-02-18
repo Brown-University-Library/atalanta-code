@@ -3208,6 +3208,8 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
     flex: 1 0 70%;
     font-size: 3.5rem;
     outline: none; }
+  .search__modal input#search__bar__field::-webkit-search-cancel-button {
+    display: none; }
   .search__modal button.submit {
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;

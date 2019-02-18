@@ -14,6 +14,7 @@ $(function () {
 	var animationSearchSlideOut = 'search__modal--slide-out';
 	var xCloseBtn = 'button.x-close';
 	var xCloseBtnSVG = 'button.x-close > svg';
+	var searchURL = '../search/search.html?q='
 	var searchQueryInput = 'input#search__bar__field';
 	var submitSearchBtn = '.search__modal button.submit';
 	var $documentElement = $('html, body'),
@@ -43,6 +44,7 @@ $(function () {
 	/* search topnav button */
 	$(topnavSearchBtn).click(function(event) {
 		if( $(topnavSearchBtn).hasClass(searchModalClosed) ) {
+			clearSearchText();
 			$(topnavSearchBtn).removeClass(searchModalClosed);
 			$(topnavSearchBtn).addClass(searchModalOpen);
 			$(searchModal).attr('aria-hidden', 'false');
@@ -83,9 +85,9 @@ $(function () {
 	// $('input:text').focus(function() {
 	// 	$(this).val('');
 	// });
-	$('input:text').focus(function() {
-		clearSearchText();
-	});
+	// $('input:text').focus(function() {
+	// 	clearSearchText();
+	// });
 	$(document).keydown(function(event) {
 		if(event.keyCode == 27) {
 			$(topnavSearchBtn).removeClass(searchModalOpen);
@@ -105,7 +107,7 @@ $(function () {
 		if (code  == 13) {
 			event.preventDefault();
 			$(searchQueryInput).submit();
-			clearSearchText();
+			updateURLwithSearchQuery();
 		}
 	};
 
@@ -136,6 +138,11 @@ $(function () {
 		window.setTimeout(function() {
 			scrollTop = null;
 		}, 0);
+	}
+	function updateURLwithSearchQuery() {
+		var searchInput = $(searchQueryInput).val();
+		var searchQueryURL =  searchURL + searchInput; 
+		window.open(searchQueryURL, '_self');
 	}
 	/* clear text from search input field */
 	function clearSearchText() {

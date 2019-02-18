@@ -56,6 +56,9 @@
 		font-size: 3.5rem;
 		outline: none;	
 	}
+	input#search__bar__field::-webkit-search-cancel-button {
+		display: none;
+	}
 	button.submit {
 		align-self: flex-end;
 		background-color: $black;
