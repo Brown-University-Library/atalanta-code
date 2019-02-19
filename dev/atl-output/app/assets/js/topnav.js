@@ -49,6 +49,7 @@ $(function () {
 		}
 		event.preventDefault();
 	});
+	/* X button to close search modal */
 	$(xCloseBtnSVG).click(function(e) {
 		e.stopPropagation();
 		e.preventDefault();
@@ -56,6 +57,7 @@ $(function () {
 	$(xCloseBtn).click(function() {
 		searchModalClose();
 	});
+	/* close search modal on ESC key */
 	$(document).keydown(function(event) {
 		if(event.keyCode == 27) {
 			searchModalClose();
