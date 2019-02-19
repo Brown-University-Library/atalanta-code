@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /* Usual */
-@import url("https://use.typekit.net/utc2ige.css");
 @font-face {
   font-family: 'GTAmerica';
   /* regular */
@@ -5498,124 +5497,42 @@ main.emblem-page.frontmatter {
   main.emblem-page section.section__dedication ._dedication--latin.edition--regularized span.regularized,
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.regularized {
     display: inline-block; }
-  main.emblem-page section.section__frontispiece div.translation,
-  main.emblem-page section.section__frontispiece div.original,
-  main.emblem-page.frontmatter section.section__frontispiece div.translation,
-  main.emblem-page.frontmatter section.section__frontispiece div.original {
-    background-image: none;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto; }
-    main.emblem-page section.section__frontispiece div.translation .page-break--atalanta-fugiens,
-    main.emblem-page section.section__frontispiece div.translation .page-break--beinecke,
-    main.emblem-page section.section__frontispiece div.original .page-break--atalanta-fugiens,
-    main.emblem-page section.section__frontispiece div.original .page-break--beinecke,
-    main.emblem-page.frontmatter section.section__frontispiece div.translation .page-break--atalanta-fugiens,
-    main.emblem-page.frontmatter section.section__frontispiece div.translation .page-break--beinecke,
-    main.emblem-page.frontmatter section.section__frontispiece div.original .page-break--atalanta-fugiens,
-    main.emblem-page.frontmatter section.section__frontispiece div.original .page-break--beinecke {
-      grid-column: 1 / 13; }
-    main.emblem-page section.section__frontispiece div.translation ._frontispiece--english,
-    main.emblem-page section.section__frontispiece div.translation ._frontispiece--latin,
-    main.emblem-page section.section__frontispiece div.original ._frontispiece--english,
-    main.emblem-page section.section__frontispiece div.original ._frontispiece--latin,
-    main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english,
-    main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--latin,
-    main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--english,
-    main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: auto;
-      grid-column: 1 / 13;
-      font-size: 1.5rem;
-      line-height: 2; }
-    main.emblem-page section.section__frontispiece div.translation ._frontispiece--english.edition--facsimile div.titlePage,
-    main.emblem-page section.section__frontispiece div.translation ._frontispiece--english.edition--normalized div.titlePage,
-    main.emblem-page section.section__frontispiece div.translation ._frontispiece--latin.edition--original div.pref-epigram.la,
-    main.emblem-page section.section__frontispiece div.translation ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-    main.emblem-page section.section__frontispiece div.original ._frontispiece--english.edition--facsimile div.titlePage,
-    main.emblem-page section.section__frontispiece div.original ._frontispiece--english.edition--normalized div.titlePage,
-    main.emblem-page section.section__frontispiece div.original ._frontispiece--latin.edition--original div.pref-epigram.la,
-    main.emblem-page section.section__frontispiece div.original ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-    main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--facsimile div.titlePage,
-    main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--normalized div.titlePage,
-    main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--latin.edition--original div.pref-epigram.la,
-    main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-    main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--english.edition--facsimile div.titlePage,
-    main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--english.edition--normalized div.titlePage,
-    main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin.edition--original div.pref-epigram.la,
-    main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin.edition--regularized div.pref-epigram.la {
-      grid-column: 4 / 10;
-      padding-bottom: 10rem;
+  main.emblem-page section.section__frontispiece,
+  main.emblem-page.frontmatter section.section__frontispiece {
+    /* English */
+    /* Latin */ }
+    main.emblem-page section.section__frontispiece div.titlePage,
+    main.emblem-page.frontmatter section.section__frontispiece div.titlePage {
       text-align: center; }
-    main.emblem-page section.section__frontispiece div.translation ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-    main.emblem-page section.section__frontispiece div.original ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-    main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-    main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin.edition--regularized div.pref-epigram.la {
-      padding-top: 3rem;
-      padding-bottom: 0; }
     main.emblem-page section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2),
-    main.emblem-page section.section__frontispiece div.original ._frontispiece--english.edition--normalized .ab:nth-of-type(2),
-    main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2),
-    main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
+    main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
       font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: 600;
       line-height: 1.25;
-      margin-bottom: 1rem; }
+      margin-bottom: 2rem;
+      padding: 0 2rem; }
     main.emblem-page section.section__frontispiece div.translation ._frontispiece--english .ab:nth-of-type(4),
-    main.emblem-page section.section__frontispiece div.original ._frontispiece--english .ab:nth-of-type(4),
-    main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english .ab:nth-of-type(4),
-    main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--english .ab:nth-of-type(4) {
+    main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english .ab:nth-of-type(4) {
       margin-top: 2rem; }
     main.emblem-page section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(5),
-    main.emblem-page section.section__frontispiece div.original ._frontispiece--english.edition--normalized .ab:nth-of-type(5),
-    main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(5),
-    main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--english.edition--normalized .ab:nth-of-type(5) {
+    main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(5) {
       margin-bottom: 2rem; }
-  main.emblem-page section.section__frontispiece.panel--left div.translation ._frontispiece--english.edition--facsimile div.titlePage,
-  main.emblem-page section.section__frontispiece.panel--left div.translation ._frontispiece--english.edition--normalized div.titlePage,
-  main.emblem-page section.section__frontispiece.panel--left div.translation ._frontispiece--latin.edition--original div.pref-epigram.la,
-  main.emblem-page section.section__frontispiece.panel--left div.translation ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page section.section__frontispiece.panel--left div.original ._frontispiece--english.edition--facsimile div.titlePage,
-  main.emblem-page section.section__frontispiece.panel--left div.original ._frontispiece--english.edition--normalized div.titlePage,
-  main.emblem-page section.section__frontispiece.panel--left div.original ._frontispiece--latin.edition--original div.pref-epigram.la,
-  main.emblem-page section.section__frontispiece.panel--left div.original ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page section.section__frontispiece.panel--right div.translation ._frontispiece--english.edition--facsimile div.titlePage,
-  main.emblem-page section.section__frontispiece.panel--right div.translation ._frontispiece--english.edition--normalized div.titlePage,
-  main.emblem-page section.section__frontispiece.panel--right div.translation ._frontispiece--latin.edition--original div.pref-epigram.la,
-  main.emblem-page section.section__frontispiece.panel--right div.translation ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page section.section__frontispiece.panel--right div.original ._frontispiece--english.edition--facsimile div.titlePage,
-  main.emblem-page section.section__frontispiece.panel--right div.original ._frontispiece--english.edition--normalized div.titlePage,
-  main.emblem-page section.section__frontispiece.panel--right div.original ._frontispiece--latin.edition--original div.pref-epigram.la,
-  main.emblem-page section.section__frontispiece.panel--right div.original ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--left div.translation ._frontispiece--english.edition--facsimile div.titlePage,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--left div.translation ._frontispiece--english.edition--normalized div.titlePage,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--left div.translation ._frontispiece--latin.edition--original div.pref-epigram.la,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--left div.translation ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--left div.original ._frontispiece--english.edition--facsimile div.titlePage,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--left div.original ._frontispiece--english.edition--normalized div.titlePage,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--left div.original ._frontispiece--latin.edition--original div.pref-epigram.la,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--left div.original ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--right div.translation ._frontispiece--english.edition--facsimile div.titlePage,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--right div.translation ._frontispiece--english.edition--normalized div.titlePage,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--right div.translation ._frontispiece--latin.edition--original div.pref-epigram.la,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--right div.translation ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--right div.original ._frontispiece--english.edition--facsimile div.titlePage,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--right div.original ._frontispiece--english.edition--normalized div.titlePage,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--right div.original ._frontispiece--latin.edition--original div.pref-epigram.la,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--right div.original ._frontispiece--latin.edition--regularized div.pref-epigram.la {
-    grid-column: 2 / 12;
-    padding-bottom: 6rem; }
-  main.emblem-page section.section__frontispiece.panel--left div.translation ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page section.section__frontispiece.panel--left div.original ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page section.section__frontispiece.panel--right div.translation ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page section.section__frontispiece.panel--right div.original ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--left div.translation ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--left div.original ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--right div.translation ._frontispiece--latin.edition--regularized div.pref-epigram.la,
-  main.emblem-page.frontmatter section.section__frontispiece.panel--right div.original ._frontispiece--latin.edition--regularized div.pref-epigram.la {
-    padding-bottom: 0; }
+    main.emblem-page section.section__frontispiece div.pref-epigram.la,
+    main.emblem-page.frontmatter section.section__frontispiece div.pref-epigram.la {
+      display: inline-block;
+      font-size: 1.25rem;
+      line-height: 2;
+      text-align: center; }
+    main.emblem-page section.section__frontispiece .edition--original,
+    main.emblem-page.frontmatter section.section__frontispiece .edition--original {
+      /**/ }
+    main.emblem-page section.section__frontispiece .edition--regularized span.original,
+    main.emblem-page.frontmatter section.section__frontispiece .edition--regularized span.original {
+      display: none; }
+    main.emblem-page section.section__frontispiece .edition--original span.caps,
+    main.emblem-page.frontmatter section.section__frontispiece .edition--original span.caps {
+      letter-spacing: .2em; }
   main.emblem-page .lang--latin._discourse--latin .pb,
   main.emblem-page.frontmatter .lang--latin._discourse--latin .pb {
     display: none; }

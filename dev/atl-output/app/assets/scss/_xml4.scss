@@ -825,67 +825,45 @@ main.emblem-page.frontmatter {
 	}
 
 	/* FRONTISPIECE */
-	section.section__frontispiece div.translation, 
-	section.section__frontispiece div.original {
-		background-image: none;
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: auto;
-		.page-break--atalanta-fugiens, 
-		.page-break--beinecke {
-			grid-column: 1 / 13;
-		}
-		._frontispiece--english, 
-		._frontispiece--latin {
-			display: grid;
-			grid-template-columns: repeat(12, 1fr);
-			grid-template-rows: auto;
-			grid-column: 1 / 13;
-			font-size: 1.5rem;
-			line-height: 2;
-		}
-		._frontispiece--english.edition--facsimile div.titlePage, 
-		._frontispiece--english.edition--normalized div.titlePage,
-		._frontispiece--latin.edition--original div.pref-epigram.la, 
-		._frontispiece--latin.edition--regularized div.pref-epigram.la {
-			grid-column: 4 / 10;
-			padding-bottom: 10rem;
+	section.section__frontispiece {
+		/* English */
+		div.titlePage {
 			text-align: center;
 		}
-		._frontispiece--latin.edition--regularized div.pref-epigram.la {
-			padding-top: 3rem;
-			padding-bottom: 0;
-		}
-		._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
+		div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
 			font-family: $secondary-display-font_emblem;
-			font-size: 4rem;
+			font-size: 3rem;
 			font-weight: 600;
 			line-height: 1.25;
-			margin-bottom: 1rem;
+			margin-bottom: 2rem;
+			padding: 0 2rem;
 		}
-		._frontispiece--english .ab:nth-of-type(4) {
+		div.translation ._frontispiece--english .ab:nth-of-type(4) {
 			margin-top: 2rem;
 		}
-		._frontispiece--english.edition--normalized .ab:nth-of-type(5) {
+		div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(5) {
 			margin-bottom: 2rem;
 		}
-	}
-	section.section__frontispiece.panel--left div.translation, 
-	section.section__frontispiece.panel--left div.original, 
-	section.section__frontispiece.panel--right div.translation, 
-	section.section__frontispiece.panel--right div.original {
-		._frontispiece--english.edition--facsimile div.titlePage, 
-		._frontispiece--english.edition--normalized div.titlePage,
-		._frontispiece--latin.edition--original div.pref-epigram.la, 
-		._frontispiece--latin.edition--regularized div.pref-epigram.la {
-			grid-column: 2 / 12;
-			padding-bottom: 6rem;
+		/* Latin */
+		div.pref-epigram.la {
+			display: inline-block;	
+			font-size: 1.25rem;
+			line-height: 2;
+			text-align: center;
 		}
-		._frontispiece--latin.edition--regularized div.pref-epigram.la {
-			padding-bottom: 0;
+		.edition--original {
+/**/
 		}
-	}
+		.edition--regularized {
+			span.original {
+				display: none;
+			}
+		}
 
+		.edition--original span.caps {
+			letter-spacing: .2em;
+		}
+	}
 	
 
 	/* PREFACE */
