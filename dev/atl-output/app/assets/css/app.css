@@ -4488,6 +4488,8 @@ main.emblem-page.frontmatter {
   /*********** FRONTMATTER *************/
   /* AUTHOR'S EPIGRAM */
   /* DEDICATION */
+  /* English */
+  /* Latin */
   /* FRONTISPIECE */
   /* PREFACE */
   /* DEDICATION */
@@ -5183,58 +5185,66 @@ main.emblem-page.frontmatter {
     main.emblem-page section.section__author-epigram div.epigram,
     main.emblem-page section.section__author-epigram div.epigram.la,
     main.emblem-page section.section__author-epigram div.dedication,
-    main.emblem-page section.section__author-epigram div.preface,
+    main.emblem-page section.section__author-epigram ._dedication--latin div.preface,
     main.emblem-page section.section__author-epigram div.titlePage,
     main.emblem-page section.section__author-epigram div.pref-epigram.la,
+    main.emblem-page section.section__author-epigram ._preface--english div.preface,
     main.emblem-page section.section__author-epigram div.preface.la,
     main.emblem-page section.section__dedication div.epigram,
     main.emblem-page section.section__dedication div.epigram.la,
     main.emblem-page section.section__dedication div.dedication,
-    main.emblem-page section.section__dedication div.preface,
+    main.emblem-page section.section__dedication ._dedication--latin div.preface,
     main.emblem-page section.section__dedication div.titlePage,
     main.emblem-page section.section__dedication div.pref-epigram.la,
+    main.emblem-page section.section__dedication ._preface--english div.preface,
     main.emblem-page section.section__dedication div.preface.la,
     main.emblem-page section.section__frontispiece div.epigram,
     main.emblem-page section.section__frontispiece div.epigram.la,
     main.emblem-page section.section__frontispiece div.dedication,
-    main.emblem-page section.section__frontispiece div.preface,
+    main.emblem-page section.section__frontispiece ._dedication--latin div.preface,
     main.emblem-page section.section__frontispiece div.titlePage,
     main.emblem-page section.section__frontispiece div.pref-epigram.la,
+    main.emblem-page section.section__frontispiece ._preface--english div.preface,
     main.emblem-page section.section__frontispiece div.preface.la,
     main.emblem-page section.section__preface div.epigram,
     main.emblem-page section.section__preface div.epigram.la,
     main.emblem-page section.section__preface div.dedication,
-    main.emblem-page section.section__preface div.preface,
+    main.emblem-page section.section__preface ._dedication--latin div.preface,
     main.emblem-page section.section__preface div.titlePage,
     main.emblem-page section.section__preface div.pref-epigram.la,
+    main.emblem-page section.section__preface ._preface--english div.preface,
     main.emblem-page section.section__preface div.preface.la,
     main.emblem-page.frontmatter section.section__author-epigram div.epigram,
     main.emblem-page.frontmatter section.section__author-epigram div.epigram.la,
     main.emblem-page.frontmatter section.section__author-epigram div.dedication,
-    main.emblem-page.frontmatter section.section__author-epigram div.preface,
+    main.emblem-page.frontmatter section.section__author-epigram ._dedication--latin div.preface,
     main.emblem-page.frontmatter section.section__author-epigram div.titlePage,
     main.emblem-page.frontmatter section.section__author-epigram div.pref-epigram.la,
+    main.emblem-page.frontmatter section.section__author-epigram ._preface--english div.preface,
     main.emblem-page.frontmatter section.section__author-epigram div.preface.la,
     main.emblem-page.frontmatter section.section__dedication div.epigram,
     main.emblem-page.frontmatter section.section__dedication div.epigram.la,
     main.emblem-page.frontmatter section.section__dedication div.dedication,
-    main.emblem-page.frontmatter section.section__dedication div.preface,
+    main.emblem-page.frontmatter section.section__dedication ._dedication--latin div.preface,
     main.emblem-page.frontmatter section.section__dedication div.titlePage,
     main.emblem-page.frontmatter section.section__dedication div.pref-epigram.la,
+    main.emblem-page.frontmatter section.section__dedication ._preface--english div.preface,
     main.emblem-page.frontmatter section.section__dedication div.preface.la,
     main.emblem-page.frontmatter section.section__frontispiece div.epigram,
     main.emblem-page.frontmatter section.section__frontispiece div.epigram.la,
     main.emblem-page.frontmatter section.section__frontispiece div.dedication,
-    main.emblem-page.frontmatter section.section__frontispiece div.preface,
+    main.emblem-page.frontmatter section.section__frontispiece ._dedication--latin div.preface,
     main.emblem-page.frontmatter section.section__frontispiece div.titlePage,
     main.emblem-page.frontmatter section.section__frontispiece div.pref-epigram.la,
+    main.emblem-page.frontmatter section.section__frontispiece ._preface--english div.preface,
     main.emblem-page.frontmatter section.section__frontispiece div.preface.la,
     main.emblem-page.frontmatter section.section__preface div.epigram,
     main.emblem-page.frontmatter section.section__preface div.epigram.la,
     main.emblem-page.frontmatter section.section__preface div.dedication,
-    main.emblem-page.frontmatter section.section__preface div.preface,
+    main.emblem-page.frontmatter section.section__preface ._dedication--latin div.preface,
     main.emblem-page.frontmatter section.section__preface div.titlePage,
     main.emblem-page.frontmatter section.section__preface div.pref-epigram.la,
+    main.emblem-page.frontmatter section.section__preface ._preface--english div.preface,
     main.emblem-page.frontmatter section.section__preface div.preface.la {
       display: grid;
       grid-column: 1 / 13;
@@ -5378,8 +5388,8 @@ main.emblem-page.frontmatter {
       display: block; }
   main.emblem-page section.section__author-epigram,
   main.emblem-page.frontmatter section.section__author-epigram {
-    /* english */
-    /* latin */ }
+    /* English */
+    /* Latin */ }
     main.emblem-page section.section__author-epigram .edition--facsimile h3.title,
     main.emblem-page.frontmatter section.section__author-epigram .edition--facsimile h3.title {
       text-indent: 4rem; }
@@ -5459,6 +5469,35 @@ main.emblem-page.frontmatter {
   main.emblem-page section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(2),
   main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(2) {
     margin-top: 0; }
+  main.emblem-page section.section__dedication ._dedication--latin div.preface,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin div.preface {
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: 2; }
+  main.emblem-page section.section__dedication ._dedication--latin span.pb.atalanta-fugiens,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin span.pb.atalanta-fugiens {
+    /*display: block;*/ }
+  main.emblem-page section.section__dedication ._dedication--latin span.caps,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin span.caps {
+    letter-spacing: .2em; }
+  main.emblem-page section.section__dedication ._dedication--latin.edition--facsimile span.original,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--facsimile span.original {
+    display: inline-block; }
+  main.emblem-page section.section__dedication ._dedication--latin.edition--facsimile span.regularized,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--facsimile span.regularized {
+    display: none; }
+  main.emblem-page section.section__dedication ._dedication--latin.edition--regularized span.italic,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.italic {
+    font-style: normal; }
+  main.emblem-page section.section__dedication ._dedication--latin.edition--regularized br,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized br {
+    /*display: none;*/ }
+  main.emblem-page section.section__dedication ._dedication--latin.edition--regularized span.original,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.original {
+    display: none; }
+  main.emblem-page section.section__dedication ._dedication--latin.edition--regularized span.regularized,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.regularized {
+    display: inline-block; }
   main.emblem-page section.section__frontispiece div.translation,
   main.emblem-page section.section__frontispiece div.original,
   main.emblem-page.frontmatter section.section__frontispiece div.translation,
