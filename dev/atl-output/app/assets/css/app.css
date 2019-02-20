@@ -5414,25 +5414,32 @@ main.emblem-page.frontmatter {
         margin-left: 0; }
     main.emblem-page section.section__author-epigram .edition--original h3.title,
     main.emblem-page.frontmatter section.section__author-epigram .edition--original h3.title {
+      font-size: 1.75rem;
       letter-spacing: .2em;
+      line-height: 1.5;
       text-indent: 4rem; }
     main.emblem-page section.section__author-epigram .edition--original span.caps-latin,
     main.emblem-page.frontmatter section.section__author-epigram .edition--original span.caps-latin {
       letter-spacing: .2em; }
     main.emblem-page section.section__author-epigram .edition--original .v-line-indent,
     main.emblem-page.frontmatter section.section__author-epigram .edition--original .v-line-indent {
-      line-height: 0;
       margin-left: 2rem; }
-    main.emblem-page section.section__author-epigram .edition--original .v-line span.original,
-    main.emblem-page section.section__author-epigram .edition--original .v-line-indent span.original,
-    main.emblem-page.frontmatter section.section__author-epigram .edition--original .v-line span.original,
-    main.emblem-page.frontmatter section.section__author-epigram .edition--original .v-line-indent span.original {
-      display: inline-block; }
-    main.emblem-page section.section__author-epigram .edition--original .v-line span.regularized,
-    main.emblem-page section.section__author-epigram .edition--original .v-line-indent span.regularized,
-    main.emblem-page.frontmatter section.section__author-epigram .edition--original .v-line span.regularized,
-    main.emblem-page.frontmatter section.section__author-epigram .edition--original .v-line-indent span.regularized {
-      display: none; }
+    main.emblem-page section.section__author-epigram .edition--original .v-line,
+    main.emblem-page section.section__author-epigram .edition--original .v-line-indent,
+    main.emblem-page.frontmatter section.section__author-epigram .edition--original .v-line,
+    main.emblem-page.frontmatter section.section__author-epigram .edition--original .v-line-indent {
+      line-height: 2;
+      margin-bottom: -2.5rem; }
+      main.emblem-page section.section__author-epigram .edition--original .v-line span.original,
+      main.emblem-page section.section__author-epigram .edition--original .v-line-indent span.original,
+      main.emblem-page.frontmatter section.section__author-epigram .edition--original .v-line span.original,
+      main.emblem-page.frontmatter section.section__author-epigram .edition--original .v-line-indent span.original {
+        display: inline-block; }
+      main.emblem-page section.section__author-epigram .edition--original .v-line span.regularized,
+      main.emblem-page section.section__author-epigram .edition--original .v-line-indent span.regularized,
+      main.emblem-page.frontmatter section.section__author-epigram .edition--original .v-line span.regularized,
+      main.emblem-page.frontmatter section.section__author-epigram .edition--original .v-line-indent span.regularized {
+        display: none; }
     main.emblem-page section.section__author-epigram .edition--regularized h3.title,
     main.emblem-page.frontmatter section.section__author-epigram .edition--regularized h3.title {
       font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
@@ -5558,10 +5565,10 @@ main.emblem-page.frontmatter {
     main.emblem-page section.section__preface .edition--normalized h3.title,
     main.emblem-page.frontmatter section.section__preface .edition--normalized h3.title {
       font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-style: normal;
       font-weight: 600;
-      line-height: 1.25;
+      line-height: 1.2;
       margin-bottom: 2rem; }
     main.emblem-page section.section__preface .edition--original span.caps,
     main.emblem-page.frontmatter section.section__preface .edition--original span.caps {
@@ -5571,11 +5578,13 @@ main.emblem-page.frontmatter {
       float: left;
       font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
       font-size: 5rem;
+      font-weight: 600;
       line-height: 0;
       padding: 1px 1px 0 1px; }
     main.emblem-page section.section__preface .edition--regularized span.caps:nth-of-type(3),
     main.emblem-page.frontmatter section.section__preface .edition--regularized span.caps:nth-of-type(3) {
-      font-family: "GTSectraDisplayBold", Garamond, Georgia, serif; }
+      font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
+      font-weight: 600; }
   main.emblem-page .lang--latin._discourse--latin .pb,
   main.emblem-page.frontmatter .lang--latin._discourse--latin .pb {
     display: none; }

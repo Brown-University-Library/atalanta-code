@@ -725,18 +725,21 @@ main.emblem-page.frontmatter {
 		}
 		.edition--original {
 			h3.title {
+				font-size: 1.75rem;
 				letter-spacing: .2em;
+				line-height: 1.5;
 				text-indent: 4rem;
 			}
 			span.caps-latin {
 				letter-spacing: .2em;
 			}
 			.v-line-indent {
-				line-height: 0;
 				margin-left: 2rem;
 			}
 			.v-line, 
 			.v-line-indent {
+				line-height: 2;
+				margin-bottom: -2.5rem;
 				span.original {
 					display: inline-block;
 				}
@@ -894,10 +897,10 @@ main.emblem-page.frontmatter {
 		.edition--normalized {
 			h3.title {
 				font-family: $secondary-display-font_emblem;
-				font-size: 3rem;
+				font-size: 2.5rem;
 				font-style: normal;
 				font-weight: 600;
-				line-height: 1.25;
+				line-height: 1.2;
 				margin-bottom: 2rem;
 			}
 		}
@@ -912,11 +915,13 @@ main.emblem-page.frontmatter {
 				float: left;
 				font-family: $secondary-display-font_emblem;
 				font-size: 5rem;
+				font-weight: 600;
 				line-height: 0;
 				padding: 1px 1px 0 1px;
 			}
 			span.caps:nth-of-type(3) {
 				font-family: $secondary-display-font_emblem;
+				font-weight: 600;
 			}
 		}
 	}
