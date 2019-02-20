@@ -5436,12 +5436,16 @@ main.emblem-page.frontmatter {
     main.emblem-page section.section__author-epigram .edition--regularized h3.title,
     main.emblem-page.frontmatter section.section__author-epigram .edition--regularized h3.title {
       font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
-      font-size: 2.25rem;
+      font-size: 2.5rem;
       font-style: normal;
       font-weight: 600;
       line-height: 1.2;
       margin-bottom: 1.5rem;
-      text-indent: 0; }
+      text-indent: 0;
+      text-transform: lowercase; }
+    main.emblem-page section.section__author-epigram .edition--regularized h3.title::first-letter,
+    main.emblem-page.frontmatter section.section__author-epigram .edition--regularized h3.title::first-letter {
+      text-transform: uppercase; }
     main.emblem-page section.section__author-epigram .edition--regularized .verse-epigram-italic,
     main.emblem-page.frontmatter section.section__author-epigram .edition--regularized .verse-epigram-italic {
       font-style: normal; }

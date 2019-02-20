@@ -748,12 +748,16 @@ main.emblem-page.frontmatter {
 		.edition--regularized {
 			h3.title {
 				font-family: $secondary-display-font_emblem;
-				font-size: 2.25rem;
+				font-size: 2.5rem;
 				font-style: normal;
 				font-weight: 600;
 				line-height: 1.2;
 				margin-bottom: 1.5rem;
 				text-indent: 0;
+				text-transform: lowercase;
+			}
+			h3.title::first-letter {
+				text-transform: uppercase;
 			}
 			.verse-epigram-italic {
 				font-style: normal;
