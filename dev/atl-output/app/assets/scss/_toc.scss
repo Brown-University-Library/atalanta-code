@@ -586,11 +586,9 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
 
 /* medium  -  tablet */
 @media screen and (min-width: 768px) and (max-width: 999px) {
-
 	.drawer {
-		outline: 10px solid yellow;
 		padding: 4rem;
-		width: calc(100vw - 4rem);
+		width: calc(100vw - 8rem);
 	}
 	nav.topnav__contents .topnav__contents__atalanta-fugiens,
 	nav.topnav__contents .topnav__contents__atalanta-essays, 
@@ -663,7 +661,6 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
 /* large  -  laptop */
 @media screen and (min-width: 1000px) and (max-width: 1499px) {
 	.drawer {
-		background-color: orange;
 		padding: 2rem;
 		width: calc(100vw - 4rem);
 	}
@@ -707,9 +704,6 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
 
 /*** SPECIFIC BREAKPOINTS ***/
 @media screen and (min-width: 1000px) and (max-width: 1300px) {
-	.drawer {
-		background-color: red;
-	}
 	nav.topnav__contents .topnav__contents__atalanta-fugiens,
 	nav.topnav__contents .topnav__contents__atalanta-essays,
 	nav.topnav__contents .topnav__contents__atalanta-images,
