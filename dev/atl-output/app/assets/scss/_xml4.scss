@@ -701,6 +701,11 @@ main.emblem-page.frontmatter {
 		}
 		.edition--normalized {
 			h3.title {
+				font-family: $secondary-display-font_emblem;
+				font-size: 2.5rem;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 1.2;
 				text-indent: 0;
 			}
 			.verse-epigram {
@@ -742,7 +747,12 @@ main.emblem-page.frontmatter {
 		}
 		.edition--regularized {
 			h3.title {
+				font-family: $secondary-display-font_emblem;
+				font-size: 2.25rem;
 				font-style: normal;
+				font-weight: 600;
+				line-height: 1.2;
+				margin-bottom: 1.5rem;
 				text-indent: 0;
 			}
 			.verse-epigram-italic {
@@ -852,14 +862,13 @@ main.emblem-page.frontmatter {
 			text-align: center;
 		}
 		.edition--original {
-/**/
+
 		}
 		.edition--regularized {
 			span.original {
 				display: none;
 			}
 		}
-
 		.edition--original span.caps {
 			letter-spacing: .2em;
 		}
@@ -867,8 +876,47 @@ main.emblem-page.frontmatter {
 	
 
 	/* PREFACE */
+	section.section__preface {
+		._preface--english,  
+		._preface--latin .page.italic {
+			grid-column: 1 / 13;
+		}
+		/* English */
+		.edition--facsimile {
+			h3.title {
+				text-align: center;
+			}
+		}
+		.edition--normalized {
+			h3.title {
+				font-family: $secondary-display-font_emblem;
+				font-size: 3rem;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 1.25;
+				margin-bottom: 2rem;
+			}
+		}
+		/* Latin */
+		.edition--original {
+			span.caps {
+				letter-spacing: .2em;
+			}
+		}
+		.edition--regularized {
+			span.caps:nth-of-type(2) {
+				float: left;
+				font-family: $secondary-display-font_emblem;
+				font-size: 5rem;
+				line-height: 0;
+				padding: 1px 1px 0 1px;
+			}
+			span.caps:nth-of-type(3) {
+				font-family: $secondary-display-font_emblem;
+			}
+		}
+	}
 
-	/* DEDICATION */
 
 
 	/*********** END OF FRONTMATTER *************/

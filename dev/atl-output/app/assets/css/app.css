@@ -4491,7 +4491,6 @@ main.emblem-page.frontmatter {
   /* Latin */
   /* FRONTISPIECE */
   /* PREFACE */
-  /* DEDICATION */
   /*********** END OF FRONTMATTER *************/
   /*********** TESTS *************/
   /****************************************/ }
@@ -5394,6 +5393,11 @@ main.emblem-page.frontmatter {
       text-indent: 4rem; }
     main.emblem-page section.section__author-epigram .edition--normalized h3.title,
     main.emblem-page.frontmatter section.section__author-epigram .edition--normalized h3.title {
+      font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
+      font-size: 2.5rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.2;
       text-indent: 0; }
     main.emblem-page section.section__author-epigram .edition--normalized .verse-epigram,
     main.emblem-page.frontmatter section.section__author-epigram .edition--normalized .verse-epigram {
@@ -5431,7 +5435,12 @@ main.emblem-page.frontmatter {
       display: none; }
     main.emblem-page section.section__author-epigram .edition--regularized h3.title,
     main.emblem-page.frontmatter section.section__author-epigram .edition--regularized h3.title {
+      font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
+      font-size: 2.25rem;
       font-style: normal;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
       text-indent: 0; }
     main.emblem-page section.section__author-epigram .edition--regularized .verse-epigram-italic,
     main.emblem-page.frontmatter section.section__author-epigram .edition--regularized .verse-epigram-italic {
@@ -5524,15 +5533,45 @@ main.emblem-page.frontmatter {
       font-size: 1.25rem;
       line-height: 2;
       text-align: center; }
-    main.emblem-page section.section__frontispiece .edition--original,
-    main.emblem-page.frontmatter section.section__frontispiece .edition--original {
-      /**/ }
     main.emblem-page section.section__frontispiece .edition--regularized span.original,
     main.emblem-page.frontmatter section.section__frontispiece .edition--regularized span.original {
       display: none; }
     main.emblem-page section.section__frontispiece .edition--original span.caps,
     main.emblem-page.frontmatter section.section__frontispiece .edition--original span.caps {
       letter-spacing: .2em; }
+  main.emblem-page section.section__preface,
+  main.emblem-page.frontmatter section.section__preface {
+    /* English */
+    /* Latin */ }
+    main.emblem-page section.section__preface ._preface--english,
+    main.emblem-page section.section__preface ._preface--latin .page.italic,
+    main.emblem-page.frontmatter section.section__preface ._preface--english,
+    main.emblem-page.frontmatter section.section__preface ._preface--latin .page.italic {
+      grid-column: 1 / 13; }
+    main.emblem-page section.section__preface .edition--facsimile h3.title,
+    main.emblem-page.frontmatter section.section__preface .edition--facsimile h3.title {
+      text-align: center; }
+    main.emblem-page section.section__preface .edition--normalized h3.title,
+    main.emblem-page.frontmatter section.section__preface .edition--normalized h3.title {
+      font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
+      font-size: 3rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.25;
+      margin-bottom: 2rem; }
+    main.emblem-page section.section__preface .edition--original span.caps,
+    main.emblem-page.frontmatter section.section__preface .edition--original span.caps {
+      letter-spacing: .2em; }
+    main.emblem-page section.section__preface .edition--regularized span.caps:nth-of-type(2),
+    main.emblem-page.frontmatter section.section__preface .edition--regularized span.caps:nth-of-type(2) {
+      float: left;
+      font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
+      font-size: 5rem;
+      line-height: 0;
+      padding: 1px 1px 0 1px; }
+    main.emblem-page section.section__preface .edition--regularized span.caps:nth-of-type(3),
+    main.emblem-page.frontmatter section.section__preface .edition--regularized span.caps:nth-of-type(3) {
+      font-family: "GTSectraDisplayBold", Garamond, Georgia, serif; }
   main.emblem-page .lang--latin._discourse--latin .pb,
   main.emblem-page.frontmatter .lang--latin._discourse--latin .pb {
     display: none; }
