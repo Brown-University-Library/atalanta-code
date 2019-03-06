@@ -10,6 +10,7 @@ $gray_medium: hsla(0, 0%, 50%, 1);
 $gray_transparent: hsla(0, 0%, 20%, .97);
 $red: hsla(11, 72%, 51%, 1);
 $red_dark: hsla(13, 70%, 43%, 1);
+$red_transparent: hsla(11, 80%, 51%, .95);
 $text_body: hsla(0, 0%, 30%, 1);
 $white: hsla(0, 100%, 100%, 1);
 $yellow: hsla(41, 100%, 50%, 1);
@@ -33,8 +34,5 @@ $orange-red: #DC4929;
 $orange-red_darker: #B84121;
 $orange-yellow: #FFB000;
 $orange-yellow_brighter: hsla(41, 100%, 69%, 1);
-$red_transparent: hsla(11, 83%, 51%, .97);
 $royal-blue: hsla(250, 100%, 15%, .90);
-/*$text-body: #4C4C4C;*/
-$text-body: #333;
-$white: #fff;
+$white_transparent: hsla(0, 100%, 100%, .75);

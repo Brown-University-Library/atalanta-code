@@ -192,23 +192,29 @@ header[data-page-type='other'] {
 
 .search__modal {
 	background-color: $red_transparent;
+	box-sizing: border-box;
+	color: $black;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
 	font-family: $display-font_secondary;
-	height: calc(100% - 12rem);
+	height: 40vh;
 	margin: 0;
-	padding: 6rem 4rem;
+	padding: 0 4rem;
 	position: fixed;
-	width: calc(100vw - 8rem);
+	top: $topnav-h;
+	width: 100vw;
 	z-index: $searchbar-z;
 	button.x-close {
 		align-self: flex-end;
 		background-image: url("../icons/icon_X-close.svg");
+		background-repeat: no-repeat;
+		background-size: 2rem;
 		filter: invert(100%);
 		height: 3.125rem;
-		transform: scale(.7);
+		/*transform: scale(.7);*/
+		margin-top: 1rem;
 		width: 3.125rem;
 	}
 	button.x-close:hover {
@@ -222,7 +228,6 @@ header[data-page-type='other'] {
 		align-items: flex-start;
 		justify-content: center;
 		height: 5rem;
-		margin-top: 12rem;
 		width: 80%;
 	}
 	.search__bar__label, 
@@ -245,7 +250,9 @@ header[data-page-type='other'] {
 		color: $black;
 		flex: 1 0 70%;
 		font-size: 3.5rem;
-		outline: none;	
+		outline: none;
+		padding: 0 1rem;
+		margin-right: 1rem;
 	}
 	input#search__bar__field::-webkit-search-cancel-button {
 		display: none;
@@ -256,7 +263,8 @@ header[data-page-type='other'] {
 		border-bottom: 2px solid $black;
 		color: $gray_light;
 		flex: 0 0 15%;
-		font-size: 1rem;
+		font-size: .825rem;
+		font-weight: 600;
 		height: calc(3.5rem + 4px);
 		letter-spacing: .05em;
 		text-transform: uppercase;
@@ -275,18 +283,19 @@ header[data-page-type='other'] {
 
 /*** Animation ***/
 .search__modal {
-	position: fixed;
-	top: -100%;
+	min-height: 0;
+	max-height: 0;
+	overflow-y: hidden;
 }
 .search__modal.search__modal--slide-in {
-	display: flex;
-	transform: translateY(100%);
-	transition: display .1s, transform .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);		
+	max-height: 100vh;
+	transition: max-height .35s ease;
 }
 .search__modal.search__modal--slide-out {
-	display: none;
-	transform: translateY(-100%);
-	transition: transform .3s linear, display .1s .4s;
+	min-height: 0;
+	max-height: 0;
+	transition: max-height .25s ease, visibility .1s ease .3s;
+	visibility: hidden;
 }
 
 
