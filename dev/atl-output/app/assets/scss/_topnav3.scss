@@ -26,19 +26,20 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     font-size:1.2em;
     z-index:999;
 }
+
+._topnav[data-nav='home'] {
+	nav {
+		display: none;
+	}
+}
 ._topnav[data-nav='digital edition'] {
 	.topnav__content ul li:nth-child(1) a {
 		border-bottom: 6px solid $red;
-		height: calc(3.125rem - 6px); /* topnav height - border bottom */
+		height: calc(3.125rem - 6px);
 	}
 	.topnav__content ul li:nth-child(1) a:hover {
 		color: $gray_medium;
 		margin-bottom: 0;
-	}
-}
-._topnav[data-nav='home'] {
-	nav {
-		display: none;
 	}
 }
 ._topnav[data-nav='essay'] {
@@ -53,6 +54,16 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 }
 ._topnav[data-nav='images'] {
 	.topnav__content ul li:nth-child(3) a {
+		border-bottom: 6px solid $red;
+		height: calc(3.125rem - 6px);
+	}
+	.topnav__content ul li:nth-child(3) a:hover {
+		color: $gray_medium;
+		margin-bottom: 0;
+	}
+}
+._topnav[data-nav='contents'] {
+	.topnav__content ul li:nth-child(4) a {
 		border-bottom: 6px solid $red;
 		height: calc(3.125rem - 6px);
 	}
@@ -89,10 +100,12 @@ header[data-page-type='other'] {
 		display: none;
 	}
 	> ul {
+		box-sizing: border-box;
 		display: flex;
 		align-items: center;
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: space-between;
+		padding: 0 3.5rem;
 		width: 100vw;
 	}
 	li {
@@ -151,33 +164,31 @@ header[data-page-type='other'] {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+		margin-right: -1rem;
 	}
 	li.topnav__search button {
 		color: $gray_medium;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: flex-end;
 		height: $topnav-h;
 		width: 5.5rem;
 	}
-	li.topnav__search button:hover, 
-	li.topnav__search button:focus {
+	li.topnav__search button:hover {
 		color: $red;
 		transition: .2s;
 	}
 	li.topnav__search svg {
-		transform: scale(2.5);
-		width: 2rem;
+		width: 5.5rem;
 	}
 	li.topnav__search svg .st0 {
 		stroke: $gray_medium;
 	}
-	li.topnav__search button:hover svg .st0, 
-	li.topnav__search button:focus svg .st0 {
+	li.topnav__search button:hover svg .st0 {
 		stroke: $red;
 		transition: .2s;
 	}
-	li.topnav__search span.label {
+/*	li.topnav__search span.label {
 		font-family: $display-font_secondary;
 		font-size: .75rem;
 		letter-spacing: .05em;
@@ -187,7 +198,7 @@ header[data-page-type='other'] {
 	li.topnav__search a:focus span.label {
 		color: $red;
 		transition: .2s;
-	}
+	}*/
 }
 
 .search__modal {
@@ -261,11 +272,12 @@ header[data-page-type='other'] {
 		align-self: flex-end;
 		background-color: $black;
 		border-bottom: 2px solid $black;
+		box-sizing: border-box;
 		color: $gray_light;
 		flex: 0 0 15%;
 		font-size: .825rem;
 		font-weight: 600;
-		height: calc(3.5rem + 4px);
+		height: 3.5rem;
 		letter-spacing: .05em;
 		text-transform: uppercase;
 	}
@@ -332,7 +344,7 @@ header[data-page-type='other'] {
 @media screen and (max-width: 999px) {
 	.search__modal {
 		padding: 6rem 2rem;
-		width: calc(100vw - 4rem);
+		/*width: calc(100vw - 4rem);*/
 		.search__bar {
 			justify-content: flex-start;
 			width: 100%;
@@ -471,9 +483,9 @@ header[data-page-type='other'] {
 	}
 
 	.search__modal {
-		height: calc(100% - 8rem);
+		height: 100vh;
 		padding: 4rem 1rem;
-		width: calc(100vw - 2rem);
+		width: 100vw;
 		button.x-close {
 			transform: scale(.5);
 		}
