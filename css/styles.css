@@ -3349,18 +3349,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   text-align: center;
   text-transform: uppercase;
   width: 100%;
-  z-index: 100000;
-  /*	li.topnav__search span.label {
-		font-family: $display-font_secondary;
-		font-size: .75rem;
-		letter-spacing: .05em;
-		text-transform: uppercase;
-	}
-	li.topnav__search a:hover span.label, 
-	li.topnav__search a:focus span.label {
-		color: $red;
-		transition: .2s;
-	}*/ }
+  z-index: 100000; }
   .topnav a {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -3527,6 +3516,14 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s; }
+  .topnav li.topnav__search span.topnav__search-label {
+    display: none; }
+  .topnav li.topnav__search a:hover span.topnav__search-label,
+  .topnav li.topnav__search a:focus span.topnav__search-label {
+    color: #dc4928;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
 
 .search__modal {
   background-color: rgba(230, 67, 30, 0.95);
@@ -3650,7 +3647,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     -webkit-flex: 0 0 15%;
     -ms-flex: 0 0 15%;
     flex: 0 0 15%;
-    font-size: .825rem;
+    font-size: .875rem;
     font-weight: 600;
     height: 3.5rem;
     letter-spacing: .05em;
@@ -3855,18 +3852,20 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     height: 3.125rem;
     padding: 0;
     width: 100vw; }
-  .topnav li.topnav__search span.icon {
+  .topnav li.topnav__search span.topnav__search-icon {
     display: none; }
-  .topnav li.topnav__search span.label {
-    font-size: .875rem; }
+  .topnav li.topnav__search span.topnav__search-label {
+    display: inline-block;
+    font-family: "GTAmericaBold", "Avenir", Helvetica, Arial, sans-serif;
+    font-size: .875rem;
+    letter-spacing: .05em;
+    text-transform: uppercase; }
   .search__modal {
-    height: 100vh;
-    padding: 4rem 1rem;
+    height: 60vh;
+    padding: 0 1rem;
     width: 100vw; }
     .search__modal button.x-close {
-      -webkit-transform: scale(0.5);
-      -ms-transform: scale(0.5);
-      transform: scale(0.5); }
+      margin-right: -.8rem; }
     .search__modal .search__bar {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -3880,10 +3879,12 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      margin-top: 4rem;
+      margin-top: 0;
       width: 100%; }
     .search__modal input#search__bar__field {
       background-color: white;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 100%;
       -ms-flex: 0 0 100%;
