@@ -188,17 +188,14 @@ header[data-page-type='other'] {
 		stroke: $red;
 		transition: .2s;
 	}
-/*	li.topnav__search span.label {
-		font-family: $display-font_secondary;
-		font-size: .75rem;
-		letter-spacing: .05em;
-		text-transform: uppercase;
+	li.topnav__search span.topnav__search-label {
+		display: none;
 	}
-	li.topnav__search a:hover span.label, 
-	li.topnav__search a:focus span.label {
+	li.topnav__search a:hover span.topnav__search-label, 
+	li.topnav__search a:focus span.topnav__search-label {
 		color: $red;
 		transition: .2s;
-	}*/
+	}
 }
 
 .search__modal {
@@ -475,11 +472,15 @@ header[data-page-type='other'] {
 		padding: 0;
 		width: 100vw;
 	}
-	.topnav li.topnav__search span.icon {
+	.topnav li.topnav__search span.topnav__search-icon {
 		display: none;
 	}
-	.topnav li.topnav__search span.label {
+	.topnav li.topnav__search span.topnav__search-label {
+		display: inline-block;
+		font-family: $display-font_secondary;
 		font-size: .875rem;
+		letter-spacing: .05em;
+		text-transform: uppercase;
 	}
 
 	.search__modal {
