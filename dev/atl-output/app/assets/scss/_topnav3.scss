@@ -272,7 +272,7 @@ header[data-page-type='other'] {
 		box-sizing: border-box;
 		color: $gray_light;
 		flex: 0 0 15%;
-		font-size: .825rem;
+		font-size: .875rem;
 		font-weight: 600;
 		height: 3.5rem;
 		letter-spacing: .05em;
@@ -484,21 +484,22 @@ header[data-page-type='other'] {
 	}
 
 	.search__modal {
-		height: 100vh;
-		padding: 4rem 1rem;
+		height: 60vh;
+		padding: 0 1rem;
 		width: 100vw;
 		button.x-close {
-			transform: scale(.5);
+			margin-right: -.8rem;
 		}
 		.search__bar {
 			flex-direction: column;
 			flex-wrap: nowrap;
 			justify-content: space-between;
-			margin-top: 4rem;
+			margin-top: 0;
 			width: 100%;
 		}
 		input#search__bar__field {
-			background-color: white;
+			background-color: $white;
+			box-sizing: border-box;
 			flex: 0 0 100%;
 			font-size: 1.5rem;
 			margin-bottom: 1rem;

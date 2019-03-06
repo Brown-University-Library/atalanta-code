@@ -3647,7 +3647,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     -webkit-flex: 0 0 15%;
     -ms-flex: 0 0 15%;
     flex: 0 0 15%;
-    font-size: .825rem;
+    font-size: .875rem;
     font-weight: 600;
     height: 3.5rem;
     letter-spacing: .05em;
@@ -3861,13 +3861,11 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     letter-spacing: .05em;
     text-transform: uppercase; }
   .search__modal {
-    height: 100vh;
-    padding: 4rem 1rem;
+    height: 60vh;
+    padding: 0 1rem;
     width: 100vw; }
     .search__modal button.x-close {
-      -webkit-transform: scale(0.5);
-      -ms-transform: scale(0.5);
-      transform: scale(0.5); }
+      margin-right: -.8rem; }
     .search__modal .search__bar {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -3881,10 +3879,12 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      margin-top: 4rem;
+      margin-top: 0;
       width: 100%; }
     .search__modal input#search__bar__field {
       background-color: white;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 100%;
       -ms-flex: 0 0 100%;

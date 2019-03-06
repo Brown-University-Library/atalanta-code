@@ -90,6 +90,7 @@ $(function () {
 		$(hamburgerMenuBtn).addClass(hamburgerMenuBtnOpen);
 		$(hamburgerMenu).removeClass(animationMenuSlideOut);
 		$(hamburgerMenu).addClass(animationMenuSlideIn);
+		searchModalClose();
 	}
 	function searchModalClose() {
 		$(topnavSearchBtn).removeClass(searchModalOpened);
