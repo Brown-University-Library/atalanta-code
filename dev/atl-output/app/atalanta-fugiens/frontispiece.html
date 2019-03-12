@@ -6,59 +6,78 @@
 	<title>Furnace and Fugue: Atalanta fugiens (Digital Edition)</title>
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css">
 <!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
-	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
-	<script src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
 </head>
-<body>
+<body class="emblem-body">
 <!-- GLOBAL NAVIGATION -->
-	<header>
+	<header data-page-type="digital edition">
+		<a class="a11y_skip-main" href="#emblem-data">Skip to main content</a>
 		<div class="_topnav" data-nav="digital edition">
-			<nav class="topnav">
+			<nav class="topnav" aria-label="Main">
+				<button class="topnav__hamburger--closed" aria-hidden="true" aria-label="Mobile menu"></button>
 				<ul>
 					<li class="topnav__logo">
-						<button>
-							<a href="../index.html">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.5 59.2" height="50px"><title>furnaceAndFugueLogo</title><g id="Layer_2" data-name="Layer 2"><g id="furnace_and_fugue_logo" data-name="furnace and fugue logo"><text transform="translate(0 45.8)" font-size="53.84" fill="#fff" font-family="GTSectraDisplay-Bold, GT Sectra Display" font-weight="700">f</text><text transform="translate(18.2 45.8)" font-size="42.24" fill="#fff" font-family="GTSectraDisplay-Bold, GT Sectra Display" font-weight="700">&amp;</text><text transform="translate(46.3 45.8)" font-size="53.84" fill="#fff" font-family="GTSectraDisplay-Bold, GT Sectra Display" font-weight="700">f</text></g></g></svg>
-							</a>
-						</button>
+						<a aria-label="Return to Furnace and Fugue home" href="../index.html"></a>
 					</li>
 					<li class="topnav__content">
 						<ul>
-							<li><a href="../atalanta-fugiens/af-toc.html" data-lity>Digital Edition</a></li>
-							<li><a href="../atalanta-essays/essay-toc.html" data-lity>Essays</a></li>
-							<li><a href="../search/search-toc.html" data-lity>Images</a></li>
-							<li><a href="../search/toc.html" data-lity>Contents</a></li>
+							<li><a href="../atalanta-fugiens/toc_af.html">Digital Edition</a></li>
+							<li><a href="../atalanta-essays/toc_essays.html">Essays</a></li>
+							<li><a href="../search/image-search.html">Images</a></li>
+							<li><a href="../search/toc.html">Contents</a></li>
 						</ul>
 					</li>
-					<li class="topnav__search" data-lity><button><a href="../search/search.html">
-						<span class="icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 960 560" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:#fff; stroke-width:20;stroke-miterlimit:10;}</style><g id="handle"><g><path class="st0" d="M537.6,337.5l97,97L537.6,337.5z"/></g></g><g id="glass"><g><path class="st0" d="M480,153c33.9,0,65.8,13.2,89.8,37.2S607,246.1,607,280s-13.2,65.8-37.2,89.8S513.9,407,480,407s-65.8-13.2-89.8-37.2
-						S353,313.9,353,280s13.2-65.8,37.2-89.8S446.1,153,480,153 M480,143c-75.7,0-137,61.3-137,137s61.3,137,137,137s137-61.3,137-137
-						S555.7,143,480,143L480,143z"/></g></g></svg></span><span class="label">Search</span>
-					</a></button></li>
+					<li class="topnav__search">
+						<button class="topnav__search--closed">
+							<span class="icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 960 560" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:#fff; stroke-width:20;stroke-miterlimit:10;}</style><g id="handle"><g><path class="st0" d="M537.6,337.5l97,97L537.6,337.5z"/></g></g><g id="glass"><g><path class="st0" d="M480,153c33.9,0,65.8,13.2,89.8,37.2S607,246.1,607,280s-13.2,65.8-37.2,89.8S513.9,407,480,407s-65.8-13.2-89.8-37.2
+							S353,313.9,353,280s13.2-65.8,37.2-89.8S446.1,153,480,153 M480,143c-75.7,0-137,61.3-137,137s61.3,137,137,137s137-61.3,137-137
+							S555.7,143,480,143L480,143z"/></g></g></svg></span>
+							<span class="label">Search</span>
+						</button>
+					</li>
 				</ul>
 			</nav>
+			<div class="search__modal" aria-hidden="true">
+				<button class="x-close" aria-label="Close search modal"></button>
+				<form action="../search/search.html" method="GET" class="search__bar">
+					<label class="label search__bar__label" for="search-field">Enter your search below</label>
+					<input type="search" id="search__bar__field" name="q" aria-label="Search the digital edition, scholarly essays or emblem images" required>
+					<button class="submit" type="submit">Search</button>
+				</form>
+			</div>
 		</div>
 <!-- EMBLEM NAVIGATION -->
-		<nav class="subnav">
-			<ul>
-				<li class="subnav__views--single is-hidden" data-state="active"><a href="#"><span></span>Single View</a></li>
-				<li class="subnav__options--option is-active" data-state="active"><a href="#">English</a></li>
-				<li class="subnav__options--option" data-state="inactive"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option" data-state="inactive"><a href="#">Original</a></li>
-				<li class="subnav__views--double" data-state="inactive"><a href="#"><span></span>Comparative View</a></li>
-				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">English</a></li>
-				<li class="subnav__options--option is-hidden" data-state="inactive"><a href="#">Latin/German</a></li>
-				<li class="subnav__options--option is-hidden is-active" data-state="active"><a href="#">Original</a></li>
-			</ul>
+		<nav class="subnav-v3" aria-label="Digital Edition">
+			<form action="#">
+				<fieldset>
+					<label for="layout">Select a Layout</label>
+					<select name="layout" id="layout">
+						<option selected="selected" class="dropdown--layout" data-layout="active" value="compare">Comparative View</option>
+						<option class="dropdown--layout" data-layout="inactive" value="digital-edition">Digital Edition</option>
+						<option class="dropdown--layout" data-layout="inactive" value="zooming-image">Original</option>
+					</select>
+				</fieldset>
+			</form>
+			<form action="#">
+				<fieldset>
+					<label for="language">Select a Language</label>
+					<select name="language" id="language">
+						<option class="dropdown--language" data-language="inactive" value="english_original">Original English</option>
+						<option  selected="selected" class="dropdown--language" data-language="active" value="english_modern">Modernized English</option>
+						<option class="dropdown--language" data-language="inactive" value="latin_original">Original Latin</option>
+						<option class="dropdown--language" data-language="inactive" value="latin_normal">Normalized Latin</option>
+					</select>
+				</fieldset>
+			</form>
 		</nav>
 	</header>
 <!-- EMBLEM PAGE-->
 	<main id="emblem-data" class="emblem-page frontmatter" data-id="1">
 <!-- EMBLEM GRID -->
 		<!-- Facsimile -->
-		<div class="section__facsimile is-hidden">
+		<div aria-hidden="true" class="section__facsimile is-hidden">
 			<div class="facsimile--full">
 				<section class="_facsimile">
+					<!-- https://openseadragon.github.io/docs/ -->
 					<section class="facsimile">
 						<div id="openseadragon-wrapper">
 							<div id="tools">
@@ -78,19 +97,11 @@
 			</div>
 		</div>
 		<div class="emblem">
-			<section class="section__frontispiece section--single panel--full">
-				<div class="translation" lang="en-US">
-					<div class="switch-wrapper left">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Normalized</a></li>
-							</ul>
-						</div>
-					</div>
+			<section class="section__frontispiece section--single panel--right">
+				<div class="translation">
 					<span class="page-break--atalanta-fugiens"></span>
 					<span class="page-break--beinecke"></span>
-					<div class="lang--english _frontispiece--english edition--normalized">
+					<div class="lang--english _frontispiece--english edition--normalized" lang="en-US">
 						<div class="titlePage">
 							<span class="milestone">001</span>
 							<div class="ab">
@@ -262,243 +273,10 @@
 						</div>
 					</div>
             	</div>
-				<div class="original is-hidden" lang="la">
-					<div class="switch-wrapper left">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--latin _frontispiece--latin edition--regularized">
+				<div class="original is-hidden">
+					<div class="lang--latin _frontispiece--latin edition--regularized" lang="la">
 						<div class="pref-epigram la">
 				            <span class="pb atalanta-fugiens">1</span>
-		                   <span class="original"><br></span>Atalanta
-		                   <span class="original"><br></span>Fugiens,
-		                   <span class="original"><br></span>hoc est,
-		                   <span class="original"><br></span>Emblemata
-		                   <span class="original"><br></span>Nova
-		                   <span class="original"><br></span>De Secretis Natur<span class="original">æ</span><span class="regularized">[ae]</span>
-		                   <span class="original"><br></span>Chymica,
-		                
-		               
-		                   <span class="original"><br></span>Accomodata partim oculis <span class="original">&amp;</span> intellectui, figuris
-		                   <span class="original"><br></span>cupro incisis, adjectisq́ue sententiis, Epigram<span class="original">-<br></span>matis <span class="original">&amp;</span> notis, partim auribus <span class="original">&amp;</span> recreationi
-		                   <span class="original"><br></span>animi plus minus 50. Fugis Musicalibus trium
-		                   <span class="original"><br></span>Vocum, quarum du<span class="original">æ</span><span class="regularized">[ae]</span> ad unam simplicem melo<span class="original">-<br></span>diam distichis canendis peraptam, correspon<span class="original">-<br></span>deant, non absq<span class="original">;</span><span class="regularized">[absque]</span> singulari jucunditate videnda,
-		                   <span class="original"><br></span>legenda, meditanda, intelligenda, dijudicanda,
-		                   <span class="original"><br></span>canenda <span class="original">&amp;</span> audienda:
-		                
-		               
-		                  <span class="original"><br></span><span class="italic">Authore</span>
-		                   <span class="original"><br></span><span class="caps">Michaele Majero</span> Imperial<span class="original">.</span><span class="regularized">[Imperiali]</span> Con<span class="original">-<br></span>sistorii Comite, Med<span class="original">.</span><span class="regularized">[Medicinarum]</span> D<span class="original">.</span><span class="regularized">[Doctore]</span> Eq<span class="original">.</span><span class="regularized">[Equite]</span> ex<span class="original">.</span><span class="regularized">[exempto]</span> etc<span class="regularized">[etcaetera]</span>.
-		                   <span class="original"><br></span><span class="caps">Oppenheimii</span>
-		                   <span class="original"><br></span>Ex typographia <span class="caps">Hieronymi Galleri</span>,
-		                   <span class="original"><br></span><span class="italic">Sumptibus</span> <span class="caps">Joh<span class="original">.</span> Theodori<span class="regularized">[Johannis Theodori]</span></span> de <span class="caps">Bry</span>,
-		                   <span class="original"><br></span>M DC XVII.
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="section__frontispiece section--double panel--right is-hidden">
-				<div class="translation is-hidden" lang="en-US">
-					<div class="switch-wrapper right">
-						<div class="facsimile-normalized-switch">
-							<ul>
-								<li><a href="#">Facsimile</a></li>
-								<li class="is-selected"><a href="#">Normalized</a></li>
-							</ul>
-						</div>
-					</div>
-					<span class="page-break--atalanta-fugiens"></span>
-					<span class="page-break--beinecke"></span>
-					<div class="lang--english _frontispiece--english edition--normalized">
-						<div class="titlePage">
-							<span class="milestone">001</span>
-							<div class="ab">
-								<span class="original">
-									<br>
-								</span>
-								<span class="regularized"></span>
-								<span class="italics">Atalanta running,
-									<span class="original">
-										<br>
-									</span>
-									<span class="regularized"></span>that is,
-								</span>
-							</div>
-							<div class="ab">
-								<span class="original">
-									<br>
-								</span>
-								<span class="regularized"></span>
-								<span class="italics">New 
-									<span class="original">Chymicall </span>
-									<span class="regularized">Chymical</span> Emblems relating to the
-									<span class="original">
-										<br>
-									</span>
-									<span class="regularized"></span>Secrets of Nature,
-								</span>
-							</div>
-							<div class="ab">
-								<span class="original">
-									<br>
-								</span>
-								<span class="regularized"></span>
-								<span class="italics">
-									<span class="original">Accomodated </span>
-									<span class="regularized">Accommodated</span> partly to the eyes and understanding, with figures 
-									<span class="original">cutt </span>
-									<span class="regularized">cut</span>
-									<span class="original">
-										<br>
-									</span>
-									<span class="regularized"></span>in Copper, and Sentences, Epigrams, and notes added, partly to the
-									<span class="original">
-										<br>
-									</span>
-									<span class="regularized"></span>ears and recreation of the mind, with 50 
-									<span class="original">musicall </span>
-									<span class="regularized">musical</span> flights of
-									<span class="original">
-										<br>
-									</span>
-									<span class="regularized"></span>three 
-									<span class="original">voyces </span>
-									<span class="regularized">voices</span>, whereof two may correspond to one single
-									<span class="subst">
-										<span class="del">
-											<span class="original">
-												<br>
-											</span>
-											<span class="regularized"></span>melody 
-											<span class="superscript">1</span>appropriated 
-											<span class="superscript">5</span>with 
-											<span class="superscript">6</span>distichs 
-											<span class="superscript">2</span>to 
-											<span class="superscript">3</span>be 
-											<span class="superscript">4</span>sung: 
-											<span class="superscript">11</span>to 
-											<span class="superscript">12</span>be 
-											<span class="original">
-												<br>
-											</span>
-											<span class="regularized"></span>
-											<span class="superscript">13</span>seen, 
-											<span class="superscript">14</span>read, 
-											<span class="superscript">15</span>meditated, 
-											<span class="superscript">16</span>understood, 
-											<span class="superscript">17</span>
-											<span class="subst">
-												<span class="del">judged</span>
-												<span class="add">distinguished</span>
-											</span>, 
-											<span class="superscript">18</span>sung,
-											<span class="original">
-												<br>
-											</span>
-											<span class="regularized"></span>
-											<span class="superscript">19</span>and 
-											<span class="superscript">20</span> heard 
-											<span class="superscript">7</span>not 
-											<span class="superscript">8</span>without 
-											<span class="superscript">9</span>Singular 
-											<span class="superscript">10</span>delectation.
-											<span class="original">
-												<br>
-											</span>
-											<span class="regularized"></span>
-											<span class="pc">. . . . . . . .</span>
-										</span>
-										<span class="add">
-											<span class="original">
-												<br>
-											</span>
-											<span class="regularized"></span>melody 
-											<span class="original">Apropriated </span>
-											<span class="regularized">Appropriated</span> to be Sung with distichs, not without 
-											<span class="original">
-												<br>
-											</span>
-											<span class="regularized"></span>Singlular delectation, to be seen, read, meditated,
-											<span class="original">
-												<br>
-											</span>
-											<span class="regularized"></span>Understood, distinguished, Sung and Heard;
-
-										</span>
-									</span>
-									<span class="original">
-										<br>
-									</span>
-									<span class="regularized"></span>the Author.
-								</span>
-							</div>
-							<div class="ab">
-								<span class="original">
-									<br>
-								</span>
-								<span class="regularized"></span>
-								<span class="italics">Michael Majerus Count of the Imperiall Con
-									<span class="original">=
-										<br>
-									</span>sistory. Doctor of 
-									<span class="original">Physicke </span>
-									<span class="regularized">Physic</span>. Knight of etc.
-									<span class="original">
-										<br>
-									</span>
-									<span class="regularized"></span>
-									<span class="pc">. . . . .</span>
-								</span>
-							</div>
-							<div class="ab">
-								<span class="original">
-									<br>
-								</span>
-								<span class="regularized"></span>
-								<span class="italics">Oppenheim.</span>
-							</div>
-							<div class="ab">
-								<span class="original">
-									<br>
-								</span>
-								<span class="regularized"></span>
-								<span class="italics">Printed by Hieronymus Gallerus, at the charge of
-									<span class="original">
-										<br>
-									</span>
-									<span class="regularized"></span>John Theodore de Bry.
-									<span class="original">
-										<br>
-									</span>
-									<span class="regularized"></span>1618.
-									<span class="original">
-										<br>
-									</span>
-									<span class="regularized"></span>
-									<span class="pc">. . . .</span>
-								</span>
-							</div>
-						</div>
-					</div>
-            	</div>
-				<div class="original" lang="la">
-					<div class="switch-wrapper right">
-						<div class="latin-german-switch">
-							<ul>
-								<li><a href="#">Original Latin</a></li>
-								<li class="is-selected"><a href="#">Regularized Latin</a></li>
-								<li><a href="#">German</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="lang--latin _frontispiece--latin edition--regularized">
-						<div class="pref-epigram la">
-				           <span class="pb atalanta-fugiens">1</span>
 		                   <span class="original"><br></span>Atalanta
 		                   <span class="original"><br></span>Fugiens,
 		                   <span class="original"><br></span>hoc est,
@@ -529,27 +307,14 @@
 		</div><!-- END EMBLEM -->
 	</main> <!-- END OF EMBLEM PAGE -->
 <!-- JS -->
+	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.js"></script>
+	<script src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/shortcuts/sticky.min.js"></script>
 	<script src="../assets/js/topnav.js"></script>
-	<script src="../assets/js/emblem.js"></script>
 	<script src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
+	<script src="../assets/js/emblem.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
