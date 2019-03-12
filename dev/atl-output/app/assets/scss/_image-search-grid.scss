@@ -1,0 +1,221 @@
+@import 'utilities';
+@import 'colors';
+
+main#image-search {
+
+	height: 100vh;
+	padding: 0 1rem;
+	width: calc(100vw - 2rem);
+/*	background-color: blue;*/
+	* {
+		box-sizing: border-box !important;
+	}
+}
+.image-search__categories {
+	background-color: $blue_light;
+	color: $text_body;
+/*	outline: 5px solid green;*/
+	padding: 0;
+	position: fixed;
+	top: $topnav-h;
+	left: 0;
+	width: 100vw;
+	z-index: $subnav-z;
+	ul.image-search__catlist {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		height: 3rem;
+		width: 100%;
+	}
+	li.image-search__category {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 3rem;
+/*		outline: 1px solid red;*/
+
+	}
+	li.image-search__category > a {
+		color: $text-body;
+		font-size: 1.125rem;
+		
+	}
+	li.image-search__category > ul {
+
+		background-color: $blue_light;
+		display: flex;
+		flex-direction: row;
+		height: 13rem;
+		min-height: 13rem;
+		max-height: 90vh;
+		padding: .5rem 4.25rem 1rem 4.25rem;
+		position: fixed;
+		top: $imagesearchnav-h;
+		left: 0;
+		width: 100vw;
+		z-index: $subnav-z;
+				display: none;
+	}
+	li.image-search__category > ul > li {
+	/*	outline: 2px solid green;*/
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+		margin-right: 1rem;
+	}
+	li.image-search__category > ul > li:last-of-type {
+		margin-left: 1rem;
+		margin-right: 0;
+	}
+	.subcategory__label {
+
+		border-bottom: 1px solid $text_body;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		height: 2rem;
+		width: 100%;
+	}
+	ul.subcategory__termslist {
+		height: 100%;
+		padding: 1rem 0;
+		/*background-color: pink;*/
+	}
+	ul.subcategory__termslist li {
+		display: block;
+		padding: .75rem 0;
+	}
+
+}
+.image-search__breadcrumbs {
+			/*outline: 5px solid pink;*/
+/*	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 3rem;
+	min-height: 3rem;
+	max-height: 5rem;*/
+	margin-top: $imagesearchnav-h;
+	.breadcrumbs__selection {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 3rem;
+	}
+	.selection__label {
+		font-size: .75rem;
+		text-align: right;
+		text-transform: uppercase;
+	}
+}
+.image-search__hero {
+	/*outline: 5px solid yellow;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 12rem;
+	position: relative;
+	width: 100%;
+	.hero__bkg {
+		color: $gray_medium-light;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $display-font;
+		font-size: 12rem;
+		height: 12rem;
+		margin-top: -1rem;
+		position: absolute;
+		text-transform: lowercase;
+		vertical-align: top;
+	}
+	h1.hero__heading {
+		color: $text_body;
+		font-family: $body-font;
+		font-size: 2rem;
+		font-weight: 600;
+		position: absolute;
+	}
+}
+.image-search__results-viz {
+	/*outline: 5px solid green;*/
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 3rem;
+	.results-viz__label {
+		font-size: .75rem;
+		text-align: right;
+		text-transform: uppercase;
+	}
+	ol.results-viz__items {
+
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-grow: 1;
+
+	}
+	ol li {
+		background-color: $gray_medium-light;
+		height: .875rem;
+		width: 1.375rem;
+		margin: 0 .125rem;
+
+	}
+}
+.image-results__container {
+	display: flex;
+	flex-direction: row;
+	/*outline: 5px solid blue;*/
+	padding: 2rem 3rem;
+	.image-results__item {
+		/*outline: 5px solid orange;*/
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		flex-basis: 20%;
+		margin: 1rem;
+	}
+	.image-results__image {
+		height: 180px;
+		margin-bottom: 1rem;
+		object-fit: cover;
+		width: 190px;
+	}
+	.image-results__image.image--active {
+		filter: brightness(100%);
+	}
+	.image-results__image.image--inactive {
+		filter: brightness(35%);
+	}
+	.image-results__details {
+		height: 4rem;
+		/*outline: 5px solid blue;*/
+		width: 190px;
+	}
+	.image-results__label {
+		flex-basis: 100%;
+		margin-bottom: 1rem;
+	}
+	.image-results__button-row {
+		display: flex;
+		flex-basis: 100%;
+		align-items: center;
+		justify-content: space-between;
+	}
+	button {
+		background-color: $yellow;
+		color: $white;
+		flex: 1 1 auto;
+		height: 1.75rem;
+	}
+	button:hover {
+		background-color: $yellow_bright;
+		color: $text-body;
+		transition: background-color .2s;
+	}
+}

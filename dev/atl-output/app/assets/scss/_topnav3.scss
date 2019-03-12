@@ -51,7 +51,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 		margin-bottom: 0;
 	}
 }
-._topnav[data-nav='images'] {
+._topnav[data-nav='image-search'] {
 	.topnav__content ul li:nth-child(3) a {
 		border-bottom: 6px solid $red;
 		height: calc(3.125rem - 6px);
@@ -358,7 +358,7 @@ header[data-page-type='other'] {
 	/* End Animation */
 	._topnav[data-nav='digital edition'] .topnav__content ul li:nth-child(1), 
 	._topnav[data-nav='essay'] .topnav__content ul li:nth-child(2), 
-	._topnav[data-nav='images'] .topnav__content ul li:nth-child(3) {
+	._topnav[data-nav='image-search'] .topnav__content ul li:nth-child(3) {
 		a {
 			border-bottom: none;
 			color: $gray_medium;
