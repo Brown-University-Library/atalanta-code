@@ -8,11 +8,25 @@ $(function () {
 	var imageCategory5 = 'catlist__people';
 	var imageCategory6 = 'catlist__things';
 	var imageCategory7 = 'catlist__traits';
+	var resultsTermsTrigger = '.image-results__button-row button:nth-child(1)';
+	var resultsTermsContainer = '.image-results__all-terms';
+	var resultsTermsHidden = 'all-terms--inactive';
+	var resultsTermsRevealed = 'all-terms--active';
 
 /* EVENTS */
 	$(imageCategoryTrigger).click(function() {
 		var that = this;
 		checkCategoryState(that);
+	});
+	$(resultsTermsTrigger).click(function() {
+		// console.log("I CLICKED THE TERMS BUTTON");
+		// console.log(resultsItemTermsTrigger);
+		var that = this;
+		var currentItem = $(that).parent().parent().parent();
+		// console.log(currentItem);
+		var currentItemTerms = currentItem.find(resultsTermsContainer);
+		console.log(currentItemTerms);
+		$(currentItemTerms).addClass(resultsTermsRevealed);
 	});
 /* FUNCTIONS */
 	function checkCategoryState(selectedCategory) {
@@ -48,8 +62,15 @@ $(function () {
 			console.log("NO CATEGORY IS SELECTED");
 		}
 	}
+	function resultsItemTermsClose() {
+		
+	}
+	function resultsItemTermsOpen() {
+
+	}
 	function revealSearchTerms(activeCategory) {
 		$(activeCategory).parent().siblings().removeClass('category--active');
 		$(activeCategory).parent().addClass('category--active');
 	}
+
 });

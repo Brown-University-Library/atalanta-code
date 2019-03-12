@@ -122,6 +122,9 @@ table {
   .is-active a {
     color: #222 !important; }
 
+.is-visible {
+  display: inline-block !important; }
+
 .is-hidden {
   display: none !important; }
 
@@ -190,6 +193,9 @@ table {
   background-color: #ffcd61 !important; }
   .is-active a {
     color: #222 !important; }
+
+.is-visible {
+  display: inline-block !important; }
 
 .is-hidden {
   display: none !important; }
@@ -2135,6 +2141,9 @@ a.ui-button:active,
   .is-active a {
     color: #222 !important; }
 
+.is-visible {
+  display: inline-block !important; }
+
 .is-hidden {
   display: none !important; }
 
@@ -2376,6 +2385,9 @@ main.home {
   background-color: #ffcd61 !important; }
   .is-active a {
     color: #222 !important; }
+
+.is-visible {
+  display: inline-block !important; }
 
 .is-hidden {
   display: none !important; }
@@ -3199,6 +3211,9 @@ nav.topnav__contents .topnav__contents__atalanta-back .toc__heading {
   .is-active a {
     color: #222 !important; }
 
+.is-visible {
+  display: inline-block !important; }
+
 .is-hidden {
   display: none !important; }
 
@@ -3247,6 +3262,9 @@ nav.topnav__contents .topnav__contents__atalanta-back .toc__heading {
   background-color: #ffcd61 !important; }
   .is-active a {
     color: #222 !important; }
+
+.is-visible {
+  display: inline-block !important; }
 
 .is-hidden {
   display: none !important; }
@@ -3923,6 +3941,9 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   .is-active a {
     color: #222 !important; }
 
+.is-visible {
+  display: inline-block !important; }
+
 .is-hidden {
   display: none !important; }
 
@@ -4464,6 +4485,9 @@ main.emblem-page {
   background-color: #ffcd61 !important; }
   .is-active a {
     color: #222 !important; }
+
+.is-visible {
+  display: inline-block !important; }
 
 .is-hidden {
   display: none !important; }
@@ -5954,6 +5978,9 @@ body {
   .is-active a {
     color: #222 !important; }
 
+.is-visible {
+  display: inline-block !important; }
+
 .is-hidden {
   display: none !important; }
 
@@ -6153,6 +6180,9 @@ body {
   background-color: #ffcd61 !important; }
   .is-active a {
     color: #222 !important; }
+
+.is-visible {
+  display: inline-block !important; }
 
 .is-hidden {
   display: none !important; }
@@ -6534,6 +6564,9 @@ button.lity-close {
   .is-active a {
     color: #222 !important; }
 
+.is-visible {
+  display: inline-block !important; }
+
 .is-hidden {
   display: none !important; }
 
@@ -6593,6 +6626,9 @@ button.lity-close {
   background-color: #ffcd61 !important; }
   .is-active a {
     color: #222 !important; }
+
+.is-visible {
+  display: inline-block !important; }
 
 .is-hidden {
   display: none !important; }
@@ -6884,6 +6920,9 @@ button.lity-close {
   background-color: #ffcd61 !important; }
   .is-active a {
     color: #222 !important; }
+
+.is-visible {
+  display: inline-block !important; }
 
 .is-hidden {
   display: none !important; }
@@ -7293,7 +7332,6 @@ main#image-search {
     height: 100%;
     width: 100%; }
   .image-results__container .image-results__all-terms {
-    /*		background-color: $blue_light;*/
     display: none;
     font-size: .75rem;
     line-height: 1.5;
@@ -7301,6 +7339,10 @@ main#image-search {
     max-height: 100vh;
     margin-bottom: -3rem;
     padding: .5rem; }
+  .image-results__container .all-terms--active {
+    display: inline-block; }
+  .image-results__container .all-terms--inactive {
+    display: none; }
 
 /* PRODUCTION */
 /* TESTING */
@@ -7318,6 +7360,9 @@ main#image-search {
   background-color: #ffcd61 !important; }
   .is-active a {
     color: #222 !important; }
+
+.is-visible {
+  display: inline-block !important; }
 
 .is-hidden {
   display: none !important; }

@@ -245,8 +245,7 @@ main#image-search {
 		width: 100%;
 	}
 	.image-results__all-terms {
-/*		background-color: $blue_light;*/
-display: none;
+		display: none;
 		font-size: .75rem;
 		line-height: 1.5;
 		height: 100%;
@@ -254,5 +253,11 @@ display: none;
 		margin-bottom: -3rem;
 		padding: .5rem;
 
+	}
+	.all-terms--active {
+		display: inline-block;
+	}
+	.all-terms--inactive {
+		display: none;
 	}
 }
