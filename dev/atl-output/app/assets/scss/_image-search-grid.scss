@@ -209,7 +209,8 @@ main#image-search {
 		}
 	}
 	.image-results__details {
-		height: 4rem;
+		min-height: 4rem;
+		max-height: 20rem;
 		/*outline: 5px solid blue;*/
 		width: 190px;
 	}
@@ -234,5 +235,24 @@ main#image-search {
 		background-color: $yellow_bright;
 		color: $text-body;
 		transition: background-color .2s;
+	}
+	button a {
+		color: $white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 100%;
+	}
+	.image-results__all-terms {
+/*		background-color: $blue_light;*/
+display: none;
+		font-size: .75rem;
+		line-height: 1.5;
+		height: 100%;
+		max-height: 100vh;
+		margin-bottom: -3rem;
+		padding: .5rem;
+
 	}
 }
