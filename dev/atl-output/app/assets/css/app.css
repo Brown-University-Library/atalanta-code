@@ -7300,22 +7300,10 @@ main#image-search {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
-  .image-results__container button {
-    background-color: #ffae00;
-    color: #fff;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+    justify-content: space-between;
     height: 1.75rem; }
-  .image-results__container button:hover {
-    background-color: #ffcd61;
-    color: #333;
-    -webkit-transition: background-color .2s;
-    -o-transition: background-color .2s;
-    transition: background-color .2s; }
-  .image-results__container button a {
+  .image-results__container .image-results__button {
+    background-color: #ffae00;
     color: #fff;
     display: -webkit-box;
     display: -webkit-flex;
@@ -7329,8 +7317,38 @@ main#image-search {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
+    font-size: .625rem;
     height: 100%;
-    width: 100%; }
+    letter-spacing: normal;
+    line-height: normal;
+    text-transform: uppercase; }
+    .image-results__container .image-results__button span.label {
+      display: inline-block; }
+    .image-results__container .image-results__button span.icon {
+      display: none; }
+  .image-results__container .image-results__button:hover,
+  .image-results__container .image-results__button:active {
+    background-color: #ffcd61;
+    color: #333;
+    -webkit-transition: background-color .2s;
+    -o-transition: background-color .2s;
+    transition: background-color .2s; }
+  .image-results__container .image-results__button--open {
+    background-color: #ffcd61; }
+    .image-results__container .image-results__button--open span.label {
+      margin-left: -2px; }
+    .image-results__container .image-results__button--open span.icon {
+      margin-left: 5px;
+      margin-right: -3px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
   .image-results__container .image-results__all-terms {
     display: none;
     font-size: .75rem;

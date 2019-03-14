@@ -1,14 +1,9 @@
 $(function () {
 /* VARIABLES */
 	var imageCategoryTrigger = '.image-search__category > a';
-	var imageCategory1 = 'catlist__actions';
-	var imageCategory2 = 'catlist__architecture';
-	var imageCategory3 = 'catlist__creatures';
-	var imageCategory4 = 'catlist__nature';
-	var imageCategory5 = 'catlist__people';
-	var imageCategory6 = 'catlist__things';
-	var imageCategory7 = 'catlist__traits';
+	var imageCategoryActive = 'category--active';
 	var resultsTermsTrigger = '.image-results__button-row button:nth-child(1)';
+	var resultsTermsEscapeX = 'image-results__button--open' 
 	var resultsTermsContainer = '.image-results__all-terms';
 	var resultsTermsHidden = 'all-terms--inactive';
 	var resultsTermsRevealed = 'all-terms--active';
@@ -20,7 +15,7 @@ $(function () {
 	});
 	$(resultsTermsTrigger).click(function() {
 		var that = this; // store which results item terms button was clicked
-		resultsItemTermsOpen(that);
+		checkResultsItemTermsState(that);
 	});
 /* FUNCTIONS */
 	function checkCategorySelected(selectedCategory) {
@@ -28,19 +23,36 @@ $(function () {
 		// console.log(currentCategory);
 		revealSearchTerms(currentCategory);
 	}
-	function resultsItemTermsClose() {
-		
+	function checkResultsItemTermsState(resultsItemSelected) {
+		var resultsItemState = $(resultsItemSelected);
+		if ( $(resultsItemState).hasClass(resultsTermsEscapeX) ) { // if terms are open, call close
+			resultsItemTermsClose(resultsItemState);
+		}
+		else { //if terms are closed, call open
+			resultsItemTermsOpen(resultsItemState);
+		}
+	}
+	function resultsItemTermsClose(selectedResultsItem) {
+		var currentItem = $(selectedResultsItem).parent().parent().parent();
+		// console.log(currentItem);
+		var currentItemTerms = currentItem.find(resultsTermsContainer);
+		var currentItemTermsBtn = currentItem.find(resultsTermsTrigger);
+		// console.log(currentItemTerms);
+		$(currentItemTerms).removeClass(resultsTermsRevealed);
+		$(currentItemTermsBtn).removeClass(resultsTermsEscapeX);
 	}
 	function resultsItemTermsOpen(selectedResultsItem) {
 		var currentItem = $(selectedResultsItem).parent().parent().parent();
 		// console.log(currentItem);
 		var currentItemTerms = currentItem.find(resultsTermsContainer);
+		var currentItemTermsBtn = currentItem.find(resultsTermsTrigger);
 		// console.log(currentItemTerms);
 		$(currentItemTerms).addClass(resultsTermsRevealed);
+		$(currentItemTermsBtn).addClass(resultsTermsEscapeX);
 	}
 	function revealSearchTerms(activeCategory) {
-		$(activeCategory).siblings().removeClass('category--active'); // hide the last active category
-		$(activeCategory).addClass('category--active'); // reveal the current selected category
+		$(activeCategory).siblings().removeClass(imageCategoryActive); // hide the last active category
+		$(activeCategory).addClass(imageCategoryActive); // reveal the current selected category
 	}
 
 });
