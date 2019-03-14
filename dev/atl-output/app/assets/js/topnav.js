@@ -49,6 +49,7 @@ $(function () {
 		}
 		event.preventDefault();
 	});
+
 	/* X button to close search modal */
 	$(xCloseBtnSVG).click(function(e) {
 		e.stopPropagation();
@@ -57,12 +58,14 @@ $(function () {
 	$(xCloseBtn).click(function() {
 		searchModalClose();
 	});
+
 	/* close search modal on ESC key */
 	$(document).keydown(function(event) {
 		if(event.keyCode == 27) {
 			searchModalClose();
 		}
 	});
+	
 	/* submit on enter */
 	/* https://stackoverflow.com/questions/10905345/pressing-enter-on-a-input-type-text-how */
 	$(searchQueryInput).bind("keypress", {}, keypressInBox);
@@ -76,33 +79,6 @@ $(function () {
 	};
 
 /* FUNCTIONS */
-	/* prevent body scroll behind modal on iOS */
-	/* https://codepen.io/jerrylow/pen/yJeyoG */
-	function bodyLock() {
-		if(window.pageYOffset) {
-			scrollTop = window.pageYOffset;
-			$wrapper.css({
-				top: - (scrollTop)
-			});
-		}
-		$documentElement.css({
-			height: "100%",
-			overflow: "hidden"
-		});
-	}
-	function bodyUnlock() {
-		$documentElement.css({
-			height: "",
-			overflow: ""
-		});
-		$wrapper.css({
-			top: ""
-		});
-		window.scrollTo(0, scrollTop);
-		window.setTimeout(function() {
-			scrollTop = null;
-		}, 0);
-	}
 	function hamburgerMenuClose() {
 		$(hamburgerMenuBtn).removeClass(hamburgerMenuBtnOpen);
 		$(hamburgerMenuBtn).addClass(hamburgerMenuBtnClosed);
@@ -114,6 +90,7 @@ $(function () {
 		$(hamburgerMenuBtn).addClass(hamburgerMenuBtnOpen);
 		$(hamburgerMenu).removeClass(animationMenuSlideOut);
 		$(hamburgerMenu).addClass(animationMenuSlideIn);
+		searchModalClose();
 	}
 	function searchModalClose() {
 		$(topnavSearchBtn).removeClass(searchModalOpened);
@@ -121,8 +98,7 @@ $(function () {
 		$(searchModal).attr('aria-hidden', 'true');
 		$(searchModal).addClass(animationSearchSlideOut);
 		$(searchModal).removeClass(animationSearchSlideIn);
-		$('body').removeClass('no-scroll');
-		bodyUnlock();
+		// $('body').removeClass('no-scroll');
 	}
 	function searchModalOpen() {
 		$(topnavSearchBtn).removeClass(searchModalClosed);
@@ -130,8 +106,8 @@ $(function () {
 		$(searchModal).attr('aria-hidden', 'false');
 		$(searchModal).addClass(animationSearchSlideIn);
 		$(searchModal).removeClass(animationSearchSlideOut);
-		$('body').addClass('no-scroll');
-		bodyLock();
+		$(searchQueryInput).focus();
+		// $('body').addClass('no-scroll');
 	}
 	/* clear text from search input field */
 	function searchTextClear() {
