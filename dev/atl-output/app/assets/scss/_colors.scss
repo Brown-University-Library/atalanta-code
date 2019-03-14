@@ -3,7 +3,7 @@ $black: #222;
 $black_dark: #111;
 $black_pure: #000;
 $black_transparent: hsla(0, 0%, 13%, .4);
-$blue_light: #DAE4EC;
+$blue_light:  hsla(207, 32%, 89%, 1);
 $gray: #333333;
 $gray_light: hsla(0, 0%, 95%, 1);
 $gray_medium: hsla(0, 0%, 50%, 1);
@@ -28,6 +28,7 @@ $gray-dark: #333333;
 $gray-dark_transparent: hsla(0, 0%, 20%, .97);
 /*$gray-medium: #989898;*/
 $gray-medium: #808080;
+$gray_medium-light: hsla(0, 0%, 30%, 0.1);
 $gray-light: #F1F1F1;
 $orange-red: #DC4929;
 /*$orange-red_darker: hsla(11, 72%, 42%, 1);*/

@@ -8,14 +8,88 @@
 </head>
 <body>
 <!-- GLOBAL NAVIGATION -->
-	<header>
-		<div class="_topnav"></div>
+	<header data-page-type="image-search">
+		<div class="_topnav" data-nav="image-search"></div>
 	</header>
-	<main>
-		<h1 class="sample">Image Search</h1>
+	<main id="image-search">
+		<div class="image-search__categories">
+			<ul class="image-search__catlist">
+				<li class="image-search__category catlist__actions">
+					<a href="#"></a>
+					<ul>
+						<li class="catlist__subcategory">
+							<div class="subcategory__label"></div>
+							<ul class="subcategory__termslist">
+								<li>
+									<span class="image-term"></span>
+									<span class="image-term__number"></span>
+									<span class="image-term__icon"></span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="image-search__breadcrumbs">
+			<div class="breadcrumbs__selection">
+				<div class="selection__label">Selection</div>
+				<div class="selection__terms">
+					<!-- FIGURE THIS OUT -->
+				</div>
+			</div>
+		</div>
+		<div class="image-search__hero">
+			<div class="hero__bkg">Explore Images</div>
+			<h1 class="hero__heading">Select a category above to explore elements of the images from <cite>Atalanta fugiens</cite></h1>
+		</div>
+		<div class="image-search__results-viz">
+			<div class="results-viz__label">Results</div>
+			<ol class="results-viz__items">
+				<li>
+					<!-- FIGURE THIS OUT -->
+				</li>
+				
+			</ol>
+		</div>
+		<div class="image-search__copy-url">
+			<button class="copy-url__button">
+				<span class="copy-url__label">Copy Results URL</span>
+				<span class="copy-url__icon"></span>
+			</button>
+			<div class="copy-url__modal">
+				<!-- FIGURE THIS OUT -->
+			</div>
+		</div>
+		<div class="image-results__container">
+			<div class="image-results__item item--active" data-item-num="0">
+				<img class="image-results__image image--active" src="#" />
+				<div class="image-results__details">
+					<div class="image-results__label"></div>
+					<div class="image-results__button-row">
+						<button class="image-results__button results__button--terms">
+							<span class="label">Terms</span>
+							<span class="icon">X</span>
+						</button>
+						<a class="image-results__button results__button--edition" href="#">
+							<span class="label">Emblem</span>
+							<span class="icon"></span>
+						</a>
+						<button class="image-results__button results__button--collections">
+							<span class="label">Collection</span>
+							<span class="icon"></span>
+						</button>
+					</div>
+					<div class="image-results__all-terms"></div>
+				</div>
+			</div>
+		</div>
 	</main>
+	<div class="_collections">
+	<div class="_footer">
+<!-- JS -->
 	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
 	<script src="../assets/js/topnav.js"></script>
-<!-- JS -->
+	<script src="../assets/js/image-search.js"></script>
 </body>
 </html>

@@ -9,8 +9,8 @@
 </head>
 <body>
 <!-- GLOBAL NAVIGATION -->
-	<header>
-		<div class="_topnav">
+	<header data-page-type="image-search">
+		<div class="_topnav" data-nav="image-search">
 			<nav class="topnav" aria-label="Main">
 				<button class="topnav__hamburger--closed" aria-hidden="true" aria-label="Mobile menu"></button>
 				<ul>
@@ -21,7 +21,7 @@
 						<ul>
 							<li><a href="../atalanta-fugiens/toc_af.html">Digital Edition</a></li>
 							<li><a href="../atalanta-essays/toc_essays.html">Essays</a></li>
-							<li><a href="../search/toc_image-search.html">Images</a></li>
+							<li><a href="../search/image-search.html">Images</a></li>
 							<li><a href="../search/toc.html">Contents</a></li>
 						</ul>
 					</li>
@@ -45,11 +45,264 @@
 			</div>
 		</div>
 	</header>
-	<main>
-		<h1 class="sample">Image Search</h1>
+	<main id="image-search">
+		<div class="image-search__categories">
+			<ul class="image-search__catlist">
+				<li class="image-search__category catlist__actions">
+					<a href="#">Actions</a>
+					<ul>
+						<li class="catlist__subcategory">
+							<div class="subcategory__label">All Bodily Actions</div>
+							<ul class="subcategory__termslist">
+								<li><span class="image-term">Birthing</span><span class="image-term-number"></span></li>
+								<li><span class="image-term">Dying</span><span class="image-term-number"></span></li>
+								<li><span class="image-term">Eating</span><span class="image-term-number"></span></li>
+								<li><span class="image-term">Nursing</span><span class="image-term-number"></span></li>
+								<li><span class="image-term">Vomiting</span><span class="image-term-number"></span></li>
+							</ul>
+						</li>
+						<li class="catlist__subcategory">
+							<div class="subcategory__label">All Dynamic Actions</div>
+							<ul class="subcategory__termslist">
+								<li><span class="image-term">Attacking</span><span class="image-term-number"></span></li>
+								<li><span class="image-term">Embracing</span><span class="image-term-number"></span></li>
+								<li><span class="image-term">Fleeing</span><span class="image-term-number"></span></li>
+								<li><span class="image-term">Presenting</span><span class="image-term-number"></span></li>
+<!-- 								<li><span class="image-term">Running</span><span class="image-term-number"></span></li>
+								<li><span class="image-term">Sowing</span><span class="image-term-number"></span></li>
+								<li><span class="image-term">Tearing</span><span class="image-term-number"></span></li> -->
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="image-search__category catlist__architecture">
+					<a href="#">Architecture</a>
+				</li>
+				<li class="image-search__category catlist__creatures">
+					<a href="#">Creatures</a>
+				</li>
+				<li class="image-search__category catlist__nature">
+					<a href="#">Nature</a>
+				</li>
+				<li class="image-search__category catlist__people">
+					<a href="#">People</a>
+				</li>
+				<li class="image-search__category catlist__things">
+					<a href="#">Things</a>
+				</li>
+				<li class="image-search__category catlist__traits">
+					<a href="#">Traits</a>
+				</li>
+			</ul>
+		</div>
+		<div class="image-search__breadcrumbs">
+			<div class="breadcrumbs__selection">
+				<div class="selection__label">Selection</div>
+				<div class="selection__terms"></div>
+			</div>
+			<div class="breadcrumbs__copy-link"></div>
+		</div>
+		<div class="image-search__hero">
+			<div class="hero__bkg">Explore Images</div>
+			<h1 class="hero__heading">Select a category above to explore elements of the images from <cite>Atalanta fugiens</cite></h1>
+		</div>
+		<div class="image-search__results-viz">
+			<div class="results-viz__label">Results</div>
+			<ol class="results-viz__items">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+								<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+
+								<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</div>
+		<div class="image-results__container">
+			<div class="image-results__item item--active" data-item-num="0">
+				<img class="image-results__image image--active" src="../assets/img/emblem-images_cropped/320/emblem00.320.jpg" />
+				<div class="image-results__details">
+					<div class="image-results__label">Frontispiece</div>
+					<div class="image-results__button-row">
+						<button class="image-results__button results__button--terms">
+							<span class="label">Terms</span>
+							<span class="icon">X</span>
+						</button>
+						<a class="image-results__button results__button--edition" href="#">
+							<span class="label">Emblem</span>
+							<span class="icon"></span>
+						</a>
+						<button class="image-results__button results__button--collections">
+							<span class="label">Collection</span>
+							<span class="icon"></span>
+						</button>
+					</div>
+					<div class="image-results__all-terms">Aegle, Apple, Arethusa, Atalanta, Classical Clothing, Column, Dragon, Earth, Embracing, Female, Fence, Hercules, Hespertusa, Hippomenes, Ladon, Lion, Male, Nude, Pallas/Minerva (Athena), Pediment, Plants, Presenting, Running, Temple, Weapons</div>
+				</div>
+			</div>
+			<div class="image-results__item item--active" data-item-num="1">
+				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem01.320.jpg" />
+				<div class="image-results__details">
+					<div class="image-results__label">Emblem 1</div>
+					<div class="image-results__button-row">
+						<button class="image-results__button results__button--terms">
+							<span class="label">Terms</span>
+							<span class="icon">X</span>
+						</button>
+						<a class="image-results__button results__button--edition" href="#">
+							<span class="label">Emblem</span>
+							<span class="icon"></span>
+						</a>
+						<button class="image-results__button results__button--collections">
+							<span class="label">Collection</span>
+							<span class="icon"></span>
+						</button>
+					</div>
+					<div class="image-results__all-terms">Aegle, Apple, Arethusa, Atalanta, Classical Clothing, Column, Dragon, Earth, Embracing, Female, Fence, Hercules, Hespertusa, Hippomenes, Ladon, Lion, Male, Nude, Pallas/Minerva (Athena), Pediment, Plants, Presenting, Running, Temple, Weapons</div>
+				</div>
+			</div>
+			<div class="image-results__item item--active">
+				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem02.320.jpg" />
+				<div class="image-results__details">
+					<div class="image-results__label">Emblem 2</div>
+					<div class="image-results__button-row">
+						<button>Terms</button>
+						<button><a href="#">Emblem</a></button>
+						<button>Collection</button>
+					</div>
+				</div>
+			</div>
+			<div class="image-results__item item--active">
+				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem03.320.jpg" />
+				<div class="image-results__details">
+					<div class="image-results__label">Emblem 3</div>
+					<div class="image-results__button-row">
+						<button>Terms</button>
+						<button><a href="#">Emblem</a></button>
+						<button>Collection</button>
+					</div>
+				</div>
+			</div>
+			<div class="image-results__item item--active">
+				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem04.320.jpg" />
+				<div class="image-results__details">
+					<div class="image-results__label">Emblem 4</div>
+					<div class="image-results__button-row">
+						<button>Terms</button>
+						<button><a href="#">Emblem</a></button>
+						<button>Collection</button>
+					</div>
+				</div>
+			</div>
+			<div class="image-results__item item--active">
+				<img class="image-results__image image--active" src="../assets/img/emblem-images_cropped/320/emblem05.320.jpg" />
+				<div class="image-results__details">
+					<div class="image-results__label">Emblem 5</div>
+					<div class="image-results__button-row">
+						<button>Terms</button>
+						<button><a href="#">Emblem</a></button>
+						<button>Collection</button>
+					</div>
+				</div>
+			</div>
+			<div class="image-results__item item--active">
+				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem06.320.jpg" />
+				<div class="image-results__details">
+					<div class="image-results__label">Emblem 6</div>
+					<div class="image-results__button-row">
+						<button>Terms</button>
+						<button><a href="#">Emblem</a></button>
+						<button>Collection</button>
+					</div>
+				</div>
+			</div>
+			<div class="image-results__item item--active">
+				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem07.320.jpg" />
+				<div class="image-results__details">
+					<div class="image-results__label">Emblem 7</div>
+					<div class="image-results__button-row">
+						<button>Terms</button>
+						<button><a href="#">Emblem</a></button>
+						<button>Collection</button>
+					</div>
+				</div>
+			</div>
+			<div class="image-results__item item--active">
+				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem08.320.jpg" />
+				<div class="image-results__details">
+					<div class="image-results__label">Emblem 8</div>
+					<div class="image-results__button-row">
+						<button>Terms</button>
+						<button><a href="#">Emblem</a></button>
+						<button>Collection</button>
+					</div>
+				</div>
+			</div>
+			<div class="image-results__item item--active">
+				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem09.320.jpg" />
+				<div class="image-results__details">
+					<div class="image-results__label">Emblem 9</div>
+					<div class="image-results__button-row">
+						<button>Terms</button>
+						<button><a href="#">Emblem</a></button>
+						<button>Collection</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 	</main>
+	<div class="_collections">
+	<div class="_footer">
 	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
 	<script src="../assets/js/topnav.js"></script>
+	<script src="../assets/js/image-search.js"></script>
 <!-- JS -->
 </body>
 </html>
