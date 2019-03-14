@@ -26,19 +26,20 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     font-size:1.2em;
     z-index:999;
 }
+
+._topnav[data-nav='home'] {
+	nav {
+		display: none;
+	}
+}
 ._topnav[data-nav='digital edition'] {
 	.topnav__content ul li:nth-child(1) a {
 		border-bottom: 6px solid $red;
-		height: calc(3.125rem - 6px); /* topnav height - border bottom */
+		height: calc(3.125rem - 6px);
 	}
 	.topnav__content ul li:nth-child(1) a:hover {
 		color: $gray_medium;
 		margin-bottom: 0;
-	}
-}
-._topnav[data-nav='home'] {
-	nav {
-		display: none;
 	}
 }
 ._topnav[data-nav='essay'] {
@@ -53,6 +54,16 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 }
 ._topnav[data-nav='image-search'] {
 	.topnav__content ul li:nth-child(3) a {
+		border-bottom: 6px solid $red;
+		height: calc(3.125rem - 6px);
+	}
+	.topnav__content ul li:nth-child(3) a:hover {
+		color: $gray_medium;
+		margin-bottom: 0;
+	}
+}
+._topnav[data-nav='contents'] {
+	.topnav__content ul li:nth-child(4) a {
 		border-bottom: 6px solid $red;
 		height: calc(3.125rem - 6px);
 	}
@@ -89,10 +100,12 @@ header[data-page-type='other'] {
 		display: none;
 	}
 	> ul {
+		box-sizing: border-box;
 		display: flex;
 		align-items: center;
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: space-between;
+		padding: 0 3.5rem;
 		width: 100vw;
 	}
 	li {
@@ -151,40 +164,35 @@ header[data-page-type='other'] {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+		margin-right: -1rem;
 	}
 	li.topnav__search button {
 		color: $gray_medium;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: flex-end;
 		height: $topnav-h;
 		width: 5.5rem;
 	}
-	li.topnav__search button:hover, 
-	li.topnav__search button:focus {
+	li.topnav__search button:hover {
 		color: $red;
 		transition: .2s;
 	}
 	li.topnav__search svg {
-		transform: scale(2.5);
-		width: 2rem;
+		width: 5.5rem;
 	}
 	li.topnav__search svg .st0 {
 		stroke: $gray_medium;
 	}
-	li.topnav__search button:hover svg .st0, 
-	li.topnav__search button:focus svg .st0 {
+	li.topnav__search button:hover svg .st0 {
 		stroke: $red;
 		transition: .2s;
 	}
-	li.topnav__search span.label {
-		font-family: $display-font_secondary;
-		font-size: .75rem;
-		letter-spacing: .05em;
-		text-transform: uppercase;
+	li.topnav__search span.topnav__search-label {
+		display: none;
 	}
-	li.topnav__search a:hover span.label, 
-	li.topnav__search a:focus span.label {
+	li.topnav__search a:hover span.topnav__search-label, 
+	li.topnav__search a:focus span.topnav__search-label {
 		color: $red;
 		transition: .2s;
 	}
@@ -192,23 +200,29 @@ header[data-page-type='other'] {
 
 .search__modal {
 	background-color: $red_transparent;
+	box-sizing: border-box;
+	color: $black;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
 	font-family: $display-font_secondary;
-	height: calc(100% - 12rem);
+	height: 40vh;
 	margin: 0;
-	padding: 6rem 4rem;
+	padding: 0 4rem;
 	position: fixed;
-	width: calc(100vw - 8rem);
+	top: $topnav-h;
+	width: 100vw;
 	z-index: $searchbar-z;
 	button.x-close {
 		align-self: flex-end;
 		background-image: url("../icons/icon_X-close.svg");
+		background-repeat: no-repeat;
+		background-size: 2rem;
 		filter: invert(100%);
 		height: 3.125rem;
-		transform: scale(.7);
+		/*transform: scale(.7);*/
+		margin-top: 1rem;
 		width: 3.125rem;
 	}
 	button.x-close:hover {
@@ -222,7 +236,6 @@ header[data-page-type='other'] {
 		align-items: flex-start;
 		justify-content: center;
 		height: 5rem;
-		margin-top: 12rem;
 		width: 80%;
 	}
 	.search__bar__label, 
@@ -245,7 +258,9 @@ header[data-page-type='other'] {
 		color: $black;
 		flex: 1 0 70%;
 		font-size: 3.5rem;
-		outline: none;	
+		outline: none;
+		padding: 0 1rem;
+		margin-right: 1rem;
 	}
 	input#search__bar__field::-webkit-search-cancel-button {
 		display: none;
@@ -254,10 +269,12 @@ header[data-page-type='other'] {
 		align-self: flex-end;
 		background-color: $black;
 		border-bottom: 2px solid $black;
+		box-sizing: border-box;
 		color: $gray_light;
 		flex: 0 0 15%;
-		font-size: 1rem;
-		height: calc(3.5rem + 4px);
+		font-size: .875rem;
+		font-weight: 600;
+		height: 3.5rem;
 		letter-spacing: .05em;
 		text-transform: uppercase;
 	}
@@ -275,18 +292,19 @@ header[data-page-type='other'] {
 
 /*** Animation ***/
 .search__modal {
-	position: fixed;
-	top: -100%;
+	min-height: 0;
+	max-height: 0;
+	overflow-y: hidden;
 }
 .search__modal.search__modal--slide-in {
-	display: flex;
-	transform: translateY(100%);
-	transition: display .1s, transform .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);		
+	max-height: 100vh;
+	transition: max-height .35s ease;
 }
 .search__modal.search__modal--slide-out {
-	display: none;
-	transform: translateY(-100%);
-	transition: transform .3s linear, display .1s .4s;
+	min-height: 0;
+	max-height: 0;
+	transition: max-height .25s ease, visibility .1s ease .3s;
+	visibility: hidden;
 }
 
 
@@ -323,7 +341,7 @@ header[data-page-type='other'] {
 @media screen and (max-width: 999px) {
 	.search__modal {
 		padding: 6rem 2rem;
-		width: calc(100vw - 4rem);
+		/*width: calc(100vw - 4rem);*/
 		.search__bar {
 			justify-content: flex-start;
 			width: 100%;
@@ -454,29 +472,34 @@ header[data-page-type='other'] {
 		padding: 0;
 		width: 100vw;
 	}
-	.topnav li.topnav__search span.icon {
+	.topnav li.topnav__search span.topnav__search-icon {
 		display: none;
 	}
-	.topnav li.topnav__search span.label {
+	.topnav li.topnav__search span.topnav__search-label {
+		display: inline-block;
+		font-family: $display-font_secondary;
 		font-size: .875rem;
+		letter-spacing: .05em;
+		text-transform: uppercase;
 	}
 
 	.search__modal {
-		height: calc(100% - 8rem);
-		padding: 4rem 1rem;
-		width: calc(100vw - 2rem);
+		height: 60vh;
+		padding: 0 1rem;
+		width: 100vw;
 		button.x-close {
-			transform: scale(.5);
+			margin-right: -.8rem;
 		}
 		.search__bar {
 			flex-direction: column;
 			flex-wrap: nowrap;
 			justify-content: space-between;
-			margin-top: 4rem;
+			margin-top: 0;
 			width: 100%;
 		}
 		input#search__bar__field {
-			background-color: white;
+			background-color: $white;
+			box-sizing: border-box;
 			flex: 0 0 100%;
 			font-size: 1.5rem;
 			margin-bottom: 1rem;
