@@ -24,6 +24,6 @@ atl-output/app/assets/js/searchdocs.json
 atl-output/app/assets/js/searchindex.json
 atl-output/app/assets/js/byterm_enh_array.json
 atl-output/app/assets/js/page.pug
-atl-output/app/assets/js/vendors/lunr-languages/*
+atl-output/app/assets/js/lunr-languages/*
 
 
