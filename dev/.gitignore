@@ -23,6 +23,7 @@ js/searchfunction.js
 js/searchdocs.json
 js/searchindex.json
 js/byterm_enh_array.json
+atl-output/app/assets/js/test.json
 js/page.pug
 js/vendors/lunr-languages/*
 
