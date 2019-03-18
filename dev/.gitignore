@@ -17,14 +17,13 @@ atl-demo-site
 
 # atalanta-search #
 ###################
-js/page.js
-js/search.js
-js/searchfunction.js
-js/searchdocs.json
-js/searchindex.json
-js/byterm_enh_array.json
-atl-output/app/assets/js/test.json
-js/page.pug
-js/vendors/lunr-languages/*
+atl-output/app/assets/js/page.js
+atl-output/app/assets/js/search.js
+atl-output/app/assets/js/searchfunction.js
+atl-output/app/assets/js/searchdocs.json
+atl-output/app/assets/js/searchindex.json
+atl-output/app/assets/js/byterm_enh_array.json
+atl-output/app/assets/js/page.pug
+atl-output/app/assets/js/vendors/lunr-languages/*
 
 
