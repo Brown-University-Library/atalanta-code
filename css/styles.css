@@ -3236,6 +3236,12 @@ nav.topnav__contents .topnav__contents__atalanta-back .toc__heading {
   100% {
     opacity: 1; } }
 
+main#search-results {
+  line-height: 1.5;
+  padding: 5rem 2rem; }
+  main#search-results .hidden {
+    display: none; }
+
 /*** BREAKPOINTS ***/
 /* small  -  mobile */
 /* medium  -  tablet */
