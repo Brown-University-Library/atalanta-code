@@ -6,10 +6,6 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<title>Furnace and Fugue: Search Results</title>
-		<!-- Bootstrap core CSS -->
-    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    	<!-- jQuery UI CSS -->
-    	<link rel="stylesheet" href="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.min.css">
 		<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" />
 	</head>
 	<body>
@@ -17,8 +13,9 @@
 		<header data-page-type="search">
 			<div class="_topnav" data-nav="search"></div>
 		</header>
-		<main class="container">
-			<h1 class="sample">Search Results Page</h1>
+		<main id="search-results" class="container">
+			<h1 class="sample">Search Results</h1>
+			<p class="lead"></p>
 			<div id="results">
 				<div id="keywords" class="hidden">
 	                <h2>Keywords</h2>
@@ -37,27 +34,15 @@
 		<div class="_collections"></div>
 		<div class="_footer"></div>
 	<!-- JS -->
-	<!-- Placed at the end of the document so the pages load faster -->
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-	    <script src="jquery-ui.min.js"></script>
-	    <script src="page.js"></script>
+	    <script src="../assets/js/page.js"></script>
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.5/lunr.min.js"></script>
-	    <script src="/lunr-languages/lunr.stemmer.support.js"></script>
-	    <script src="/lunr-languages/lunr.multi.js"></script>
-	    <script src="/lunr-languages/lunr.de.js"></script>
-	    <script src="search.js"></script>
-	    <script src="searchfunction.js"></script>
-	<!-- JS from atalanta-output -->
-		<!-- <script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script> -->
-		<!-- <script src="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.min.js"></script> -->
-		<!-- <script src="../assets/js/page.js"></script> -->
-		<!-- <script src="../assets/js/vendors/lunr-languages/lunr.stemmer.support.js"></script> -->
-		<!-- <script src="../assets/js/vendors/lunr-languages/lunr.multi.js"></script> -->
-		<!-- <script src="../assets/js/vendors/lunr-languages/lunr.de.js"></script> -->
-		<!-- <script src="../assets/js/search.js"></script> -->
-		<!-- <script src="../assets/js/searchfunction.js"></script> -->
+	    <script src="../assets/js/lunr-languages/lunr.stemmer.support.js"></script>
+	    <script src="../assets/js/lunr-languages/lunr.multi.js"></script>
+	    <script src="../assets/js/lunr-languages/lunr.de.js"></script>
+	    <script src="../assets/js/search.js"></script>
+	    <script src="../assets/js/searchfunction.js"></script>
 		<script src="../assets/js/topnav.js"></script>
 	</body>
 </html>
