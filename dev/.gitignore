@@ -20,10 +20,10 @@ atl-demo-site
 atl-output/app/assets/js/page.js
 atl-output/app/assets/js/search.js
 atl-output/app/assets/js/searchfunction.js
-atl-output/app/assets/js/searchdocs.json
-atl-output/app/assets/js/searchindex.json
-atl-output/app/assets/js/byterm_enh_array.json
 atl-output/app/assets/js/page.pug
 atl-output/app/assets/js/lunr-languages/*
+atl-output/app/search/searchindex.json
+atl-output/app/search/searchdocs.json
+atl-output/app/search/byterm_enh_array.json
 
 
