@@ -200,7 +200,7 @@ main#image-search {
 		text-align: right;
 		text-transform: uppercase;
 	}
-	ol.results-viz__items {
+	ul.results-viz__items {
 
 		display: flex;
 		align-items: center;
@@ -208,7 +208,7 @@ main#image-search {
 		flex-grow: 1;
 
 	}
-	ol li {
+	ul > li {
 		background-color: $gray_medium-light;
 		height: .875rem;
 		width: 1.375rem;

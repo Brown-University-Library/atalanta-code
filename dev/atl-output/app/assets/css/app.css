@@ -7220,7 +7220,7 @@ main#image-search {
     font-size: .75rem;
     text-align: right;
     text-transform: uppercase; }
-  .image-search__results-viz ol.results-viz__items {
+  .image-search__results-viz ul.results-viz__items {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -7237,7 +7237,7 @@ main#image-search {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1; }
-  .image-search__results-viz ol li {
+  .image-search__results-viz ul > li {
     background-color: rgba(77, 77, 77, 0.1);
     height: .875rem;
     width: 1.375rem;
