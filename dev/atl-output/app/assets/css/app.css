@@ -234,6 +234,9 @@ body {
 header {
   margin-top: 0; }
 
+main {
+  line-height: 1.5; }
+
 h1 {
   font-size: 3rem;
   font-weight: 600;
@@ -6952,6 +6955,7 @@ button.lity-close {
 /*$orange-red_darker: hsla(11, 72%, 42%, 1);*/
 main#image-search {
   height: 100vh;
+  margin-top: 3.125rem;
   padding: 0 1rem;
   width: calc(100vw - 2rem);
   /*	background-color: blue;*/ }
