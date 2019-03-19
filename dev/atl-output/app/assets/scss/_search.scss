@@ -2,6 +2,22 @@
 @import 'utilities';
 
 
+main#search-results {
+	line-height: 1.5;
+	padding: 5rem 2rem;
+	.hidden {
+		display: none;
+	}
+	#keywords {
+
+	}
+	#emblems {
+
+	}
+	#scholarship {
+
+	}
+}
 
 /*** BREAKPOINTS ***/
 /* small  -  mobile */

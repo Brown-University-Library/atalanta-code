@@ -66,17 +66,11 @@ $(function () {
 		}
 	});
 	
-	/* submit on enter */
-	/* https://stackoverflow.com/questions/10905345/pressing-enter-on-a-input-type-text-how */
-	$(searchQueryInput).bind("keypress", {}, keypressInBox);
-	function keypressInBox(event) {
-		var code = (event.keyCode ? event.keyCode : event.which);
-		if (code  == 13) {
-			event.preventDefault();
-			$(searchQueryInput).submit();
-			updateURLwithSearchQuery();
-		}
-	};
+	/* submit on enter key */
+	$('#ataSearch').submit(function(event){
+		searchModalClose();
+		event.preventDefault();
+	});
 
 /* FUNCTIONS */
 	function hamburgerMenuClose() {
@@ -113,9 +107,9 @@ $(function () {
 	function searchTextClear() {
 		$(searchQueryInput).val('');
 	}
-	function updateURLwithSearchQuery() {
-		var searchInput = $(searchQueryInput).val();
-		var searchQueryURL =  searchURL + searchInput; 
-		window.open(searchQueryURL, '_self');
-	}
+	// function updateURLwithSearchQuery() {
+	// 	var searchInput = $(searchQueryInput).val();
+	// 	var searchQueryURL =  searchURL + searchInput; 
+	// 	window.open(searchQueryURL, '_self');
+	// }
 });
