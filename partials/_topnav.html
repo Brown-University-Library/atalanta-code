@@ -1,5 +1,5 @@
 <nav class="topnav" aria-label="Main">
-	<button aria-hidden="true" class="topnav__hamburger--closed"></button>
+	<button class="topnav__hamburger--closed" aria-hidden="true" aria-label="Mobile menu"></button>
 	<ul>
 		<li class="topnav__logo">
 			<a aria-label="Return to Furnace and Fugue home" href="../index.html"></a>
@@ -8,7 +8,7 @@
 			<ul>
 				<li><a href="../atalanta-fugiens/toc_af.html">Digital Edition</a></li>
 				<li><a href="../atalanta-essays/toc_essays.html">Essays</a></li>
-				<li><a href="../search/toc_image-search.html">Images</a></li>
+				<li><a href="../search/image-search.html">Images</a></li>
 				<li><a href="../search/toc.html">Contents</a></li>
 			</ul>
 		</li>
@@ -24,9 +24,9 @@
 </nav>
 <div class="search__modal" aria-hidden="true">
 	<button class="x-close" aria-label="Close search modal"></button>
-	<form id="ataSearch" action="../search/search.html" method="GET" class="search__bar">
-		<label class="label search__bar__label" for="search__bar__field">Enter your search below</label>
-		<input type="search" id="search__bar__field" name="q" aria-label="Search the digital edition, scholarly essays or emblem images" required>
-		<button class="submit" type="submit">Search</button>
-	</form>
+    <form id="ataSearch" class="search__bar">
+        <label class="label search__bar__label" for="search__bar__field">Enter your search below</label>
+        <input type="text" id="search__bar__field" aria-label="Search the digital edition, scholarly essays or emblem images">
+        <button class="submit" type="submit">Search</button>
+    </form>
 </div>
