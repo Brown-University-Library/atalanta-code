@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function() {
 /* VARIABLES */
 	// var mustache = require("mustache");
 	// var html = mustache.to_html(imageItemTemplate, imageItem);
@@ -23,15 +23,15 @@ $(function () {
 
 /* EVENTS */
 	// $(imageResultsContainer).html(html);
-	$(imageCategoryTrigger).click(function() {
+	$('body').on('click', imageCategoryTrigger, function() {
 		var that = this; // store which category link was clicked
 		checkCategorySelected(that);
 	});
-	$(imageTermTrigger).click(function() {
+	$('body').on('click', imageTermTrigger, function() {
 		var that = this; // store which term was clicked
 		checkTermSelected(that);
 	})
-	$(resultsTermsTrigger).click(function() {
+	$('body').on('click', resultsTermsTrigger, function() {
 		var that = this; // store which results item terms button was clicked
 		checkResultsItemTermsState(that);
 	});
