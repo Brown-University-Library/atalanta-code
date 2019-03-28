@@ -3438,6 +3438,18 @@ main#search-results {
       width: 85vw; }
       main#search-results h4 {
         overflow-wrap: break-word; } }
+  /* large  -  desktop */
+  @media screen and (min-width: 1500px) and (max-width: 1799px) {
+    main#search-results {
+      width: 50vw; } }
+  /* xl  -  desktop */
+  @media screen and (min-width: 1800px) and (max-width: 2800px) {
+    main#search-results {
+      width: 35vw; } }
+  /* xxl */
+  @media screen and (min-width: 2801px) {
+    main#search-results {
+      width: 25vw; } }
   /*** SPECIFIC BREAKPOINTS ***/
   @media screen and (min-width: 601px) and (max-width: 700px) {
     main#search-results h2 {
@@ -3461,19 +3473,16 @@ main#search-results {
       width: 70vw; } }
   @media screen and (min-width: 1231px) and (max-width: 1350px) {
     main#search-results {
-      width: 65vw; } } }
+      width: 65vw; } }
+  @media screen and (min-width: 1800px) and (max-width: 1999px) {
+    main#search-results {
+      width: 45vw; } } }
 
 /*** BREAKPOINTS ***/
 /* small  -  mobile */
 /* medium  -  tablet */
 /* large  -  desktop */
-@media screen and (min-width: 1500px) and (max-width: 1999px) {
-  main#search-results {
-    width: 95vw;
-    margin-left: auto;
-    margin-right: auto; } }
-
-/* extra-large */
+/* xl  -  desktop */
 /* xxl */
 /* PRODUCTION */
 /* TESTING */
