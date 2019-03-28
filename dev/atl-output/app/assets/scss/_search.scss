@@ -35,11 +35,6 @@ main#search-results {
 		padding-left: 1rem;
 		width: 100%;
 	}
-	.results__item {
-		background-color: $blue_light;
-		margin-top: 1rem;
-		padding: .5rem 1rem;
-	}
 	h3 {
 		/*outline: 1px solid orange;*/
 		display: inline-block;
@@ -57,16 +52,6 @@ main#search-results {
 		color: $red;
 		transition: .2s;
 	}
-	.results__num {
-		box-sizing: border-box;
-		color: $text_body;
-		display: inline-block;
-		font-size: 1.125rem;
-		font-style: oblique;
-		margin-bottom: 1.5rem;
-		vertical-align: baseline;
-		width: 70%;
-	}
 	h4 {
 		/*outline: 5px solid red;*/
 		box-sizing: border-box;
@@ -80,6 +65,69 @@ main#search-results {
 	h4 span {
 		font-weight: 500;
 		font-style: oblique;
+	}
+	.results__item {
+		background-color: $blue_light;
+		box-sizing: border-box;
+		margin-top: 1rem;
+		padding: .5rem;
+		width: 100%;
+	}
+	.results__item--image-terms {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.results__item--image-terms h3 {
+		background-color: $gray_medium;
+		height: 10rem;
+		margin: .5rem;
+		width: 10rem;
+	}
+	.results__item--image-terms a {
+		box-sizing: border-box;
+		color: $white_transparent;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex-direction: column;
+		font-size: .875rem;
+		font-weight: 400;
+		height: 100%;
+		line-height: 1.2;
+		padding: 1rem;
+		text-align: center;
+		width: 100%;
+	}
+	.results__item--image-terms h3 a:hover {
+		border-bottom: 5px solid transparent;
+		background-color: $red;
+		color: $white_transparent;
+		transition: .2s;
+
+
+	}
+	.results__item--image-terms span:nth-of-type(1) {
+		margin-bottom: .5rem;
+	}
+	.results__item--image-terms span:nth-of-type(2) {
+		color: $white;
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin-bottom: 2.5rem;
+		hyphens: auto;
+	}
+	.results__item--image-terms span:nth-of-type(3) {
+
+	}
+	.results__num {
+		box-sizing: border-box;
+		color: $text_body;
+		display: inline-block;
+		font-size: 1.125rem;
+		font-style: oblique;
+		margin-bottom: 1.5rem;
+		vertical-align: baseline;
+		width: 70%;
 	}
 	.results__item ul {
 		/*outline: 5px solid pink;*/
