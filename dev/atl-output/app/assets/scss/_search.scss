@@ -1,11 +1,17 @@
 @import 'colors';
 @import 'utilities';
 
+
+
+
 main#search-results {
 	/*outline: 5px solid pink;*/
 	line-height: 1.5;
 	margin-top: $topnav-h;
-	padding: 3rem 18rem;
+	padding: 3rem 0;
+	width: 60vw;
+	margin-left: auto;
+	margin-right: auto;
 	.hidden {
 		display: none;
 	}
@@ -14,7 +20,7 @@ main#search-results {
 		color: $gray_medium;
 		font-size: 2.25rem;
 		font-weight: 600;
-		padding: 0 0 2rem 1rem;
+		padding: 0 3rem 2rem 3rem;
 	}
 	.results {
 		/*outline: 5px solid purple;*/
@@ -32,7 +38,7 @@ main#search-results {
 		justify-content: flex-start;
 		font-size: 1.5rem;
 		height: 3rem;
-		padding-left: 1rem;
+		padding: 0 3rem;
 		width: 100%;
 	}
 	h3 {
@@ -41,7 +47,7 @@ main#search-results {
 		font-size: 1.325rem;
 		font-weight: 600;
 		margin-bottom: 1.5rem;
-		width: 20%;
+		width: 25%;
 	}
 	h3 a {
 		border-bottom: 5px solid $gray_medium;
@@ -60,7 +66,7 @@ main#search-results {
 		font-size: 1rem;
 		font-weight: 600;
 		vertical-align: top;
-		width: 20%;
+		width: 25%;
 	}
 	h4 span {
 		font-weight: 500;
@@ -70,7 +76,7 @@ main#search-results {
 		background-color: $blue_light;
 		box-sizing: border-box;
 		margin-top: 1rem;
-		padding: .5rem;
+		padding: 2rem 3rem;
 		width: 100%;
 	}
 	.results__item--image-terms {
@@ -136,7 +142,7 @@ main#search-results {
 		display: inline-block;
 		font-size: 1rem;
 		margin-bottom: 1.5rem;
-		width: 79%;
+		width: 74%;
 	}
 	.results__item li {
 		font-size: 1rem;
@@ -148,21 +154,134 @@ main#search-results {
 		font-weight: 600;
 	}
 }
+@supports not (display: grid) {
+	main#search-results {
+		width: 60vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media screen and (min-width: 320px) and (max-width: 767px) {
+		main#search-results	{
+			width: 100vw;
+			padding: 1.5rem 0;
+			h2 {
+				padding: 0 1.5rem;
+			}
+			h3, 
+			.results__num, 
+			h4, 
+			.results__item ul {
+				margin-bottom: 1rem;
+				width: 100%;
+			}
+			h4 {
+				border-bottom: 1px solid $text_body;
+			}
+			.lead {
+				padding: 0 1.5rem 2rem 1.5rem;
+			}
+			.results__item {
+				padding: 2rem 1.5rem;
+			}
+			.results__item--image-terms {
+				justify-content: center;
+			}
+		}
+	}
+	@media screen and (min-width: 601px) and (max-width: 700px) {
+		main#search-results	{
+			h2 {
+				padding: 0 4rem;
+			}
+			.lead {
+				text-align: center;
+			}
+			.results__item {
+				padding: 2rem 4rem;
+			}
+		}
+	}
+	@media screen and (min-width: 701px) and (max-width: 767px) {
+		main#search-results	{
+			h2 {
+				padding: 0 6rem;
+			}
+			.lead {
+				text-align: center;
+			}
+			.results__item {
+				padding: 2rem 6rem;
+			}
+		}
+	}
+}
+
+/*** SPECIFIC BREAKPOINTS ***/
+@media screen and (min-width: 1000px) and (max-width: 1150px) {
+	main#search-results	{
+		width: 80vw;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+}
+@media screen and (min-width: 1151px) and (max-width: 1230px) {
+	main#search-results	{
+		width: 70vw;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+}
+@media screen and (min-width: 1231px) and (max-width: 1350px) {
+	main#search-results	{
+		width: 65vw;
+		margin-left: auto;
+		margin-right: auto;
+	}	
+}
 
 /*** BREAKPOINTS ***/
 /* small  -  mobile */
-@media screen and (min-width: 320px) and (max-width: 767px) {
-
-}
+/*@media screen and (min-width: 320px) and (max-width: 767px) {
+	main#search-results	{
+		width: 100vw;
+		padding: 1.5rem 0;
+		h2 {
+			padding: 0 1.5rem;
+		}
+		h3, 
+		.results__num, 
+		h4, 
+		.results__item ul {
+			margin-bottom: 1rem;
+			width: 100%;
+		}
+		h4 {
+			border-bottom: 1px solid $text_body;
+		}
+		.lead {
+			padding: 0 1.5rem 2rem 1.5rem;
+		}
+		.results__item {
+			padding: 2rem 1.5rem;
+		}
+	}
+}*/
 
 /* medium  -  tablet */
 @media screen and (min-width: 768px) and (max-width: 999px) {
-	
+	main#search-results	{
+		width: 85vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
-
 /* large  -  desktop */
 @media screen and (min-width: 1500px) and (max-width: 1999px) {
-	
+	main#search-results	{
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+	}	
 }
 
 /* extra-large */
