@@ -3407,6 +3407,8 @@ main#search-results {
     width: 60vw;
     margin-left: auto;
     margin-right: auto; }
+  /*** GENERAL BREAKPOINTS ***/
+  /* small  -  mobile */
   @media screen and (min-width: 320px) and (max-width: 767px) {
     main#search-results {
       width: 100vw;
@@ -3430,6 +3432,13 @@ main#search-results {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center; } }
+  /* medium  -  tablet */
+  @media screen and (min-width: 768px) and (max-width: 999px) {
+    main#search-results {
+      width: 85vw; }
+      main#search-results h4 {
+        overflow-wrap: break-word; } }
+  /*** SPECIFIC BREAKPOINTS ***/
   @media screen and (min-width: 601px) and (max-width: 700px) {
     main#search-results h2 {
       padding: 0 4rem; }
@@ -3443,61 +3452,20 @@ main#search-results {
     main#search-results .lead {
       text-align: center; }
     main#search-results .results__item {
-      padding: 2rem 6rem; } } }
-
-/*** SPECIFIC BREAKPOINTS ***/
-@media screen and (min-width: 1000px) and (max-width: 1150px) {
-  main#search-results {
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto; } }
-
-@media screen and (min-width: 1151px) and (max-width: 1230px) {
-  main#search-results {
-    width: 70vw;
-    margin-left: auto;
-    margin-right: auto; } }
-
-@media screen and (min-width: 1231px) and (max-width: 1350px) {
-  main#search-results {
-    width: 65vw;
-    margin-left: auto;
-    margin-right: auto; } }
+      padding: 2rem 6rem; } }
+  @media screen and (min-width: 1000px) and (max-width: 1150px) {
+    main#search-results {
+      width: 80vw; } }
+  @media screen and (min-width: 1151px) and (max-width: 1230px) {
+    main#search-results {
+      width: 70vw; } }
+  @media screen and (min-width: 1231px) and (max-width: 1350px) {
+    main#search-results {
+      width: 65vw; } } }
 
 /*** BREAKPOINTS ***/
 /* small  -  mobile */
-/*@media screen and (min-width: 320px) and (max-width: 767px) {
-	main#search-results	{
-		width: 100vw;
-		padding: 1.5rem 0;
-		h2 {
-			padding: 0 1.5rem;
-		}
-		h3, 
-		.results__num, 
-		h4, 
-		.results__item ul {
-			margin-bottom: 1rem;
-			width: 100%;
-		}
-		h4 {
-			border-bottom: 1px solid $text_body;
-		}
-		.lead {
-			padding: 0 1.5rem 2rem 1.5rem;
-		}
-		.results__item {
-			padding: 2rem 1.5rem;
-		}
-	}
-}*/
 /* medium  -  tablet */
-@media screen and (min-width: 768px) and (max-width: 999px) {
-  main#search-results {
-    width: 85vw;
-    margin-left: auto;
-    margin-right: auto; } }
-
 /* large  -  desktop */
 @media screen and (min-width: 1500px) and (max-width: 1999px) {
   main#search-results {
