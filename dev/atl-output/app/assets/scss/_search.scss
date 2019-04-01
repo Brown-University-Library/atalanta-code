@@ -2,7 +2,7 @@
 @import 'utilities';
 
 main#search-results {
-	/*background-color: $blue_light;*/
+	background-color: $blue_light;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
@@ -34,18 +34,18 @@ main#search-results {
 		grid-row-start: 3;
 	}
 	.results__section {
-		background-color: $white;
-/*		background-color: $gray;*/
+/*		background-color: $white;*/
+		background-color: $gray;
 		display: grid;
-		grid-gap: 1rem;
-/*		grid-gap: .125rem;*/
+/*		grid-gap: 1rem;*/
+		grid-gap: .125rem;
 		grid-template-columns: repeat(9, 1fr);
 		grid-template-rows: auto;
 		margin-bottom: 3.25rem;
-/*		margin-right: 2px;*/
+		margin-right: 2px;
 	}
 	h2 { /* f&f section */
-		background-color: $red;
+		background-color: $gray;
 		color: $white;
 		display: flex;
 		align-items: center;
@@ -64,7 +64,7 @@ main#search-results {
 		grid-column-start: 1;
 		grid-column-end: 10;
 		padding: 2rem 3rem;
-/*		margin-right: -1px;*/
+		margin-right: -1px;
 	}
 	.results__item h3 { /* title */
 		align-self: flex-end;
@@ -75,8 +75,8 @@ main#search-results {
 		padding-bottom: .5rem;
 	}
 	.results__item h3 a {
-		border-bottom: 5px solid $gray_medium;
-		color: $gray_medium;
+		border-bottom: 5px solid $red_dark;
+		color: $red_dark;
 	}
 	.results__item h3 a:hover {
 		border-bottom: 5px solid $red;
@@ -129,7 +129,7 @@ main#search-results {
 		padding: 1rem;
 	}
 	.results__item--image-terms h3 {
-		background-color: $gray_medium;
+		background-color: $red_dark;
 		height: 10rem;
 	}
 	.results__item--image-terms a {

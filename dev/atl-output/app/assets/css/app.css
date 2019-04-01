@@ -3240,7 +3240,7 @@ nav.topnav__contents .topnav__contents__atalanta-back .toc__heading {
     opacity: 1; } }
 
 main#search-results {
-  /*background-color: $blue_light;*/
+  background-color: #DAE4EC;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
@@ -3270,18 +3270,18 @@ main#search-results {
     grid-row-start: 2;
     grid-row-start: 3; }
   main#search-results .results__section {
-    background-color: white;
-    /*		background-color: $gray;*/
+    /*		background-color: $white;*/
+    background-color: #333333;
     display: grid;
-    grid-gap: 1rem;
-    /*		grid-gap: .125rem;*/
+    /*		grid-gap: 1rem;*/
+    grid-gap: .125rem;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: auto;
     margin-bottom: 3.25rem;
-    /*		margin-right: 2px;*/ }
+    margin-right: 2px; }
   main#search-results h2 {
     /* f&f section */
-    background-color: #dc4928;
+    background-color: #333333;
     color: white;
     display: -webkit-box;
     display: -webkit-flex;
@@ -3308,7 +3308,7 @@ main#search-results {
     grid-column-start: 1;
     grid-column-end: 10;
     padding: 2rem 3rem;
-    /*		margin-right: -1px;*/ }
+    margin-right: -1px; }
   main#search-results .results__item h3 {
     /* title */
     -webkit-align-self: flex-end;
@@ -3320,8 +3320,8 @@ main#search-results {
     grid-column-end: 4;
     padding-bottom: .5rem; }
   main#search-results .results__item h3 a {
-    border-bottom: 5px solid #808080;
-    color: #808080; }
+    border-bottom: 5px solid #ba4221;
+    color: #ba4221; }
   main#search-results .results__item h3 a:hover {
     border-bottom: 5px solid #dc4928;
     color: #dc4928;
@@ -3370,7 +3370,7 @@ main#search-results {
     grid-column-end: 10;
     padding: 1rem; }
   main#search-results .results__item--image-terms h3 {
-    background-color: #808080;
+    background-color: #ba4221;
     height: 10rem; }
   main#search-results .results__item--image-terms a {
     -webkit-box-sizing: border-box;
