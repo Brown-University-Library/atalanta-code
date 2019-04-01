@@ -3368,7 +3368,8 @@ main#search-results {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     grid-column-start: 1;
     grid-column-end: 10;
-    padding: 1rem; }
+    padding: 1rem;
+    margin-right: -1px; }
   main#search-results .results__item--image-terms h3 {
     background-color: #ba4221;
     height: 10rem; }

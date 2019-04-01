@@ -127,6 +127,7 @@ main#search-results {
 		grid-column-start: 1;
 		grid-column-end: 10;
 		padding: 1rem;
+		margin-right: -1px;
 	}
 	.results__item--image-terms h3 {
 		background-color: $red_dark;
