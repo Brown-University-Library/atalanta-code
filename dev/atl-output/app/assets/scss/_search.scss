@@ -1,8 +1,8 @@
 @import 'colors';
 @import 'utilities';
 
-
 main#search-results {
+	/*background-color: $blue_light;*/
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
@@ -35,14 +35,17 @@ main#search-results {
 	}
 	.results__section {
 		background-color: $white;
+/*		background-color: $gray;*/
 		display: grid;
 		grid-gap: 1rem;
+/*		grid-gap: .125rem;*/
 		grid-template-columns: repeat(9, 1fr);
 		grid-template-rows: auto;
 		margin-bottom: 3.25rem;
+/*		margin-right: 2px;*/
 	}
 	h2 { /* f&f section */
-		background-color: $gray;
+		background-color: $red;
 		color: $white;
 		display: flex;
 		align-items: center;
@@ -61,6 +64,7 @@ main#search-results {
 		grid-column-start: 1;
 		grid-column-end: 10;
 		padding: 2rem 3rem;
+/*		margin-right: -1px;*/
 	}
 	.results__item h3 { /* title */
 		align-self: flex-end;
