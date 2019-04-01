@@ -3592,6 +3592,45 @@ main#search-results .results__item--image-terms span:nth-of-type(2) {
       grid-column-start: 5;
       grid-column-end: 9; } }
 
+/*** SPECIFIC BREAKPOINTS ***/
+@media screen and (min-width: 561px) and (max-width: 600px) {
+  main#search-results {
+    border: 5px solid pink; }
+    main#search-results .lead {
+      padding: 0 2rem 1rem 2rem; }
+    main#search-results h2 {
+      padding: 0 2rem; }
+    main#search-results .results__item {
+      padding: 1.5rem 2rem; } }
+
+@media screen and (min-width: 601px) and (max-width: 700px) {
+  main#search-results {
+    border: 5px solid black; }
+    main#search-results .lead {
+      padding: 0 4rem 1rem 4rem; }
+    main#search-results h2 {
+      padding: 0 4rem; }
+    main#search-results .results__item {
+      padding: 2rem 4rem; } }
+
+@media screen and (min-width: 701px) and (max-width: 767px) {
+  main#search-results {
+    border: 5px solid yellow; }
+    main#search-results .lead {
+      padding: 0 2rem 2rem 2rem; }
+    main#search-results h3 {
+      grid-column-start: 1;
+      grid-column-end: 4; }
+    main#search-results h4 {
+      border-bottom: none;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      padding-bottom: 0; }
+    main#search-results .results__num,
+    main#search-results .results__item ul {
+      grid-column-start: 4;
+      grid-column-end: 13; } }
+
 /* PRODUCTION */
 /* TESTING */
 /* DEVELOPMENT */
