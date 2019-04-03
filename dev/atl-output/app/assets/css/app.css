@@ -3258,7 +3258,7 @@ nav.topnav__contents .topnav__contents__atalanta-back .toc__heading {
     grid-column-start: 3;
     grid-column-end: 11;
     grid-row-start: 1;
-    grid-row-start: 2;
+    grid-row-end: 2;
     color: #333333;
     /*font-family: display-font;*/
     font-size: 2.25rem;
@@ -3271,7 +3271,7 @@ nav.topnav__contents .topnav__contents__atalanta-back .toc__heading {
     grid-column-start: 3;
     grid-column-end: 11;
     grid-row-start: 2;
-    grid-row-start: 3; }
+    grid-row-end: 3; }
   .search-results .results__section {
     /*		background-color: $white;*/
     background-color: #4d4d4d;
@@ -3653,16 +3653,16 @@ nav.topnav__contents .topnav__contents__atalanta-back .toc__heading {
     .search-results .results__item {
       padding: 2rem 6rem; } }
   @media screen and (min-width: 1000px) and (max-width: 1150px) {
-    main#search-results {
+    .search-results {
       width: 80vw; } }
   @media screen and (min-width: 1151px) and (max-width: 1230px) {
-    main#search-results {
+    .search-results {
       width: 70vw; } }
   @media screen and (min-width: 1231px) and (max-width: 1350px) {
-    main#search-results {
+    .search-results {
       width: 65vw; } }
   @media screen and (min-width: 1800px) and (max-width: 1999px) {
-    main#search-results {
+    .search-results {
       width: 45vw; } } }
 
 /* PRODUCTION */
