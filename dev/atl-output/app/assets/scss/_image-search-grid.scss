@@ -154,6 +154,7 @@ main#image-search {
 	padding: .5rem 0;
 	position: fixed;
 	width: 100%;
+
 	z-index: 1;
 	.breadcrumbs__selected-filters {
 		display: flex;
@@ -229,16 +230,18 @@ main#image-search {
 .image-search__results-viz.stickyyy {
 	position: fixed;
 	top: 160px;
-	z-index: 100000;
+	
+	z-index: 1;
 }
 .image-search__results-viz {
 	/*outline: 5px solid green;*/
 	background-color: $white;
 	color: $gray_medium;
-/*	display: flex;
+	display: flex;
 	align-items: center;
-	justify-content: space-between;*/
-	height: 3rem;
+	justify-content: flex-start;
+	/*height: 3rem;*/
+	width: 100%;
 	.results-viz__label {
 		/*outline: 1px solid pink;*/
 		display: inline-block;
@@ -250,16 +253,17 @@ main#image-search {
 	ul.results-viz__items {
 		display: inline-block;
 		/*outline: 1px solid orange;*/
-/*		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		flex-grow: 1;*/
+		display: flex;
+		align-items: space-around;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		width: 100%;
 	}
 	ul > li {
 		background-color: $gray_medium-light;
 		display: inline-block;
+		flex-basis: 1.5%;
 		height: 1.375rem;
-		width: 1rem;
 		margin: 0 .0625rem;
 	}
 	.tooltip {
@@ -284,20 +288,21 @@ background-color: orange;
 }
 .image-results__container {
 	display: flex;
+	justify-content: center;
 	flex-direction: row;
 	flex-wrap: wrap;
 	/*outline: 5px solid blue;*/
-	padding: 2rem 8rem;
+	padding: 2rem;
 	.image-results__item {
 		/*outline: 5px solid orange;*/
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
-		flex-basis: 20%;
-		margin-bottom: 3rem;
+		flex-basis: calc(20% - 5rem);
+		margin: 0 .5rem 3rem .5rem;
 		/*margin: 1rem;*/
-		max-width: 20%;
+		/*max-width: 20%;*/
 	}
 	.image-results__image {
 		height: 180px;
@@ -401,6 +406,12 @@ background-color: orange;
 	.image-search__hero h1.hero__heading {
 		font-size: 1rem;
 	}
+	.image-search__results-viz  {
+		background-color: orange;
+		ul > li {
+			/*width: .875rem;*/
+		}
+	}
 }
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 999px) {
@@ -410,6 +421,12 @@ background-color: orange;
 	}
 	.image-search__hero h1.hero__heading {
 		font-size: 1.25rem;
+	}
+	.image-search__results-viz  {
+		background-color: pink;
+		ul > li {
+			/*flex: 1 1 50%;*/
+		}
 	}
 }
 

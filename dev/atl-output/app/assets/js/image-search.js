@@ -15,8 +15,7 @@ $(document).ready(function() {
 	var resultsTermsContainer = '.image-results__all-terms';
 	var resultsTermsHidden = 'all-terms--inactive';
 	var resultsTermsRevealed = 'all-terms--active';
-	var activeArray = [];
-	var inactiveArray = [];
+
 
 	// var browserHeight = $(window).height(),
 	// 	elementPosition = $('#btn-shuffle').offset().top,
@@ -35,7 +34,7 @@ $(document).ready(function() {
 		console.log(that);
 		var jumpLink = $(that).attr('data-href');
 		console.log(jumpLink);
-		TweenMax.to(window, 1, {scrollTo:{y:jumpLink, offsetY:180, ease:Power2.easeOut, autoKill:false}});
+		TweenMax.to(window, 1, {scrollTo:{y:jumpLink, offsetY:180, ease:Power2.easeOut}});
 		// if (myElement >= elementTrigger) {
 		// 	console.log(elementPosition);
 		// 	console.log("I need to be sticky!!!!!");
@@ -43,21 +42,19 @@ $(document).ready(function() {
 
 		// };
 	});
-	
-	// changeLocation();
-	// TweenMax.to('.item--inactive', 1 , {x:300});
 	function makeImageArrays() {
-
-		var activeContainer = $('.container--active');
-		var children = activeContainer.children();
-		console.log(children);
+		var activeArray = [];
+		var inactiveArray = [];
+		var imageResultsWrapper = $('.image-results__wrapper');
+		var imageItems = imageResultsWrapper.children().children();
+		console.log(imageItems);
 		// children = Array.prototype.slice.call(children, 0);
-		console.log(children);
+		console.log(imageItems);
 		var thisChild;
-		console.log(activeContainer);
-		console.log(activeContainer.children().length);
-		for (var i = 0; i < children.length; i++) {
-			thisChild = children[i];
+		// console.log(activeContainer);
+		console.log(imageItems.length);
+		for (var i = 0; i < imageItems.length; i++) {
+			thisChild = imageItems[i];
 			if ($(thisChild).hasClass('item--active')) {
 				// console.log(i);
 
@@ -76,39 +73,21 @@ $(document).ready(function() {
 
 			// inactiveArray.sort(compare($(thisChild)));
 		};
+		console.log(inactiveArray.length);
+		console.log(activeArray.length);
 		console.log(inactiveArray[0].attributes.dataItemNum);
 		// activeArray.sort(compare(activeContainer.children()));
 		// inactiveArray.sort(compare);
-		setTimeout(function() { changeLocation(inactiveArray) },500); // delay start of active/inactive container transfers in DOM and animation so users have a moment to see the illuminated/darkened images in situ
+		setTimeout(function() { changeLocation(activeArray, inactiveArray) },500); // delay start of active/inactive container transfers in DOM and animation so users have a moment to see the illuminated/darkened images in situ
 	}
 
-	function compare(a, b) {
-		console.log("I am trying to sort");
-		console.log("This is A: " + a);
-		const itemNumA = a.attributes.dataItemNum;
-		// console.log(itemNumA);
-		const itemNumB = b.attributes.dataItemNum;
-		let comparison = 0;
-		if (itemNumA > itemNumB) {
-			console.log("I am comparing greater than");
-			comparison = 1;
-			
-		}
-		else if (itemNumA < itemNumB) {
-			comparison = -1;
-			console.log("I am comparing lesser than");
-		}
-		// console.log(inactiveArray);
-		console.log(comparison);
-		return comparison;
-		
-	}
+
 	/* https://codepen.io/MAW/pen/WQWJPV */
 	function getBCR(element) {
 		return element.getBoundingClientRect()
 	};
 
-	function changeLocation(moveArray) {
+	function changeLocation(moveActiveArray, moveInactiveArray) {
 		var animation = new TimelineLite();
 		var rectActive = getBCR(activeImageContainer);
 		var rectInactive =  getBCR(inactiveImageContainer);
@@ -117,7 +96,9 @@ $(document).ready(function() {
 		// console.log(activeChildLast);
 		// var inactiveChildLast = inactiveImageContainer.lastElementChild;
 		// console.log(inactiveChildLast);
-		var myInactiveArray = moveArray;
+		var myActiveArray = moveActiveArray;
+		var myInactiveArray = moveInactiveArray;
+		console.log(myActiveArray.length);
 		console.log(myInactiveArray.length);
 			for (var i = 0; i < myInactiveArray.length; i++) {
 				var oldPosition = getBCR(myInactiveArray[i]);
@@ -125,7 +106,13 @@ $(document).ready(function() {
 				var newPosition = getBCR(myInactiveArray[i]);
 				TweenMax.from(myInactiveArray[i], 0.5, {y:oldPosition.top-newPosition.top, x:oldPosition.left-newPosition.left, ease:Back.easeOut});
 			}
-			myFlash();
+			for (var i = 0; i < myActiveArray.length; i++) {
+				var oldPosition = getBCR(myActiveArray[i]);
+				activeImageContainer.appendChild(myActiveArray[i]);
+				var newPosition = getBCR(myActiveArray[i]);
+				TweenMax.from(myActiveArray[i], 0.5, {y:oldPosition.top-newPosition.top, x:oldPosition.left-newPosition.left, ease:Back.easeOut});
+			}
+			scaleOnDisplay();
 
 
 
@@ -150,9 +137,30 @@ $(document).ready(function() {
 		// TweenMax.set(inactiveImage, {x: 0, y: 0});
 	}
 
-	function myFlash() {
+	function scaleOnDisplay() {
 		var allImageItems = '.image-results__item';
 		TweenMax.from(allImageItems, 0.5, {css: {scale:.01}, delay:0.2, ease:Quad.easeinOut}); // ease out scale of all images
+	}
+		function compare(a, b) {
+		console.log("I am trying to sort");
+		console.log("This is A: " + a);
+		const itemNumA = a.attributes.dataItemNum;
+		// console.log(itemNumA);
+		const itemNumB = b.attributes.dataItemNum;
+		let comparison = 0;
+		if (itemNumA > itemNumB) {
+			console.log("I am comparing greater than");
+			comparison = 1;
+			
+		}
+		else if (itemNumA < itemNumB) {
+			comparison = -1;
+			console.log("I am comparing lesser than");
+		}
+		// console.log(inactiveArray);
+		console.log(comparison);
+		return comparison;
+		
 	}
 
 /* EVENTS */
