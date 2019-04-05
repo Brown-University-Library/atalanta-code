@@ -78,11 +78,15 @@ $(document).ready(function() {
 		return comparison;
 		
 	}
+	/* https://codepen.io/MAW/pen/WQWJPV */
+	function getBCR(element) {
+		return element.getBoundingClientRect()
+	};
 
 	function changeLocation(moveArray) {
-		var rectActive = activeImageContainer.getBoundingClientRect();
+		var rectActive = getBCR(activeImageContainer);
 		console.log(rectActive);
-		var rectInactive =  inactiveImageContainer.getBoundingClientRect();
+		var rectInactive =  getBCR(inactiveImageContainer);
 		console.log(rectInactive);
 		var activeChildLast = activeImageContainer.lastElementChild;
 		console.log(activeChildLast);
@@ -91,8 +95,11 @@ $(document).ready(function() {
 		var myMove = ('.image--inactive');
 		console.log(myMove);
 		var movedItem = moveArray[0];
-		inactiveImageContainer.appendChild(movedItem);
-		TweenMax.to(movedItem, 2, {x: 100});
+		var oldPosition = getBCR(movedItem);
+		inactiveImageContainer.appendChild(movedItem); // move image to appropriate active/inactive containers
+		var newPosition = getBCR(movedItem);
+		TweenMax.from(movedItem, .5, {y:oldPosition.top-newPosition.top, x:oldPosition.left-newPosition.left, delay:0.5, ease:Back.easeOut}); // animated movement between active/inactive containers
+		// TweenMax.to(movedItem, 2, {x: 100}); //animation
 
 
 

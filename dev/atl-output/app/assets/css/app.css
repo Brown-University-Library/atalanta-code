@@ -7750,7 +7750,8 @@ main#image-search {
     margin: 0 .125rem; }
 
 .container--inactive {
-  background-color: orange; }
+  background-color: orange;
+  height: 40vh; }
 
 .container--active {
   background-color: pink; }
