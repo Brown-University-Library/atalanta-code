@@ -15,10 +15,35 @@ $(document).ready(function() {
 	var resultsTermsContainer = '.image-results__all-terms';
 	var resultsTermsHidden = 'all-terms--inactive';
 	var resultsTermsRevealed = 'all-terms--active';
-			var activeArray = [];
-		var inactiveArray = [];
+	var activeArray = [];
+	var inactiveArray = [];
 
-	makeImageArrays();
+	// var browserHeight = $(window).height(),
+	// 	elementPosition = $('#btn-shuffle').offset().top,
+	// 	elementTrigger = elementPosition - browserHeight,
+	// 	myElement = $('.image-search__results-viz').offset().top;
+
+
+
+
+	$("#btn-shuffle").on("click", function() {
+	   makeImageArrays();
+	});
+	$('a.tooltip').on('click', function() {
+		var container = '.image-results__container';
+		var that = this;
+		console.log(that);
+		var jumpLink = $(that).attr('data-href');
+		console.log(jumpLink);
+		TweenMax.to(window, 1, {scrollTo:{y:jumpLink, offsetY:180, ease:Power2.easeOut, autoKill:false}});
+		// if (myElement >= elementTrigger) {
+		// 	console.log(elementPosition);
+		// 	console.log("I need to be sticky!!!!!");
+		// 	$('.image-search__results-viz').addClass('stickyyy');
+
+		// };
+	});
+	
 	// changeLocation();
 	// TweenMax.to('.item--inactive', 1 , {x:300});
 	function makeImageArrays() {
@@ -87,17 +112,31 @@ $(document).ready(function() {
 		var animation = new TimelineLite();
 		var rectActive = getBCR(activeImageContainer);
 		var rectInactive =  getBCR(inactiveImageContainer);
-		var allImageItems = '.image-results__item';
+		
 		// var activeChildLast = activeImageContainer.lastElementChild;
 		// console.log(activeChildLast);
 		// var inactiveChildLast = inactiveImageContainer.lastElementChild;
 		// console.log(inactiveChildLast);
-		var movedItem = moveArray[0];
-		var oldPosition = getBCR(movedItem);
-		inactiveImageContainer.appendChild(movedItem); // move image to appropriate active/inactive containers
-		var newPosition = getBCR(movedItem);
-		animation.from(movedItem, 0.5, {y:oldPosition.top-newPosition.top, x:oldPosition.left-newPosition.left, delay:0.2, ease:Back.easeOut}) // animated movement between active/inactive containers
-					.from(allImageItems, 0.5, {css: {scale:0}, delay:0.2, ease:Quad.easeinOut}); // ease out scale of all images
+		var myInactiveArray = moveArray;
+		console.log(myInactiveArray.length);
+			for (var i = 0; i < myInactiveArray.length; i++) {
+				var oldPosition = getBCR(myInactiveArray[i]);
+				inactiveImageContainer.appendChild(myInactiveArray[i]);
+				var newPosition = getBCR(myInactiveArray[i]);
+				TweenMax.from(myInactiveArray[i], 0.5, {y:oldPosition.top-newPosition.top, x:oldPosition.left-newPosition.left, ease:Back.easeOut});
+			}
+			myFlash();
+
+
+
+		// var oldPosition = getBCR(movedItem);
+		// inactiveImageContainer.appendChild(movedItem); // move image to appropriate active/inactive containers
+		// var newPosition = getBCR(movedItem);
+		// animation.from(movedItem, 0.5, {y:oldPosition.top-newPosition.top, x:oldPosition.left-newPosition.left, ease:Back.easeOut}) // animated movement between active/inactive containers
+		// 			.from(allImageItems, 0.5, {css: {scale:.01}, delay:0.2, ease:Quad.easeinOut}); // ease out scale of all images
+		
+
+
 		// if ($('div').hasClass(myMove)) {
 		// 	console.log("OK!");
 		// 	inactiveImageContainer.appendChild(inactiveImage);
@@ -109,6 +148,11 @@ $(document).ready(function() {
 		// activeContents.appendChild(activeImage);
 		// inactiveContents.appendChild(inactiveImage);
 		// TweenMax.set(inactiveImage, {x: 0, y: 0});
+	}
+
+	function myFlash() {
+		var allImageItems = '.image-results__item';
+		TweenMax.from(allImageItems, 0.5, {css: {scale:.01}, delay:0.2, ease:Quad.easeinOut}); // ease out scale of all images
 	}
 
 /* EVENTS */
