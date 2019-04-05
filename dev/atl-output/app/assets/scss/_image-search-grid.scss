@@ -273,6 +273,9 @@ main#image-search {
 	}
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
+	.image-search-filters .category__item > a {
+		font-size: .75rem;
+	}
 	.image-search__hero .hero__bkg {
 		/*color: orange;*/
 		font-size: 6.5rem;

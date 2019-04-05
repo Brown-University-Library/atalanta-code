@@ -54,7 +54,7 @@ $(document).ready(function() {
 		console.log(inactiveArray[0].attributes.dataItemNum);
 		// activeArray.sort(compare(activeContainer.children()));
 		// inactiveArray.sort(compare);
-		changeLocation(inactiveArray);
+		setTimeout(function() { changeLocation(inactiveArray) },500); // delay start of active/inactive container transfers in DOM and animation so users have a moment to see the illuminated/darkened images in situ
 	}
 
 	function compare(a, b) {
@@ -84,29 +84,20 @@ $(document).ready(function() {
 	};
 
 	function changeLocation(moveArray) {
+		var animation = new TimelineLite();
 		var rectActive = getBCR(activeImageContainer);
-		console.log(rectActive);
 		var rectInactive =  getBCR(inactiveImageContainer);
-		console.log(rectInactive);
-		var activeChildLast = activeImageContainer.lastElementChild;
-		console.log(activeChildLast);
-		var inactiveChildLast = inactiveImageContainer.lastElementChild;
-		console.log(inactiveChildLast);
-		var myMove = ('.image--inactive');
-		console.log(myMove);
+		var allImageItems = '.image-results__item';
+		// var activeChildLast = activeImageContainer.lastElementChild;
+		// console.log(activeChildLast);
+		// var inactiveChildLast = inactiveImageContainer.lastElementChild;
+		// console.log(inactiveChildLast);
 		var movedItem = moveArray[0];
 		var oldPosition = getBCR(movedItem);
 		inactiveImageContainer.appendChild(movedItem); // move image to appropriate active/inactive containers
 		var newPosition = getBCR(movedItem);
-		TweenMax.from(movedItem, .5, {y:oldPosition.top-newPosition.top, x:oldPosition.left-newPosition.left, delay:0.5, ease:Back.easeOut}); // animated movement between active/inactive containers
-		// TweenMax.to(movedItem, 2, {x: 100}); //animation
-
-
-
-
-
-
-
+		animation.from(movedItem, 0.5, {y:oldPosition.top-newPosition.top, x:oldPosition.left-newPosition.left, delay:0.2, ease:Back.easeOut}) // animated movement between active/inactive containers
+					.from(allImageItems, 0.5, {css: {scale:0}, delay:0.2, ease:Quad.easeinOut}); // ease out scale of all images
 		// if ($('div').hasClass(myMove)) {
 		// 	console.log("OK!");
 		// 	inactiveImageContainer.appendChild(inactiveImage);
