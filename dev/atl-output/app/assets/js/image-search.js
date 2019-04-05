@@ -1,25 +1,117 @@
 $(document).ready(function() {
 /* VARIABLES */
-	// var mustache = require("mustache");
-	// var html = mustache.to_html(imageItemTemplate, imageItem);
-	// var imageItem = {
-	// 	imageArrayNum: "0",
-	// 	imageSrc: "../assets/img/emblem-images_cropped/320/emblem00.320.jpg",
-	// 	imageLabel: "Frontispiece",
-	// 	emblemLink: "../atalanta-fugiens/frontispiece.html",
-	// }
-	// var imageItemTemplate = "<div class="image-results__item item--active" data-item-num={{imageArrayNum}}><img class="image-results__image image--active" src={{imageSrc}} /><div class="image-results__details"><div class="image-results__label">{{imageLabel}}</div><div class="image-results__button-row"><button class="image-results__button results__button--terms"><span class="label">Terms</span><span class="icon">X</span></button><a class="image-results__button results__button--edition" href={{emblemLink}}><span class="label">Emblem</span><span class="icon"></span></a><button class="image-results__button results__button--collections"><span class="label">Collection</span><span class="icon"></span></button></div><div class="image-results__all-terms"></div></div></div>"; 
 	var imageCategoryTrigger = '.category__item > a';
 	var imageCategoryActive = 'category--active';
 	var imageTermTrigger = '.subcategory__term-item > a';
 	var imageTermSelected = 'term--selected';
 	var allSubcategoryTermsSelected = 'all-terms--selected';
 	var imageResultsContainer = '.image-results__container';
+	var activeImageContainer = document.querySelector('.container--active');
+	var inactiveImageContainer = document.querySelector('.container--inactive');
+	var activeImage = document.querySelector('.item--active');
+	var inactiveImage = document.querySelector('.item--inactive');
 	var resultsTermsTrigger = '.image-results__button-row button:nth-child(1)';
 	var resultsTermsEscapeX = 'image-results__button--open' 
 	var resultsTermsContainer = '.image-results__all-terms';
 	var resultsTermsHidden = 'all-terms--inactive';
 	var resultsTermsRevealed = 'all-terms--active';
+			var activeArray = [];
+		var inactiveArray = [];
+
+	makeImageArrays();
+	// changeLocation();
+	// TweenMax.to('.item--inactive', 1 , {x:300});
+	function makeImageArrays() {
+
+		var activeContainer = $('.container--active');
+		var children = activeContainer.children();
+		console.log(children);
+		// children = Array.prototype.slice.call(children, 0);
+		console.log(children);
+		var thisChild;
+		console.log(activeContainer);
+		console.log(activeContainer.children().length);
+		for (var i = 0; i < children.length; i++) {
+			thisChild = children[i];
+			if ($(thisChild).hasClass('item--active')) {
+				// console.log(i);
+
+				activeArray.push(thisChild);
+				// console.log($(thisChild).attr('data-item-num'));
+				// console.log(thisChild.attributes.dataItemNum);
+				// console.log(activeArray);
+			}
+			else if ($(thisChild).hasClass('item--inactive')) {
+				// console.log(i);
+				inactiveArray.push(thisChild);
+				// console.log($(thisChild).attr('data-item-num'));
+				// console.log(inactiveArray);
+
+			}
+
+			// inactiveArray.sort(compare($(thisChild)));
+		};
+		console.log(inactiveArray[0].attributes.dataItemNum);
+		// activeArray.sort(compare(activeContainer.children()));
+		// inactiveArray.sort(compare);
+		changeLocation(inactiveArray);
+	}
+
+	function compare(a, b) {
+		console.log("I am trying to sort");
+		console.log("This is A: " + a);
+		const itemNumA = a.attributes.dataItemNum;
+		// console.log(itemNumA);
+		const itemNumB = b.attributes.dataItemNum;
+		let comparison = 0;
+		if (itemNumA > itemNumB) {
+			console.log("I am comparing greater than");
+			comparison = 1;
+			
+		}
+		else if (itemNumA < itemNumB) {
+			comparison = -1;
+			console.log("I am comparing lesser than");
+		}
+		// console.log(inactiveArray);
+		console.log(comparison);
+		return comparison;
+		
+	}
+
+	function changeLocation(moveArray) {
+		var rectActive = activeImageContainer.getBoundingClientRect();
+		console.log(rectActive);
+		var rectInactive =  inactiveImageContainer.getBoundingClientRect();
+		console.log(rectInactive);
+		var activeChildLast = activeImageContainer.lastElementChild;
+		console.log(activeChildLast);
+		var inactiveChildLast = inactiveImageContainer.lastElementChild;
+		console.log(inactiveChildLast);
+		var myMove = ('.image--inactive');
+		console.log(myMove);
+		var movedItem = moveArray[0];
+		inactiveImageContainer.appendChild(movedItem);
+		TweenMax.to(movedItem, 2, {x: 100});
+
+
+
+
+
+
+
+		// if ($('div').hasClass(myMove)) {
+		// 	console.log("OK!");
+		// 	inactiveImageContainer.appendChild(inactiveImage);
+		// 	TweenMax.to(inactiveImage, 2, {y: 10});
+		// }
+		// var activeContents = activeImageContainer.classList;
+		// console.log(activeContents);
+		// var inactiveContents = inactiveImageContainer.classList;
+		// activeContents.appendChild(activeImage);
+		// inactiveContents.appendChild(inactiveImage);
+		// TweenMax.set(inactiveImage, {x: 0, y: 0});
+	}
 
 /* EVENTS */
 	// $(imageResultsContainer).html(html);
@@ -39,7 +131,7 @@ $(document).ready(function() {
 	function checkCategorySelected(selectedCategory) {
 		var currentCategory = $(selectedCategory).parent(); // store which category is selected
 		// console.log(currentCategory);
-		searchTermsReveal(currentCategory);
+		categoriesReveal(currentCategory);
 	}
 	function checkResultsItemTermsState(resultsItemSelected) {
 		var resultsItemState = $(resultsItemSelected);
@@ -54,12 +146,11 @@ $(document).ready(function() {
 		var currentTerm = $(selectedImageTerm).parent(); // store which image term is selected
 		var currentCategory = $(selectedImageTerm).parent().parent().parent().parent().parent(); // figure out which category the current search term belongs to
 		if ( $(currentTerm).hasClass(imageTermSelected) ) { // if term is selected, deselect and close category
-			termUnselect(currentTerm);
+			termUnselect(currentTerm, currentCategory);
 		}
 		else { // if term is not selected, select and close category
-			termSelect(currentTerm);
+			termSelect(currentTerm, currentCategory);
 		}
-		searchTermsHide(currentCategory);
 	}
 	function resultsItemTermsClose(selectedResultsItem) {
 		var currentItem = $(selectedResultsItem).parent().parent().parent();
@@ -79,19 +170,25 @@ $(document).ready(function() {
 		$(currentItemTerms).addClass(resultsTermsRevealed);
 		$(currentItemTermsBtn).addClass(resultsTermsEscapeX);
 	}
-	function searchTermsHide(activeCategory) {
+	function categoriesHide(activeCategory) {
 		$(activeCategory).removeClass(imageCategoryActive); // hide the last active category
+		console.log("I CLOSED THE CATEGORIES");
 	}
-	function searchTermsReveal(activeCategory) {
+	function categoriesReveal(activeCategory) {
 		$(activeCategory).siblings().removeClass(imageCategoryActive); // hide the last active category
 		$(activeCategory).addClass(imageCategoryActive); // reveal the current selected category
 	}
-	function termSelect(unselectedTerm) {
+	function termSelect(unselectedTerm, lastSelectedCategory) {
 		var currentUnselectedTerm = $(unselectedTerm);
+		var currentUnselectedCategory = $(lastSelectedCategory);
 		$(currentUnselectedTerm).addClass(imageTermSelected); // add selected term class
+		console.log("I SELECTED A TERM");
+		categoriesHide(currentUnselectedCategory);
 	}
-	function termUnselect(selectedTerm) {
+	function termUnselect(selectedTerm, newSelectedCategory) {
 		var currentSelectedTerm = $(selectedTerm);
+		var currentSelectedCategory = $(newSelectedCategory);
 		$(currentSelectedTerm).removeClass(imageTermSelected); // remove selected term class
+		categoriesHide(currentSelectedCategory);
 	}
 });
