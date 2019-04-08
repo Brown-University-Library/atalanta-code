@@ -370,10 +370,17 @@ background-color: orange;
 			margin-left: -2px;
 		}
 		span.icon {
+			background-image: url(../icons/icon_X-close.svg);
+			display: flex;
+			height: 8px;
 			margin-left: 5px;
 			margin-right: -3px;
-			display: flex;
+			width: 8px;
 		}
+	}
+	.image-results__button--open:hover span.icon, 
+	.image-results__button--open:active span.icon {
+		filter: invert(95%);
 	}
 	.image-results__all-terms {
 		display: none;

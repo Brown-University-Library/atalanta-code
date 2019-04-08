@@ -7859,12 +7859,19 @@ main#image-search {
     .image-results__container .image-results__button--open span.label {
       margin-left: -2px; }
     .image-results__container .image-results__button--open span.icon {
-      margin-left: 5px;
-      margin-right: -3px;
+      background-image: url(../icons/icon_X-close.svg);
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
-      display: flex; }
+      display: flex;
+      height: 8px;
+      margin-left: 5px;
+      margin-right: -3px;
+      width: 8px; }
+  .image-results__container .image-results__button--open:hover span.icon,
+  .image-results__container .image-results__button--open:active span.icon {
+    -webkit-filter: invert(95%);
+    filter: invert(95%); }
   .image-results__container .image-results__all-terms {
     display: none;
     font-size: .75rem;
