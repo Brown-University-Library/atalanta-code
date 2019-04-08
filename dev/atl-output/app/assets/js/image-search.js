@@ -5,6 +5,7 @@ $(document).ready(function() {
 	var imageTermTrigger = '.subcategory__term-item > a';
 	var imageTermSelected = 'term--selected';
 	var allSubcategoryTermsSelected = 'all-terms--selected';
+	var resultsVizBtn = 'a.tooltip';
 	var imageResultsContainer = '.image-results__container';
 	var activeImageContainer = document.querySelector('.container--active');
 	var inactiveImageContainer = document.querySelector('.container--inactive');
@@ -28,7 +29,7 @@ $(document).ready(function() {
 	$("#btn-shuffle").on("click", function() {
 	   makeImageArrays();
 	});
-	$('a.tooltip').on('click', function() {
+	$(resultsVizBtn).on('click', function() {
 		var container = '.image-results__container';
 		var that = this;
 		console.log(that);
@@ -56,19 +57,10 @@ $(document).ready(function() {
 		for (var i = 0; i < imageItems.length; i++) {
 			thisChild = imageItems[i];
 			if ($(thisChild).hasClass('item--active')) {
-				// console.log(i);
-
 				activeArray.push(thisChild);
-				// console.log($(thisChild).attr('data-item-num'));
-				// console.log(thisChild.attributes.dataItemNum);
-				// console.log(activeArray);
 			}
 			else if ($(thisChild).hasClass('item--inactive')) {
-				// console.log(i);
 				inactiveArray.push(thisChild);
-				// console.log($(thisChild).attr('data-item-num'));
-				// console.log(inactiveArray);
-
 			}
 
 			// inactiveArray.sort(compare($(thisChild)));
@@ -83,10 +75,6 @@ $(document).ready(function() {
 
 
 	/* https://codepen.io/MAW/pen/WQWJPV */
-	function getBCR(element) {
-		return element.getBoundingClientRect()
-	};
-
 	function changeLocation(moveActiveArray, moveInactiveArray) {
 		var animation = new TimelineLite();
 		var rectActive = getBCR(activeImageContainer);
@@ -136,32 +124,33 @@ $(document).ready(function() {
 		// inactiveContents.appendChild(inactiveImage);
 		// TweenMax.set(inactiveImage, {x: 0, y: 0});
 	}
-
+	function getBCR(element) {
+		return element.getBoundingClientRect()
+	};
 	function scaleOnDisplay() {
 		var allImageItems = '.image-results__item';
 		TweenMax.from(allImageItems, 0.5, {css: {scale:.01}, delay:0.2, ease:Quad.easeinOut}); // ease out scale of all images
 	}
-		function compare(a, b) {
-		console.log("I am trying to sort");
-		console.log("This is A: " + a);
-		const itemNumA = a.attributes.dataItemNum;
-		// console.log(itemNumA);
-		const itemNumB = b.attributes.dataItemNum;
-		let comparison = 0;
-		if (itemNumA > itemNumB) {
-			console.log("I am comparing greater than");
-			comparison = 1;
+	// function compare(a, b) {
+	// 	console.log("I am trying to sort");
+	// 	console.log("This is A: " + a);
+	// 	const itemNumA = a.attributes.dataItemNum;
+	// 	// console.log(itemNumA);
+	// 	const itemNumB = b.attributes.dataItemNum;
+	// 	let comparison = 0;
+	// 	if (itemNumA > itemNumB) {
+	// 		console.log("I am comparing greater than");
+	// 		comparison = 1;
 			
-		}
-		else if (itemNumA < itemNumB) {
-			comparison = -1;
-			console.log("I am comparing lesser than");
-		}
-		// console.log(inactiveArray);
-		console.log(comparison);
-		return comparison;
-		
-	}
+	// 	}
+	// 	else if (itemNumA < itemNumB) {
+	// 		comparison = -1;
+	// 		console.log("I am comparing lesser than");
+	// 	}
+	// 	// console.log(inactiveArray);
+	// 	console.log(comparison);
+	// 	return comparison;
+	// }
 
 /* EVENTS */
 	// $(imageResultsContainer).html(html);
