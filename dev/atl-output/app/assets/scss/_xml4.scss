@@ -282,7 +282,7 @@ main.emblem-page.frontmatter {
 	/*********** END OF ENGLISH EMBLEM OVERRIDES *************/
 
 	/*********** EMBLEM LAYOUT *************/
-	div.translation, 
+/*	div.translation, 
 	div.original {
 		height: 100%;
 		margin-top: 2.5rem;
@@ -292,7 +292,7 @@ main.emblem-page.frontmatter {
 	.panel--right div.translation, 
 	.panel--right div.original {
 		margin-top: 3.5rem;
-	}
+	}*/
 	.lang--english, 
 	.lang--german, 
 	.lang--latin {
@@ -482,7 +482,7 @@ main.emblem-page.frontmatter {
 		div.preface, 
 		div.preface.la {
 			display: grid;
-			grid-column: 4 / 13;
+			grid-column: 1 / 13;
 			grid-gap: 0;
 			grid-template-columns: 4fr 2fr;
 			grid-template-rows: auto;
@@ -547,10 +547,9 @@ main.emblem-page.frontmatter {
 			display: inline-block;
 		}*/
 	}
-	section.section__discourse.panel--left, 
-	section.section__discourse.panel--right {
+	section.section__discourse.grid--right {
 		div.discourse {
-			grid-column: 2 / 13;
+			grid-column: 2 / 12;
 			grid-template-columns: repeat(12, 1fr);
 		}
 		._discourse--english .ab, 
