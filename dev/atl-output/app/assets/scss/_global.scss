@@ -5,19 +5,25 @@ body {
 	background-color: $white;
 	font-family: 'GTAmericaTrial', Helvetica, Arial, sans-serif;
 	font-size: 16px;
-	a {
-		color: $royal-blue;
-		text-decoration: none;
-	}
-	a:hover {
-		color: $aqua_darker;
-	}
 }
 header {
 	margin-top: 0;
+}
+main {
+	line-height: 1.5;
 }
 h1 {
 	font-size: 3rem;
 	font-weight: 600;
 	line-height: 4rem;
+}
+h1.sample {
+	margin-top: 5rem;
+}
+a {
+	color: $royal-blue;
+	text-decoration: none;
+}
+a:hover {
+	color: $aqua_darker;
 }

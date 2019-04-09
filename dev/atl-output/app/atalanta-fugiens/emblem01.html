@@ -3,57 +3,63 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Furnace and Fugue: Atalanta Fugiens (Digital Edition)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Furnace and Fugue: Atalanta fugiens (Digital Edition)</title>
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css">
-	<link type="text/css" rel="stylesheet" media="screen" href="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.css">
 <!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
-	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
-	<script src="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.js"></script>
-	<script src="../assets/js/vendors/verovio/verovio-toolkit.js"></script>
-	<script src="../assets/js/vendors/lity/lity.min.js"></script>
-	<script src="../assets/js/stereo-panner-node.min.js"></script>
-	<script src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
-	<script src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
-	<script src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
 </head>
 <body class="emblem-body">
 <!-- GLOBAL NAVIGATION -->
 	<header data-page-type="digital edition">
-		<div class="_topnav">
-			<nav class="topnav">
+		<a class="a11y_skip-main" href="#emblem-data">Skip to main content</a>
+		<div class="_topnav" data-nav="digital edition">
+			<nav class="topnav" aria-label="Main">
+				<button class="topnav__hamburger--closed" aria-hidden="true" aria-label="Mobile menu"></button>
 				<ul>
 					<li class="topnav__logo">
-						<button>
-							<a href="../index.html">
-								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66.5 59.2" height="50px"><title>furnaceAndFugueLogo</title><g id="Layer_2" data-name="Layer 2"><g id="furnace_and_fugue_logo" data-name="furnace and fugue logo"><text transform="translate(0 45.8)" font-size="53.84" fill="#fff" font-family="GTSectraDisplay-Bold, GT Sectra Display" font-weight="700">f</text><text transform="translate(18.2 45.8)" font-size="42.24" fill="#fff" font-family="GTSectraDisplay-Bold, GT Sectra Display" font-weight="700">&amp;</text><text transform="translate(46.3 45.8)" font-size="53.84" fill="#fff" font-family="GTSectraDisplay-Bold, GT Sectra Display" font-weight="700">f</text></g></g></svg>
-							</a>
-						</button>
+						<a aria-label="Return to Furnace and Fugue home" href="../index.html"></a>
 					</li>
 					<li class="topnav__content">
 						<ul>
-							<li><a href="../atalanta-fugiens/af-toc.html" data-lity>Digital Edition</a></li>
-							<li><a href="../atalanta-essays/essay-toc.html" data-lity>Essays</a></li>
-							<li><a href="../search/search-toc.html" data-lity>Images</a></li>
-							<li><a href="../search/toc.html" data-lity>Contents</a></li>
+							<li><a href="../atalanta-fugiens/toc_af.html">Digital Edition</a></li>
+							<li><a href="../atalanta-essays/toc_essays.html">Essays</a></li>
+							<li><a href="../search/image-search.html">Images</a></li>
+							<li><a href="../search/toc.html">Contents</a></li>
 						</ul>
 					</li>
-					<li class="topnav__search" data-lity><button><a href="../search/search.html">
-						<span class="icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 960 560" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:#fff; stroke-width:20;stroke-miterlimit:10;}</style><g id="handle"><g><path class="st0" d="M537.6,337.5l97,97L537.6,337.5z"/></g></g><g id="glass"><g><path class="st0" d="M480,153c33.9,0,65.8,13.2,89.8,37.2S607,246.1,607,280s-13.2,65.8-37.2,89.8S513.9,407,480,407s-65.8-13.2-89.8-37.2
-						S353,313.9,353,280s13.2-65.8,37.2-89.8S446.1,153,480,153 M480,143c-75.7,0-137,61.3-137,137s61.3,137,137,137s137-61.3,137-137
-						S555.7,143,480,143L480,143z"/></g></g></svg></span><span class="label">Search</span>
-					</a></button></li>
+					<li class="topnav__search">
+						<button class="topnav__search--closed">
+							<span class="topnav__search-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 960 560" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:#fff; stroke-width:20;stroke-miterlimit:10;}</style><g id="handle"><g><path class="st0" d="M537.6,337.5l97,97L537.6,337.5z"/></g></g><g id="glass"><g><path class="st0" d="M480,153c33.9,0,65.8,13.2,89.8,37.2S607,246.1,607,280s-13.2,65.8-37.2,89.8S513.9,407,480,407s-65.8-13.2-89.8-37.2
+							S353,313.9,353,280s13.2-65.8,37.2-89.8S446.1,153,480,153 M480,143c-75.7,0-137,61.3-137,137s61.3,137,137,137s137-61.3,137-137
+							S555.7,143,480,143L480,143z"/></g></g></svg></span>
+							<span class="topnav__search-label">Search</span>
+						</button>
+					</li>
 				</ul>
 			</nav>
+			<div class="search__modal" aria-hidden="true">
+				<button class="x-close" aria-label="Close search modal"></button>
+			    <form id="ataSearch" class="search__bar">
+			        <label class="label search__bar__label" for="search__bar__field">Enter your search below</label>
+			        <input type="text" id="search__bar__field" aria-label="Search the digital edition, scholarly essays or emblem images">
+			        <button class="submit" type="submit">Search</button>
+			    </form>
+			</div>
 		</div>
-<!-- EMBLEM NAVIGATION -->
-		<nav class="subnav-v3">
+	</header>
+<!-- EMBLEM PAGE-->
+	<main id="emblem-data" class="emblem-page" data-id="5" data-page="b">
+	<!-- EMBLEM NAVIGATION -->
+		<nav class="subnav-v3" aria-label="Digital Edition">
 			<form action="#">
 				<fieldset>
 					<label for="layout">Select a Layout</label>
 					<select name="layout" id="layout">
-						<option selected="selected" class="dropdown--layout" data-layout="active" value="compare">Comparative Layout</option>
-						<option class="dropdown--layout" data-layout="inactive" value="digital-edition">Digital Edition Layout</option>
-						<option class="dropdown--layout" data-layout="inactive" value="zooming-image">Book Image Layout</option>
+						<option selected="selected" class="dropdown--layout" data-layout="active" value="compare">Comparative View</option>
+						<option class="dropdown--layout" data-layout="inactive" value="digital-edition">Digital Edition</option>
+						<option class="dropdown--layout" data-layout="inactive" value="zooming-image">Original</option>
 					</select>
 				</fieldset>
 			</form>
@@ -70,12 +76,9 @@
 				</fieldset>
 			</form>
 		</nav>
-	</header>
-<!-- EMBLEM PAGE-->
-	<main id="emblem-data" class="emblem-page" data-id="5">
 <!-- EMBLEM GRID -->
 		<!-- Facsimile -->
-		<div class="section__facsimile is-hidden">
+		<div aria-hidden="true" class="section__facsimile is-hidden">
 			<div class="facsimile--full">
 				<section class="_facsimile">
 					<!-- https://openseadragon.github.io/docs/ -->
@@ -99,8 +102,9 @@
 		</div>
 		<div class="emblem">
 			<!-- Motto -->
-			<a name="motto" id="basic-waypoint__0" class="section__motto"></a>
-			<section class="section__motto section--single panel--right">
+			<a name="motto" class="section__motto"></a>
+			<div class="my-offset-debug"></div>
+			<section id="basic-waypoint__0" class="section__motto section--single panel--right">
 				<div class="translation">
 					<div class="lang--english _motto--english edition--normalized" lang="en-US">
 						<div class="title">
@@ -130,8 +134,9 @@
 				</div>
 			</section>
 			<!-- Image -->
-			<a name="image" id="basic-waypoint__1" class="section__image"></a>
-			<div class="section__image">					
+			<a name="image" class="section__image"></a>
+			<div class="my-offset-debug"></div>
+			<div id="basic-waypoint__1" class="section__image">					
 				<div class="image--full grid--right">
 					<section class="image wrapper-section section">
 							<div class="image__picture">
@@ -146,26 +151,28 @@
 				</div>
 			</div>
 			<!-- Music -->
-			<a name="music" id="basic-waypoint__2" class="section__music"></a>
-			<section class="section__music">
+			<a name="music" class="section__music"></a>
+			<div class="my-offset-debug"></div>
+			<section id="basic-waypoint__2" class="section__music">
 				<div class="_music music--full">
-				    <div class="ata-music" data-mei="../data/mei/Fuga 01.xml">
-				      <div class="ata-viz-cmn"></div>
-				      <div class="ata-viz-audio" data-tempo="56">
-				        <div class="ata-audio-track" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
-				            data-mp3="../assets/audio/01-A-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/01-A-56bpm-Reverb.mp3"></div>
-				        <div class="ata-audio-track" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
-				            data-mp3="../assets/audio/01-H-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/01-H-56bpm-Reverb.mp3"></div>
-				        <div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
-				            data-mp3="../assets/audio/01-P-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/01-P-56bpm-Reverb.mp3"></div>
-				      </div>
-				      <div class="ata-viz-pianoroll modal"></div>
+				    <div class="ata-music" data-mei="../data/mei/Fuga 06.xml">
+				      <div aria-label="musical notation in three voices" class="ata-viz-cmn"></div>
+		      			<div class="ata-viz-audio" data-tempo="56">
+				            <div class="ata-audio-track" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
+				                data-mp3="../assets/audio/06-P-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-P-56bpm-Reverb.mp3"></div>
+				            <div class="ata-audio-track" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
+				                data-mp3="../assets/audio/06-A-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-A-56bpm-Reverb.mp3"></div>
+				            <div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
+				                data-mp3="../assets/audio/06-H-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-H-56bpm-Reverb.mp3"></div>
+				      	</div>
+				    	<div class="ata-viz-pianoroll modal"></div>
 				    </div>
     			</div>
 			</section>
 			<!-- Epigram -->
-			<a name="epigram" id="basic-waypoint__3" class="section__epigram"></a>
-			<section class="section__epigram section--single panel--right">
+			<a name="epigram" class="section__epigram"></a>
+			<div class="my-offset-debug"></div>
+			<section id="basic-waypoint__3" class="section__epigram section--single panel--right">
 				<div class="translation">
 					<div class="lang--english _epigram--english edition--normalized" lang="en-US">
 		                <div class="epigram">
@@ -211,8 +218,9 @@
 				</div>
 			</section>
 			<!-- Discourse -->
-			<a name="discourse" id="basic-waypoint__4" class="section__discourse"></a>
-			<section class="section__discourse section--single panel--right">
+			<a name="discourse" class="section__discourse"></a>
+			<div class="my-offset-debug"></div>
+			<section id="basic-waypoint__4" class="section__discourse section--single panel--right">
 				<div class="translation">
 					<div class="lang--english _discourse--english edition--normalized text" lang="en-US">
                         <div class="discourse">
@@ -255,7 +263,7 @@
                                 <span class="original"><br></span><span class="regularized"></span>head and feet: for <span class="original">hee </span><span class="regularized">he</span> is windy, and <span class="original">flyes </span><span class="regularized">flies</span> through the <span class="original">aire </span><span class="regularized">air</span> as wind <span class="original">itselfe </span><span class="regularized">itself</span>,
                                 <span class="original"><br></span><span class="regularized"></span>as is <span class="original">coḿonly </span><span class="regularized">commonly</span> and really confirmed to the damage of many men;
                             </div>
-                            <div class="ab">
+                            <div class="ab" id="basic-waypoint__5">
                             	<span class="milestone">015</span><span class="milestone">e01-10</span>but car<span class="original">=<br></span>rying a white wand girt with two Serpents <span class="original">crossewise </span><span class="regularized">crosswise</span>, which can draw <span class="original">soules </span><span class="regularized">souls</span>
                             	<span class="original"><br></span><span class="regularized"></span>out of <span class="original">bodyes </span><span class="regularized">bodies</span>, and bring them <span class="original">backe </span><span class="regularized">back</span> <span class="original">againe </span><span class="regularized">again</span>, and <span class="original">doe </span><span class="regularized">do</span> many such contrary
                                 <span class="original"><br></span><span class="regularized"></span>things, <span class="original">hee </span><span class="regularized">he</span> exquisitely <span class="original">repræsents </span><span class="regularized">represents</span> the <span class="original">Philosophicall </span><span class="regularized">Philosophical</span> Mercury. <span class="milestone">e01-11</span>Mercury there<span class="original">=<br></span>fore is wind, which takes Sulphur or Dionysius, or, if you had rather, <span class="original">Æscu
@@ -301,6 +309,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="original is-hidden">
 					<div class="lang--latin _discourse--latin edition--regularized" lang="la">
 						<span class="pb atalanta-fugiens">14</span>
 			            <div class="discourse la">
@@ -337,7 +346,7 @@
 			                     <span class="original"><br/></span>ipse ventus, ut in communi, multorum cum damno re ipsa con<span class="original">-<br/></span>
 			                </div>
 			               	<span class="pb atalanta-fugiens">15</span>
-			               	<h3 class="title">DISCURSUS I.</h3>
+			               	<h3 class="title" id="basic-waypoint__5">DISCURSUS I.</h3>
 			               	<div class="discourse-p2">
 			                     <span class="original"><br/></span>vincitur: <span class="milestone atalanta-fugiens">e01-10</span> At quia caduceum gestet binis serpentibus transversim
 			                     <span class="original"><br/></span>cinctum, qui animas ex corporibus ducat <span class="original">&amp;</span> reducat, <span class="original">&amp;</span> multa eius<span class="original">-<br/></span>modi contraria efficiat, Philosophici Mercurii symbolum optimè
@@ -356,7 +365,8 @@
 			                     <span class="original"><br/></span>nascitur:</span> <span class="milestone atalanta-fugiens">e01-18</span> Et gradu 8. <span class="italic">spiritus aërei siml in aërem scandentes se diligunt, ut
 			                     <span class="original"><br/></span>Hermes</span> inquit, <span class="italic">portavit illum ventus in ventre suo: Quia generatio ge<span class="original">-<br/></span>niti nostri fit in aëre <span class="original">&amp;</span> nascens in aëre sapienter nascitur: Ascendit enim à
 			                     <span class="original"><br/></span>terra in c<span class="original">œ</span><span class="regularized">[oe]</span>lum, iterúmque descendit in terram conquirendo vim superio<span class="original">-<br/></span>rem <span class="original">&amp;</span> inferiorem.</span>
-							        </div>                        
+							</div>
+							</div>                       
 			            </div>
 					</div>
 				</div>
@@ -364,9 +374,27 @@
 		</div><!-- END EMBLEM -->
 	</main> <!-- END OF EMBLEM PAGE -->
 <!-- JS -->
+	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.js"></script>
+	<script src="../assets/js/vendors/verovio/verovio-toolkit.js"></script>
+	<script src="../assets/js/vendors/lity/lity.min.js"></script>
+	<script src="../assets/js/stereo-panner-node.min.js"></script>
+	<script src="../assets/js/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.5/lunr.min.js"></script>
+    <script src="../assets/js/lunr-languages/lunr.stemmer.support.js"></script>
+    <script src="../assets/js/lunr-languages/lunr.multi.js"></script>
+    <script src="../assets/js/lunr-languages/lunr.de.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/searchfunction.js"></script>
 	<script src="../assets/js/topnav.js"></script>
-	<script src="../assets/js/notation.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/shortcuts/sticky.min.js"></script>
+	<script src="../assets/js/vendors/waypoints/lib/waypoints.debug.js"></script> <!-- remove in production -->
+	<script src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
 	<script src="../assets/js/emblem.js"></script>
 	<script src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
+	<script src="../assets/js/notation.js"></script>
 </body>
 </html>

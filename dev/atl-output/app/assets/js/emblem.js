@@ -36,6 +36,29 @@ $(function () {
 	var gridHalf = 'grid--half';
 	var gridLeft = 'grid--left';
 	var gridRight = 'grid--right';
+	/* other */
+	var musicNotation = '.music-pages';
+	var playButton = '.atalanta-notation-start';
+	var pauseButton = '.atalanta-notation-stop';
+	var muteVoice1 = '.atalanta-notation-mute-track:nth-of-type(1)';
+	var muteVoice2 = '.atalanta-notation-mute-track:nth-of-type(2)';
+	var muteVoice3 = '.atalanta-notation-mute-track:nth-of-type(3)';
+
+
+
+	// var thisEmblemPage = '.emblem-page';
+	// var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
+	// var myEmblemPage = $('.emblem-page').data("page");
+	// var startPage; // the number of first page of current emblem
+	// var newEmblemPageData;
+	// var viewer;
+
+	// var thisEmblemPage = '.emblem-page';
+	// var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
+	// var myEmblemPage = $('.emblem-page').data("page");
+	// var startPage; // the number of first page of current emblem
+	// var newEmblemPageData;
+	// var viewer;
 
 	/* emblem side nav */
 	// var sideNav = '.wrapper-sidenav';
@@ -57,18 +80,30 @@ $(function () {
 
 
 
-
-
 /* INITIALIZE */
 	onLoad(); // DISPLAY EMBLEM MENU AND DEFAULT OPTIONS ON PAGE LOAD
 
+/* APPLY ACCESSIBILITY FIXES AFTER ALL DYNAMIC CONTENT LOADS */
+$(window).on('load', function() {
+	setTimeout(function(){
+		// console.log("ALL ASSETS ARE LOADED!!!!")
+		musicAccessibility();
+	}, 3000);
+	
+});
+if (matchMedia) {
+	const jsMediaQuery = window.matchMedia("screen and (min-width: 320px) and (max-width: 767px)");
+	jsMediaQuery.addListener(WidthChange); // detect when width of window changes
+	WidthChange(jsMediaQuery); // update emblem layout menu options on mobile
+}
+
 /* EVENTS */
-	/* layout menu */
+/* emblem layout menu */
 	$("#layout").selectmenu({
 	  change: function(event, ui) {},
 	  icons: { button: "custom-icon" }
 	});	
-	$( "#layout" ).on( "selectmenuchange", function( event, ui ) {
+	$("#layout").on( "selectmenuchange", function( event, ui ) {
 	  selectLayout(ui.item.value);
 	});
 	/* language menu */
@@ -79,89 +114,6 @@ $(function () {
 	$("#language").on( "selectmenuchange", function( event, ui ) {
 	  selectLanguage(ui.item.value);
 	});
-	
-	// $(layoutComparativeBtn).click(function() { // COMPARATIVE LAYOUT SELECTED
-	// 	selectLayoutComparative();
-	// 	checkState();
-	// 	return false;
-	// });
-	// $(layoutDigitalEditionBtn).click(function() { // DIGITAL EDITION LAYOUT SELECTED
-	// 	selectLayoutDigitalEdition();
-	// 	checkState();
-	// 	return false;
-	// });
-	// $(layoutBookBtn).click(function() { // BOOK LAYOUT SELECTED
-	// 	selectLayoutBook();
-	// 	checkState();
-	// 	return false;
-	// });
-	// /* language buttons */
-	// $(languageEnglishOrigBtn).click(function() { // ENGLISH ORIGINAL TEXT SELECTED
-	// 	if( $(languageEnglishOrigBtn).attr('data-language') === 'active' ) {
-	// 	}
-	// 	else if ( $(languageEnglishOrigBtn).attr('data-language') === 'inactive' ) {
-	// 		selectLangEnglishOrig();
-	// 		checkState();
-	// 	}
-	// 	else {
-	// 		console.log("ERROR, no language is selected");
-	// 	}
-	// 	return false;
-	// });
-	// $(languageEnglishNormBtn).click(function() { // ENGLISH NORMALIZED TEXT SELECTED
-	// 	if( $(languageEnglishNormBtn).attr('data-language') === 'active' ) {
-
-	// 	}
-	// 	else if ( $(languageEnglishNormBtn).attr('data-language') === 'inactive' ) {
-	// 		selectLangEnglishNorm();
-	// 		checkState();
-	// 	}
-	// 	else {
-	// 		console.log("ERROR, no language is selected");
-	// 	}
-	// 	return false;
-	// });
-	// $(languageLatinOrigBtn).click(function() { // LATIN ORIGINAL TEXT SELECTED
-	// 	if( $(languageLatinOrigBtn).attr('data-language') === 'active' ) {
-
-	// 	}
-	// 	else if ( $(languageLatinOrigBtn).attr('data-language') === 'inactive' ) {
-	// 		selectLangLatinOrig();
-	// 		checkState();
-	// 	}
-	// 	else {
-	// 		console.log("ERROR, no language is selected");
-	// 	}
-	// 	return false;
-	// });
-	// $(languageLatinRegBtn).click(function() { // LATIN REGULARIZED TEXT SELECTED
-	// 	if( $(languageLatinRegBtn).attr('data-language') === 'active' ) {
-
-	// 	}
-	// 	else if ( $(languageLatinRegBtn).attr('data-language') === 'inactive' ) {
-	// 		selectLangLatinReg();
-	// 		checkState();
-	// 	}
-	// 	else {
-	// 		console.log("ERROR, no language is selected");
-	// 	}
-	// 	return false;
-	// });
-	// $(languageGermanBtn).click(function() { // GERMAN TEXT SELECTED
-	// 	if( $(languageGermanBtn).attr('data-language') === 'active' ) {
-
-	// 	}
-	// 	else if ( $(languageGermanBtn).attr('data-language') === 'inactive' ) {
-	// 		selectLangGerman();
-	// 		checkState();
-	// 	}
-	// 	else {
-	// 		console.log("ERROR, no language is selected");
-	// 	}
-	// 	return false;
-	// });
-
-
 
 /* FUNCTIONS */
 	function checkState() {
@@ -200,6 +152,14 @@ $(function () {
 	// var latinDoubleData;
 	// var facsimileDoubleData;
 		// updateDataState();
+	}
+	function musicAccessibility() {
+		$(musicNotation).attr('aria-hidden', 'true');
+		$(playButton).attr('aria-label', 'Play Music');
+		$(pauseButton).attr('aria-label', 'Pause Music');
+		$(muteVoice1).attr('aria-label', 'Play or Mute Voice 1');
+		$(muteVoice2).attr('aria-label', 'Play or Mute Voice 2');
+		$(muteVoice3).attr('aria-label', 'Play or Mute Voice 3');
 	}
 	function onLoad() {
 		checkState();
@@ -391,37 +351,43 @@ $(function () {
 		$(fullLatinText).removeClass('edition--original'); // remove edition--original CSS from full Latin text
 		showOriginalLanguage();
 	}
+	function WidthChange(jsMediaQuery) {
+		if(jsMediaQuery.matches) { // run on mobile devices/window widths
+			setTimeout(function(){
+				$('select#layout').val('digital-edition').selectmenu('refresh'); //change initial layout select menu option to digital edition
+			}, 100);
+			selectLayoutDigitalEdition(); // change page layout to digital edition
+			checkState(); // make necessary page updates based on layout selection
+		}
+		else {
+			// console.log("I am on a laptop or something");
+		}
+	}
 	function updateDataState() {
 		var mySingleData = document.querySelector(singleViewBtn);
 		mySingleData.setAttribute("data-state", singleData);
 		var myTest = $(singleViewBtn).attr('data-state');
 		console.log("my new data state is " + myTest);
 	}
-	
+	// function updateEmblemPageData() {
+	// 	var thisEmblemPageData = document.querySelector('.emblem-page');
+	// 	thisEmblemPageData.setAttribute("data-page", 'c');
+	// 	console.log("this emblem page is " + thisEmblemPageData.getAttribute('data-page'));
+	// 	newEmblemPageData = thisEmblemPageData.getAttribute('data-page');
+	// 	// getData();
+	// }
+
+// 	function getData() {
+// 		var theseEmblemPageData = document.querySelector('.emblem-page');
+// 		console.log("I'm getting data");
+// 		myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
+// 		myEmblemPage = theseEmblemPageData.getAttribute("data-page");
+// 		console.log("my emblem page is" + myEmblemPage);
+// 		processMyEmblemData();	
+// }
 
 /* SIDENAV */
 //http://jennamolby.com/how-to-display-dynamic-content-on-a-page-using-url-parameters/
-	// function sideNavHighlightDiscourse() {
-	// 	$(discourseSideNav).siblings().removeClass('sidenav--is-active');
-	// 	$(discourseSideNav).addClass('sidenav--is-active');
-	// }
-	// function sideNavHighlightEpigram() {
-	// 	$(epigramSideNav).siblings().removeClass('sidenav--is-active');
-	// 	$(epigramSideNav).addClass('sidenav--is-active');
-	// }
-	// function sideNavHighlightImage() {
-	// 	$(imageSideNav).siblings().removeClass('sidenav--is-active');
-	// 	$(imageSideNav).addClass('sidenav--is-active');
-	// }
-	// function sideNavHighlightMotto() {
-	// 	$(mottoSideNav).siblings().removeClass('sidenav--is-active');
-	// 	$(mottoSideNav).addClass('sidenav--is-active');
-	// }
-
-	// function sideNavHighlightMusic() {
-	// 	$(musicSideNav).siblings().removeClass('sidenav--is-active');
-	// 	$(musicSideNav).addClass('sidenav--is-active');
-	// }
 	// function sideNavSetNum() {
 	// 	if (dataID === 1) {
 	// 		$(prevBtn).addClass('is-hidden'); // do not display previous button on first emblem
@@ -460,83 +426,4 @@ $(function () {
 	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
 	// 	}	
 	// }
-		
-
-	/*** MOTTO WAYPOINT ***/
-	// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
-	// var waypoint = new Waypoint({
-	// 	element: document.getElementById('basic-waypoint__0'), // tells waypoint which DOM element's position to observe on scroll
-	// 	handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-	// 		if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-	// 			sideNavHighlightMotto();
-	// 		}
-	// 		else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-				
-	// 		}
-	// 	},
-	// 	offset: 150, // moving the trigger location from 0 at the top of the viewport
-	// })
-
-	// /*** IMAGE WAYPOINT ***/
-	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
-	// var waypoint = new Waypoint({
-	// 	element: document.getElementById('basic-waypoint__1'), // tells waypoint which DOM element's position to observe on scroll
-	// 	handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-	// 		if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-	// 			sideNavHighlightImage();
-	// 		}
-	// 		else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-	// 			sideNavHighlightMotto();
-	// 		}
-	// 	},
-	// 	offset: 300, // moving the trigger location from 0 at the top of the viewport
-	// })
-
-	// /*** MUSIC WAYPOINT ***/
-	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
-	// var waypoint = new Waypoint({
-	// 	element: document.getElementById('basic-waypoint__2'), // tells waypoint which DOM element's position to observe on scroll
-	// 	handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-	// 		if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-	// 			sideNavHighlightMusic();
-	// 		}
-	// 		else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-	// 			sideNavHighlightImage();
-	// 		}
-	// 	},
-	// 	offset: 300, // moving the trigger location from 0 at the top of the viewport
-	// })
-
-	// /*** EPIGRAM WAYPOINT ***/
-	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
-	// var waypoint = new Waypoint({
-	// 	element: document.getElementById('basic-waypoint__3'), // tells waypoint which DOM element's position to observe on scroll
-	// 	handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-	// 		if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-	// 			sideNavHighlightEpigram();
-	// 		}
-	// 		else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-	// 			sideNavHighlightMusic();
-	// 		}
-	// 	},
-	// 	offset: 300, // moving the trigger location from 0 at the top of the viewport
-	// })
-
-	// /*** DISCOURSE WAYPOINT ***/
-	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
-	// var waypoint = new Waypoint({
-	// 	element: document.getElementById('basic-waypoint__4'), // tells waypoint which DOM element's position to observe on scroll
-	// 	handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-	// 		if(direction === 'down') { // if scrolling down the page, animate to the next part of the image
-	// 			sideNavHighlightDiscourse();
-	// 		}
-	// 		else { // if scrolling back up the page, animate to the previous part of the image and fade the current text out
-	// 			sideNavHighlightEpigram();
-	// 		}
-	// 	},
-	// 	offset: 300, // moving the trigger location from 0 at the top of the viewport
-	// })
-
-
-
 });

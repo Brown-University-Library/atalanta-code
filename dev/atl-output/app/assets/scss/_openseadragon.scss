@@ -1,9 +1,17 @@
 @import 'colors';
 @import 'utilities';
 
+/*.my-offset-debug {
+  background-color: red;
+  height: 5px;
+  width: auto;
+  left: 0;
+  z-index: 10000; 
+}*/
+
 #openseadragon-wrapper {
 	height: calc(100vh - 6.25rem); /* currently, the combined height of the topnav and subnav is 6.25rem */
-	background-color: $black;
+	background-color: #777;
 }
 #openseadragon-wrapper canvas {
 	cursor: pointer;

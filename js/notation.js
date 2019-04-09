@@ -40,7 +40,9 @@
       pitchScale: 5,
       HILIGHT_CLASS: 'highlighted'
     },
-    VISUALIZE_BUTTON_TEXT = 'Show piano roll';
+    VISUALIZE_BUTTON_TEXT = 'Show piano roll',
+    MULTIPLE_INSTANCES = (document.querySelectorAll(`.${MAIN_CLASS_NAME}`).length > 1),
+    IS_EMBLEM = (window.location.href.search('/emblem[^/]+$') !== -1);
 
   // GLOBALS
   
@@ -191,7 +193,7 @@
     }
 
     function updateAllViews(timeInMilliseconds) {
-            
+
       let timeAdjustedForTempo = scaleTime(timeInMilliseconds);
 
       views.forEach(function(view) {
@@ -602,55 +604,16 @@
         // Add viewBox attribute
         // viewBox="0 0 w h"
 
-        //(CB) replace this with the one below once music player is complete
         scaledPageSvgCode = scaledPageSvgCode.replace(
           /^\s*<svg\s/i,
           `<svg viewBox="0 0 ${width} ${height}" `
         )
-        
-        // scaledPageSvgCode = scaledPageSvgCode.replace( // (CB) trying to center the non-scaled SVG
-        //   /^\s*<svg\s/i,
-        //   `<svg viewBox="-200 0 ${width} ${height}" `
-        // )
 
         // TEMP - END
 
 
         pageContainer.innerHTML = scaledPageSvgCode;
-        //scaleMusicPageElements(pageIndex); // (CB) I don't think I need this anymore
       });
-
-      /* (CB) I don't think I need this anymore
-      function scaleMusicPageElements(pageIndex) { // (CB) resize music page wrapper elements to match SVG heights
-        let musicPageA, musicPageB, SVGa, SVGb, firstSVG, secondSVG, heightSVGa, heightSVGb, viewBoxHeightA, viewBoxHeightB;
-        //console.log("the pageIndex is " + pageIndex); // pageIndex 0 renders SVG 1 and pageIndex 1 renders SVG 2
-        if ( pageIndex < 1 ){
-          musicPageA = '.music-page:nth-of-type(1)'; // music page element 1
-          SVGa = '.music-page:nth-of-type(1) > svg'; // music SVG 1
-          //console.log("the first music SVG is " + SVGa);
-          firstSVG = document.querySelector(SVGa);
-          heightSVGa = $(firstSVG).attr('viewBox'); // get SVG 1 height attribute
-          //console.log("this is the viewBox of my function's SVGa: " + heightSVGa);
-          viewBoxHeightA = heightSVGa.split(' '); // split string of viewBox attributes from SVG 1 into an array
-          //console.log("my fourth SVGa value after the split is: " + viewBoxHeightA[3]); // get the SVG 1 viewBox height value from the array
-          heightSVGa = viewBoxHeightA[3]; // get the height of the SVG 1 viewBox from the array of values
-          //console.log("the viewBox height value now becomes heightSVGa=" + heightSVGa);
-          $(musicPageA).attr("height", heightSVGa + "px"); // set height of SVG 1 .music-page wrapper to SVG 1 height
-        }
-        else if ( pageIndex >= 1 ){
-          musicPageB = '.music-page:nth-of-type(2)'; // music page element 2
-          SVGb = '.music-page:nth-of-type(2) > svg'; // music SVG 2
-          //console.log("the second music SVG is " + SVGb);
-          secondSVG = document.querySelector(SVGb);
-          heightSVGb = $(secondSVG).attr('viewBox'); // get SVG 2 height attribute
-          //console.log("this is the viewBox of my function's SVGb: " + heightSVGb);
-          viewBoxHeightB = heightSVGb.split(' '); // split string of viewBox attributes from SVG 2 into an array
-          //console.log("my fourth SVGa value after the split is: " + viewBoxHeightB[3]); // get the SVG 2 viewBox height value from the array
-          heightSVGb = viewBoxHeightB[3]; // get the height of the SVG 2 viewBox from the array of values
-          $(musicPageB).attr("height", heightSVGb + "px"); // set height of SVG 2 .music-page wrapper to SVG 2 height
-        }
-      }
-      */
 
       // Fill with music SVG
 /*
@@ -1190,9 +1153,15 @@
     
     function play() {
 
-      verovioToolkit = new verovio.toolkit();
-      verovioToolkit.loadData(mei); // this is rendundant with
-      verovioToolkit.renderToMidi(); // line 137 & 141
+      // If more than one music section on the page
+      //  then you need to create a new verovio instance
+      //  (verovio only allows one instance at a time)
+
+      if (MULTIPLE_INSTANCES) {
+        verovioToolkit = new verovio.toolkit();
+        verovioToolkit.loadData(mei);
+        verovioToolkit.renderToMidi();
+      }
 
       let maxDuration = viewManager.getDuration();
 
@@ -1399,7 +1368,7 @@
 
     let audioNode = document.getElementsByClassName(VIZ_CLASS_NAMES.AUDIO);
     if (audioNode && audioNode[0].hasAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME)) {
-      window.TEMPO = parseInt(audioNode[0].getAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME));
+      window.TEMPO = parseFloat(audioNode[0].getAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME));
     } else {
       window.TEMPO = DEFAULT_TEMPO;
     }

@@ -40,7 +40,9 @@
       pitchScale: 5,
       HILIGHT_CLASS: 'highlighted'
     },
-    VISUALIZE_BUTTON_TEXT = 'Show piano roll';
+    VISUALIZE_BUTTON_TEXT = 'Show piano roll',
+    MULTIPLE_INSTANCES = (document.querySelectorAll(`.${MAIN_CLASS_NAME}`).length > 1),
+    IS_EMBLEM = (window.location.href.search('/emblem[^/]+$') !== -1);
 
   // GLOBALS
   
@@ -191,7 +193,7 @@
     }
 
     function updateAllViews(timeInMilliseconds) {
-            
+
       let timeAdjustedForTempo = scaleTime(timeInMilliseconds);
 
       views.forEach(function(view) {
@@ -1151,9 +1153,15 @@
     
     function play() {
 
-      verovioToolkit = new verovio.toolkit();
-      verovioToolkit.loadData(mei); // this is rendundant with
-      verovioToolkit.renderToMidi(); // line 137 & 141
+      // If more than one music section on the page
+      //  then you need to create a new verovio instance
+      //  (verovio only allows one instance at a time)
+
+      if (MULTIPLE_INSTANCES) {
+        verovioToolkit = new verovio.toolkit();
+        verovioToolkit.loadData(mei);
+        verovioToolkit.renderToMidi();
+      }
 
       let maxDuration = viewManager.getDuration();
 
@@ -1360,7 +1368,7 @@
 
     let audioNode = document.getElementsByClassName(VIZ_CLASS_NAMES.AUDIO);
     if (audioNode && audioNode[0].hasAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME)) {
-      window.TEMPO = parseInt(audioNode[0].getAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME));
+      window.TEMPO = parseFloat(audioNode[0].getAttribute(AUDIO_VIZ_TEMPO_ATTR_NAME));
     } else {
       window.TEMPO = DEFAULT_TEMPO;
     }

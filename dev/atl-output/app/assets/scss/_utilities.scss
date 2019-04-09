@@ -6,6 +6,9 @@
 		color: $black !important;
 	}
 }
+.is-visible {
+	display: inline-block !important;
+}
 .is-hidden {
 	display: none !important;
 }
@@ -15,13 +18,47 @@
 .is-sticky {
 	position: fixed;
 }
+.no-scroll {
+	overflow: hidden;
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0; 
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fade-out {
+	0% {
+		opacity: 1; 
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes fade-out-in {
+	0% {
+		opacity: 1; 
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
 $topnav-h: 3.125rem;
 $subnav-h: 3.125rem;
 $emblemnav-h: 6.25rem;
+$imagesearchcatnav-h: 2.5rem;
+$imagesearchnav-h: 5.625rem;
 $gap: .75rem;
 $topnav-z: 100000;
 $drawer-z: 10000;
+$searchbar-z: 1000;
+$subnav-z: 100;
 
 $body-font: 'GTAmerica', 'Avenir', Helvetica, Arial, sans-serif;
 $body-font_emblem: 'GTAmerica', 'Avenir', Helvetica, Arial, sans-serif;
