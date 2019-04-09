@@ -31,10 +31,6 @@
 body {
 	padding: 0;
 }
-
-.music-test {
-	outline: 10px solid red;
-}
 .section__music {
 	font-family: $body-font_emblem;
 }
@@ -49,15 +45,16 @@ body {
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
 	.transport {
-		background-color: transparent;
+		background-color: $blue_light;
 		display: flex;
-		flex-direction: row;
 		align-items: center;
 		justify-content: center;
+		flex-direction: row;
 		grid-area: 1 / 2 / 2 / 12;
-		height: 20vh;
+		height: 14vh;
 		margin-bottom: 1rem;
 		padding: 0;
+		width: 100%;
 		z-index: 10; /* music page SVG overlaps with transport controls */
 	}
 	.ata-viz-cmn {
@@ -77,9 +74,9 @@ body {
 }
 .ata-viz-pianoroll .transport {
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	flex-direction: row;
 	height: 15vh;
 	.atalanta-notation-start {
 		background-image: url('../icons/icon_play-outline.svg');
@@ -93,32 +90,44 @@ body {
 	}
 }
 .atalanta-notation__switch {
-
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 90px;
+	width: 100px;
 }
 .atalanta-notation__switch a {
-	width: 14rem;
-	height: 3rem;
-	padding: .5rem 3rem;
 	background-color: transparent;
 	border: 2px solid $black;
 	border-radius: 10px;
 	color: $black;
-	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.125rem;
+	height: 100%;
+	line-height: 1.2;
+	padding: 0.5rem;
+	text-align: center;
+	width: 100%;
+	word-break: break-word;
+	word-wrap: break-word;
 }
 .atalanta-notation__switch a:hover, .atalanta-notation__switch a:focus {
 	background-color: $yellow_bright;
 	color: #000;
 }
 .ata-music .transport button {
-	background-size: contain;
 	background-repeat: no-repeat;
+	background-size: contain;
 	border: 0;
 }
 .track-mute {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	flex-direction: column;
 	min-height: 110px;
 }
 .track-mute button {

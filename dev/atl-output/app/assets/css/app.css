@@ -6571,9 +6571,6 @@ body {
 body {
   padding: 0; }
 
-.music-test {
-  outline: 10px solid red; }
-
 .section__music {
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif; }
 
@@ -6588,16 +6585,11 @@ body {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto; }
   .section__music ._music .ata-music .transport {
-    background-color: transparent;
+    background-color: #DAE4EC;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -6606,10 +6598,16 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     grid-area: 1 / 2 / 2 / 12;
-    height: 20vh;
+    height: 14vh;
     margin-bottom: 1rem;
     padding: 0;
+    width: 100%;
     z-index: 10;
     /* music page SVG overlaps with transport controls */ }
   .section__music ._music .ata-music .ata-viz-cmn {
@@ -6631,11 +6629,6 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -6644,6 +6637,11 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   height: 15vh; }
   .ata-viz-pianoroll .transport .atalanta-notation-start {
     background-image: url("../icons/icon_play-outline.svg"); }
@@ -6655,23 +6653,57 @@ body {
   .ata-viz-pianoroll .transport .atalanta-notation-stop {
     background-image: url("../icons/icon_pause-outline.svg"); }
 
+.atalanta-notation__switch {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 90px;
+  width: 100px; }
+
 .atalanta-notation__switch a {
-  width: 14rem;
-  height: 3rem;
-  padding: .5rem 3rem;
   background-color: transparent;
   border: 2px solid #222;
   border-radius: 10px;
   color: #222;
-  font-size: 1.5rem; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  height: 100%;
+  line-height: 1.2;
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%;
+  word-break: break-word;
+  word-wrap: break-word; }
 
 .atalanta-notation__switch a:hover, .atalanta-notation__switch a:focus {
   background-color: #ffcd61;
   color: #000; }
 
 .ata-music .transport button {
-  background-size: contain;
   background-repeat: no-repeat;
+  background-size: contain;
   border: 0; }
 
 .track-mute {
@@ -6679,11 +6711,6 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -6692,6 +6719,11 @@ body {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   min-height: 110px; }
 
 .track-mute button {
