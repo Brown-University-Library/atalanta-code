@@ -7725,7 +7725,7 @@ main#image-search {
     cursor: pointer;
     position: relative;
     z-index: 50; }
-  .image-search__results-viz .results-viz--active {
+  .image-search__results-viz li.image--active {
     background-color: #808080; }
 
 .container--inactive {

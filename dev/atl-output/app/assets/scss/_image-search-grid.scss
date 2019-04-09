@@ -275,7 +275,7 @@ main#image-search {
 		position: relative;
 		z-index: 50;
 	}
-	.results-viz--active {
+	li.image--active {
 		background-color: $gray_medium;
 	}
 }
