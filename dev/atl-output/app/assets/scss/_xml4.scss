@@ -95,8 +95,8 @@ main.emblem-page.frontmatter {
 	.section__discourse .discourse.la h3.title {
 		background-color: transparent;
 	} /* ??? I won't need this after we sort out the h3.title issue in the English discourse */
-	.section__discourse.panel--left div.discourse, 
-	.section__discourse.panel--right div.discourse {
+	.section__discourse.grid--full div.discourse, 
+	.section__discourse.grid--full div.discourse {
 		h3.title {
 	/*		background-color: $error;*/
 		}
@@ -107,7 +107,7 @@ main.emblem-page.frontmatter {
 		margin-left: 100px;
 		margin-bottom: -3rem;
 	}
-	.section__discourse.panel--right span.note-mark:nth-of-type(2) {
+	.section__discourse.grid--full span.note-mark:nth-of-type(2) {
 	/*	background-color: $error;*/
 		grid-area: 1 / 3 / 3 / 4;
 		margin-left: .5rem;
@@ -305,10 +305,7 @@ main.emblem-page.frontmatter {
 		grid-template-columns: repeat(12, 1fr);
 		grid-template-rows: 1fr;
 	}
-	.panel--left .lang--english._motto--english , 
-	.panel--left .lang--latin._motto--latin, 
-	.panel--left .lang--german._motto--german, 
-	.panel--right .lang--english._motto--english , 
+	.panel--right .lang--english._motto--english, 
 	.panel--right .lang--latin._motto--latin, 
 	.panel--right .lang--german._motto--german {
 
@@ -359,8 +356,7 @@ main.emblem-page.frontmatter {
 			color: $white;
 		}
 	}
-	section.section__motto.panel--left, 
-	section.section__motto.panel--right {
+	.panel--right section.section__motto {
 		div.title, 
 		div.fugue, 
 		._motto--latin div.image {
@@ -436,8 +432,7 @@ main.emblem-page.frontmatter {
 			display: none;
 		}
 	}
-	section.section__epigram.panel--left, 
-	section.section__epigram.panel--right {
+	.panel--right section.section__epigram {
 		.translation .edition--facsimile h3.title {
 			text-indent: 40%;
 		}
@@ -547,7 +542,7 @@ main.emblem-page.frontmatter {
 			display: inline-block;
 		}*/
 	}
-	section.section__discourse.grid--right {
+	.panel--right section.section__discourse {
 		div.discourse {
 			grid-column: 2 / 12;
 			grid-template-columns: repeat(12, 1fr);
@@ -564,18 +559,12 @@ main.emblem-page.frontmatter {
 			margin-bottom: 0;
 		}
 	}
-	section.section__discourse.panel--left div.discourse {
-	 	div.margin-note {
-			left: 35vw;
-			width: 13vw;
-		}
-	}
-	/*.panel--left div.margin-note {  This is only worth the effort on large desktops ???
+	/*.panel--right div.margin-note {  This is only worth the effort on large desktops ???
 		left: calc(50vw - 10%);
 		padding-right: .5rem;
 		width: 10vw;
 	}*/
-	section.section__discourse.panel--right div.discourse {
+	.panel--right section.section__discourse div.discourse {
 		div.margin-note {
 			left: 85vw;
 			padding-right: 1rem;
@@ -1032,10 +1021,8 @@ main.emblem-page.frontmatter {
 				display: none;
 			}
 		}
-		section.section__epigram.panel--left .translation, 
-		section.section__epigram.panel--left .original, 
-		section.section__epigram.panel--right .translation, 
-		section.section__epigram.panel--right .original {
+		.panel--right section.section__epigram .translation, 
+		.panel--right section.section__epigram .original {
 			.verse-epigram {
 				grid-column: 3 / 11;
 			}
@@ -1050,10 +1037,8 @@ main.emblem-page.frontmatter {
 				padding-right: 1rem;
 			}
 		}
-		section.section__discourse.panel--left .translation, 
-		section.section__discourse.panel--left .original, 
-		section.section__discourse.panel--right .translation, 
-		section.section__discourse.panel--right .original {
+		.panel--right section.section__discourse .translation, 
+		.panel--right section.section__discourse .original {
 			span.note-mark, 
 			div.margin-note {
 				display: none;

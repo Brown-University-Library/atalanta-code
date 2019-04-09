@@ -17,6 +17,18 @@ main.emblem-page {
 	margin-top: $topnav-h;
 	padding: 0 0 .125rem 0;
 }
+.panel--full {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.panel--left {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+.panel--right {
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
 .emblem {
 	margin-top: $subnav-h;
 	display: grid;
@@ -30,29 +42,17 @@ main.emblem-page {
 	background-color: hsla(0, 0%, 100%, .97);
 	padding: 1rem 0;
 }
-.emblem section.section__motto, 
-.emblem .section__image section, 
-.emblem section.section__epigram {
-	background-color: $gray-dark_transparent;
-	color: $white;
-}
-.emblem section.section__motto.panel--right,
-.emblem .section__image.grid--right section,
-.emblem section.section__epigram.panel--right {
+.emblem.panel--right section.section__motto,
+.emblem.panel--right .section__image section,
+.emblem.panel--right section.section__epigram {
 	background-color: $white;
 	color: $text_body;
 }
-.panel--full {
-	grid-column-start: 1;
-	grid-column-end: 3;
-}
-.panel--left {
-	grid-column-start: 1;
-	grid-column-end: 2;
-}
-.panel--right {
-	grid-column-start: 2;
-	grid-column-end: 3;
+.emblem.panel--full section.section__motto, 
+.emblem.panel--full .section__image section, 
+.emblem.panel--full section.section__epigram {
+	background-color: $gray-dark_transparent;
+	color: $white;
 }
 .section__motto {
 	border: 5px solid red;
