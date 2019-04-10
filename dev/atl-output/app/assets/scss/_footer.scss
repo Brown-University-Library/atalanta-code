@@ -1,7 +1,13 @@
 @import 'colors';
 @import 'utilities';
 
-footer {
+/*._footer {
+	background-color: $gray;
+	height: 312px;
+	width: 100%;
+	z-index: $footer-z;
+}*/
+/*footer {
 	background-color: $gray;
 	color: $white;
 	font-size: .75rem;
@@ -33,10 +39,10 @@ footer {
 	li a:hover {
 		color: $yellow_bright;
 	}
-}
+}*/
 
 /* BREAKPOINTS */
-@media screen and (min-width: 320px) and (max-width: 767px) {
+/*@media screen and (min-width: 320px) and (max-width: 767px) {
 	footer {
 		height: 30vh;
 		padding: 2rem;
@@ -52,4 +58,4 @@ footer {
 		}
 	}
 
-}
+}*/
