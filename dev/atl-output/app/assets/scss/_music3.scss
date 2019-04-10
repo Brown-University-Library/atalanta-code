@@ -212,6 +212,21 @@ body {
 }
 
 
+/* Playing notes */
+.ata-viz-cmn svg .note {
+  /*transition: fill 0.3s, stroke-width 0.3s;*/
+}
+.ata-viz-cmn svg .note.highlighted {
+  fill: $red_inverse;
+}
+.ata-viz-cmn svg .note.highlighted path {
+  /*stroke-width: 50;*/
+  stroke: $red_inverse;
+}
+.ata-viz-cmn svg .note.highlighted text {
+
+}
+
 
 /* piano roll */
 .ata-viz-pianoroll.modal { /* the lity modal takes the element out of the document flow while active */

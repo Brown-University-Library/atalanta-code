@@ -3,8 +3,8 @@
 
 main.emblem-page {
 	background: $white;
-/*	background-image: url("../img/default/bkg-illustration.png");*/
-	/*background-repeat: no-repeat;*/
+/*	background-image: url("../img/default/bkg-illustration.png");
+	background-repeat: no-repeat;*/
 	/*background-size: cover;*/
 /*	background-size: contain;*/
 	display: grid;
@@ -55,8 +55,6 @@ main.emblem-page {
 	color: $white;
 }
 .section__motto {
-	border: 5px solid red;
-
 	grid-row-start: 1;
 	grid-row-end: 2;
 }
@@ -68,8 +66,6 @@ main.emblem-page {
 	max-height: 50vh;	
 }
 .section__image {
-	border: 5px solid blue;
-
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row-start: 2;
@@ -84,8 +80,6 @@ main.emblem-page {
 	}
 }
 .section__music {
-	border: 5px solid orange;
-
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row-start: 3;
@@ -96,15 +90,11 @@ main.emblem-page {
 	min-height: 100vh;
 }
 .section__epigram {
-	border: 5px solid pink;
-
 	grid-row-start: 4;
 	grid-row-end: 5;
 }
 .emblem section.section__epigram {
 	padding: 3rem 0 6rem 0;
-/*	height: 100%;*/
-
 }
 .emblem section.section__epigram.panel--right {
 	padding: 0 0 9rem 0;

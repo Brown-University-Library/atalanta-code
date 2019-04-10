@@ -320,6 +320,7 @@ main.emblem-page.frontmatter {
 		.translation h1.title, 
 		.original h1.title {
 			font-family: $display-font_emblem;
+			/*font-family: $display-font;*/
 			font-size: 2.625rem;
 			font-weight: 600;
 			line-height: 3.25rem;
@@ -365,6 +366,8 @@ main.emblem-page.frontmatter {
 		}
 		.translation h1.title, 
 		.original h1.title {
+			/*font-family: $display-font_emblem;*/
+			font-family: $display-font;
 			font-size: 2rem;
 			line-height: 2.5rem;
 		}
@@ -843,6 +846,7 @@ main.emblem-page.frontmatter {
 			margin-bottom: 2rem;
 			padding: 0 2rem;
 		}
+
 		div.translation ._frontispiece--english .ab:nth-of-type(4) {
 			margin-top: 2rem;
 		}
@@ -866,6 +870,14 @@ main.emblem-page.frontmatter {
 		}
 		.edition--original span.caps {
 			letter-spacing: .2em;
+		}
+	}
+	section.section__frontispiece.grid--full {
+		div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
+			padding: 0 10rem;
+		}
+		div.translation ._frontispiece--english .ab:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+			padding: 0 15rem;
 		}
 	}
 	

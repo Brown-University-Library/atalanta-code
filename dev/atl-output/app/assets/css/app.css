@@ -4257,8 +4257,8 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 /*$orange-red_darker: hsla(11, 72%, 42%, 1);*/
 main.emblem-page {
   background: white;
-  /*	background-image: url("../img/default/bkg-illustration.png");*/
-  /*background-repeat: no-repeat;*/
+  /*	background-image: url("../img/default/bkg-illustration.png");
+	background-repeat: no-repeat;*/
   /*background-size: cover;*/
   /*	background-size: contain;*/
   display: grid;
@@ -4309,7 +4309,6 @@ main.emblem-page {
   color: white; }
 
 .section__motto {
-  border: 5px solid red;
   grid-row-start: 1;
   grid-row-end: 2; }
 
@@ -4321,7 +4320,6 @@ main.emblem-page {
   max-height: 50vh; }
 
 .section__image {
-  border: 5px solid blue;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 2;
@@ -4337,7 +4335,6 @@ main.emblem-page {
     max-width: 30rem; }
 
 .section__music {
-  border: 5px solid orange;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 3;
@@ -4348,13 +4345,11 @@ main.emblem-page {
   min-height: 100vh; }
 
 .section__epigram {
-  border: 5px solid pink;
   grid-row-start: 4;
   grid-row-end: 5; }
 
 .emblem section.section__epigram {
-  padding: 3rem 0 6rem 0;
-  /*	height: 100%;*/ }
+  padding: 3rem 0 6rem 0; }
 
 .emblem section.section__epigram.panel--right {
   padding: 0 0 9rem 0; }
@@ -5051,6 +5046,7 @@ main.emblem-page.frontmatter {
   main.emblem-page.frontmatter section.section__motto .translation h1.title,
   main.emblem-page.frontmatter section.section__motto .original h1.title {
     font-family: "GTAmerica", "Usual", Helvetica, Arial, sans-serif;
+    /*font-family: $display-font;*/
     font-size: 2.625rem;
     font-weight: 600;
     line-height: 3.25rem;
@@ -5103,6 +5099,8 @@ main.emblem-page.frontmatter {
   main.emblem-page .panel--right section.section__motto .original h1.title,
   main.emblem-page.frontmatter .panel--right section.section__motto .translation h1.title,
   main.emblem-page.frontmatter .panel--right section.section__motto .original h1.title {
+    /*font-family: $display-font_emblem;*/
+    font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
     font-size: 2rem;
     line-height: 2.5rem; }
   main.emblem-page .panel--right section.section__motto .translation h3.title span.regularized,
@@ -5844,6 +5842,12 @@ main.emblem-page.frontmatter {
     main.emblem-page section.section__frontispiece .edition--original span.caps,
     main.emblem-page.frontmatter section.section__frontispiece .edition--original span.caps {
       letter-spacing: .2em; }
+  main.emblem-page section.section__frontispiece.grid--full div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2),
+  main.emblem-page.frontmatter section.section__frontispiece.grid--full div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
+    padding: 0 10rem; }
+  main.emblem-page section.section__frontispiece.grid--full div.translation ._frontispiece--english .ab:not(:nth-of-type(1)):not(:nth-of-type(2)),
+  main.emblem-page.frontmatter section.section__frontispiece.grid--full div.translation ._frontispiece--english .ab:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+    padding: 0 15rem; }
   main.emblem-page section.section__preface,
   main.emblem-page.frontmatter section.section__preface {
     /* English */
@@ -6590,6 +6594,17 @@ body {
   position: relative;
   top: 0; }
 
+/* Playing notes */
+.ata-viz-cmn svg .note {
+  /*transition: fill 0.3s, stroke-width 0.3s;*/ }
+
+.ata-viz-cmn svg .note.highlighted {
+  fill: #28bbdc; }
+
+.ata-viz-cmn svg .note.highlighted path {
+  /*stroke-width: 50;*/
+  stroke: #28bbdc; }
+
 /* piano roll */
 .ata-viz-pianoroll.modal {
   /* the lity modal takes the element out of the document flow while active */
@@ -6758,14 +6773,8 @@ button.lity-close {
 .frontmatter section {
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   height: auto;
-  /*	min-height: calc(100vh - 3.125rem);*/
-  /* subtracts topnav height */
   padding: 2rem; }
 
-/**.displayregioncontainer {
-	top: 200px;
-	outline: 20px solid orange;
-}*/
 /* PRODUCTION */
 /* TESTING */
 /* DEVELOPMENT */
