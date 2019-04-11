@@ -203,8 +203,9 @@ main.emblem-page.frontmatter {
 	    width: auto;
 	    padding-left: 0;
 	}
-	.note-mark{
-	    color: $text_body;
+	.note-mark, 
+	span.superscript {
+	    /*color: $text_body;*/
 		position: relative;
 		top: -.4em;
 		vertical-align: baseline;
@@ -957,6 +958,7 @@ main.emblem-page.frontmatter {
 
 	/* PREFACE */
 	section.section__preface {
+		padding-top: 4rem;
 		._preface--english,  
 		._preface--latin .page.italic {
 			grid-column: 1 / 13;
@@ -983,19 +985,56 @@ main.emblem-page.frontmatter {
 				letter-spacing: .2em;
 			}
 		}
+		.edition--original, 
 		.edition--regularized {
 			span.caps:nth-of-type(2) {
 				float: left;
 				font-family: $secondary-display-font_emblem;
 				font-size: 5rem;
-				font-weight: 600;
 				line-height: 0;
 				padding: 1px 1px 0 1px;
 			}
+		}
+		.edition--original {
 			span.caps:nth-of-type(3) {
-				font-family: $secondary-display-font_emblem;
-				font-weight: 600;
+				margin-left: -14px;
 			}
+		}
+	}
+	.panel--full section.section__preface {
+		padding-top: 5rem;
+		._preface--english{
+			.ab {
+				grid-column: 1 / 3;
+			}
+			div.margin-note {
+				left: 80vw;
+				width: 15vw;
+			}
+		}
+		._preface--english.edition--facsimile {
+			div.preface {
+				margin: 0 -4rem;
+			}
+			h3.title {
+				margin-bottom: 2rem;
+			}
+			.ab {
+				margin-top: -1.75rem;
+			}
+		}
+		._preface--latin.edition--regularized div.preface {
+			margin: 0 -2rem;
+		}
+		div.preface {
+			grid-column: 4 / 10;
+		}
+		div.margin-note {
+			left: 78vw;
+			width: 15vw;
+		}
+		div.margin-note span.original:nth-of-type(2) br { /* why does the first note need a line break after the sup??? */
+			display: none;
 		}
 	}
 

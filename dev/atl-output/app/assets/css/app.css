@@ -4950,8 +4950,10 @@ main.emblem-page.frontmatter {
     width: auto;
     padding-left: 0; }
   main.emblem-page .note-mark,
-  main.emblem-page.frontmatter .note-mark {
-    color: #4d4d4d;
+  main.emblem-page span.superscript,
+  main.emblem-page.frontmatter .note-mark,
+  main.emblem-page.frontmatter span.superscript {
+    /*color: $text_body;*/
     position: relative;
     top: -.4em;
     vertical-align: baseline; }
@@ -5920,6 +5922,7 @@ main.emblem-page.frontmatter {
     margin-right: -1rem; }
   main.emblem-page section.section__preface,
   main.emblem-page.frontmatter section.section__preface {
+    padding-top: 4rem;
     /* English */
     /* Latin */ }
     main.emblem-page section.section__preface ._preface--english,
@@ -5941,18 +5944,51 @@ main.emblem-page.frontmatter {
     main.emblem-page section.section__preface .edition--original span.caps,
     main.emblem-page.frontmatter section.section__preface .edition--original span.caps {
       letter-spacing: .2em; }
+    main.emblem-page section.section__preface .edition--original span.caps:nth-of-type(2),
     main.emblem-page section.section__preface .edition--regularized span.caps:nth-of-type(2),
+    main.emblem-page.frontmatter section.section__preface .edition--original span.caps:nth-of-type(2),
     main.emblem-page.frontmatter section.section__preface .edition--regularized span.caps:nth-of-type(2) {
       float: left;
       font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
       font-size: 5rem;
-      font-weight: 600;
       line-height: 0;
       padding: 1px 1px 0 1px; }
-    main.emblem-page section.section__preface .edition--regularized span.caps:nth-of-type(3),
-    main.emblem-page.frontmatter section.section__preface .edition--regularized span.caps:nth-of-type(3) {
-      font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
-      font-weight: 600; }
+    main.emblem-page section.section__preface .edition--original span.caps:nth-of-type(3),
+    main.emblem-page.frontmatter section.section__preface .edition--original span.caps:nth-of-type(3) {
+      margin-left: -14px; }
+  main.emblem-page .panel--full section.section__preface,
+  main.emblem-page.frontmatter .panel--full section.section__preface {
+    padding-top: 5rem; }
+    main.emblem-page .panel--full section.section__preface ._preface--english .ab,
+    main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english .ab {
+      grid-column: 1 / 3; }
+    main.emblem-page .panel--full section.section__preface ._preface--english div.margin-note,
+    main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english div.margin-note {
+      left: 80vw;
+      width: 15vw; }
+    main.emblem-page .panel--full section.section__preface ._preface--english.edition--facsimile div.preface,
+    main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english.edition--facsimile div.preface {
+      margin: 0 -4rem; }
+    main.emblem-page .panel--full section.section__preface ._preface--english.edition--facsimile h3.title,
+    main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english.edition--facsimile h3.title {
+      margin-bottom: 2rem; }
+    main.emblem-page .panel--full section.section__preface ._preface--english.edition--facsimile .ab,
+    main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english.edition--facsimile .ab {
+      margin-top: -1.75rem; }
+    main.emblem-page .panel--full section.section__preface ._preface--latin.edition--regularized div.preface,
+    main.emblem-page.frontmatter .panel--full section.section__preface ._preface--latin.edition--regularized div.preface {
+      margin: 0 -2rem; }
+    main.emblem-page .panel--full section.section__preface div.preface,
+    main.emblem-page.frontmatter .panel--full section.section__preface div.preface {
+      grid-column: 4 / 10; }
+    main.emblem-page .panel--full section.section__preface div.margin-note,
+    main.emblem-page.frontmatter .panel--full section.section__preface div.margin-note {
+      left: 78vw;
+      width: 15vw; }
+    main.emblem-page .panel--full section.section__preface div.margin-note span.original:nth-of-type(2) br,
+    main.emblem-page.frontmatter .panel--full section.section__preface div.margin-note span.original:nth-of-type(2) br {
+      /* why does the first note need a line break after the sup??? */
+      display: none; }
   main.emblem-page .lang--latin._discourse--latin .pb,
   main.emblem-page.frontmatter .lang--latin._discourse--latin .pb {
     display: none; }
