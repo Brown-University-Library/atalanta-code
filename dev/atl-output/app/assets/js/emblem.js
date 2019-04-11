@@ -79,7 +79,6 @@ $(function () {
 	// var emblemNumTextArea = '#sidenav__titles';
 
 
-
 /* INITIALIZE */
 	onLoad(); // DISPLAY EMBLEM MENU AND DEFAULT OPTIONS ON PAGE LOAD
 
