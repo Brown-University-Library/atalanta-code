@@ -217,11 +217,11 @@ body {
   /*transition: fill 0.3s, stroke-width 0.3s;*/
 }
 .ata-viz-cmn svg .note.highlighted {
-  fill: $red_inverse;
+  fill: $yellow_inverse;
 }
 .ata-viz-cmn svg .note.highlighted path {
   /*stroke-width: 50;*/
-  stroke: $red_inverse;
+  stroke: $yellow_inverse;
 }
 .ata-viz-cmn svg .note.highlighted text {
 

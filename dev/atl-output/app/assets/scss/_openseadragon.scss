@@ -40,7 +40,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	color: $aqua;
+	color: $white;
 	flex: 1 0 0px;
 	font-size: .875rem;
 	padding: 0 .25rem;
@@ -50,11 +50,11 @@
 	text-align: center;
 }
 #tools a:hover, #tools a:focus {
-	color: $orange-yellow;
+	color: $yellow_bright;
 	transition: .3s;
 }
 #tools a:active {
-	color: $gray-medium;
+	color: $gray_medium;
 	transition: .3s;
 }
 #icon_arrow-left-lineart, #icon_arrow-right-lineart {
@@ -62,75 +62,75 @@
 	height: 4rem;
 }
 #icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline, #icon_zoom-in-lineart g#handle path, #icon_zoom-in-lineart g#symbol path, #icon_zoom-out-lineart g#handle path, #icon_zoom-out-lineart g#symbol line {
-	stroke: $aqua;
+	stroke: $white;
 }
 #icon_zoom-in-lineart g#glass path, #icon_zoom-out-lineart g#glass path {
-	fill: $aqua;
+	fill: $white;
 }
 #icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline {
 	stroke-width: 10;
 }
 #next:hover, #next:focus {
 	#icon_arrow-right-lineart polyline {
-		stroke: $orange-yellow;
+		stroke: $yellow_bright;
 		transition: .3s;
 	}
 }
 #next:active {
 	#icon_arrow-right-lineart polyline {
-		stroke: $gray-medium;
+		stroke: $gray_medium;
 		transition: .3s;
 	}
 }
 #previous:hover, #previous:focus {
 	#icon_arrow-left-lineart polyline {
-		stroke: $orange-yellow;
+		stroke: $yellow_bright;
 		transition: .3s;
 	}
 }
 #previous:active {
 	#icon_arrow-left-lineart polyline {
-		stroke: $gray-medium;
+		stroke: $gray_medium;
 		transition: .3s;
 	}
 }
 #zoom-in:hover, #zoom-in:focus {
 	#icon_zoom-in-lineart g#handle path, #icon_zoom-in-lineart g#symbol path {
-		stroke: $orange-yellow;
+		stroke: $yellow_bright;
 		transition: .3s;
 	}
 	#icon_zoom-in-lineart g#glass path {
-		fill: $orange-yellow;
+		fill: $yellow_bright;
 		transition: .3s;
 	}
 }
 #zoom-in:active {
 	#icon_zoom-in-lineart g#handle path, #icon_zoom-in-lineart g#symbol path {
-		stroke: $gray-medium;
+		stroke: $gray_medium;
 		transition: .3s;
 	}
 	#icon_zoom-in-lineart g#glass path {
-		fill: $gray-medium;
+		fill: $gray_medium;
 		transition: .3s;
 	}
 }
 #zoom-out:hover, #zoom-out:focus {
 	#icon_zoom-out-lineart g#handle path, #icon_zoom-out-lineart g#symbol line {
-		stroke: $orange-yellow;
+		stroke: $yellow_bright;
 		transition: .3s;
 	}
 	#icon_zoom-out-lineart g#glass path {
-		fill: $orange-yellow;
+		fill: $yellow_bright;
 		transition: .3s;
 	}
 }
 #zoom-out:active {
 	#icon_zoom-out-lineart g#handle path, #icon_zoom-out-lineart g#symbol line {
-		stroke: $gray-medium;
+		stroke: $gray_medium;
 		transition: .3s;
 	}
 	#icon_zoom-out-lineart g#glass path {
-		fill: $gray-medium;
+		fill: $gray_medium;
 		transition: .3s;
 	}
 }
