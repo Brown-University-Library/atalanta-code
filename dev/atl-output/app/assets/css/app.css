@@ -5717,13 +5717,16 @@ main.emblem-page.frontmatter {
       letter-spacing: .2em; }
   main.emblem-page .panel--full section.section__frontispiece,
   main.emblem-page.frontmatter .panel--full section.section__frontispiece {
-    padding-top: 6rem; }
+    padding-top: 4rem; }
     main.emblem-page .panel--full section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2),
     main.emblem-page.frontmatter .panel--full section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
-      padding: 0 10rem; }
+      padding: 0 16rem; }
     main.emblem-page .panel--full section.section__frontispiece div.translation ._frontispiece--english .ab:not(:nth-of-type(1)):not(:nth-of-type(2)),
     main.emblem-page.frontmatter .panel--full section.section__frontispiece div.translation ._frontispiece--english .ab:not(:nth-of-type(1)):not(:nth-of-type(2)) {
-      padding: 0 15rem; }
+      padding: 0 19rem; }
+    main.emblem-page .panel--full section.section__frontispiece div.original ._frontispiece--latin,
+    main.emblem-page.frontmatter .panel--full section.section__frontispiece div.original ._frontispiece--latin {
+      padding: 0 19rem; }
   main.emblem-page section.section__author-epigram,
   main.emblem-page.frontmatter section.section__author-epigram {
     padding-top: 4rem;
@@ -5814,6 +5817,10 @@ main.emblem-page.frontmatter {
     main.emblem-page.frontmatter section.section__author-epigram .edition--regularized .v-line span.regularized,
     main.emblem-page.frontmatter section.section__author-epigram .edition--regularized .v-line-indent span.regularized {
       display: inline-block; }
+  main.emblem-page .panel--full section.section__author-epigram div.epigram,
+  main.emblem-page.frontmatter .panel--full section.section__author-epigram div.epigram {
+    grid-column: 5 / 9;
+    margin: 0 -2rem; }
   main.emblem-page section.section__dedication ._dedication--english,
   main.emblem-page.frontmatter section.section__dedication ._dedication--english {
     padding-top: 3rem; }
@@ -5932,7 +5939,11 @@ main.emblem-page.frontmatter {
       grid-column: 1 / 13; }
     main.emblem-page section.section__preface .edition--facsimile h3.title,
     main.emblem-page.frontmatter section.section__preface .edition--facsimile h3.title {
-      text-align: center; }
+      text-align: center;
+      margin-bottom: 2rem; }
+    main.emblem-page section.section__preface .edition--facsimile .ab,
+    main.emblem-page.frontmatter section.section__preface .edition--facsimile .ab {
+      margin-top: -1.75rem; }
     main.emblem-page section.section__preface .edition--normalized h3.title,
     main.emblem-page.frontmatter section.section__preface .edition--normalized h3.title {
       font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
@@ -5969,12 +5980,6 @@ main.emblem-page.frontmatter {
     main.emblem-page .panel--full section.section__preface ._preface--english.edition--facsimile div.preface,
     main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english.edition--facsimile div.preface {
       margin: 0 -4rem; }
-    main.emblem-page .panel--full section.section__preface ._preface--english.edition--facsimile h3.title,
-    main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english.edition--facsimile h3.title {
-      margin-bottom: 2rem; }
-    main.emblem-page .panel--full section.section__preface ._preface--english.edition--facsimile .ab,
-    main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english.edition--facsimile .ab {
-      margin-top: -1.75rem; }
     main.emblem-page .panel--full section.section__preface ._preface--latin.edition--regularized div.preface,
     main.emblem-page.frontmatter .panel--full section.section__preface ._preface--latin.edition--regularized div.preface {
       margin: 0 -2rem; }

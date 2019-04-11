@@ -728,12 +728,15 @@ main.emblem-page.frontmatter {
 		}
 	}
 	.panel--full section.section__frontispiece {
-		padding-top: 6rem;
+		padding-top: 4rem;
 		div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
-			padding: 0 10rem;
+			padding: 0 16rem;
 		}
 		div.translation ._frontispiece--english .ab:not(:nth-of-type(1)):not(:nth-of-type(2)) {
-			padding: 0 15rem;
+			padding: 0 19rem;
+		}
+		div.original ._frontispiece--latin {
+			padding: 0 19rem;
 		}
 	}
 	
@@ -828,6 +831,12 @@ main.emblem-page.frontmatter {
 					display: inline-block;
 				}
 			}
+		}
+	}
+	.panel--full section.section__author-epigram {
+		div.epigram {
+			grid-column: 5 / 9;
+			margin: 0 -2rem;
 		}
 	}
 
@@ -967,6 +976,10 @@ main.emblem-page.frontmatter {
 		.edition--facsimile {
 			h3.title {
 				text-align: center;
+				margin-bottom: 2rem;
+			}
+			.ab {
+				margin-top: -1.75rem;
 			}
 		}
 		.edition--normalized {
@@ -1012,16 +1025,8 @@ main.emblem-page.frontmatter {
 				width: 15vw;
 			}
 		}
-		._preface--english.edition--facsimile {
-			div.preface {
-				margin: 0 -4rem;
-			}
-			h3.title {
-				margin-bottom: 2rem;
-			}
-			.ab {
-				margin-top: -1.75rem;
-			}
+		._preface--english.edition--facsimile div.preface {
+			margin: 0 -4rem;
 		}
 		._preface--latin.edition--regularized div.preface {
 			margin: 0 -2rem;
