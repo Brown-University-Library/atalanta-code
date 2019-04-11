@@ -85,6 +85,8 @@ EMBLEM DISCOURSE
 																.discourse-p2
 
 */
+
+
 main.emblem-page, 
 main.emblem-page.frontmatter {
 	/********** ENGLISH XML ISSUES **************/
@@ -113,8 +115,10 @@ main.emblem-page.frontmatter {
 		margin-left: .5rem;
 	}
 	/********** END OF ENGLISH XML ISSUES **************/
+}
 
-
+main.emblem-page, 
+main.emblem-page.frontmatter {
 	/*********** ENGLISH EMBLEM OVERRIDES *************/
 	.italic {
 		font-style: oblique;
@@ -284,8 +288,11 @@ main.emblem-page.frontmatter {
 		white-space: nowrap;
 	}
 	/*********** END OF ENGLISH EMBLEM OVERRIDES *************/
+}
 
-	/*********** EMBLEM LAYOUT *************/
+/*********** EMBLEM LAYOUT *************/
+main.emblem-page, 
+main.emblem-page.frontmatter {
 /*	div.translation, 
 	div.original {
 		height: 100%;
@@ -314,7 +321,11 @@ main.emblem-page.frontmatter {
 	.panel--right .lang--german._motto--german {
 
 	}
-	/* MOTTO - ENGLISH/LATIN/GERMAN */
+}
+
+/* MOTTO - ENGLISH/LATIN/GERMAN */
+main.emblem-page, 
+main.emblem-page.frontmatter {
 	section.section__motto {
 		div.title, 
 		div.fugue, 
@@ -380,7 +391,11 @@ main.emblem-page.frontmatter {
 			color: $text_body;
 		}
 	}
-	/* EPIGRAM - ENGLISH/LATIN/GERMAN */
+}
+
+/* EPIGRAM - ENGLISH/LATIN/GERMAN */
+main.emblem-page, 
+main.emblem-page.frontmatter {
 	section.section__epigram {
 		.translation div.epigram, 
 		.original div.epigram {
@@ -460,8 +475,11 @@ main.emblem-page.frontmatter {
 			color: $text_body;
 		}
 	}
+}
 
-	/* DISCOURSE - ENGLISH/LATIN */
+/* DISCOURSE - ENGLISH/LATIN */
+main.emblem-page, 
+main.emblem-page.frontmatter {
 	section.section__discourse, 
 	section.section__preface {
 		div.translation, 
@@ -551,6 +569,7 @@ main.emblem-page.frontmatter {
 	}
 	.panel--right section.section__discourse {
 		div.discourse {
+			/*outline: 5px solid red;*/
 			grid-column: 2 / 12;
 			grid-template-columns: repeat(12, 1fr);
 		}
@@ -566,6 +585,12 @@ main.emblem-page.frontmatter {
 			margin-bottom: 0;
 		}
 	}
+	.panel--full section.section__discourse {
+		div.discourse {
+			grid-column: 4 / 13;
+			padding-left: 1rem;
+		}
+	}
 	/*.panel--right div.margin-note {  This is only worth the effort on large desktops ???
 		left: calc(50vw - 10%);
 		padding-right: .5rem;
@@ -577,21 +602,46 @@ main.emblem-page.frontmatter {
 			padding-right: 1rem;
 		}
 	}
-	/*********** END OF EMBLEM LAYOUT *************/
-
-	/*********** ENGLISH EMBLEM STYLES *************/
-	.translation div.edition--facsimile span.underline2 {
-		border-bottom: 2px solid $gray-dark;
+	.panel--right 
+		div.margin-note span.original:nth-of-type(2) br { /* why does this margin note need a line break after the sup??? */
+			display: none;
+		}
+}
+main.emblem-page .panel--right {
+	.section__discourse.grid--full span.note-mark:nth-of-type(2) { /* why is this a different size than other note marks??? */
+		margin-left: 1rem;
 	}
+}
+main.emblem-page .panel--full {
+	.section__discourse.grid--full span.note-mark:nth-of-type(2) { /* why is this a different size than other note marks??? */
+	/*	background-color: $error;*/
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
+		margin-left: 7rem;
+	}
+}
+main.emblem-page .panel--full section.section__discourse div.discourse {
+	grid-column: 3 / 13;
+	padding: 0;
+}
+/*********** END OF EMBLEM LAYOUT *************/
+
+
+/*********** ENGLISH EMBLEM XML STYLES *************/
+main.emblem-page, 
+main.emblem-page.frontmatter {
+	.translation div.edition--facsimile span.underline2 {
+		border-bottom: 2px solid $gray;
+	}
+}
 	/*********** END OF ENGLISH EMBLEM STYLES *************/
 
 
-	/*********** FRONTMATTER *************/
-	main.frontmatter {
-		background: $white;
-		.pb {
-			display: none;
-		}
+/*********** FRONTMATTER *************/
+main.emblem-page.frontmatter {
+	background: $white;
+	.pb {
+		display: none;
 	}
 	section.section__author-epigram, 
 	section.section__dedication, 
@@ -680,13 +730,14 @@ main.emblem-page.frontmatter {
 /*		._preface--english div.margin-note {
 			left: 85vw;
 		}*/
-		div.margin-note.line2 {
+/*		div.margin-note.line2 {
 			display: block;
-		}
+		}*/
 	}
+}
 
-
-	/* FRONTISPIECE */
+/* FRONTISPIECE */
+main.emblem-page.frontmatter {
 	section.section__frontispiece {
 		padding-top: 2rem;
 		/* English */
@@ -739,8 +790,10 @@ main.emblem-page.frontmatter {
 			padding: 0 19rem;
 		}
 	}
-	
-	/* AUTHOR'S EPIGRAM */
+}
+
+/* AUTHOR'S EPIGRAM */
+main.emblem-page.frontmatter {
 	section.section__author-epigram {
 		padding-top: 4rem;
 		/* English */
@@ -839,8 +892,10 @@ main.emblem-page.frontmatter {
 			margin: 0 -2rem;
 		}
 	}
+}
 
-	/* DEDICATION */
+/* DEDICATION */
+main.emblem-page.frontmatter {
 	/* English */
 	section.section__dedication ._dedication--english {
 		padding-top: 3rem;
@@ -963,9 +1018,10 @@ main.emblem-page.frontmatter {
 		margin-left: -1rem;
 		margin-right: -1rem;
 	}
+}
 
-
-	/* PREFACE */
+/* PREFACE */
+main.emblem-page.frontmatter {
 	section.section__preface {
 		padding-top: 4rem;
 		._preface--english,  
@@ -1042,22 +1098,28 @@ main.emblem-page.frontmatter {
 			display: none;
 		}
 	}
+}
+/*********** END OF FRONTMATTER *************/
 
+/*********** TESTS *************/
+main.emblem-page, 
+main.emblem-page.frontmatter {
 
-
-	/*********** END OF FRONTMATTER *************/
-
-	/*********** TESTS *************/
 	.lang--latin._discourse--latin .pb {
 		display: none;
 	}
 	.discourse.la .pb {
 		display: none !important;
 	}
-	/****************************************/
 }
+/************ END TESTS **************/
+
 
 /***************** BREAKPOINTS *****************/
+main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
+	/*border: 5px solid red;*/
+/*	margin-top: 3.5rem;*/
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
 	main.emblem-page {
 		section.section__motto > div.original {
