@@ -14,3 +14,16 @@ emblem-music-snippet/package-lock.json
 fonts
 
 atl-demo-site
+
+# atalanta-search #
+###################
+atl-output/app/assets/js/page.js
+atl-output/app/assets/js/search.js
+atl-output/app/assets/js/searchfunction.js
+atl-output/app/assets/js/page.pug
+atl-output/app/assets/js/lunr-languages/*
+atl-output/app/data/json/searchindex.json
+atl-output/app/data/json/searchdocs.json
+atl-output/app/data/json/byterm_enh_array.json
+
+
