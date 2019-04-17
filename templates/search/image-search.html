@@ -9,1136 +9,1219 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" />
 </head>
 <body>
-<!-- GLOBAL NAVIGATION -->
 	<header data-page-type="image-search">
-		<div class="_topnav" data-nav="image-search"></div>
+		<div class="_topnav" data-nav="image-search">
+			<nav class="topnav" aria-label="Main">
+				<button class="topnav__hamburger--closed" aria-hidden="true" aria-label="Mobile menu"></button>
+				<ul>
+					<li class="topnav__logo">
+						<a aria-label="Return to Furnace and Fugue home" href="../index.html"></a>
+					</li>
+					<li class="topnav__content">
+						<ul>
+							<li><a href="../atalanta-fugiens/toc_af.html">Digital Edition</a></li>
+							<li><a href="../atalanta-essays/toc_essays.html">Essays</a></li>
+							<li><a href="../search/image-search.html">Images</a></li>
+							<li><a href="../search/toc.html">Contents</a></li>
+						</ul>
+					</li>
+					<li class="topnav__search">
+						<button class="topnav__search--closed">
+							<span class="topnav__search-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 960 560" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:#fff; stroke-width:20;stroke-miterlimit:10;}</style><g id="handle"><g><path class="st0" d="M537.6,337.5l97,97L537.6,337.5z"/></g></g><g id="glass"><g><path class="st0" d="M480,153c33.9,0,65.8,13.2,89.8,37.2S607,246.1,607,280s-13.2,65.8-37.2,89.8S513.9,407,480,407s-65.8-13.2-89.8-37.2
+							S353,313.9,353,280s13.2-65.8,37.2-89.8S446.1,153,480,153 M480,143c-75.7,0-137,61.3-137,137s61.3,137,137,137s137-61.3,137-137
+							S555.7,143,480,143L480,143z"/></g></g></svg></span>
+							<span class="topnav__search-label">Search</span>
+						</button>
+					</li>
+				</ul>
+			</nav>
+			<div class="search__modal" aria-hidden="true">
+				<button class="x-close" aria-label="Close search modal"></button>
+			    <form id="ataSearch" class="search__bar">
+			        <label class="label search__bar__label" for="search__bar__field">Enter your search below</label>
+			        <input type="text" id="search__bar__field" aria-label="Search the digital edition, scholarly essays or emblem images">
+			        <button class="submit" type="submit">Search</button>
+			    </form>
+			</div>
+		</div>
 	</header>
 	<main id="image-search">
 		<nav class="image-search-filters" aria-label="Filters">
-			<ul class="image-search__categories">
-				<li class="category__item category--actions">
-					<a href="#" aria-haspopup="true" aria-expanded="false"></a>
-					<ul class="image-search__subcategories">
-						<li class="subcategory__item">
-							<div class="subcategory__label"><a href="#"></a></div>
-							<ul class="subcategory__terms">
-								<li class="subcategory__term-item">
-									<a href="#">
-										<span class="image-term"></span>
-										<span class="image-term__number"></span>
-										<span class="image-term__icon"></span>
-									</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-			</ul>
+
 		</nav>
 		<div class="image-search__breadcrumbs">
-		<!-- I STILL NEED TO WORK ON THIS -->
-			<div class="breadcrumbs__selection">
-				<div class="selection__label">Selection</div>
-				<div class="selection__terms">
-				</div>
+			<div class="breadcrumbs__selected-filters">
+				<div class="filters__label">Selection</div>
+				<ul class="filters__list">
+					<li><a href="#"><span class="selected-filter">Selected Term Goes Here</span><span class="selected-filter__icon"></span></a></li>
+				</ul>
+			</div>
+			<div class="breadcrumbs__copy-link">
+			<!-- I STILL NEED TO WORK ON THIS -->
+				<button id='btn-shuffle'>Shuffle</button>
 			</div>
 		</div>
 		<div class="image-search__hero">
 			<div class="hero__bkg">Explore Images</div>
 			<h1 class="hero__heading">Select a category above to explore elements of the images from <cite>Atalanta fugiens</cite></h1>
 		</div>
-		<div class="image-search__results-viz">
-		<!-- I STILL NEED TO WORK ON THIS -->
+		<div class="image-search__results-viz" aria-hidden="true">
 			<div class="results-viz__label">Results</div>
 			<ul class="results-viz__items">
-				<li></li>
+				<li class="image--active"/><a class="tooltip" data-href="#image0" title="Move to Frontispiece"></a></li>
+				<li><a class="tooltip" data-href="#image1" title="Move to Emblem 1"></a></li>
+				<li><a class="tooltip" data-href="#image2" title="Move to Emblem 2"></a></li>
+				<li><a class="tooltip" data-href="#image3" title="Move to Emblem 3"></a></li>
+				<li><a class="tooltip" data-href="#image4" title="Move to Emblem 4"></a></li>
+				<li><a class="tooltip" data-href="#image5" title="Move to Emblem 5"></a></li>
+				<li><a class="tooltip" data-href="#image6" title="Move to Emblem 6"></a></li>
+				<li><a class="tooltip" data-href="#image7" title="Move to Emblem 7"></a></li>
+				<li><a class="tooltip" data-href="#image8" title="Move to Emblem 8"></a></li>
+				<li><a class="tooltip" data-href="#image9" title="Move to Emblem 9"></a></li>
+				<li><a class="tooltip" data-href="#image10" title="Move to Emblem 10"></a></li>
+				<li><a class="tooltip" data-href="#image11" title="Move to Emblem 11"></a></li>
+				<li><a class="tooltip" data-href="#image12" title="Move to Emblem 12"></a></li>
+				<li><a class="tooltip" data-href="#image13" title="Move to Emblem 13"></a></li>
+				<li><a class="tooltip" data-href="#image14" title="Move to Emblem 14"></a></li>
+				<li><a class="tooltip" data-href="#image15" title="Move to Emblem 15"></a></li>
+				<li><a class="tooltip" data-href="#image16" title="Move to Emblem 16"></a></li>
+				<li><a class="tooltip" data-href="#image17" title="Move to Emblem 17"></a></li>
+				<li><a class="tooltip" data-href="#image18" title="Move to Emblem 18"></a></li>
+				<li><a class="tooltip" data-href="#image19" title="Move to Emblem 19"></a></li>
+				<li><a class="tooltip" data-href="#image20" title="Move to Emblem 20"></a></li>
+				<li><a class="tooltip" data-href="#image21" title="Move to Emblem 21"></a></li>
+				<li><a class="tooltip" data-href="#image22" title="Move to Emblem 22"></a></li>
+				<li><a class="tooltip" data-href="#image23" title="Move to Emblem 23"></a></li>
+				<li><a class="tooltip" data-href="#image24" title="Move to Emblem 24"></a></li>
+				<li><a class="tooltip" data-href="#image25" title="Move to Emblem 25"></a></li>
+				<li><a class="tooltip" data-href="#image26" title="Move to Emblem 26"></a></li>
+				<li><a class="tooltip" data-href="#image27" title="Move to Emblem 27"></a></li>
+				<li><a class="tooltip" data-href="#image28" title="Move to Emblem 28"></a></li>
+				<li><a class="tooltip" data-hef="#image29" title="Move to Emblem 29"></a></li>
+				<li><a class="tooltip" data-href="#image30" title="Move to Emblem 30"></a></li>
+				<li><a class="tooltip" data-href="#image31" title="Move to Emblem 31"></a></li>
+				<li><a class="tooltip" data-href="#image32" title="Move to Emblem 32"></a></li>
+				<li><a class="tooltip" data-href="#image33" title="Move to Emblem 33"></a></li>
+				<li><a class="tooltip" data-href="#image34" title="Move to Emblem 34"></a></li>
+				<li><a class="tooltip" data-href="#image35" title="Move to Emblem 35"></a></li>
+				<li><a class="tooltip" data-href="#image36" title="Move to Emblem 36"></a></li>
+				<li><a class="tooltip" data-href="#image37" title="Move to Emblem 37"></a></li>
+				<li><a class="tooltip" data-href="#image38" title="Move to Emblem 38"></a></li>
+				<li><a class="tooltip" data-href="#image39" title="Move to Emblem 39"></a></li>
+				<li><a class="tooltip" data-href="#image40" title="Move to Emblem 40"></a></li>
+				<li><a class="tooltip" data-href="#image41" title="Move to Emblem 41"></a></li>
+				<li><a class="tooltip" data-href="#image42" title="Move to Emblem 42"></a></li>
+				<li><a class="tooltip" data-href="#image43" title="Move to Emblem 43"></a></li>
+				<li><a class="tooltip" data-href="#image44" title="Move to Emblem 44"></a></li>
+				<li><a class="tooltip" data-href="#image45" title="Move to Emblem 45"></a></li>
+				<li><a class="tooltip" data-href="#image46" title="Move to Emblem 46"></a></li>
+				<li><a class="tooltip" data-href="#image47" title="Move to Emblem 47"></a></li>
+				<li><a class="tooltip" data-href="#image48" title="Move to Emblem 48"></a></li>
+				<li><a class="tooltip" data-href="#image49" title="Move to Emblem 49"></a></li>
+				<li><a class="tooltip" data-href="#image50" title="Move to Emblem 50"></a></li>
 			</ul>
 		</div>
-		<div class="image-search__copy-url">
-		<!-- I STILL NEED TO WORK ON THIS -->
-			<button class="copy-url__button">
-				<span class="copy-url__label">Copy Results URL</span>
-				<span class="copy-url__icon"></span>
-			</button>
-			<div class="copy-url__modal"></div>
-		</div>
-		<div class="image-results__container">
-			<div class="image-results__item item--active" data-item-num="0">
-				<img class="image-results__image image--active" src="../assets/img/emblem-images_cropped/320/emblem00.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Frontispiece</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
+		<div class="image-results__wrapper">
+			<div class="image-results__container container--active">
+			<!-- RESULT ITEM TEMPLATE -->
+			<!-- <div class="image-results__item item--active" dataItemNum="" title="">
+					<img class="image-results__image image--active" src="" alt="" />
+					<div class="image-results__details">
+						<div class="image-results__label"></div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
 					</div>
-					<div class="image-results__all-terms"></div>
+				</div> -->
+				<div id="image0" class="image-results__item item--inactive" dataItemNum="0" title="Frontispiece">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem00.320.jpg" alt="The frontispiece, or first illustrated page, contains a short introductory text surrounded by multiple scenes from the myth of Atalanta and Hippomenes. These include the Garden of the Hesperides, which includes Aegle, Arethusa, a many-headed dragon, understood as Ladon, and Hespertusa; Hercules stealing apples; Venus giving apples to Hippomenes; the race between Hippomenes and Atalanta; the consummation of their love; and their transformation into lions." />
+					<div class="image-results__details">
+						<div class="image-results__label">Frontispiece</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image1" class="image-results__item item--active" dataItemNum="1" title="Emblem 1">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem01.320.jpg" alt="A bearded nude man, identified as Boreas, with wind gusts extending from his head and arms has a fetus inside his stomach. He is standing amongst bushes with a river and cityscape in the background." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 1</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image2" class="image-results__item item--active" dataItemNum="2" title="Emblem 2">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem02.320.jpg" alt="A woman with Earth as her torso, understood as Mother Earth, is nursing a baby, understood as the philosophical child. At the woman’s feet is a wolf nursing two babies identified as Romulus and Remus. A goat identified as Jove is also nursing a baby." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 2</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image3" class="image-results__item item--active" dataItemNum="3" title="Emblem 3">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem03.320.jpg" alt="A woman in early modern clothing is pouring water into a large steaming tub. At the bottom of the tub water flows from a spigot to a smaller tub. To the left, a brick firepit with faggots produces smoke."/>
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 3</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image4" class="image-results__item item--active" dataItemNum="4" title="Emblem 4">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem04.320.jpg" alt="A man and woman in classical clothing are embracing next to a standing bearded man in classical clothing who is proffering a cup to the couple." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 4</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image5" class="image-results__item item--active" dataItemNum="5" title="Emblem 5">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem05.320.jpg" alt="A bearded man in classical clothing is foisting a toad towards a woman’s breast to nurse. In the background of the courtyard, two men and a dog are walking away." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 5</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image6" class="image-results__item item--active" dataItemNum="6" title="Emblem 6">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem06.320.jpg" alt="A beardless man in early modern clothing is sowing gold coins from a bowl into a plowed field." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 6</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image7" class="image-results__item item--active" dataItemNum="7" title="Emblem 7">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem07.320.jpg" alt="Two chickens prepare to fly from a nest on top of a rocky crag. Behind the rocky crag there is a river flowing between two cityscapes connected by a bridge." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 7</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image8" class="image-results__item item--active" dataItemNum="8" title="Emblem 8">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem08.320.jpg" alt="A bearded man in classical clothing holds a sword with one hand and is looking at an egg on a low table. He is in a courtyard with a door to his right, a fire with smoke in front of him, and a passageway behind him." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 8</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image9" class="image-results__item item--active" dataItemNum="9" title="Emblem 9">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem09.320.jpg" alt="An elderly bearded man is sitting in a temple that contains a fruit tree. He is framed by an arch and is seen picking and eating apples from the tree." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 9</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image10" class="image-results__item item--active" dataItemNum="10" title="Emblem 10">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem10.320.jpg" alt="A bearded man holds a lit faggot above a smoky fire set on a hearth. A man in classical clothing, identified as Hermes, is walking past the man towards a sitting man in classical clothing, also identified as Hermes." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 10</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image11" class="image-results__item item--active" dataItemNum="11" title="Emblem 11">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem11.320.jpg" alt="A woman in classical clothing, identified as Latona, is seated with two children standing at her feet. One, identified as Sol, has a sun face; and the other, identified as Diana, has a crescent moon on her head. A bearded man in classical clothing is washing the woman’s neck while another man is tearing a book." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 11</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image12" class="image-results__item item--active" dataItemNum="12" title="Emblem 12">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem12.320.jpg" alt="A bearded man in classical clothing, identified as Saturn, flies over a rocky crag while holding a scythe and vomiting up a stone. A path winds down the crag, passes through an arch, and forks at the base. One branch of the path leads to a church with a cross on the roof." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 12</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image13" class="image-results__item item--active" dataItemNum="13" title="Emblem 13">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem13.320.jpg" alt="A nude leprous man, identified as Naaman, is sitting on a bank and washing in the river. Behind him is a cityscape with a bridge." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 13</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image14" class="image-results__item item--active" dataItemNum="14" title="Emblem 14">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem14.320.jpg" alt="A dragon with wings is biting its tail forming an ouroboros. There are ruins and an arch around the ouroboros." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 14</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image15" class="image-results__item item--active" dataItemNum="15" title="Emblem 15">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem15.320.jpg" alt="A bearded man in early modern clothing is sitting at a pottery wheel turning a pot. He is sitting on a chair in a house with various bowls and pitchers on the floor and shelves." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 15</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image16" class="image-results__item item--active" dataItemNum="16" title="Emblem 16">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem16.320.jpg" alt="A lion clutches a lion with wings. Behind them there are ruins and trees." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 16</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image17" class="image-results__item item--active" dataItemNum="17" title="Emblem 17">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem17.320.jpg" alt="In the middle of a river four spheres containing fire are stacked vertically. Boats, houses, and trees frame the scene." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 17</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image18" class="image-results__item item--active" dataItemNum="18" title="Emblem 18">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem18.320.jpg" alt="A man in early modern clothing wearing a hat is heating a fire in a hearth with a rod. Next to him is a bowl full of gold coins on a stump and a dog. There is a man in a background courtyard." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 18</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image19" class="image-results__item item--active" dataItemNum="19" title="Emblem 19">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem19.320.jpg" alt="Four bearded nude men are attacking a man with a club by throwing either fire, wind, water, or earth. Behind them is a river and a cityscape." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 19</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image20" class="image-results__item item--active" dataItemNum="20" title="Emblem 20">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem20.320.jpg" alt="A figure in armor with a shield and sword is shielding a fleeing nude woman from a large fire with smoke." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 20</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image21" class="image-results__item item--active" dataItemNum="21" title="Emblem 21">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem21.320.jpg" alt="A bearded man in eastern clothing, represented as Hermes Trismegistus, is holding a compass and pointing to a brick wall with a t-square and quadrant at his feet. On the brick wall there is a drawing of a nude man and woman inside a circle inside a square inside a triangle inside a circle." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 21</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image22" class="image-results__item item--active" dataItemNum="22" title="Emblem 22">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem22.320.jpg" alt="A woman in early modern clothing wearing a chatelaine is standing next to a hearth with bellows, a fire with faggots, and pots. One of the pots is suspended from a chain and hangs over the fire. On the floor there are two fish in a bowl and a cat." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 22</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image23" class="image-results__item item--active" dataItemNum="23" title="Emblem 23">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem23.320.jpg" alt="A bearded man in classical clothing is holding an axe next to a reclining partially nude bearded man, identified as Jove. A nude woman, identified as Pallus, springs from his head. An eagle sits nearby. In the background at right, Pallus is embraced by a man with sun rays on his head, identified as Sol, and a winged youth, understood to be Cupid, watches over them as it rains gold." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 23</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image24" class="image-results__item item--active" dataItemNum="24" title="Emblem 24">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem24.320.jpg" alt="In the foreground a wolf is eating a dying man in classical clothing wearing a crown who is lying on the ground. In the background a wolf is burning in a fire while a man in classical clothing is walking away." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 24</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image25" class="image-results__item item--active" dataItemNum="25" title="Emblem 25">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem25.320.jpg" alt="In the foreground a man with a sun on his head, identified as Sol, and a woman with a crescent moon on her head, identified as Luna, are holding clubs and attacking a dragon with wings. Behind them Sol and Luna, are holding bows and arrows and running toward a dragon with wings." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 25</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image26" class="image-results__item item--active" dataItemNum="26" title="Emblem 26">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem26.320.jpg" alt="A woman in classical clothing wearing a crown, understood as Wisdom, is standing in a path and holding a banderole in each hand. The Latin inscription on one banderole reads, “Length of days and health” and on the other, “Glory and endless wealth”. Beside her is a blooming tree and behind her is a house and river." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 26</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image27" class="image-results__item item--active" dataItemNum="27" title="Emblem 27">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem27.320.jpg" alt="A beardless man in classical clothing is standing ankle deep in water and looking with crossed arms at a door with multiple locks that leads into a manicured garden. Behind him on a hill five gods and four goddesses are sitting and holding their symbols." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 27</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image28" class="image-results__item item--active" dataItemNum="28" title="Emblem 28">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem28.320.jpg" alt="A bearded nude man wearing a crown is sitting in a vapor bath on a porch with columns." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 28</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image29" class="image-results__item item--active" dataItemNum="29" title="Emblem 29">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem29.320.jpg" alt="A salamander with stars in a line down his back and large claws is engulfed in fire and smoke." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 29</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image30" class="image-results__item item--active" dataItemNum="30" title="Emblem 30">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem30.320.jpg" alt="A nude man with a sun for a head, identified as Sol, is standing next to a nude woman with a moon for a head, identified as Luna. She is pointing to the two chickens that are at their feet. Behind them are boats on a river." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 30</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image31" class="image-results__item item--active" dataItemNum="31" title="Emblem 31">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem31.320.jpg" alt="A bearded man wearing a crown is swimming in a lake. There is a cityscape and boats behind him." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 31</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image32" class="image-results__item item--active" dataItemNum="32" title="Emblem 32">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem32.320.jpg" alt="A man in early modern clothing is trawling for coral with a hook in a bog. There is a dock, small house, and bridge behind him. In the sky a face in a cloud, understood as a wind god, is blowing wind." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 32</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image33" class="image-results__item item--active" dataItemNum="33" title="Emblem 33">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem33.320.jpg" alt="A nude hermaphrodite is lying on a table over a fire with smoke during an eclipse." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 33</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image34" class="image-results__item item--active" dataItemNum="34" title="Emblem 34">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem34.320.jpg" alt="A nude man with a sun for a head, identified as Sol, is embracing a nude woman with a moon for a head, identified as Luna in a lake in a cave. To the left of them a nude man is running out of the lake and a nude Luna is giving birth in the clouds." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 34</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image35" class="image-results__item item--active" dataItemNum="35" title="Emblem 35">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem35.320.jpg" alt="A woman in classical clothing, identified as Ceres, is sitting by wheat and holding a baby. In the middle ground there is discarded armor and a woman is dragging a dying nude man towards a fire. In the background an elderly nude bearded man looks on and a woman flees." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 35</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image36" class="image-results__item item--active" dataItemNum="36" title="Emblem 36">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem36.320.jpg" alt="Two men in early modern clothing are walking on a path through a town with another man walking ahead of them and another one riding a horse. There is a river, church, and town in the background. There are three cubes floating in the air, five cubes behind the two men, and four cubes in the river." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 36</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image37" class="image-results__item item--active" dataItemNum="37" title="Emblem 37">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem37.320.jpg" alt="A bearded lion wearing a laurel wreath is standing in a steamy bog. Behind him is a volcano emitting smoke and a house on a hill." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 37</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image38" class="image-results__item item--active" dataItemNum="38" title="Emblem 38">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem38.320.jpg" alt="A man in classical clothing, identified as Mercury, is embracing a woman in classical clothing, identified as Venus, while a nude child, understood as Cupid, sits next to them. Above them is a hermaphrodite standing astride two mountains." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 38</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image39" class="image-results__item item--active" dataItemNum="39" title="Emblem 39">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem39.320.jpg" alt="A male baby, a bearded man in classical clothing, and an elderly bearded man with a staff, all identified as Oedipus, are grouped together. Each figure has a shape inscribed on his forehead. Behind this group, scenes from the Oedipus myth are enacted by a sphinx and by a man and woman wearing crowns." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 39</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image40" class="image-results__item item--active" dataItemNum="40" title="Emblem 40">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem40.320.jpg" alt="A crowd of people drink water from the basins of two fountains. At left a statue of a nude male spews water. At the right a statue of a nude female spews water. In the background there is a temple and cityscape." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 40</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image41" class="image-results__item item--active" dataItemNum="41" title="Emblem 41">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem41.320.jpg" alt="A man in armor, identified as Adonis, is lying on the ground dying with a pike in hand. A woman in classical clothing, identified as Venus, is running through bushes towards the man. Behind them a man in armor is looking at a fleeing boar and dog." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 41</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image42" class="image-results__item item--active" dataItemNum="42" title="Emblem 42">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem42.320.jpg" alt="A bearded man wearing spectacles and holding a lantern and staff is following in the footprints of a woman in classical clothing holding a cornucopia and bouquet during an eclipse." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 42</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image43" class="image-results__item item--active" dataItemNum="43" title="Emblem 43">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem43.320.jpg" alt="A vulture is perched on a rocky crag holding a banderole in its beak. The Latin inscription on the banderole reads, “I am black, white, yellow, and red.” Below the vulture a raven is flying. Behind the rocky crag is a lake, mountains, and cityscape." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 43</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image44" class="image-results__item item--active" dataItemNum="44" title="Emblem 44">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem44.320.jpg" alt="Inside a house, a bearded man in classical clothing wearing a crown is lying in a coffin while two men in classical clothing and a man in eastern clothing are looking on. Behind them is a woman in early modern clothing standing next to a man holding a sword and dismembering another man’s body." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 44</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image45" class="image-results__item item--active" dataItemNum="45" title="Emblem 45">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem45.320.jpg" alt="Planet Earth appears in the middle of a ring of stars. Above, the Sun, depicted with a face, projects rays on to Earth casting a large shadow and causing an eclipse." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 45</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image46" class="image-results__item item--active" dataItemNum="46" title="Emblem 46">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem46.320.jpg" alt="A bearded man draped in cloth wearing a crown, understood as Jove, is holding in each hand an eagle with spread wings on a small island in the middle of a lake." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 46</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image47" class="image-results__item item--active" dataItemNum="47" title="Emblem 47">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem47.320.jpg" alt="A wolf and dog are attacking each other. Behind them are trees, a cityscape, and a river with boats." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 47</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image48" class="image-results__item item--active" dataItemNum="48" title="Emblem 48">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem48.320.jpg" alt="A beardless man in classical clothing is proffering a cup to a bearded man in classical clothing wearing a crown with several other men standing behind him. Behind them a man with a crown is lying on a bier while another man is holding up a flask." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 48</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image49" class="image-results__item item--active" dataItemNum="49" title="Emblem 49">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem49.320.jpg" alt="A man wearing a turban is holding an ox hide. To his left stands one man in early modern clothing and another in classical clothing with a bow and arrow. To his right stands a man in classical clothing, understood as Hermes, and a man in classical clothing with a helmet and plume." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 49</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
+				</div>
+				<div id="image50" class="image-results__item item--active" dataItemNum="50" title="Emblem 50">
+					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem50.320.jpg" alt="In a grave a dragon with wings is embracing a dying woman. Around them are ruins, including a round stone building." />
+					<div class="image-results__details">
+						<div class="image-results__label">Emblem 50</div>
+						<div class="image-results__button-row">
+							<button class="image-results__button results__button--terms">
+								<span class="label">Terms</span>
+								<span class="icon"></span>
+							</button>
+							<a class="image-results__button results__button--edition" href="#">
+								<span class="label">Emblem</span>
+								<span class="icon"></span>
+							</a>
+							<button class="image-results__button results__button--collections">
+								<span class="label">Collection</span>
+								<span class="icon"></span>
+							</button>
+						</div>
+						<div class="image-results__all-terms"></div>
+					</div>
 				</div>
 			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem01.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 1</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem02.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 2</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem03.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 3</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem04.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 4</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem05.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 5</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem06.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 6</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem07.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 7</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem08.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 8</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem09.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 9</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem10.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 10</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem11.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 11</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem12.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 12</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem13.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 13</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem14.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 14</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem15.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 15</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem16.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 16</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem17.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 17</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem18.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 18</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem19.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 19</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem20.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 20</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem21.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 21</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem22.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 22</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem23.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 23</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem24.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 24</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem25.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 25</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem26.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 26</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem27.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 27</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem28.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 28</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem29.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 29</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem30.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 30</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem31.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 31</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem32.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 32</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem33.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 33</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem34.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 34</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem35.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 35</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem36.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 36</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem37.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 37</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem38.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 38</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem39.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 39</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem40.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 40</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem41.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 41</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem42.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 42</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem43.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 43</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem44.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 44</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem45.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 45</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem46.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 46</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem47.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 47</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem48.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 48</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem49.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 49</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
-			<div class="image-results__item item--active" data-item-num="">
-				<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem50.320.jpg" />
-				<div class="image-results__details">
-					<div class="image-results__label">Emblem 50</div>
-					<div class="image-results__button-row">
-						<button class="image-results__button results__button--terms">
-							<span class="label">Terms</span>
-							<span class="icon">X</span>
-						</button>
-						<a class="image-results__button results__button--edition" href="#">
-							<span class="label">Emblem</span>
-							<span class="icon"></span>
-						</a>
-						<button class="image-results__button results__button--collections">
-							<span class="label">Collection</span>
-							<span class="icon"></span>
-						</button>
-					</div>
-					<div class="image-results__all-terms"></div>
-				</div>
-			</div>
+			<div class="image-results__container container--inactive"></div>
 		</div>
 	</main>
 	<div class="_collections"></div>
 	<div class="_footer"></div>
-<!-- JS -->
 	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="../assets/js/page.js"></script>
@@ -1146,9 +1229,14 @@
     <script src="../assets/js/lunr-languages/lunr.stemmer.support.js"></script>
     <script src="../assets/js/lunr-languages/lunr.multi.js"></script>
     <script src="../assets/js/lunr-languages/lunr.de.js"></script>
+    <script src="../assets/js/vendors/underscore/underscore-min.js"></script>
     <script src="../assets/js/search.js"></script>
     <script src="../assets/js/searchfunction.js"></script>
 	<script src="../assets/js/topnav.js"></script>
+	<script src="../assets/js/navbar.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/ScrollToPlugin.min.js"></script>
 	<script src="../assets/js/image-search.js"></script>
+	<script src="../assets/js/faceting.js"></script>
 </body>
 </html>
