@@ -37,12 +37,23 @@
     <body xml:id="f11-e1-m-23">
         <mdiv xml:id="f11-e1-m-24">
             <score xml:id="f11-e1-m-25">
-                <scoreDef xml:id="f11-e1-m-26" lyric.name="Plantin MT Std" meter.count="4" meter.unit="2" music.name="Opus Std" page.botmar="10mm" page.height="279.4mm" page.leftmar="10mm" page.rightmar="10mm" page.topmar="10mm" page.width="215.9mm" ppq="256" text.name="Plantin MT Std">
-                    <staffGrp xml:id="f11-e1-m-27">
-                        <staffDef xml:id="f11-e1-m-28" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Hippom. sequens." lines="5" n="1">
-                            <!-- voice.female.alto.ensemble.ah -->
-                            <instrDef xml:id="f11-e1-m-30" midi.channel="1" midi.pan="46" midi.volume="100"/>
-                        </staffDef>
+                <scoreDef xml:id="f11-e4-m-26" lyric.name="Plantin MT Std" meter.count="4" meter.unit="2" music.name="Opus Std" page.botmar="10mm" page.height="279.4mm" page.leftmar="10mm" page.rightmar="10mm" page.topmar="10mm" page.width="215.9mm" ppq="256" text.name="Plantin MT Std">
+                    <staffGrp xml:id="f11-e4-m-27">
+                        <staffGrp xml:id="f11-e4-m-37" n="1" symbol="bracket">
+                            <staffDef xml:id="f11-e4-m-28" clef.line="2" clef.shape="G" key.mode="major" key.sig="1f" label="Hippom. sequens." lines="5" n="1">
+
+                                <!-- voice.female.alto.ensemble.ah -->
+                                <instrDef xml:id="f11-e4-m-30" midi.channel="1" midi.pan="46" midi.volume="100"/>
+                            </staffDef>
+                            <staffDef xml:id="f11-e4-m-31" clef.line="2" clef.shape="G" clef.dis="8" clef.dis.place="below" key.mode="major" key.sig="1f" label="Atalanta fugiens." lines="5" n="2">
+                                <!-- voice.female.soprano.ensemble.ah -->
+                                <instrDef xml:id="f11-e4-m-33" midi.channel="1" midi.pan="26" midi.volume="100"/>
+                            </staffDef>
+                            <staffDef xml:id="f11-e4-m-34" clef.line="4" clef.shape="F" key.mode="major" key.sig="1f" label="Pomum morans." lines="5" n="3">
+                                <!-- voice.male.bass.ensemble.ah -->
+                                <instrDef xml:id="f11-e4-m-36" midi.channel="1" midi.pan="101" midi.volume="100"/>
+                            </staffDef>
+                        </staffGrp>
                     </staffGrp>
                 </scoreDef>
                 <section xml:id="f11-e1-m-31">
@@ -57,6 +68,35 @@
                                         <syl xml:id="f11-e1-m-47" con="d" wordpos="i">La</syl>
                                     </verse>
                                 </note>
+                            </layer>
+                        </staff>
+                        <staff xml:id="f11-e2-m-59" n="2">
+                            <layer xml:id="f11-e2-m-60" n="1">
+                                <space xml:id="f11-e2-m-61" dur="2" dur.ges="512p" oct="4" oct.ges="3" pname="a" pnum="57" stem.dir="down" 
+                                    bracket.visible="true" bracket.place="above" />
+                                    <!--
+                                <note xml:id="f11-e2-m-63" dur="2" dur.ges="512p" oct="4" oct.ges="3" pname="g" pnum="55" stem.dir="down">
+                                    <verse xml:id="f11-e2-m-67" n="1">
+                                        <syl xml:id="f11-e2-m-68" con="d" wordpos="m">bo</syl>
+                                    </verse>
+                                </note>
+                                <note xml:id="f11-e2-m-64" dur="1" dur.ges="1024p" oct="4" oct.ges="3" pname="a" pnum="57" stem.dir="up">
+                                    <verse xml:id="f11-e2-m-69" n="1">
+                                        <syl xml:id="f11-e2-m-70" wordpos="t">lem</syl>
+                                    </verse>
+                                </note> -->
+                            </layer>
+                        </staff>
+                        <staff xml:id="f11-e2-m-71" n="3">
+                            <layer xml:id="f11-e2-m-72" n="1">
+                            <!-- 
+                                <note xml:id="f11-e2-m-74" dur="1" dur.ges="1024p" oct="3" pname="c" pnum="48" stem.dir="up">
+                                    <verse xml:id="f11-e2-m-81" n="1">
+                                        <syl xml:id="f11-e2-m-82" wordpos="t">nae</syl>
+                                    </verse>
+                                </note>
+                                <note xml:id="f11-e2-m-75" dur="2" dur.ges="512p" oct="3" pname="d" pnum="50" stem.dir="down"/> -->
+                                <space xml:id="f11-e2-m-76" dur="2" dur.ges="512p" oct="3" pname="d" pnum="50" stem.dir="down"/>
                             </layer>
                         </staff>
                     </measure>
@@ -85,6 +125,41 @@
                                 </note>
                             </layer>
                         </staff>
+                        <staff xml:id="f11-e2-m-59" n="2">
+                            <layer xml:id="f11-e2-m-60" n="1">
+                                <note xml:id="f11-e2-m-61" dur="2" dur.ges="512p" oct="4" oct.ges="3" pname="a" pnum="57" stem.dir="down" 
+                                    bracket.visible="true" bracket.place="above" />
+                                <note xml:id="f11-e2-m-63" dur="2" dur.ges="512p" oct="4" oct.ges="3" pname="g" pnum="55" stem.dir="down">
+                                    <verse xml:id="f11-e2-m-67" n="1">
+                                        <syl xml:id="f11-e2-m-68" con="d" wordpos="m">bo</syl>
+                                    </verse>
+                                </note>
+                                <note xml:id="f11-e2-m-64" dur="1" dur.ges="1024p" oct="4" oct.ges="3" pname="a" pnum="57" stem.dir="up">
+                                    <verse xml:id="f11-e2-m-69" n="1">
+                                        <syl xml:id="f11-e2-m-70" wordpos="t">lem</syl>
+                                    </verse>
+                                </note>
+                            </layer>
+                        </staff>
+                        <staff xml:id="f11-e2-m-71" n="3">
+                            <layer xml:id="f11-e2-m-72" n="1">
+                                <note xml:id="f11-e2-m-74" dur="1" dur.ges="1024p" oct="3" pname="c" pnum="48" stem.dir="up">
+                                    <verse xml:id="f11-e2-m-81" n="1">
+                                        <syl xml:id="f11-e2-m-82" wordpos="t">nae</syl>
+                                    </verse>
+                                </note>
+                                <note xml:id="f11-e2-m-75" dur="2" dur.ges="512p" oct="3" pname="d" pnum="50" stem.dir="down">
+                                    <verse xml:id="f11-e2-m-607" n="1">
+                                        <syl xml:id="f11-e2-m-608" con="d" wordpos="m">so</syl>
+                                    </verse>
+                                </note>
+                                <note xml:id="f11-e2-m-76" dur="2" dur.ges="512p" oct="3" pname="d" pnum="50" stem.dir="down">
+                                    <verse xml:id="f11-e2-m-617" n="1">
+                                        <syl xml:id="f11-e2-m-618" con="d" wordpos="m">bo</syl>
+                                    </verse>
+                                </note>
+                            </layer>
+                        </staff>
                     </measure>
                     <measure xml:id="f11-e1-m-52" metcon="false" n="3" right="end">
                         <staff xml:id="f11-e1-m-53" n="1">
@@ -94,6 +169,42 @@
                                         <syl xml:id="f11-e1-m-61" wordpos="t">lem</syl>
                                     </verse>
                                 </note>
+                            </layer>
+                        </staff>
+                        <staff xml:id="f11-e2-m-159" n="2">
+                            <layer xml:id="f11-e2-m-160" n="1">
+                                <space xml:id="f11-e2-m-161" dur="2" dur.ges="512p" oct="4" oct.ges="3" pname="a" pnum="57" stem.dir="down" 
+                                    bracket.visible="true" bracket.place="above" />
+                                    <!--
+                                <note xml:id="f11-e2-m-163" dur="2" dur.ges="512p" oct="4" oct.ges="3" pname="g" pnum="55" stem.dir="down">
+                                    <verse xml:id="f11-e2-m-167" n="1">
+                                        <syl xml:id="f11-e2-m-168" con="d" wordpos="m">bo</syl>
+                                    </verse>
+                                </note>
+                                <note xml:id="f11-e2-m-164" dur="1" dur.ges="1024p" oct="4" oct.ges="3" pname="a" pnum="57" stem.dir="up">
+                                    <verse xml:id="f11-e2-m-169" n="1">
+                                        <syl xml:id="f11-e2-m-170" wordpos="t">lem</syl>
+                                    </verse>
+                                </note> -->
+                            </layer>
+                        </staff>
+                        <staff xml:id="f11-e2-m-171" n="3">
+                            <layer xml:id="f11-e2-m-172" n="1">
+                            <!-- 
+                                <note xml:id="f11-e2-m-174" dur="1" dur.ges="1024p" oct="3" pname="c" pnum="48" stem.dir="up">
+                                    <verse xml:id="f11-e2-m-181" n="1">
+                                        <syl xml:id="f11-e2-m-182" wordpos="t">nae</syl>
+                                    </verse>
+                                </note>
+                                <note xml:id="f11-e2-m-175" dur="2" dur.ges="512p" oct="3" pname="d" pnum="50" stem.dir="down"/> -->
+                                <note xml:id="f11-e2-m-176" dur="1" dur.ges="1024p" oct="3" pname="c" pnum="48" stem.dir="down">
+                                    <verse xml:id="f11-e1-m-60" n="1">
+                                        <syl xml:id="f11-e1-m-61" wordpos="t">lem</syl>
+                                    </verse>
+                                </note>
+                                <!--
+                                <note xml:id="f11-e2-m-76" dur="2" dur.ges="512p" oct="3" pname="d" pnum="50" stem.dir="down"/>
+                                -->
                             </layer>
                         </staff>
                     </measure>
