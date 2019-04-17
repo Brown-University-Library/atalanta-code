@@ -1272,7 +1272,7 @@
     let muteButtons = muteButtonTexts.map(muteButtonText => {
       let buttonElem = document.createElement('button');
       buttonElem.classList.add('atalanta-notation-mute-track'); // TODO: should not be a magic value
-      buttonElem.innerText = muteButtonText;
+      buttonElem.innerHTML = '<div class="mute-icon"></div><div class="mute-label">' + muteButtonText + '</div>';
       return buttonElem;
     });
 

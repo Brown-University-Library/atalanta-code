@@ -1,0 +1,307 @@
+@import 'colors';
+@import 'utilities';
+
+body {
+	padding: 3rem 0 0 0;
+}
+
+section.music-snippet {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 8rem;
+	h1 {
+		text-align: center;
+	}
+	h2 {
+		text-align: center;
+	}
+	p {
+		font-size: 1.25rem;
+		line-height: 1.8;
+		margin-bottom: 1.25rem;
+		width: 50vw;
+	}
+	div.ata-music {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		width: 50vw;
+		height: 50vh;
+		outline: 5px solid blue;
+	}
+	div.transport {
+		background-color: $orange-yellow;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: 140px;
+		z-index: $music-controls-z; /* the SVG that Verovio outputs overlaps with the transport controls */
+		margin: 0;
+		padding: 0 1rem;
+	}
+	.excerpt-a div.transport, .excerpt-b div.transport, .excerpt-c div.transport {
+		/*justify-content: space-around;*/
+	}
+	button.atalanta-notation-start, button.atalanta-notation-stop {
+		background-position: center;
+		background-size: contain;
+		margin: -2rem 0 0 0;
+		transform: scale(.5);
+	}
+	div.transport button.atalanta-notation-start {
+		background-image: url('../icons/icon_play-outline.svg');
+		filter: hue-rotate(166deg) saturate(.32);
+		/* starting fill hsla(41, 100%, 69%, 1) $orange-yellow_bright */
+		/* rotated fill hsla(207, 32%, 89%, 1) $blue_light */
+	}
+	div.transport button.atalanta-notation-start:hover, .ata-music .transport .atalanta-notation-start:focus {
+		background-image: url('../icons/icon_play-filled.svg');
+		transition: .3s;
+	}
+	div.transport button.atalanta-notation-start.playing {
+	  display: none;
+	}
+
+	div.transport button.atalanta-notation-stop {
+		/*background-image: url('../icons/icon_pause-outline.svg');*/
+		background-image: url('../icons/icon_pause-filled.svg');
+		filter: hue-rotate(166deg) saturate(.32);
+	}
+	div.transport button.atalanta-notation-stop.playing {
+		background-image: url('../icons/icon_pause-filled.svg');
+	}
+	div.transport button.atalanta-notation-stop.playing:hover, .ata-music .transport .atalanta-notation-stop.playing:focus {
+		background-image: url('../icons/icon_pause-filled.svg');
+		filter: hue-rotate(166deg) saturate(.1);
+		transition: .3s;
+	}
+	div.transport .track-mute {
+/*		outline: 5px solid black;*/
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-basis: 1;
+		height: 60%;
+
+	}
+	div.transport .track-mute > button {
+		font-size: .825rem;
+		width: auto;
+		line-height: 1;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1rem;
+	}
+	div.transport button.atalanta-notation-mute-track {
+		/*background-image: url('../icons/icon_volume-outline.svg');*/
+		background-image: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+		padding: 0;
+		
+	}
+	.mute-icon {
+		background-image: url('../icons/icon_volume-outline.svg');
+		filter: hue-rotate(166deg) saturate(.32);
+		width: 100%;
+		height: 25px;
+				background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+	}
+	.mute-label {
+
+		width: 100%;
+		text-align: center;
+		margin-top: .5rem
+	}
+	.mute-icon:hover {
+		background-image: url('../icons/icon_volume-filled.svg');
+		transition: .3s;
+	}
+	div.transport button.atalanta-notation-mute-track:hover, div.transport button.atalanta-notation-mute-track:focus {
+		/*background-image: url('../icons/icon_volume-filled.svg');*/
+		transition: .3s;
+	}
+	div.transport button.atalanta-notation-mute-track.mute {
+		/*background-image: url('../icons/icon_volume-mute-outline.svg');*/
+	}
+	div.transport button.atalanta-notation-mute-track.mute:hover, div.transport button.atalanta-notation-mute-track.mute:focus {
+		/*background-image: url('../icons/icon_volume-mute-filled.svg');*/
+		transition: .3s;
+	}
+	div.music-pages {
+		padding-bottom: 5rem;
+	}
+	div.music-page {
+		width: 100%;
+	}
+	div.music-page > svg {
+
+	}
+	.excerpt-a div.music-page > svg {
+		transform: translate(84%, 0%) scale(1.3);
+	}
+	.excerpt-b div.music-page > svg {
+		transform: translate(81%, 0%) scale(1.6);
+	}
+	.excerpt-c div.music-page > svg {
+		transform: translate(83%, 2%) scale(1.6);
+	}
+	.excerpt-d div.music-page > svg {
+		transform: translate(10%, -80%) scale(3);
+		/*background-color: blue;*/
+	}
+	div.atalanta-notation__switch {
+		display: none;
+	}
+	div.ata-viz-cmn svg .note.highlighted {
+	  fill: $aqua_darker;
+	}
+	div.ata-viz-cmn svg .note.highlighted path {
+	  stroke-width: 80;
+	  stroke: $aqua_darker;
+	}
+}
+
+/*@supports (display: grid) {
+	section.music-snippet {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: auto;
+		h1, h2 {
+			grid-column: 1 / 13;
+		}
+		p {
+			grid-column: 4 / 10;
+		}
+		div.ata-music {
+			display: grid;
+			grid-column: 1 / 13;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: auto;
+		}
+		div.transport {
+			grid-column: 4/10;
+			width: auto;
+		}
+		div.ata-viz-cmn {
+			grid-column: 1 / 13;
+		}
+		div.music-pages {
+			padding-bottom: 4rem;
+		}
+	}
+}*/
+
+/* small  -  mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	section.music-snippet {
+		div.ata-music {
+			flex-direction: column;
+			margin-top: 1rem;
+			width: 100%;
+		}
+		div.transport {
+			flex-direction: row;
+			justify-content: space-around;
+			height: auto;
+			margin-bottom: 2rem;
+			padding: 0;
+			width: 100%;
+		}
+		button.atalanta-notation-start, button.atalanta-notation-stop {
+			margin: 0;
+			transform: scale(.7);
+		}
+		div.transport .track-mute {
+			justify-content: space-around;
+			height: 20vh;
+			/*outline: 5px solid black;*/
+		}
+		div.transport .track-mute > button {
+			flex-direction: row;
+			line-height: 1.2;
+			margin-bottom: 0;
+			width: 50vw;
+			/*outline: 5px solid pink;*/
+			text-align: left;
+			height: 2rem;
+		}
+		div.transport button.atalanta-notation-mute-track {
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-start;
+			height: 2rem;
+		}
+		.mute-icon {
+			margin-right: .325rem;
+			width: 25px;
+
+		}
+		.mute-label {
+			width: auto;
+			height: auto;
+			/*outline: 1px solid red;*/
+			margin: 0;
+		}
+
+
+
+
+
+/*	div.transport .track-mute {
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-basis: 1;
+		height: 60%;
+
+	}*/
+/*	div.transport .track-mute > button {
+		font-size: .825rem;
+		width: auto;
+		line-height: 1;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1rem;
+	}*/
+/*	div.transport button.atalanta-notation-mute-track {
+		background-image: none;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: auto;
+		padding: 0;
+		
+	}*/
+/*	.mute-icon {
+		background-image: url('../icons/icon_volume-outline.svg');
+		filter: hue-rotate(166deg) saturate(.32);
+		width: 100%;
+		height: 25px;
+				background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+	}
+	.mute-label {
+
+		width: 100%;
+		text-align: center;
+		margin-top: .5rem
+	}*/
+	}
+}
