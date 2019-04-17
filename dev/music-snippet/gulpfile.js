@@ -4,7 +4,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
 gulp.task('sass', function() {
-	return gulp.src('app/assets/scss/essay-music-styles.scss')
+	return gulp.src('app/assets/scss/app.scss')
 		.pipe(sass())
 		.pipe(autoprefixer({
 			browsers: ['last 5 versions'],
