@@ -10,12 +10,13 @@ section.music-snippet {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding-bottom: 8rem;
 	h1 {
 		text-align: center;
+		line-height: 1.5;
 	}
 	h2 {
 		text-align: center;
+		margin-bottom: 1rem;
 	}
 	p {
 		font-size: 1.25rem;
@@ -31,7 +32,14 @@ section.music-snippet {
 		overflow: hidden;
 		width: 50vw;
 		height: 50vh;
-		outline: 5px solid blue;
+	}
+	div.ata-music.excerpt-b, 
+	div.ata-music.excerpt-c {
+		width: 60vw;
+		height: 35vh;
+	}
+	div.ata-music.excerpt-e {
+		height: 20vh;
 	}
 	div.transport {
 		background-color: $orange-yellow;
@@ -45,14 +53,22 @@ section.music-snippet {
 		margin: 0;
 		padding: 0 1rem;
 	}
+	div.ata-music.excerpt-e div.transport {
+
+	}
 	.excerpt-a div.transport, .excerpt-b div.transport, .excerpt-c div.transport {
 		/*justify-content: space-around;*/
 	}
-	button.atalanta-notation-start, button.atalanta-notation-stop {
+	button.atalanta-notation-start, 
+	button.atalanta-notation-stop {
 		background-position: center;
 		background-size: contain;
 		margin: -2rem 0 0 0;
 		transform: scale(.5);
+	}
+	div.ata-music.excerpt-e button.atalanta-notation-start, 
+	div.ata-music.excerpt-e button.atalanta-notation-stop {
+		margin: 0;
 	}
 	div.transport button.atalanta-notation-start {
 		background-image: url('../icons/icon_play-outline.svg');
@@ -89,7 +105,9 @@ section.music-snippet {
 		justify-content: space-between;
 		flex-basis: 1;
 		height: 60%;
-
+	}
+	div.ata-music.excerpt-e div.transport div.track-mute {
+		display: none;
 	}
 	div.transport .track-mute > button {
 		font-size: .825rem;
@@ -114,16 +132,14 @@ section.music-snippet {
 		filter: hue-rotate(166deg) saturate(.32);
 		width: 100%;
 		height: 25px;
-				background-position: center;
-		background-size: contain;
+		background-position: center;
 		background-repeat: no-repeat;
-
+		background-size: contain;
 	}
 	.mute-label {
-
-		width: 100%;
+		margin-top: .5rem;
 		text-align: center;
-		margin-top: .5rem
+		width: 100%;
 	}
 	.mute-icon:hover {
 		background-image: url('../icons/icon_volume-filled.svg');
@@ -150,27 +166,38 @@ section.music-snippet {
 
 	}
 	.excerpt-a div.music-page > svg {
-		transform: translate(84%, 0%) scale(1.3);
+		transform: translate(35%, -80%) scale(3);
 	}
 	.excerpt-b div.music-page > svg {
-		transform: translate(81%, 0%) scale(1.6);
+		transform: translate(15%, -50%) scale(3);
 	}
 	.excerpt-c div.music-page > svg {
-		transform: translate(83%, 2%) scale(1.6);
+		transform: translate(15%, -50%) scale(3);
 	}
 	.excerpt-d div.music-page > svg {
 		transform: translate(10%, -80%) scale(3);
-		/*background-color: blue;*/
 	}
-	div.atalanta-notation__switch {
+	.excerpt-e div.music-page > svg {
+		transform: translate(10%, -100%) scale(4);
+	}
+	div.atalanta-notation__switch { /* remove piano roll in essays */
 		display: none;
 	}
-	div.ata-viz-cmn svg .note.highlighted {
-	  fill: $aqua_darker;
+
+	/* Playing notes */
+
+	.ata-viz-cmn svg .note {
+	  transition: fill 0.3s, stroke-width 0.3s;
 	}
-	div.ata-viz-cmn svg .note.highlighted path {
-	  stroke-width: 80;
-	  stroke: $aqua_darker;
+	.ata-viz-cmn svg .note.highlighted {
+	  fill: $yellow_inverse;
+	}
+	.ata-viz-cmn svg .note.highlighted path {
+	  stroke-width: 50;
+	  stroke: $yellow_inverse;
+	}
+	.ata-viz-cmn svg .note.highlighted text {
+
 	}
 }
 
@@ -208,9 +235,19 @@ section.music-snippet {
 @media screen and (min-width: 320px) and (max-width: 767px) {
 	section.music-snippet {
 		div.ata-music {
+			justify-content: flex-start;
 			flex-direction: column;
+			min-height: 50vh;
 			margin-top: 1rem;
 			width: 100%;
+		}
+		div.ata-music.excerpt-b, 
+		div.ata-music.excerpt-c {
+			min-height: 40vh;
+			width: 100%;
+		}
+		div.ata-music.excerpt-e {
+			min-height: 40vh;
 		}
 		div.transport {
 			flex-direction: row;
@@ -226,15 +263,13 @@ section.music-snippet {
 		}
 		div.transport .track-mute {
 			justify-content: space-around;
-			height: 20vh;
-			/*outline: 5px solid black;*/
+			height: 6rem;
 		}
 		div.transport .track-mute > button {
 			flex-direction: row;
 			line-height: 1.2;
 			margin-bottom: 0;
 			width: 50vw;
-			/*outline: 5px solid pink;*/
 			text-align: left;
 			height: 2rem;
 		}
@@ -247,61 +282,158 @@ section.music-snippet {
 		.mute-icon {
 			margin-right: .325rem;
 			width: 25px;
-
 		}
 		.mute-label {
 			width: auto;
 			height: auto;
-			/*outline: 1px solid red;*/
 			margin: 0;
 		}
-
-
-
-
-
-/*	div.transport .track-mute {
-
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: space-between;
-		flex-basis: 1;
-		height: 60%;
-
-	}*/
-/*	div.transport .track-mute > button {
-		font-size: .825rem;
-		width: auto;
-		line-height: 1;
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 1rem;
-	}*/
-/*	div.transport button.atalanta-notation-mute-track {
-		background-image: none;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		height: auto;
-		padding: 0;
-		
-	}*/
-/*	.mute-icon {
-		background-image: url('../icons/icon_volume-outline.svg');
-		filter: hue-rotate(166deg) saturate(.32);
-		width: 100%;
-		height: 25px;
-				background-position: center;
-		background-size: contain;
-		background-repeat: no-repeat;
-
+		.excerpt-a div.music-page > svg {
+			transform: translate(25%, -80%) scale(3);
+		}
+		.excerpt-b div.music-page > svg {
+			transform: translate(10%, -100%) scale(3);
+		}
+		.excerpt-c div.music-page > svg {
+			transform: translate(12%, -100%) scale(3);
+		}
+		.excerpt-e div.music-page > svg {
+			transform: translate(0%, -100%) scale(2.375);
+		}
 	}
-	.mute-label {
-
-		width: 100%;
-		text-align: center;
-		margin-top: .5rem
-	}*/
+}
+/* medium  -  tablet */
+@media screen and (min-width: 768px) and (max-width: 999px) {
+	section.music-snippet {
+		/*background-color: yellow;*/
+		div.ata-music {
+			height: 40vh;
+			width: 100%;
+		}
+		div.ata-music.excerpt-b, 
+		div.ata-music.excerpt-c {
+			height: 35vh;
+			width: 100%;
+		}
+		.excerpt-a div.music-page > svg {
+			transform: translate(25%, -80%) scale(3);
+		}
+		.excerpt-b div.music-page > svg {
+			transform: translate(10%, -50%) scale(3);
+		}
+		.excerpt-c div.music-page > svg {
+			transform: translate(12%, -80%) scale(3);
+		}
+		.excerpt-e div.music-page > svg {
+			transform: translate(0%, -40%) scale(2.375);
+		}
+	}
+}
+/* medium-large */
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+	section.music-snippet {
+		/*background-color: pink;*/
+		div.ata-music {
+			height: 50vh;
+			width: 80vw;
+		}
+		div.ata-music.excerpt-b, 
+		div.ata-music.excerpt-c {
+			height: 35vh;
+			width: 80vw;
+		}
+		div.ata-music.excerpt-e {
+			height: 18vh;
+			width: 95vw;
+		}
+		.excerpt-c div.music-page > svg {
+			transform: translate(12%, -85%) scale(3);
+		}
+		.excerpt-e div.music-page > svg {
+			transform: translate(0%, -50%) scale(2.375);
+		}
+	}
+}
+/* large  -  laptop */
+@media screen and (min-width: 1200px) and (max-width: 1499px) {
+	section.music-snippet {
+		/*background-color: orange;*/
+		div.ata-music.excerpt-e {
+			height: 20vh;
+			width: 85vw;
+		}
+		.excerpt-a div.music-page > svg {
+			transform: translate(35%, -80%) scale(3.5);
+		}
+		.excerpt-e div.music-page > svg {
+			transform: translate(5%, -60%) scale(2.25);
+		}
+	}
+}
+/* large  -  desktop */
+@media screen and (min-width: 1500px) and (max-width: 1999px) {
+	section.music-snippet {
+		/*background-color: red;*/
+		div.ata-music.excerpt-e {
+			height: 20vh;
+			width: 70vw;
+		}
+		.excerpt-b div.music-page > svg {
+			transform: translate(10%, -85%) scale(3);
+		}
+		.excerpt-c div.music-page > svg {
+			transform: translate(12%, -85%) scale(3);
+		}
+		.excerpt-e div.music-page > svg {
+			transform: translate(5%, -60%) scale(2.25);
+		}
+	}	
+}
+/* extra-large */
+@media screen and (min-width: 2000px) and (max-width: 2800px) {
+	section.music-snippet {
+		/*background-color: blue;*/
+		div.ata-music.excerpt-b, 
+		div.ata-music.excerpt-c {
+			height: 25vh;
+			width: 45vw;
+		}
+		div.ata-music.excerpt-e {
+			height: 20vh;
+			width: 60vw;
+		}
+		.excerpt-b div.music-page > svg {
+			transform: translate(10%, -80%) scale(3);
+		}
+		.excerpt-c div.music-page > svg {
+			transform: translate(10%, -85%) scale(3);
+		}
+		.excerpt-e div.music-page > svg {
+			transform: translate(5%, -60%) scale(2.25);
+		}
+	}
+}
+/* xxl */
+@media screen and (min-width: 2801px) {
+	section.music-snippet {
+		/*background-color: green;*/
+		div.ata-music.excerpt-b, 
+		div.ata-music.excerpt-c {
+			height: 25vh;
+			width: 45vw;
+		}
+		div.ata-music.excerpt-e {
+			height: 20vh;
+			width: 60vw;
+		}
+		.excerpt-b div.music-page > svg {
+			transform: translate(10%, -80%) scale(3);
+		}
+		.excerpt-c div.music-page > svg {
+			transform: translate(10%, -85%) scale(3);
+		}
+		.excerpt-e div.music-page > svg {
+			transform: translate(5%, -60%) scale(2.25);
+		}
 	}
 }
