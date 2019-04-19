@@ -6827,9 +6827,24 @@ body {
   width: 8rem; }
 
 .ata-music .transport .atalanta-notation-start {
-  background-image: url("../icons/icon_play-outline.svg"); }
+  background-image: none; }
 
-.ata-music .transport .atalanta-notation-start:hover, .ata-music .transport .atalanta-notation-start:focus {
+.play-btn__icon {
+  background-image: url("../icons/icon_play-outline.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-filter: hue-rotate(166deg) saturate(0.32);
+  filter: hue-rotate(166deg) saturate(0.32);
+  height: 1.5rem;
+  width: 100%; }
+
+.play-btn__label {
+  margin-top: .5rem;
+  text-align: center;
+  width: 100%; }
+
+.ata-music .transport .atalanta-notation-start:hover .play-btn__icon {
   background-image: url("../icons/icon_play-filled.svg");
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -6839,17 +6854,40 @@ body {
   display: none; }
 
 .ata-music .transport .atalanta-notation-stop {
-  background-image: url("../icons/icon_pause-outline.svg"); }
+  background-image: none; }
+
+.pause-btn__icon {
+  background-image: url("../icons/icon_pause-outline.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-filter: hue-rotate(166deg) saturate(0.32);
+  filter: hue-rotate(166deg) saturate(0.32);
+  height: 1.5rem;
+  width: 100%; }
+
+.pause-btn__label {
+  margin-top: .5rem;
+  text-align: center;
+  width: 100%; }
 
 /*.ata-music .transport .atalanta-notation-stop:hover {
 	background-image: url('../icons/icon_pause-filled.svg');
 	transition: .3s;
 }*/
 .ata-music .transport .atalanta-notation-stop.playing {
+  background-image: none; }
+
+.ata-music .transport .atalanta-notation-stop.playing .pause-btn__icon {
   background-image: url("../icons/icon_pause-outline.svg"); }
 
-.ata-music .transport .atalanta-notation-stop.playing:hover,
-.ata-music .transport .atalanta-notation-stop.playing:focus {
+.ata-music .transport .atalanta-notation-stop.playing:hover .pause-btn__icon {
+  background-image: url("../icons/icon_pause-filled.svg");
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+
+.ata-music .transport .atalanta-notation-stop.playing:hover .pause-btn__icon {
   background-image: url("../icons/icon_pause-filled.svg");
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -6857,11 +6895,46 @@ body {
 
 /* Mute buttons */
 .atalanta-notation-mute-track {
-  background-image: url("../icons/icon_profile-volume-outline.svg"); }
+  background-image: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  padding: 0; }
 
-.atalanta-notation-mute-track:hover,
-.atalanta-notation-mute-track:focus {
-  background-image: url("../icons/icon_profile-volume-filled.svg");
+.mute-btn__icon {
+  background-image: url("../icons/icon_volume-outline.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-filter: hue-rotate(166deg) saturate(0.32);
+  filter: hue-rotate(166deg) saturate(0.32);
+  height: 1.5rem;
+  width: 100%; }
+
+.atalanta-notation-mute-track:hover .mute-btn__icon {
+  background-image: url("../icons/icon_volume-filled.svg");
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+
+.mute-btn__label {
+  margin-top: .5rem;
+  text-align: center;
+  width: 100%; }
+
+.atalanta-notation-mute-track:hover .mute-btn__label {
+  color: #0051ff;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; }
@@ -6879,6 +6952,13 @@ body {
 .grid--right .atalanta-notation-stop {
   margin-right: 0;
   width: 1rem; }
+
+/* Playing notes */
+.ata-viz-cmn svg .note.highlighted {
+  fill: #0051ff; }
+
+.ata-viz-cmn svg .note.highlighted path {
+  stroke: #0051ff; }
 
 /* piano roll */
 .ata-viz-pianoroll.modal {

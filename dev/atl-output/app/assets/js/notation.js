@@ -1235,8 +1235,8 @@
 
     playButton.classList.add('atalanta-notation-start'); // TODO: should not be a magic value
     pauseButton.classList.add('atalanta-notation-stop'); // TODO: should not be a magic value
-    playButton.innerHTML = '<div class="play-icon"></div><div class="play-btn__label">Play</div>'; //CB create label for play button
-    pauseButton.innerHTML = '<div class="pause-icon"></div><div class="pause-btn__label">Pause</div>'; //CB create label for pause button
+    playButton.innerHTML = '<div class="play-btn__icon"></div><div class="play-btn__label">Play</div>'; //CB create label for play button
+    pauseButton.innerHTML = '<div class="pause-btn__icon"></div><div class="pause-btn__label">Pause</div>'; //CB create label for pause button
 
     playButton.onclick = function () {
       model.play();
