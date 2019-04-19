@@ -6678,7 +6678,7 @@ body {
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif; }
 
 .section__music ._music .ata-music .transport {
-  background-color: #ffae00;
+  background-color: #F1F1F1;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   height: calc(100vh - 6.25rem);
@@ -6687,13 +6687,13 @@ body {
   width: calc(50vw/12 * 2);
   /*z-index: 10;*/
   /* music page SVG overlaps with transport controls */
-  outline: 5px solid black; }
+  /*outline: 5px solid black;*/ }
   .section__music ._music .ata-music .transport .atalanta-notation-start,
   .section__music ._music .ata-music .transport .atalanta-notation-stop,
   .section__music ._music .ata-music .transport .atalanta-notation-mute-track,
   .section__music ._music .ata-music .transport .atalanta-notation__switch {
     background-image: none;
-    color: green;
+    color: #4d4d4d;
     float: none;
     font-size: .875rem;
     height: auto;
@@ -6703,7 +6703,7 @@ body {
     text-align: center;
     width: 100%; }
   .section__music ._music .ata-music .transport button > div {
-    outline: 1px solid purple; }
+    /*outline: 1px solid purple;*/ }
   .section__music ._music .ata-music .transport button > div:nth-child(1) {
     background-position: center;
     background-repeat: no-repeat;
@@ -6711,66 +6711,53 @@ body {
     margin-bottom: .5rem; }
   .section__music ._music .ata-music .transport .atalanta-notation-start,
   .section__music ._music .ata-music .transport .atalanta-notation-stop {
-    outline: 5px solid green; }
+    /*outline: 5px solid green;*/ }
   .section__music ._music .ata-music .transport .atalanta-notation-start.playing {
     display: none; }
   .section__music ._music .ata-music .transport .play-btn__icon {
-    background-image: url("../icons/icon_play-outline.svg");
-    -webkit-filter: hue-rotate(166deg) saturate(0.32);
-    filter: hue-rotate(166deg) saturate(0.32);
+    background-image: url("../icons/icon_play_filled--gray.svg");
     height: 2.5rem; }
   .section__music ._music .ata-music .transport .play-btn__icon:hover {
-    background-image: url("../icons/icon_play-filled.svg");
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
   .section__music ._music .ata-music .transport .pause-btn__icon {
-    background-image: url("../icons/icon_pause-outline.svg");
-    -webkit-filter: hue-rotate(166deg) saturate(0.32);
-    filter: hue-rotate(166deg) saturate(0.32); }
+    background-image: url("../icons/icon_pause_filled--gray.svg");
+    height: 2.5rem; }
   .section__music ._music .ata-music .transport .atalanta-notation-stop.playing .pause-btn__icon {
-    background-image: url("../icons/icon_pause-outline.svg"); }
+    /*background-image: url('../icons/icon_pause-outline.svg');*/
+    background-image: url("../icons/icon_pause_filled--gray.svg"); }
   .section__music ._music .ata-music .transport .atalanta-notation-stop.playing:hover .pause-btn__icon {
-    background-image: url("../icons/icon_pause-filled.svg");
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s; }
-  .section__music ._music .ata-music .transport .atalanta-notation-start:hover .play-btn__label,
-  .section__music ._music .ata-music .transport .atalanta-notation-stop:hover .pause-btn__label {
-    color: #0051ff;
+    background-image: url("../icons/icon_pause_filled--gray.svg");
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
   .section__music ._music .ata-music .transport .track-mute {
-    outline: 5px solid red; }
+    /*outline: 5px solid red;*/ }
   .section__music ._music .ata-music .transport .mute-btn__icon {
-    background-image: url("../icons/icon_volume-outline.svg");
-    -webkit-filter: hue-rotate(166deg) saturate(0.32);
-    filter: hue-rotate(166deg) saturate(0.32);
-    height: 2rem; }
+    background-image: url("../icons/icon_volume_filled--gray.svg");
+    height: 2.25rem; }
   .section__music ._music .ata-music .transport .mute-btn__icon:hover {
-    background-image: url("../icons/icon_volume-filled.svg");
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s; }
-  .section__music ._music .ata-music .transport .atalanta-notation-mute-track:hover .mute-btn__label {
-    color: #0051ff;
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
   .section__music ._music .ata-music .transport .atalanta-notation-mute-track.mute .mute-btn__icon {
-    background-image: url("../icons/icon_profile-mute-outline.svg"); }
+    background-image: url("../icons/icon_volume_filled--gray.svg"); }
   .section__music ._music .ata-music .transport .atalanta-notation-mute-track.mute:hover .mute-btn__icon {
-    background-image: url("../icons/icon_profile-mute-filled.svg");
+    background-image: url("../icons/icon_volume_filled--gray.svg");
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
-  .section__music ._music .ata-music .transport .atalanta-notation__switch {
-    /*	display: flex;
-			align-items: center;
-			flex-direction: column;*/ }
   .section__music ._music .ata-music .transport .atalanta-notation__switch a {
-    color: red;
+    color: #4d4d4d;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -6793,10 +6780,23 @@ body {
     line-height: 1.2;
     text-align: center;
     width: 100%; }
+  .section__music ._music .ata-music .transport .piano-roll__icon {
+    background-image: url("../icons/icon_piano-roll_filled--gray.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 2.75rem;
+    margin-bottom: .5rem;
+    width: 100%; }
+  .section__music ._music .ata-music .transport .piano-roll__icon:hover {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
 
 .section__music ._music .ata-music .ata-viz-cmn {
-  outline: 5px solid green;
-  /*		background-color: blue;*/
+  /*outline: 5px solid green;*/
   background: no-repeat;
   background-size: contain;
   overflow: hidden; }
@@ -6821,13 +6821,13 @@ body {
   transform-origin: 0 0; }
 
 .section__music .music-pages {
-  padding-bottom: 6rem; }
+  padding-bottom: 8rem; }
 
 .section__music .music-page:nth-of-type(1) {
-  margin-top: -8rem; }
+  margin-top: -6rem; }
 
 .section__music .music-page:nth-of-type(2) {
-  margin-top: -4rem; }
+  margin-top: -5rem; }
 
 /* Playing notes */
 .ata-viz-cmn svg .note.highlighted {
@@ -6869,11 +6869,13 @@ body {
         grid-row: 3 / 4; }
     .section__music ._music .ata-music .ata-viz-cmn {
       display: grid;
-      grid-area: 2 / 4 / 3 / 13;
+      grid-area: 2 / 3 / 3 / 13;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: auto; }
     .section__music ._music .ata-music .ata-viz-pianoroll {
       grid-area: 3 / 2 / 4 / 12; }
+  .section__music.grid--right ._music .ata-music .ata-viz-cmn {
+    grid-area: 2 / 4 / 3 / 13; }
   .section__music .music-pages {
     display: grid;
     grid-area: 1 / 1 / 2 / 13;
@@ -6882,7 +6884,21 @@ body {
   .section__music .music-page:nth-of-type(1) {
     grid-area: 1 / 1 / 2 / 13; }
   .section__music .music-page:nth-of-type(2) {
-    grid-area: 2 / 1 / 3 / 13; } }
+    grid-area: 2 / 1 / 3 / 13; }
+  .section__music.grid--right .music-pages {
+    padding-bottom: 3rem; }
+  .section__music.grid--right .music-page:nth-of-type(1) {
+    margin-top: -1.5rem; }
+  .section__music.grid--right .music-page:nth-of-type(2) {
+    margin-top: -2rem; }
+  /* ANIMATION */
+  /* sticky music player controls */
+  .section__music.grid--right ._music .ata-music .transport.is-stuck {
+    background-color: #ffae00;
+    left: 50vw;
+    width: calc(50vw/12 * 2); }
+  .section__music.grid--right ._music .ata-music .transport.is-unstuck {
+    background-color: #F1F1F1; } }
 
 @supports not (display: grid) {
   .section__music ._music .ata-music .transport {
@@ -6921,6 +6937,21 @@ body {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between; } }
+
+/* ANIMATION */
+/* sticky music player controls */
+.section__music ._music .ata-music .transport.is-stuck {
+  -webkit-animation: fade-in .4s ease-out;
+  animation: fade-in .4s ease-out;
+  background-color: #ffae00;
+  left: 0;
+  position: fixed;
+  top: 6.25rem; }
+
+.section__music ._music .ata-music .transport.is-unstuck {
+  -webkit-animation: fade-out-in .4s ease-out;
+  animation: fade-out-in .4s ease-out;
+  background-color: #F1F1F1; }
 
 /* PRODUCTION */
 /* TESTING */
