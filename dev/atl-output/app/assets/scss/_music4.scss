@@ -262,7 +262,7 @@
 	/* ANIMATION */
 	/* sticky music player controls */
 	.section__music.grid--right ._music .ata-music .transport.is-stuck {
-		background-color: $yellow;
+		background-color: $blue_light;
 		left: 50vw;
 		width: calc(50vw/12 * 2);
 	}
@@ -292,7 +292,7 @@
 /* sticky music player controls */
 .section__music ._music .ata-music .transport.is-stuck {
   animation: fade-in .4s ease-out;
-  background-color: $yellow;
+  background-color: $blue_light;
   left: 0;
   position: fixed;
   top: $emblemnav-h;	

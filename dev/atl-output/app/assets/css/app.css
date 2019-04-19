@@ -6894,7 +6894,7 @@ body {
   /* ANIMATION */
   /* sticky music player controls */
   .section__music.grid--right ._music .ata-music .transport.is-stuck {
-    background-color: #ffae00;
+    background-color: #DAE4EC;
     left: 50vw;
     width: calc(50vw/12 * 2); }
   .section__music.grid--right ._music .ata-music .transport.is-unstuck {
@@ -6943,7 +6943,7 @@ body {
 .section__music ._music .ata-music .transport.is-stuck {
   -webkit-animation: fade-in .4s ease-out;
   animation: fade-in .4s ease-out;
-  background-color: #ffae00;
+  background-color: #DAE4EC;
   left: 0;
   position: fixed;
   top: 6.25rem; }
