@@ -1,5 +1,9 @@
 @import 'colors';
 
+body {
+	padding: 0;
+}
+
 .is-active {
 	background-color: $yellow_bright !important;
 	a {
