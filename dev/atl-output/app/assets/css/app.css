@@ -2243,7 +2243,7 @@ main.home {
     grid-area: 1 / 2 / 2 / 3;
     margin: -15rem 0 5.5rem 0; }
   main.home nav.home {
-    background-color: #333333;
+    background-color: #333;
     color: #fff;
     grid-area: 2 / 1 / 3 / 13;
     min-height: 20vh;
@@ -3274,7 +3274,7 @@ body {
     grid-column-end: 11;
     grid-row-start: 1;
     grid-row-end: 2;
-    color: #333333;
+    color: #333;
     /*font-family: display-font;*/
     font-size: 2.25rem;
     font-weight: 600;
@@ -3299,7 +3299,7 @@ body {
     margin-right: 2px; }
   .search-results h2 {
     /* f&f section */
-    background-color: #333333;
+    background-color: #333;
     color: white;
     display: -webkit-box;
     display: -webkit-flex;
@@ -3447,7 +3447,7 @@ body {
     .search-results .results__item {
       padding: 1rem; }
     .search-results h4 {
-      border-bottom: 1px solid #333333;
+      border-bottom: 1px solid #333;
       padding-bottom: .325rem; }
     .search-results .results__item h3,
     .search-results h4,
@@ -6953,6 +6953,169 @@ body {
   animation: fade-out-in .4s ease-out;
   background-color: #F1F1F1; }
 
+/* piano roll */
+.lity-container .ata-viz-pianoroll {
+  background-color: white;
+  height: 60vh;
+  margin-top: 5vh;
+  width: 75vw; }
+  .lity-container .ata-viz-pianoroll g.voice-1 .note {
+    fill: #608ca9; }
+  .lity-container .ata-viz-pianoroll g.voice-2 .note {
+    fill: #d14829; }
+  .lity-container .ata-viz-pianoroll g.voice-3 .note {
+    fill: #54b68d; }
+  .lity-container .ata-viz-pianoroll g rect.note {
+    stroke: #0051ff; }
+  .lity-container .ata-viz-pianoroll g rect.note.highlighted {
+    fill: #0051ff; }
+
+.lity-container .ata-viz-pianoroll > svg {
+  margin-top: 22vh; }
+
+.lity-container .ata-viz-pianoroll .transport {
+  background-color: #F1F1F1;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .5rem; }
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-start,
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-stop,
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-mute-track {
+    background-image: none;
+    color: #4d4d4d;
+    float: none;
+    font-size: .875rem;
+    height: auto;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%; }
+  .lity-container .ata-viz-pianoroll .transport button > div:nth-child(1) {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: .5rem; }
+  .lity-container .ata-viz-pianoroll .transport .play-btn__icon {
+    background-image: url("../icons/icon_play_filled--gray.svg");
+    height: 2.5rem; }
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-start:hover .play-btn__icon {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .lity-container .ata-viz-pianoroll .transport .pause-btn__icon {
+    background-image: url("../icons/icon_pause_filled--gray.svg");
+    height: 2.5rem; }
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-stop:hover .pause-btn__icon {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-mute-track {
+    -webkit-transition: 0;
+    -o-transition: 0;
+    transition: 0; }
+  .lity-container .ata-viz-pianoroll .transport .mute-btn__icon {
+    background-image: url("../icons/icon_volume_filled--gray.svg");
+    height: 2rem;
+    width: 100%; }
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-mute-track:hover .mute-btn__icon {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+
+@supports (display: grid) {
+  .lity-container .ata-viz-pianoroll {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: auto; }
+  .lity-container .ata-viz-pianoroll > svg {
+    grid-column: 2 / 10; }
+  .lity-container .ata-viz-pianoroll .transport {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 3fr;
+    grid-column: 1 / 2; }
+    .lity-container .ata-viz-pianoroll .transport .atalanta-notation-start,
+    .lity-container .ata-viz-pianoroll .transport .atalanta-notation-stop {
+      grid-row: 1 / 2; }
+    .lity-container .ata-viz-pianoroll .transport .track-mute {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-row: 2 / 3; }
+    .lity-container .ata-viz-pianoroll .transport .atalanta-notation-mute-track {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
+
+@supports not (display: grid) {
+  .lity-container .ata-viz-pianoroll {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .lity-container .ata-viz-pianoroll .transport {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 60vh;
+    width: 8vw; }
+    .lity-container .ata-viz-pianoroll .transport .track-mute {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-flex-basis: 75%;
+      -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
+
 /* PRODUCTION */
 /* TESTING */
 /* DEVELOPMENT */
@@ -7985,7 +8148,7 @@ body {
     opacity: 1; } }
 
 footer {
-  background-color: #333333;
+  background-color: #333;
   color: white;
   font-size: .75rem;
   font-weight: 600;
