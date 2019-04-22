@@ -6684,10 +6684,7 @@ body {
   height: calc(100vh - 6.25rem);
   /* view height - topnav - emblem nav */
   padding: 0 1rem;
-  width: calc(50vw/12 * 2);
-  /*z-index: 10;*/
-  /* music page SVG overlaps with transport controls */
-  /*outline: 5px solid black;*/ }
+  width: calc(50vw/12 * 2); }
   .section__music ._music .ata-music .transport .atalanta-notation-start,
   .section__music ._music .ata-music .transport .atalanta-notation-stop,
   .section__music ._music .ata-music .transport .atalanta-notation-mute-track,
@@ -6702,16 +6699,11 @@ body {
     padding: 0;
     text-align: center;
     width: 100%; }
-  .section__music ._music .ata-music .transport button > div {
-    /*outline: 1px solid purple;*/ }
   .section__music ._music .ata-music .transport button > div:nth-child(1) {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: .5rem; }
-  .section__music ._music .ata-music .transport .atalanta-notation-start,
-  .section__music ._music .ata-music .transport .atalanta-notation-stop {
-    /*outline: 5px solid green;*/ }
   .section__music ._music .ata-music .transport .atalanta-notation-start.playing {
     display: none; }
   .section__music ._music .ata-music .transport .play-btn__icon {
@@ -6727,7 +6719,6 @@ body {
     background-image: url("../icons/icon_pause_filled--gray.svg");
     height: 2.5rem; }
   .section__music ._music .ata-music .transport .atalanta-notation-stop.playing .pause-btn__icon {
-    /*background-image: url('../icons/icon_pause-outline.svg');*/
     background-image: url("../icons/icon_pause_filled--gray.svg"); }
   .section__music ._music .ata-music .transport .atalanta-notation-stop.playing:hover .pause-btn__icon {
     background-image: url("../icons/icon_pause_filled--gray.svg");
@@ -6736,8 +6727,6 @@ body {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
-  .section__music ._music .ata-music .transport .track-mute {
-    /*outline: 5px solid red;*/ }
   .section__music ._music .ata-music .transport .mute-btn__icon {
     background-image: url("../icons/icon_volume_filled--gray.svg");
     height: 2.25rem; }
@@ -6796,7 +6785,6 @@ body {
     transition: .3s; }
 
 .section__music ._music .ata-music .ata-viz-cmn {
-  /*outline: 5px solid green;*/
   background: no-repeat;
   background-size: contain;
   overflow: hidden; }
