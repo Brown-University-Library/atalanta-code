@@ -25,33 +25,6 @@ body {
 .no-scroll {
 	overflow: hidden;
 }
-@keyframes fade-in {
-	0% {
-		opacity: 0; 
-	}
-	100% {
-		opacity: 1;
-	}
-}
-@keyframes fade-out {
-	0% {
-		opacity: 1; 
-	}
-	100% {
-		opacity: 0;
-	}
-}
-@keyframes fade-out-in {
-	0% {
-		opacity: 1; 
-	}
-	50% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
 
 $topnav-h: 3.125rem;
 $subnav-h: 3.125rem;
@@ -59,6 +32,8 @@ $emblemnav-h: 6.25rem;
 $imagesearchcatnav-h: 2.5rem;
 $imagesearchnav-h: 5.625rem;
 $gap: .75rem;
+$collections-z: 10000000;
+$footer-z: 1000000;
 $topnav-z: 100000;
 $drawer-z: 10000;
 $searchbar-z: 1000;
