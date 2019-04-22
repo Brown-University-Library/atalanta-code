@@ -1235,6 +1235,8 @@
 
     playButton.classList.add('atalanta-notation-start'); // TODO: should not be a magic value
     pauseButton.classList.add('atalanta-notation-stop'); // TODO: should not be a magic value
+    playButton.innerHTML = '<div class="play-btn__icon"></div><div class="play-btn__label">Play</div>'; //CB create label for play button
+    pauseButton.innerHTML = '<div class="pause-btn__icon"></div><div class="pause-btn__label">Pause</div>'; //CB create label for pause button
 
     playButton.onclick = function () {
       model.play();
@@ -1266,13 +1268,13 @@
     let staffDefTxt, muteButtonTexts = [];
 
     while (staffDefTxt = voiceNameRE.exec(meiData)) {
-      muteButtonTexts.push(`Play/mute ${staffDefTxt[2]}`);
+      muteButtonTexts.push(`Hear/mute ${staffDefTxt[2]}`); //CB change from "play" to "hear"
     }
 
     let muteButtons = muteButtonTexts.map(muteButtonText => {
       let buttonElem = document.createElement('button');
       buttonElem.classList.add('atalanta-notation-mute-track'); // TODO: should not be a magic value
-      buttonElem.innerText = muteButtonText;
+      buttonElem.innerHTML = '<div class="mute-btn__icon"></div><div class="mute-btn__label">' + muteButtonText + '</div>'; //CB separate icon and label
       return buttonElem;
     });
 
@@ -1318,7 +1320,8 @@
 
       let modalViewLink = document.createElement('div');
       modalViewLink.classList.add('atalanta-notation__switch'); // TODO: should not be a magic value
-      modalViewLink.innerHTML = `<a href="#${targetId}" data-lity>${VISUALIZE_BUTTON_TEXT}</a>`; // TODO: should not be a magic value
+      //CB adding an element for the piano roll icon
+      modalViewLink.innerHTML = `<a href="#${targetId}" data-lity><div class="piano-roll__icon"></div><div class="piano-roll__label">${VISUALIZE_BUTTON_TEXT}</div></a>`; // TODO: should not be a magic value
       transportInterface.appendChild(modalViewLink);
     }
 
