@@ -6519,7 +6519,7 @@ body {
     .section__music ._music .ata-music .ata-viz-pianoroll {
       grid-area: 3 / 2 / 4 / 12; }
   .panel--right .section__music ._music .ata-music .ata-viz-cmn {
-    grid-area: 2 / 4 / 3 / 13; }
+    grid-area: 2 / 3 / 3 / 13; }
   .section__music .music-pages {
     display: grid;
     grid-area: 1 / 1 / 2 / 13;
