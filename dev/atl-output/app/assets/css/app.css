@@ -6513,7 +6513,7 @@ body {
         grid-row: 3 / 4; }
     .section__music ._music .ata-music .ata-viz-cmn {
       display: grid;
-      grid-area: 2 / 3 / 3 / 13;
+      grid-area: 2 / 2 / 3 / 13;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: auto; }
     .section__music ._music .ata-music .ata-viz-pianoroll {
