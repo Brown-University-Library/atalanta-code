@@ -89,17 +89,46 @@ $(function () {
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__2'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			if(direction === 'down') { // if scrolling down the page, change zooming page to 1/4
+			// var waypointElement = document.getElementById('basic-waypoint__2');
+			// var sectionLanguage = $(waypointElement).data("lang");
+			// console.log(sectionLanguage);
+			// var myLanguage = $(element).data("lang");
+			if(direction === 'down') { // if English && scrolling down the page, change zooming page to 1/4
+				console.log("WAYPOINTS MUSIC DOWN");
 				$(musicControlPosition).removeClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4 - 1);
 				$(musicControlPosition).addClass('is-stuck');
-				$('.section__music').addClass('padding-hack');
+				// $('.section__music').addClass('padding-hack');
 			}
+			/*
+			if( (direction === 'down') && (sectionLanguage === 'en') ) { // if English && scrolling down the page, change zooming page to 1/4
+				console.log("WAYPOINTS MUSIC DOWN");
+				$(musicControlPosition).removeClass('is-unstuck');
+				viewer.goToPage(myEmblemDataNum * 4 - 1);
+				$(musicControlPosition).addClass('is-stuck');
+				// $('.section__music').addClass('padding-hack');
+			}
+			else if( (direction === 'down') && (sectionLanguage === 'la') ) { // if Latin && scrolling down the page, change zooming page to 1/4
+				console.log("WAYPOINTS MUSIC DOWN");
+				$(musicControlPosition).removeClass('is-unstuck');
+				viewer.goToPage(myEmblemDataNum * 4 - 1);
+				$(musicControlPosition).addClass('is-stuck');
+				// $('.section__music').addClass('padding-hack');
+			}
+			else if( (direction === 'down') && (sectionLanguage === 'de') ) { // if German && scrolling down the page, change zooming page to 1/4
+				console.log("WAYPOINTS MUSIC DOWN");
+				$(musicControlPosition).removeClass('is-unstuck');
+				viewer.goToPage(myEmblemDataNum * 4 - 1);
+				$(musicControlPosition).addClass('is-stuck');
+				// $('.section__music').addClass('padding-hack');
+			}
+			*/
 			else if (direction === 'up') { // if scrolling back up the page
+				console.log("WAYPOINTS MUSIC UP");
 				$(musicControlPosition).addClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4);
 				$(musicControlPosition).removeClass('is-stuck');
-				$('.section__music').removeClass('padding-hack');
+				// $('.section__music').removeClass('padding-hack');
 			}
 			else {
 				console.log("waypoints doesn't detect a scroll direction");
@@ -113,17 +142,21 @@ $(function () {
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__3'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+			var waypointElement = document.getElementById('basic-waypoint__3');
+			console.log(waypointElement);
 			if(direction === 'down') { // if scrolling down the page, change zooming page to 2/4 if Latin/English is active or 1/4 if German is active
+				console.log("WAYPOINTS EPIGRAM DOWN");
 				$(musicControlPosition).addClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4);
 				$(musicControlPosition).removeClass('is-stuck');
-				$('.section__music').removeClass('padding-hack');
+				// $('.section__music').removeClass('padding-hack');
 			}
 			else { // if scrolling back up the page
+				console.log("WAYPOINTS EPIGRAM UP");
 				$(musicControlPosition).removeClass('is-unstuck');
 				viewer.goToPage(myEmblemDataNum * 4 - 1);
 				$(musicControlPosition).addClass('is-stuck');
-				$('.section__music').addClass('padding-hack');
+				// $('.section__music').addClass('padding-hack');
 			}
 		},
 		offset: 300, // moving the trigger location from 0 at the top of the viewport
