@@ -273,58 +273,6 @@ header[data-page-type='other'] {
 	}
 }
 
-#lightSlider {
-	margin-top: -45px;
-	margin-left: 2vw;
-	height: 200px !important;
-	outline: 5px solid red;
-	li {		
-		height: 50px;
-		background-color: blue;
-		margin-top: 100px;
-	}
-	div {
-		position: absolute;
-	}
-	img {
-		object-fit: cover;
-		height: 100px;
-		width: 100px;
-		outline: 5px solid pink;
-	}
-	div:nth-child(2) {
-		background-color: $black_transparent;
-
-	}
-	p {
-				display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		color: $white;
-		height: 100px;
-		line-height: 1.2;
-		text-align: center;
-		width: 100px;
-		display: none;
-	}
-	div:hover {
-		p {
-			display: flex;
-		}
-	}
-	span {
-		font-family: $display-font_secondary;
-		font-size: 2.5rem;
-
-	}
-}
-.lSAction > a {
-	width: 50px !important;
-	height: 50px !important;
-}
-
-
 /*** Animation ***/
 .search__modal {
 	position: fixed;
