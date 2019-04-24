@@ -249,6 +249,7 @@ if (matchMedia) {
 		switchTextToLatinReg();
 	}
 	function selectLanguage(value) {
+		console.log(value);
 		var values = {
 			'english_original': function() {
 				// console.log("english_original");
