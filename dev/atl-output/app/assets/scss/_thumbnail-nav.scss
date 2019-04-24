@@ -1,3 +1,27 @@
+nav.digital-edition-nav {
+	background-color: $yellow;
+	position: fixed;
+	top: 6.25rem;
+	width: 100vw;
+	z-index: 1000000000000000000;
+	.owl-carousel {
+		height: 180px;
+	}
+	.owl-item img {
+		height: 140px;
+		object-fit: cover;
+		width: 150px;
+
+	}
+	.owl-item > div a div:nth-child(2) {
+		background-color: transparent;
+		color: $text-body;
+		font-size: 1.125rem;
+		margin-top: .5rem;
+		width: auto;
+	}
+}
+
 /*#lightSlider {
 	margin-top: -45px;
 	margin-left: 2vw;
@@ -22,7 +46,7 @@
 
 	}
 	p {
-				display: flex;
+		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
