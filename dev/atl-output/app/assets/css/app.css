@@ -4627,13 +4627,13 @@ main.emblem-page {
     margin-bottom: 3.125rem; } }
 
 nav.digital-edition-nav {
-  background-color: #DAE4EC;
   position: fixed;
   top: 6.25rem;
-  width: 100vw;
   z-index: 1000000000000000000; }
   nav.digital-edition-nav .owl-carousel {
-    height: 10rem; }
+    background-color: #DAE4EC;
+    height: 10rem;
+    width: 100vw; }
   nav.digital-edition-nav .owl-carousel .owl-nav {
     display: -webkit-box !important;
     display: -webkit-flex !important;
@@ -4700,10 +4700,42 @@ nav.digital-edition-nav {
     -webkit-filter: hue-rotate(330deg) saturate(800%) contrast(1.3) brightness(0.8);
     filter: hue-rotate(330deg) saturate(800%) contrast(1.3) brightness(0.8); }
   nav.digital-edition-nav .owl-item.center > div a div:nth-child(2) {
-    background-color: #dc4928;
-    color: white;
+    background-color: #DAE4EC;
+    color: #dc4928;
+    font-weight: 600;
     margin-top: 0;
     padding: .5rem .125rem; }
+  nav.digital-edition-nav button.thumbnail-trigger {
+    display: block;
+    height: 2rem;
+    width: 5rem;
+    float: right;
+    position: relative;
+    left: calc(-50% + 2.5rem);
+    border-radius: 0px 0px 15px 15px;
+    background-color: #DAE4EC;
+    position: relative;
+    z-index: 2; }
+  nav.digital-edition-nav button.thumbnail-trigger:before,
+  nav.digital-edition-nav button.thumbnail-trigger:after {
+    background-color: #DAE4EC;
+    border-radius: 0px 0px 3px 3px;
+    content: "";
+    height: 2rem;
+    position: absolute;
+    top: 0px;
+    width: 2.5rem;
+    z-index: -1; }
+  nav.digital-edition-nav button.thumbnail-trigger:before {
+    right: calc(50% - 3rem);
+    -webkit-transform: skewX(-40deg);
+    -ms-transform: skewX(-40deg);
+    transform: skewX(-40deg); }
+  nav.digital-edition-nav button.thumbnail-trigger:after {
+    left: calc(50% - 3rem);
+    -webkit-transform: skewX(40deg);
+    -ms-transform: skewX(40deg);
+    transform: skewX(40deg); }
 
 /*
  * CSS for Transcription of English translation of Atalanta. Designed mostly for proofreading.
