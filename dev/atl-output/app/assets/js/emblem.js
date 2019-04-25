@@ -83,13 +83,7 @@ $(function () {
 /* INITIALIZE */
 	onLoad(); // DISPLAY EMBLEM MENU AND DEFAULT OPTIONS ON PAGE LOAD
 
-	$('.owl-carousel').owlCarousel({ // initialize carousel for thumbnail nav
-		margin:10,
-		loop:true,
-		autoWidth:true,
-		items:10, 
-		nav:true
-	});
+
 	// $('.loop').owlCarousel({
 	// 	center: true,
 	// 	items:2,
@@ -145,48 +139,7 @@ if (matchMedia) {
 	  selectLanguage(ui.item.value);
 	});
 
-/* digital edition thumbnail navigation */
-	$("#lightSlider").lightSlider({
-		item: 9,
-		autoWidth: false,
-		slideMove: 1,
-		slideMargin: 10,
-		mode: "slide",
-		useCSS: true,
-		cssEasing: 'ease',
-		easing: 'linear',
-		speed: 400,
-		auto: false,
-		loop: false,
-		slideEndAnimation: true,
-		pause: 2000,
-		keyPress: false,
-		controls: true,
-		prevHtml: '',
-		nextHtml: '',
-		rtl: false,
-		adaptiveHeight: false,
-		vertical: false,
-		verticalHeight: 500,
-		vThumbWidth: 100,
-		thumbItem: 5,
-		pager: true,
-		gallery: false,
-		galleryMargin: 5,
-		thumbMargin: 5,
-		currentPagerPosition: 'middle',
-		enableTouch: true,
-		enableDrag: true,
-		freeMove: true,
-		swipeThreshold: 40,
-		responsive: [],
-		onBeforeStart: function (el) {},
-		onSliderLoad: function (el) {},
-		onBeforeSlide: function (el) {},
-		onAfterSlide: function (el) {},
-		onBeforeNextSlide: function (el) {},
-		onBeforePrevSlide: function (el) {},
-	});
+
 
 /* FUNCTIONS */
 	function checkState() {

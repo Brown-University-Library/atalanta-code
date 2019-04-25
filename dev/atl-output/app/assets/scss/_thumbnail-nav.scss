@@ -1,5 +1,5 @@
 nav.digital-edition-nav {
-	background-color: $yellow;
+	background-color: $blue_light;
 	position: fixed;
 	top: 6.25rem;
 	width: 100vw;
@@ -20,7 +20,7 @@ nav.digital-edition-nav {
 		display: flex;
 		align-items: center;
 		height: 30px;
-		margin-top: -6.75rem;
+		margin-top: -7.25rem;
 		transform: scale(4);
 		width: 1rem;
 	}
@@ -42,24 +42,7 @@ nav.digital-edition-nav {
 		padding: 0 .25rem .125rem 0;
 		width: 100%;
 	}
-	/*.owl-carousel .owl-nav {
-		display: inline-block !important;
-		width: 100vw;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		outline: 4px solid green;
-		margin-top: -3rem !important;
-	}
-	.owl-carousel .owl-nav button.owl-prev, 
-	.owl-carousel .owl-nav button.owl-next {
-		color: $red;
-		transform: scale(5);
-		justify-content: space-between;
-	}
-	.owl-carousel .owl-nav button.owl-prev {
-		
-	}*/
+
 	.owl-item img {
 		height: 120px;
 		object-fit: cover;
@@ -68,9 +51,20 @@ nav.digital-edition-nav {
 	}
 	.owl-item > div a div:nth-child(2) {
 		background-color: transparent;
+		box-sizing: border-box;
 		color: $text-body;
 		font-size: .875rem;
 		margin-top: .5rem;
-		width: auto;
+		width: 130px;
+		text-align: center;
+	}
+	.center img {
+		filter: hue-rotate(330deg) saturate(800%) contrast(1.3) brightness(.8);
+	}
+	.owl-item.center > div a div:nth-child(2) {
+		background-color: $red;
+		color: $white;
+		margin-top: 0;
+		padding: .5rem .125rem;
 	}
 }

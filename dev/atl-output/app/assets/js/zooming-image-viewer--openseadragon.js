@@ -3,6 +3,9 @@ $(function () {
 	var viewer
 	var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
 	var startPage // the number of first page of current emblem
+	var thumbnailNav //
+	var thumbnailPage //
+	var centeredThumbnail //
 	// var pageTiles = "../data/json/page-view.json"; // file path to page view dzi files
 	// var bookTiles = "../data/json/book-view.json"; // file path to book view dzi files
 	var pageTiles = "../data/json/pageView.json"; // file path to page view dzi files
@@ -49,6 +52,18 @@ $(function () {
 		
 		// var pageIndex = this.pageIndex - (this.mode === 'book' ? 2 : 1);
 		// 	if (this.mode === 'book')
+	});
+
+	/* digital edition thumbnail navigation */
+	thumbnailPage = myEmblemDataNum - 1;
+	const $owlCarousel = $(".owl-carousel").owlCarousel({
+		items: 9,
+		margin: 10,
+		center: true,
+		loop: true, 
+		nav: true,
+		dots: false,
+		startPosition: thumbnailPage
 	});
 
 	/*** MOTTO WAYPOINT ***/
