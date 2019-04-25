@@ -5,71 +5,72 @@ nav.digital-edition-nav {
 	width: 100vw;
 	z-index: 1000000000000000000;
 	.owl-carousel {
-		height: 180px;
+		height: 10rem;
 	}
+	.owl-carousel .owl-nav {
+		display: flex !important;
+		background-color: $white;
+		justify-content: space-between;
+		padding: 0 .5rem;
+	}
+	.owl-carousel .owl-nav button.owl-prev, 
+	.owl-carousel .owl-nav button.owl-next {
+		background-color: $black_transparent;
+		color: $white;
+		display: flex;
+		align-items: center;
+		height: 30px;
+		margin-top: -6.75rem;
+		transform: scale(4);
+		width: 1rem;
+	}
+	.owl-carousel .owl-nav button.owl-prev {
+		justify-content: flex-start;
+	}
+	.owl-carousel .owl-nav button.owl-next {
+		justify-content: flex-end;
+	}
+	.owl-carousel .owl-nav button.owl-prev:focus, 
+	.owl-carousel .owl-nav button.owl-next:focus {
+		outline: 1px auto orange !important;
+	}
+	.owl-carousel .owl-nav button.owl-prev span {
+		padding: 0 0 .125rem .25rem;
+		width: 100%;
+	}
+	.owl-carousel .owl-nav button.owl-next span {
+		padding: 0 .25rem .125rem 0;
+		width: 100%;
+	}
+	/*.owl-carousel .owl-nav {
+		display: inline-block !important;
+		width: 100vw;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		outline: 4px solid green;
+		margin-top: -3rem !important;
+	}
+	.owl-carousel .owl-nav button.owl-prev, 
+	.owl-carousel .owl-nav button.owl-next {
+		color: $red;
+		transform: scale(5);
+		justify-content: space-between;
+	}
+	.owl-carousel .owl-nav button.owl-prev {
+		
+	}*/
 	.owl-item img {
-		height: 140px;
+		height: 120px;
 		object-fit: cover;
-		width: 150px;
+		width: 130px;
 
 	}
 	.owl-item > div a div:nth-child(2) {
 		background-color: transparent;
 		color: $text-body;
-		font-size: 1.125rem;
+		font-size: .875rem;
 		margin-top: .5rem;
 		width: auto;
 	}
 }
-
-/*#lightSlider {
-	margin-top: -45px;
-	margin-left: 2vw;
-	height: 200px !important;
-	outline: 5px solid red;
-	li {		
-		height: 50px;
-		background-color: blue;
-		margin-top: 100px;
-	}
-	div {
-		position: absolute;
-	}
-	img {
-		object-fit: cover;
-		height: 100px;
-		width: 100px;
-		outline: 5px solid pink;
-	}
-	div:nth-child(2) {
-		background-color: $black_transparent;
-
-	}
-	p {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		color: $white;
-		height: 100px;
-		line-height: 1.2;
-		text-align: center;
-		width: 100px;
-		display: none;
-	}
-	div:hover {
-		p {
-			display: flex;
-		}
-	}
-	span {
-		font-family: $display-font_secondary;
-		font-size: 2.5rem;
-
-	}
-}
-.lSAction > a {
-	width: 50px !important;
-	height: 50px !important;
-}*/
-

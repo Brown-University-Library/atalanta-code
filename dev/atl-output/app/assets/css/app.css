@@ -4875,71 +4875,87 @@ nav.digital-edition-nav {
   position: fixed;
   top: 6.25rem;
   width: 100vw;
-  z-index: 1000000000000000000; }
+  z-index: 1000000000000000000;
+  /*.owl-carousel .owl-nav {
+		display: inline-block !important;
+		width: 100vw;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		outline: 4px solid green;
+		margin-top: -3rem !important;
+	}
+	.owl-carousel .owl-nav button.owl-prev, 
+	.owl-carousel .owl-nav button.owl-next {
+		color: $red;
+		transform: scale(5);
+		justify-content: space-between;
+	}
+	.owl-carousel .owl-nav button.owl-prev {
+		
+	}*/ }
   nav.digital-edition-nav .owl-carousel {
-    height: 180px; }
+    height: 10rem; }
+  nav.digital-edition-nav .owl-carousel .owl-nav {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    background-color: white;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 .5rem; }
+  nav.digital-edition-nav .owl-carousel .owl-nav button.owl-prev,
+  nav.digital-edition-nav .owl-carousel .owl-nav button.owl-next {
+    background-color: rgba(33, 33, 33, 0.4);
+    color: white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 30px;
+    margin-top: -6.75rem;
+    -webkit-transform: scale(4);
+    -ms-transform: scale(4);
+    transform: scale(4);
+    width: 1rem; }
+  nav.digital-edition-nav .owl-carousel .owl-nav button.owl-prev {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+  nav.digital-edition-nav .owl-carousel .owl-nav button.owl-next {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+  nav.digital-edition-nav .owl-carousel .owl-nav button.owl-prev:focus,
+  nav.digital-edition-nav .owl-carousel .owl-nav button.owl-next:focus {
+    outline: 1px auto orange !important; }
+  nav.digital-edition-nav .owl-carousel .owl-nav button.owl-prev span {
+    padding: 0 0 .125rem .25rem;
+    width: 100%; }
+  nav.digital-edition-nav .owl-carousel .owl-nav button.owl-next span {
+    padding: 0 .25rem .125rem 0;
+    width: 100%; }
   nav.digital-edition-nav .owl-item img {
-    height: 140px;
+    height: 120px;
     -o-object-fit: cover;
     object-fit: cover;
-    width: 150px; }
+    width: 130px; }
   nav.digital-edition-nav .owl-item > div a div:nth-child(2) {
     background-color: transparent;
     color: #4d4d4d;
-    font-size: 1.125rem;
+    font-size: .875rem;
     margin-top: .5rem;
     width: auto; }
 
-/*#lightSlider {
-	margin-top: -45px;
-	margin-left: 2vw;
-	height: 200px !important;
-	outline: 5px solid red;
-	li {		
-		height: 50px;
-		background-color: blue;
-		margin-top: 100px;
-	}
-	div {
-		position: absolute;
-	}
-	img {
-		object-fit: cover;
-		height: 100px;
-		width: 100px;
-		outline: 5px solid pink;
-	}
-	div:nth-child(2) {
-		background-color: $black_transparent;
-
-	}
-	p {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		color: $white;
-		height: 100px;
-		line-height: 1.2;
-		text-align: center;
-		width: 100px;
-		display: none;
-	}
-	div:hover {
-		p {
-			display: flex;
-		}
-	}
-	span {
-		font-family: $display-font_secondary;
-		font-size: 2.5rem;
-
-	}
-}
-.lSAction > a {
-	width: 50px !important;
-	height: 50px !important;
-}*/
 /*
  * CSS for Transcription of English translation of Atalanta. Designed mostly for proofreading.
  * Almost all elements are styled, but often so that they can be proofread.
