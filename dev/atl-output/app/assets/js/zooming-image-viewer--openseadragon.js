@@ -3,10 +3,6 @@ $(function () {
 	var zoomingViewer
 	var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
 	var startPage // the number of first page of current emblem
-	var thumbnailNav = $('nav.digital-edition-nav'); // thumbnail navigation for digital edition
-	var thumbnailPage // the number of the page in the digital edition matched to indexed thumbnails in nav
-	var thumbnailNavTrigger = $('button.thumbnail-trigger');
-	var centeredThumbnail = $('nav.digital-edition-nav .center'); // get the thumbnail element for the current page
 	// var pageTiles = "../data/json/page-view.json"; // file path to page view dzi files
 	// var bookTiles = "../data/json/book-view.json"; // file path to book view dzi files
 	var pageTiles = "../data/json/pageView.json"; // file path to page view dzi files
@@ -53,64 +49,6 @@ $(function () {
 		// var pageIndex = this.pageIndex - (this.mode === 'book' ? 2 : 1);
 		// 	if (this.mode === 'book')
 	});
-
-	/* digital edition thumbnail navigation */
-	thumbnailPage = myEmblemDataNum - 1;
-	const $owlCarousel = $(".owl-carousel").owlCarousel({
-		items: 10,
-		center: true,
-		loop: true, 
-		nav: true,
-		dots: false,
-		startPosition: thumbnailPage,
-		responsive: {
-			0: {
-				items: 3
-			},
-			480: {
-				items: 5
-			},
-			768: {
-				items: 6
-			},
-			1100: {
-				items: 8
-			},
-			1330: {
-				items: 10
-			},
-			1600: {
-				items: 12
-			},
-			2200: {
-				items: 16
-			}
-		}
-	});
-
-	$(thumbnailNavTrigger).on("click", function() {
-		console.log("I CLICKED THE THUMBNAIL NAV TRIGGER");
-		animateThumbnailNav();
-	});
-
-	function animateThumbnailNav() {
-		if ($(thumbnailNav).hasClass('de-nav--closed')) {
-			openThumbnailNav();
-		}
-		else if ($(thumbnailNav).hasClass('de-nav--open')) {
-			closeThumbnailNav();
-		}
-	}
-
-	function closeThumbnailNav() {
-		$(thumbnailNav).removeClass('de-nav--open');
-		$(thumbnailNav).addClass('de-nav--closed');
-	}
-
-	function openThumbnailNav() {
-		$(thumbnailNav).removeClass('de-nav--closed');
-		$(thumbnailNav).addClass('de-nav--open');
-	}
 
 	/*** MOTTO WAYPOINT ***/
 	// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
