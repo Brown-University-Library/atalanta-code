@@ -1,7 +1,8 @@
 nav.digital-edition-nav {
+	height: 10rem;
 	position: fixed;
 	top: 6.25rem;
-	z-index: 1000000000000000000;
+	z-index: $thumbnailtrigger-z;
 	.owl-carousel {
 		background-color: $blue_light;
 		height: 10rem;
@@ -76,7 +77,12 @@ nav.digital-edition-nav {
 		border-radius: 0px 0px 15px 15px;
 		background-color: $blue_light;
 		position: relative;
+		text-transform: uppercase;
 		z-index: 2;
+	}
+	button.thumbnail-trigger:focus {
+		outline: none;
+		color: $yellow_inverse;
 	}
 	button.thumbnail-trigger:before, 
 	button.thumbnail-trigger:after {
@@ -97,4 +103,12 @@ nav.digital-edition-nav {
 		left: calc(50% - 3rem);
 		transform: skewX(40deg);
 	}
+}
+
+nav.digital-edition-nav.de-nav--closed {
+	top: -6.5rem;
+}
+nav.digital-edition-nav.de-nav--open {
+	transform: translate3d(0, 0, 0);
+	transition: .5s;
 }

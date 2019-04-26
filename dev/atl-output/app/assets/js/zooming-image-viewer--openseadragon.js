@@ -1,11 +1,12 @@
 $(function () {
 	var musicControlPosition = '.transport';
-	var viewer
+	var zoomingViewer
 	var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
 	var startPage // the number of first page of current emblem
-	var thumbnailNav //
-	var thumbnailPage //
-	var centeredThumbnail //
+	var thumbnailNav = $('nav.digital-edition-nav'); // thumbnail navigation for digital edition
+	var thumbnailPage // the number of the page in the digital edition matched to indexed thumbnails in nav
+	var thumbnailNavTrigger = $('button.thumbnail-trigger');
+	var centeredThumbnail = $('nav.digital-edition-nav .center'); // get the thumbnail element for the current page
 	// var pageTiles = "../data/json/page-view.json"; // file path to page view dzi files
 	// var bookTiles = "../data/json/book-view.json"; // file path to book view dzi files
 	var pageTiles = "../data/json/pageView.json"; // file path to page view dzi files
@@ -29,7 +30,7 @@ $(function () {
 		// // should the book end at the last page or loop back to the beginning?
 
 		var atalantaZoom = pageView; // current view mode (initially pageView)
-		viewer = OpenSeadragon({
+		zoomingViewer = OpenSeadragon({
 			id: "openseadragon-wrapper",
 			tileSources: [atalantaZoom],
 			initialPage: startPage, // start viewer at first page of current emblem
@@ -48,7 +49,6 @@ $(function () {
 			previousButton: "previous",
 			nextButton: "next"
 		});
-		console.log(viewer);
 		
 		// var pageIndex = this.pageIndex - (this.mode === 'book' ? 2 : 1);
 		// 	if (this.mode === 'book')
@@ -66,13 +66,37 @@ $(function () {
 		startPosition: thumbnailPage
 	});
 
+	$(thumbnailNavTrigger).on("click", function() {
+		console.log("I CLICKED THE THUMBNAIL NAV TRIGGER");
+		animateThumbnailNav();
+	});
+
+	function animateThumbnailNav() {
+		if ($(thumbnailNav).hasClass('de-nav--closed')) {
+			openThumbnailNav();
+		}
+		else if ($(thumbnailNav).hasClass('de-nav--open')) {
+			closeThumbnailNav();
+		}
+	}
+
+	function closeThumbnailNav() {
+		$(thumbnailNav).removeClass('de-nav--open');
+		$(thumbnailNav).addClass('de-nav--closed');
+	}
+
+	function openThumbnailNav() {
+		$(thumbnailNav).removeClass('de-nav--closed');
+		$(thumbnailNav).addClass('de-nav--open');
+	}
+
 	/*** MOTTO WAYPOINT ***/
 	// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
 	var waypoint = new Waypoint({
 		element: document.getElementById('basic-waypoint__0'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 			if(direction === 'down') { // if scrolling down the page, change zooming page to 2/4
-				viewer.goToPage(myEmblemDataNum * 4);
+				zoomingViewer.goToPage(myEmblemDataNum * 4);
 			}
 			else { // if scrolling back up the page
 				
@@ -87,7 +111,7 @@ $(function () {
 		element: document.getElementById('basic-waypoint__1'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 			if(direction === 'down') { // if scrolling down the page, change zooming page to 2/4
-				viewer.goToPage(myEmblemDataNum * 4);
+				zoomingViewer.goToPage(myEmblemDataNum * 4);
 			}
 			else if (direction === 'up') { // if scrolling back up the page
 
@@ -111,7 +135,7 @@ $(function () {
 			if(direction === 'down') { // if English && scrolling down the page, change zooming page to 1/4
 				console.log("WAYPOINTS MUSIC DOWN");
 				$(musicControlPosition).removeClass('is-unstuck');
-				viewer.goToPage(myEmblemDataNum * 4 - 1);
+				zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
 				$(musicControlPosition).addClass('is-stuck');
 				// $('.section__music').addClass('padding-hack');
 			}
@@ -141,7 +165,7 @@ $(function () {
 			else if (direction === 'up') { // if scrolling back up the page
 				console.log("WAYPOINTS MUSIC UP");
 				$(musicControlPosition).addClass('is-unstuck');
-				viewer.goToPage(myEmblemDataNum * 4);
+				zoomingViewer.goToPage(myEmblemDataNum * 4);
 				$(musicControlPosition).removeClass('is-stuck');
 				// $('.section__music').removeClass('padding-hack');
 			}
@@ -162,14 +186,14 @@ $(function () {
 			if(direction === 'down') { // if scrolling down the page, change zooming page to 2/4 if Latin/English is active or 1/4 if German is active
 				console.log("WAYPOINTS EPIGRAM DOWN");
 				$(musicControlPosition).addClass('is-unstuck');
-				viewer.goToPage(myEmblemDataNum * 4);
+				zoomingViewer.goToPage(myEmblemDataNum * 4);
 				$(musicControlPosition).removeClass('is-stuck');
 				// $('.section__music').removeClass('padding-hack');
 			}
 			else { // if scrolling back up the page
 				console.log("WAYPOINTS EPIGRAM UP");
 				$(musicControlPosition).removeClass('is-unstuck');
-				viewer.goToPage(myEmblemDataNum * 4 - 1);
+				zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
 				$(musicControlPosition).addClass('is-stuck');
 				// $('.section__music').addClass('padding-hack');
 			}
@@ -183,10 +207,10 @@ $(function () {
 		element: document.getElementById('basic-waypoint__4'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 			if(direction === 'down') { // if scrolling down the page, change zooming page to 3/4
-				viewer.goToPage(myEmblemDataNum * 4 + 1);
+				zoomingViewer.goToPage(myEmblemDataNum * 4 + 1);
 			}
 			else { // if scrolling back up the page
-				viewer.goToPage(myEmblemDataNum * 4);
+				zoomingViewer.goToPage(myEmblemDataNum * 4);
 			}
 		},
 		offset: 280, // moving the trigger location from 0 at the top of the viewport
@@ -198,10 +222,10 @@ $(function () {
 		element: document.getElementById('basic-waypoint__5'), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 			if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
-				viewer.goToPage(myEmblemDataNum * 4 + 2);
+				zoomingViewer.goToPage(myEmblemDataNum * 4 + 2);
 			}
 			else { // if scrolling back up the page
-				viewer.goToPage(myEmblemDataNum * 4 + 1);
+				zoomingViewer.goToPage(myEmblemDataNum * 4 + 1);
 			}
 		},
 		offset: 500, // moving the trigger location from 0 at the top of the viewport

@@ -4627,9 +4627,10 @@ main.emblem-page {
     margin-bottom: 3.125rem; } }
 
 nav.digital-edition-nav {
+  height: 10rem;
   position: fixed;
   top: 6.25rem;
-  z-index: 1000000000000000000; }
+  z-index: 150; }
   nav.digital-edition-nav .owl-carousel {
     background-color: #DAE4EC;
     height: 10rem;
@@ -4715,7 +4716,11 @@ nav.digital-edition-nav {
     border-radius: 0px 0px 15px 15px;
     background-color: #DAE4EC;
     position: relative;
+    text-transform: uppercase;
     z-index: 2; }
+  nav.digital-edition-nav button.thumbnail-trigger:focus {
+    outline: none;
+    color: #0051ff; }
   nav.digital-edition-nav button.thumbnail-trigger:before,
   nav.digital-edition-nav button.thumbnail-trigger:after {
     background-color: #DAE4EC;
@@ -4736,6 +4741,16 @@ nav.digital-edition-nav {
     -webkit-transform: skewX(40deg);
     -ms-transform: skewX(40deg);
     transform: skewX(40deg); }
+
+nav.digital-edition-nav.de-nav--closed {
+  top: -6.5rem; }
+
+nav.digital-edition-nav.de-nav--open {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
 
 /*
  * CSS for Transcription of English translation of Atalanta. Designed mostly for proofreading.
@@ -6565,7 +6580,7 @@ body {
 /*$gray-medium: #989898;*/
 /*$orange-red_darker: hsla(11, 72%, 42%, 1);*/
 .subnav-v3 {
-  background-color: #333333;
+  background-color: #DAE4EC;
   display: block;
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
@@ -6608,7 +6623,7 @@ body {
 
 .emblem-body .ui-selectmenu-menu.ui-selectmenu-open ul li div.ui-state-active {
   /* change to .ui-selectmenu-text.ui-state-active ??? */
-  background: #FFB000;
+  background: #DAE4EC;
   border: none;
   color: #4d4d4d; }
 
@@ -6617,7 +6632,7 @@ body {
 
 .emblem-body #layout-button,
 .emblem-body #language-button {
-  background-color: #FFB000;
+  background-color: #DAE4EC;
   border: none;
   border-radius: 0;
   display: -webkit-box !important;
@@ -6635,11 +6650,18 @@ body {
   font-size: 1rem;
   height: 2rem;
   margin-top: .125rem;
-  width: 15rem; }
+  width: 11.5rem; }
+
+.emblem-body #layout-button {
+  width: 10.75rem; }
 
 .emblem-body #layout-button:active,
 .emblem-body #language-button:active {
   color: rgba(33, 33, 33, 0.4); }
+
+.emblem-body #layout-button:focus,
+.emblem-body #language-button:focus {
+  outline: 1px dotted #4d4d4d; }
 
 .emblem-body .ui-icon {
   height: 2rem;
@@ -6668,6 +6690,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-right: .5rem;
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
   -ms-flex-order: 1;
