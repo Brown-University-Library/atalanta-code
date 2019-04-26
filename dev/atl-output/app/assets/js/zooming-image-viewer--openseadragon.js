@@ -57,13 +57,35 @@ $(function () {
 	/* digital edition thumbnail navigation */
 	thumbnailPage = myEmblemDataNum - 1;
 	const $owlCarousel = $(".owl-carousel").owlCarousel({
-		items: 9,
-		margin: 10,
+		items: 10,
 		center: true,
 		loop: true, 
 		nav: true,
 		dots: false,
-		startPosition: thumbnailPage
+		startPosition: thumbnailPage,
+		responsive: {
+			0: {
+				items: 3
+			},
+			480: {
+				items: 5
+			},
+			768: {
+				items: 6
+			},
+			1100: {
+				items: 8
+			},
+			1330: {
+				items: 10
+			},
+			1600: {
+				items: 12
+			},
+			2200: {
+				items: 16
+			}
+		}
 	});
 
 	$(thumbnailNavTrigger).on("click", function() {
