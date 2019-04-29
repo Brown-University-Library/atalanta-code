@@ -6,10 +6,6 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>Furnace and Fugue: Atalanta fugiens (Digital Edition)</title>
-<!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<!-- jQuery UI CSS -->
-<link rel="stylesheet" href="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.min.css">
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css">
 <!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
 </head>
@@ -51,7 +47,10 @@
 			    </form>
 			</div>
 		</div>
-<!-- EMBLEM NAVIGATION -->
+	</header>
+<!-- EMBLEM PAGE-->
+	<main id="emblem-data" class="emblem-page frontmatter" data-id="1">
+	<!-- EMBLEM NAVIGATION -->
 		<nav class="subnav-v3" aria-label="Digital Edition">
 			<form action="#">
 				<fieldset>
@@ -75,13 +74,10 @@
 				</fieldset>
 			</form>
 		</nav>
-	</header>
-<!-- EMBLEM PAGE-->
-	<main id="emblem-data" class="emblem-page frontmatter" data-id="1">
 <!-- EMBLEM GRID -->
 		<!-- Facsimile -->
-		<div aria-hidden="true" class="section__facsimile is-hidden">
-			<div class="facsimile--full">
+		<div aria-hidden="true" class="section__facsimile panel--left">
+			<div class="facsimile--full grid--half">
 				<section class="_facsimile">
 					<!-- https://openseadragon.github.io/docs/ -->
 					<section class="facsimile">
@@ -102,8 +98,8 @@
 				</section>
 			</div>
 		</div>
-		<div class="emblem">
-			<section class="section__frontispiece section--single panel--right">
+		<div class="emblem panel--right">
+			<section class="section__frontispiece section--single grid--full">
 				<div class="translation">
 					<span class="page-break--atalanta-fugiens"></span>
 					<span class="page-break--beinecke"></span>
@@ -312,6 +308,8 @@
 			</section>
 		</div><!-- END EMBLEM -->
 	</main> <!-- END OF EMBLEM PAGE -->
+	<div class="_collections"></div>
+	<div class="_footer"></div>
 <!-- JS -->
 	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

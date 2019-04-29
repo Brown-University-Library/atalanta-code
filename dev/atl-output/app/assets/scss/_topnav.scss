@@ -60,7 +60,7 @@ div[data-nav='home'] .topnav__identity {
 	z-index: 20000000;
 }
 .toc {
-	background-color: $gray-dark;
+	background-color: $gray;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -88,19 +88,19 @@ div[data-nav='home'] .topnav__identity {
 		color: $white;
 	}
 	a:hover {
-		color: $orange-yellow_brighter;
+		color: $yellow_bright;
 	}
 	.toc__heading  {
-		color: $orange-yellow;
+		color: $yellow;
 		font-size: 1.125rem;
 		font-weight: 500;
 		padding: .825rem 0 .325rem .5rem;
 	}
 	.toc__heading a {
-		color: $orange-yellow;
+		color: $yellow;
 	}
 	.toc__heading a:hover {
-		color: $orange-yellow_brighter;
+		color: $yellow_bright;
 	}
 	.toc__essay {
 		margin-bottom: .75rem;
