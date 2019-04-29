@@ -11,8 +11,6 @@
 		height: calc(100vh - 6.25rem); /* view height - topnav - emblem nav */
 		padding: 0 1rem;
 		width: calc(50vw/12 * 2);
-		/*z-index: 10;*/ /* music page SVG overlaps with transport controls */
-/*outline: 5px solid black;*/
 		.atalanta-notation-start, 
 		.atalanta-notation-stop, 
 		.atalanta-notation-mute-track, 
@@ -28,18 +26,11 @@
 			text-align: center;
 			width: 100%;
 		}
-		button > div {
-/*outline: 1px solid purple;*/
-		}
 		button > div:nth-child(1) {
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: contain;
 			margin-bottom: .5rem;
-		}
-		.atalanta-notation-start, 
-		.atalanta-notation-stop {
-/*outline: 5px solid green;*/
 		}
 		.atalanta-notation-start.playing {
 		  display: none;
@@ -52,34 +43,17 @@
 			filter: brightness(0.7);
 			transition: .3s;
 		}
-		.play-btn__label {
-			
-		}
 		.pause-btn__icon {
 			background-image: url('../icons/icon_pause_filled--gray.svg');
 			height: 2.5rem;
 		}
 		.atalanta-notation-stop.playing .pause-btn__icon {
-			/*background-image: url('../icons/icon_pause-outline.svg');*/
 			background-image: url('../icons/icon_pause_filled--gray.svg');
 		}
 		.atalanta-notation-stop.playing:hover .pause-btn__icon {
 			background-image: url('../icons/icon_pause_filled--gray.svg');
 			filter: brightness(0.7);
 			transition: .3s;
-		}
-		.pause-btn__label {
-
-		}
-		.atalanta-notation-start:hover .play-btn__label, 
-		.atalanta-notation-stop:hover .pause-btn__label {
-
-		}
-		.track-mute {
-/*outline: 5px solid red;*/
-		}
-		.atalanta-notation-mute-track {
-
 		}
 		.mute-btn__icon {
 			background-image: url('../icons/icon_volume_filled--gray.svg');
@@ -89,12 +63,6 @@
 			filter: brightness(0.7);
 			transition: .3s;
 		}
-		.mute-btn__label {
-
-		}
-		.atalanta-notation-mute-track:hover .mute-btn__label {
-
-		}
 		.atalanta-notation-mute-track.mute .mute-btn__icon {
 			background-image: url('../icons/icon_volume_filled--gray.svg');
 		}
@@ -102,9 +70,6 @@
 			background-image: url('../icons/icon_volume_filled--gray.svg');
 			filter: brightness(0.7);
 			transition: .3s;
-		}
-		.atalanta-notation__switch {
-
 		}
 		.atalanta-notation__switch a {
 			color: $text_body;
@@ -131,12 +96,8 @@
 			filter: brightness(0.7);
 			transition: .3s;
 		}
-		.piano-roll__label {
-
-		}
 	}
 	.ata-viz-cmn {
-/*outline: 5px solid green;*/
 		background: no-repeat;
   		background-size: contain;
 		overflow: hidden;
@@ -303,7 +264,6 @@
 
 
 /* piano roll */
-
 .lity-container .ata-viz-pianoroll {
 	background-color: $white;
 	height: 60vh;
@@ -434,7 +394,4 @@
 			flex-direction: column;
 		}
 	}
-
 }
-
-
