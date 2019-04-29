@@ -1,0 +1,259 @@
+nav.digital-edition-nav {
+	background-color: $blue_light;
+	height: 10rem;
+	padding-top: 1rem;
+	position: fixed;
+	top: $topnav-h;
+	z-index: $thumbnailtrigger-z;
+	.owl-carousel {
+		background-color: $blue_light;
+		height: 10rem;
+		width: 100vw;
+	}
+	.owl-carousel .owl-nav {
+		display: flex !important;
+		background-color: $white;
+		justify-content: space-between;
+		padding: 0 .5rem;
+	}
+	.owl-carousel .owl-nav button.owl-prev, 
+	.owl-carousel .owl-nav button.owl-next {
+		background-color: $black_transparent;
+		color: $red;
+		display: flex;
+		align-items: center;
+		filter: grayscale(1) brightness(3);
+		height: 120px;
+		margin-top: -9.5rem;
+		width: 3rem;
+		svg {
+			transform: scale(.625);
+		}
+	}
+	.owl-carousel .owl-nav button.owl-prev {
+		justify-content: flex-start;
+		margin-left: -10px;
+		svg {
+			margin-left: .25rem;
+		}
+	}
+	.owl-carousel .owl-nav button.owl-next {
+		justify-content: flex-end;
+		margin-right: -10px;
+		svg {
+			margin-right: .25rem;
+		}
+	}
+	.owl-carousel .owl-nav button.owl-prev:active,
+	.owl-carousel .owl-nav button.owl-prev:hover, 
+	.owl-carousel .owl-nav button.owl-next:active, 
+	.owl-carousel .owl-nav button.owl-next:hover {
+		filter: grayscale(0) brightness(1);
+		svg {
+			filter: grayscale(1) brightness(1);
+		}
+	}
+	.owl-carousel .owl-nav button.owl-prev:focus, 
+	.owl-carousel .owl-nav button.owl-next:focus {
+		outline: none;
+		filter: grayscale(0) brightness(1);
+	}
+	.owl-carousel .owl-nav button.owl-prev span {
+		padding: 0 0 .125rem .25rem;
+		width: 100%;
+	}
+	.owl-carousel .owl-nav button.owl-next span {
+		padding: 0 .25rem .125rem 0;
+		width: 100%;
+	}
+	.owl-item:focus {
+		outline: none;
+		img {
+			outline: 1px dotted $red;
+		}
+		.thumbnail__label {
+			color: $red;
+		}
+	}
+	.owl-item:hover img {
+		filter: grayscale(.3) hue-rotate(330deg) saturate(800%) contrast(1.3) brightness(.8);
+	}
+	.owl-item:hover .thumbnail__label {
+		color: $red;
+	}
+	.owl-item img {
+		height: 120px;
+		object-fit: cover;
+		width: 130px;
+	}
+	.owl-item .thumbnail__img--frontmatter img {
+		object-position: 0 15%;
+	}
+	.owl-item .thumbnail__label {
+		background-color: transparent;
+		box-sizing: border-box;
+		color: $text-body;
+		font-size: .875rem;
+		line-height: 1.2;
+		margin-top: .5rem;
+		width: 130px;
+		text-align: center;
+	}
+	.center img {
+		filter: grayscale(.3) hue-rotate(330deg) saturate(800%) contrast(1.3) brightness(.8);
+	}
+	.owl-item.center .thumbnail__label {
+		background-color: $blue_light;
+		color: $red;
+		font-weight: 600;
+		margin-top: 0;
+		padding: .5rem .125rem;
+	}
+	button.thumbnail-trigger {
+		border-left: 25px solid transparent;
+		border-right: 25px solid transparent;
+		border-top: 2rem solid $blue_light;
+		display: block;
+		float: right;
+		height: 0;
+		left: calc(-50% + 5rem);
+		position: relative;
+		width: 10rem;
+	}
+	button.thumbnail-trigger:hover {
+		color: $red;
+	}
+	button.thumbnail-trigger:focus {
+		outline: none;
+/*		color: $yellow_inverse;
+		.thumbnail-trigger__icon {
+			filter: hue-rotate(200deg);
+		}*/
+	}
+	.thumbnail-trigger > div {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		font-size: 1rem;
+		transform: translate3d(4px, -23px, 0);
+	}
+	.thumbnail-trigger__label {
+		margin-right: .5rem;
+	}
+	.thumbnail-trigger__icon {
+		background-image: url('../icons/icon_dropdown-arrow.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		display: inline-block;
+		height: 2rem;
+		margin-top: -10px;
+		transform: rotate(-90deg) scale(0.7);
+		width: 2rem;
+	}
+}
+
+/* ANIMATION */
+nav.digital-edition-nav.de-nav--closed { /* experiment with close drawer timing and easing */
+	top: -7.5rem;
+/*transform: translate3d(0, -170px, 0);*/
+/*	transition: .1s;*/
+	.thumbnail-trigger__icon {
+			transform: rotate(-90deg) scale(0.7);
+			/*transition: .05s;*/
+	}	
+}
+nav.digital-edition-nav.de-nav--open {
+	transform: translate3d(0, 0, 0); /* Is this needed??? */
+	transition: .5s;
+	.thumbnail-trigger > div {
+		transform: translate3d(4px, -32px, 0);
+		transition: .2s;
+	}
+	.thumbnail-trigger__icon {
+		transform: translate3d(0, 9px, 0) rotate(90deg) scale(0.7);
+		transition: .4s;
+	}
+}
+
+/*** BREAKPOINTS ***/
+/* small  -  mobile */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	nav.digital-edition-nav {
+		height: 8rem;
+	}
+	nav.digital-edition-nav	.owl-carousel {
+		height: 8rem;
+	}
+	nav.digital-edition-nav	.owl-carousel .owl-nav button.owl-prev, 
+	nav.digital-edition-nav .owl-carousel .owl-nav button.owl-next {
+		display: none;
+/*		height: 80px;
+		margin-top: -7.5rem;*/
+	}
+	nav.digital-edition-nav	.owl-item img {
+		height: 80px;
+		width: 90px;
+	}
+	nav.digital-edition-nav .owl-item .thumbnail__label {
+		width: 90px;
+	}
+	nav.digital-edition-nav.de-nav--closed {
+		top: -5.5rem;
+	}
+	nav.digital-edition-nav button.thumbnail-trigger {
+		border-left: 30px solid transparent;
+		border-right: 30px solid transparent;
+		left: calc(-50% + 3.25rem);
+		width: 6.5rem;
+	}
+	nav.digital-edition-nav .thumbnail-trigger > div {
+		font-size: .75rem;
+	}
+	nav.digital-edition-nav.de-nav--closed {
+		button.thumbnail-trigger {
+			/*outline: 1px solid red;*/
+			left: calc(-50% + 2.55rem);
+			width: 5rem;
+		}
+		.thumbnail-trigger > div {
+
+		}
+		.thumbnail-trigger__label {
+			margin-right: 1rem;
+		}
+		 .thumbnail-trigger__icon {
+/*		 	outline: 1px solid green;
+		 	transform: translate3d(-25px, -15px, 0) rotate(-90deg) scale(1.5);*/
+			/*transform: translate3d(-100px, 2px, 0) rotate(-90deg) scale(2);*/
+/*			margin-left: 20px;
+			height: 25px;
+			width: 25px;*/
+		}	
+	}
+	nav.digital-edition-nav.de-nav--open {
+		.thumbnail-trigger > div {
+			transform: translate3d(-6px, -30px, 0);
+		}
+		.thumbnail-trigger__label {
+			margin-right: .25rem;
+		}
+		.thumbnail-trigger__icon {
+			transform: translate3d(0, 2px, 0) rotate(90deg) scale(1.2);	
+		}
+	}
+}
+/* medium  -  tablet */
+@media screen and (min-width: 768px) and (max-width: 999px) {
+	nav.digital-edition-nav	.owl-carousel .owl-nav button.owl-prev, 
+	nav.digital-edition-nav .owl-carousel .owl-nav button.owl-next {
+		height: 110px;
+		margin-top: -8.875rem;
+	}
+	nav.digital-edition-nav	.owl-item img {
+		height: 110px;
+		width: 120px;
+	}
+	nav.digital-edition-nav .owl-item .thumbnail__label {
+		width: 120px;
+	}
+}
