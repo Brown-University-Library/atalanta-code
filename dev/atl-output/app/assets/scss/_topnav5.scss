@@ -21,7 +21,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     margin: 10px 35%;
     padding:5px;
     border-radius: 15px;
-    border:4px solid yellow;
+    border: 4px solid $yellow;
     text-align:center;
     font-size:1.2em;
     z-index:999;
@@ -163,13 +163,13 @@ header[data-page-type='other'] {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
-		margin-right: -1rem;
 	}
 	li.topnav__search button {
 		color: $gray_medium;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
+/*		justify-content: space-between;*/
 		height: $topnav-h;
 		width: 5.5rem;
 	}
@@ -179,6 +179,8 @@ header[data-page-type='other'] {
 	}
 	li.topnav__search svg {
 		width: 5.5rem;
+/*		transform: scale(2.5);
+		width: 2rem;*/
 	}
 	li.topnav__search svg .st0 {
 		stroke: $gray_medium;
@@ -189,6 +191,10 @@ header[data-page-type='other'] {
 	}
 	li.topnav__search span.topnav__search-label {
 		display: none;
+/*		font-family: $display-font_secondary;
+		font-size: .75rem;
+		letter-spacing: .05em;
+		text-transform: uppercase;*/
 	}
 	li.topnav__search a:hover span.topnav__search-label, 
 	li.topnav__search a:focus span.topnav__search-label {
@@ -500,9 +506,9 @@ header[data-page-type='other'] {
 
 /* medium  -  tablet */
 @media screen and (min-width: 768px) and (max-width: 999px) {
-	.topnav ul {
+/*	.topnav ul {
 		grid-template-columns: 2fr 4fr 2fr;
-	}
+	}*/
 	.search__modal {
 		padding: 1rem 2rem;
 	}
@@ -513,7 +519,13 @@ header[data-page-type='other'] {
 		height: 8rem;
 	}
 }
-
+/* large - laptop */
+@media screen and (min-width: 1000px) and (max-width: 1299px) {
+	.search__modal {
+		height: 60vh;
+		top: $topnav-h;
+	}
+}
 /* large  -  desktop */
 @media screen and (min-width: 1500px) and (max-width: 1999px) {
 	
@@ -537,7 +549,7 @@ header[data-page-type='other'] {
 	}
 }
 @media screen and (min-width: 1000px) and (max-width: 1280px) {
-	.search__modal {
+/*	.search__modal {
 		padding: 0 1rem;
 	}
 	.search__modal .search__bar {
@@ -545,13 +557,13 @@ header[data-page-type='other'] {
 	}
 	.search__modal .search__bar__label {
 		height: 3rem;
-	}
+	}*/
 }
 
 /* iPad Pro */
 @media screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
 	.search__modal {
-		height: 40vh;
+		height: 60vh;
 	}
 	.search__modal .search__bar__label {
 		font-size: 1.25rem;
