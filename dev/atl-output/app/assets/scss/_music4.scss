@@ -1,6 +1,7 @@
 @import 'colors';
 @import 'utilities';
 
+/* general styles */
 .section__music {
 	font-family: $body-font_emblem;
 }
@@ -140,7 +141,7 @@
   stroke: $yellow_inverse;
 }
 
-
+/* general grid styles */
 @supports (display: grid) {
 	.section__music ._music {
 		display: grid;
@@ -220,7 +221,7 @@
 			margin-top: -2rem;
 		}
 	}
-	/* ANIMATION */
+	/* GRID ANIMATION */
 	/* sticky music player controls */
 	.panel--right .section__music ._music .ata-music .transport.is-stuck {
 		background-color: $blue_light;
@@ -232,6 +233,7 @@
 	}
 }
 
+/* general grid fallback styles */
 @supports not (display: grid) {
 	.section__music ._music .ata-music {
 		.transport {
@@ -248,7 +250,8 @@
 		}
 	}
 }
-/* ANIMATION */
+
+/* GENERAL ANIMATION */
 /* sticky music player controls */
 .section__music ._music .ata-music .transport.is-stuck {
   animation: fade-in .4s ease-out;
@@ -342,6 +345,7 @@
 	}
 }
 
+/* grid piano roll */
 @supports (display: grid) {
 	.lity-container .ata-viz-pianoroll {
 		display: grid;
@@ -375,6 +379,7 @@
 	}
 }
 
+/* grid fallback piano roll */
 @supports not (display: grid) {
 	.lity-container .ata-viz-pianoroll {
 		display: flex;
