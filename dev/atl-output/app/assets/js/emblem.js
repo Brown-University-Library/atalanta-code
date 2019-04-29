@@ -147,12 +147,15 @@ if (matchMedia) {
 /* digital edition thumbnail navigation */
 	thumbnailPage = emblemPage - 1;
 	const $owlCarousel = $(".owl-carousel").owlCarousel({
-		items: 10,
 		center: true,
+		dots: false,
+		items: 10,
 		loop: true, 
 		nav: true,
-		dots: false,
-		startPosition: thumbnailPage,
+		navText: [
+			'<svg id="icon_arrow-left-lineart" data-name="icon_arrow-left-lineart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.6 250.2"><title>export_icon_arrow-left-lineart</title><polyline points="126.9 1.8 3.5 125.1 126.9 248.5" fill="none" stroke="#dc4929" stroke-miterlimit="10" stroke-width="5"/></svg>',
+			'<svg id="icon_arrow-right-lineart" data-name="icon_arrow-right-lineart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.6 250.2"><title>export_icon_arrow-right-lineart</title><polyline points="1.8 248.5 125.1 125.1 1.8 1.8" fill="none" stroke="#dc4929" stroke-miterlimit="10" stroke-width="5"/></svg>'
+		],
 		responsive: {
 			0: {
 				items: 3
@@ -175,7 +178,8 @@ if (matchMedia) {
 			2200: {
 				items: 16
 			}
-		}
+		},
+		startPosition: thumbnailPage
 	});
 	$(thumbnailNavTrigger).on("click", function() {
 		thumbnailNavAnimate();

@@ -75,6 +75,10 @@
 	#language-button:focus {
 		outline: 1px dotted $text_body;
 	}
+	#layout-button:hover, 
+	#language-button:hover {
+		color: $red;
+	}
 	.ui-icon {
 		height: 2rem;
 		width: 2rem;
@@ -114,8 +118,8 @@
 		#layout-button, 
 		#language-button {
 			margin-right: 0;
-			padding: .5rem .25rem;
-			width: 9rem;
+			padding: .5rem .125rem;
+			width: 6.25rem;
 		}
 		.ui-selectmenu-text {
 			align-items: center;
@@ -124,14 +128,16 @@
 			overflow-wrap: break-word;
 			text-align: center;
 			white-space: normal;
-			width: 6rem;
+			width: 4rem;
 		}
 		ul#layout-menu li:nth-of-type(1) {
 			display: none;
 		}
 		.ui-selectmenu-menu.ui-selectmenu-open ul li div {  /* change to .ui-selectmenu-text ??? */
 			font-size: .75rem;
-			padding-left: 1rem;
+			line-height: 1.2;
+			padding-left: .5rem .125rem;
+
 		}
 	}
 }
