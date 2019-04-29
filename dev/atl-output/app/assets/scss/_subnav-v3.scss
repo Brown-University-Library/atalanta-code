@@ -41,9 +41,10 @@
 			font-size: 1rem;
 			display: flex;
 			align-items: center;
+			padding: 0 1rem;
 		}
 		li div.ui-state-active {  /* change to .ui-selectmenu-text.ui-state-active ??? */
-			background: $orange-yellow;
+			background: $yellow;
 			border: none;
 			color: $text_body;
 		}
@@ -53,7 +54,7 @@
 	}
 	#layout-button, 
 	#language-button {
-		background-color: $orange-yellow;
+		background-color: $yellow;
 		border: none;
 		border-radius: 0;
 		display: flex !important;

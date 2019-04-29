@@ -3,64 +3,71 @@
 
 main.emblem-page {
 	background: $white;
-/*	background-image: url("../img/default/bkg-illustration.png");*/
-	/*background-repeat: no-repeat;*/
+/*	background-image: url("../img/default/bkg-illustration.png");
+	background-repeat: no-repeat;*/
 	/*background-size: cover;*/
 /*	background-size: contain;*/
 	display: grid;
-	grid-template-columns: repeat( 4, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 1fr;
 	font-family: $body-font_emblem;
 	font-size: 1rem;
-	min-height: calc(100vh - 3.125rem);
+/*	min-height: calc(100vh - 3.125rem);*/
 	line-height: 1.5rem;
 	margin-top: $topnav-h;
 	padding: 0 0 .125rem 0;
 }
+.panel--full {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.panel--left {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+.panel--right {
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
 .emblem {
 	margin-top: $subnav-h;
 	display: grid;
-	grid-area: 1 / 1 / 2 / 5;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: repeat(5, fit-content(100%));
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, fit-content(10px) fit-content(100%));
 	width: 100%;
 }
 .emblem section {
 	background-color: hsla(0, 0%, 100%, .97);
 	padding: 1rem 0;
 }
-.emblem section.section__motto, 
-.emblem .section__image section, 
-.emblem section.section__epigram {
-	background-color: $gray-dark_transparent;
-	color: $white;
-}
-.emblem section.section__motto.panel--right,
-.emblem .section__image.grid--right section,
-.emblem section.section__epigram.panel--right {
+.emblem.panel--right section.section__motto,
+.emblem.panel--right .section__image section,
+.emblem.panel--right section.section__epigram {
 	background-color: $white;
 	color: $text_body;
 }
-
-.panel--full {
-	grid-column-start: 1;
-	grid-column-end: 5;
-}
-.panel--left {
-	grid-column-start: 1;
-	grid-column-end: 3;
-}
-.panel--right {
-	grid-column-start: 3;
-	grid-column-end: 5;
+.emblem.panel--full section.section__motto, 
+.emblem.panel--full .section__image section, 
+.emblem.panel--full section.section__epigram {
+	background-color: $gray-dark_transparent;
+	color: $white;
 }
 .section__motto {
 	grid-row-start: 1;
 	grid-row-end: 2;
 }
+.emblem section.section__motto {
+	padding: 4rem 0 1rem 0;
+}
+._motto--english > div {
+	min-height: 10vh;
+	max-height: 50vh;	
+}
 .section__image {
 	grid-column-start: 1;
-	grid-column-end: 5;
+	grid-column-end: 3;
 	grid-row-start: 2;
 	grid-row-end: 3;
 	.image__picture {
@@ -74,13 +81,13 @@ main.emblem-page {
 }
 .section__music {
 	grid-column-start: 1;
-	grid-column-end: 5;
+	grid-column-end: 3;
 	grid-row-start: 3;
 	grid-row-end: 4;
 	height: 100%;
 }
 .music--full {
-/*	width: 100%;*/
+	min-height: 100vh;
 }
 .section__epigram {
 	grid-row-start: 4;
@@ -88,8 +95,6 @@ main.emblem-page {
 }
 .emblem section.section__epigram {
 	padding: 3rem 0 6rem 0;
-	height: 100%;
-/*	min-height: 35vh;*/
 }
 .emblem section.section__epigram.panel--right {
 	padding: 0 0 9rem 0;
@@ -99,18 +104,12 @@ main.emblem-page {
 	grid-row-end: 6;
 	margin-bottom: -3px;
 }
-.section__motto.panel--left, .section__epigram.panel--left, .section__discourse.panel--left { /* needs a better solution now that I'm using a background image ??? */
-/*	border-right: 5px solid white;*/
-}
 .section__motto.panel--right, .section__epigram.panel--right, .section__discourse.panel--right {
-/*	border-left: 5px solid white;*/
+
 }
 .section__facsimile {
-	grid-column-start: 1;
-	grid-column-end: 5;
 	grid-row-start: 1;
 	grid-row-end: 2;
-/*	grid-area: 1 / 1 / 1 / 5;*/
 	margin-top: $subnav-h;
 	/*padding-top: $subnav-h;*/
 }
@@ -123,6 +122,10 @@ main.emblem-page {
 	width: 100%;
 	position: fixed;
 }
+.grid--full {
+	grid-column-start: 1;
+	grid-column-end: 5;	
+}
 .grid--left {
 	grid-column-start: 1;
 	grid-column-end: 3;
@@ -131,75 +134,14 @@ main.emblem-page {
 	grid-column-start: 3;
 	grid-column-end: 5;
 }
+.grid--center {
+	grid-column-start: 2;
+	grid-column-end: 4;	
+}
 .grid--half {
 	width: 50%;
 	background-color: silver;
 }
-/*.switch-wrapper {
-	display: flex;
-	justify-content: center;
-	top: 0;
-	min-height: 1.25rem;
-	margin-bottom: 1.5rem;
-	width: 100%;
-}
-.facsimile-normalized-switch, .latin-german-switch {
-	display: flex;
-	align-self: flex-start;
-	justify-content: center;
-	height: 1.25rem;
-	width: 8rem;
-	ul {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		width: 100%;
-	}
-	li {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: .75em;
-		margin: 0 .25rem;
-		width: 100%;
-	}
-	li.is-selected {
-		border-bottom: 3px solid $aqua;
-		margin-bottom: -3px;
-	}
-	a {
-		color: $black;
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 100%;
-		width: 100%;
-	}
-	a:hover {
-		color: $aqua_darker;
-	}
-}
-.latin-german-switch {
-	width: 20rem;
-}
-.section__discourse .latin-german-switch {
-	width: 15rem;
-	li:nth-of-type(3) {
-		display: none;
-	}
-}
-.section__motto .switch-wrapper, .section__epigram .switch-wrapper{
-	li.is-selected {
-		border-bottom: 3px solid $aqua;
-	}
-	a {
-		color: $white;
-	}
-	a:hover {
-		color: $aqua;
-	}
-}*/
 
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {
