@@ -183,7 +183,7 @@
 		}
 		.ata-viz-cmn {
 			display: grid;
-			grid-area: 2 / 3 / 3 / 13;
+			grid-area: 2 / 2 / 3 / 13;
 			grid-template-columns: repeat(12, 1fr);
 			grid-template-rows: auto;
 		}
@@ -191,9 +191,9 @@
 			grid-area: 3 / 2 / 4 / 12;
 		}
 	}
-	.panel--right .section__music.grid--full ._music .ata-music {
+	.panel--right .section__music ._music .ata-music {
 		.ata-viz-cmn {
-			grid-area: 2 / 4 / 3 / 13;
+			grid-area: 2 / 3 / 3 / 13;
 		}
 	}
 	.section__music {
@@ -210,7 +210,7 @@
 			grid-area: 2 / 1 / 3 / 13;
 		}
 	}
-	.panel--right .section__music.grid--full {
+	.panel--right .section__music {
 		.music-pages {
 			padding-bottom: 3rem;
 		}
@@ -223,12 +223,12 @@
 	}
 	/* GRID ANIMATION */
 	/* sticky music player controls */
-	.panel--right .section__music.grid--full ._music .ata-music .transport.is-stuck {
+	.panel--right .section__music ._music .ata-music .transport.is-stuck {
 		background-color: $blue_light;
 		left: 50vw;
 		width: calc(50vw/12 * 2);
 	}
-	.panel--right .section__music.grid--full ._music .ata-music .transport.is-unstuck {
+	.panel--right .section__music ._music .ata-music .transport.is-unstuck {
 		background-color: $gray_light;
 	}
 }
