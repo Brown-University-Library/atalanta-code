@@ -86,6 +86,9 @@ nav.digital-edition-nav {
 		object-fit: cover;
 		width: 130px;
 	}
+	.owl-item .thumbnail__img--frontmatter img {
+		object-position: 0 15%;
+	}
 	.owl-item .thumbnail__label {
 		background-color: transparent;
 		box-sizing: border-box;

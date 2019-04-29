@@ -4725,6 +4725,9 @@ nav.digital-edition-nav {
     -o-object-fit: cover;
     object-fit: cover;
     width: 130px; }
+  nav.digital-edition-nav .owl-item .thumbnail__img--frontmatter img {
+    -o-object-position: 0 15%;
+    object-position: 0 15%; }
   nav.digital-edition-nav .owl-item .thumbnail__label {
     background-color: transparent;
     -webkit-box-sizing: border-box;
