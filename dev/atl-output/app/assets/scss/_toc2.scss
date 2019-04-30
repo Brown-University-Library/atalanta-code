@@ -1,19 +1,13 @@
 @import 'colors';
 @import 'utilities';
 /* 1366px width */
-/* TOC MODAL */
+
 main.toc-wrapper {
 	background-color: $blue_light;
 	box-sizing: border-box;
 	font-family: $body-font;
 	font-size: 1rem;
 	line-height: 1.5;
-/*	position: relative;
-	top: 0;
-	right: 0;
-	left: 0;
-	width: calc(100vw - 12rem);
-	z-index: $drawer-z;*/
 	h2 {
 		border-bottom: 1px solid $gray;
 		color: $white;
@@ -43,14 +37,31 @@ main.toc-wrapper {
 	.toc__back h2 a {
 		color: $gray;
 	}
-	h3.toc__title {
+	.toc__body h2:hover {
+		border-bottom: 1px solid $black_pure;
+		transition: .2s;
+		a {
+			color: $black_pure;
+			transition: .2s;
+		}
+	}
+	.toc__back h2 a:hover {
+			color: $black_pure;
+			border-bottom: 2px solid $black_pure;
+			transition: color .2s;
+	}
+	h3 {
 		font-size: 1.5rem;
 		margin-top: 2.75rem;
 	}
-	h3.toc__title a cite {
+	h3 a:hover {
+		border-bottom: 2px solid $black_pure;
+		color: $black_pure;
+	}
+	h3 a cite {
 		font-style: oblique;
 	}
-	h4.toc__description {
+	h4 {
 		color: $gray;
 		font-size: 21px;
 		font-weight: 600;
@@ -96,7 +107,7 @@ main.toc-wrapper {
 	.toc__body {
 		background: $red;
 		grid-row: 2 / 3;
-		padding-bottom: 5.25rem;
+		padding-bottom: 2.5rem;
 	}
 	.toc__back {
 		background: $gray_light-alt;
@@ -119,40 +130,37 @@ main.toc-wrapper {
 		grid-column: 2 / 3;
 		padding-left: 0;
 	}
-	.section__essays ul {
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: auto;
-		margin-top: 4rem;
-	}
-	.section__essays li {
-		/*outline: 1px solid blue;*/
-		box-sizing: border-box;
-		line-height: 1.5;
-		margin-bottom: 1.75rem;
-		padding-right: 5rem;
-	}
-	.section__essays li:nth-child(-n+4) {
-		grid-column: 1 / 7;
-	}
-	.section__essays li:nth-child(n+5) {
-		grid-column: 7 / 13;
-	}
-	.section__essays li:nth-child(1),
-	.section__essays li:nth-child(5) {
+	.section__essays, 
+	.section__aside {
 		grid-row: 1 / 2;
 	}
-	.section__essays li:nth-child(2),
-	.section__essays li:nth-child(6) {
-		grid-row: 2 / 3;
+	.section__hero-img {
+		padding-right: 0;
 	}
-	.section__essays li:nth-child(3),
-	.section__essays li:nth-child(7) {
-		grid-row: 3 / 4;
+	.section__hero-img {
+		background-image: url(../../assets/img/default/toc_img.png);
+		background-position: 23% 63%;
+		background-repeat: no-repeat;
+		background-size: 195%;
 	}
-	.section__essays li:nth-child(4),
-	.section__essays li:nth-child(8) {
-		grid-row: 4 / 5;
+	.section__essays ul {
+		box-sizing: border-box;
+		direction: ltr;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: row;
+		flex-flow: column wrap;
+		height: 70vh;
+		margin: 4rem -5.375rem 0 0;
+	}
+	.section__essays li {
+		box-sizing: border-box;
+		display: inline-block;
+		flex: 0 0 15%;
+		line-height: 1.5;
+		padding-right: 7rem;
+		width: 50%;
 	}
 	.section__essays span.title {
 		display: block;
@@ -162,173 +170,9 @@ main.toc-wrapper {
 		font-size: 17px;
 		font-weight: 600;
 	}
-
-}
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens,
-nav.topnav__contents .topnav__contents__atalanta-essays,
-nav.topnav__contents .topnav__contents__atalanta-images,
-nav.topnav__contents .topnav__contents__atalanta-front,
-nav.topnav__contents .topnav__contents__atalanta-back {
-	color: $white;
-	font-family: $body-font_emblem;
-	font-size: 1rem;
-	line-height: 1.5;
-}
-/*FLEX LAYOUT*/
-nav.topnav__contents {
-	color: $white;
-	display: flex;
-	flex-flow: row wrap;
-	font-family: $display-font_emblem;
-	font-size: 2.5rem;
-	height: 100%;
-	line-height: 1;
-	padding: 0;
-	width: 100%;
-	.topnav__contents__atalanta-fugiens {
-		flex-basis: calc(40% - 4rem);
-		margin-right: 4rem;
-	}
-	.topnav__contents__atalanta-essays {
-		flex-basis: calc(60% - 4rem);
-		margin-left: 4rem;
-	}
-	.topnav__contents__atalanta-images, 
-	.topnav__contents__atalanta-front,
-	.topnav__contents__atalanta-back {
-
-	}
-	.topnav__contents__atalanta-front,
-	.topnav__contents__atalanta-back {
-		flex-basis: calc(30% - 3rem);
-		margin-left: 4rem;
-	}
-	.topnav__contents__atalanta-back {
-		margin-left: 2rem;
-	}
-	.topnav__contents__atalanta-images {
-		flex-basis: calc(40% - 4rem);
-		margin-right: 4rem;
-	}
 }
 
 
-/* FLEX LAYOUT */
-/* DIGITAL EDITION */
-nav.topnav__contents .topnav__contents__atalanta-fugiens {
-	.toc__content > ul {
-		display: flex;
-		width: 100%;
-	}
-	li.toc__content--frontmatter {
-		border-right: 1px solid $black;
-		width: 40%;
-	}
-	li.toc__content--digital-edition {
-		width: 60%;
-	}
-	ul.atalanta-section {
-		display: flex;
-		align-items: flex-start;
-		flex-direction: column;
-		justify-content: space-between;
-		height: 100%;
-		width: 100%;
-	}
-	li.toc__content--digital-edition ul.atalanta-section {
-		align-items: center;
-	}
-	ul.atalanta-section > li {
-		line-height: 1.4;
-	}
-	li.toc__content--frontmatter ul.atalanta-section li {
-		flex: 1 0 25%;
-	}
-	li.toc__content--digital-edition ul.atalanta-section > li {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		width: 100%;
-	}
-	li.toc__subheading--emblem {
-		height: 5vh;
-	}
-	ul.toc__content--emblem-list {
-		display: flex;
-		flex: 1 0 0;
-  		flex-direction: column;
-  		flex-flow: column wrap;
-		height: 38vh;
-	}
-	ul.toc__content--emblem-list > li {
-		display: flex;
-  		align-items: center;
-  		flex: 1 0 10%;
-  		justify-content: center;
-  		padding: 0 2px;
-	}
-	ul.toc__content--emblem-list > li a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 1.25rem;
-		line-height: 1.2;
-	}
-}
-
-/* ESSAYS */
-nav.topnav__contents .topnav__contents__atalanta-essays {
-	.toc__content ul {
-		direction: ltr;
-		display: flex;
-		flex-direction: row;
-		align-items: flex-start;
-		justify-content: flex-start;
-		flex-flow: column wrap;
-		height: 60vh;
-		min-height: 60vh;
-		max-height: 100vh;
-	}
-	.toc__content li {
-		display: inline-block;
-		flex: 0 0 14%;
-		margin-bottom: 3rem;
-		width: calc(50% - 1rem);
-	}
-	.toc__content li:nth-child(n+1):nth-child(-n+4) { /* essays 1—4 */
-		margin-right: 1rem;
-	}
-	.toc__content li:nth-child(n+5):nth-child(-n+8) { /* essays 5—8 */
-		margin-left: 1rem;
-	}
-	.toc__content li a {
-		line-height: 1.2;
-	}
-	.toc__content li span {
-		color: $black_dark;
-		display: block;
-		font-size: 1.25rem;
-		font-weight: 500;
-		margin-top: .5rem;
-	}
-}
-
-/* IMAGES, MINI ESSAYS, ETC. */
-nav.topnav__contents .topnav__contents__atalanta-images, 
-nav.topnav__contents .topnav__contents__atalanta-front, 
-nav.topnav__contents .topnav__contents__atalanta-back {
-	ul .toc__content ul li {
-		margin-bottom: 3.5rem;
-	}
-}
-nav.topnav__contents .topnav__contents__atalanta-front, 
-nav.topnav__contents .topnav__contents__atalanta-back {
-	.toc__heading {
-		margin-bottom: 3.25rem;
-	}
-}
-	
 
 /*** GENERAL BREAKPOINTS ***/
 /* small  -  mobile */

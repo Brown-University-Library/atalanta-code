@@ -2429,20 +2429,13 @@ body {
     opacity: 1; } }
 
 /* 1366px width */
-/* TOC MODAL */
 main.toc-wrapper {
   background-color: #DAE4EC;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  line-height: 1.5;
-  /*	position: relative;
-	top: 0;
-	right: 0;
-	left: 0;
-	width: calc(100vw - 12rem);
-	z-index: $drawer-z;*/ }
+  line-height: 1.5; }
   main.toc-wrapper h2 {
     border-bottom: 1px solid #333;
     color: white;
@@ -2465,12 +2458,31 @@ main.toc-wrapper {
   main.toc-wrapper .toc__front h2 a,
   main.toc-wrapper .toc__back h2 a {
     color: #333; }
-  main.toc-wrapper h3.toc__title {
+  main.toc-wrapper .toc__body h2:hover {
+    border-bottom: 1px solid #000;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
+    main.toc-wrapper .toc__body h2:hover a {
+      color: #000;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s; }
+  main.toc-wrapper .toc__back h2 a:hover {
+    color: #000;
+    border-bottom: 2px solid #000;
+    -webkit-transition: color .2s;
+    -o-transition: color .2s;
+    transition: color .2s; }
+  main.toc-wrapper h3 {
     font-size: 1.5rem;
     margin-top: 2.75rem; }
-  main.toc-wrapper h3.toc__title a cite {
+  main.toc-wrapper h3 a:hover {
+    border-bottom: 2px solid #000;
+    color: #000; }
+  main.toc-wrapper h3 a cite {
     font-style: oblique; }
-  main.toc-wrapper h4.toc__description {
+  main.toc-wrapper h4 {
     color: #333;
     font-size: 21px;
     font-weight: 600;
@@ -2509,7 +2521,7 @@ main.toc-wrapper {
   main.toc-wrapper .toc__body {
     background: #dc4928;
     grid-row: 2 / 3;
-    padding-bottom: 5.25rem; }
+    padding-bottom: 2.5rem; }
   main.toc-wrapper .toc__back {
     background: #e2e3e4;
     grid-row: 3 / 4;
@@ -2529,281 +2541,59 @@ main.toc-wrapper {
     box-sizing: border-box;
     grid-column: 2 / 3;
     padding-left: 0; }
+  main.toc-wrapper .section__essays,
+  main.toc-wrapper .section__aside {
+    grid-row: 1 / 2; }
+  main.toc-wrapper .section__hero-img {
+    padding-right: 0; }
+  main.toc-wrapper .section__hero-img {
+    background-image: url(../../assets/img/default/toc_img.png);
+    background-position: 23% 63%;
+    background-repeat: no-repeat;
+    background-size: 195%; }
   main.toc-wrapper .section__essays ul {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    margin-top: 4rem; }
-  main.toc-wrapper .section__essays li {
-    /*outline: 1px solid blue;*/
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    direction: ltr;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    height: 70vh;
+    margin: 4rem -5.375rem 0 0; }
+  main.toc-wrapper .section__essays li {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 15%;
+    -ms-flex: 0 0 15%;
+    flex: 0 0 15%;
     line-height: 1.5;
-    margin-bottom: 1.75rem;
-    padding-right: 5rem; }
-  main.toc-wrapper .section__essays li:nth-child(-n+4) {
-    grid-column: 1 / 7; }
-  main.toc-wrapper .section__essays li:nth-child(n+5) {
-    grid-column: 7 / 13; }
-  main.toc-wrapper .section__essays li:nth-child(1),
-  main.toc-wrapper .section__essays li:nth-child(5) {
-    grid-row: 1 / 2; }
-  main.toc-wrapper .section__essays li:nth-child(2),
-  main.toc-wrapper .section__essays li:nth-child(6) {
-    grid-row: 2 / 3; }
-  main.toc-wrapper .section__essays li:nth-child(3),
-  main.toc-wrapper .section__essays li:nth-child(7) {
-    grid-row: 3 / 4; }
-  main.toc-wrapper .section__essays li:nth-child(4),
-  main.toc-wrapper .section__essays li:nth-child(8) {
-    grid-row: 4 / 5; }
+    padding-right: 7rem;
+    width: 50%; }
   main.toc-wrapper .section__essays span.title {
     display: block; }
   main.toc-wrapper .section__essays span.byline {
     color: #333;
     font-size: 17px;
     font-weight: 600; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens,
-nav.topnav__contents .topnav__contents__atalanta-essays,
-nav.topnav__contents .topnav__contents__atalanta-images,
-nav.topnav__contents .topnav__contents__atalanta-front,
-nav.topnav__contents .topnav__contents__atalanta-back {
-  color: white;
-  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5; }
-
-/*FLEX LAYOUT*/
-nav.topnav__contents {
-  color: white;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  font-family: "GTAmerica", "Usual", Helvetica, Arial, sans-serif;
-  font-size: 2.5rem;
-  height: 100%;
-  line-height: 1;
-  padding: 0;
-  width: 100%; }
-  nav.topnav__contents .topnav__contents__atalanta-fugiens {
-    -webkit-flex-basis: calc(40% - 4rem);
-    -ms-flex-preferred-size: calc(40% - 4rem);
-    flex-basis: calc(40% - 4rem);
-    margin-right: 4rem; }
-  nav.topnav__contents .topnav__contents__atalanta-essays {
-    -webkit-flex-basis: calc(60% - 4rem);
-    -ms-flex-preferred-size: calc(60% - 4rem);
-    flex-basis: calc(60% - 4rem);
-    margin-left: 4rem; }
-  nav.topnav__contents .topnav__contents__atalanta-front,
-  nav.topnav__contents .topnav__contents__atalanta-back {
-    -webkit-flex-basis: calc(30% - 3rem);
-    -ms-flex-preferred-size: calc(30% - 3rem);
-    flex-basis: calc(30% - 3rem);
-    margin-left: 4rem; }
-  nav.topnav__contents .topnav__contents__atalanta-back {
-    margin-left: 2rem; }
-  nav.topnav__contents .topnav__contents__atalanta-images {
-    -webkit-flex-basis: calc(40% - 4rem);
-    -ms-flex-preferred-size: calc(40% - 4rem);
-    flex-basis: calc(40% - 4rem);
-    margin-right: 4rem; }
-
-/* FLEX LAYOUT */
-/* DIGITAL EDITION */
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content > ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__content--frontmatter {
-  border-right: 1px solid #222;
-  width: 40%; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__content--digital-edition {
-  width: 60%; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens ul.atalanta-section {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  height: 100%;
-  width: 100%; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__content--digital-edition ul.atalanta-section {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens ul.atalanta-section > li {
-  line-height: 1.4; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__content--frontmatter ul.atalanta-section li {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 25%;
-  -ms-flex: 1 0 25%;
-  flex: 1 0 25%; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__content--digital-edition ul.atalanta-section > li {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__subheading--emblem {
-  height: 5vh; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens ul.toc__content--emblem-list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 0;
-  -ms-flex: 1 0 0px;
-  flex: 1 0 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
-  height: 38vh; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens ul.toc__content--emblem-list > li {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 10%;
-  -ms-flex: 1 0 10%;
-  flex: 1 0 10%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 2px; }
-
-nav.topnav__contents .topnav__contents__atalanta-fugiens ul.toc__content--emblem-list > li a {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  line-height: 1.2; }
-
-/* ESSAYS */
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content ul {
-  direction: ltr;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
-  height: 60vh;
-  min-height: 60vh;
-  max-height: 100vh; }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li {
-  display: inline-block;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 14%;
-  -ms-flex: 0 0 14%;
-  flex: 0 0 14%;
-  margin-bottom: 3rem;
-  width: calc(50% - 1rem); }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li:nth-child(n+1):nth-child(-n+4) {
-  /* essays 1—4 */
-  margin-right: 1rem; }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li:nth-child(n+5):nth-child(-n+8) {
-  /* essays 5—8 */
-  margin-left: 1rem; }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li a {
-  line-height: 1.2; }
-
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li span {
-  color: #111;
-  display: block;
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-top: .5rem; }
-
-/* IMAGES, MINI ESSAYS, ETC. */
-nav.topnav__contents .topnav__contents__atalanta-images ul .toc__content ul li,
-nav.topnav__contents .topnav__contents__atalanta-front ul .toc__content ul li,
-nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
-  margin-bottom: 3.5rem; }
-
-nav.topnav__contents .topnav__contents__atalanta-front .toc__heading,
-nav.topnav__contents .topnav__contents__atalanta-back .toc__heading {
-  margin-bottom: 3.25rem; }
 
 /*** GENERAL BREAKPOINTS ***/
 /* small  -  mobile */
