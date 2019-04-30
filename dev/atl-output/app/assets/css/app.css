@@ -2305,13 +2305,17 @@ main.home {
     line-height: 1rem;
     margin-top: .375rem; }
   main.home .intro-text {
+    background-image: url(../../assets/img/default/bkg_homepage_2.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 61%;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     grid-area: 3 / 1 / 4 / 13;
     height: 45vh;
-    padding: 11rem 0 11rem 0; }
+    padding: 11rem 0 11.5rem 0; }
   main.home .intro-text p {
     font-size: 1.5rem;
     grid-area: 1 / 4 / 2 / 10;
