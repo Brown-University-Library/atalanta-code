@@ -214,7 +214,6 @@ header[data-page-type='other'] {
 	top: $topnav-h;
 	width: 100vw;
 	z-index: $searchbar-z;
-	display: none !important;
 	button.x-close {
 		align-self: flex-end;
 		background-image: url("../icons/icon_X-close.svg");

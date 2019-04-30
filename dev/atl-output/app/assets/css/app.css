@@ -2192,10 +2192,10 @@ main.home {
     background-color: #dc4928;
     color: white;
     display: grid;
-    grid-template-columns: 3fr 4fr;
+    grid-template-columns: 2fr 3fr;
     grid-template-rows: auto;
     grid-area: 1 / 1 / 2 / 13;
-    min-height: 96vh; }
+    height: 78vh; }
   main.home .hero-text {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2217,40 +2217,36 @@ main.home {
     justify-content: center;
     -webkit-transform: translate(12vw, 0);
     -ms-transform: translate(12vw, 0);
-    transform: translate(12vw, 0);
-    padding-bottom: 20vh; }
+    transform: translate(12vw, 0); }
   main.home .hero-text h1 {
     font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
-    font-size: 7rem;
+    font-size: 9rem;
     height: auto;
-    line-height: 7rem;
-    padding: 0;
+    line-height: .97;
     margin: 0;
-    width: 128%; }
+    padding: 2rem 0 0 0;
+    text-transform: lowercase;
+    width: 110%; }
   main.home .hero-text h5 {
     font-size: 1.125rem;
     font-weight: 300;
     line-height: 1.75rem;
-    margin-top: 1rem;
+    padding-top: 2.75rem;
     width: 50%; }
   main.home .hero-image {
-    background-clip: padding-box;
     background-color: #ffae00;
     background-image: url("../../assets/img/default/bkg_homepage.png");
-    background-position: 85% center;
+    background-position: 84% 25%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 160%;
     grid-area: 1 / 2 / 2 / 3;
-    margin: -15rem 0 5.5rem 0; }
+    margin: -15rem 0 0 0; }
   main.home nav.home {
     background-color: #333;
     color: #fff;
     grid-area: 2 / 1 / 3 / 13;
     min-height: 20vh;
-    padding-bottom: 1px;
-    -webkit-transform: translate(0, -20vh);
-    -ms-transform: translate(0, -20vh);
-    transform: translate(0, -20vh); }
+    padding-bottom: 1px; }
   main.home nav.home ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2315,22 +2311,27 @@ main.home {
     grid-template-rows: auto;
     grid-area: 3 / 1 / 4 / 13;
     height: 45vh;
-    padding: 3rem 0 6rem 0; }
+    padding: 11rem 0 11rem 0; }
   main.home .intro-text p {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
     grid-area: 1 / 4 / 2 / 10;
-    line-height: 2rem; }
+    line-height: 1.5;
+    padding: 0 5rem; }
   main.home .intro-text a {
-    color: #4d4d4d;
-    font-size: 1.125rem;
+    color: #333;
+    font-size: 1rem;
     font-weight: 600;
     grid-area: 2 / 4 / 3 / 10;
-    text-decoration: none; }
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    padding: 0 5rem; }
   main.home .intro-text a:hover {
     color: white;
     -webkit-transition: .3s;
     -o-transition: .3s;
-    transition: .3s; }
+    transition: .3s;
+    -webkit-text-decoration: underline solid white;
+    text-decoration: underline solid white; }
 
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -4013,8 +4014,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   position: fixed;
   top: 3.125rem;
   width: 100vw;
-  z-index: 1000;
-  display: none !important; }
+  z-index: 1000; }
   .search__modal button.x-close {
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
