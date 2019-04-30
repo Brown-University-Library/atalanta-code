@@ -8,6 +8,7 @@ main.toc-wrapper {
 	font-family: $body-font;
 	font-size: 1rem;
 	line-height: 1.5;
+	margin-top: $topnav-h;
 	h2 {
 		border-bottom: 1px solid $gray;
 		color: $white;
@@ -40,10 +41,10 @@ main.toc-wrapper {
 	.toc__body h2:hover {
 		border-bottom: 1px solid $black_pure;
 		transition: .2s;
-		a {
-			color: $black_pure;
-			transition: .2s;
-		}
+	}
+	.toc__body a:hover {
+		color: $black_pure;
+		transition: .2s;
 	}
 	.toc__back h2 a:hover {
 			color: $black_pure;

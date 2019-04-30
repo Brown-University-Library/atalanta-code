@@ -2435,7 +2435,8 @@ main.toc-wrapper {
   box-sizing: border-box;
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+  margin-top: 3.125rem; }
   main.toc-wrapper h2 {
     border-bottom: 1px solid #333;
     color: white;
@@ -2463,11 +2464,11 @@ main.toc-wrapper {
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s; }
-    main.toc-wrapper .toc__body h2:hover a {
-      color: #000;
-      -webkit-transition: .2s;
-      -o-transition: .2s;
-      transition: .2s; }
+  main.toc-wrapper .toc__body a:hover {
+    color: #000;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
   main.toc-wrapper .toc__back h2 a:hover {
     color: #000;
     border-bottom: 2px solid #000;
