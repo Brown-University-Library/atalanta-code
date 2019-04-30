@@ -21,18 +21,18 @@ $(function () {
 	var languageLatinRegularized = '.lang--latin.edition--regularized';
 	var singleTranslation = '.section--single > div.translation';
 	var singleOriginal = '.section--single > div.original';
+	/* emblem containers */
+	var containerFacsimile = '.section__facsimile';
+	var containerEmblem = '.emblem';
+	var panelLeft = 'panel--left';
+	var panelRight = 'panel--right';
+	var panelFull = 'panel--full';
 	/* emblem sections */
 	var facsimileFull = '.facsimile--full';
-	var imageFull = '.image--full';
-	var imageSectionRight = '.section__image.section--full.panel--right .image__picture.section--single';
-	var musicFull = '.music--full';
-	var sectionEmblem = '.emblem';
 	var sectionFacsimile = '.section__facsimile';
-	var sectionFull = '.section--full.panel--full';
 	var sectionImage = '.section__image';
 	var sectionMusic = '.section__music';
-	var sectionSingle = '.section--single';
-	/* grid */
+	/* emblem grid */
 	var gridHalf = 'grid--half';
 	var gridLeft = 'grid--left';
 	var gridRight = 'grid--right';
@@ -43,7 +43,12 @@ $(function () {
 	var muteVoice1 = '.atalanta-notation-mute-track:nth-of-type(1)';
 	var muteVoice2 = '.atalanta-notation-mute-track:nth-of-type(2)';
 	var muteVoice3 = '.atalanta-notation-mute-track:nth-of-type(3)';
-
+	var emblemPage = $('.emblem-page').data("id"); // get the data ID for the current emblem page
+	var thumbnailNav = $('nav.digital-edition-nav'); // thumbnail navigation for digital edition
+	var thumbnailPage // the number of the page in the digital edition matched to indexed thumbnails in nav
+	var thumbnailNavTrigger = $('button.thumbnail-trigger'); // thumbnail nav drawer button
+	var centeredThumbnail = $('nav.digital-edition-nav .center'); // get the thumbnail element for the current page
+	var emblemNav = '.subnav-v3'; // emblem sub navigation
 
 
 	// var thisEmblemPage = '.emblem-page';
@@ -79,9 +84,32 @@ $(function () {
 	// var emblemNumTextArea = '#sidenav__titles';
 
 
-
 /* INITIALIZE */
 	onLoad(); // DISPLAY EMBLEM MENU AND DEFAULT OPTIONS ON PAGE LOAD
+
+
+	// $('.loop').owlCarousel({
+	// 	center: true,
+	// 	items:2,
+	// 	loop:true,
+	// 	margin:10,
+	// 	responsive:{
+	// 		600:{
+	// 			items:4
+	// 		}
+	// 	}
+	// });
+	// $('.nonloop').owlCarousel({
+	// 	center: true,
+	// 	items:2,
+	// 	loop:false,
+	// 	margin:10,
+	// 	responsive:{
+	// 		600:{
+	// 			items:4
+	// 		}
+	// 	}
+	// });
 
 /* APPLY ACCESSIBILITY FIXES AFTER ALL DYNAMIC CONTENT LOADS */
 $(window).on('load', function() {
@@ -115,15 +143,59 @@ if (matchMedia) {
 	  selectLanguage(ui.item.value);
 	});
 
+/* digital edition thumbnail navigation */
+	thumbnailPage = emblemPage - 1;
+	const $owlCarousel = $(".owl-carousel").owlCarousel({
+		center: true,
+		dots: false,
+		items: 10,
+		loop: true, 
+		nav: true,
+		navText: [
+			'<svg id="icon_arrow-left-lineart" data-name="icon_arrow-left-lineart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.6 250.2"><title>export_icon_arrow-left-lineart</title><polyline points="126.9 1.8 3.5 125.1 126.9 248.5" fill="none" stroke="#dc4929" stroke-miterlimit="10" stroke-width="5"/></svg>',
+			'<svg id="icon_arrow-right-lineart" data-name="icon_arrow-right-lineart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.6 250.2"><title>export_icon_arrow-right-lineart</title><polyline points="1.8 248.5 125.1 125.1 1.8 1.8" fill="none" stroke="#dc4929" stroke-miterlimit="10" stroke-width="5"/></svg>'
+		],
+		responsive: {
+			0: {
+				items: 3
+			},
+			480: {
+				items: 5
+			},
+			768: {
+				items: 6
+			},
+			1100: {
+				items: 8
+			},
+			1330: {
+				items: 10
+			},
+			1600: {
+				items: 12
+			},
+			2200: {
+				items: 16
+			}
+		},
+		startPosition: thumbnailPage
+	});
+	$(thumbnailNavTrigger).on("click", function() {
+		thumbnailNavAnimate();
+	});
+
+
+
 /* FUNCTIONS */
 	function checkState() {
 		if ( $(layoutComparativeBtn).attr('data-layout')===('active') ) {
-			showDigitalEditionRight();
-			showFacsimileLeft();
+			console.log("I AM IN CHECK STATE()");
 			console.log("Comparative Layout is ACTIVE");
+			showFacsimileLeft();
+			showDigitalEditionRight();
 		}
 		else if ( $(layoutDigitalEditionBtn).attr('data-layout')===('active') ) { // if digital edition layout is active
-			showFull();
+			showDigitalEditionFull();
 			console.log("Digital Edition Layout is ACTIVE");
 		}
 		else if ( $(layoutBookBtn).attr('data-layout')===('active') ) { // if book is active
@@ -162,22 +234,9 @@ if (matchMedia) {
 		$(muteVoice3).attr('aria-label', 'Play or Mute Voice 3');
 	}
 	function onLoad() {
+		console.log("I AM IN ONLOAD()");
 		checkState();
-	}
-	function resetFacsimile() {
-		console.log("I am in resetFacsimile()");
-		$(sectionMusic).removeClass(gridLeft); // remove left grid placement to reveal full music
-		$(sectionMusic).removeClass(gridRight); // remove right grid placement to reveal full music
-		$(sectionMusic).removeClass('is-hidden'); // show music
-		$(sectionImage).removeClass(gridLeft); // remove left grid placement to reveal full image
-		$(sectionImage).removeClass(gridRight); // remove right grid placement to reveal full image
-		$(sectionImage).removeClass('is-hidden'); // show image
-		$(sectionFacsimile).addClass('is-hidden'); // hide facsimile wrapper
-		$(sectionSingle).removeClass('is-hidden'); // show full/right panel content
-		$(sectionSingle).removeClass('panel--right'); // rename right panel step 1 (remove right panel class)
-		$(sectionSingle).addClass('panel--full'); // rename right panel step 2 (add full panel class)
-		$(sectionFull).removeClass('is-hidden'); // show full/right panel content
-		console.log("I AM RESETTING THE ZOOMING IMAGE VIEWER AND MUSIC/IMAGE GRIDS");
+		
 	}
 		/* language selections */
 	function selectLangEnglishOrig() {
@@ -269,40 +328,29 @@ if (matchMedia) {
 		$(layoutBookBtn).attr('data-layout', 'active'); // make book layout state active
 		$(layoutBookBtn).siblings().attr('data-layout', 'inactive'); // make comparative and digital edition layout states inactive
 	}
+	function showDigitalEditionFull() {
+		$(containerEmblem).removeClass(panelRight); // remove right half placement
+		$(containerEmblem).addClass(panelFull); // allow full width placement
+		$(containerEmblem).removeClass('is-hidden'); // show emblem wrapper if hidden
+		$(containerFacsimile).addClass('is-hidden'); // hide facsimile wrapper if visible
+	}
 	function showDigitalEditionRight() {
-		resetFacsimile();
-		$(sectionSingle).removeClass('panel--full'); // remove full width
-		$(sectionSingle).addClass('panel--right'); // add to right half
+		$(containerEmblem).removeClass(panelFull);
+		$(containerEmblem).addClass(panelRight);
+		$(containerEmblem).removeClass('is-hidden'); // show emblem wrapper if hidden
 	}
 	function showFacsimileFull() {
-		$(sectionMusic).addClass('is-hidden'); // hide music
-		$(sectionImage).addClass('is-hidden'); // hide image
+		$(containerFacsimile).removeClass(panelLeft);
+		$(containerFacsimile).addClass(panelFull);
 		$(facsimileFull).removeClass(gridHalf); // make facsimile full width
-		$(sectionFacsimile).removeClass(gridLeft); // make facsimile full width
-		$(sectionFacsimile).removeClass(gridRight); // make facsimile full width
-		$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
-		$(sectionSingle).addClass('is-hidden'); // hide full/right panel wrapper
-		$(sectionFull).addClass('is-hidden'); // hide full/right panel content
+		$(containerFacsimile).removeClass('is-hidden');
+		$(containerEmblem).addClass('is-hidden');
 	}
 	function showFacsimileLeft() {
-		$(sectionMusic).removeClass('is-hidden'); // reveal music
-		$(sectionMusic).addClass(gridRight); // place music on right half of grid
-		$(sectionMusic).removeClass(gridLeft); // remove music from left half of grid
-		$(sectionImage).removeClass('is-hidden'); // reveal image
-		$(sectionImage).addClass(gridRight); // place image on right half of grid
-		$(sectionImage).removeClass(gridLeft); // remove image from left half of grid
-		$(facsimileFull).addClass(gridHalf); // make facsimile half width (required because of fixed position in grid)
-		$(sectionFacsimile).removeClass(gridRight); // remove facsimile from right grid columns
-		$(sectionFacsimile).addClass(gridLeft); // add facsimile to left grid columns
-		$(sectionFacsimile).removeClass('is-hidden'); // show facsimile wrapper
-		$(sectionFull).addClass('panel--right'); // rename full panel step 1 (add right panel name)
-		$(sectionFull).removeClass('panel--full'); // rename full panel step 2 (remove full panel name)
-		$(sectionSingle).removeClass('is-hidden'); // hide full/right panel wrapper
-		$(imageSectionRight).removeClass('panel--left'); // kludge to show right image
-		$(imageSectionRight).removeClass('is-hidden'); // kludge to show right image
-	}
-	function showFull() {
-		resetFacsimile();
+		$(containerFacsimile).removeClass(panelFull); // remove full width facsimile
+		$(containerFacsimile).addClass(panelLeft); // make facsimile half width (required because of fixed position in grid)
+		$(facsimileFull).addClass(gridHalf); // make facsimile half the window width;
+		$(containerFacsimile).removeClass('is-hidden'); // show facsimile wrapper
 	}
 	/* text original/translation switches */
 	function showOriginalLanguage() {
@@ -312,6 +360,15 @@ if (matchMedia) {
 	function showTranslation() {
 		$(singleTranslation).removeClass('is-hidden'); // display English text block
 		$(singleOriginal).addClass('is-hidden'); // hide Latin/German text block
+	}
+	/* emblem subnav */
+	function subnavHide() {
+		$(emblemNav).removeClass('is-visible');
+		$(emblemNav).addClass('is-hidden');
+	}
+	function subnavReveal() {
+		$(emblemNav).removeClass('is-hidden');
+		$(emblemNav).addClass('is-visible');
 	}
 	/* text switches */
 	function switchTextToEnglishOrig() {
@@ -351,6 +408,24 @@ if (matchMedia) {
 		$(fullLatinText).addClass('edition--regularized'); // switch full Latin text to edition--regularized CSS
 		$(fullLatinText).removeClass('edition--original'); // remove edition--original CSS from full Latin text
 		showOriginalLanguage();
+	}
+	function thumbnailNavAnimate() {
+		if ($(thumbnailNav).hasClass('de-nav--closed')) {
+			thumbnailNavOpen();
+			setTimeout(subnavHide, 250);
+		}
+		else if ($(thumbnailNav).hasClass('de-nav--open')) {
+			thumbnailNavClose();
+			subnavReveal();
+		}
+	}
+	function thumbnailNavClose() {
+		$(thumbnailNav).removeClass('de-nav--open');
+		$(thumbnailNav).addClass('de-nav--closed');
+	}
+	function thumbnailNavOpen() {
+		$(thumbnailNav).removeClass('de-nav--closed');
+		$(thumbnailNav).addClass('de-nav--open');
 	}
 	function WidthChange(jsMediaQuery) {
 		if(jsMediaQuery.matches) { // run on mobile devices/window widths
