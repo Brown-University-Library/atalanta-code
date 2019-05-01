@@ -75,3 +75,15 @@ footer {
 	}
 
 }
+@media screen and (min-width: 768px) and (max-width: 999px) {
+
+}
+@media screen and (min-width: 1000px) and (max-width: 1399px) {
+  footer {
+  	height: 35vh;
+  	padding: 3rem 3.5rem;
+  	.footer--branding h6 {
+  		margin-bottom: 2.25rem;
+  	}
+  } 
+}
