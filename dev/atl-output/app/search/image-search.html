@@ -6,7 +6,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>Furnace and Fugue: Emblem Image Search</title>
-	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" />
+	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css" />
 </head>
 <body>
 <!-- GLOBAL NAVIGATION -->
@@ -40,7 +40,7 @@
 				<button class="x-close" aria-label="Close search modal"></button>
 			    <form id="ataSearch" class="search__bar">
 			        <label class="label search__bar__label" for="search__bar__field">Enter your search below</label>
-			        <input type="text" id="search__bar__field" aria-label="Search the digital edition, scholarly essays or emblem images">
+			        <input type="text" id="search__bar__field" aria-label="Search the digital edition, scholarly essays or emblem images" />
 			        <button class="submit" type="submit">Search</button>
 			    </form>
 			</div>
@@ -54,12 +54,12 @@
 			<div class="breadcrumbs__selected-filters">
 				<div class="filters__label">Selection</div>
 				<ul class="filters__list">
-					<li><a href="#"><span class="selected-filter">Selected Term Goes Here</span><span class="selected-filter__icon"></span></a></li>
+					<li><a href="#"><span class="selected-filter"></span><span class="selected-filter__icon"></span></a></li>
 				</ul>
 			</div>
 			<div class="breadcrumbs__copy-link">
 			<!-- I STILL NEED TO WORK ON THIS -->
-				<button id='btn-shuffle'>Shuffle</button>
+				<button id='btn-shuffle'>Update</button>
 			</div>
 		</div>
 		<div class="image-search__hero">
@@ -124,28 +124,6 @@
 		</div>
 		<div class="image-results__wrapper">
 			<div class="image-results__container container--active">
-			<!-- RESULT ITEM TEMPLATE -->
-			<!-- <div class="image-results__item item--active" dataItemNum="" title="">
-					<img class="image-results__image image--active" src="" alt="" />
-					<div class="image-results__details">
-						<div class="image-results__label"></div>
-						<div class="image-results__button-row">
-							<button class="image-results__button results__button--terms">
-								<span class="label">Terms</span>
-								<span class="icon"></span>
-							</button>
-							<a class="image-results__button results__button--edition" href="#">
-								<span class="label">Emblem</span>
-								<span class="icon"></span>
-							</a>
-							<button class="image-results__button results__button--collections">
-								<span class="label">Collection</span>
-								<span class="icon"></span>
-							</button>
-						</div>
-						<div class="image-results__all-terms"></div>
-					</div>
-				</div> -->
 				<div id="image0" class="image-results__item item--inactive" dataItemNum="0" title="Frontispiece">
 					<img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem00.320.jpg" alt="The frontispiece, or first illustrated page, contains a short introductory text surrounded by multiple scenes from the myth of Atalanta and Hippomenes. These include the Garden of the Hesperides, which includes Aegle, Arethusa, a many-headed dragon, understood as Ladon, and Hespertusa; Hercules stealing apples; Venus giving apples to Hippomenes; the race between Hippomenes and Atalanta; the consummation of their love; and their transformation into lions." />
 					<div class="image-results__details">
@@ -1236,6 +1214,7 @@
     <script src="../assets/js/searchfunction.js"></script>
 	<script src="../assets/js/topnav.js"></script>
 	<script src="../assets/js/navbar.js"></script>
+	<script src="../assets/js/filterSelection.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/ScrollToPlugin.min.js"></script>
 	<script src="../assets/js/image-search.js"></script>
