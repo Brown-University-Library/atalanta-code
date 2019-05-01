@@ -85,6 +85,8 @@ EMBLEM DISCOURSE
 																.discourse-p2
 
 */
+
+
 main.emblem-page, 
 main.emblem-page.frontmatter {
 	/********** ENGLISH XML ISSUES **************/
@@ -95,8 +97,8 @@ main.emblem-page.frontmatter {
 	.section__discourse .discourse.la h3.title {
 		background-color: transparent;
 	} /* ??? I won't need this after we sort out the h3.title issue in the English discourse */
-	.section__discourse.panel--left div.discourse, 
-	.section__discourse.panel--right div.discourse {
+	.section__discourse.grid--full div.discourse, 
+	.section__discourse.grid--full div.discourse {
 		h3.title {
 	/*		background-color: $error;*/
 		}
@@ -107,14 +109,16 @@ main.emblem-page.frontmatter {
 		margin-left: 100px;
 		margin-bottom: -3rem;
 	}
-	.section__discourse.panel--right span.note-mark:nth-of-type(2) {
+	.section__discourse.grid--full span.note-mark:nth-of-type(2) {
 	/*	background-color: $error;*/
 		grid-area: 1 / 3 / 3 / 4;
 		margin-left: .5rem;
 	}
 	/********** END OF ENGLISH XML ISSUES **************/
+}
 
-
+main.emblem-page, 
+main.emblem-page.frontmatter {
 	/*********** ENGLISH EMBLEM OVERRIDES *************/
 	.italic {
 		font-style: oblique;
@@ -203,8 +207,12 @@ main.emblem-page.frontmatter {
 	    width: auto;
 	    padding-left: 0;
 	}
-	.note-mark{
-	    color: $text_body;
+	.note-mark, 
+	span.superscript {
+	    /*color: $text_body;*/
+		position: relative;
+		top: -.4em;
+		vertical-align: baseline;
 	}
 	.help{
 	    display: none;
@@ -280,9 +288,12 @@ main.emblem-page.frontmatter {
 		white-space: nowrap;
 	}
 	/*********** END OF ENGLISH EMBLEM OVERRIDES *************/
+}
 
-	/*********** EMBLEM LAYOUT *************/
-	div.translation, 
+/*********** EMBLEM LAYOUT *************/
+main.emblem-page, 
+main.emblem-page.frontmatter {
+/*	div.translation, 
 	div.original {
 		height: 100%;
 		margin-top: 2.5rem;
@@ -292,7 +303,7 @@ main.emblem-page.frontmatter {
 	.panel--right div.translation, 
 	.panel--right div.original {
 		margin-top: 3.5rem;
-	}
+	}*/
 	.lang--english, 
 	.lang--german, 
 	.lang--latin {
@@ -305,15 +316,16 @@ main.emblem-page.frontmatter {
 		grid-template-columns: repeat(12, 1fr);
 		grid-template-rows: 1fr;
 	}
-	.panel--left .lang--english._motto--english , 
-	.panel--left .lang--latin._motto--latin, 
-	.panel--left .lang--german._motto--german, 
-	.panel--right .lang--english._motto--english , 
+	.panel--right .lang--english._motto--english, 
 	.panel--right .lang--latin._motto--latin, 
 	.panel--right .lang--german._motto--german {
 
 	}
-	/* MOTTO - ENGLISH/LATIN/GERMAN */
+}
+
+/* MOTTO - ENGLISH/LATIN/GERMAN */
+main.emblem-page, 
+main.emblem-page.frontmatter {
 	section.section__motto {
 		div.title, 
 		div.fugue, 
@@ -323,6 +335,7 @@ main.emblem-page.frontmatter {
 		.translation h1.title, 
 		.original h1.title {
 			font-family: $display-font_emblem;
+			/*font-family: $display-font;*/
 			font-size: 2.625rem;
 			font-weight: 600;
 			line-height: 3.25rem;
@@ -359,8 +372,7 @@ main.emblem-page.frontmatter {
 			color: $white;
 		}
 	}
-	section.section__motto.panel--left, 
-	section.section__motto.panel--right {
+	.panel--right section.section__motto {
 		div.title, 
 		div.fugue, 
 		._motto--latin div.image {
@@ -369,6 +381,8 @@ main.emblem-page.frontmatter {
 		}
 		.translation h1.title, 
 		.original h1.title {
+			/*font-family: $display-font_emblem;*/
+			font-family: $display-font;
 			font-size: 2rem;
 			line-height: 2.5rem;
 		}
@@ -377,7 +391,11 @@ main.emblem-page.frontmatter {
 			color: $text_body;
 		}
 	}
-	/* EPIGRAM - ENGLISH/LATIN/GERMAN */
+}
+
+/* EPIGRAM - ENGLISH/LATIN/GERMAN */
+main.emblem-page, 
+main.emblem-page.frontmatter {
 	section.section__epigram {
 		.translation div.epigram, 
 		.original div.epigram {
@@ -436,8 +454,7 @@ main.emblem-page.frontmatter {
 			display: none;
 		}
 	}
-	section.section__epigram.panel--left, 
-	section.section__epigram.panel--right {
+	.panel--right section.section__epigram {
 		.translation .edition--facsimile h3.title {
 			text-indent: 40%;
 		}
@@ -458,8 +475,11 @@ main.emblem-page.frontmatter {
 			color: $text_body;
 		}
 	}
+}
 
-	/* DISCOURSE - ENGLISH/LATIN */
+/* DISCOURSE - ENGLISH/LATIN */
+main.emblem-page, 
+main.emblem-page.frontmatter {
 	section.section__discourse, 
 	section.section__preface {
 		div.translation, 
@@ -482,7 +502,7 @@ main.emblem-page.frontmatter {
 		div.preface, 
 		div.preface.la {
 			display: grid;
-			grid-column: 4 / 13;
+			grid-column: 1 / 13;
 			grid-gap: 0;
 			grid-template-columns: 4fr 2fr;
 			grid-template-rows: auto;
@@ -547,10 +567,10 @@ main.emblem-page.frontmatter {
 			display: inline-block;
 		}*/
 	}
-	section.section__discourse.panel--left, 
-	section.section__discourse.panel--right {
+	.panel--right section.section__discourse {
 		div.discourse {
-			grid-column: 2 / 13;
+			/*outline: 5px solid red;*/
+			grid-column: 2 / 12;
 			grid-template-columns: repeat(12, 1fr);
 		}
 		._discourse--english .ab, 
@@ -565,38 +585,63 @@ main.emblem-page.frontmatter {
 			margin-bottom: 0;
 		}
 	}
-	section.section__discourse.panel--left div.discourse {
-	 	div.margin-note {
-			left: 35vw;
-			width: 13vw;
+	.panel--full section.section__discourse {
+		div.discourse {
+			grid-column: 4 / 13;
+			padding-left: 1rem;
 		}
 	}
-	/*.panel--left div.margin-note {  This is only worth the effort on large desktops ???
+	/*.panel--right div.margin-note {  This is only worth the effort on large desktops ???
 		left: calc(50vw - 10%);
 		padding-right: .5rem;
 		width: 10vw;
 	}*/
-	section.section__discourse.panel--right div.discourse {
+	.panel--right section.section__discourse div.discourse {
 		div.margin-note {
 			left: 85vw;
 			padding-right: 1rem;
 		}
 	}
-	/*********** END OF EMBLEM LAYOUT *************/
-
-	/*********** ENGLISH EMBLEM STYLES *************/
-	.translation div.edition--facsimile span.underline2 {
-		border-bottom: 2px solid $gray-dark;
+	.panel--right 
+		div.margin-note span.original:nth-of-type(2) br { /* why does this margin note need a line break after the sup??? */
+			display: none;
+		}
+}
+main.emblem-page .panel--right {
+	.section__discourse.grid--full span.note-mark:nth-of-type(2) { /* why is this a different size than other note marks??? */
+		margin-left: 1rem;
 	}
+}
+main.emblem-page .panel--full {
+	.section__discourse.grid--full span.note-mark:nth-of-type(2) { /* why is this a different size than other note marks??? */
+	/*	background-color: $error;*/
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
+		margin-left: 7rem;
+	}
+}
+main.emblem-page .panel--full section.section__discourse div.discourse {
+	grid-column: 3 / 13;
+	padding: 0;
+}
+/*********** END OF EMBLEM LAYOUT *************/
+
+
+/*********** ENGLISH EMBLEM XML STYLES *************/
+main.emblem-page, 
+main.emblem-page.frontmatter {
+	.translation div.edition--facsimile span.underline2 {
+		border-bottom: 2px solid $gray;
+	}
+}
 	/*********** END OF ENGLISH EMBLEM STYLES *************/
 
 
-	/*********** FRONTMATTER *************/
-	main.frontmatter {
-		background: $white;
-		.pb {
-			display: none;
-		}
+/*********** FRONTMATTER *************/
+main.emblem-page.frontmatter {
+	background: $white;
+	.pb {
+		display: none;
 	}
 	section.section__author-epigram, 
 	section.section__dedication, 
@@ -685,14 +730,72 @@ main.emblem-page.frontmatter {
 /*		._preface--english div.margin-note {
 			left: 85vw;
 		}*/
-		div.margin-note.line2 {
+/*		div.margin-note.line2 {
 			display: block;
+		}*/
+	}
+}
+
+/* FRONTISPIECE */
+main.emblem-page.frontmatter {
+	section.section__frontispiece {
+		padding-top: 2rem;
+		/* English */
+		div.titlePage {
+			text-align: center;
+		}
+		div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
+			font-family: $secondary-display-font_emblem;
+			font-size: 3rem;
+			font-weight: 600;
+			line-height: 1.25;
+			margin-bottom: 2rem;
+			padding: 0 2rem;
+		}
+
+		div.translation ._frontispiece--english .ab:nth-of-type(4) {
+			margin-top: 2rem;
+		}
+		div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(5) {
+			margin-bottom: 2rem;
+		}
+		/* Latin */
+		div.pref-epigram.la {
+			display: inline-block;	
+			font-size: 1.25rem;
+			line-height: 2;
+			text-align: center;
+		}
+		.edition--original {
+
+		}
+		.edition--regularized {
+			span.original {
+				display: none;
+			}
+		}
+		.edition--original span.caps {
+			letter-spacing: .2em;
 		}
 	}
+	.panel--full section.section__frontispiece {
+		padding-top: 4rem;
+		div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
+			padding: 0 16rem;
+		}
+		div.translation ._frontispiece--english .ab:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+			padding: 0 19rem;
+		}
+		div.original ._frontispiece--latin {
+			padding: 0 19rem;
+		}
+	}
+}
 
-
-	/* AUTHOR'S EPIGRAM */
+/* AUTHOR'S EPIGRAM */
+main.emblem-page.frontmatter {
 	section.section__author-epigram {
+		padding-top: 4rem;
 		/* English */
 		.edition--facsimile {
 			h3.title {
@@ -783,13 +886,25 @@ main.emblem-page.frontmatter {
 			}
 		}
 	}
+	.panel--full section.section__author-epigram {
+		div.epigram {
+			grid-column: 5 / 9;
+			margin: 0 -2rem;
+		}
+	}
+}
 
-	/* DEDICATION */
+/* DEDICATION */
+main.emblem-page.frontmatter {
 	/* English */
 	section.section__dedication ._dedication--english {
+		padding-top: 3rem;
 		.ab, 
 		span.pc {
 			grid-column: 1 / 2;
+		}
+		.ab:nth-of-type(2) {
+			margin-top: -11px;
 		}
 		div.dedication {
 			font-size: 1.25rem;
@@ -798,10 +913,62 @@ main.emblem-page.frontmatter {
 		div.dedication:nth-of-type(2) {
 			margin-top: 2rem;
 		}
+		div.dedication:nth-of-type(2) .ab:nth-of-type(1) {
+			margin-top: -3px;
+		}
+		div.margin-note {
+
+		}
+	}
+	.panel--full section.section__dedication ._dedication--english.edition--normalized {
+		div.dedication {
+			padding: 0 25%;
+		}
+		div.dedication > * {
+			grid-column: 1 / 3;
+		}
+		div.margin-note {
+			left: 80vw;
+		}
 	}
 	section.section__dedication ._dedication--english.edition--facsimile {
-		div.dedication:nth-of-type(2) {
-			margin-top: 0;
+		div.dedication:nth-child(1) {
+			text-align: center;
+		}
+		div.dedication:nth-child(1) .ab {
+			grid-column: 1 / 3;
+		}
+		div.dedication:nth-child(2) {
+			margin-top: 2rem;
+		}
+		div.dedication:nth-child(2) .ab {
+			margin-top: -2.625rem;
+			grid-column: 1 / 2;
+		}
+		div.dedication:nth-child(2) > span.original:nth-of-type(1) {
+			grid-column: 1 / 3;
+			margin-top: -12px;
+		}
+		.ab:nth-child(even) {
+			margin-top: -1rem;
+		}
+		div.margin-note span.original:nth-of-type(2) br { /* why does "of blessed me=mory" need a line break after the sup??? */
+			display: none;
+		}
+	}
+	.panel--full section.section__dedication ._dedication--english.edition--facsimile {
+		padding: 3rem 0;
+		div.dedication:nth-child(2) {
+			padding-left: 24%;
+		}
+		div.dedication:nth-child(2):not(.ab) {
+
+		}
+		div.dedication:nth-child(2) .ab {
+			margin-right: -200px;
+		}
+		div.margin-note {
+			left: 85vw;
 		}
 	}
 	/* Latin */
@@ -818,7 +985,7 @@ main.emblem-page.frontmatter {
 			letter-spacing: .2em;
 		}	
 	}
-	section.section__dedication ._dedication--latin.edition--facsimile {
+	section.section__dedication ._dedication--latin.edition--original {
 		span.original {
 			display: inline-block;
 		}
@@ -840,50 +1007,23 @@ main.emblem-page.frontmatter {
 			display: inline-block;
 		}
 	}
-
-	/* FRONTISPIECE */
-	section.section__frontispiece {
-		/* English */
-		div.titlePage {
-			text-align: center;
-		}
-		div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
-			font-family: $secondary-display-font_emblem;
-			font-size: 3rem;
-			font-weight: 600;
-			line-height: 1.25;
-			margin-bottom: 2rem;
-			padding: 0 2rem;
-		}
-		div.translation ._frontispiece--english .ab:nth-of-type(4) {
-			margin-top: 2rem;
-		}
-		div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(5) {
-			margin-bottom: 2rem;
-		}
-		/* Latin */
-		div.pref-epigram.la {
-			display: inline-block;	
-			font-size: 1.25rem;
-			line-height: 2;
-			text-align: center;
-		}
-		.edition--original {
-
-		}
-		.edition--regularized {
-			span.original {
-				display: none;
-			}
-		}
-		.edition--original span.caps {
-			letter-spacing: .2em;
+	.panel--full section.section__dedication ._dedication--latin {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		div.preface {
+			grid-column: 4 / 10;
 		}
 	}
-	
+	.panel--full section.section__dedication ._dedication--latin.edition--original div.preface {
+		margin-left: -1rem;
+		margin-right: -1rem;
+	}
+}
 
-	/* PREFACE */
+/* PREFACE */
+main.emblem-page.frontmatter {
 	section.section__preface {
+		padding-top: 4rem;
 		._preface--english,  
 		._preface--latin .page.italic {
 			grid-column: 1 / 13;
@@ -892,6 +1032,10 @@ main.emblem-page.frontmatter {
 		.edition--facsimile {
 			h3.title {
 				text-align: center;
+				margin-bottom: 2rem;
+			}
+			.ab {
+				margin-top: -1.75rem;
 			}
 		}
 		.edition--normalized {
@@ -910,37 +1054,72 @@ main.emblem-page.frontmatter {
 				letter-spacing: .2em;
 			}
 		}
+		.edition--original, 
 		.edition--regularized {
 			span.caps:nth-of-type(2) {
 				float: left;
 				font-family: $secondary-display-font_emblem;
 				font-size: 5rem;
-				font-weight: 600;
 				line-height: 0;
 				padding: 1px 1px 0 1px;
 			}
+		}
+		.edition--original {
 			span.caps:nth-of-type(3) {
-				font-family: $secondary-display-font_emblem;
-				font-weight: 600;
+				margin-left: -14px;
 			}
 		}
 	}
+	.panel--full section.section__preface {
+		padding-top: 5rem;
+		._preface--english{
+			.ab {
+				grid-column: 1 / 3;
+			}
+			div.margin-note {
+				left: 80vw;
+				width: 15vw;
+			}
+		}
+		._preface--english.edition--facsimile div.preface {
+			margin: 0 -4rem;
+		}
+		._preface--latin.edition--regularized div.preface {
+			margin: 0 -2rem;
+		}
+		div.preface {
+			grid-column: 4 / 10;
+		}
+		div.margin-note {
+			left: 78vw;
+			width: 15vw;
+		}
+		div.margin-note span.original:nth-of-type(2) br { /* why does the first note need a line break after the sup??? */
+			display: none;
+		}
+	}
+}
+/*********** END OF FRONTMATTER *************/
 
+/*********** TESTS *************/
+main.emblem-page, 
+main.emblem-page.frontmatter {
 
-
-	/*********** END OF FRONTMATTER *************/
-
-	/*********** TESTS *************/
 	.lang--latin._discourse--latin .pb {
 		display: none;
 	}
 	.discourse.la .pb {
 		display: none !important;
 	}
-	/****************************************/
 }
+/************ END TESTS **************/
+
 
 /***************** BREAKPOINTS *****************/
+main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
+	/*border: 5px solid red;*/
+/*	margin-top: 3.5rem;*/
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
 	main.emblem-page {
 		section.section__motto > div.original {
@@ -1033,10 +1212,8 @@ main.emblem-page.frontmatter {
 				display: none;
 			}
 		}
-		section.section__epigram.panel--left .translation, 
-		section.section__epigram.panel--left .original, 
-		section.section__epigram.panel--right .translation, 
-		section.section__epigram.panel--right .original {
+		.panel--right section.section__epigram .translation, 
+		.panel--right section.section__epigram .original {
 			.verse-epigram {
 				grid-column: 3 / 11;
 			}
@@ -1051,10 +1228,8 @@ main.emblem-page.frontmatter {
 				padding-right: 1rem;
 			}
 		}
-		section.section__discourse.panel--left .translation, 
-		section.section__discourse.panel--left .original, 
-		section.section__discourse.panel--right .translation, 
-		section.section__discourse.panel--right .original {
+		.panel--right section.section__discourse .translation, 
+		.panel--right section.section__discourse .original {
 			span.note-mark, 
 			div.margin-note {
 				display: none;

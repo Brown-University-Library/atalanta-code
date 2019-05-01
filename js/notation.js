@@ -610,10 +610,44 @@
         )
 
         // TEMP - END
-
+        scaledPageSvgCode = scaledPageSvgCode.replace( // (CB) trying to center the non-scaled SVG
+          /^\s*<svg\s/i,
+          `<svg viewBox="-200 0 ${width} ${height}" `
+        )
 
         pageContainer.innerHTML = scaledPageSvgCode;
+        scaleMusicPageElements(pageIndex); // CB
       });
+
+function scaleMusicPageElements(pageIndex) { // (CB) resize music page wrapper elements to match SVG heights
+  let musicPageA, musicPageB, SVGa, SVGb, firstSVG, secondSVG, heightSVGa, heightSVGb, viewBoxHeightA, viewBoxHeightB;
+  // console.log("the pageIndex is " + pageIndex); // pageIndex 0 renders SVG 1 and pageIndex 1 renders SVG 2
+  if ( pageIndex < 1 ){
+    musicPageA = '.music-page:nth-of-type(1)'; // music page element 1
+    SVGa = '.music-page:nth-of-type(1) > svg'; // music SVG 1
+    //console.log("the first music SVG is " + SVGa);
+    firstSVG = document.querySelector(SVGa);
+    heightSVGa = $(firstSVG).attr('viewBox'); // get SVG 1 height attribute
+    //console.log("this is the viewBox of my function's SVGa: " + heightSVGa);
+    viewBoxHeightA = heightSVGa.split(' '); // split string of viewBox attributes from SVG 1 into an array
+    //console.log("my fourth SVGa value after the split is: " + viewBoxHeightA[3]); // get the SVG 1 viewBox height value from the array
+    heightSVGa = viewBoxHeightA[3]; // get the height of the SVG 1 viewBox from the array of values
+    //console.log("the viewBox height value now becomes heightSVGa=" + heightSVGa);
+    $(musicPageA).attr("height", heightSVGa + "px"); // set height of SVG 1 .music-page wrapper to SVG 1 height
+  }
+  else if ( pageIndex >= 1 ){
+    musicPageB = '.music-page:nth-of-type(2)'; // music page element 2
+    SVGb = '.music-page:nth-of-type(2) > svg'; // music SVG 2
+    //console.log("the second music SVG is " + SVGb);
+    secondSVG = document.querySelector(SVGb);
+    heightSVGb = $(secondSVG).attr('viewBox'); // get SVG 2 height attribute
+    //console.log("this is the viewBox of my function's SVGb: " + heightSVGb);
+    viewBoxHeightB = heightSVGb.split(' '); // split string of viewBox attributes from SVG 2 into an array
+    //console.log("my fourth SVGa value after the split is: " + viewBoxHeightB[3]); // get the SVG 2 viewBox height value from the array
+    heightSVGb = viewBoxHeightB[3]; // get the height of the SVG 2 viewBox from the array of values
+    $(musicPageB).attr("height", heightSVGb + "px"); // set height of SVG 2 .music-page wrapper to SVG 2 height
+  }
+}
 
       // Fill with music SVG
 /*
@@ -1235,6 +1269,8 @@
 
     playButton.classList.add('atalanta-notation-start'); // TODO: should not be a magic value
     pauseButton.classList.add('atalanta-notation-stop'); // TODO: should not be a magic value
+    playButton.innerHTML = '<div class="play-btn__icon"></div><div class="play-btn__label">Play</div>'; //CB create label for play button
+    pauseButton.innerHTML = '<div class="pause-btn__icon"></div><div class="pause-btn__label">Pause</div>'; //CB create label for pause button
 
     playButton.onclick = function () {
       model.play();
@@ -1266,13 +1302,13 @@
     let staffDefTxt, muteButtonTexts = [];
 
     while (staffDefTxt = voiceNameRE.exec(meiData)) {
-      muteButtonTexts.push(`Play/mute ${staffDefTxt[2]}`);
+      muteButtonTexts.push(`Hear/mute ${staffDefTxt[2]}`); //CB change from "play" to "hear"
     }
 
     let muteButtons = muteButtonTexts.map(muteButtonText => {
       let buttonElem = document.createElement('button');
       buttonElem.classList.add('atalanta-notation-mute-track'); // TODO: should not be a magic value
-      buttonElem.innerText = muteButtonText;
+      buttonElem.innerHTML = '<div class="mute-btn__icon"></div><div class="mute-btn__label">' + muteButtonText + '</div>'; //CB separate icon and label
       return buttonElem;
     });
 
@@ -1318,7 +1354,8 @@
 
       let modalViewLink = document.createElement('div');
       modalViewLink.classList.add('atalanta-notation__switch'); // TODO: should not be a magic value
-      modalViewLink.innerHTML = `<a href="#${targetId}" data-lity>${VISUALIZE_BUTTON_TEXT}</a>`; // TODO: should not be a magic value
+      //CB adding an element for the piano roll icon
+      modalViewLink.innerHTML = `<a href="#${targetId}" data-lity><div class="piano-roll__icon"></div><div class="piano-roll__label">${VISUALIZE_BUTTON_TEXT}</div></a>`; // TODO: should not be a magic value
       transportInterface.appendChild(modalViewLink);
     }
 
