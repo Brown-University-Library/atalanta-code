@@ -7817,6 +7817,26 @@ footer {
     height: auto;
     width: 10rem; }
 
+/* BREAKPOINTS */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  footer {
+    height: 30vh;
+    padding: 2rem;
+    width: calc(100vw - 4rem); }
+    footer .footer--main {
+      width: calc(60vw - 2rem); }
+    footer .footer--branding {
+      width: calc(40vw - 2rem); }
+    footer ul {
+      height: 30vh; } }
+
+@media screen and (min-width: 1000px) and (max-width: 1399px) {
+  footer {
+    height: 35vh;
+    padding: 3rem 3.5rem; }
+    footer .footer--branding h6 {
+      margin-bottom: 2.25rem; } }
+
 /***     Breakpoints     ***/
 /* large  -  desktop */
 /* medium-large - laptop */
