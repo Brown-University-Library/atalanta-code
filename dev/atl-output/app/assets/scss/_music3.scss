@@ -1,42 +1,12 @@
 @import 'colors';
 @import 'utilities';
 
-/* sticky music player controls */
-.transport.is-stuck {
-  animation: fade-in .4s ease-out;
-  background-color: $white !important;
-  padding: 0;
-  position: fixed;
-  top: $emblemnav-h;
-  width: 100vw;
-}
-.grid--right .transport.is-stuck {
-	width: 50vw;
-}
-.lity-container .transport.is-stuck {
-/*	outline: 5px solid red;*/
-	animation: none;
-	background-color: transparent !important;
-	padding: 0 !important;
-	position: relative;
-	top: 0;
-}
-.transport.is-unstuck {
-	animation: fade-out-in .4s ease-out;
-}
-.section__music.padding-hack {
-	padding-top: calc(20vh + 1rem + 15px);
-}
-
 body {
 	padding: 0;
 }
-
-.music-test {
-	outline: 10px solid red;
-}
 .section__music {
 	font-family: $body-font_emblem;
+	padding-top: 0;
 }
 .section__music ._music {
 	display: grid;
@@ -51,13 +21,14 @@ body {
 	.transport {
 		background-color: transparent;
 		display: flex;
-		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		grid-area: 1 / 2 / 2 / 12;
-		height: 20vh;
+		flex-direction: row;
+		grid-area: 1 / 1 / 2 / 13;
+		height: 14vh;
 		margin-bottom: 1rem;
 		padding: 0;
+		width: 100%;
 		z-index: 10; /* music page SVG overlaps with transport controls */
 	}
 	.ata-viz-cmn {
@@ -77,9 +48,9 @@ body {
 }
 .ata-viz-pianoroll .transport {
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+	flex-direction: row;
 	height: 15vh;
 	.atalanta-notation-start {
 		background-image: url('../icons/icon_play-outline.svg');
@@ -93,32 +64,44 @@ body {
 	}
 }
 .atalanta-notation__switch {
-
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 90px;
+	width: 100px;
 }
 .atalanta-notation__switch a {
-	width: 14rem;
-	height: 3rem;
-	padding: .5rem 3rem;
 	background-color: transparent;
-	border: 2px solid $black;
+	border: 2px solid $text_body;
 	border-radius: 10px;
 	color: $black;
-	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.125rem;
+	height: 100%;
+	line-height: 1.2;
+	padding: 0.5rem;
+	text-align: center;
+	width: 100%;
+	word-break: break-word;
+	word-wrap: break-word;
 }
 .atalanta-notation__switch a:hover, .atalanta-notation__switch a:focus {
 	background-color: $yellow_bright;
-	color: #000;
+	color: $black;
 }
 .ata-music .transport button {
-	background-size: contain;
 	background-repeat: no-repeat;
+	background-size: contain;
 	border: 0;
 }
 .track-mute {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	flex-direction: column;
 	min-height: 110px;
 }
 .track-mute button {
@@ -130,7 +113,7 @@ body {
   height: 7rem;
   width: 7rem;
 }
-.section__music.grid--right ._music .ata-music {
+.panel--right .section__music ._music .ata-music {
 	.transport {
 		grid-area: 1 / 1 / 2 / 13;
 		justify-content: space-around;
@@ -191,7 +174,7 @@ body {
 	background-image: url('../icons/icon_profile-mute-filled.svg');
 	transition: .3s;
 }
-.grid--right {
+.panel--right {
 	.atalanta-notation-start,
 	.atalanta-notation-stop {
 		margin-right: 0;
@@ -199,6 +182,52 @@ body {
 
 	}
 }
+/* sticky music player controls */
+.section__music ._music .ata-music .transport.is-stuck {
+	animation: fade-in .4s ease-out;
+	background-color: $white !important;
+	padding: 0;
+	position: fixed;
+	top: $emblemnav-h;
+}
+.panel--full .section__music ._music .ata-music .transport.is-stuck {
+	width: 100vw;
+}
+.panel--right .section__music ._music .ata-music .transport.is-stuck {
+	width: 50vw;
+}
+.section__music ._music .ata-music .transport.is-unstuck {
+	animation: fade-out-in .4s ease-out;
+}
+.section__music ._music .ata-music .section__music.padding-hack {
+	padding-top: calc(20vh + 1rem + 15px);
+}
+.lity-container .transport.is-stuck {
+/*	outline: 5px solid red;*/
+	animation: none;
+	background-color: transparent !important;
+	padding: 0 !important;
+	position: relative;
+	top: 0;
+}
+
+
+/* Playing notes */
+.ata-viz-cmn svg .note {
+  /*transition: fill 0.3s, stroke-width 0.3s;*/
+}
+.ata-viz-cmn svg .note.highlighted {
+  fill: $yellow_inverse;
+}
+.ata-viz-cmn svg .note.highlighted path {
+  /*stroke-width: 50;*/
+  stroke: $yellow_inverse;
+}
+.ata-viz-cmn svg .note.highlighted text {
+
+}
+
+
 /* piano roll */
 .ata-viz-pianoroll.modal { /* the lity modal takes the element out of the document flow while active */
 	padding-bottom: 1rem;
@@ -238,7 +267,7 @@ button.lity-close {
 	grid-area: 1 / 1 / 2 / 13;
 	margin-top: -8rem;
 }
-.grid--left .music-page:nth-of-type(1), .grid--right .music-page:nth-of-type(1) {
+.panel--right .music-page:nth-of-type(1) {
 	margin-top: -4rem;
 }
 .music-page:nth-of-type(2) {
@@ -250,6 +279,34 @@ button.lity-close {
   font-size: 18rem; /* ??? This is only to adjust spacing for overlapping verse */
 }
 
+/* ANIMATIONS */
+@keyframes fade-in {
+	0% {
+		opacity: 0; 
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fade-out {
+	0% {
+		opacity: 1; 
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes fade-out-in {
+	0% {
+		opacity: 1; 
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
 
 /* VENDOR SPECIFIC STYLES */
 @-moz-document url-prefix() { /* https://developer.mozilla.org/en-US/docs/Web/CSS/@document */

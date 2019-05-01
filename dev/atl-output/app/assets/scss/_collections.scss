@@ -1,0 +1,10 @@
+@import 'colors';
+
+._collections {
+	background-color: $red;
+	bottom: 0;
+	height: 20px;
+	position: fixed;
+	width: 100%;
+	z-index: $collections-z;
+}
