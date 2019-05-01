@@ -1,13 +1,7 @@
 @import 'colors';
 @import 'utilities';
 
-/*._footer {
-	background-color: $gray;
-	height: 312px;
-	width: 100%;
-	z-index: $footer-z;
-}*/
-/*footer {
+footer {
 	background-color: $gray;
 	box-sizing: border-box;
 	color: $white;
@@ -61,35 +55,4 @@
 		height: auto;
 		width: 10rem;
 	}
-}*/
-
-/* BREAKPOINTS */
-/*@media screen and (min-width: 320px) and (max-width: 767px) {
-	footer {
-		height: 30vh;
-		padding: 2rem;
-		width: calc(100vw - 4rem);
-		.footer--main {
-			width: calc(60vw - 2rem);
-		}
-		.footer--branding {
-			width: calc(40vw - 2rem);
-		}
-		ul {
-			height: 30vh;
-		}
-	}
-
-}
-@media screen and (min-width: 768px) and (max-width: 999px) {
-
-}
-@media screen and (min-width: 1000px) and (max-width: 1399px) {
-  footer {
-  	height: 35vh;
-  	padding: 3rem 3.5rem;
-  	.footer--branding h6 {
-  		margin-bottom: 2.25rem;
-  	}
-  } 
 }
