@@ -2,7 +2,7 @@
 @import 'colors';
 
 main#image-search {
-	height: 100vh;
+	min-height: 100vh;
 	margin-top: $topnav-h;
 	padding: 0 1rem;
 	width: calc(100vw - 2rem);
