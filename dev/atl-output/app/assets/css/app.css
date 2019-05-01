@@ -2233,6 +2233,8 @@ main.home {
     line-height: 1.75rem;
     padding-top: 2.75rem;
     width: 50%; }
+  main.home .hero-text h5 cite {
+    font-style: oblique; }
   main.home .hero-image {
     background-color: #ffae00;
     background-image: url("../../assets/img/default/bkg_homepage.png");
@@ -2297,6 +2299,11 @@ main.home {
     padding-top: 1rem; }
   main.home ul li a:hover {
     color: #ffcd61; }
+  main.home ul li a:focus {
+    color: #ffcd61;
+    outline: none;
+    -webkit-text-decoration: underline solid #ffcd61;
+    text-decoration: underline solid #ffcd61; }
   main.home ul li span {
     color: white;
     font-size: 1rem;
@@ -2321,6 +2328,8 @@ main.home {
     grid-area: 1 / 4 / 2 / 10;
     line-height: 1.5;
     padding: 0 5rem; }
+  main.home .intro-text p cite {
+    font-style: oblique; }
   main.home .intro-text a {
     color: #333;
     font-size: 1rem;
@@ -2334,6 +2343,11 @@ main.home {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
+    -webkit-text-decoration: underline solid white;
+    text-decoration: underline solid white; }
+  main.home .intro-text a:focus {
+    color: white;
+    outline: none;
     -webkit-text-decoration: underline solid white;
     text-decoration: underline solid white; }
 
@@ -8142,16 +8156,25 @@ body {
 
 footer {
   background-color: #333;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   font-size: .75rem;
   font-weight: 600;
-  height: 20vh;
-  padding: 3rem 6rem;
-  width: calc(100vw - 12rem); }
-  footer .footer--main {
-    width: calc(60vw - 6rem); }
-  footer .footer--branding {
-    width: calc(40vw - 6rem); }
+  height: 30vh;
+  padding: 3rem 6rem; }
   footer ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -8178,7 +8201,40 @@ footer {
     color: white;
     text-transform: uppercase; }
   footer li a:hover {
-    color: #ffcd61; }
+    color: #ffcd61;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
+  footer li a:focus {
+    color: #ffcd61;
+    outline: none;
+    -webkit-text-decoration: underline solid #ffcd61;
+    text-decoration: underline solid #ffcd61; }
+  footer .footer--branding {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%; }
+  footer h6 {
+    font-size: .75rem;
+    font-weight: 600;
+    text-transform: uppercase; }
+  footer img {
+    height: auto;
+    width: 10rem; }
 
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {

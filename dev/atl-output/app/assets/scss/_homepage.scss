@@ -41,6 +41,9 @@ main.home {
     padding-top: 2.75rem;
     width: 50%;
   }
+  .hero-text h5 cite {
+    font-style: oblique;
+  }
   .hero-image {
     background-color: $yellow;
     background-image: url("../../assets/img/default/bkg_homepage.png");
@@ -88,6 +91,11 @@ main.home {
   ul li a:hover {
   	color: $yellow_bright;
   }
+  ul li a:focus {
+    color: $yellow_bright;
+    outline: none;
+    text-decoration: underline solid $yellow_bright;
+  }
   ul li span {
     color: $white;
     font-size: 1rem;
@@ -115,6 +123,9 @@ main.home {
     line-height: 1.5;
     padding: 0 5rem;
   }
+  .intro-text p cite {
+    font-style: oblique;
+  }
   .intro-text a {
     color: $gray;
     font-size: 1rem;
@@ -127,6 +138,11 @@ main.home {
   .intro-text a:hover {
   	color: $white;
     transition: .3s;
+    text-decoration: underline solid $white;
+  }
+  .intro-text a:focus {
+    color: $white;
+    outline: none;
     text-decoration: underline solid $white;
   }
 }
@@ -179,4 +195,7 @@ main.home {
   .intro-text a {
     margin-top: 1rem;
   }
+}
+@media screen and (min-width: 768px) and (max-width: 999px) {
+  
 }
