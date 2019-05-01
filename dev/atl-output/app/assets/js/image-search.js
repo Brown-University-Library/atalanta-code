@@ -48,9 +48,7 @@ $(document).ready(function() {
 		var inactiveArray = [];
 		var imageResultsWrapper = $('.image-results__wrapper');
 		var imageItems = imageResultsWrapper.children().children();
-		console.log(imageItems);
 		// children = Array.prototype.slice.call(children, 0);
-		console.log(imageItems);
 		var thisChild;
 		// console.log(activeContainer);
 		console.log(imageItems.length);
@@ -86,8 +84,6 @@ $(document).ready(function() {
 		// console.log(inactiveChildLast);
 		var myActiveArray = moveActiveArray;
 		var myInactiveArray = moveInactiveArray;
-		console.log(myActiveArray.length);
-		console.log(myInactiveArray.length);
 			for (var i = 0; i < myInactiveArray.length; i++) {
 				var oldPosition = getBCR(myInactiveArray[i]);
 				inactiveImageContainer.appendChild(myInactiveArray[i]);
@@ -161,6 +157,7 @@ $(document).ready(function() {
 	$('body').on('click', imageTermTrigger, function() {
 		var that = this; // store which term was clicked
 		checkTermSelected(that);
+		updateEmblemView();
 	})
 	$('body').on('click', resultsTermsTrigger, function() {
 		var that = this; // store which results item terms button was clicked
@@ -229,5 +226,43 @@ $(document).ready(function() {
 		var currentSelectedCategory = $(newSelectedCategory);
 		$(currentSelectedTerm).removeClass(imageTermSelected); // remove selected term class
 		categoriesHide(currentSelectedCategory);
+	}
+
+	var updateEmblemView = function() {
+		var actives = activeEmblems(); //Array of emblem numbers. Not zero-padded strings.
+		var filts = activeFilters();
+
+		//Hero — Replace the text in h1.hero__heading with the number of results (line 67)
+		$('h1.hero__heading').text(actives.length);
+		
+		//Breadcrumbs — Create an <li><a> element containing the selected term and add 
+		//to/remove from ul.filters__list (ex: line 57) 
+		
+		//<li><a href="#"><span class="selected-filter">Selected Term Goes Here</span><span class="selected-filter__icon"></span></a></li>
+		var filterList = filterselectionTemplate( { filterData: filts } );
+		console.log(filterList);
+		$('.filters__list').html(filterList);
+		
+		//Visualization — Add/remove the class "image--active" from the corresponding 
+		//<li> in ul.results-viz__items (ex: line 72)
+		var linkcls = 'image--active';
+		$('ul.results-viz__items li').removeClass(linkcls);
+
+		//Image Results — Add the class "item--active" and remove the class 
+		//"item--inactive" from the corresponding div.image-results__item when a term is 
+		//added/removed and the filters apply to that image. Remove the class "item--active" 
+		//and add "item--inactive" from the corresponding div.image-results__item when a term 
+		//is added/removed and the filters do not apply to that image (ex: lines 170 and 149)
+		$('div.image-results__item').removeClass('item--active').addClass('item--inactive');
+
+		actives.forEach(el => {
+			var imgid = '#image'+el;
+			var linksel = 'a[data-href="'+imgid+'"]';
+			$(linksel).parents('li').addClass(linkcls);
+
+			$('div.image-results__item'+imgid).removeClass('item--inactive').addClass('item--active');
+
+		}, this);
+
 	}
 });
