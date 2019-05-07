@@ -62,6 +62,9 @@ main.toc-wrapper {
 	h3 a cite {
 		font-style: oblique;
 	}
+	h3 cite, h4 cite {
+		font-style: oblique;
+	}
 	h4 {
 		color: $gray;
 		font-size: 21px;
@@ -144,6 +147,9 @@ main.toc-wrapper {
 		background-repeat: no-repeat;
 		background-size: 195%;
 	}
+	.article a cite {
+		font-style: oblique;
+	}
 	.section__essays ul {
 		box-sizing: border-box;
 		direction: ltr;
@@ -165,6 +171,9 @@ main.toc-wrapper {
 	}
 	.section__essays span.title {
 		display: block;
+	}
+	.section__essays span.title a cite {
+		font-style: oblique;
 	}
 	.section__essays span.byline {
 		color: $gray;
