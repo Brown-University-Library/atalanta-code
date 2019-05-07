@@ -2400,26 +2400,6 @@ body {
 .no-scroll {
   overflow: hidden; }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes fade-out {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
-@keyframes fade-out-in {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
 /* 1366px width */
 main.toc-wrapper {
   background-color: #DAE4EC;
@@ -2474,6 +2454,8 @@ main.toc-wrapper {
     border-bottom: 2px solid #000;
     color: #000; }
   main.toc-wrapper h3 a cite {
+    font-style: oblique; }
+  main.toc-wrapper h3 cite, main.toc-wrapper h4 cite {
     font-style: oblique; }
   main.toc-wrapper h4 {
     color: #333;
@@ -2544,6 +2526,8 @@ main.toc-wrapper {
     background-position: 23% 63%;
     background-repeat: no-repeat;
     background-size: 195%; }
+  main.toc-wrapper .article a cite {
+    font-style: oblique; }
   main.toc-wrapper .section__essays ul {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -2583,6 +2567,8 @@ main.toc-wrapper {
     width: 50%; }
   main.toc-wrapper .section__essays span.title {
     display: block; }
+  main.toc-wrapper .section__essays span.title a cite {
+    font-style: oblique; }
   main.toc-wrapper .section__essays span.byline {
     color: #333;
     font-size: 17px;
@@ -4215,6 +4201,7 @@ nav.digital-edition-nav {
   padding-top: 1rem;
   position: fixed;
   top: 3.125rem;
+  width: 100%;
   z-index: 150; }
   nav.digital-edition-nav .owl-carousel {
     background-color: #DAE4EC;
@@ -5150,6 +5137,12 @@ main.emblem-page section.section__motto .translation h1.title span.regularized,
 main.emblem-page.frontmatter section.section__motto .translation h3.title span.regularized,
 main.emblem-page.frontmatter section.section__motto .translation h1.title span.regularized {
   color: white; }
+
+main.emblem-page section.section__motto .translation h1.title,
+main.emblem-page section.section__motto .original h1.title,
+main.emblem-page.frontmatter section.section__motto .translation h1.title,
+main.emblem-page.frontmatter section.section__motto .original h1.title {
+  font-family: "GTSectraDisplayBold", Garamond, Georgia, serif; }
 
 main.emblem-page .panel--right section.section__motto div.title,
 main.emblem-page .panel--right section.section__motto div.fugue,
@@ -6400,6 +6393,11 @@ body {
     padding: 0;
     text-align: center;
     width: 100%; }
+  .section__music ._music .ata-music .transport button:focus,
+  .section__music ._music .ata-music .transport .atalanta-notation__switch a:focus {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+    outline: none; }
   .section__music ._music .ata-music .transport button > div:nth-child(1) {
     background-position: center;
     background-repeat: no-repeat;
@@ -6512,11 +6510,21 @@ body {
 .section__music .music-pages {
   padding-bottom: 8rem; }
 
+.section__music .music-pages g.verse tspan {
+  font-size: 280px !important; }
+
 .section__music .music-page:nth-of-type(1) {
   margin-top: -6rem; }
 
 .section__music .music-page:nth-of-type(2) {
   margin-top: -5rem; }
+
+/* overlapping notation */
+.section__music g#m-600.verse g#m-601.syl text {
+  /* emblem 1, line 13 */
+  -webkit-transform: translateX(-200px);
+  -ms-transform: translateX(-200px);
+  transform: translateX(-200px); }
 
 /* Playing notes */
 .ata-viz-cmn svg .note.highlighted {
@@ -6682,6 +6690,10 @@ body {
     padding: 0;
     text-align: center;
     width: 100%; }
+  .lity-container .ata-viz-pianoroll .transport button:focus {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+    outline: none; }
   .lity-container .ata-viz-pianoroll .transport button > div:nth-child(1) {
     background-position: center;
     background-repeat: no-repeat;
@@ -7150,7 +7162,7 @@ body {
 /*$gray-medium: #989898;*/
 /*$orange-red_darker: hsla(11, 72%, 42%, 1);*/
 main#image-search {
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 3.125rem;
   padding: 0 1rem;
   width: calc(100vw - 2rem); }
@@ -7717,9 +7729,10 @@ main#image-search {
 ._collections {
   background-color: #dc4928;
   bottom: 0;
+  display: block;
   height: 20px;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 10000000; }
 
 /* PRODUCTION */
@@ -7754,26 +7767,6 @@ body {
 
 .no-scroll {
   overflow: hidden; }
-
-@keyframes fade-in {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes fade-out {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
-@keyframes fade-out-in {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 
 footer {
   background-color: #333;
@@ -7858,21 +7851,17 @@ footer {
     width: 10rem; }
 
 /* BREAKPOINTS */
-/*@media screen and (min-width: 320px) and (max-width: 767px) {
-	footer {
-		height: 30vh;
-		padding: 2rem;
-		width: calc(100vw - 4rem);
-		.footer--main {
-			width: calc(60vw - 2rem);
-		}
-		.footer--branding {
-			width: calc(40vw - 2rem);
-		}
-		ul {
-			height: 30vh;
-		}
-	}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  footer {
+    height: 30vh;
+    padding: 2rem;
+    width: calc(100vw - 4rem); }
+    footer .footer--main {
+      width: calc(60vw - 2rem); }
+    footer .footer--branding {
+      width: calc(40vw - 2rem); }
+    footer ul {
+      height: 30vh; } }
 
 @media screen and (min-width: 1000px) and (max-width: 1399px) {
   footer {
