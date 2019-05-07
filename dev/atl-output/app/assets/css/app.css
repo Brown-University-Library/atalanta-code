@@ -6900,9 +6900,8 @@ body {
   z-index: 10000; 
 }*/
 #openseadragon-wrapper {
-  height: calc(100vh - 6.25rem);
-  /* currently, the combined height of the topnav and subnav is 6.25rem */
-  background-color: #777; }
+  background-color: #808080;
+  height: calc(100vh - 6.25rem); }
 
 #openseadragon-wrapper canvas {
   cursor: pointer; }
@@ -6923,34 +6922,41 @@ body {
   justify-content: center;
   position: absolute;
   bottom: 0;
-  z-index: 1000;
-  width: 100%; }
+  width: 100%;
+  z-index: 1000; }
+
+#tools #zoom-in svg,
+#tools #zoom-out svg {
+  -webkit-transform: scale(0.6) translate3d(25%, 25%, 0);
+  transform: scale(0.6) translate3d(25%, 25%, 0);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0; }
 
 #tools > span {
   background-color: rgba(33, 33, 33, 0.4);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   height: 8vh;
+  max-height: 70px;
   padding: 0 .5rem;
-  width: 10rem; }
+  width: 150px; }
 
-#tools a {
+#tools a#zoom-in,
+#tools a#zoom-out {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white;
+  display: inline-block;
+  padding: 0 .25rem;
+  width: 46%;
+  max-width: 75px; }
+
+#tools a#next,
+#tools a#previous {
+  color: white;
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
-  /* important required for openseadragon override */
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -6964,7 +6970,6 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: white;
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 0px;
   -ms-flex: 1 0 0px;
@@ -6972,11 +6977,27 @@ body {
   font-size: .875rem;
   padding: 0 .25rem; }
 
-#tools a span {
+#tools a#zoom-in span,
+#tools a#zoom-out span {
+  display: none; }
+
+#tools a#next span,
+#tools a#previous span {
+  color: white;
   display: block;
   text-align: center; }
 
-#tools a:hover, #tools a:focus {
+#tools a#next:hover span,
+#tools a#previous:hover span {
+  color: #ffcd61;
+  display: block;
+  text-align: center;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s; }
+
+#tools a:hover,
+#tools a:focus {
   color: #ffcd61;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -6988,20 +7009,29 @@ body {
   -o-transition: .3s;
   transition: .3s; }
 
-#icon_arrow-left-lineart, #icon_arrow-right-lineart {
-  width: 2rem;
-  height: 4rem; }
+#icon_arrow-left-lineart,
+#icon_arrow-right-lineart {
+  height: 4rem;
+  width: 2rem; }
 
-#icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline, #icon_zoom-in-lineart g#handle path, #icon_zoom-in-lineart g#symbol path, #icon_zoom-out-lineart g#handle path, #icon_zoom-out-lineart g#symbol line {
+#icon_arrow-left-lineart polyline,
+#icon_arrow-right-lineart polyline,
+#icon_zoom-in-lineart g#handle path,
+#icon_zoom-in-lineart g#symbol path,
+#icon_zoom-out-lineart g#handle path,
+#icon_zoom-out-lineart g#symbol line {
   stroke: white; }
 
-#icon_zoom-in-lineart g#glass path, #icon_zoom-out-lineart g#glass path {
+#icon_zoom-in-lineart g#glass path,
+#icon_zoom-out-lineart g#glass path {
   fill: white; }
 
-#icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline {
+#icon_arrow-left-lineart polyline,
+#icon_arrow-right-lineart polyline {
   stroke-width: 10; }
 
-#next:hover #icon_arrow-right-lineart polyline, #next:focus #icon_arrow-right-lineart polyline {
+#next:hover #icon_arrow-right-lineart polyline,
+#next:focus #icon_arrow-right-lineart polyline {
   stroke: #ffcd61;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -7025,19 +7055,24 @@ body {
   -o-transition: .3s;
   transition: .3s; }
 
-#zoom-in:hover #icon_zoom-in-lineart g#handle path, #zoom-in:hover #icon_zoom-in-lineart g#symbol path, #zoom-in:focus #icon_zoom-in-lineart g#handle path, #zoom-in:focus #icon_zoom-in-lineart g#symbol path {
+#zoom-in:hover #icon_zoom-in-lineart g#handle path,
+#zoom-in:hover #icon_zoom-in-lineart g#symbol path,
+#zoom-in:focus #icon_zoom-in-lineart g#handle path,
+#zoom-in:focus #icon_zoom-in-lineart g#symbol path {
   stroke: #ffcd61;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; }
 
-#zoom-in:hover #icon_zoom-in-lineart g#glass path, #zoom-in:focus #icon_zoom-in-lineart g#glass path {
+#zoom-in:hover #icon_zoom-in-lineart g#glass path,
+#zoom-in:focus #icon_zoom-in-lineart g#glass path {
   fill: #ffcd61;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; }
 
-#zoom-in:active #icon_zoom-in-lineart g#handle path, #zoom-in:active #icon_zoom-in-lineart g#symbol path {
+#zoom-in:active #icon_zoom-in-lineart g#handle path,
+#zoom-in:active #icon_zoom-in-lineart g#symbol path {
   stroke: #808080;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -7049,19 +7084,24 @@ body {
   -o-transition: .3s;
   transition: .3s; }
 
-#zoom-out:hover #icon_zoom-out-lineart g#handle path, #zoom-out:hover #icon_zoom-out-lineart g#symbol line, #zoom-out:focus #icon_zoom-out-lineart g#handle path, #zoom-out:focus #icon_zoom-out-lineart g#symbol line {
+#zoom-out:hover #icon_zoom-out-lineart g#handle path,
+#zoom-out:hover #icon_zoom-out-lineart g#symbol line,
+#zoom-out:focus #icon_zoom-out-lineart g#handle path,
+#zoom-out:focus #icon_zoom-out-lineart g#symbol line {
   stroke: #ffcd61;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; }
 
-#zoom-out:hover #icon_zoom-out-lineart g#glass path, #zoom-out:focus #icon_zoom-out-lineart g#glass path {
+#zoom-out:hover #icon_zoom-out-lineart g#glass path,
+#zoom-out:focus #icon_zoom-out-lineart g#glass path {
   fill: #ffcd61;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s; }
 
-#zoom-out:active #icon_zoom-out-lineart g#handle path, #zoom-out:active #icon_zoom-out-lineart g#symbol line {
+#zoom-out:active #icon_zoom-out-lineart g#handle path,
+#zoom-out:active #icon_zoom-out-lineart g#symbol line {
   stroke: #808080;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -7073,18 +7113,18 @@ body {
   -o-transition: .3s;
   transition: .3s; }
 
-.facsimile--full #previous, .facsimile--full #next {
+.facsimile--full #next, .facsimile--full #previous {
   background-color: rgba(33, 33, 33, 0.4);
   height: 7rem;
   position: fixed !important;
   top: 48vh;
   width: 5rem; }
 
-.facsimile--full #previous {
-  left: 0; }
-
 .facsimile--full #next {
   right: 0; }
+
+.facsimile--full #previous {
+  left: 0; }
 
 .facsimile--full.grid--half #tools > span {
   /*	background-color: $black_transparent;
@@ -7095,10 +7135,10 @@ body {
 	padding: 0 .5rem;
 	width: 10rem;*/ }
 
-.facsimile--full.grid--half #tools a#previous,
 .facsimile--full.grid--half #tools a#next,
-.facsimile--full.grid--half #tools > span a#previous,
-.facsimile--full.grid--half #tools > span a#next {
+.facsimile--full.grid--half #tools a#previous,
+.facsimile--full.grid--half #tools > span a#next,
+.facsimile--full.grid--half #tools > span a#previous {
   display: none !important;
   /* important required for openseadragon override */ }
 
@@ -7118,12 +7158,14 @@ body {
     -webkit-transform-origin: 50% 50%;
     -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%; }
-  .facsimile--full #previous, .facsimile--full #next {
+  .facsimile--full #next,
+  .facsimile--full #previous {
     background-color: transparent;
     height: 4rem;
     top: calc(100vh - 8rem);
     width: 2rem; }
-    .facsimile--full #previous svg, .facsimile--full #next svg {
+    .facsimile--full #next svg,
+    .facsimile--full #previous svg {
       -webkit-transform: scale(0.5);
       -ms-transform: scale(0.5);
       transform: scale(0.5); } }
