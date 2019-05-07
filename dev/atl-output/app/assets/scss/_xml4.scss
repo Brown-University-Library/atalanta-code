@@ -349,7 +349,6 @@ main.emblem-page.frontmatter {
 		}
 		.translation .edition--facsimile h1.title br, 
 		.translation .edition--facsimile h3.title br {
-
 			display: none;
 		}
 		.translation h3.title, 
@@ -371,6 +370,10 @@ main.emblem-page.frontmatter {
 		.translation h1.title span.regularized {
 			color: $white;
 		}
+	}
+	section.section__motto .translation h1.title, 
+	section.section__motto .original h1.title {
+		font-family: $display-font;
 	}
 	.panel--right section.section__motto {
 		div.title, 
