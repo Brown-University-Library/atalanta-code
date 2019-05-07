@@ -80,7 +80,7 @@ main.home {
     width: 100%;
   }
   ul li a {
-  	color: $yellow;
+    color: $yellow;
     font-size: 1rem;
     letter-spacing: .125rem;
     line-height: 1.25rem;
@@ -89,7 +89,7 @@ main.home {
     padding-top: 1rem;
   }
   ul li a:hover {
-  	color: $yellow_bright;
+    color: $yellow_bright;
   }
   ul li a:focus {
     color: $yellow_bright;
@@ -136,7 +136,7 @@ main.home {
     padding: 0 5rem;
   }
   .intro-text a:hover {
-  	color: $white;
+    color: $white;
     transition: .3s;
     text-decoration: underline solid $white;
   }
