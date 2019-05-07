@@ -3873,7 +3873,8 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   position: fixed;
   top: 3.125rem;
   width: 100vw;
-  z-index: 1000; }
+  z-index: 1000;
+  display: none !important; }
   .search__modal button.x-close {
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;

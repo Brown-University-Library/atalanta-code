@@ -4,6 +4,7 @@ nav.digital-edition-nav {
 	padding-top: 1rem;
 	position: fixed;
 	top: $topnav-h;
+	width: 100%;
 	z-index: $thumbnailtrigger-z;
 	.owl-carousel {
 		background-color: $blue_light;

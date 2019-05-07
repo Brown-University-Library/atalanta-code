@@ -3,8 +3,9 @@
 ._collections {
 	background-color: $red;
 	bottom: 0;
+	display: block;
 	height: 20px;
 	position: fixed;
-	width: 100%;
+	width: 100vw;
 	z-index: $collections-z;
 }

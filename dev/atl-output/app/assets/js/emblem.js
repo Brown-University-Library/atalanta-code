@@ -49,6 +49,10 @@ $(function () {
 	var thumbnailNavTrigger = $('button.thumbnail-trigger'); // thumbnail nav drawer button
 	var centeredThumbnail = $('nav.digital-edition-nav .center'); // get the thumbnail element for the current page
 	var emblemNav = '.subnav-v3'; // emblem sub navigation
+	var hamburgerMenuBtn = 'nav.topnav button';
+	var hamburgerMenuBtnClosed = 'topnav__hamburger--closed';
+	var hamburgerMenuBtnOpen = 'topnav__hamburger--open';
+	var hamburgerMenu = '.topnav > ul';
 
 
 	// var thisEmblemPage = '.emblem-page';
@@ -119,19 +123,48 @@ $(window).on('load', function() {
 	}, 3000);
 	
 });
-if (matchMedia) {
-	const jsMediaQuery = window.matchMedia("screen and (min-width: 320px) and (max-width: 767px)");
-	jsMediaQuery.addListener(WidthChange); // detect when width of window changes
-	WidthChange(jsMediaQuery); // update emblem layout menu options on mobile
-}
+$(hamburgerMenuBtn).click(function() {
+	if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnClosed)) {
+		console.log("I AM OPENING THE HAMBURGER MENU");
+		$(hamburgerMenuBtn).removeClass('topnav__hamburger--closed');
+		$(hamburgerMenuBtn).addClass('topnav__hamburger--open');
+		$(hamburgerMenu).removeClass('topnav--slide-out');
+		$(hamburgerMenu).addClass('topnav--slide-in');
+	}
+	else if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnOpen)) {
+		console.log("I AM CLOSING THE HAMBURGER MENU");
+		$(hamburgerMenuBtn).removeClass('topnav__hamburger--open');
+		$(hamburgerMenuBtn).addClass('topnav__hamburger--closed');
+		$(hamburgerMenu).removeClass('topnav--slide-in');
+		$(hamburgerMenu).addClass('topnav--slide-out');
+	}
+	else {
+		console.log("THE HAMBURGER MENU HAS NO CLASS");
+	}
+});
+
+// $('.topnav__hamburger--closed').click(function() {
+// 	console.log("I OPENED THE HAMBURGER MENU");
+// 	$(hamburgerMenuBtn).addClass('topnav__hamburger--open');
+// 	$(hamburgerMenuBtn).removeClass('topnav__hamburger--closed');
+// 	$(hamburgerMenu).removeClass('topnav--slide-out');
+// 	$(hamburgerMenu).addClass('topnav--slide-in');
+// });
+// $('.topnav__hamburger--open').click(function() {
+// 	console.log("I CLOSED THE HAMBURGER MENU");
+// 	$(hamburgerMenuBtn).removeClass('topnav__hamburger--open');
+// 	$(hamburgerMenuBtn).addClass('topnav__hamburger--closed');
+// 	$(hamburgerMenu).removeClass('topnav--slide-in');
+// 	$(hamburgerMenu).addClass('topnav--slide-out');
+// });
 
 /* EVENTS */
-/* emblem layout menu */
+	/* layout menu */
 	$("#layout").selectmenu({
 	  change: function(event, ui) {},
 	  icons: { button: "custom-icon" }
 	});	
-	$("#layout").on( "selectmenuchange", function( event, ui ) {
+	$( "#layout" ).on( "selectmenuchange", function( event, ui ) {
 	  selectLayout(ui.item.value);
 	});
 	/* language menu */
