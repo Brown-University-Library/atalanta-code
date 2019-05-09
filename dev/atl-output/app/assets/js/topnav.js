@@ -14,12 +14,8 @@ $(function () {
 	var animationSearchSlideOut = 'search__modal--slide-out';
 	var xCloseBtn = 'button.x-close';
 	var xCloseBtnSVG = 'button.x-close > svg';
-	var searchURL = '../search/search.html?q='
+	var searchForm = '#ataSearch';
 	var searchQueryInput = 'input#search__bar__field';
-	var submitSearchBtn = '.search__modal button.submit';
-	var $documentElement = $('html, body');
-	var	$wrapper = $('.main');
-	var	scrollTop;
 
 /* EVENTS */
 	/* topnav mobile menu */
@@ -67,7 +63,7 @@ $(function () {
 	});
 	
 	/* submit on enter key */
-	$('#ataSearch').submit(function(event){
+	$(searchForm).submit(function(event){
 		searchModalClose();
 		event.preventDefault();
 	});
@@ -107,9 +103,4 @@ $(function () {
 	function searchTextClear() {
 		$(searchQueryInput).val('');
 	}
-	// function updateURLwithSearchQuery() {
-	// 	var searchInput = $(searchQueryInput).val();
-	// 	var searchQueryURL =  searchURL + searchInput; 
-	// 	window.open(searchQueryURL, '_self');
-	// }
 });
