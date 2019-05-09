@@ -1,6 +1,10 @@
 @import 'colors';
 @import 'utilities';
 
+body {
+	padding: 0; /* override notation css */
+}
+
 /* general styles */
 .section__music {
 	font-family: $body-font_emblem;

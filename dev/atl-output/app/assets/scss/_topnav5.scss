@@ -76,7 +76,7 @@ header[data-page-type='other'] {
 }
 
 .topnav {
-	background-color: $gray_dark;
+	background-color: $gray;
 	color: $gray_medium;
 	font-family: $display-font_secondary;
 	font-size: .75rem;
@@ -379,7 +379,7 @@ header[data-page-type='other'] {
 	.topnav li.topnav__logo, 
 	.topnav li.topnav__content,
 	.topnav li.topnav__search {
-		background-color: $gray_dark;
+		background-color: $gray;
 		height: auto;
 		width: 100vw;
 	}

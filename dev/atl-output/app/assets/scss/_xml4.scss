@@ -1,6 +1,12 @@
 @import 'colors';
 @import 'utilities';
 
+.is-hidden {
+	display: none !important;
+}
+/*.is-visible {
+  display: block !important;
+}*/
 @page {
 	margin-top: 0;
 }
