@@ -1337,6 +1337,8 @@ function scaleMusicPageElements(pageIndex) { // (CB) resize music page wrapper e
 
     let transportInterface = document.createElement('div');
     transportInterface.classList.add('transport'); // TODO: should not be a magic value
+ 
+    $('.transport').attr('id', 'my-transport');
     [playButton, pauseButton, muteButtonContainer].forEach(but => transportInterface.appendChild(but));
 
     // Popup button for modal
@@ -1443,7 +1445,8 @@ function scaleMusicPageElements(pageIndex) { // (CB) resize music page wrapper e
     
     $('.' + MAIN_CLASS_NAME).each(createMusicComponent);
   }
-  
+
+
   // MAIN, BEFORE PAGE LOAD
   
   function init() {
