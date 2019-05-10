@@ -1,7 +1,7 @@
 $(function () {
 /* VARIABLES */
 	var topNav = 'nav.topnav';
-	var hamburgerMenuBtn = 'nav.topnav button';
+	var hamburgerMenuBtn = 'nav.topnav > button';
 	var hamburgerMenuBtnClosed = 'topnav__hamburger--closed';
 	var hamburgerMenuBtnOpen = 'topnav__hamburger--open';
 	var hamburgerMenu = '.topnav > ul';
@@ -23,18 +23,20 @@ $(function () {
 	$(hamburgerMenuBtn).click(function() {
 		if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnClosed)) {
 			hamburgerMenuOpen();
+			searchModalClose();
 		}
 		else if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnOpen)) {
 			hamburgerMenuClose();
 		}
 		else {
-			console.log("THE HAMBURGER MENU HAS NO CLASS");
+			// console.log("THE HAMBURGER MENU HAS NO CLASS");
 		}
 	});
 
 	/* search topnav button */
 	$(topnavSearchBtn).click(function(event) {
 		if( $(topnavSearchBtn).hasClass(searchModalClosed) ) {
+			hamburgerMenuClose();
 			$(searchModal).addClass('search__modal--open');
 			searchTextClear();
 			setTimeout(searchModalOpen, 150);
@@ -43,7 +45,7 @@ $(function () {
 			searchModalClose();
 		}
 		else {
-			console.log("THE SEARCH BUTTON HAS NO STATE");
+			// console.log("THE SEARCH BUTTON HAS NO STATE");
 		}
 		event.preventDefault();
 	});
