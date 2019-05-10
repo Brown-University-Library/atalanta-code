@@ -3155,12 +3155,12 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   font-size: 1.2rem;
   height: auto;
   left: auto;
-  margin: 10px 35%;
+  margin: 10px 10%;
   overflow: auto;
   padding: 15px;
   text-align: center;
   top: 6.25rem;
-  width: 30%;
+  width: 80%;
   z-index: 999; }
 
 ._topnav[data-nav='contents'] .topnav__content ul li:nth-child(4) a {
