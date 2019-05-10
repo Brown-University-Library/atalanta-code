@@ -1,6 +1,4 @@
 /* Usual */
-@import url("https://use.typekit.net/utc2ige.css");
-
 @font-face {
     font-family: 'GTAmerica'; /* regular */
     src: url('../fonts/GT-America-Standard-Regular.eot');
@@ -30,7 +28,7 @@
     src: url('../fonts/GT-America-Standard-Medium-Italic.eot');
     src: url('../fonts/GT-America-Standard-Medium-Italic.eot?#iefix') format('embedded-opentype'),
          url('../fonts/GT-America-Standard-Medium-Italic.woff') format('woff');
-    font-weight: normal;
+    font-weight: bold;
     font-style: italic;
 }
 @font-face {
@@ -51,17 +49,17 @@
 }
 @font-face {
     font-family: 'GTSectraDisplayBold'; /* regular */
-    src: url('../fnts/GT-Sectra-Display-Bold.eot');
-    src: url('../fnts/GT-Sectra-Display-Bold.eot?#iefix') format('embedded-opentype'),
-         url('../fnts/GT-Sectra-Display-Bold.woff') format('woff');
+    src: url('../fonts/GT-Sectra-Display-Bold.eot');
+    src: url('../fonts/GT-Sectra-Display-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GT-Sectra-Display-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'GTSectraDisplayBold'; /* italic */
-    src: url('../fnts/GT-Sectra-Display-Bold-Italic.eot');
-    src: url('../fnts/GT-Sectra-Display-Bold-Italic.eot?#iefix') format('embedded-opentype'),
-         url('../fnts/GT-Sectra-Display-Bold-Italic.woff') format('woff');
+    src: url('../fonts/GT-Sectra-Display-Bold-Italic.eot');
+    src: url('../fonts/GT-Sectra-Display-Bold-Italic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GT-Sectra-Display-Bold-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }

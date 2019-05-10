@@ -1,6 +1,12 @@
 @import 'colors';
 @import 'utilities';
 
+.is-hidden {
+	display: none !important;
+}
+/*.is-visible {
+  display: block !important;
+}*/
 @page {
 	margin-top: 0;
 }
@@ -283,7 +289,7 @@ main.emblem-page.frontmatter {
 		white-space: nowrap;
 	}
 	.milestone {
-		color: $gray-medium;
+		color: $gray_medium;
 		margin: 0 .25rem;
 		white-space: nowrap;
 	}
