@@ -47,37 +47,37 @@
                 </form>
             </div>
         </div>
-<!-- EMBLEM NAVIGATION -->
-		<nav class="subnav-v3" aria-label="Digital Edition">
-			<form action="#">
-				<fieldset>
-					<label for="layout">Select a Layout</label>
-					<select name="layout" id="layout">
-						<option selected="selected" class="dropdown--layout" data-layout="active" value="compare">Comparative View</option>
-						<option class="dropdown--layout" data-layout="inactive" value="digital-edition">Digital Edition</option>
-						<option class="dropdown--layout" data-layout="inactive" value="zooming-image">Original</option>
-					</select>
-				</fieldset>
-			</form>
-			<form action="#">
-				<fieldset>
-					<label for="language">Select a Language</label>
-					<select name="language" id="language">
-						<option class="dropdown--language" data-language="inactive" value="english_original">Original English</option>
-						<option  selected="selected" class="dropdown--language" data-language="active" value="english_modern">Modernized English</option>
-						<option class="dropdown--language" data-language="inactive" value="latin_original">Original Latin</option>
-						<option class="dropdown--language" data-language="inactive" value="latin_normal">Normalized Latin</option>
-					</select>
-				</fieldset>
-			</form>
-		</nav>
 	</header>
 <!-- EMBLEM PAGE-->
 	<main id="emblem-data" class="emblem-page frontmatter" data-id="4">
+    <!-- EMBLEM NAVIGATION -->
+        <nav class="subnav-v3" aria-label="Digital Edition">
+            <form action="#">
+                <fieldset>
+                    <label for="layout">Select a Layout</label>
+                    <select name="layout" id="layout">
+                        <option selected="selected" class="dropdown--layout" data-layout="active" value="compare">Comparative View</option>
+                        <option class="dropdown--layout" data-layout="inactive" value="digital-edition">Digital Edition</option>
+                        <option class="dropdown--layout" data-layout="inactive" value="zooming-image">Original</option>
+                    </select>
+                </fieldset>
+            </form>
+            <form action="#">
+                <fieldset>
+                    <label for="language">Select a Language</label>
+                    <select name="language" id="language">
+                        <option class="dropdown--language" data-language="inactive" value="english_original">Original English</option>
+                        <option  selected="selected" class="dropdown--language" data-language="active" value="english_modern">Modernized English</option>
+                        <option class="dropdown--language" data-language="inactive" value="latin_original">Original Latin</option>
+                        <option class="dropdown--language" data-language="inactive" value="latin_normal">Normalized Latin</option>
+                    </select>
+                </fieldset>
+            </form>
+        </nav>
 <!-- EMBLEM GRID -->
 		<!-- Facsimile -->
-		<div aria-hidden="true" class="section__facsimile is-hidden">
-			<div class="facsimile--full">
+		<div aria-hidden="true" class="section__facsimile panel--left">
+			<div class="facsimile--full grid--half">
 				<section class="_facsimile">
 					<!-- https://openseadragon.github.io/docs/ -->
 					<section class="facsimile">
@@ -98,8 +98,8 @@
 				</section>
 			</div>
 		</div>
-		<div class="emblem">
-			<section class="section__preface section--single panel--right">
+		<div class="emblem panel--right">
+			<section class="section__preface section--single grid--full">
 				<div class="translation">
 					<div class="lang--english _preface--english edition--normalized" lang="en-US">
 						<div class="preface">
@@ -594,6 +594,8 @@
 			</section><!-- end emblem section -->
 		</div><!-- END EMBLEM -->
 	</main> <!-- END OF EMBLEM PAGE -->
+    <div class="_collections"></div>
+    <div class="_footer"></div>
 <!-- JS -->
     <script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -605,6 +607,7 @@
     <script src="../assets/js/lunr-languages/lunr.de.js"></script>
     <script src="../assets/js/search.js"></script>
     <script src="../assets/js/searchfunction.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="../assets/js/topnav.js"></script>
     <script src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
