@@ -164,7 +164,7 @@ $(hamburgerMenuBtn).click(function() {
 	  change: function(event, ui) {},
 	  icons: { button: "custom-icon" }
 	});	
-	$( "#layout" ).on( "selectmenuchange", function( event, ui ) {
+	$("#layout").on( "selectmenuchange", function( event, ui ) {
 	  selectLayout(ui.item.value);
 	});
 	/* language menu */

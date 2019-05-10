@@ -1,5 +1,6 @@
 $(function () {
 /* VARIABLES */
+	var topNav = 'nav.topnav';
 	var hamburgerMenuBtn = 'nav.topnav button';
 	var hamburgerMenuBtnClosed = 'topnav__hamburger--closed';
 	var hamburgerMenuBtnOpen = 'topnav__hamburger--open';
@@ -34,8 +35,9 @@ $(function () {
 	/* search topnav button */
 	$(topnavSearchBtn).click(function(event) {
 		if( $(topnavSearchBtn).hasClass(searchModalClosed) ) {
+			$(searchModal).addClass('search__modal--open');
 			searchTextClear();
-			searchModalOpen();
+			setTimeout(searchModalOpen, 150);
 		}
 		else if( $(topnavSearchBtn).hasClass(searchModalOpened) ) {
 			searchModalClose();
@@ -80,22 +82,34 @@ $(function () {
 		$(hamburgerMenuBtn).addClass(hamburgerMenuBtnOpen);
 		$(hamburgerMenu).removeClass(animationMenuSlideOut);
 		$(hamburgerMenu).addClass(animationMenuSlideIn);
-		searchModalClose();
+		// searchModalClose();
 	}
 	function searchModalClose() {
+		var topnavHeight = $(topNav).height();
+		var searchModalHeight = $(searchModal).height();
+		var searchModalPosition = searchModalHeight + topnavHeight;
+		searchModalPosition = -Math.abs(searchModalPosition);
+
 		$(topnavSearchBtn).removeClass(searchModalOpened);
 		$(topnavSearchBtn).addClass(searchModalClosed);
 		$(searchModal).attr('aria-hidden', 'true');
-		$(searchModal).addClass(animationSearchSlideOut);
-		$(searchModal).removeClass(animationSearchSlideIn);
+
+		TweenMax.to(searchModal, .2, {top: searchModalPosition, ease:Power2.easeOut});
+		setTimeout(function() { 
+			$(searchModal).removeClass('search__modal--open')
+		}, 300);
 		// $('body').removeClass('no-scroll');
 	}
 	function searchModalOpen() {
+		var topnavHeight = $(topNav).height();
+		var searchModalHeight = $(searchModal).height();
+
 		$(topnavSearchBtn).removeClass(searchModalClosed);
 		$(topnavSearchBtn).addClass(searchModalOpened);
 		$(searchModal).attr('aria-hidden', 'false');
-		$(searchModal).addClass(animationSearchSlideIn);
-		$(searchModal).removeClass(animationSearchSlideOut);
+		
+		TweenMax.to(searchModal, .4, {height: searchModalHeight, top: topnavHeight, ease:Power2.easeOutIn});
+		
 		$(searchQueryInput).focus();
 		// $('body').addClass('no-scroll');
 	}
