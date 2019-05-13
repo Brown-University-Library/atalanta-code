@@ -616,7 +616,7 @@
         )
 
         pageContainer.innerHTML = scaledPageSvgCode;
-        scaleMusicPageElements(pageIndex); // CB
+        scaleMusicPageElements(pageIndex); // (CB) call function to resize SVG music-pages containers to match height of SVG content
       });
 
 function scaleMusicPageElements(pageIndex) { // (CB) resize music page wrapper elements to match SVG heights
@@ -1269,8 +1269,8 @@ function scaleMusicPageElements(pageIndex) { // (CB) resize music page wrapper e
 
     playButton.classList.add('atalanta-notation-start'); // TODO: should not be a magic value
     pauseButton.classList.add('atalanta-notation-stop'); // TODO: should not be a magic value
-    playButton.innerHTML = '<div class="play-btn__icon"></div><div class="play-btn__label">Play</div>'; //CB create label for play button
-    pauseButton.innerHTML = '<div class="pause-btn__icon"></div><div class="pause-btn__label">Pause</div>'; //CB create label for pause button
+    playButton.innerHTML = '<div class="play-btn__icon"></div><div class="play-btn__label">Play</div>'; // (CB) create label for play button
+    pauseButton.innerHTML = '<div class="pause-btn__icon"></div><div class="pause-btn__label">Pause</div>'; // (CB) create label for pause button
 
     playButton.onclick = function () {
       model.play();
@@ -1302,13 +1302,13 @@ function scaleMusicPageElements(pageIndex) { // (CB) resize music page wrapper e
     let staffDefTxt, muteButtonTexts = [];
 
     while (staffDefTxt = voiceNameRE.exec(meiData)) {
-      muteButtonTexts.push(`Hear/mute ${staffDefTxt[2]}`); //CB change from "play" to "hear"
+      muteButtonTexts.push(`Hear/mute ${staffDefTxt[2]}`); // (CB) change from "play" to "hear"
     }
 
     let muteButtons = muteButtonTexts.map(muteButtonText => {
       let buttonElem = document.createElement('button');
       buttonElem.classList.add('atalanta-notation-mute-track'); // TODO: should not be a magic value
-      buttonElem.innerHTML = '<div class="mute-btn__icon"></div><div class="mute-btn__label">' + muteButtonText + '</div>'; //CB separate icon and label
+      buttonElem.innerHTML = '<div class="mute-btn__icon"></div><div class="mute-btn__label">' + muteButtonText + '</div>'; // (CB) separate icon and label
       return buttonElem;
     });
 

@@ -736,36 +736,40 @@
 	<script src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
 	<script src="../assets/js/notation.js"></script>
 	<script>
-	$(function () {
+	$(function () { // NEW STICKY CONTROLS, NEEDS WORK ON REVERSE SCROLL
+		let myMusic;
+		let myControls;
 		setTimeout(function() {
+			createScrollingScene();
+		}, 1500);
+		function createScrollingScene() {
 			console.log("I AM IN THE STICKY FUNCTION");
-				const myMusic = document.querySelector(".section__music");
-				const myControls = document.querySelector(".ata-music > .transport");
-				console.log(myMusic);
-				console.log(myControls);
-				const controller = new ScrollMagic.Controller();
-				const scene = new ScrollMagic.Scene({
+			myMusic = document.querySelector(".section__music");
+			myControls = document.querySelector(".ata-music > .transport");
+			// console.log(myMusic);
+			// console.log(myControls);
+			const controller = new ScrollMagic.Controller();
+			const scene = new ScrollMagic.Scene({
 				offset: -100,
 				triggerElement: myMusic,
 				triggerHook: 0,
-				duration: getDuration,
+				duration: getScrollingDuration(),
 				reverse: true
 			}).addTo(controller);
-				scene.on("start", function(e) {
-					console.log("this doesn't work");
-					$(myControls).addClass('is-stuck');
-				});
-				scene.on("leave", function(e) {
-					console.log("maybe this does work");
-					$(myControls).removeClass('is-stuck');
-				});
-
-				function getDuration() {
-					let myDuration = (myMusic.offsetHeight - myControls.offsetHeight) * 1.2;
-					console.log(myDuration + "is my duration");
-					return myDuration;
-				}
-		}, 1500);
+			scene.on("start", function(e) {
+				console.log("music controls are supposed to stay sticky when scrolling down");
+				$(myControls).addClass('is-stuck');
+			});
+			scene.on("leave", function(e) {
+				console.log("music controls are supposed to unstick when scrolling to the end of the notation");
+				$(myControls).removeClass('is-stuck');
+			});
+		}
+		function getScrollingDuration() {
+			let myDuration = (myMusic.offsetHeight - myControls.offsetHeight) * 1.2;
+			console.log(myDuration + " is my sticky scrolling duration / approx. px height of the music-page notation SVG");
+			return myDuration;
+		}
 	});
 	</script>
 </body>
