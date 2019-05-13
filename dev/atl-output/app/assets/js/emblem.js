@@ -19,8 +19,8 @@ $(function () {
 	var languageGerman = '.lang--german';
 	var languageLatinOriginal = '.lang--latin.edition--original';
 	var languageLatinRegularized = '.lang--latin.edition--regularized';
-	var singleTranslation = '.section--single > div.translation';
-	var singleOriginal = '.section--single > div.original';
+	var textTranslation = 'section > div.translation';
+	var textOriginal = 'section > div.original';
 	/* emblem containers */
 	var containerFacsimile = '.section__facsimile';
 	var containerEmblem = '.emblem';
@@ -387,12 +387,12 @@ $(hamburgerMenuBtn).click(function() {
 	}
 	/* text original/translation switches */
 	function showOriginalLanguage() {
-		$(singleOriginal).removeClass('is-hidden'); // display Latin/German text block
-		$(singleTranslation).addClass('is-hidden'); // hide English text block
+		$(textOriginal).removeClass('is-hidden'); // display Latin/German text block
+		$(textTranslation).addClass('is-hidden'); // hide English text block
 	}
 	function showTranslation() {
-		$(singleTranslation).removeClass('is-hidden'); // display English text block
-		$(singleOriginal).addClass('is-hidden'); // hide Latin/German text block
+		$(textTranslation).removeClass('is-hidden'); // display English text block
+		$(textOriginal).addClass('is-hidden'); // hide Latin/German text block
 	}
 	/* emblem subnav */
 	function subnavHide() {
