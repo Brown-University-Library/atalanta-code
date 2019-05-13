@@ -4442,8 +4442,293 @@ nav.digital-edition-nav.de-nav--open {
   nav.digital-edition-nav .owl-item .thumbnail__label {
     width: 120px; } }
 
-/*@import 'atalanta-proof-eng';
-@import 'atalanta-proof-lat2';*/
+.emblem-page {
+  /*
+     * CSS for Transcription of English translation of Atalanta. Designed mostly for proofreading.
+     * Almost all elements are styled, but often so that they can be proofread.
+     *
+     * HISTORY
+     * EM initial styling 2017-03-31
+     * EM work on improving styling for proofreading 2017-07-06
+     * EM styling improvements based on Donna's comments 2018-01-12
+     *     * remove vertical spaces before and after verses inside discourses
+     *     * observe italics in spans
+     *     * make title page resemble pages more (center title, try for some vertical space)
+     */
+  /*  hiding own title. only show what's on the page */
+  /*  .reg:before {
+          content: "|";
+      }*/
+  /*.subst {
+        background-color: #eeeeee;
+      }*/
+  /*.supplied:before{
+        content: "<";
+        color: #8E8E38;
+    }
+
+    .supplied:after{
+        content: ">";
+        color: #8E8E38;
+    }*/
+  /*span.underline{
+        text-decoration: underline;
+    }
+
+    span.underline2{
+        border-bottom: 2px grey solid;
+    }*/ }
+
+@page {
+  .emblem-page {
+    margin-top: 1in; } }
+  .emblem-page body {
+    width: 75%;
+    margin-left: .75in;
+    margin-right: .75in;
+    line-height: 175%;
+    font-family: "Garamond", "Georgia", serif; }
+  .emblem-page .epigram {
+    margin-top: 100px;
+    text-align: center; }
+  .emblem-page h1 {
+    font-style: italic; }
+  .emblem-page h3 {
+    margin-top: 100px;
+    text-align: center;
+    font-style: italic; }
+  .emblem-page h3.discourse {
+    text-align: center;
+    font-style: italic; }
+  .emblem-page .verse-epigram {
+    margin-top: -30px;
+    text-align: left;
+    margin-left: 33%; }
+  .emblem-page .verse-discourse {
+    margin-top: -30px;
+    margin-left: 10%;
+    /*margin-bottom: -30px;*/ }
+  .emblem-page .verse-discourse no-space {
+    /* this verse starts immediately on same line - no break */ }
+  .emblem-page .ab {
+    /* margin-top: -40px; */ }
+  .emblem-page h2 {
+    display: none;
+    color: #b5b5b5; }
+  .emblem-page .pb {
+    text-align: left;
+    color: #b5b5b5;
+    margin-top: 50px; }
+  .emblem-page .pb:before {
+    content: "[ Page: ";
+    color: #b5b5b5; }
+  .emblem-page .pb:after {
+    content: " ]";
+    color: #b5b5b5; }
+  .emblem-page .milestone {
+    font-style: italic;
+    color: grey; }
+  .emblem-page .milestone:before {
+    content: " [§ "; }
+  .emblem-page .milestone:after {
+    content: "] "; }
+  .emblem-page .choice {
+    background-color: #eeeeee;
+    margin-left: 2px; }
+  .emblem-page .regularized {
+    color: #009acd; }
+  .emblem-page .del {
+    text-decoration: line-through; }
+  .emblem-page .add:before {
+    content: "<";
+    /*color: #8E8E38;*/ }
+  .emblem-page .add:after {
+    content: ">";
+    /*color: #8E8E38;*/ }
+  .emblem-page .unclear:before {
+    content: "[ "; }
+  .emblem-page .unclear:after {
+    content: "]"; }
+  .emblem-page .supplied {
+    display: none; }
+  .emblem-page span.superscript {
+    vertical-align: super;
+    font-size: smaller; }
+  .emblem-page span.indent {
+    text-indent: 30%; }
+  .emblem-page span.italic {
+    font-style: italic; }
+  .emblem-page .fw {
+    font-style: italic;
+    display: block;
+    text-align: center; }
+  .emblem-page .margin-note {
+    float: right;
+    margin-left: 20px;
+    outline: .5px solid #b5b5b5;
+    top: auto;
+    /* default */
+    width: 175px;
+    padding-left: 10px; }
+  .emblem-page .note-mark {
+    color: #C67171;
+    font-weight: bold;
+    vertical-align: super;
+    text-decoration: none; }
+  .emblem-page .bottom-note {
+    outline: .5px solid #b5b5b5;
+    text-align: right;
+    font-style: normal;
+    font-size: smaller;
+    /* need to get the box to be only around the text. It's right aligned. */ }
+  .emblem-page .help {
+    color: red; }
+
+.emblem-page {
+  /*
+     * CSS for Transcription of English translation of Atalanta. Designed mostly for proofreading.
+     * Almost all elements are styled, but often so that they can be proofread.
+     *
+     * HISTORY
+     * EM initial styling 2017-03-31
+     * EM work on improving styling for proofreading 2017-07-06
+     * EM styling improvements based on Donna's comments 2018-01-12
+     *     * remove vertical spaces before and after verses inside discourses
+     *     * observe italics in spans
+     *     * make title page resemble pages more (center title, try for some vertical space)
+     */
+  /*  hiding own title. only show what's on the page */ }
+
+@page {
+  .emblem-page {
+    margin-top: 1in; } }
+  .emblem-page body {
+    width: 75%;
+    margin-left: .75in;
+    margin-right: .75in;
+    line-height: 175%;
+    font-family: "Garamond", "Georgia", serif; }
+  .emblem-page .epigram {
+    text-align: left;
+    text-indent: 20%; }
+  .emblem-page .verse-epigram {
+    margin-top: -30px;
+    margin-left: 10%;
+    margin-bottom: -30px; }
+  .emblem-page .verse-epigram-italic {
+    margin-top: -30px;
+    margin-left: 10%;
+    margin-bottom: -30px;
+    font-style: oblique; }
+  .emblem-page verse-discourse {
+    margin-top: -30px;
+    margin-left: 10%;
+    margin-bottom: -30px; }
+  .emblem-page span.v-line-indent, .emblem-page span.v-line {
+    display: block;
+    margin-left: 5%;
+    line-height: 100%; }
+  .emblem-page span.v-line-indent {
+    margin-left: 10%; }
+  .emblem-page span.v-line-discourse {
+    margin-left: 5%; }
+  .emblem-page h2 {
+    display: none;
+    color: #b5b5b5; }
+  .emblem-page h1.title {
+    text-align: center; }
+  .emblem-page h3.title, .emblem-page epigram {
+    font-style: oblique; }
+  .emblem-page .pb {
+    text-align: left; }
+  .emblem-page .pb:before {
+    content: "––– Page: "; }
+  .emblem-page .pb:after {
+    content: " –––"; }
+  .emblem-page .milestone {
+    font-style: italic;
+    color: grey; }
+  .emblem-page .milestone:before {
+    content: " [§ "; }
+  .emblem-page .milestone:after {
+    content: "] "; }
+  .emblem-page .choice {
+    background-color: #eeeeee;
+    margin-left: 2px; }
+  .emblem-page .regularized {
+    color: #009acd; }
+  .emblem-page .div-center {
+    text-align: center; }
+  .emblem-page .div-left {
+    text-align: left;
+    margin-left: 3em;
+    text-indent: 1em; }
+  .emblem-page .subst {
+    background-color: #eeeeee;
+    margin-left: 2px; }
+  .emblem-page .del {
+    text-decoration: line-through; }
+  .emblem-page .add:before {
+    content: "<";
+    color: #8E8E38; }
+  .emblem-page .add:after {
+    content: ">";
+    color: #8E8E38; }
+  .emblem-page .unclear:before {
+    content: "[? "; }
+  .emblem-page .unclear:after {
+    content: "]"; }
+  .emblem-page .supplied {
+    display: none; }
+  .emblem-page .supplied:before {
+    content: "<";
+    color: #8E8E38; }
+  .emblem-page .supplied:after {
+    content: ">";
+    color: #8E8E38; }
+  .emblem-page span.superscript {
+    vertical-align: super;
+    font-size: smaller; }
+  .emblem-page span.underline {
+    text-decoration: underline; }
+  .emblem-page span.smaller {
+    font-size: smaller; }
+  .emblem-page span.underline2 {
+    border-bottom: 2px grey solid; }
+  .emblem-page .italic {
+    font-style: italic; }
+  .emblem-page span.quote {
+    font-style: italic; }
+  .emblem-page span.gothic {
+    font-weight: bold; }
+  .emblem-page span.roman {
+    font-style: normal; }
+  .emblem-page span.smallCaps, .emblem-page hi.smallCaps {
+    font-variant: small-caps; }
+  .emblem-page span.caps-latin {
+    text-transform: uppercase;
+    font-style: normal; }
+  .emblem-page span.raised {
+    vertical-align: super; }
+  .emblem-page .fw {
+    font-style: italic;
+    display: block; }
+  .emblem-page .margin-note {
+    float: right;
+    margin-left: 20px;
+    outline: .5px solid #b5b5b5;
+    top: auto;
+    /* default */
+    width: 175px;
+    padding-left: 10px;
+    font-style: italic; }
+  .emblem-page .note-mark {
+    color: #C67171;
+    font-weight: bold;
+    vertical-align: super; }
+  .emblem-page .help {
+    color: red; }
+
 .is-hidden {
   display: none !important; }
 
