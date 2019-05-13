@@ -4139,7 +4139,7 @@ main.emblem-page {
   margin-top: 3.125rem;
   /*padding-top: $subnav-h;*/ }
 
-.frontmatter section.facsimile, .frontmatter section._facsimile {
+.frontmatter section.facsimile, .frontmatter div._facsimile {
   padding: 0; }
 
 .facsimile--full {
@@ -4324,7 +4324,7 @@ nav.digital-edition-nav {
 		.thumbnail-trigger__icon {
 			filter: hue-rotate(200deg);
 		}*/ }
-  nav.digital-edition-nav .thumbnail-trigger > div {
+  nav.digital-edition-nav .thumbnail-trigger > span {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -4373,7 +4373,7 @@ nav.digital-edition-nav.de-nav--open {
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s; }
-  nav.digital-edition-nav.de-nav--open .thumbnail-trigger > div {
+  nav.digital-edition-nav.de-nav--open .thumbnail-trigger > span {
     -webkit-transform: translate3d(4px, -32px, 0);
     transform: translate3d(4px, -32px, 0);
     -webkit-transition: .2s;
@@ -4410,7 +4410,7 @@ nav.digital-edition-nav.de-nav--open {
     border-right: 30px solid transparent;
     left: calc(-50% + 3.25rem);
     width: 6.5rem; }
-  nav.digital-edition-nav .thumbnail-trigger > div {
+  nav.digital-edition-nav .thumbnail-trigger > span {
     font-size: .75rem; }
   nav.digital-edition-nav.de-nav--closed button.thumbnail-trigger {
     /*outline: 1px solid red;*/
