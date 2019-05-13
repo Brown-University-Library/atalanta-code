@@ -1,25 +1,23 @@
-@import 'colors';
-
-.is-active {
-	background-color: $orange-yellow_brighter !important;
-	a {
-		color: $black !important;
-	}
-}
-.is-hidden {
-	display: none !important;
-}
-.is-selected {
-	border-bottom: 3px solid $royal-blue;
-}
-.is-sticky {
-	position: fixed;
-}
-
 $topnav-h: 3.125rem;
-$subnav-h: 4.5rem;
-$emblemnav-h: 7.625rem;
+$subnav-h: 3.125rem;
+$emblemnav-h: 6.25rem;
+$lessemblemnav-h: calc(100vh - 6.25rem);
+$imagesearchcatnav-h: 2.5rem;
+$imagesearchnav-h: 5.625rem;
 
+$collections-z: 10000000;
+$footer-z: 1000000;
+$topnav-z: 100000;
+$drawer-z: 10000;
+$searchbar-z: 1000;
+$openseadragontools-z: 1000;
+$thumbnailtrigger-z: 150;
+$subnav-z: 100;
+$thumbnailnav-z: 50;
+
+$body-font: 'GTAmerica', 'Avenir', Helvetica, Arial, sans-serif;
 $body-font_emblem: 'GTAmerica', 'Avenir', Helvetica, Arial, sans-serif;
+$display-font: 'GTSectraDisplayBold', Garamond, Georgia, serif;
+$display-font_secondary: 'GTAmericaBold', 'Avenir', Helvetica, Arial, sans-serif;
 $display-font_emblem: 'GTAmerica', 'Usual', Helvetica, Arial, sans-serif;
-$secondary-display-font_emblem: 'GT Sectra', Garamond, Georgia, serif;
+$secondary-display-font_emblem: 'GTSectraDisplayBold', Garamond, Georgia, serif;

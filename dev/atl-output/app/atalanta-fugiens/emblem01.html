@@ -11,7 +11,6 @@
 	<link type="text/css" rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link type="text/css" rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 <!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
-<!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/js/vendors/lightslider/dist/css/lightslider.css"> -->
 </head>
 <body class="emblem-body">
 <!-- GLOBAL NAVIGATION -->
@@ -487,17 +486,17 @@
 			<div class="my-offset-debug"></div>
 			<section id="basic-waypoint__2" class="section__music grid--full">
 				<div class="_music music--full">
-				    <div class="ata-music" data-mei="../data/mei/Fuga 06.xml">
-				      <div aria-label="musical notation in three voices" class="ata-viz-cmn"></div>
-		      			<div class="ata-viz-audio" data-tempo="56">
-				            <div class="ata-audio-track" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
-				                data-mp3="../assets/audio/06-P-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-P-56bpm-Reverb.mp3"></div>
-				            <div class="ata-audio-track" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
-				                data-mp3="../assets/audio/06-A-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-A-56bpm-Reverb.mp3"></div>
-				            <div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
-				                data-mp3="../assets/audio/06-H-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/06-H-56bpm-Reverb.mp3"></div>
-				      	</div>
-				    	<div class="ata-viz-pianoroll modal"></div>
+				    <div class="ata-music" data-mei="../data/mei/Fuga 01.xml">
+						<div aria-label="musical notation in three voices" class="ata-viz-cmn"></div>
+						<div class="ata-viz-audio" data-tempo="56">
+							<div class="ata-audio-track" data-pan="-.5" data-gain="1" data-reverb-gain="0.6" 
+							    data-mp3="../assets/audio/01-A-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/01-A-56bpm-Reverb.mp3"></div>
+							<div class="ata-audio-track" data-pan="0"   data-gain="1" data-reverb-gain="0.6"  
+							    data-mp3="../assets/audio/01-H-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/01-H-56bpm-Reverb.mp3"></div>
+							<div class="ata-audio-track" data-pan=".5"  data-gain="1" data-reverb-gain="0.6"  
+							    data-mp3="../assets/audio/01-P-56bpm-Dry.mp3" data-reverb-mp3="../assets/audio/01-P-56bpm-Reverb.mp3"></div>
+						</div>
+						<div class="ata-viz-pianoroll modal"></div>
 				    </div>
     			</div>
 			</section>
@@ -721,7 +720,10 @@
     <script src="../assets/js/lunr-languages/lunr.de.js"></script>
     <script src="../assets/js/search.js"></script>
     <script src="../assets/js/searchfunction.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 	<script src="../assets/js/topnav.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
 	<script src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
 	<script src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
 	<script src="../assets/js/vendors/waypoints/lib/shortcuts/sticky.min.js"></script>
@@ -733,5 +735,38 @@
 	<script src="../assets/js/emblem.js"></script>
 	<script src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
 	<script src="../assets/js/notation.js"></script>
+	<script>
+	$(function () {
+		setTimeout(function() {
+			console.log("I AM IN THE STICKY FUNCTION");
+				const myMusic = document.querySelector(".section__music");
+				const myControls = document.querySelector(".ata-music > .transport");
+				console.log(myMusic);
+				console.log(myControls);
+				const controller = new ScrollMagic.Controller();
+				const scene = new ScrollMagic.Scene({
+				offset: -100,
+				triggerElement: myMusic,
+				triggerHook: 0,
+				duration: getDuration,
+				reverse: true
+			}).addTo(controller);
+				scene.on("start", function(e) {
+					console.log("this doesn't work");
+					$(myControls).addClass('is-stuck');
+				});
+				scene.on("leave", function(e) {
+					console.log("maybe this does work");
+					$(myControls).removeClass('is-stuck');
+				});
+
+				function getDuration() {
+					let myDuration = (myMusic.offsetHeight - myControls.offsetHeight) * 1.2;
+					console.log(myDuration + "is my duration");
+					return myDuration;
+				}
+		}, 1500);
+	});
+	</script>
 </body>
 </html>
