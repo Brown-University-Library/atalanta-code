@@ -10,10 +10,10 @@ $(function () {
 	var layoutDigitalEditionBtn = 'option.dropdown--layout:nth-of-type(2)';
 	var layoutBookBtn = 'option.dropdown--layout:nth-of-type(3)';
 	/* emblem languages */
-	var fullEnglishText = '.section--single .lang--english';
-	var fullGermanText = '.section--single .lang--german';
-	var fullLatinDiscourse = '.section--single .lang--latin._discourse--latin';
-	var fullLatinText = '.section--single .lang--latin';
+	var fullEnglishText = '.lang--english';
+	var fullGermanText = '.lang--german';
+	var fullLatinDiscourse = '.lang--latin._discourse--latin';
+	var fullLatinText = '.lang--latin';
 	var languageEnglishNormalized = '.lang--english.edition--normalized';
 	var languageEnglishOriginal = '.lang--english.edition--original';
 	var languageGerman = '.lang--german';
