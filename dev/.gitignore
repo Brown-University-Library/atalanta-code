@@ -17,6 +17,7 @@ atl-demo-site
 
 # atalanta-search #
 ###################
+jake-search
 atl-output/app/assets/js/faceting.js
 atl-output/app/assets/js/facets.js
 atl-output/app/assets/js/navbar.pug
