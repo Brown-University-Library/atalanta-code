@@ -4180,6 +4180,10 @@ main.emblem-page {
     margin-top: 0;
     margin-bottom: 3.125rem; } }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .emblem__image--cropped {
+    width: 100%; } }
+
 nav.digital-edition-nav {
   background-color: #dae4ec;
   height: 10rem;
@@ -4849,17 +4853,44 @@ main.emblem-page.frontmatter {
     /*	background-color: $error;*/
     grid-area: 1 / 3 / 3 / 4;
     margin-left: .5rem; }
+  main.emblem-page .subst,
+  main.emblem-page.frontmatter .subst {
+    background: transparent;
+    /* which css file is this from??? */ }
 
 main.emblem-page,
 main.emblem-page.frontmatter {
   /*********** ENGLISH EMBLEM OVERRIDES *************/
+  /*	h1.title {
+		text-align: left;
+	}
+	h3.title {
+	    margin-top: 0;
+	    text-align: left;
+	}*/
   /********************************/
   /*********** END OF ENGLISH EMBLEM OVERRIDES *************/ }
-  main.emblem-page .italic,
-  main.emblem-page.frontmatter .italic {
-    font-style: oblique; }
+
+@page {
+  main.emblem-page,
+  main.emblem-page.frontmatter {
+    margin-top: 0; } }
+  main.emblem-page body,
+  main.emblem-page.frontmatter body {
+    width: auto;
+    margin: 0;
+    line-height: 1.2;
+    font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif; }
   main.emblem-page .epigram,
   main.emblem-page.frontmatter .epigram {
+    margin-top: 0;
+    text-align: left;
+    /*font-style: normal;*/ }
+  main.emblem-page h1,
+  main.emblem-page.frontmatter h1 {
+    font-style: normal; }
+  main.emblem-page h3,
+  main.emblem-page.frontmatter h3 {
     margin-top: 0;
     text-align: left;
     font-style: normal; }
@@ -4872,28 +4903,19 @@ main.emblem-page.frontmatter {
     margin-top: 0;
     text-align: left;
     margin-left: 0;
-    font-style: normal; }
+    /*font-style: normal;*/ }
   main.emblem-page .verse-discourse,
   main.emblem-page.frontmatter .verse-discourse {
     margin-top: 0;
     margin-left: 0;
-    margin-bottom: 0; }
+    /*	    margin-bottom: 0;*/ }
   main.emblem-page h2,
   main.emblem-page.frontmatter h2 {
-    /*    display: none;
-	    color: #b5b5b5;*/
-    color: green; }
-  main.emblem-page h1.title,
-  main.emblem-page.frontmatter h1.title {
-    text-align: left; }
-  main.emblem-page h3.title,
-  main.emblem-page.frontmatter h3.title {
-    margin-top: 0;
-    text-align: left; }
+    color: rgba(242, 188, 176, 0.4); }
   main.emblem-page .pb,
   main.emblem-page.frontmatter .pb {
+    background: rgba(242, 188, 176, 0.4);
     color: #222;
-    display: none;
     margin-top: 0; }
   main.emblem-page .pb:before,
   main.emblem-page.frontmatter .pb:before {
@@ -4910,11 +4932,7 @@ main.emblem-page.frontmatter {
     margin-left: 0; }
   main.emblem-page span.regularized,
   main.emblem-page.frontmatter span.regularized {
-    color: #222; }
-  main.emblem-page .subst,
-  main.emblem-page.frontmatter .subst {
-    background-color: transparent;
-    margin-left: 0; }
+    color: #4d4d4d; }
   main.emblem-page .del,
   main.emblem-page.frontmatter .del {
     text-decoration: none; }
@@ -4930,9 +4948,22 @@ main.emblem-page.frontmatter {
   main.emblem-page .unclear:after,
   main.emblem-page.frontmatter .unclear:after {
     display: none; }
+  main.emblem-page .note-mark,
+  main.emblem-page span.superscript,
+  main.emblem-page.frontmatter .note-mark,
+  main.emblem-page.frontmatter span.superscript {
+    color: #4d4d4d;
+    position: relative;
+    top: -.4em;
+    vertical-align: baseline; }
+  main.emblem-page span.italic,
+  main.emblem-page.frontmatter span.italic {
+    font-style: oblique; }
   main.emblem-page .fw,
   main.emblem-page.frontmatter .fw {
-    display: none; }
+    /* what is this ??? */
+    /*display: none;*/
+    background: rgba(242, 188, 176, 0.4); }
   main.emblem-page .margin-note,
   main.emblem-page.frontmatter .margin-note {
     float: none;
@@ -4940,13 +4971,11 @@ main.emblem-page.frontmatter {
     outline: none;
     width: auto;
     padding-left: 0; }
-  main.emblem-page .note-mark,
-  main.emblem-page span.superscript,
-  main.emblem-page.frontmatter .note-mark,
-  main.emblem-page.frontmatter span.superscript {
-    /*color: $text_body;*/
-    position: relative;
-    top: -.4em;
+  main.emblem-page .bottom-note,
+  main.emblem-page.frontmatter .bottom-note {
+    /* what is this ??? */
+    background: rgba(242, 188, 176, 0.4);
+    outline: none;
     vertical-align: baseline; }
   main.emblem-page .help,
   main.emblem-page.frontmatter .help {
@@ -5047,43 +5076,65 @@ main.emblem-page.frontmatter {
     grid-template-rows: 1fr; }
 
 /* MOTTO - ENGLISH/LATIN/GERMAN */
-main.emblem-page section.section__motto div.title,
+main.emblem-page section.section__motto .pb,
+main.emblem-page.frontmatter section.section__motto .pb {
+  display: none; }
+
+main.emblem-page section.section__motto div.lang--english > div.title,
+main.emblem-page.frontmatter section.section__motto div.lang--english > div.title {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-area: 1 / 1 / 2 / 13; }
+
+main.emblem-page section.section__motto div.lang--english > div.title > div.title,
 main.emblem-page section.section__motto div.fugue,
 main.emblem-page section.section__motto ._motto--latin div.image,
-main.emblem-page.frontmatter section.section__motto div.title,
+main.emblem-page.frontmatter section.section__motto div.lang--english > div.title > div.title,
 main.emblem-page.frontmatter section.section__motto div.fugue,
 main.emblem-page.frontmatter section.section__motto ._motto--latin div.image {
   grid-column: 4 / 10; }
 
+main.emblem-page section.section__motto .translation h1,
 main.emblem-page section.section__motto .translation h1.title,
 main.emblem-page section.section__motto .original h1.title,
+main.emblem-page.frontmatter section.section__motto .translation h1,
 main.emblem-page.frontmatter section.section__motto .translation h1.title,
 main.emblem-page.frontmatter section.section__motto .original h1.title {
   font-family: "GTAmerica", "Usual", Helvetica, Arial, sans-serif;
-  /*font-family: $display-font;*/
   font-size: 2.625rem;
   font-weight: 600;
   line-height: 3.25rem;
   text-align: center; }
 
+main.emblem-page section.section__motto .translation h1 br,
 main.emblem-page section.section__motto .translation h1.title br,
 main.emblem-page section.section__motto .original h1.title br,
+main.emblem-page section.section__motto .translation h3 br,
 main.emblem-page section.section__motto .translation h3.title br,
 main.emblem-page section.section__motto .original h3.title br,
+main.emblem-page.frontmatter section.section__motto .translation h1 br,
 main.emblem-page.frontmatter section.section__motto .translation h1.title br,
 main.emblem-page.frontmatter section.section__motto .original h1.title br,
+main.emblem-page.frontmatter section.section__motto .translation h3 br,
 main.emblem-page.frontmatter section.section__motto .translation h3.title br,
 main.emblem-page.frontmatter section.section__motto .original h3.title br {
   display: none; }
 
+main.emblem-page section.section__motto .translation .edition--facsimile h1 br,
 main.emblem-page section.section__motto .translation .edition--facsimile h1.title br,
-main.emblem-page section.section__motto .translation .edition--facsimile h3.title br,
+main.emblem-page section.section__motto .translation .edition--facsimile h3 br
+.translation .edition--facsimile h3.title br,
+main.emblem-page.frontmatter section.section__motto .translation .edition--facsimile h1 br,
 main.emblem-page.frontmatter section.section__motto .translation .edition--facsimile h1.title br,
-main.emblem-page.frontmatter section.section__motto .translation .edition--facsimile h3.title br {
+main.emblem-page.frontmatter section.section__motto .translation .edition--facsimile h3 br
+.translation .edition--facsimile h3.title br {
   display: none; }
 
+main.emblem-page section.section__motto .translation h3,
 main.emblem-page section.section__motto .translation h3.title,
 main.emblem-page section.section__motto .original h3.title,
+main.emblem-page.frontmatter section.section__motto .translation h3,
 main.emblem-page.frontmatter section.section__motto .translation h3.title,
 main.emblem-page.frontmatter section.section__motto .original h3.title {
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
@@ -5092,50 +5143,79 @@ main.emblem-page.frontmatter section.section__motto .original h3.title {
   line-height: 1.5rem;
   text-align: center; }
 
+main.emblem-page section.section__motto .translation h3,
+main.emblem-page section.section__motto .translation h3.title,
+main.emblem-page.frontmatter section.section__motto .translation h3,
+main.emblem-page.frontmatter section.section__motto .translation h3.title {
+  font-style: oblique; }
+
 main.emblem-page section.section__motto .original .fugue.de h3.title,
 main.emblem-page.frontmatter section.section__motto .original .fugue.de h3.title {
   visibility: hidden; }
 
+main.emblem-page section.section__motto .translation h3 .italics,
 main.emblem-page section.section__motto .translation h3.title .italics,
 main.emblem-page section.section__motto .original h3.title .italics,
+main.emblem-page.frontmatter section.section__motto .translation h3 .italics,
 main.emblem-page.frontmatter section.section__motto .translation h3.title .italics,
 main.emblem-page.frontmatter section.section__motto .original h3.title .italics {
+  /* does this still exist??? */
   font-style: oblique; }
 
+main.emblem-page section.section__motto .translation h3 span.regularized,
 main.emblem-page section.section__motto .translation h3.title span.regularized,
+main.emblem-page section.section__motto .original h3.title span.regularized,
+main.emblem-page section.section__motto .translation h1 span.regularized,
 main.emblem-page section.section__motto .translation h1.title span.regularized,
+main.emblem-page section.section__motto .original h1.title span.regularized,
+main.emblem-page.frontmatter section.section__motto .translation h3 span.regularized,
 main.emblem-page.frontmatter section.section__motto .translation h3.title span.regularized,
-main.emblem-page.frontmatter section.section__motto .translation h1.title span.regularized {
+main.emblem-page.frontmatter section.section__motto .original h3.title span.regularized,
+main.emblem-page.frontmatter section.section__motto .translation h1 span.regularized,
+main.emblem-page.frontmatter section.section__motto .translation h1.title span.regularized,
+main.emblem-page.frontmatter section.section__motto .original h1.title span.regularized {
   color: white; }
 
+main.emblem-page section.section__motto .translation h1,
 main.emblem-page section.section__motto .translation h1.title,
 main.emblem-page section.section__motto .original h1.title,
+main.emblem-page.frontmatter section.section__motto .translation h1,
 main.emblem-page.frontmatter section.section__motto .translation h1.title,
 main.emblem-page.frontmatter section.section__motto .original h1.title {
   font-family: "GTSectraDisplayBold", Garamond, Georgia, serif; }
 
-main.emblem-page .panel--right section.section__motto div.title,
+main.emblem-page .panel--right section.section__motto div.lang--english > div.title > div.title,
 main.emblem-page .panel--right section.section__motto div.fugue,
 main.emblem-page .panel--right section.section__motto ._motto--latin div.image,
-main.emblem-page.frontmatter .panel--right section.section__motto div.title,
+main.emblem-page.frontmatter .panel--right section.section__motto div.lang--english > div.title > div.title,
 main.emblem-page.frontmatter .panel--right section.section__motto div.fugue,
 main.emblem-page.frontmatter .panel--right section.section__motto ._motto--latin div.image {
-  grid-area: 1 / 2 / 2 / 12;
+  grid-column: 2 / 12;
+  grid-row: 1 / 2;
   margin-top: 1rem; }
 
+main.emblem-page .panel--right section.section__motto .translation h1,
 main.emblem-page .panel--right section.section__motto .translation h1.title,
 main.emblem-page .panel--right section.section__motto .original h1.title,
+main.emblem-page.frontmatter .panel--right section.section__motto .translation h1,
 main.emblem-page.frontmatter .panel--right section.section__motto .translation h1.title,
 main.emblem-page.frontmatter .panel--right section.section__motto .original h1.title {
-  /*font-family: $display-font_emblem;*/
   font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
   font-size: 2rem;
   line-height: 2.5rem; }
 
+main.emblem-page .panel--right section.section__motto .translation h3 span.regularized,
 main.emblem-page .panel--right section.section__motto .translation h3.title span.regularized,
+main.emblem-page .panel--right section.section__motto .original h3.title span.regularized,
+main.emblem-page .panel--right section.section__motto .translation h1 span.regularized,
 main.emblem-page .panel--right section.section__motto .translation h1.title span.regularized,
+main.emblem-page .panel--right section.section__motto .original h1.title span.regularized,
+main.emblem-page.frontmatter .panel--right section.section__motto .translation h3 span.regularized,
 main.emblem-page.frontmatter .panel--right section.section__motto .translation h3.title span.regularized,
-main.emblem-page.frontmatter .panel--right section.section__motto .translation h1.title span.regularized {
+main.emblem-page.frontmatter .panel--right section.section__motto .original h3.title span.regularized,
+main.emblem-page.frontmatter .panel--right section.section__motto .translation h1 span.regularized,
+main.emblem-page.frontmatter .panel--right section.section__motto .translation h1.title span.regularized,
+main.emblem-page.frontmatter .panel--right section.section__motto .original h1.title span.regularized {
   color: #4d4d4d; }
 
 /* EPIGRAM - ENGLISH/LATIN/GERMAN */
@@ -5888,11 +5968,13 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   main.emblem-page section.section__motto > div.original {
     margin-top: .5rem; }
-  main.emblem-page section.section__motto div.title,
+  main.emblem-page section.section__motto div.lang--english > div.title,
   main.emblem-page section.section__motto div.image.la,
   main.emblem-page section.section__motto div.fugue.de {
     grid-column: 1 / 13;
     padding: 0 .75rem; }
+  main.emblem-page section.section__motto div.lang--english > div.title > div.title {
+    grid-column: 1 / 13; }
   main.emblem-page section.section__motto .translation h1.title,
   main.emblem-page section.section__motto .original h1.title {
     font-size: 2rem;
@@ -5941,11 +6023,15 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
     display: none; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  main.emblem-page section.section__motto div.title,
+  main.emblem-page section.section__motto div.lang--english > div.title,
   main.emblem-page section.section__motto div.image.la,
   main.emblem-page section.section__motto div.fugue.de {
     grid-column: 1 / 13;
     padding: 0 1.25rem; }
+  main.emblem-page section.section__motto div.lang--english > div.title > div.title {
+    grid-column: 1 / 13; }
+  main.emblem-page .panel--right section.section__motto div.lang--english > div.title > div.title {
+    grid-column: 1 / 13; }
   main.emblem-page section.section__epigram .translation .verse-epigram,
   main.emblem-page section.section__epigram .original .verse-epigram {
     font-size: 1.5rem;

@@ -120,19 +120,36 @@ main.emblem-page.frontmatter {
 		grid-area: 1 / 3 / 3 / 4;
 		margin-left: .5rem;
 	}
+	.subst {
+		background: transparent; /* which css file is this from??? */
+	}
 	/********** END OF ENGLISH XML ISSUES **************/
 }
 
 main.emblem-page, 
 main.emblem-page.frontmatter {
 	/*********** ENGLISH EMBLEM OVERRIDES *************/
-	.italic {
-		font-style: oblique;
+	@page {
+		margin-top: 0;
+	}
+	body {
+		width: auto;
+		margin: 0;
+		line-height: 1.2;
+		font-family: $body-font;
 	}
 	.epigram {
 		margin-top: 0;
 		text-align: left;
-	    font-style: normal;
+	    /*font-style: normal;*/
+	}
+	h1 {
+		font-style: normal;
+	}
+	h3 {
+		margin-top: 0;
+		text-align: left;
+		font-style: normal;
 	}
 	h3.discourse {
 	    text-align: left;
@@ -142,34 +159,31 @@ main.emblem-page.frontmatter {
 	    margin-top: 0;
 	    text-align: left;
 	    margin-left: 0;
-	    font-style: normal;
+	    /*font-style: normal;*/
 	}
 	.verse-discourse {
 	    margin-top: 0;
 	    margin-left: 0;
-	    margin-bottom: 0;
+/*	    margin-bottom: 0;*/
 	}
 	h2 {
-	/*    display: none;
-	    color: #b5b5b5;*/
-	    color: green;
+		color: $error;
 	}
-	h1.title {
+/*	h1.title {
 		text-align: left;
 	}
 	h3.title {
 	    margin-top: 0;
 	    text-align: left;
-	}
+	}*/
 	.pb {
+		background: $error;
 		color: #222;
-		display: none;
 		margin-top: 0;
 	}
 	.pb:before{
 	    color: #222;
 	}
-
 	.pb:after{
 	    color: #222;
 	}
@@ -180,15 +194,10 @@ main.emblem-page.frontmatter {
 	    background-color: transparent;
 	    margin-left: 0;
 	}
-
 	span.regularized {
-	    color: #222;
+	    color: $text_body;
 	}
-	.subst {
-	    background-color: transparent;
-	    margin-left: 0;
-	 }
-	.del{
+	.del {
 	    text-decoration: none;
 	}
 	.add:before{
@@ -203,8 +212,19 @@ main.emblem-page.frontmatter {
 	.unclear:after{
 	    display: none;
 	}
-	.fw{
-		display: none;
+	.note-mark, 
+	span.superscript {
+	    color: $text_body;
+		position: relative;
+		top: -.4em;
+		vertical-align: baseline;
+	}
+	span.italic {
+		font-style: oblique;
+	}
+	.fw { /* what is this ??? */
+		/*display: none;*/
+		background: $error;
 	}
 	.margin-note{
 	    float: none;
@@ -213,14 +233,12 @@ main.emblem-page.frontmatter {
 	    width: auto;
 	    padding-left: 0;
 	}
-	.note-mark, 
-	span.superscript {
-	    /*color: $text_body;*/
-		position: relative;
-		top: -.4em;
+	.bottom-note { /* what is this ??? */
+		background: $error;
+		outline: none;
 		vertical-align: baseline;
 	}
-	.help{
+	.help {
 	    display: none;
 	}
 	/********************************/
@@ -333,30 +351,44 @@ main.emblem-page.frontmatter {
 main.emblem-page, 
 main.emblem-page.frontmatter {
 	section.section__motto {
-		div.title, 
+		.pb {
+			display: none;
+		}
+		div.lang--english > div.title {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: 1fr;
+			grid-area: 1 / 1 / 2 / 13;	
+		}
+		div.lang--english > div.title > div.title, 
 		div.fugue, 
 		._motto--latin div.image {
 			grid-column: 4 / 10;
 		}
+		.translation h1, 
 		.translation h1.title, 
 		.original h1.title {
 			font-family: $display-font_emblem;
-			/*font-family: $display-font;*/
 			font-size: 2.625rem;
 			font-weight: 600;
 			line-height: 3.25rem;
 			text-align: center;
 		}
+		.translation h1 br, 
 		.translation h1.title br, 
 		.original h1.title br, 
+		.translation h3 br, 
 		.translation h3.title br, 
 		.original h3.title br  {
 			display: none;
 		}
+		.translation .edition--facsimile h1 br, 
 		.translation .edition--facsimile h1.title br, 
+		.translation .edition--facsimile h3 br
 		.translation .edition--facsimile h3.title br {
 			display: none;
 		}
+		.translation h3, 
 		.translation h3.title, 
 		.original h3.title {
 			font-family: $body-font_emblem;
@@ -365,38 +397,53 @@ main.emblem-page.frontmatter {
 			line-height: 1.5rem;
 			text-align: center;
 		}
+		.translation h3, 
+		.translation h3.title {
+			font-style: oblique;
+		}
 		.original .fugue.de h3.title {
 			visibility: hidden;
 		}
+		.translation h3 .italics,
 		.translation h3.title .italics, 
-		.original h3.title .italics {
+		.original h3.title .italics { /* does this still exist??? */
 			font-style: oblique;
 		}
+		.translation h3 span.regularized, 
 		.translation h3.title span.regularized, 
-		.translation h1.title span.regularized {
+		.original h3.title span.regularized, 
+		.translation h1 span.regularized, 
+		.translation h1.title span.regularized, 
+		.original h1.title span.regularized {
 			color: $white;
 		}
 	}
+	section.section__motto .translation h1, 
 	section.section__motto .translation h1.title, 
 	section.section__motto .original h1.title {
 		font-family: $display-font;
 	}
 	.panel--right section.section__motto {
-		div.title, 
+		div.lang--english > div.title > div.title,  
 		div.fugue, 
 		._motto--latin div.image {
-			grid-area: 1 / 2 / 2 / 12;
+			grid-column: 2 / 12;
+			grid-row: 1 / 2;
 			margin-top: 1rem;	
 		}
+		.translation h1,
 		.translation h1.title, 
 		.original h1.title {
-			/*font-family: $display-font_emblem;*/
 			font-family: $display-font;
 			font-size: 2rem;
 			line-height: 2.5rem;
 		}
+		.translation h3 span.regularized,
 		.translation h3.title span.regularized, 
-		.translation h1.title span.regularized {
+		.original h3.title span.regularized,
+		.translation h1 span.regularized, 
+		.translation h1.title span.regularized, 
+		.original h1.title span.regularized {
 			color: $text_body;
 		}
 	}
@@ -1135,11 +1182,14 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
 			margin-top: .5rem;
 		}
 		section.section__motto {
-			div.title, 
+			div.lang--english > div.title, 
 			div.image.la, 
 			div.fugue.de {
 				grid-column: 1 / 13;
 				padding: 0 .75rem;
+			}
+			div.lang--english > div.title > div.title {
+				grid-column: 1 / 13;
 			}
 			.translation h1.title, 
 			.original h1.title {
@@ -1197,12 +1247,20 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 	main.emblem-page {
 		section.section__motto {
-			div.title, 
+			div.lang--english > div.title, 
 			div.image.la, 
 			div.fugue.de {
 				grid-column: 1 / 13;
 				padding: 0 1.25rem;
-			} 
+			}
+			div.lang--english > div.title > div.title {
+				grid-column: 1 / 13;
+			}
+		}
+		.panel--right section.section__motto {
+			div.lang--english > div.title > div.title {
+				grid-column: 1 / 13;
+			}
 		}
 		section.section__epigram .translation, 
 		section.section__epigram .original {
