@@ -141,15 +141,16 @@ main.emblem-page.frontmatter {
 	.epigram {
 		margin-top: 0;
 		text-align: left;
-	    /*font-style: normal;*/
 	}
 	h1 {
 		font-style: normal;
 	}
+	h2 {
+		color: $error;
+	}
 	h3 {
 		margin-top: 0;
 		text-align: left;
-		font-style: normal;
 	}
 	h3.discourse {
 	    text-align: left;
@@ -166,9 +167,6 @@ main.emblem-page.frontmatter {
 	    margin-left: 0;
 /*	    margin-bottom: 0;*/
 	}
-	h2 {
-		color: $error;
-	}
 /*	h1.title {
 		text-align: left;
 	}
@@ -176,6 +174,9 @@ main.emblem-page.frontmatter {
 	    margin-top: 0;
 	    text-align: left;
 	}*/
+	h3.title {
+		/*font-style: normal;*/
+	}
 	.pb {
 		background: $error;
 		color: #222;
@@ -219,12 +220,18 @@ main.emblem-page.frontmatter {
 		top: -.4em;
 		vertical-align: baseline;
 	}
+	span.indent {
+		/*text-indent: 2rem;*/
+	}
 	span.italic {
 		font-style: oblique;
 	}
 	.fw { /* what is this ??? */
 		/*display: none;*/
 		background: $error;
+/*		font-style: italic;
+        display: block;
+        text-align:center;*/
 	}
 	.margin-note{
 	    float: none;
@@ -314,6 +321,75 @@ main.emblem-page.frontmatter {
 	/*********** END OF ENGLISH EMBLEM OVERRIDES *************/
 }
 
+main.emblem-page, 
+main.emblem-page.frontmatter {
+	/*********** LATIN/GERMAN EMBLEM OVERRIDES *************/
+	@page {
+		margin-top: 0;
+	}
+	body {
+		width: auto;
+		margin: 0;
+		line-height: 1.2;
+		font-family: $body-font;
+	}
+	.epigram {
+	    text-indent: 0;
+	}
+	.verse-epigram {
+		margin-top: 0;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+	.verse-epigram-italic {
+		margin-top: 0;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+	.verse-discourse {
+		margin-top: 0;
+		margin-left: 0;
+		margin-bottom: 0;
+	}
+	span.v-line-indent, 
+	span.v-line {
+        margin-left: 0;
+        line-height: 1.2;
+    }
+    span.v-line-indent {
+        margin-left: 0;
+    }
+   	h2 {
+		color: $error;
+	}
+	span.quote {
+        /*font-style: italic;*/
+    }
+
+    span.gothic {
+         /*font-weight: bold;*/
+    }
+
+    span.roman {
+        /*font-style: normal;*/
+    }
+
+    span.smallCaps, hi.smallCaps {
+        /*font-variant: small-caps;*/
+    }
+
+    span.caps-latin {
+/*        text-transform: uppercase;
+        font-style: normal;*/
+    }
+
+    span.raised {
+/*        vertical-align: super;*/
+    }
+
+}
+/*********** END OF LATIN/GERMAN EMBLEM OVERRIDES *************/
+
 /*********** EMBLEM LAYOUT *************/
 main.emblem-page, 
 main.emblem-page.frontmatter {
@@ -363,7 +439,7 @@ main.emblem-page.frontmatter {
 		div.lang--english > div.title > div.title, 
 		div.fugue, 
 		._motto--latin div.image {
-			grid-column: 4 / 10;
+			grid-column: 3 / 11;
 		}
 		.translation h1, 
 		.translation h1.title, 
@@ -469,13 +545,19 @@ main.emblem-page.frontmatter {
 			text-indent: 0;
 		}
 		.translation h3, 
-		.translation h3.title {
+		.translation h3.title, 
+		.original h3, 
+		.original h3.title {
 			margin-bottom: .75rem;
 		}
 		.translation .edition--facsimile h3, 
 		.translation .edition--facsimile h3.title {
 			text-align: left;
 			text-indent: 46%;
+		}
+		.original .lang--latin.edition--original h3, 
+		.original .lang--latin.edition--original h3.title {
+			text-transform: uppercase;
 		}
 		h3 span.regularized, 
 		h3.title span.regularized, 
@@ -488,6 +570,10 @@ main.emblem-page.frontmatter {
 			grid-column: 4 / 10;
 			text-align: left;
 		}
+		.original .lang--german .verse-epigram {
+			grid-column: 3 / 11;
+			margin-left: 4rem;
+		}
 		.translation .verse-epigram {
 			line-height: 1.5;
 		}
@@ -498,11 +584,18 @@ main.emblem-page.frontmatter {
 			line-height: 1.5;
 			text-indent: 0;
 		}
+		.original .lang--latin .verse-epigram {
+			margin-left: 3rem;
+		}
+		.original .lang--latin.edition--regularized .verse-epigram {
+			margin-left: 4.5rem;
+		}
 /*		.translation .edition--facsimile .verse-epigram {
 			grid-column: 3/ 13;
 			text-align: left;
 		}*/
-		.translation .verse-epigram br {
+		.translation .verse-epigram br, 
+		.original .verse-epigram br {
 			display: none;
 		}
 		.translation .verse-epigram > span {
@@ -512,16 +605,32 @@ main.emblem-page.frontmatter {
 			/*line-height: 0;*/
 			margin: 0;
 		}
+
 		.original .de .verse-epigram > span {
-			line-height: 0;
+			line-height: 1.2;
+			margin-bottom: .25rem;
 		}
 		.original .verse-epigram > span:nth-child(2) {
 	/*		background-color: $error;*/
-			padding-top: 1.25rem;
+			/*padding-top: 1.25rem;*/
+		}
+		.original .lang--latin.edition--original .verse-epigram > span:nth-of-type(even) {
+			text-indent: 5rem;
+		}
+		.v-line-indent, 
+		.original .lang--latin .verse-epigram > span:nth-of-type(even) {
+			text-indent: 3rem;		
+		}
+		.original .lang--german .v-line-indent {
+			margin-left: 2rem;
+			text-indent: 0;
+		}
+		.original .lang--german .verse-epigram span:nth-of-type(2) {
+			margin-left: 4rem;
 		}
 		.original .verse-epigram > span:last-child {
 	/*		background-color: $error;*/
-			padding-bottom: 1.25rem;
+			/*padding-bottom: 1.25rem;*/
 		}
 		.original div.epigram.la .verse-epigram span.original > br {
 			display: none;
@@ -535,6 +644,9 @@ main.emblem-page.frontmatter {
 		.translation span.v-line {
 			margin-left: 0;
 			text-indent: 0;
+		}
+		.original span.v-line {
+			line-height: 1.5;
 		}
 	}
 	.panel--right section.section__epigram {
@@ -552,19 +664,38 @@ main.emblem-page.frontmatter {
 		.original .verse-epigram {
 			grid-column: 2 / 12;
 		}
-		.translation .edition--normalized .verse-epigram {
+		.translation .edition--normalized .verse-epigram, 
+		.original .lang--latin .verse-epigram{
 			margin-left: 1.5rem;
 		}
+		 .original .lang--german .verse-epigram {
+			margin-left: 0;
+		}
+		.original .lang--german .verse-epigram {
+			grid-column: 2 / 12;
+			margin-left: 0;
+		}
 		.original .verse-epigram > span {
-			line-height: 2.5;
-			margin-bottom: -1.375rem;
+/*			line-height: 2.5;
+			margin-bottom: -1.375rem;*/
 		}
 		.original .de .verse-epigram > span {
 			line-height: 1.2;
 		}
 		.original .verse-epigram > span:nth-child(2) {
 	/*		background-color: $error;*/
-			padding-top: .25rem;
+			/*padding-top: .25rem;*/
+		}
+		.v-line-indent, 
+		.original .lang--latin .verse-epigram > span:nth-of-type(even) {
+			text-indent: 3rem;		
+		}
+		.original .lang--german .v-line-indent {
+			margin-left: 2rem;
+			text-indent: 0;
+		}
+		.original .lang--german .verse-epigram span:nth-of-type(2) {
+			margin-left: 4rem;
 		}
 		h3 span.regularized, 
 		h3.title span.regularized, 
