@@ -379,7 +379,7 @@ main.emblem-page.frontmatter {
 		.original h1.title br, 
 		.translation h3 br, 
 		.translation h3.title br, 
-		.original h3.title br  {
+		.original h3.title br {
 			display: none;
 		}
 		.translation .edition--facsimile h1 br, 
@@ -464,14 +464,18 @@ main.emblem-page.frontmatter {
 		.original h3, 
 		.original h3.title {
 			font-weight: 500;
-			grid-column: 2 / 12;
+			grid-column: 4 / 10;
 			text-align: center;
 			text-indent: 0;
+		}
+		.translation h3, 
+		.translation h3.title {
+			margin-bottom: .75rem;
 		}
 		.translation .edition--facsimile h3, 
 		.translation .edition--facsimile h3.title {
 			text-align: left;
-			text-indent: 20%;
+			text-indent: 46%;
 		}
 		h3 span.regularized, 
 		h3.title span.regularized, 
@@ -481,11 +485,14 @@ main.emblem-page.frontmatter {
 		.translation .verse-epigram, 
 		.original .verse-epigram {
 			font-size: 1.5rem;
-			grid-column: 2 / 12;
+			grid-column: 4 / 10;
 			text-align: left;
 		}
 		.translation .verse-epigram {
 			line-height: 1.5;
+		}
+		.translation .edition--normalized .verse-epigram {
+			margin-left: 5rem;
 		}
 		.original .verse-epigram {
 			line-height: 1.5;
@@ -520,16 +527,35 @@ main.emblem-page.frontmatter {
 			display: none;
 		}
 		span.v-line {
-			text-align: left;
-			margin-left: 1rem;
+			display: block;
+			
+			/*text-align: left;*/
+			/*margin-left: 1rem;*/
+		}
+		.translation span.v-line {
+			margin-left: 0;
+			text-indent: 0;
 		}
 	}
 	.panel--right section.section__epigram {
+		.translation h3, 
+		.translation h3.title, 
+		.original h3, 
+		.original h3.title {
+			grid-column: 2 / 12;
+		}
+		.translation .edition--facsimile h3, 
 		.translation .edition--facsimile h3.title {
-			text-indent: 40%;
+			text-indent: 56%;
+		}
+		.translation .verse-epigram, 
+		.original .verse-epigram {
+			grid-column: 2 / 12;
+		}
+		.translation .edition--normalized .verse-epigram {
+			margin-left: 1.5rem;
 		}
 		.original .verse-epigram > span {
-			/*		background-color: $error;*/
 			line-height: 2.5;
 			margin-bottom: -1.375rem;
 		}
