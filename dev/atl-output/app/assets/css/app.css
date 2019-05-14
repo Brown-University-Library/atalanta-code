@@ -5219,78 +5219,86 @@ main.emblem-page.frontmatter .panel--right section.section__motto .original h1.t
   color: #4d4d4d; }
 
 /* EPIGRAM - ENGLISH/LATIN/GERMAN */
-main.emblem-page section.section__epigram .translation div.epigram,
-main.emblem-page section.section__epigram .original div.epigram,
-main.emblem-page.frontmatter section.section__epigram .translation div.epigram,
-main.emblem-page.frontmatter section.section__epigram .original div.epigram {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto; }
-
-main.emblem-page section.section__epigram .translation h3.title,
-main.emblem-page section.section__epigram .original h3.title,
-main.emblem-page.frontmatter section.section__epigram .translation h3.title,
-main.emblem-page.frontmatter section.section__epigram .original h3.title {
-  font-weight: 500;
-  grid-column: 2 / 12;
-  text-align: center;
-  text-indent: 0; }
-
-main.emblem-page section.section__epigram .translation .edition--facsimile h3.title,
-main.emblem-page.frontmatter section.section__epigram .translation .edition--facsimile h3.title {
-  text-align: left;
-  text-indent: 20%; }
-
-main.emblem-page section.section__epigram h3.title span.regularized,
-main.emblem-page section.section__epigram .verse-epigram span.regularized,
-main.emblem-page.frontmatter section.section__epigram h3.title span.regularized,
-main.emblem-page.frontmatter section.section__epigram .verse-epigram span.regularized {
-  color: #fff; }
-
-main.emblem-page section.section__epigram .translation .verse-epigram,
-main.emblem-page section.section__epigram .original .verse-epigram,
-main.emblem-page.frontmatter section.section__epigram .translation .verse-epigram,
-main.emblem-page.frontmatter section.section__epigram .original .verse-epigram {
-  font-size: 1.5rem;
-  grid-column: 2 / 12;
-  text-align: center; }
-
-main.emblem-page section.section__epigram .translation .verse-epigram,
-main.emblem-page.frontmatter section.section__epigram .translation .verse-epigram {
-  line-height: 1.5; }
-
-main.emblem-page section.section__epigram .original .verse-epigram,
-main.emblem-page.frontmatter section.section__epigram .original .verse-epigram {
-  line-height: 1.5;
-  text-indent: 0; }
-
-main.emblem-page section.section__epigram .translation .edition--facsimile .verse-epigram,
-main.emblem-page.frontmatter section.section__epigram .translation .edition--facsimile .verse-epigram {
-  grid-column: 3/ 13;
-  text-align: left; }
-
-main.emblem-page section.section__epigram .original .verse-epigram span,
-main.emblem-page.frontmatter section.section__epigram .original .verse-epigram span {
-  /*line-height: 0;*/
-  margin: 0; }
-
-main.emblem-page section.section__epigram .original .de .verse-epigram > span,
-main.emblem-page.frontmatter section.section__epigram .original .de .verse-epigram > span {
-  line-height: 0; }
-
-main.emblem-page section.section__epigram .original .verse-epigram > span:nth-child(2),
-main.emblem-page.frontmatter section.section__epigram .original .verse-epigram > span:nth-child(2) {
-  /*		background-color: $error;*/
-  padding-top: 1.25rem; }
-
-main.emblem-page section.section__epigram .original .verse-epigram > span:last-child,
-main.emblem-page.frontmatter section.section__epigram .original .verse-epigram > span:last-child {
-  /*		background-color: $error;*/
-  padding-bottom: 1.25rem; }
-
-main.emblem-page section.section__epigram .original div.epigram.la .verse-epigram span.original > br,
-main.emblem-page.frontmatter section.section__epigram .original div.epigram.la .verse-epigram span.original > br {
-  display: none; }
+main.emblem-page section.section__epigram,
+main.emblem-page.frontmatter section.section__epigram {
+  /*		.translation .edition--facsimile .verse-epigram {
+			grid-column: 3/ 13;
+			text-align: left;
+		}*/ }
+  main.emblem-page section.section__epigram .translation div.epigram,
+  main.emblem-page section.section__epigram .original div.epigram,
+  main.emblem-page.frontmatter section.section__epigram .translation div.epigram,
+  main.emblem-page.frontmatter section.section__epigram .original div.epigram {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto; }
+  main.emblem-page section.section__epigram .translation h3,
+  main.emblem-page section.section__epigram .translation h3.title,
+  main.emblem-page section.section__epigram .original h3,
+  main.emblem-page section.section__epigram .original h3.title,
+  main.emblem-page.frontmatter section.section__epigram .translation h3,
+  main.emblem-page.frontmatter section.section__epigram .translation h3.title,
+  main.emblem-page.frontmatter section.section__epigram .original h3,
+  main.emblem-page.frontmatter section.section__epigram .original h3.title {
+    font-weight: 500;
+    grid-column: 2 / 12;
+    text-align: center;
+    text-indent: 0; }
+  main.emblem-page section.section__epigram .translation .edition--facsimile h3,
+  main.emblem-page section.section__epigram .translation .edition--facsimile h3.title,
+  main.emblem-page.frontmatter section.section__epigram .translation .edition--facsimile h3,
+  main.emblem-page.frontmatter section.section__epigram .translation .edition--facsimile h3.title {
+    text-align: left;
+    text-indent: 20%; }
+  main.emblem-page section.section__epigram h3 span.regularized,
+  main.emblem-page section.section__epigram h3.title span.regularized,
+  main.emblem-page section.section__epigram .verse-epigram span.regularized,
+  main.emblem-page.frontmatter section.section__epigram h3 span.regularized,
+  main.emblem-page.frontmatter section.section__epigram h3.title span.regularized,
+  main.emblem-page.frontmatter section.section__epigram .verse-epigram span.regularized {
+    color: #fff; }
+  main.emblem-page section.section__epigram .translation .verse-epigram,
+  main.emblem-page section.section__epigram .original .verse-epigram,
+  main.emblem-page.frontmatter section.section__epigram .translation .verse-epigram,
+  main.emblem-page.frontmatter section.section__epigram .original .verse-epigram {
+    font-size: 1.5rem;
+    grid-column: 2 / 12;
+    text-align: left; }
+  main.emblem-page section.section__epigram .translation .verse-epigram,
+  main.emblem-page.frontmatter section.section__epigram .translation .verse-epigram {
+    line-height: 1.5; }
+  main.emblem-page section.section__epigram .original .verse-epigram,
+  main.emblem-page.frontmatter section.section__epigram .original .verse-epigram {
+    line-height: 1.5;
+    text-indent: 0; }
+  main.emblem-page section.section__epigram .translation .verse-epigram br,
+  main.emblem-page.frontmatter section.section__epigram .translation .verse-epigram br {
+    display: none; }
+  main.emblem-page section.section__epigram .translation .verse-epigram > span,
+  main.emblem-page.frontmatter section.section__epigram .translation .verse-epigram > span {
+    line-height: 1.5; }
+  main.emblem-page section.section__epigram .original .verse-epigram span,
+  main.emblem-page.frontmatter section.section__epigram .original .verse-epigram span {
+    /*line-height: 0;*/
+    margin: 0; }
+  main.emblem-page section.section__epigram .original .de .verse-epigram > span,
+  main.emblem-page.frontmatter section.section__epigram .original .de .verse-epigram > span {
+    line-height: 0; }
+  main.emblem-page section.section__epigram .original .verse-epigram > span:nth-child(2),
+  main.emblem-page.frontmatter section.section__epigram .original .verse-epigram > span:nth-child(2) {
+    /*		background-color: $error;*/
+    padding-top: 1.25rem; }
+  main.emblem-page section.section__epigram .original .verse-epigram > span:last-child,
+  main.emblem-page.frontmatter section.section__epigram .original .verse-epigram > span:last-child {
+    /*		background-color: $error;*/
+    padding-bottom: 1.25rem; }
+  main.emblem-page section.section__epigram .original div.epigram.la .verse-epigram span.original > br,
+  main.emblem-page.frontmatter section.section__epigram .original div.epigram.la .verse-epigram span.original > br {
+    display: none; }
+  main.emblem-page section.section__epigram span.v-line,
+  main.emblem-page.frontmatter section.section__epigram span.v-line {
+    text-align: left;
+    margin-left: 1rem; }
 
 main.emblem-page .panel--right section.section__epigram .translation .edition--facsimile h3.title,
 main.emblem-page.frontmatter .panel--right section.section__epigram .translation .edition--facsimile h3.title {
@@ -5311,8 +5319,10 @@ main.emblem-page.frontmatter .panel--right section.section__epigram .original .v
   /*		background-color: $error;*/
   padding-top: .25rem; }
 
+main.emblem-page .panel--right section.section__epigram h3 span.regularized,
 main.emblem-page .panel--right section.section__epigram h3.title span.regularized,
 main.emblem-page .panel--right section.section__epigram .verse-epigram span.regularized,
+main.emblem-page.frontmatter .panel--right section.section__epigram h3 span.regularized,
 main.emblem-page.frontmatter .panel--right section.section__epigram h3.title span.regularized,
 main.emblem-page.frontmatter .panel--right section.section__epigram .verse-epigram span.regularized {
   color: #4d4d4d; }
@@ -5975,15 +5985,21 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
     padding: 0 .75rem; }
   main.emblem-page section.section__motto div.lang--english > div.title > div.title {
     grid-column: 1 / 13; }
+  main.emblem-page section.section__motto .translation h1,
   main.emblem-page section.section__motto .translation h1.title,
+  main.emblem-page section.section__motto .original h1,
   main.emblem-page section.section__motto .original h1.title {
     font-size: 2rem;
     line-height: 1.25; }
+  main.emblem-page section.section__motto .translation h3,
   main.emblem-page section.section__motto .translation h3.title,
+  main.emblem-page section.section__motto .original h3,
   main.emblem-page section.section__motto .original h3.title {
     font-size: .875rem;
     line-height: 1.5; }
+  main.emblem-page section.section__epigram .translation h3,
   main.emblem-page section.section__epigram .translation h3.title,
+  main.emblem-page section.section__epigram .original h3,
   main.emblem-page section.section__epigram .original h3.title {
     grid-column: 1 / 13; }
   main.emblem-page section.section__epigram .translation .verse-epigram,

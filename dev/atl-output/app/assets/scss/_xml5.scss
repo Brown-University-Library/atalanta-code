@@ -459,17 +459,21 @@ main.emblem-page.frontmatter {
 			grid-template-columns: repeat(12, 1fr);
 			grid-template-rows: auto;
 		}
+		.translation h3, 
 		.translation h3.title, 
+		.original h3, 
 		.original h3.title {
 			font-weight: 500;
 			grid-column: 2 / 12;
 			text-align: center;
 			text-indent: 0;
 		}
+		.translation .edition--facsimile h3, 
 		.translation .edition--facsimile h3.title {
 			text-align: left;
 			text-indent: 20%;
 		}
+		h3 span.regularized, 
 		h3.title span.regularized, 
 		.verse-epigram span.regularized {
 			color: #fff;
@@ -478,7 +482,7 @@ main.emblem-page.frontmatter {
 		.original .verse-epigram {
 			font-size: 1.5rem;
 			grid-column: 2 / 12;
-			text-align: center;
+			text-align: left;
 		}
 		.translation .verse-epigram {
 			line-height: 1.5;
@@ -487,9 +491,15 @@ main.emblem-page.frontmatter {
 			line-height: 1.5;
 			text-indent: 0;
 		}
-		.translation .edition--facsimile .verse-epigram {
+/*		.translation .edition--facsimile .verse-epigram {
 			grid-column: 3/ 13;
 			text-align: left;
+		}*/
+		.translation .verse-epigram br {
+			display: none;
+		}
+		.translation .verse-epigram > span {
+			line-height: 1.5;
 		}
 		.original .verse-epigram span {
 			/*line-height: 0;*/
@@ -509,6 +519,10 @@ main.emblem-page.frontmatter {
 		.original div.epigram.la .verse-epigram span.original > br {
 			display: none;
 		}
+		span.v-line {
+			text-align: left;
+			margin-left: 1rem;
+		}
 	}
 	.panel--right section.section__epigram {
 		.translation .edition--facsimile h3.title {
@@ -526,6 +540,7 @@ main.emblem-page.frontmatter {
 	/*		background-color: $error;*/
 			padding-top: .25rem;
 		}
+		h3 span.regularized, 
 		h3.title span.regularized, 
 		.verse-epigram span.regularized {
 			color: $text_body;
@@ -1191,12 +1206,16 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
 			div.lang--english > div.title > div.title {
 				grid-column: 1 / 13;
 			}
+			.translation h1, 
 			.translation h1.title, 
+			.original h1, 
 			.original h1.title {
 				font-size: 2rem;
 				line-height: 1.25;
 			}
+			.translation h3, 
 			.translation h3.title, 
+			.original h3, 
 			.original h3.title {
 				font-size: .875rem;
 				line-height: 1.5;
@@ -1204,6 +1223,7 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
 		}
 		section.section__epigram .translation, 
 		section.section__epigram .original {
+			h3, 
 			h3.title {
 				grid-column: 1 / 13;
 			}
