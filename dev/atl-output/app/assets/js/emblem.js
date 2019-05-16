@@ -10,17 +10,17 @@ $(function () {
 	var layoutDigitalEditionBtn = 'option.dropdown--layout:nth-of-type(2)';
 	var layoutBookBtn = 'option.dropdown--layout:nth-of-type(3)';
 	/* emblem languages */
-	var fullEnglishText = '.section--single .lang--english';
-	var fullGermanText = '.section--single .lang--german';
-	var fullLatinDiscourse = '.section--single .lang--latin._discourse--latin';
-	var fullLatinText = '.section--single .lang--latin';
+	var fullEnglishText = '.lang--english';
+	var fullGermanText = '.lang--german';
+	var fullLatinDiscourse = '.lang--latin._discourse--latin';
+	var fullLatinText = '.lang--latin';
 	var languageEnglishNormalized = '.lang--english.edition--normalized';
 	var languageEnglishOriginal = '.lang--english.edition--original';
 	var languageGerman = '.lang--german';
 	var languageLatinOriginal = '.lang--latin.edition--original';
 	var languageLatinRegularized = '.lang--latin.edition--regularized';
-	var singleTranslation = '.section--single > div.translation';
-	var singleOriginal = '.section--single > div.original';
+	var textTranslation = 'section > div.translation';
+	var textOriginal = 'section > div.original';
 	/* emblem containers */
 	var containerFacsimile = '.section__facsimile';
 	var containerEmblem = '.emblem';
@@ -387,12 +387,12 @@ $(hamburgerMenuBtn).click(function() {
 	}
 	/* text original/translation switches */
 	function showOriginalLanguage() {
-		$(singleOriginal).removeClass('is-hidden'); // display Latin/German text block
-		$(singleTranslation).addClass('is-hidden'); // hide English text block
+		$(textOriginal).removeClass('is-hidden'); // display Latin/German text block
+		$(textTranslation).addClass('is-hidden'); // hide English text block
 	}
 	function showTranslation() {
-		$(singleTranslation).removeClass('is-hidden'); // display English text block
-		$(singleOriginal).addClass('is-hidden'); // hide Latin/German text block
+		$(textTranslation).removeClass('is-hidden'); // display English text block
+		$(textOriginal).addClass('is-hidden'); // hide Latin/German text block
 	}
 	/* emblem subnav */
 	function subnavHide() {
