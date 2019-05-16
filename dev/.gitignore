@@ -17,6 +17,7 @@ atl-demo-site
 
 # atalanta-search #
 ###################
+jake-search
 atl-output/app/assets/js/faceting.js
 atl-output/app/assets/js/facets.js
 atl-output/app/assets/js/navbar.pug
@@ -29,6 +30,7 @@ atl-output/app/assets/js/lunr-languages/*
 atl-output/app/data/json/searchindex.json
 atl-output/app/data/json/searchdocs.json
 atl-output/app/data/json/byterm_enh_array.json
+atl-output/app/assets/js/filterSelection.js
 
 
 

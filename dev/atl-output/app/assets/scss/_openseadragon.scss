@@ -10,8 +10,8 @@
 }*/
 
 #openseadragon-wrapper {
-	height: calc(100vh - 6.25rem); /* currently, the combined height of the topnav and subnav is 6.25rem */
-	background-color: #777;
+	background-color: $gray_medium;
+	height: $lessemblemnav-h;
 }
 #openseadragon-wrapper canvas {
 	cursor: pointer;
@@ -23,191 +23,217 @@
 	justify-content: center;
 	position: absolute;
 	bottom: 0;
-	z-index: 1000;
 	width: 100%;
+	z-index: $openseadragontools-z;
 }
-#tools>span {
+#tools #zoom-in svg,
+#tools #zoom-out svg {
+	transform: scale(0.6) translate3d(25%, 25%, 0);
+	transform-origin: 0 0;
+}
+#tools > span {
 	background-color: $black_transparent;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 	height: 8vh;
+	max-height: 70px;
 	padding: 0 .5rem;
-	width: 10rem;
+	width: 150px;
 }
-#tools a {
+#tools a#zoom-in,
+#tools a#zoom-out {
+	box-sizing: border-box;
+	color: $white;
+	display: inline-block;
+	padding: 0 .25rem;
+	width: 46%;
+	max-width: 75px;
+}
+#tools a#next,
+#tools a#previous {
+	color: $white;
 	display: flex !important;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	color: $aqua;
 	flex: 1 0 0px;
 	font-size: .875rem;
 	padding: 0 .25rem;
 }
-#tools a span {
+#tools a#zoom-in span,
+#tools a#zoom-out span {
+	display: none;
+}
+#tools a#next span,
+#tools a#previous span {
+	color: $white;
 	display: block;
 	text-align: center;
 }
-#tools a:hover, #tools a:focus {
-	color: $orange-yellow;
+#tools a#next:hover span,
+#tools a#previous:hover span {
+	color: $yellow_bright;
+	display: block;
+	text-align: center;
+	transition: color .3s;
+}
+#tools a:hover, 
+#tools a:focus {
+	color: $yellow_bright;
 	transition: .3s;
 }
 #tools a:active {
-	color: $gray-medium;
+	color: $gray_medium;
 	transition: .3s;
 }
-#icon_arrow-left-lineart, #icon_arrow-right-lineart {
-	width: 2rem;
+#icon_arrow-left-lineart, 
+#icon_arrow-right-lineart {
 	height: 4rem;
+	width: 2rem;
 }
-#icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline, #icon_zoom-in-lineart g#handle path, #icon_zoom-in-lineart g#symbol path, #icon_zoom-out-lineart g#handle path, #icon_zoom-out-lineart g#symbol line {
-	stroke: $aqua;
+#icon_arrow-left-lineart polyline, 
+#icon_arrow-right-lineart polyline, 
+#icon_zoom-in-lineart g#handle path, 
+#icon_zoom-in-lineart g#symbol path, 
+#icon_zoom-out-lineart g#handle path, 
+#icon_zoom-out-lineart g#symbol line {
+	stroke: $white;
 }
-#icon_zoom-in-lineart g#glass path, #icon_zoom-out-lineart g#glass path {
-	fill: $aqua;
+#icon_zoom-in-lineart g#glass path, 
+#icon_zoom-out-lineart g#glass path {
+	fill: $white;
 }
-#icon_arrow-left-lineart polyline, #icon_arrow-right-lineart polyline {
+#icon_arrow-left-lineart polyline, 
+#icon_arrow-right-lineart polyline {
 	stroke-width: 10;
 }
-#next:hover, #next:focus {
+#next:hover, 
+#next:focus {
 	#icon_arrow-right-lineart polyline {
-		stroke: $orange-yellow;
+		stroke: $yellow_bright;
 		transition: .3s;
 	}
 }
 #next:active {
 	#icon_arrow-right-lineart polyline {
-		stroke: $gray-medium;
+		stroke: $gray_medium;
 		transition: .3s;
 	}
 }
 #previous:hover, #previous:focus {
 	#icon_arrow-left-lineart polyline {
-		stroke: $orange-yellow;
+		stroke: $yellow_bright;
 		transition: .3s;
 	}
 }
 #previous:active {
 	#icon_arrow-left-lineart polyline {
-		stroke: $gray-medium;
+		stroke: $gray_medium;
 		transition: .3s;
 	}
 }
-#zoom-in:hover, #zoom-in:focus {
-	#icon_zoom-in-lineart g#handle path, #icon_zoom-in-lineart g#symbol path {
-		stroke: $orange-yellow;
+#zoom-in:hover, 
+#zoom-in:focus {
+	#icon_zoom-in-lineart g#handle path, 
+	#icon_zoom-in-lineart g#symbol path {
+		stroke: $yellow_bright;
 		transition: .3s;
 	}
 	#icon_zoom-in-lineart g#glass path {
-		fill: $orange-yellow;
+		fill: $yellow_bright;
 		transition: .3s;
 	}
 }
 #zoom-in:active {
-	#icon_zoom-in-lineart g#handle path, #icon_zoom-in-lineart g#symbol path {
-		stroke: $gray-medium;
+	#icon_zoom-in-lineart g#handle path, 
+	#icon_zoom-in-lineart g#symbol path {
+		stroke: $gray_medium;
 		transition: .3s;
 	}
 	#icon_zoom-in-lineart g#glass path {
-		fill: $gray-medium;
+		fill: $gray_medium;
 		transition: .3s;
 	}
 }
-#zoom-out:hover, #zoom-out:focus {
-	#icon_zoom-out-lineart g#handle path, #icon_zoom-out-lineart g#symbol line {
-		stroke: $orange-yellow;
+#zoom-out:hover, 
+#zoom-out:focus {
+	#icon_zoom-out-lineart g#handle path, 
+	#icon_zoom-out-lineart g#symbol line {
+		stroke: $yellow_bright;
 		transition: .3s;
 	}
 	#icon_zoom-out-lineart g#glass path {
-		fill: $orange-yellow;
+		fill: $yellow_bright;
 		transition: .3s;
 	}
 }
 #zoom-out:active {
-	#icon_zoom-out-lineart g#handle path, #icon_zoom-out-lineart g#symbol line {
-		stroke: $gray-medium;
+	#icon_zoom-out-lineart g#handle path, 
+	#icon_zoom-out-lineart g#symbol line {
+		stroke: $gray_medium;
 		transition: .3s;
 	}
 	#icon_zoom-out-lineart g#glass path {
-		fill: $gray-medium;
+		fill: $gray_medium;
 		transition: .3s;
 	}
 }
 .facsimile--full {
-	#previous, #next {
-	background-color: $black_transparent;
-	height: 7rem;
-	position: fixed !important;
-	top: 48vh;
-	width: 5rem;
-}
-	#previous {
-		left: 0;
+	#next, #previous {
+		background-color: $black_transparent;
+		height: 7rem;
+		position: fixed !important;
+		top: 48vh;
+		width: 5rem;
 	}
 	#next {
 		right: 0;
+	}
+	#previous {
+		left: 0;
 	}
 }
 .displayregion {
 
 }
-.facsimile--full.grid--half #openseadragon-wrapper #tools span a#zoom-in, .facsimile--full.grid--half #openseadragon-wrapper #tools span a#zoom-out {
-	display: none !important;
+.facsimile--full.grid--half #tools>span {
+/*	background-color: $black_transparent;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 8vh;
+	padding: 0 .5rem;
+	width: 10rem;*/
 }
-.facsimile--full.grid--half {
-	#tools, #tools>span {
-		background-color: transparent;
-		width: auto;
-	}
-	#previous, #next {
-		display: none;
-		height: 5rem;
-		width: 3rem;
-	}
-	#previous span, #next span {
-		display: none;
-	}
-	svg {
-		transform: scale(1);
-	}
+.facsimile--full.grid--half #tools a#next, 
+.facsimile--full.grid--half #tools a#previous, 
+.facsimile--full.grid--half #tools>span a#next, 
+.facsimile--full.grid--half #tools>span a#previous {
+	display: none !important; /* important required for openseadragon override */
 }
-.section__facsimile.grid--right .facsimile--full.grid--half {
-	#previous {
-		left: 50%;
-	}
-}
-.section__facsimile.grid--left .facsimile--full.grid--half {
-	#next {
-		right: 50%;
-	}
-}
-.section__facsimile.grid--left .facsimile--full.grid--half #tools {
-	display: none;
-}
+
 /***     Breakpoints     ***/
 /* small  -  mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
 	#tools {
 		background-color: $black_transparent;
 	}
-	#tools>span {
+	#tools > span {
 		background-color: transparent;
 	}
 	#tools a span {
 		display: none;
 	}
 	#tools svg {
-		transform: scale(.6);
+		transform: scale(0.6);
 		transform-origin: 50% 50%;
 	}
-	.facsimile--full #previous, .facsimile--full #next,  {
+	.facsimile--full #next,
+	.facsimile--full #previous {
 		background-color: transparent;
 		height: 4rem;
 		top: calc(100vh - 8rem);
 		width: 2rem;
 		svg {
-			transform: scale(.5);
+			transform: scale(0.5);
 		}
 	}
 }

@@ -1,0 +1,1113 @@
+/* Usual */
+@font-face {
+  font-family: 'GTAmerica';
+  /* regular */
+  src: url("../fonts/GT-America-Standard-Regular.eot");
+  src: url("../fonts/GT-America-Standard-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Standard-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GTAmerica';
+  /* italic */
+  src: url("../fonts/GT-America-Standard-Regular-Italic.eot");
+  src: url("../fonts/GT-America-Standard-Regular-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Standard-Regular-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'GTAmerica';
+  /* semibold */
+  src: url("../fonts/GT-America-Standard-Medium.eot");
+  src: url("../fonts/GT-America-Standard-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Standard-Medium.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GTAmerica';
+  /* semibold italic */
+  src: url("../fonts/GT-America-Standard-Medium-Italic.eot");
+  src: url("../fonts/GT-America-Standard-Medium-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Standard-Medium-Italic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'GTAmericaBold';
+  /* bold */
+  src: url("../fonts/GT-America-Standard-Bold.eot");
+  src: url("../fonts/GT-America-Standard-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Standard-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GTAmericaBold';
+  /* bold italic */
+  src: url("../fonts/GT-America-Standard-Bold-Italic.eot");
+  src: url("../fonts/GT-America-Standard-Bold-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-America-Standard-Bold-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'GTSectraDisplayBold';
+  /* regular */
+  src: url("../fonts/GT-Sectra-Display-Bold.eot");
+  src: url("../fonts/GT-Sectra-Display-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-Sectra-Display-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'GTSectraDisplayBold';
+  /* italic */
+  src: url("../fonts/GT-Sectra-Display-Bold-Italic.eot");
+  src: url("../fonts/GT-Sectra-Display-Bold-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/GT-Sectra-Display-Bold-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background-color: white;
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  padding: 0; }
+
+header {
+  margin-top: 0; }
+
+main {
+  line-height: 1.5; }
+
+h1.sample {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 4rem;
+  margin-top: 5rem; }
+
+a {
+  text-decoration: none; }
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0; }
+
+.btn {
+  background-color: #333;
+  border-radius: .25rem;
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: .75rem;
+  width: 10rem;
+  height: 2.5rem; }
+
+.btn:hover {
+  background-color: gray;
+  color: #222; }
+
+.btn p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  font-size: .825rem; }
+
+/*! Lity - v2.3.1 - 2018-04-20
+* http://sorgalla.com/lity/
+* Copyright (c) 2015-2018 Jan Sorgalla; Licensed MIT */
+.lity {
+  z-index: 9990;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  white-space: nowrap;
+  background: #0b0b0b;
+  background: rgba(0, 0, 0, 0.9);
+  outline: none !important;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; }
+
+.lity.lity-opened {
+  opacity: 1; }
+
+.lity.lity-closed {
+  opacity: 0; }
+
+.lity * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.lity-wrap {
+  z-index: 9990;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  outline: none !important; }
+
+.lity-wrap:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; }
+
+.lity-loader {
+  z-index: 9991;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.8em;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; }
+
+.lity-loading .lity-loader {
+  opacity: 1; }
+
+.lity-container {
+  z-index: 9992;
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  display: inline-block;
+  white-space: normal;
+  max-width: 100%;
+  max-height: 100%;
+  outline: none !important; }
+
+.lity-content {
+  z-index: 9993;
+  width: 100%;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: -o-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease; }
+
+.lity-loading .lity-content,
+.lity-closed .lity-content {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8); }
+
+.lity-content:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  right: 0;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); }
+
+.lity-close {
+  z-index: 9994;
+  width: 35px;
+  height: 35px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  -webkit-appearance: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  padding: 0;
+  color: #fff;
+  font-style: normal;
+  font-size: 35px;
+  font-family: Arial, Baskerville, monospace;
+  line-height: 35px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  border: 0;
+  background: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.lity-close::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.lity-close:hover,
+.lity-close:focus,
+.lity-close:active,
+.lity-close:visited {
+  text-decoration: none;
+  text-align: center;
+  padding: 0;
+  color: #fff;
+  font-style: normal;
+  font-size: 35px;
+  font-family: Arial, Baskerville, monospace;
+  line-height: 35px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  border: 0;
+  background: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.lity-close:active {
+  top: 1px; }
+
+/* Image */
+.lity-image img {
+  max-width: 100%;
+  display: block;
+  line-height: 0;
+  border: 0; }
+
+/* iFrame */
+.lity-iframe .lity-container,
+.lity-youtube .lity-container,
+.lity-vimeo .lity-container,
+.lity-facebookvideo .lity-container,
+.lity-googlemaps .lity-container {
+  width: 100%;
+  max-width: 964px; }
+
+.lity-iframe-container {
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+  overflow: auto;
+  pointer-events: auto;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-overflow-scrolling: touch; }
+
+.lity-iframe-container iframe {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  background: #000; }
+
+.lity-hide {
+  display: none; }
+
+main.emblem-page {
+  background: white;
+  /*	background-image: url("../img/default/bkg-illustration.png");
+	background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+  /*	background-size: contain;*/
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  /*	min-height: calc(100vh - 3.125rem);*/
+  line-height: 1.5rem;
+  margin-top: 3.125rem;
+  padding: 0 0 .125rem 0; }
+
+.panel--full {
+  grid-column-start: 1;
+  grid-column-end: 3; }
+
+.panel--left {
+  grid-column-start: 1;
+  grid-column-end: 2; }
+
+.panel--right {
+  grid-column-start: 2;
+  grid-column-end: 3; }
+
+.emblem {
+  margin-top: 3.125rem;
+  display: grid;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, fit-content(10px) fit-content(100%));
+  width: 100%; }
+
+.emblem section {
+  background-color: rgba(255, 255, 255, 0.97);
+  padding: 1rem 0; }
+
+.emblem.panel--right section.section__motto,
+.emblem.panel--right .section__image section,
+.emblem.panel--right section.section__epigram {
+  background-color: white;
+  color: #4d4d4d; }
+
+.emblem.panel--full section.section__motto,
+.emblem.panel--full .section__image section,
+.emblem.panel--full section.section__epigram {
+  background-color: rgba(51, 51, 51, 0.97);
+  color: white; }
+
+.section__motto {
+  grid-row-start: 1;
+  grid-row-end: 2; }
+
+.emblem section.section__motto {
+  padding: 4rem 0 1rem 0; }
+
+._motto--english > div {
+  min-height: 10vh;
+  max-height: 50vh; }
+
+.section__image {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3; }
+  .section__image .image__picture {
+    display: grid;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-bottom: 1rem; }
+  .section__image img {
+    max-width: 30rem; }
+
+.section__music {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  height: 100%; }
+
+.music--full {
+  min-height: 100vh; }
+
+.section__epigram {
+  grid-row-start: 4;
+  grid-row-end: 5; }
+
+.emblem section.section__epigram {
+  padding: 3rem 0 6rem 0; }
+
+.emblem section.section__epigram.panel--right {
+  padding: 0 0 9rem 0; }
+
+.section__discourse {
+  grid-row-start: 5;
+  grid-row-end: 6;
+  margin-bottom: -3px; }
+
+.section__facsimile {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin-top: 3.125rem;
+  /*padding-top: $subnav-h;*/ }
+
+.frontmatter section.facsimile, .frontmatter section._facsimile {
+  padding: 0; }
+
+.facsimile--full {
+  background-color: #222;
+  height: 100vh;
+  width: 100%;
+  position: fixed; }
+
+.grid--full {
+  grid-column-start: 1;
+  grid-column-end: 5; }
+
+.grid--left {
+  grid-column-start: 1;
+  grid-column-end: 3; }
+
+.grid--right {
+  grid-column-start: 3;
+  grid-column-end: 5; }
+
+.grid--center {
+  grid-column-start: 2;
+  grid-column-end: 4; }
+
+.grid--half {
+  width: 50%;
+  background-color: silver; }
+
+/* BREAKPOINTS */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .emblem {
+    margin-top: 0; }
+  .emblem__image--cropped {
+    width: 100%; }
+  main.emblem-page {
+    padding: 0 0 3.125rem 0; }
+  .section__facsimile {
+    margin-top: 0;
+    margin-bottom: 3.125rem; } }
+
+body {
+  /* background-color: #ddd; */
+  padding: 3em; }
+
+/* Audio definition elements are hidden */
+.ata-viz-audio {
+  display: none; }
+
+/* CMN Visualization */
+/* This is for the background (non-javascript) image */
+.ata-viz-cmn {
+  width: 100%;
+  /* height: 500px; */
+  background: white no-repeat;
+  background-size: contain;
+  background-color: white;
+  /* overflow: scroll; */ }
+
+.ata-viz-cmn svg tspan {
+  font-family: sans-serif !important; }
+
+.ata-viz-cmn .music-pages {
+  float: left;
+  width: 100%; }
+
+.ata-viz-cmn .music-pages .music-page {
+  float: left;
+  width: 50%;
+  text-align: center;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0; }
+
+/* Playing notes */
+.ata-viz-cmn svg .note {
+  -webkit-transition: fill 0.3s, stroke-width 0.3s;
+  -o-transition: fill 0.3s, stroke-width 0.3s;
+  transition: fill 0.3s, stroke-width 0.3s; }
+
+.ata-viz-cmn svg .note.highlighted {
+  fill: red; }
+
+.ata-viz-cmn svg .note.highlighted path {
+  stroke-width: 50;
+  stroke: red; }
+
+/* Start / stop / mute buttons */
+.transport {
+  width: 100%;
+  float: left;
+  background: white;
+  padding: 1em; }
+
+.transport button {
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 0; }
+
+.transport .atalanta-notation-start,
+.transport .atalanta-notation-stop {
+  height: 100px;
+  width: 100px;
+  display: block;
+  float: left;
+  margin-right: 50px; }
+
+.transport .atalanta-notation-start {
+  background-image: url("../img/baseline-play_circle_outline-24px.svg"); }
+
+.transport .atalanta-notation-start.playing {
+  display: none;
+  /* background-image: url('../img/baseline-play_circle_outline-24px.svg'); */ }
+
+.transport .atalanta-notation-stop {
+  display: none;
+  background-image: url("../img/baseline-pause_circle_outline-24px.svg"); }
+
+.transport .atalanta-notation-stop.playing {
+  display: initial;
+  background-image: url("../img/baseline-pause_circle_outline-24px.svg"); }
+
+/* Mute buttons */
+.atalanta-notation-mute-track {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  width: 20em;
+  text-align: left;
+  padding-left: 50px;
+  cursor: pointer;
+  background-image: url("../img/baseline-record_voice_over-24px.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+
+.atalanta-notation-mute-track.mute {
+  opacity: 0.5;
+  background-image: url("../img/baseline-record_voice_over-mute-24px.svg"); }
+
+.ata-music .measure .staff {
+  -webkit-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s; }
+
+/* Styles for piano roll view */
+.ata-viz-pianoroll g {
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear; }
+
+.ata-viz-pianoroll g.voice-1 .note {
+  fill: #1f77b4; }
+
+.ata-viz-pianoroll g.voice-2 .note {
+  fill: #ff7f0e; }
+
+.ata-viz-pianoroll g.voice-3 .note {
+  fill: #2ca02c; }
+
+.ata-viz-pianoroll g rect.note {
+  -webkit-transition: fill 0.2s;
+  -o-transition: fill 0.2s;
+  transition: fill 0.2s;
+  stroke-width: 0;
+  stroke: red;
+  -webkit-transition: stroke-width 0.5s linear, fill 0.4s ease;
+  -o-transition: stroke-width 0.5s linear, fill 0.4s ease;
+  transition: stroke-width 0.5s linear, fill 0.4s ease; }
+
+.ata-viz-pianoroll g rect.note.highlighted {
+  fill: red;
+  stroke-width: 5px; }
+
+body {
+  padding: 0;
+  /* override notation css */ }
+
+/* general styles */
+.section__music {
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif; }
+
+.section__music ._music .ata-music .transport {
+  background-color: #f2f2f2;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: calc(100vh - 6.25rem);
+  /* view height - topnav - emblem nav */
+  padding: 0 1rem;
+  width: calc(50vw/12 * 2); }
+  .section__music ._music .ata-music .transport .atalanta-notation-start,
+  .section__music ._music .ata-music .transport .atalanta-notation-stop,
+  .section__music ._music .ata-music .transport .atalanta-notation-mute-track,
+  .section__music ._music .ata-music .transport .atalanta-notation__switch {
+    background-image: none;
+    color: #4d4d4d;
+    float: none;
+    font-size: .875rem;
+    height: auto;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%; }
+  .section__music ._music .ata-music .transport button:focus,
+  .section__music ._music .ata-music .transport .atalanta-notation__switch a:focus {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+    outline: none; }
+  .section__music ._music .ata-music .transport button > div:nth-child(1) {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: .5rem; }
+  .section__music ._music .ata-music .transport .atalanta-notation-start.playing {
+    display: none; }
+  .section__music ._music .ata-music .transport .play-btn__icon {
+    background-image: url("../icons/icon_play_filled--gray.svg");
+    height: 2.5rem; }
+  .section__music ._music .ata-music .transport .play-btn__icon:hover {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .section__music ._music .ata-music .transport .pause-btn__icon {
+    background-image: url("../icons/icon_pause_filled--gray.svg");
+    height: 2.5rem; }
+  .section__music ._music .ata-music .transport .atalanta-notation-stop.playing .pause-btn__icon {
+    background-image: url("../icons/icon_pause_filled--gray.svg"); }
+  .section__music ._music .ata-music .transport .atalanta-notation-stop.playing:hover .pause-btn__icon {
+    background-image: url("../icons/icon_pause_filled--gray.svg");
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .section__music ._music .ata-music .transport .mute-btn__icon {
+    background-image: url("../icons/icon_volume_filled--gray.svg");
+    height: 2.25rem; }
+  .section__music ._music .ata-music .transport .mute-btn__icon:hover {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .section__music ._music .ata-music .transport .atalanta-notation-mute-track.mute .mute-btn__icon {
+    background-image: url("../icons/icon_volume_filled--gray.svg"); }
+  .section__music ._music .ata-music .transport .atalanta-notation-mute-track.mute:hover .mute-btn__icon {
+    background-image: url("../icons/icon_volume_filled--gray.svg");
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .section__music ._music .ata-music .transport .atalanta-notation__switch a {
+    color: #4d4d4d;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: .875rem;
+    height: 100%;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%; }
+  .section__music ._music .ata-music .transport .piano-roll__icon {
+    background-image: url("../icons/icon_piano-roll_filled--gray.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 2.75rem;
+    margin-bottom: .5rem;
+    width: 100%; }
+  .section__music ._music .ata-music .transport .piano-roll__icon:hover {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+
+.section__music ._music .ata-music .ata-viz-cmn {
+  background: no-repeat;
+  background-size: contain;
+  overflow: hidden; }
+
+.section__music ._music .ata-music .ata-viz-pianoroll {
+  overflow: hidden; }
+
+/* notation */
+.section__music .ata-viz-cmn .music-pages .music-page {
+  text-align: center;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  overflow: hidden;
+  width: 100%;
+  /* where am I overriding this from??? */ }
+
+.section__music .music-page > svg {
+  float: left;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0; }
+
+.section__music .music-pages {
+  padding-bottom: 8rem; }
+
+.section__music .music-pages g.verse tspan {
+  font-size: 280px !important; }
+
+.section__music .music-page:nth-of-type(1) {
+  margin-top: -6rem; }
+
+.section__music .music-page:nth-of-type(2) {
+  margin-top: -5rem; }
+
+/* overlapping notation */
+.section__music g#m-600.verse g#m-601.syl text {
+  /* emblem 1, line 13 */
+  -webkit-transform: translateX(-200px);
+  -ms-transform: translateX(-200px);
+  transform: translateX(-200px); }
+
+/* Playing notes */
+.ata-viz-cmn svg .note.highlighted {
+  fill: #0051ff; }
+
+.ata-viz-cmn svg .note.highlighted path {
+  stroke: #0051ff; }
+
+/* general grid styles */
+@supports (display: grid) {
+  .section__music ._music {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto; }
+  .section__music ._music .ata-music {
+    display: grid;
+    grid-area: 1 / 1 / 2 / 13;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto; }
+    .section__music ._music .ata-music .transport {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 3fr 1fr;
+      grid-area: 2 / 1 / 3 / 3; }
+      .section__music ._music .ata-music .transport .atalanta-notation-start,
+      .section__music ._music .ata-music .transport .atalanta-notation-stop {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2; }
+      .section__music ._music .ata-music .transport .track-mute {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-row: 2 / 3; }
+      .section__music ._music .ata-music .transport .atalanta-notation-mute-track:nth-child(1) {
+        grid-row: 1 / 2; }
+      .section__music ._music .ata-music .transport .atalanta-notation-mute-track:nth-child(2) {
+        grid-row: 2 / 3; }
+      .section__music ._music .ata-music .transport .atalanta-notation-mute-track:nth-child(3) {
+        grid-row: 3 / 4; }
+      .section__music ._music .ata-music .transport .atalanta-notation__switch {
+        grid-row: 3 / 4; }
+    .section__music ._music .ata-music .ata-viz-cmn {
+      display: grid;
+      grid-area: 2 / 2 / 3 / 13;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto; }
+    .section__music ._music .ata-music .ata-viz-pianoroll {
+      grid-area: 3 / 2 / 4 / 12; }
+  .panel--right .section__music ._music .ata-music .ata-viz-cmn {
+    grid-area: 2 / 3 / 3 / 13; }
+  .section__music .music-pages {
+    display: grid;
+    grid-area: 1 / 1 / 2 / 13;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto; }
+  .section__music .music-page:nth-of-type(1) {
+    grid-area: 1 / 1 / 2 / 13; }
+  .section__music .music-page:nth-of-type(2) {
+    grid-area: 2 / 1 / 3 / 13; }
+  .panel--right .section__music .music-pages {
+    padding-bottom: 3rem; }
+  .panel--right .section__music .music-page:nth-of-type(1) {
+    margin-top: -1.5rem; }
+  .panel--right .section__music .music-page:nth-of-type(2) {
+    margin-top: -2rem; }
+  /* GRID ANIMATION */
+  /* sticky music player controls */
+  .panel--right .section__music ._music .ata-music .transport.is-stuck {
+    background-color: #dae4ec;
+    left: 50vw;
+    width: calc(50vw/12 * 2); }
+  .panel--right .section__music ._music .ata-music .transport.is-unstuck {
+    background-color: #f2f2f2; } }
+
+/* general grid fallback styles */
+@supports not (display: grid) {
+  .section__music ._music .ata-music .transport {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .section__music ._music .ata-music .track-mute {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; } }
+
+/* GENERAL ANIMATION */
+/* sticky music player controls */
+.section__music ._music .ata-music .transport.is-stuck {
+  -webkit-animation: fade-in .4s ease-out;
+  animation: fade-in .4s ease-out;
+  background-color: #dae4ec;
+  left: 0;
+  position: fixed;
+  top: 6.25rem; }
+
+.section__music ._music .ata-music .transport.is-unstuck {
+  -webkit-animation: fade-out-in .4s ease-out;
+  animation: fade-out-in .4s ease-out;
+  background-color: #f2f2f2; }
+
+/* piano roll */
+.lity-container .ata-viz-pianoroll {
+  background-color: white;
+  height: 60vh;
+  margin-top: 5vh;
+  width: 75vw; }
+  .lity-container .ata-viz-pianoroll g.voice-1 .note {
+    fill: #608ca9; }
+  .lity-container .ata-viz-pianoroll g.voice-2 .note {
+    fill: #d14829; }
+  .lity-container .ata-viz-pianoroll g.voice-3 .note {
+    fill: #54b68d; }
+  .lity-container .ata-viz-pianoroll g rect.note {
+    stroke: #0051ff; }
+  .lity-container .ata-viz-pianoroll g rect.note.highlighted {
+    fill: #0051ff; }
+
+.lity-container .ata-viz-pianoroll > svg {
+  margin-top: 22vh; }
+
+.lity-container .ata-viz-pianoroll .transport {
+  background-color: #f2f2f2;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .5rem; }
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-start,
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-stop,
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-mute-track {
+    background-image: none;
+    color: #4d4d4d;
+    float: none;
+    font-size: .875rem;
+    height: auto;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%; }
+  .lity-container .ata-viz-pianoroll .transport button:focus {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+    outline: none; }
+  .lity-container .ata-viz-pianoroll .transport button > div:nth-child(1) {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: .5rem; }
+  .lity-container .ata-viz-pianoroll .transport .play-btn__icon {
+    background-image: url("../icons/icon_play_filled--gray.svg");
+    height: 2.5rem; }
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-start:hover .play-btn__icon {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .lity-container .ata-viz-pianoroll .transport .pause-btn__icon {
+    background-image: url("../icons/icon_pause_filled--gray.svg");
+    height: 2.5rem; }
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-stop:hover .pause-btn__icon {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-mute-track {
+    -webkit-transition: 0;
+    -o-transition: 0;
+    transition: 0; }
+  .lity-container .ata-viz-pianoroll .transport .mute-btn__icon {
+    background-image: url("../icons/icon_volume_filled--gray.svg");
+    height: 2rem;
+    width: 100%; }
+  .lity-container .ata-viz-pianoroll .transport .atalanta-notation-mute-track:hover .mute-btn__icon {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+
+/* grid piano roll */
+@supports (display: grid) {
+  .lity-container .ata-viz-pianoroll {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: auto; }
+  .lity-container .ata-viz-pianoroll > svg {
+    grid-column: 2 / 10; }
+  .lity-container .ata-viz-pianoroll .transport {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 3fr;
+    grid-column: 1 / 2; }
+    .lity-container .ata-viz-pianoroll .transport .atalanta-notation-start,
+    .lity-container .ata-viz-pianoroll .transport .atalanta-notation-stop {
+      grid-row: 1 / 2; }
+    .lity-container .ata-viz-pianoroll .transport .track-mute {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-row: 2 / 3; }
+    .lity-container .ata-viz-pianoroll .transport .atalanta-notation-mute-track {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
+
+/* grid fallback piano roll */
+@supports not (display: grid) {
+  .lity-container .ata-viz-pianoroll {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+  .lity-container .ata-viz-pianoroll .transport {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 60vh;
+    width: 8vw; }
+    .lity-container .ata-viz-pianoroll .transport .track-mute {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-flex-basis: 75%;
+      -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
