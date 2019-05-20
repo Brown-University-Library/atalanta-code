@@ -13,7 +13,7 @@ body {
 	.transport {
 		background-color: $gray_light;
 		box-sizing: border-box;
-		height: calc(100vh - 6.25rem); /* view height - topnav - emblem nav */
+		height: calc(100vh - 6.25rem); /* viewheight - topnav - emblem nav */
 		padding: 0 1rem;
 		width: calc(50vw/12 * 2);
 		.atalanta-notation-start, 
@@ -30,6 +30,14 @@ body {
 			padding: 0;
 			text-align: center;
 			width: 100%;
+		}
+		.atalanta-notation-start, 
+		.atalanta-notation-stop, 
+		.atalanta-notation-mute-track {
+			min-height: calc((100vh - 6.25rem) * .2); /* viewheight - topnav - emblem nav / number of buttons in transport */
+		}
+		.atalanta-notation__switch a {
+			max-height: calc((100vh - 6.25rem) * .2); /* viewheight - topnav - emblem nav / number of buttons in transport */
 		}
 		button:focus, 
 		.atalanta-notation__switch a:focus {
