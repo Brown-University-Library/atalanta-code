@@ -113,7 +113,7 @@ main.emblem-page {
 	margin-top: $subnav-h;
 	/*padding-top: $subnav-h;*/
 }
-.frontmatter section.facsimile, .frontmatter section._facsimile {
+.frontmatter section.facsimile, .frontmatter div._facsimile {
 	padding: 0;
 }
 .facsimile--full {
@@ -157,5 +157,10 @@ main.emblem-page {
 	.section__facsimile {
 		margin-top: 0;
 		margin-bottom: $subnav-h;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.emblem__image--cropped {
+		width: 100%;
 	}
 }
