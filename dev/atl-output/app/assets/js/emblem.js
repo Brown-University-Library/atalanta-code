@@ -53,6 +53,8 @@ $(function () {
 	var hamburgerMenuBtnClosed = 'topnav__hamburger--closed';
 	var hamburgerMenuBtnOpen = 'topnav__hamburger--open';
 	var hamburgerMenu = '.topnav > ul';
+	let myMusic;
+	let myControls;
 
 
 	// var thisEmblemPage = '.emblem-page';
@@ -117,46 +119,13 @@ $(function () {
 
 /* APPLY ACCESSIBILITY FIXES AFTER ALL DYNAMIC CONTENT LOADS */
 $(window).on('load', function() {
-	setTimeout(function(){
-		// console.log("ALL ASSETS ARE LOADED!!!!")
-		musicAccessibility();
-	}, 3000);
+	// setTimeout(function(){
+	// 	// console.log("ALL ASSETS ARE LOADED!!!!")
+	// 	musicAccessibility();
+	// 	createScrollingScene();
+	// }, 1500);
 	
 });
-$(hamburgerMenuBtn).click(function() {
-	if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnClosed)) {
-		console.log("I AM OPENING THE HAMBURGER MENU");
-		$(hamburgerMenuBtn).removeClass('topnav__hamburger--closed');
-		$(hamburgerMenuBtn).addClass('topnav__hamburger--open');
-		$(hamburgerMenu).removeClass('topnav--slide-out');
-		$(hamburgerMenu).addClass('topnav--slide-in');
-	}
-	else if($(hamburgerMenuBtn).hasClass(hamburgerMenuBtnOpen)) {
-		console.log("I AM CLOSING THE HAMBURGER MENU");
-		$(hamburgerMenuBtn).removeClass('topnav__hamburger--open');
-		$(hamburgerMenuBtn).addClass('topnav__hamburger--closed');
-		$(hamburgerMenu).removeClass('topnav--slide-in');
-		$(hamburgerMenu).addClass('topnav--slide-out');
-	}
-	else {
-		console.log("THE HAMBURGER MENU HAS NO CLASS");
-	}
-});
-
-// $('.topnav__hamburger--closed').click(function() {
-// 	console.log("I OPENED THE HAMBURGER MENU");
-// 	$(hamburgerMenuBtn).addClass('topnav__hamburger--open');
-// 	$(hamburgerMenuBtn).removeClass('topnav__hamburger--closed');
-// 	$(hamburgerMenu).removeClass('topnav--slide-out');
-// 	$(hamburgerMenu).addClass('topnav--slide-in');
-// });
-// $('.topnav__hamburger--open').click(function() {
-// 	console.log("I CLOSED THE HAMBURGER MENU");
-// 	$(hamburgerMenuBtn).removeClass('topnav__hamburger--open');
-// 	$(hamburgerMenuBtn).addClass('topnav__hamburger--closed');
-// 	$(hamburgerMenu).removeClass('topnav--slide-in');
-// 	$(hamburgerMenu).addClass('topnav--slide-out');
-// });
 
 /* EVENTS */
 	/* layout menu */
@@ -240,6 +209,29 @@ $(hamburgerMenuBtn).click(function() {
 		}
 		// getDataState();
 	}
+	function createScrollingScene() {
+		console.log("I AM IN THE STICKY FUNCTION");
+		myMusic = document.querySelector(".section__music");
+		myControls = document.querySelector(".ata-music > .transport");
+		// console.log(myMusic);
+		// console.log(myControls);
+		const controller = new ScrollMagic.Controller();
+		const scene = new ScrollMagic.Scene({
+			offset: -100,
+			triggerElement: myMusic,
+			triggerHook: 0,
+			duration: getScrollingDuration(),
+			reverse: true
+		}).addTo(controller);
+		scene.on("start", function(e) {
+			console.log("music controls are supposed to stay sticky when scrolling down");
+			$(myControls).addClass('is-stuck');
+		});
+		scene.on("leave", function(e) {
+			console.log("music controls are supposed to unstick when scrolling to the end of the notation");
+			$(myControls).removeClass('is-stuck');
+		});
+	}
 	function getDataState() {
 		// var mySingleData = document.querySelector('.subnav > ul li:nth-child(1)');
 		// console.log(mySingleData);
@@ -258,6 +250,11 @@ $(hamburgerMenuBtn).click(function() {
 	// var facsimileDoubleData;
 		// updateDataState();
 	}
+	function getScrollingDuration() {
+		let myDuration = (myMusic.offsetHeight - myControls.offsetHeight) * 1.5;
+		console.log(myDuration + " is my sticky scrolling duration / approx. px height of the music-page notation SVG");
+		return myDuration;
+	}
 	function musicAccessibility() {
 		$(musicNotation).attr('aria-hidden', 'true');
 		$(playButton).attr('aria-label', 'Play Music');
@@ -269,7 +266,11 @@ $(hamburgerMenuBtn).click(function() {
 	function onLoad() {
 		console.log("I AM IN ONLOAD()");
 		checkState();
-		
+		setTimeout(function(){
+			// console.log("ALL ASSETS ARE LOADED!!!!")
+			musicAccessibility();
+			createScrollingScene();
+		}, 1500);
 	}
 		/* language selections */
 	function selectLangEnglishOrig() {
