@@ -1,0 +1,75 @@
+
+
+/* Things to hide if there's no JS */
+
+.music .transport,
+.music .audio {
+  display: initial;
+}
+
+/* If there is JS, unhide */
+
+.music.with-js .transport, 
+.music.with-js .pianoroll {
+  display: auto;
+}
+
+.music.with-js .audio audio.all-tracks,
+html.music-ready .audio audio.all-tracks {
+  display: none;
+}
+
+.music.with-js .cmn .highlighted {
+  fill: red;
+}
+
+.music.with-js .cmn .muted .highlighted {
+  fill: black;
+}
+
+/* Transport */
+
+.music.playing .transport .atalanta-notation-start {
+  display: none;
+}
+
+.music.paused .transport .atalanta-notation-stop {
+  display: none;
+}
+
+/*
+.music.mute-1 .measure > .staff:nth-child(1),
+.music.mute-2 .measure > .staff:nth-child(2),
+.music.mute-3 .measure > .staff:nth-child(3) {
+  opacity: 0.3;
+} */
+
+.music .cmn .staff, 
+.music .cmn .barLineAttr path {
+  transition: opacity 0.5s;
+}
+
+.music .cmn .staff.muted, 
+.music .cmn .barLineAttr path {
+  opacity: 0.3;
+}
+
+.music button.muted {
+  opacity: 0.5;
+}
+
+.music .pianoroll .note.highlighted {
+  fill: yellow;
+}
+
+.music .pianoroll .voice-1 {
+  fill: red;
+}
+
+.music .pianoroll .voice-2 {
+  fill: blue;
+}
+
+.music .pianoroll .voice-3 {
+  fill: green;
+}
