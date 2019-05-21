@@ -4709,8 +4709,10 @@ nav.digital-edition-nav.de-nav--open {
     font-style: normal; }
   .emblem-page span.smallCaps, .emblem-page hi.smallCaps {
     font-variant: small-caps; }
-  .emblem-page span.caps-latin {
+  .emblem-page span.caps-roman {
     text-transform: uppercase;
+    font-style: normal; }
+  .emblem-page span.roman {
     font-style: normal; }
   .emblem-page span.raised {
     vertical-align: super; }
@@ -5407,8 +5409,8 @@ main.emblem-page.frontmatter section.section__epigram {
   main.emblem-page.frontmatter section.section__epigram .original .lang--german .v-line-indent {
     margin-left: 2rem;
     text-indent: 0; }
-  main.emblem-page section.section__epigram .original .lang--german .verse-epigram span:nth-of-type(2),
-  main.emblem-page.frontmatter section.section__epigram .original .lang--german .verse-epigram span:nth-of-type(2) {
+  main.emblem-page section.section__epigram .original .lang--german .verse-epigram > span:nth-of-type(2),
+  main.emblem-page.frontmatter section.section__epigram .original .lang--german .verse-epigram > span:nth-of-type(2) {
     margin-left: 4rem; }
   main.emblem-page section.section__epigram .original .verse-epigram > span:last-child,
   main.emblem-page.frontmatter section.section__epigram .original .verse-epigram > span:last-child {
@@ -5492,8 +5494,8 @@ main.emblem-page.frontmatter .panel--right section.section__epigram .original .l
   margin-left: 2rem;
   text-indent: 0; }
 
-main.emblem-page .panel--right section.section__epigram .original .lang--german .verse-epigram span:nth-of-type(2),
-main.emblem-page.frontmatter .panel--right section.section__epigram .original .lang--german .verse-epigram span:nth-of-type(2) {
+main.emblem-page .panel--right section.section__epigram .original .lang--german .verse-epigram > span:nth-of-type(2),
+main.emblem-page.frontmatter .panel--right section.section__epigram .original .lang--german .verse-epigram > span:nth-of-type(2) {
   margin-left: 4rem; }
 
 main.emblem-page .panel--right section.section__epigram h3 span.regularized,
