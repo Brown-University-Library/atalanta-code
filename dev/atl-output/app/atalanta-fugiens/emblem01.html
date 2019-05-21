@@ -69,8 +69,8 @@
 						<option class="dropdown--language" data-language="inactive" value="english_original">Original English</option>
 						<option  selected="selected" class="dropdown--language" data-language="active" value="english_modern">Modernized English</option>
 						<option class="dropdown--language" data-language="inactive" value="latin_original">Original Latin</option>
-						<option class="dropdown--language" data-language="inactive" value="latin_normal">Normalized Latin</option>
-						<option class="dropdown--language" data-language="inactive" value="german">German</option>
+						<option class="dropdown--language" data-language="inactive" value="latin_normal">Modernized Latin</option>
+						<option class="dropdown--language" data-language="inactive" value="german">Original German</option>
 					</select>
 				</fieldset>
 			</form>
@@ -763,42 +763,5 @@
 	<script src="../assets/js/emblem.js"></script>
 	<script src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
 	<script src="../assets/js/notation.js"></script>
-	<script>
-	$(function () { // NEW STICKY CONTROLS, NEEDS WORK ON REVERSE SCROLL
-		let myMusic;
-		let myControls;
-		setTimeout(function() {
-			createScrollingScene();
-		}, 1500);
-		function createScrollingScene() {
-			console.log("I AM IN THE STICKY FUNCTION");
-			myMusic = document.querySelector(".section__music");
-			myControls = document.querySelector(".ata-music > .transport");
-			// console.log(myMusic);
-			// console.log(myControls);
-			const controller = new ScrollMagic.Controller();
-			const scene = new ScrollMagic.Scene({
-				offset: -100,
-				triggerElement: myMusic,
-				triggerHook: 0,
-				duration: getScrollingDuration(),
-				reverse: true
-			}).addTo(controller);
-			scene.on("start", function(e) {
-				console.log("music controls are supposed to stay sticky when scrolling down");
-				$(myControls).addClass('is-stuck');
-			});
-			scene.on("leave", function(e) {
-				console.log("music controls are supposed to unstick when scrolling to the end of the notation");
-				$(myControls).removeClass('is-stuck');
-			});
-		}
-		function getScrollingDuration() {
-			let myDuration = (myMusic.offsetHeight - myControls.offsetHeight) * 1.2;
-			console.log(myDuration + " is my sticky scrolling duration / approx. px height of the music-page notation SVG");
-			return myDuration;
-		}
-	});
-	</script>
 </body>
 </html>
