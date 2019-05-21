@@ -54,7 +54,7 @@ $(function () {
 	var hamburgerMenuBtnOpen = 'topnav__hamburger--open';
 	var hamburgerMenu = '.topnav > ul';
 	let myMusic;
-	let myControls;
+	let myMusicControls;
 
 
 	// var thisEmblemPage = '.emblem-page';
@@ -212,9 +212,7 @@ $(window).on('load', function() {
 	function createScrollingScene() {
 		console.log("I AM IN THE STICKY FUNCTION");
 		myMusic = document.querySelector(".section__music");
-		myControls = document.querySelector(".ata-music > .transport");
-		// console.log(myMusic);
-		// console.log(myControls);
+		myMusicControls = document.querySelector(".ata-music > .transport");
 		const controller = new ScrollMagic.Controller();
 		const scene = new ScrollMagic.Scene({
 			offset: -100,
@@ -222,14 +220,12 @@ $(window).on('load', function() {
 			triggerHook: 0,
 			duration: getScrollingDuration(),
 			reverse: true
-		}).addTo(controller);
-		scene.on("start", function(e) {
-			console.log("music controls are supposed to stay sticky when scrolling down");
-			$(myControls).addClass('is-stuck');
-		});
-		scene.on("leave", function(e) {
-			console.log("music controls are supposed to unstick when scrolling to the end of the notation");
-			$(myControls).removeClass('is-stuck');
+		}).addTo(controller)
+		.on("enter", function(e) {
+			$(myMusicControls).addClass('is-stuck');
+		})
+		.on("leave", function(e) {
+			$(myMusicControls).removeClass('is-stuck');
 		});
 	}
 	function getDataState() {
@@ -251,7 +247,7 @@ $(window).on('load', function() {
 		// updateDataState();
 	}
 	function getScrollingDuration() {
-		let myDuration = (myMusic.offsetHeight - myControls.offsetHeight) * 1.5;
+		let myDuration = (myMusic.offsetHeight - myMusicControls.offsetHeight) * 1.5;
 		console.log(myDuration + " is my sticky scrolling duration / approx. px height of the music-page notation SVG");
 		return myDuration;
 	}
