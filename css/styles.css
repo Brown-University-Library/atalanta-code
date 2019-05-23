@@ -4709,8 +4709,10 @@ nav.digital-edition-nav.de-nav--open {
     font-style: normal; }
   .emblem-page span.smallCaps, .emblem-page hi.smallCaps {
     font-variant: small-caps; }
-  .emblem-page span.caps-latin {
+  .emblem-page span.caps-roman {
     text-transform: uppercase;
+    font-style: normal; }
+  .emblem-page span.roman {
     font-style: normal; }
   .emblem-page span.raised {
     vertical-align: super; }
@@ -5407,8 +5409,8 @@ main.emblem-page.frontmatter section.section__epigram {
   main.emblem-page.frontmatter section.section__epigram .original .lang--german .v-line-indent {
     margin-left: 2rem;
     text-indent: 0; }
-  main.emblem-page section.section__epigram .original .lang--german .verse-epigram span:nth-of-type(2),
-  main.emblem-page.frontmatter section.section__epigram .original .lang--german .verse-epigram span:nth-of-type(2) {
+  main.emblem-page section.section__epigram .original .lang--german .verse-epigram > span:nth-of-type(2),
+  main.emblem-page.frontmatter section.section__epigram .original .lang--german .verse-epigram > span:nth-of-type(2) {
     margin-left: 4rem; }
   main.emblem-page section.section__epigram .original .verse-epigram > span:last-child,
   main.emblem-page.frontmatter section.section__epigram .original .verse-epigram > span:last-child {
@@ -5492,8 +5494,8 @@ main.emblem-page.frontmatter .panel--right section.section__epigram .original .l
   margin-left: 2rem;
   text-indent: 0; }
 
-main.emblem-page .panel--right section.section__epigram .original .lang--german .verse-epigram span:nth-of-type(2),
-main.emblem-page.frontmatter .panel--right section.section__epigram .original .lang--german .verse-epigram span:nth-of-type(2) {
+main.emblem-page .panel--right section.section__epigram .original .lang--german .verse-epigram > span:nth-of-type(2),
+main.emblem-page.frontmatter .panel--right section.section__epigram .original .lang--german .verse-epigram > span:nth-of-type(2) {
   margin-left: 4rem; }
 
 main.emblem-page .panel--right section.section__epigram h3 span.regularized,
@@ -6381,63 +6383,118 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
     display: none; } }
 
 /*@import 'music-snippets';*/
-/* Things to hide if there's no JS */
-.music .transport,
-.music .audio {
-  display: initial; }
+body {
+  /* background-color: #ddd; */
+  padding: 3em; }
 
-/* If there is JS, unhide */
-.music.with-js .transport,
-.music.with-js .pianoroll {
-  display: auto; }
+/* CMN Visualization */
+/* This is for the background (non-javascript) image */
+.atalanta-notation-viz-cmn {
+  width: 100%;
+  /* height: 500px; */
+  background: white no-repeat;
+  background-size: contain;
+  background-color: white;
+  /* overflow: scroll; */ }
 
-.music.with-js .audio audio.all-tracks,
-html.music-ready .audio audio.all-tracks {
-  display: none; }
-
-.music.with-js .cmn .highlighted {
+.atalanta-notation-viz-cmn .highlighted {
   fill: red; }
 
-.music.with-js .cmn .muted .highlighted {
-  fill: black; }
+.atalanta-notation-viz-cmn svg tspan {
+  font-family: sans-serif !important; }
 
-/* Transport */
-.music.playing .transport .atalanta-notation-start {
-  display: none; }
+.atalanta-notation-viz-cmn .music-pages {
+  float: left;
+  width: 100%; }
 
-.music.paused .transport .atalanta-notation-stop {
-  display: none; }
+.atalanta-notation-viz-cmn .music-pages .music-page {
+  float: left;
+  width: 50%;
+  text-align: center;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0; }
 
-/*
-.music.mute-1 .measure > .staff:nth-child(1),
-.music.mute-2 .measure > .staff:nth-child(2),
-.music.mute-3 .measure > .staff:nth-child(3) {
-  opacity: 0.3;
-} */
-.music .cmn .staff,
-.music .cmn .barLineAttr path {
-  -webkit-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  transition: opacity 0.5s; }
+/* Playing notes */
+.atalanta-notation svg .note {
+  -webkit-transition: fill 0.2s;
+  -o-transition: fill 0.2s;
+  transition: fill 0.2s; }
 
-.music .cmn .staff.muted,
-.music .cmn .barLineAttr path {
-  opacity: 0.3; }
+/* Start / stop / mute buttons */
+.atalanta-notation .transport {
+  width: 100%;
+  float: left;
+  background: white;
+  padding: 1em; }
 
-.music button.muted {
-  opacity: 0.5; }
+.atalanta-notation .transport button {
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 0; }
 
-.music .pianoroll .note.highlighted {
-  fill: yellow; }
+.atalanta-notation .transport .atalanta-notation-start,
+.atalanta-notation .transport .atalanta-notation-stop {
+  height: 100px;
+  width: 100px;
+  display: block;
+  float: left;
+  margin-right: 50px; }
 
-.music .pianoroll .voice-1 {
-  fill: red; }
+.atalanta-notation .transport .atalanta-notation-start {
+  background-image: url("../img/baseline-play_circle_outline-24px.svg"); }
 
-.music .pianoroll .voice-2 {
-  fill: blue; }
+.atalanta-notation .transport .atalanta-notation-start.playing {
+  display: none;
+  /* background-image: url('../img/baseline-play_circle_outline-24px.svg'); */ }
 
-.music .pianoroll .voice-3 {
-  fill: green; }
+.atalanta-notation .transport .atalanta-notation-stop {
+  display: none;
+  background-image: url("../img/baseline-pause_circle_outline-24px.svg"); }
+
+.atalanta-notation .transport .atalanta-notation-stop.playing {
+  display: initial;
+  background-image: url("../img/baseline-pause_circle_outline-24px.svg"); }
+
+/* Mute buttons */
+.atalanta-notation-mute-track {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  width: 20em;
+  text-align: left;
+  padding-left: 50px;
+  cursor: pointer;
+  background-image: url("../img/baseline-record_voice_over-24px.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+
+.atalanta-notation-mute-track.mute {
+  opacity: 0.5;
+  background-image: url("../img/baseline-record_voice_over-mute-24px.svg"); }
+
+.measure .staff {
+  -webkit-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s; }
+
+/* Styles for piano roll view */
+.atalanta-notation-viz-pianoroll g {
+  -webkit-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s; }
+
+.atalanta-notation-viz-pianoroll .voice-1 .note {
+  fill: #1f77b4; }
+
+.atalanta-notation-viz-pianoroll .voice-2 .note {
+  fill: #ff7f0e; }
+
+.atalanta-notation-viz-pianoroll .voice-3 .note {
+  fill: #2ca02c; }
 
 .subnav-v3 {
   background-color: #dae4ec;
@@ -6736,6 +6793,12 @@ body {
   overflow: hidden; }
 
 /* notation */
+.section__music .ata-viz-cmn {
+  padding: 0 1rem; }
+
+.section__music .ata-viz-cmn > svg {
+  grid-column: 1 / 13; }
+
 .section__music .ata-viz-cmn .music-pages .music-page {
   text-align: center;
   -webkit-transform-origin: 0 0;
@@ -6762,6 +6825,9 @@ body {
 
 .section__music .music-page:nth-of-type(2) {
   margin-top: -5rem; }
+
+.panel--full .section__music .ata-viz-cmn > svg {
+  grid-column: 2 / 12; }
 
 /* overlapping notation */
 .section__music g#m-600.verse g#m-601.syl text {
