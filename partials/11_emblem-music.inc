@@ -1,4 +1,4 @@
-<div xmlns:svg="http://www.w3.org/2000/svg" class="music ata-music paused">
+<div class="music ata-music paused">
    <div class="transport" id="my-transport"><button class="atalanta-notation-start" aria-label="Play Music">
          <div class="play-btn__icon"></div>
          <div class="play-btn__label">Play</div></button><button class="atalanta-notation-stop" aria-label="Pause Music">
