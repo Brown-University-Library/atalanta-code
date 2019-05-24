@@ -3198,7 +3198,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 
 .topnav {
   background-color: #333;
-  color: gray;
+  color: #808080;
   font-family: "GTAmericaBold", "Avenir", Helvetica, Arial, sans-serif;
   font-size: .75rem;
   height: 3.125rem;
@@ -3404,11 +3404,11 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   -ms-flex-direction: column;
   flex-direction: column;
   font-family: "GTAmericaBold", "Avenir", Helvetica, Arial, sans-serif;
-  height: calc(40vh - 8rem);
+  height: calc(60vh - 8rem);
   margin: 0;
   padding: 0 4rem;
   position: fixed;
-  top: -40vh;
+  top: -60vh;
   width: calc(100vw - 8rem);
   z-index: 1000; }
   .search__modal button.x-close {
