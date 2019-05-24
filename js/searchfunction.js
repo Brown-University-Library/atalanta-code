@@ -61,6 +61,8 @@ Promise.all([
                     }
                 }
                 
+                console.log(allresults);
+
                 //Another temp array/intermediary step:
                 var mergedresults = {};
                 //Final result returned as part of our output:
@@ -90,10 +92,10 @@ Promise.all([
                             mergedresults[section].push([val]);
                         }
                     });
-                    //console.log(mergedresults[section])
+
+                    //console.log(mergedresults)
                     //Cycle through mergedresults and insert context text for each hit.
                     mergedresults[section].forEach( (val) => {
-                        //
                         var newctx = [];
                         
 
@@ -130,6 +132,8 @@ Promise.all([
                         //console.log(searchcontexts[section]);
                     });
                 }
+
+                //console.log(searchcontexts)
         
                 thisoutp = {
                     contexts: searchcontexts,
@@ -138,8 +142,10 @@ Promise.all([
                     type: thisdoc.type,
                     resultcount: resultcount,
                 }
+
+                //console.log(thisoutp);
                 
-                if ( 'emblem' == thisoutp.type ) {
+                if ( 'emblem' == thisoutp.type || 'af-frontmatter' == thisoutp.type ) {
                     outp.emblems.push(thisoutp);
                 } else {
                     outp.scholarship.push(thisoutp);

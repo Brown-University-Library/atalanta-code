@@ -6,8 +6,8 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>Furnace and Fugue: Atalanta fugiens (Digital Edition)</title>
-	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css">
-<!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
+	<!-- <link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css"> -->
+	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" />
 </head>
 <body class="emblem-body">
 <!-- GLOBAL NAVIGATION -->
@@ -69,8 +69,8 @@
 						<option class="dropdown--language" data-language="inactive" value="english_original">Original English</option>
 						<option  selected="selected" class="dropdown--language" data-language="active" value="english_modern">Modernized English</option>
 						<option class="dropdown--language" data-language="inactive" value="latin_original">Original Latin</option>
-						<option class="dropdown--language" data-language="inactive" value="latin_normal">Modernized Latin</option>
-						<option class="dropdown--language" data-language="inactive" value="german">Original German</option>
+						<option class="dropdown--language" data-language="inactive" value="latin_normal">Normalized Latin</option>
+						<option class="dropdown--language" data-language="inactive" value="german">German</option>
 					</select>
 				</fieldset>
 			</form>
@@ -402,7 +402,7 @@
 					</a>
 				</div>
 			</div>
-			<button class="thumbnail-trigger"><span><span class="thumbnail-trigger__label">Emblem</span><span class="thumbnail-trigger__icon"></span></span></button>
+			<button class="thumbnail-trigger"><span><span class="thumbnail-trigger__label">Page</span><span class="thumbnail-trigger__icon"></span></span></button>
 		</nav> 
 <!-- EMBLEM GRID -->
 		<!-- Facsimile -->
@@ -430,6 +430,7 @@
 		</div>
 		<div class="emblem panel--right">
 			<!-- Motto -->
+			<a name="motto"></a>
 			<div class="my-offset-debug"></div>
 			<section id="basic-waypoint__0" class="section__motto grid--full">
 				<div class="translation">
@@ -458,7 +459,7 @@
 				            </h1>
 				        </div>
 				    </div>
-					<div class="lang--german _motto--german edition--facsimile is-hidden" lang="de">
+					<div class="lang--german _motto--german is-hidden" lang="de">
 						<div xmlns:af="http://www.tei-c.org/ns/1.0" class="fugue de" lang="de">
 							<span class="pb atalanta-fugiens">12</span>
 				            <h3 class="title" lang="la">FUGA I. in Quarta, infrà.</h3>
@@ -470,6 +471,7 @@
 				</div>
 			</section>
 			<!-- Image -->
+			<a name="image"></a>
 			<div class="my-offset-debug"></div>
 			<div id="basic-waypoint__1" class="section__image grid--full">					
 				<div class="image--full grid--full">
@@ -486,10 +488,11 @@
 				</div>
 			</div>
 			<!-- Music -->
+			<a name="music"></a>
 			<div class="my-offset-debug"></div>
 			<section id="basic-waypoint__2" class="section__music grid--full">
 				<div class="_music music--full">
-							<div class="music ata-music paused">
+							<div xmlns:svg="http://www.w3.org/2000/svg" class="music ata-music paused">
 							   <div class="transport" id="my-transport"><button class="atalanta-notation-start" aria-label="Play Music">
 							         <div class="play-btn__icon"></div>
 							         <div class="play-btn__label">Play</div></button><button class="atalanta-notation-stop" aria-label="Pause Music">
@@ -506,7 +509,7 @@
 							            <div class="piano-roll__label">Show piano roll</div></a></div>
 							   </div>
 							   <div class="audio"><audio hidden src="../assets/audio/01-A-56bpm-Dry.mp3" data-track="1" class="dry" type="audio/mpeg"></audio><audio hidden src="../assets/audio/01-A-56bpm-Reverb.mp3" data-track="1" class="reverb" type="audio/mpeg"></audio><audio hidden src="../assets/audio/01-H-56bpm-Dry.mp3" data-track="2" class="dry" type="audio/mpeg"></audio><audio hidden src="../assets/audio/01-H-56bpm-Reverb.mp3" data-track="2" class="reverb" type="audio/mpeg"></audio><audio hidden src="../assets/audio/01-P-56bpm-Dry.mp3" data-track="3" class="dry" type="audio/mpeg"></audio><audio hidden src="../assets/audio/01-P-56bpm-Reverb.mp3" data-track="3" class="reverb" type="audio/mpeg"></audio></div>
-							   <div class="cmn ata-viz-cmn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin" viewBox="0 0 21000 64137" version="1.1">
+							   <div class="cmn ata-viz-cmn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="630px" preserveAspectRatio="xMinYMin" viewBox="0 0 21000 64137" version="1.1">
 							         	
 							         <desc>Engraved by Verovio 2.1.0-dev-[undefined]</desc>
 							         	
@@ -11678,6 +11681,7 @@
     			</div>
 			</section>
 			<!-- Epigram -->
+			<a name="epigram"></a>
 			<div class="my-offset-debug"></div>
 			<section id="basic-waypoint__3" class="section__epigram grid--full">
 				<div class="translation">
@@ -11709,22 +11713,23 @@
 			               </div>
 			            </div>
 					</div>
-					<div class="lang--german _epigram--german edition--facsimile is-hidden" lang="de">
+					<div class="lang--german _epigram--german is-hidden" lang="de">
 						<div xmlns:af="http://www.tei-c.org/ns/1.0" class="epigram de" lang="de">
-			               <h3 class="title" lang="la">II. Epigrammatis Latini versio Germanica.</h3>
-			               <div class="verse-epigram" lang="de">
-			                  <br/><span class="v-line">Romulus von einer Wölffin ist / aber Jupiter gesäuget</span>
-			                  <br/><span class="v-line-indent">Von einer Geiß/ wir solches das Gerüchte bezeuget.</span>
-			                  <br/><span class="v-line">Was Wunder ist / so wir sagen / daß der Weisen Kind ernehret</span>
-			                  <br/><span class="v-line-indent">Sey von der Erd / so ihm ihre Milch hat gewehret?</span>
-			                  <br/><span class="v-line">So dann die Thier gespeiset <span class="original">han</span><span class="regularized">haben</span> solche grosse Helden gewiß /</span>
-			                  <br/><span class="v-line-indent">Wie groß mag dann der seyn / <span class="regularized">dessn</span><span class="original">dessin</span> die Erd Säugmutter ist?</span>
+               				<h3 class="title" lang="la">I. Epigrammatis Latini versio Germanica.</h3>
+               				<div class="verse-epigram" lang="de">
+                  				<br><span class="v-line">Die Frucht im Bauch deß Winds/ welche noch verborgen lebet/</span>
+                  				<br><span class="v-line-indent">So ferne in dieses Liecht die selbe wirt erhebet/</span>
+                  				<br><span class="v-line">kan allerhohen Helden Raht und That ubergehen weit</span>
+                  				<br><span class="v-line-indent">Durch kunst und starcke Gewalt und seines Leibes Arbeit;</span>
+                  				<br><span class="v-line">Schaw/ daß er nicht unziemlich vor der Zeit geboren werd/</span>
+                				<br><span class="v-line-indent">Sondern in rechter Maß komme lebendig auff die Erd.</span>
 			               </div>
 			            </div>
 					</div>
 				</div>
 			</section>
 			<!-- Discourse -->
+			<a name="discourse"></a>
 			<div class="my-offset-debug"></div>
 			<section id="basic-waypoint__4" class="section__discourse grid--full">
 				<div class="translation">
@@ -11929,8 +11934,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <!-- 	<script src="../assets/js/vendors/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 	<script src="../assets/js/vendors/OwlCarousel2-2.3.4/src/js/owl.navigation.js"></script> -->
-	<script src="../assets/js/emblem.js"></script>
-	<script src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
+	<script src="../assets/js/emblem_music-test.js"></script>
+	<script src="../assets/js/openseadragon_music-test.js"></script>
 	<script src="../assets/js/notation.js"></script>
 </body>
 </html>
