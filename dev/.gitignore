@@ -19,11 +19,14 @@ atl_demo-05-04-19
 
 maier
 
+jake-search
+
 # atalanta-search #
 ###################
 dev/atl-output/app/assets/js/vendors/mustache/
 atl-output/app/assets/js/faceting.js
 atl-output/app/assets/js/facets.js
+atl-output/app/assets/js/imagesearchfunction.js
 atl-output/app/assets/js/navbar.pug
 atl-output/app/assets/js/navbar.js
 atl-output/app/assets/js/page.pug

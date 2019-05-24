@@ -12,22 +12,22 @@ $(document).ready(function() {
 	var activeImage = document.querySelector('.item--active');
 	var inactiveImage = document.querySelector('.item--inactive');
 	var resultsTermsTrigger = '.image-results__button-row button:nth-child(1)';
-	var resultsTermsEscapeX = 'image-results__button--open' 
+	var resultsTermsEscapeX = 'image-results__button--open';
 	var resultsTermsContainer = '.image-results__all-terms';
 	var resultsTermsHidden = 'all-terms--inactive';
 	var resultsTermsRevealed = 'all-terms--active';
-
 
 	// var browserHeight = $(window).height(),
 	// 	elementPosition = $('#btn-shuffle').offset().top,
 	// 	elementTrigger = elementPosition - browserHeight,
 	// 	myElement = $('.image-search__results-viz').offset().top;
 
-
+	var heroPlaceholder = $('h1.hero__heading').html();
+	console.log("--", heroPlaceholder, "--")
 
 
 	$("#btn-shuffle").on("click", function() {
-	   makeImageArrays();
+	   
 	});
 	$(resultsVizBtn).on('click', function() {
 		var container = '.image-results__container';
@@ -43,6 +43,13 @@ $(document).ready(function() {
 
 		// };
 	});
+	
+	$('html').on('click', 'span.selected-filter', ev => {
+		console.log('clicky.', ev.currentTarget);
+		var tid = $(ev.currentTarget).attr('data-id');
+		$('li.subcategory__term-item a[data-id="'+tid+'"]').click();
+	});
+	
 	function makeImageArrays() {
 		var activeArray = [];
 		var inactiveArray = [];
@@ -163,6 +170,12 @@ $(document).ready(function() {
 		var that = this; // store which results item terms button was clicked
 		checkResultsItemTermsState(that);
 	});
+
+	$('body').on('click', 'button#reset-button', ev => {
+		$('li.'+imageTermSelected).removeClass(imageTermSelected);
+		updateEmblemView();
+	});
+	
 /* FUNCTIONS */
 	function checkCategorySelected(selectedCategory) {
 		var currentCategory = $(selectedCategory).parent(); // store which category is selected
@@ -232,15 +245,19 @@ $(document).ready(function() {
 		var actives = activeEmblems(); //Array of emblem numbers. Not zero-padded strings.
 		var filts = activeFilters();
 
-		//Hero — Replace the text in h1.hero__heading with the number of results (line 67)
-		$('h1.hero__heading').text(actives.length);
-		
-		//Breadcrumbs — Create an <li><a> element containing the selected term and add 
-		//to/remove from ul.filters__list (ex: line 57) 
-		
-		//<li><a href="#"><span class="selected-filter">Selected Term Goes Here</span><span class="selected-filter__icon"></span></a></li>
-		var filterList = filterselectionTemplate( { filterData: filts } );
-		console.log(filterList);
+		if ( filts.length == 0 ) {
+			//No filters are selected.
+			$('h1.hero__heading').html(heroPlaceholder);
+			filterList = '';
+		} else {
+			//Breadcrumbs — Create an <li><a> element containing the selected term and add 
+			//to/remove from ul.filters__list (ex: line 57) 
+			var filterList = filterselectionTemplate( { filterData: filts } );
+			//Hero — Replace the text in h1.hero__heading with the number of results (line 67)
+			var resultsLabel = actives.length === 1 ? " result" : " results";
+			$('h1.hero__heading').text(actives.length + resultsLabel);
+		}
+
 		$('.filters__list').html(filterList);
 		
 		//Visualization — Add/remove the class "image--active" from the corresponding 
@@ -261,8 +278,9 @@ $(document).ready(function() {
 			$(linksel).parents('li').addClass(linkcls);
 
 			$('div.image-results__item'+imgid).removeClass('item--inactive').addClass('item--active');
-
 		}, this);
-
+		
+		makeImageArrays();
 	}
 });
+
