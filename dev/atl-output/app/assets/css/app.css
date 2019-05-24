@@ -3150,7 +3150,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   background-color: #000;
   border-radius: 15px;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   height: auto;
   left: auto;
   margin: 10px 10%;
@@ -3198,7 +3198,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 
 .topnav {
   background-color: #333;
-  color: #808080;
+  color: gray;
   font-family: "GTAmericaBold", "Avenir", Helvetica, Arial, sans-serif;
   font-size: .75rem;
   height: 3.125rem;
