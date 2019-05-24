@@ -8,12 +8,17 @@ Misc. notes re: “101”s (Get Acquainted sections)
 * currently linked custom JavaScript will need to be swapped to Jake’s final provided file(s), or his Hugo setup’s output; temporality, for draft purposes, using compiled version from SiteSucker app (via code at atalanta.dev.jakeandco.com)
 
 ## Re: front-matter/getacquainted/alchemy
-* 
+* non-synced version for author proofing:\
+http://cds.library.brown.edu/projects/atl-101s/101s/alchemy/
 
 ## Re: front-matter/getacquainted/maier
+* non-synced version for author proofing:\
+http://cds.library.brown.edu/projects/atl-101s/101s/maier/
 * known issue: top nav size transition “bumps” fixed div containting map assets to right & dowardward
 * known issue: J’s JS for anchor-link sectional nav animation not yet taking into account height of interactive map header
 * known issue: top titling not yet positioning correctly for phone widths (renders under map header)
 
 ## Re: front-matter/getacquainted/printing
+* non-synced version for author proofing:\
+http://cds.library.brown.edu/projects/atl-101s/101s/printing/
 * “Printed Works…” list to get edited by Tara/Donna/others (to correct provided OCR text’s errors and/or inconsistent capitalization issues)
