@@ -4036,7 +4036,7 @@ main.emblem-page {
   /*background-size: cover;*/
   /*	background-size: contain;*/
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 4fr 6fr;
   grid-template-rows: 1fr;
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1rem;
@@ -4165,10 +4165,11 @@ main.emblem-page {
   grid-column-end: 4; }
 
 .grid--half {
-  width: 50%;
+  width: 40%;
   background-color: silver; }
 
 /* BREAKPOINTS */
+/* small  -  mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .emblem {
     margin-top: 0; }
@@ -4180,7 +4181,12 @@ main.emblem-page {
     margin-top: 0;
     margin-bottom: 3.125rem; } }
 
+/* medium  -  tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  main.emblem-page {
+    grid-template-columns: repeat(2, 1fr); }
+  .grid--half {
+    width: 50%; }
   .emblem__image--cropped {
     width: 100%; } }
 
@@ -6671,7 +6677,7 @@ body {
   height: calc(100vh - 6.25rem);
   /* viewheight - topnav - emblem nav */
   padding: 0 1rem;
-  width: calc(50vw/12 * 2); }
+  width: calc(60vw/12 * 2); }
   .section__music ._music .ata-music .transport .atalanta-notation-start,
   .section__music ._music .ata-music .transport .atalanta-notation-stop,
   .section__music ._music .ata-music .transport .atalanta-notation-mute-track,
@@ -6903,8 +6909,8 @@ body {
   /* sticky music player controls */
   .panel--right .section__music ._music .ata-music .transport.is-stuck {
     background-color: #dae4ec;
-    left: 50vw;
-    width: calc(50vw/12 * 2); }
+    left: 40vw;
+    width: calc(60vw/12 * 2); }
   .panel--right .section__music ._music .ata-music .transport.is-unstuck {
     background-color: #f2f2f2; } }
 
@@ -7130,6 +7136,16 @@ body {
       -webkit-flex-direction: column;
       -ms-flex-direction: column;
       flex-direction: column; } }
+
+/* BREAKPOINTS */
+/* medium  -  tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .section__music ._music .ata-music .transport {
+    width: calc(50vw/12 * 2); }
+  /* @supports (display: grid) {...} */
+  .panel--right .section__music ._music .ata-music .transport.is-stuck {
+    left: 50vw;
+    width: calc(50vw/12 * 2); } }
 
 .frontmatter section {
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
@@ -7414,6 +7430,7 @@ body {
       -ms-transform: scale(0.5);
       transform: scale(0.5); } }
 
+/* medium  -  tablet */
 main#image-search {
   min-height: 100vh;
   margin-top: 3.125rem;

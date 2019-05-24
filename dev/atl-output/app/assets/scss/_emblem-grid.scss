@@ -8,7 +8,7 @@ main.emblem-page {
 	/*background-size: cover;*/
 /*	background-size: contain;*/
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 4fr 6fr;
 	grid-template-rows: 1fr;
 	font-family: $body-font_emblem;
 	font-size: 1rem;
@@ -139,11 +139,12 @@ main.emblem-page {
 	grid-column-end: 4;	
 }
 .grid--half {
-	width: 50%;
+	width: 40%;
 	background-color: silver;
 }
 
 /* BREAKPOINTS */
+/* small  -  mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
 	.emblem {
 		margin-top: 0;
@@ -159,7 +160,14 @@ main.emblem-page {
 		margin-bottom: $subnav-h;
 	}
 }
+/* medium  -  tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+	main.emblem-page {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.grid--half {
+		width: 50%;
+	}
 	.emblem__image--cropped {
 		width: 100%;
 	}
