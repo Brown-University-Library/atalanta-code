@@ -3150,7 +3150,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   background-color: #000;
   border-radius: 15px;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   height: auto;
   left: auto;
   margin: 10px 10%;
@@ -3404,11 +3404,11 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   -ms-flex-direction: column;
   flex-direction: column;
   font-family: "GTAmericaBold", "Avenir", Helvetica, Arial, sans-serif;
-  height: calc(40vh - 8rem);
+  height: calc(60vh - 8rem);
   margin: 0;
   padding: 0 4rem;
   position: fixed;
-  top: -40vh;
+  top: -60vh;
   width: calc(100vw - 8rem);
   z-index: 1000; }
   .search__modal button.x-close {
