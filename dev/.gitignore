@@ -15,11 +15,21 @@ fonts
 
 atl-demo-site
 
+atl_demo-05-04-19
+
+maier
+
+jake-search
+
 # atalanta-search #
 ###################
+dev/atl-output/app/assets/js/vendors/mustache/
+
 jake-search
+
 atl-output/app/assets/js/faceting.js
 atl-output/app/assets/js/facets.js
+atl-output/app/assets/js/imagesearchfunction.js
 atl-output/app/assets/js/navbar.pug
 atl-output/app/assets/js/navbar.js
 atl-output/app/assets/js/page.pug
@@ -32,5 +42,9 @@ atl-output/app/data/json/searchdocs.json
 atl-output/app/data/json/byterm_enh_array.json
 atl-output/app/assets/js/filterSelection.js
 
-
-
+# atalanta image search #
+#########################
+atl-output/app/assets/js/faceting.js
+atl-output/app/assets/js/facets.js
+atl-output/app/assets/js/filterSelection.js
+atl-output/app/assets/js/navbar.js

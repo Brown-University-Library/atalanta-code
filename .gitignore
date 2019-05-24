@@ -1,13 +1,5 @@
 #### MUSIC PLAYER DEMO FOR SR ####
 atl-music-player
 
-### SEARCH ###
-dev/atl-output/app/assets/js/faceting.js
-dev/atl-output/app/assets/js/facets.js
-dev/atl-output/app/assets/js/image-search.js
-dev/atl-output/app/assets/js/navbar.js
-dev/atl-output/app/assets/js/navbar.pug
-dev/atl-output/app/assets/js/vendors/mustache/*
-
-### I DON'T KNOW WHAT THIS IS ###
+# I DON'T KNOW WHAT THIS IS #
 emblem-template
