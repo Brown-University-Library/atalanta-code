@@ -8,7 +8,7 @@ a.a11y_skip-main {
     position: absolute;
     top: auto;
     width: 1px;
-    z-index:-999;
+    z-index: -999;
 }
 a.a11y_skip-main:focus, a.a11y_skip-main:active {
     background-color:$black_pure;
@@ -101,8 +101,8 @@ header[data-page-type='other'] {
 		box-sizing: border-box;
 		display: flex;
 		align-items: center;
-		flex-direction: row;
 		justify-content: space-between;
+		flex-direction: row;
 		padding: 0 3.5rem;
 		width: 100vw;
 	}
@@ -125,6 +125,11 @@ header[data-page-type='other'] {
 		filter: grayscale(1); /* close to $gray_medium */
 		height: $topnav-h;
 		width: 5.5rem;
+	}
+	li.topnav__logo a:focus, 
+	li.topnav__content a:focus, 
+	li.topnav__search button:focus {
+		outline: 1px dotted $white;
 	}
 	li.topnav__logo a:hover, 
 	li.topnav__logo a:focus {
@@ -168,32 +173,22 @@ header[data-page-type='other'] {
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
-/*		justify-content: space-between;*/
 		height: $topnav-h;
 		width: 5.5rem;
 	}
-	li.topnav__search button:hover {
-		color: $red;
-		transition: .2s;
-	}
 	li.topnav__search svg {
 		width: 5.5rem;
-/*		transform: scale(2.5);
-		width: 2rem;*/
 	}
 	li.topnav__search svg .st0 {
 		stroke: $gray_medium;
 	}
-	li.topnav__search button:hover svg .st0 {
+	li.topnav__search button:hover svg .st0, 
+	li.topnav__search button:focus svg .st0 {
 		stroke: $red;
 		transition: .2s;
 	}
 	li.topnav__search span.topnav__search-label {
 		display: none;
-/*		font-family: $display-font_secondary;
-		font-size: .75rem;
-		letter-spacing: .05em;
-		text-transform: uppercase;*/
 	}
 	li.topnav__search a:hover span.topnav__search-label, 
 	li.topnav__search a:focus span.topnav__search-label {
@@ -201,6 +196,7 @@ header[data-page-type='other'] {
 		transition: .2s;
 	}
 }
+
 
 .search__modal {
 	background-color: $red_transparent;
@@ -271,7 +267,6 @@ header[data-page-type='other'] {
 		align-self: flex-end;
 		background-color: $black;
 		border-bottom: 2px solid $black;
-		box-sizing: border-box;
 		color: $gray_light;
 		flex: 0 0 15%;
 		font-size: .875rem;
@@ -483,7 +478,7 @@ header[data-page-type='other'] {
 		height: 8rem;
 	}
 }
-/* large - laptop */
+/* small - laptop */
 @media screen and (min-width: 1000px) and (max-width: 1299px) {
 	.search__modal {
 		height: calc(60vh - 4rem);
@@ -498,7 +493,6 @@ header[data-page-type='other'] {
 }
 /* large  -  desktop */
 @media screen and (min-width: 1500px) and (max-width: 1999px) {
-	
 
 }
 /* extra-large */

@@ -1,6 +1,10 @@
 @import 'colors';
 @import 'utilities';
 
+body {
+	padding: 0; /* override notation css */
+}
+
 /* general styles */
 .section__music {
 	font-family: $body-font_emblem;
@@ -9,7 +13,7 @@
 	.transport {
 		background-color: $gray_light;
 		box-sizing: border-box;
-		height: calc(100vh - 6.25rem); /* view height - topnav - emblem nav */
+		height: calc(100vh - 6.25rem); /* viewheight - topnav - emblem nav */
 		padding: 0 1rem;
 		width: calc(50vw/12 * 2);
 		.atalanta-notation-start, 
@@ -26,6 +30,19 @@
 			padding: 0;
 			text-align: center;
 			width: 100%;
+		}
+		.atalanta-notation-start, 
+		.atalanta-notation-stop, 
+		.atalanta-notation-mute-track {
+			min-height: calc((100vh - 6.25rem) * .2); /* viewheight - topnav - emblem nav / number of buttons in transport */
+		}
+		.atalanta-notation__switch a {
+			max-height: calc((100vh - 6.25rem) * .2); /* viewheight - topnav - emblem nav / number of buttons in transport */
+		}
+		button:focus, 
+		.atalanta-notation__switch a:focus {
+			filter: brightness(0.5);
+			outline: none;
 		}
 		button > div:nth-child(1) {
 			background-position: center;
@@ -111,6 +128,12 @@
 
 /* notation */
 .section__music {
+	.ata-viz-cmn {
+		padding: 0 1rem;
+	}
+	.ata-viz-cmn > svg {
+		grid-column: 1 / 13;
+	}
 	.ata-viz-cmn .music-pages .music-page {
 	  text-align: center;
 	  transform-origin: 0 0;
@@ -124,11 +147,26 @@
 	.music-pages {
 		padding-bottom: 8rem;
 	}
+	.music-pages g.verse tspan {
+	    font-size: 280px !important;
+	  }
 	.music-page:nth-of-type(1) {
 		margin-top: -6rem;
 	}
 	.music-page:nth-of-type(2) {
 		margin-top: -5rem;
+	}
+}
+.panel--full .section__music {
+	.ata-viz-cmn > svg {
+		grid-column: 2 / 12;
+	}
+}
+
+/* overlapping notation */
+.section__music {
+	g#m-600.verse g#m-601.syl text { /* emblem 1, line 13 */
+		transform: translateX(-200px);
 	}
 }
 
@@ -308,6 +346,10 @@
 		padding: 0;
 		text-align: center;
 		width: 100%;
+	}
+	button:focus {
+		filter: brightness(0.5);
+		outline: none;
 	}
 	button > div:nth-child(1) {
 		background-position: center;

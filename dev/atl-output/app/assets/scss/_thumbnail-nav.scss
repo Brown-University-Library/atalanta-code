@@ -4,6 +4,7 @@ nav.digital-edition-nav {
 	padding-top: 1rem;
 	position: fixed;
 	top: $topnav-h;
+	width: 100%;
 	z-index: $thumbnailtrigger-z;
 	.owl-carousel {
 		background-color: $blue_light;
@@ -130,7 +131,7 @@ nav.digital-edition-nav {
 			filter: hue-rotate(200deg);
 		}*/
 	}
-	.thumbnail-trigger > div {
+	.thumbnail-trigger > span {
 		display: flex;
 		align-items: flex-start;
 		justify-content: center;
@@ -165,7 +166,7 @@ nav.digital-edition-nav.de-nav--closed { /* experiment with close drawer timing 
 nav.digital-edition-nav.de-nav--open {
 	transform: translate3d(0, 0, 0); /* Is this needed??? */
 	transition: .5s;
-	.thumbnail-trigger > div {
+	.thumbnail-trigger > span {
 		transform: translate3d(4px, -32px, 0);
 		transition: .2s;
 	}
@@ -206,7 +207,7 @@ nav.digital-edition-nav.de-nav--open {
 		left: calc(-50% + 3.25rem);
 		width: 6.5rem;
 	}
-	nav.digital-edition-nav .thumbnail-trigger > div {
+	nav.digital-edition-nav .thumbnail-trigger > span {
 		font-size: .75rem;
 	}
 	nav.digital-edition-nav.de-nav--closed {
@@ -215,7 +216,7 @@ nav.digital-edition-nav.de-nav--open {
 			left: calc(-50% + 2.55rem);
 			width: 5rem;
 		}
-		.thumbnail-trigger > div {
+		.thumbnail-trigger > span {
 
 		}
 		.thumbnail-trigger__label {
