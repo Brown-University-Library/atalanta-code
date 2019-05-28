@@ -5885,7 +5885,7 @@ main.emblem-page.frontmatter {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-template-rows: auto;
-      margin-bottom: 8rem; }
+      margin-bottom: 6rem; }
     main.emblem-page.frontmatter section.section__author-epigram ._author-epigram--english,
     main.emblem-page.frontmatter section.section__author-epigram ._author-epigram--latin,
     main.emblem-page.frontmatter section.section__author-epigram ._dedication--english,
@@ -6008,7 +6008,7 @@ main.emblem-page.frontmatter {
     main.emblem-page.frontmatter section.section__preface ._preface--latin .page.italic {
       font-size: 1.25rem;
       grid-column: 1 / 3;
-      line-height: 2;
+      line-height: 1.5;
       /*		span {
 				font-size: 1.25rem;
 				line-height: 2;
@@ -6036,31 +6036,89 @@ main.emblem-page.frontmatter {
 
 /* FRONTISPIECE */
 main.emblem-page.frontmatter section.section__frontispiece {
-  padding-top: 2rem;
   /* English */
   /* Latin */ }
   main.emblem-page.frontmatter section.section__frontispiece div.titlePage {
-    text-align: center; }
-  main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2) {
+    text-align: center;
+    line-height: 1.5; }
+  main.emblem-page.frontmatter section.section__frontispiece .edition--normalized div.titlePage {
+    padding-top: 2rem; }
+  main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--facsimile .ab:nth-of-type(1) {
+    margin-bottom: -3.25rem; }
+  main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2),
+  main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--facsimile .ab:nth-of-type(2),
+  main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin span.title-3,
+  main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin span.title-4,
+  main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin span.title-4 span {
     font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
     font-size: 3rem;
     font-weight: 600;
-    line-height: 1.25;
-    margin-bottom: 2rem;
-    padding: 0 2rem; }
-  main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english .ab:nth-of-type(4) {
-    margin-top: 2rem; }
-  main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(5) {
+    line-height: 1.2; }
+  main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(2),
+  main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--facsimile .ab:nth-of-type(2) {
+    margin-bottom: 1rem; }
+  main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(n+2):nth-child(-n+3) {
     margin-bottom: 2rem; }
+  main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--normalized div.titlePage .ab:nth-of-type(3) {
+    /*text-align: left;*/ }
+  main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(3) > span.regularized:nth-child(2) {
+    display: none; }
+  main.emblem-page.frontmatter section.section__frontispiece div.translation ._frontispiece--english.edition--normalized .ab:nth-of-type(n+4):nth-child(-n+5) {
+    margin-bottom: 1.5rem; }
   main.emblem-page.frontmatter section.section__frontispiece div.pref-epigram.la {
     display: inline-block;
     font-size: 1.25rem;
-    line-height: 2;
+    line-height: 1.5;
     text-align: center; }
-  main.emblem-page.frontmatter section.section__frontispiece .edition--regularized span.original {
+  main.emblem-page.frontmatter section.section__frontispiece .titlepage-center:nth-child(1) {
+    margin-bottom: 1.5rem; }
+  main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin.edition--original span.title-1,
+  main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin.edition--original span.title-3,
+  main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin.edition--original span.title-4,
+  main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin.edition--original span.title-4 span {
+    text-transform: uppercase; }
+  main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin.edition--original span.title-1 {
+    letter-spacing: .15em; }
+  main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin.edition--original span.title-1,
+  main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin.edition--original span.title-2 {
+    font-style: oblique; }
+  main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin.edition--original span.title-3,
+  main.emblem-page.frontmatter section.section__frontispiece div.original ._frontispiece--latin.edition--original span.title-4 {
+    letter-spacing: .08em; }
+  main.emblem-page.frontmatter section.section__frontispiece .hanging-indent {
+    margin-bottom: -.5rem;
+    padding-left: 7rem;
+    text-align: left;
+    text-indent: -4.5%; }
+  main.emblem-page.frontmatter section.section__frontispiece .hanging-indent > br:first-child {
     display: none; }
+  main.emblem-page.frontmatter section.section__frontispiece .titlepage-center > span.italic:nth-of-type(1)::after {
+    /* the byline needs a line break after it */
+    content: "\A";
+    white-space: pre; }
+  main.emblem-page.frontmatter section.section__frontispiece .edition--regularized span.original {
+    /*display: none;*/ }
+  main.emblem-page.frontmatter section.section__frontispiece span.caps {
+    display: inline-block;
+    font-variant: small-caps; }
+  main.emblem-page.frontmatter section.section__frontispiece span.caps::first-letter {
+    /*font-weight: 400;*/ }
+  main.emblem-page.frontmatter section.section__frontispiece .edition--regularized span.smallCaps
+.edition--regularized span.caps {
+    letter-spacing: .1em; }
+  main.emblem-page.frontmatter section.section__frontispiece .edition--original span.smallCaps,
   main.emblem-page.frontmatter section.section__frontispiece .edition--original span.caps {
     letter-spacing: .2em; }
+  main.emblem-page.frontmatter section.section__frontispiece .edition--original span.caps-italic,
+  main.emblem-page.frontmatter section.section__frontispiece .edition--original span.overline {
+    font-style: oblique;
+    letter-spacing: .2em;
+    text-transform: uppercase; }
+  main.emblem-page.frontmatter section.section__frontispiece span.caps-italic::before,
+  main.emblem-page.frontmatter section.section__frontispiece span.caps-italic::after,
+  main.emblem-page.frontmatter section.section__frontispiece span.overline::before {
+    content: "\A";
+    white-space: pre; }
 
 main.emblem-page.frontmatter .panel--full section.section__frontispiece {
   padding-top: 4rem; }
@@ -6069,7 +6127,7 @@ main.emblem-page.frontmatter .panel--full section.section__frontispiece {
   main.emblem-page.frontmatter .panel--full section.section__frontispiece div.translation ._frontispiece--english .ab:not(:nth-of-type(1)):not(:nth-of-type(2)) {
     padding: 0 19rem; }
   main.emblem-page.frontmatter .panel--full section.section__frontispiece div.original ._frontispiece--latin {
-    padding: 0 19rem; }
+    padding: 0 17rem; }
 
 /* AUTHOR'S EPIGRAM */
 main.emblem-page.frontmatter section.section__author-epigram {
