@@ -15,7 +15,7 @@ body {
 		box-sizing: border-box;
 		height: calc(100vh - 6.25rem); /* viewheight - topnav - emblem nav */
 		padding: 0 1rem;
-		width: calc(50vw/12 * 2);
+		width: calc(60vw/12 * 2);
 		.atalanta-notation-start, 
 		.atalanta-notation-stop, 
 		.atalanta-notation-mute-track, 
@@ -263,8 +263,8 @@ body {
 	/* sticky music player controls */
 	.panel--right .section__music ._music .ata-music .transport.is-stuck {
 		background-color: $blue_light;
-		left: 50vw;
-		width: calc(50vw/12 * 2);
+		left: 40vw;
+		width: calc(60vw/12 * 2);
 	}
 	.panel--right .section__music ._music .ata-music .transport.is-unstuck {
 		background-color: $gray_light;
@@ -441,4 +441,20 @@ body {
 			flex-direction: column;
 		}
 	}
+}
+
+
+
+/* BREAKPOINTS */
+/* medium  -  tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.section__music ._music .ata-music .transport {
+		width: calc(50vw/12 * 2);
+	}
+	/* @supports (display: grid) {...} */
+	.panel--right .section__music ._music .ata-music .transport.is-stuck {
+		left: 50vw;
+		width: calc(50vw/12 * 2);
+	}
+	
 }
