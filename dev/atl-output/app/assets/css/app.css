@@ -6238,42 +6238,89 @@ main.emblem-page.frontmatter {
   /* English */
   /* Latin */ }
   main.emblem-page.frontmatter section.section__dedication ._dedication--english {
-    padding-top: 3rem; }
-    main.emblem-page.frontmatter section.section__dedication ._dedication--english .ab,
-    main.emblem-page.frontmatter section.section__dedication ._dedication--english span.pc {
-      grid-column: 1 / 2; }
-    main.emblem-page.frontmatter section.section__dedication ._dedication--english .ab:nth-of-type(2) {
-      margin-top: -11px; }
+    padding-top: 3rem;
+    /*		span.pc {
+			grid-column: 1 / 13;
+		}*/ }
     main.emblem-page.frontmatter section.section__dedication ._dedication--english div.dedication {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-column: 1 / 13;
       font-size: 1.25rem;
       line-height: 2; }
+    main.emblem-page.frontmatter section.section__dedication ._dedication--english div.dedication:nth-of-type(1) {
+      grid-column: 3 / 11; }
+    main.emblem-page.frontmatter section.section__dedication ._dedication--english div.ab {
+      grid-column: 1 / 13; }
+    main.emblem-page.frontmatter section.section__dedication ._dedication--english div.dedication:nth-of-type(1) div.ab:nth-of-type(1) {
+      margin-bottom: 1.5rem; }
     main.emblem-page.frontmatter section.section__dedication ._dedication--english div.dedication:nth-of-type(2) {
-      margin-top: 2rem; }
-    main.emblem-page.frontmatter section.section__dedication ._dedication--english div.dedication:nth-of-type(2) .ab:nth-of-type(1) {
-      margin-top: -3px; }
+      display: block;
+      margin-top: 2rem;
+      padding: 0 4rem; }
+    main.emblem-page.frontmatter section.section__dedication ._dedication--english div.dedication:nth-of-type(2) div.ab {
+      padding-top: 1rem;
+      margin-bottom: 1rem; }
+    main.emblem-page.frontmatter section.section__dedication ._dedication--english div.margin-note {
+      font-size: 1rem;
+      left: 93vw;
+      line-height: 1.2; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1) {
+    grid-column: 1 / 13;
+    padding: 0 4rem;
+    text-align: left; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1) div.ab:nth-of-type(1),
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1) div.ab:nth-of-type(2) {
+    font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
+    font-size: 1.75rem;
+    line-height: 1.5; }
   main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--normalized div.dedication {
     padding: 0 25%; }
   main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--normalized div.dedication > * {
     grid-column: 1 / 3; }
   main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--normalized div.margin-note {
     left: 80vw; }
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-child(1) {
-    text-align: center; }
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-child(1) .ab {
-    grid-column: 1 / 3; }
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-child(2) {
-    margin-top: 2rem; }
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-child(2) .ab {
-    margin-top: -2.625rem;
-    grid-column: 1 / 2; }
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-child(2) > span.original:nth-of-type(1) {
-    grid-column: 1 / 3;
-    margin-top: -12px; }
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile .ab:nth-child(even) {
-    margin-top: -1rem; }
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.margin-note span.original:nth-of-type(2) br {
-    /* why does "of blessed me=mory" need a line break after the sup??? */
-    display: none; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile {
+    /*		div.dedication:nth-child(1) {
+			text-align: center;
+		}
+		div.dedication:nth-child(1) .ab {
+			grid-column: 1 / 3;
+		}
+		div.dedication:nth-child(2) {
+			margin-top: 2rem;
+		}
+		div.dedication:nth-child(2) .ab {
+			margin-top: -2.625rem;
+			grid-column: 1 / 2;
+		}
+		div.dedication:nth-of-type(2) span.indent {
+			margin-left: 18rem;
+		}
+		div.dedication:nth-child(2) > span.original:nth-of-type(1) {
+			grid-column: 1 / 3;
+			margin-top: -12px;
+		}
+		.ab:nth-child(even) {
+			margin-top: -1rem;
+		}*/ }
+    main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(1) {
+      text-align: center; }
+    main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(1) div.ab:nth-of-type(1) {
+      margin-bottom: -.5rem; }
+    main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(2) {
+      padding: 0 2rem; }
+    main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(2) div.ab {
+      margin-top: -3rem; }
+    main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(2) span.indent {
+      margin-left: 26rem; }
+    main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.margin-note {
+      font-size: 1rem;
+      left: 94vw;
+      line-height: 1.2; }
+    main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.margin-note span.original:nth-of-type(2) br {
+      /* why does "of blessed me=mory" need a line break after the sup??? */
+      display: none; }
   main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--facsimile {
     padding: 3rem 0; }
     main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-child(2) {
