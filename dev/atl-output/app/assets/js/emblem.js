@@ -37,7 +37,7 @@ $(function () {
 	var gridLeft = 'grid--left';
 	var gridRight = 'grid--right';
 	/* other */
-	var musicNotation = '.music-pages';
+	var musicNotation = '.cmn';
 	var playButton = '.atalanta-notation-start';
 	var pauseButton = '.atalanta-notation-stop';
 	var muteVoice1 = '.atalanta-notation-mute-track:nth-of-type(1)';
@@ -92,40 +92,6 @@ $(function () {
 
 /* INITIALIZE */
 	onLoad(); // DISPLAY EMBLEM MENU AND DEFAULT OPTIONS ON PAGE LOAD
-
-
-	// $('.loop').owlCarousel({
-	// 	center: true,
-	// 	items:2,
-	// 	loop:true,
-	// 	margin:10,
-	// 	responsive:{
-	// 		600:{
-	// 			items:4
-	// 		}
-	// 	}
-	// });
-	// $('.nonloop').owlCarousel({
-	// 	center: true,
-	// 	items:2,
-	// 	loop:false,
-	// 	margin:10,
-	// 	responsive:{
-	// 		600:{
-	// 			items:4
-	// 		}
-	// 	}
-	// });
-
-/* APPLY ACCESSIBILITY FIXES AFTER ALL DYNAMIC CONTENT LOADS */
-$(window).on('load', function() {
-	// setTimeout(function(){
-	// 	// console.log("ALL ASSETS ARE LOADED!!!!")
-	// 	musicAccessibility();
-	// 	createScrollingScene();
-	// }, 1500);
-	
-});
 
 /* EVENTS */
 	/* layout menu */
@@ -247,26 +213,18 @@ $(window).on('load', function() {
 		// updateDataState();
 	}
 	function getScrollingDuration() {
-		let myDuration = (myMusic.offsetHeight - myMusicControls.offsetHeight) * 1.3;
+		let myDuration = (myMusic.offsetHeight - myMusicControls.offsetHeight) * 1.2;
 		console.log(myDuration + " is my sticky scrolling duration / approx. px height of the music-page notation SVG");
 		return myDuration;
 	}
 	function musicAccessibility() {
 		$(musicNotation).attr('aria-hidden', 'true');
-		$(playButton).attr('aria-label', 'Play Music');
-		$(pauseButton).attr('aria-label', 'Pause Music');
-		$(muteVoice1).attr('aria-label', 'Play or Mute Voice 1');
-		$(muteVoice2).attr('aria-label', 'Play or Mute Voice 2');
-		$(muteVoice3).attr('aria-label', 'Play or Mute Voice 3');
 	}
 	function onLoad() {
 		console.log("I AM IN ONLOAD()");
 		checkState();
-		setTimeout(function(){
-			// console.log("ALL ASSETS ARE LOADED!!!!")
-			musicAccessibility();
-			createScrollingScene();
-		}, 1500);
+		musicAccessibility();
+		createScrollingScene();
 	}
 		/* language selections */
 	function selectLangEnglishOrig() {
