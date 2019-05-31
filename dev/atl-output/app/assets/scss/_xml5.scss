@@ -570,34 +570,20 @@ main.emblem-page.frontmatter {
 		}
 		.translation .verse-epigram, 
 		.original .verse-epigram {
-			font-size: 1.5rem;
-			grid-column: 4 / 10;
+			font-size: 1.25rem;
+			grid-column: 5 / 10;
 			text-align: left;
-		}
-		.original .lang--german .verse-epigram {
-			grid-column: 3 / 11;
-			margin-left: 4rem;
 		}
 		.translation .verse-epigram {
 			line-height: 1.5;
-		}
-		.translation .edition--normalized .verse-epigram {
-			margin-left: 5rem;
 		}
 		.original .verse-epigram {
 			line-height: 1.5;
 			text-indent: 0;
 		}
-		.original .lang--latin .verse-epigram {
-			margin-left: 3rem;
+		.original .lang--german .verse-epigram {
+			grid-column: 4 / 11;
 		}
-		.original .lang--latin.edition--regularized .verse-epigram {
-			margin-left: 4.5rem;
-		}
-/*		.translation .edition--facsimile .verse-epigram {
-			grid-column: 3/ 13;
-			text-align: left;
-		}*/
 		.translation .verse-epigram br, 
 		.original .verse-epigram br {
 			display: none;
@@ -606,10 +592,8 @@ main.emblem-page.frontmatter {
 			line-height: 1.5;
 		}
 		.original .verse-epigram span {
-			/*line-height: 0;*/
 			margin: 0;
 		}
-
 		.original .de .verse-epigram > span {
 			line-height: 1.2;
 			margin-bottom: .25rem;
@@ -654,6 +638,7 @@ main.emblem-page.frontmatter {
 		}
 	}
 	.panel--right section.section__epigram {
+		padding-top: 8rem;
 		.translation h3, 
 		.translation h3.title, 
 		.original h3, 
@@ -666,18 +651,14 @@ main.emblem-page.frontmatter {
 		}
 		.translation .verse-epigram, 
 		.original .verse-epigram {
-			grid-column: 2 / 12;
-		}
-		.translation .edition--normalized .verse-epigram, 
-		.original .lang--latin .verse-epigram{
-			margin-left: 1.5rem;
+			grid-column: 4 / 12;
 		}
 		 .original .lang--german .verse-epigram {
 			margin-left: 0;
 		}
 		.original .lang--german .verse-epigram {
 			grid-column: 2 / 12;
-			margin-left: 0;
+			margin-left: 2rem;
 		}
 		.original .verse-epigram > span {
 /*			line-height: 2.5;
@@ -715,6 +696,7 @@ main.emblem-page.frontmatter {
 	section.section__discourse, 
 	section.section__preface {
 		margin-bottom: 8rem;
+		padding-top: 5rem;
 		div.translation, 
 		div.original {
 			display: grid;
@@ -825,8 +807,8 @@ main.emblem-page.frontmatter {
 			font-size: 1rem;
 			line-height: 1.2;
 			position: absolute;
-			left: 80vw;
-			width: 18vw;
+			left: 84vw;
+			width: 16vw;
 		}
 		div.margin-note.line2 {
 			display: block;
@@ -873,11 +855,12 @@ main.emblem-page.frontmatter {
 			font-size: 18px;
 		}
 		div.margin-note {
-			left: 88vw;
-			width: auto;
+			left: 86vw;
+			width: 13.5vw;
 		}
 		div.original div.discourse.la div.margin-note {
-			left: 92vw;
+			left: 91vw;
+			width: 8vw;
 		}
 		._discourse--english .ab, 
 		._discourse--latin .discourse-p1, 
@@ -891,17 +874,6 @@ main.emblem-page.frontmatter {
 			/*margin-bottom: 0;*/
 		}
 	}
-/*	.panel--full section.section__discourse {
-		div.discourse {
-			grid-column: 4 / 13;
-			padding-left: 1rem;
-		}
-	}*/
-	/*.panel--right div.margin-note {  This is only worth the effort on large desktops ???
-		left: calc(50vw - 10%);
-		padding-right: .5rem;
-		width: 10vw;
-	}*/
 	.panel--right section.section__discourse div.discourse, 
 	.panel--right section.section__discourse div.discourse.la {
 		/* div.margin-note {
