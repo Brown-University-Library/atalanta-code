@@ -133,7 +133,7 @@ $(window).on('load', function() {
 	  change: function(event, ui) {},
 	  icons: { button: "custom-icon" }
 	});	
-	$("#layout").on( "selectmenuchange", function( event, ui ) {
+	$( "#layout" ).on( "selectmenuchange", function( event, ui ) {
 	  selectLayout(ui.item.value);
 	});
 	/* language menu */
@@ -247,7 +247,7 @@ $(window).on('load', function() {
 		// updateDataState();
 	}
 	function getScrollingDuration() {
-		let myDuration = (myMusic.offsetHeight - myMusicControls.offsetHeight) * 1.5;
+		let myDuration = (myMusic.offsetHeight - myMusicControls.offsetHeight) * 1.3;
 		console.log(myDuration + " is my sticky scrolling duration / approx. px height of the music-page notation SVG");
 		return myDuration;
 	}
