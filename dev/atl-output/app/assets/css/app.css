@@ -7419,10 +7419,10 @@ main#image-search {
   margin-top: 3.125rem;
   padding: 0 1rem;
   width: calc(100vw - 2rem); }
-  main#image-search * {
-    /*box-sizing: border-box !important;*/ }
   main#image-search .faceting--help {
     /*display: none;*/ }
+  main#image-search .breadcrumbs__copy-link {
+    display: none; }
 
 .image-search-filters {
   color: #4d4d4d;
@@ -7709,7 +7709,6 @@ main#image-search {
     width: 10px; }
 
 .image-search__hero {
-  /*	outline: 5px solid yellow;*/
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7755,7 +7754,8 @@ main#image-search {
     font-weight: 600;
     line-height: 1.2;
     position: absolute;
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
 
 .image-search__results-viz.stickyyy {
   position: fixed;

@@ -7,10 +7,13 @@ main#image-search {
 	padding: 0 1rem;
 	width: calc(100vw - 2rem);
 	* {
-		/*box-sizing: border-box !important;*/
+
 	}
 	.faceting--help {
 		/*display: none;*/
+	}
+	.breadcrumbs__copy-link {
+		display: none;
 	}
 }
 .image-search-filters {
@@ -230,7 +233,6 @@ main#image-search {
 	}
 }
 .image-search__hero {
-/*	outline: 5px solid yellow;*/
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -260,6 +262,7 @@ main#image-search {
 		line-height: 1.2;
 		position: absolute;
 		text-align: center;
+		width: 100%;
 	}
 }
 .image-search__results-viz.stickyyy {
