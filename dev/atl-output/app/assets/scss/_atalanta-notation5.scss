@@ -34,14 +34,15 @@ html.music-ready .audio audio.all-tracks {
 
 /* Transport */
 
-.atalanta-notation .transport .atalanta-notation-start.playing {
-  display: none;
-  /* background-image: url('../img/baseline-play_circle_outline-24px.svg'); */
-}
-
 .music.playing .transport .atalanta-notation-start, 
 .pianoroll.playing .atalanta-notation-start {
   display: none; 
+}
+
+.music.paused .transport .atalanta-notation-stop,
+.pianoroll .atalanta-notation-stop,
+.pianoroll.paused .atalanta-notation-stop {
+  display: none;
 }
 
 /*

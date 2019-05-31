@@ -179,12 +179,6 @@ body {
 .music.with-js .cmn .muted .highlighted {
   fill: $black;
 }
-/*.ata-viz-cmn svg .note.highlighted {
-  fill: $yellow_inverse;
-}
-.ata-viz-cmn svg .note.highlighted path {
-  stroke: $yellow_inverse;
-}*/
 
 /* general grid styles */
 @supports (display: grid) {
@@ -311,39 +305,47 @@ body {
 }
 
 
+
 /* piano roll */
-.lity-container .ata-viz-pianoroll {
+button.lity-close {
+	margin: 5.5rem 5rem 0 0;
+}
+#pianoroll-notation {
 	background-color: $white;
-	height: 60vh;
+	height: 60.5vh;
 	margin-top: 5vh;
 	width: 75vw;
-	.pianoroll .note.highlighted {
-		fill: $yellow_inverse;
-	}
-	.pianoroll .voice-1 {
-		fill: $blue_desaturated;
-	}
-	.pianoroll .voice-2 {
-		fill: $red_desaturated;
-	}
-	.pianoroll .voice-3 {
-		fill: $green_desaturated;
-	}
-/*	g rect.note {
-		stroke: $yellow_inverse;
-	}*/
-	.pianoroll.mute-1 .voice-1 {
-	  fill: $gray;
-	}
-	.pianoroll.mute-2 .voice-2 {
-	  fill: $gray;
-	}
-	.pianoroll.mute-3 .voice-3 {
-	  fill: $gray;
-	}
 }
+/* piano roll style overrides */
+.pianoroll.playing .atalanta-notation-stop {
+	display: block;
+}
+.pianoroll .note.highlighted {
+	fill: $yellow_inverse;
+}
+.pianoroll .voice-1 {
+	fill: $blue_desaturated;
+}
+.pianoroll .voice-2 {
+	fill: $red_desaturated;
+}
+.pianoroll .voice-3 {
+	fill: $green_desaturated;
+}
+.pianoroll.mute-1 .voice-1 {
+  fill: $gray;
+}
+.pianoroll.mute-2 .voice-2 {
+  fill: $gray;
+}
+.pianoroll.mute-3 .voice-3 {
+  fill: $gray;
+}
+/* end piano roll style overrides */
+
+
 .lity-container .ata-viz-pianoroll > svg {
-		margin-top: 22vh;
+		margin-top: 20vh;
 	}
 .lity-container .ata-viz-pianoroll .transport {
 	background-color: $gray_light;
@@ -363,6 +365,7 @@ body {
 		text-align: center;
 		width: 100%;
 	}
+	button:active, 
 	button:focus {
 		filter: brightness(0.5);
 		outline: none;

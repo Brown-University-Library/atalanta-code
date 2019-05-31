@@ -6466,12 +6466,13 @@ html.music-ready .audio audio.all-tracks {
   fill: black; }
 
 /* Transport */
-.atalanta-notation .transport .atalanta-notation-start.playing {
-  display: none;
-  /* background-image: url('../img/baseline-play_circle_outline-24px.svg'); */ }
-
 .music.playing .transport .atalanta-notation-start,
 .pianoroll.playing .atalanta-notation-start {
+  display: none; }
+
+.music.paused .transport .atalanta-notation-stop,
+.pianoroll .atalanta-notation-stop,
+.pianoroll.paused .atalanta-notation-stop {
   display: none; }
 
 /*
@@ -6690,7 +6691,10 @@ body {
   height: calc(100vh - 6.25rem);
   /* viewheight - topnav - emblem nav */
   padding: 0 1rem;
-  width: calc(60vw/12 * 2); }
+  width: calc(60vw/12 * 2);
+  /*	???	.atalanta-notation-start.playing {
+		  display: none;
+		}*/ }
   .section__music ._music .ata-music .transport .atalanta-notation-start,
   .section__music ._music .ata-music .transport .atalanta-notation-stop,
   .section__music ._music .ata-music .transport .atalanta-notation-mute-track,
@@ -6723,8 +6727,6 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: .5rem; }
-  .section__music ._music .ata-music .transport .atalanta-notation-start.playing {
-    display: none; }
   .section__music ._music .ata-music .transport .play-btn__icon {
     background-image: url("../icons/icon_play_filled--gray.svg");
     height: 2.5rem; }
@@ -6856,11 +6858,12 @@ body {
   transform: translateX(-200px); }
 
 /* Playing notes */
-.ata-viz-cmn svg .note.highlighted {
+.music.with-js .cmn .highlighted {
   fill: #0051ff; }
 
-.ata-viz-cmn svg .note.highlighted path {
-  stroke: #0051ff; }
+/* Muted playing notes */
+.music.with-js .cmn .muted .highlighted {
+  fill: #222; }
 
 /* general grid styles */
 @supports (display: grid) {
@@ -6982,24 +6985,43 @@ body {
   background-color: #f2f2f2; }
 
 /* piano roll */
-.lity-container .ata-viz-pianoroll {
+button.lity-close {
+  margin: 5.5rem 5rem 0 0; }
+
+#pianoroll-notation {
   background-color: white;
-  height: 60vh;
+  height: 60.5vh;
   margin-top: 5vh;
   width: 75vw; }
-  .lity-container .ata-viz-pianoroll g.voice-1 .note {
-    fill: #608ca9; }
-  .lity-container .ata-viz-pianoroll g.voice-2 .note {
-    fill: #d14829; }
-  .lity-container .ata-viz-pianoroll g.voice-3 .note {
-    fill: #54b68d; }
-  .lity-container .ata-viz-pianoroll g rect.note {
-    stroke: #0051ff; }
-  .lity-container .ata-viz-pianoroll g rect.note.highlighted {
-    fill: #0051ff; }
 
+/* piano roll style overrides */
+.pianoroll.playing .atalanta-notation-stop {
+  display: block; }
+
+.pianoroll .note.highlighted {
+  fill: #0051ff; }
+
+.pianoroll .voice-1 {
+  fill: #608ca9; }
+
+.pianoroll .voice-2 {
+  fill: #d14829; }
+
+.pianoroll .voice-3 {
+  fill: #54b68d; }
+
+.pianoroll.mute-1 .voice-1 {
+  fill: #333; }
+
+.pianoroll.mute-2 .voice-2 {
+  fill: #333; }
+
+.pianoroll.mute-3 .voice-3 {
+  fill: #333; }
+
+/* end piano roll style overrides */
 .lity-container .ata-viz-pianoroll > svg {
-  margin-top: 22vh; }
+  margin-top: 20vh; }
 
 .lity-container .ata-viz-pianoroll .transport {
   background-color: #f2f2f2;
@@ -7019,6 +7041,7 @@ body {
     padding: 0;
     text-align: center;
     width: 100%; }
+  .lity-container .ata-viz-pianoroll .transport button:active,
   .lity-container .ata-viz-pianoroll .transport button:focus {
     -webkit-filter: brightness(0.5);
     filter: brightness(0.5);
