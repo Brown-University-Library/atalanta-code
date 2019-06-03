@@ -3,12 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-    <meta name="author" content="">
 	<title>Furnace and Fugue: Table of Contents</title>
-	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css">
+	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css">
+<!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
 </head>
 <body>
+<!-- GLOBAL NAVIGATION -->
 	<header data-page-type="toc">
 		<a class="a11y_skip-main" href="#toc-data">Skip to main content</a>
 		<div class="_topnav" data-nav="contents">
@@ -20,10 +20,10 @@
 					</li>
 					<li class="topnav__content">
 						<ul>
-							<li><a href="../atalanta-fugiens/toc_af.html">Digital Edition</a></li>
-							<li><a href="../atalanta-essays/toc_essays.html">Essays</a></li>
+							<li><a href="../atalanta-fugiens">Digital Edition</a></li>
+							<li><a href="../atalanta-essays">Essays</a></li>
 							<li><a href="../search/image-search.html">Images</a></li>
-							<li><a href="../search/toc.html">Contents</a></li>
+							<li><a href="../search">Contents</a></li>
 						</ul>
 					</li>
 					<li class="topnav__search">
@@ -46,6 +46,7 @@
 			</div>
 		</div>
 	</header>
+<!-- TABLE OF CONTENTS PAGE -->
 	<main class="toc-wrapper" id="toc-data">
 		<nav class="toc">
 			<div class="toc__front">
@@ -53,13 +54,13 @@
 					<h2 class="toc__heading">Get Acquainted</h2>
 					<ul>
 						<li class="article">
-							<a href="../front-matter/alchemy">Early Modern Alchemy</a>
+							<a href="../front-matter/getacquainted/alchemy">Early Modern Alchemy</a>
 						</li>
 						<li class="article">
-							<a href="../front-matter/maier">A Biography of Michael Maier</a>
+							<a href="../front-matter/getacquainted/maier">A Biography of Michael Maier</a>
 						</li>
 						<li class="article">
-							<a href="../front-matter/publishing">The Making of <cite>Atalanta fugiens</cite></a>
+							<a href="../front-matter/getacquainted/printing">The Making of <cite>Atalanta fugiens</cite></a>
 						</li>
 					</ul>
 				</section>
@@ -67,7 +68,7 @@
 			</div>
 			<div class="toc__body">
 				<section class="toc__section section__essays">
-					<h2 class="toc__heading"><a href="../atalanta-essays/toc_essays.html">Scholarly Essays</a></h2>
+					<h2 class="toc__heading"><a href="../atalanta-essays">Scholarly Essays</a></h2>
 					<h4 class="toc__description">Gain a deeper understanding of <cite>Atalanta fugiens</cite> with this set of interactive media-rich essays. Create, save, and share emblem collections inspired by the scholarly essays presented here.</h4>
 					<ul>
 						<li class="essay">
@@ -106,7 +107,7 @@
 				</section>
 				<div class="toc__section section__aside">
 					<section class="section__edition">
-						<h2 class="toc__heading"><a href="../atalanta-fugiens/toc_af.html">Digital Edition</a></h2>
+						<h2 class="toc__heading"><a href="../atalanta-fugiens">Digital Edition</a></h2>
 						<h3 class="toc__title"><a href="../atalanta-fugiens/frontispiece.html"><cite>Atalanta fugiens</cite></a></h3>
 						<h4 class="toc__description">Read Michael Maier’s alchemical emblem book in its original Latin and German or in English translation. Listen to newly commissioned vocal recordings of its 50 fugues.</h4>
 					</section>
@@ -126,20 +127,23 @@
 			</div>
 		</nav>
 	</main>
-	<footer>
-		<div class="footer--main">
-			<ul>
-				<li><a href="../search/toc.html">Contents</a></li>
-				<li><a href="../atalanta-fugiens/toc_af.html">Digital Edition</a></li>
-				<li><a href="../atalanta-essays/toc_essays.html">Scholarly Essays</a></li>
-				<li><a href="../back-matter/about">About the Project</a></li>
-			</ul>
-		</div>
-		<div class="footer--branding">
-			<h6>A Project of</h6>
-			<img src="../assets/img/default/brown-logo.png" alt="Brown University logo" />
-		</div>
-	</footer>
+	<div class="_footer">
+		<footer>
+			<div class="footer--main">
+				<ul>
+					<li><a href="../search">Contents</a></li>
+					<li><a href="../atalanta-fugiens">Digital Edition</a></li>
+					<li><a href="../atalanta-essays">Scholarly Essays</a></li>
+					<li><a href="../back-matter/about">About the Project</a></li>
+				</ul>
+			</div>
+			<div class="footer--branding">
+	<!--       <h6>A Project of</h6>
+	      <img src="" alt="Logo for TBD" /> -->
+			</div>
+		</footer>
+	</div>
+<!-- JS -->
 	<script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="../assets/js/page.js"></script>
@@ -147,7 +151,6 @@
     <script src="../assets/js/lunr-languages/lunr.stemmer.support.js"></script>
     <script src="../assets/js/lunr-languages/lunr.multi.js"></script>
     <script src="../assets/js/lunr-languages/lunr.de.js"></script>
-    <script src="../assets/js/vendors/underscore/underscore-min.js"></script>
     <script src="../assets/js/search.js"></script>
     <script src="../assets/js/searchfunction.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>

@@ -3,129 +3,97 @@ body {
   padding: 3em;
 }
 
-/* CMN Visualization */
+/* MUSIC - START */
 
-/* This is for the background (non-javascript) image */
+/* Things to hide if there's no JS */
 
-.atalanta-notation-viz-cmn {
-  width: 100%;
-  /* height: 500px; */
-  background: white no-repeat;
-  background-size: contain;
-  background-color: white;
-  /* overflow: scroll; */
+.music .transport, 
+.music .audio {
+  display: initial;
 }
 
-.atalanta-notation-viz-cmn .highlighted {
+/* If there is JS, unhide */
+
+.music.with-js .transport, 
+.music.with-js .pianoroll {
+  display: auto;
+}
+
+.music.with-js .audio audio.all-tracks, 
+html.music-ready .audio audio.all-tracks {
+  display: none;
+}
+
+.music.with-js .cmn .highlighted {
   fill: red;
 }
 
-.atalanta-notation-viz-cmn svg tspan {
-  font-family: sans-serif !important;
+.music.with-js .cmn .muted .highlighted {
+  fill: black;
 }
 
-.atalanta-notation-viz-cmn .music-pages {
-  float: left;
-  width: 100%;
+/* Transport */
+
+.music.playing .transport .atalanta-notation-start, 
+.pianoroll.playing .atalanta-notation-start {
+  display: none; 
 }
 
-.atalanta-notation-viz-cmn .music-pages .music-page {
-  float: left;
-  width: 50%;
-  text-align: center;
-  transform-origin: 0 0;
-}
-
-/* Playing notes */
-
-.atalanta-notation svg .note {
-  transition: fill 0.2s;
-}
-
-/* Start / stop / mute buttons */
-
-.atalanta-notation .transport {
-  width: 100%;
-  float: left;
-  background: white;
-  padding: 1em;
-}
-
-.atalanta-notation .transport button {
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: 0;
-}
-
-.atalanta-notation .transport .atalanta-notation-start,
-.atalanta-notation .transport .atalanta-notation-stop {
-  height: 100px;
-  width: 100px;
-  display: block;
-  float: left;
-  margin-right: 50px;
-}
-
-.atalanta-notation .transport .atalanta-notation-start {
-  background-image: url('../img/baseline-play_circle_outline-24px.svg');
-}
-
-.atalanta-notation .transport .atalanta-notation-start.playing {
+.music.paused .transport .atalanta-notation-stop,
+.pianoroll .atalanta-notation-stop,
+.pianoroll.paused .atalanta-notation-stop {
   display: none;
-  /* background-image: url('../img/baseline-play_circle_outline-24px.svg'); */
 }
 
-.atalanta-notation .transport .atalanta-notation-stop {
-  display: none;
-  background-image: url('../img/baseline-pause_circle_outline-24px.svg');
+/*
+.music.mute-1 .measure > .staff:nth-child(1),
+.music.mute-2 .measure > .staff:nth-child(2),
+.music.mute-3 .measure > .staff:nth-child(3) {
+  opacity: 0.3;
+} */
+
+.music .cmn .staff, 
+.music .cmn .barLineAttr path {
+  transition: opacity 0.5s;
 }
 
-.atalanta-notation .transport .atalanta-notation-stop.playing {
-  display: initial;
-  background-image: url('../img/baseline-pause_circle_outline-24px.svg');
+.music .cmn .staff.muted, 
+.music .cmn .barLineAttr path {
+  opacity: 0.3;
 }
 
-
-
-/* Mute buttons */
-
-.atalanta-notation-mute-track {
-  display: block;
-  height: 30px;
-  line-height: 30px;
-  width: 20em;
-  text-align: left;
-  padding-left: 50px;
-  cursor: pointer;
-  background-image: url('../img/baseline-record_voice_over-24px.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  transition: 0.5s;
-}
-
-.atalanta-notation-mute-track.mute {
+.music button.muted {
   opacity: 0.5;
-  background-image: url('../img/baseline-record_voice_over-mute-24px.svg');
 }
 
-.measure .staff {
-  transition: opacity 0.6s;
+
+
+.pianoroll .note.highlighted {
+  fill: yellow;
 }
 
-/* Styles for piano roll view */
-
-.atalanta-notation-viz-pianoroll g {
-  transition: all 2s;
+.pianoroll .voice-1 {
+  fill: red;
 }
 
-.atalanta-notation-viz-pianoroll .voice-1 .note {
-  fill: #1f77b4;
+.pianoroll .voice-2 {
+  fill: blue;
 }
 
-.atalanta-notation-viz-pianoroll .voice-2 .note {
-  fill: #ff7f0e;
+.pianoroll .voice-3 {
+  fill: green;
 }
 
-.atalanta-notation-viz-pianoroll .voice-3 .note {
-  fill: #2ca02c;
+.pianoroll.mute-1 .voice-1 {
+  fill: grey;
 }
+
+.pianoroll.mute-2 .voice-2 {
+  fill: grey;
+}
+
+.pianoroll.mute-3 .voice-3 {
+  fill: grey;
+}
+
+/* MUSIC - END */
