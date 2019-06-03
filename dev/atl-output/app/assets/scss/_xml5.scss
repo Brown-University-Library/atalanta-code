@@ -1415,10 +1415,23 @@ main.emblem-page.frontmatter {
 	}
 	/* Latin */
 	section.section__dedication ._dedication--latin {
-		div.preface {
+		div.preface.la {
+/*			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-column: 1 / 13;*/
 			display: inline-block;
 			font-size: 1.25rem;
-			line-height: 2;
+			line-height: 1.5;
+			padding: 0 3rem;
+		}
+		.page:nth-of-type(1) > div:nth-of-type(1) {
+			font-family: $secondary-display-font_emblem;
+			font-size: 2rem;
+			text-align: center;
+
+		}
+		.page:nth-of-type(1) > div:nth-of-type(2) {
+			font-size: 1.125rem;
 		}
 		span.pb.atalanta-fugiens {
 			/*display: block;*/
@@ -1428,11 +1441,22 @@ main.emblem-page.frontmatter {
 		}	
 	}
 	section.section__dedication ._dedication--latin.edition--original {
+
+		.page:nth-of-type(1) > div:nth-of-type(2) {
+			font-style: oblique;
+		}
+		.page:nth-of-type(1) > div:nth-of-type(3) {
+
+		}
 		span.original {
 			display: inline-block;
 		}
 		span.regularized {
 			display: none;
+		}
+		span.caps-large {
+			text-transform: uppercase;
+			letter-spacing: .1em;
 		}
 	}
 	section.section__dedication ._dedication--latin.edition--regularized {
@@ -1463,12 +1487,35 @@ main.emblem-page.frontmatter {
 }
 
 /* PREFACE */
+main.emblem-page.frontmatter section.section__preface ._preface--english div.preface {
+	/*grid-column: 2 / 11;*/
+	display: inline-block;
+}
+main.emblem-page section.section__discourse ._preface--english div.margin-note, main.emblem-page section.section__preface ._preface--english div.margin-note, main.emblem-page.frontmatter section.section__discourse ._preface--english div.margin-note, main.emblem-page.frontmatter section.section__preface ._preface--english div.margin-note {
+    		left: 90vw;
+			font-size: 1rem;
+			line-height: 1.2;
+			width: 8vw;
+}
 main.emblem-page.frontmatter {
 	section.section__preface {
 		padding-top: 4rem;
 		._preface--english,  
 		._preface--latin .page.italic {
 			grid-column: 1 / 13;
+		}
+		._preface--english {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+		}
+		._preface--english .preface {
+			padding: 0 6rem 0 2rem;
+		}
+		div.margin-note {
+
+		}
+		.ab {
+			margin-top: 1rem;
 		}
 		/* English */
 		.edition--facsimile {
@@ -1477,7 +1524,7 @@ main.emblem-page.frontmatter {
 				margin-bottom: 2rem;
 			}
 			.ab {
-				margin-top: -1.75rem;
+				margin-top: -.875rem;
 			}
 		}
 		.edition--normalized {
