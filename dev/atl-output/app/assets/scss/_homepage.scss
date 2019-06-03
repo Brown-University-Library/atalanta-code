@@ -39,10 +39,16 @@ main.home {
     font-weight: 300;
     line-height: 1.75rem;
     padding-top: 2.75rem;
+    margin-bottom: 2rem;
     width: 50%;
   }
   .hero-text h5 cite {
     font-style: oblique;
+  }
+  .hero-text h6 {
+/*    font-size: 1.125rem;*/
+    font-size: .75rem;
+    text-transform: uppercase;
   }
   .hero-image {
     background-color: $yellow;
