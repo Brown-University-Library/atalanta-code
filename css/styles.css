@@ -6329,18 +6329,33 @@ main.emblem-page.frontmatter {
       margin-right: -200px; }
     main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--facsimile div.margin-note {
       left: 85vw; }
-  main.emblem-page.frontmatter section.section__dedication ._dedication--latin div.preface {
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin div.preface.la {
+    /*			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-column: 1 / 13;*/
     display: inline-block;
     font-size: 1.25rem;
-    line-height: 2; }
+    line-height: 1.5;
+    padding: 0 3rem; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin .page:nth-of-type(1) > div:nth-of-type(1) {
+    font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
+    font-size: 2rem;
+    text-align: center; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin .page:nth-of-type(1) > div:nth-of-type(2) {
+    font-size: 1.125rem; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin span.pb.atalanta-fugiens {
     /*display: block;*/ }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin span.caps {
     letter-spacing: .2em; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--original .page:nth-of-type(1) > div:nth-of-type(2) {
+    font-style: oblique; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--original span.original {
     display: inline-block; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--original span.regularized {
     display: none; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--original span.caps-large {
+    text-transform: uppercase;
+    letter-spacing: .1em; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.italic {
     font-style: normal; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized br {
@@ -6359,6 +6374,16 @@ main.emblem-page.frontmatter {
     margin-right: -1rem; }
 
 /* PREFACE */
+main.emblem-page.frontmatter section.section__preface ._preface--english div.preface {
+  /*grid-column: 2 / 11;*/
+  display: inline-block; }
+
+main.emblem-page section.section__discourse ._preface--english div.margin-note, main.emblem-page section.section__preface ._preface--english div.margin-note, main.emblem-page.frontmatter section.section__discourse ._preface--english div.margin-note, main.emblem-page.frontmatter section.section__preface ._preface--english div.margin-note {
+  left: 90vw;
+  font-size: 1rem;
+  line-height: 1.2;
+  width: 8vw; }
+
 main.emblem-page.frontmatter section.section__preface {
   padding-top: 4rem;
   /* English */
@@ -6366,11 +6391,18 @@ main.emblem-page.frontmatter section.section__preface {
   main.emblem-page.frontmatter section.section__preface ._preface--english,
   main.emblem-page.frontmatter section.section__preface ._preface--latin .page.italic {
     grid-column: 1 / 13; }
+  main.emblem-page.frontmatter section.section__preface ._preface--english {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); }
+  main.emblem-page.frontmatter section.section__preface ._preface--english .preface {
+    padding: 0 6rem 0 2rem; }
+  main.emblem-page.frontmatter section.section__preface .ab {
+    margin-top: 1rem; }
   main.emblem-page.frontmatter section.section__preface .edition--facsimile h3.title {
     text-align: center;
     margin-bottom: 2rem; }
   main.emblem-page.frontmatter section.section__preface .edition--facsimile .ab {
-    margin-top: -1.75rem; }
+    margin-top: -.875rem; }
   main.emblem-page.frontmatter section.section__preface .edition--normalized h3.title {
     font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
     font-size: 2.5rem;
