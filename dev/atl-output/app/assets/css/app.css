@@ -4034,6 +4034,57 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: #869791; }
 
+main.emblem-toc {
+  background: #ba4221;
+  color: white;
+  display: grid;
+  font-family: "GTAmerica", "Usual", Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  margin-top: 3.125rem;
+  padding: 3rem 5rem;
+  text-align: center; }
+  main.emblem-toc a {
+    color: white; }
+  main.emblem-toc a:hover,
+  main.emblem-toc a:focus {
+    color: #000;
+    outline: none; }
+  main.emblem-toc h1,
+  main.emblem-toc h3,
+  main.emblem-toc h5,
+  main.emblem-toc nav {
+    grid-column: 1 / 13; }
+  main.emblem-toc h1 {
+    font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
+    font-size: 5rem; }
+  main.emblem-toc h3 {
+    font-size: 1.5rem;
+    font-variant: small-caps;
+    letter-spacing: .05em;
+    margin-bottom: 2rem; }
+  main.emblem-toc h5 {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+    margin-bottom: 2rem; }
+  main.emblem-toc cite {
+    font-style: oblique; }
+  main.emblem-toc nav {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto; }
+  main.emblem-toc ul {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: auto;
+    grid-column: 1 / 13; }
+  main.emblem-toc li:nth-child(n+1):nth-child(-n+4) {
+    /* front matter */
+    grid-column: 1 / 21; }
+    main.emblem-toc li:nth-child(n+1):nth-child(-n+4) a {
+      color: green; }
+
 main.emblem-page {
   background: white;
   /*	background-image: url("../img/default/bkg-illustration.png");

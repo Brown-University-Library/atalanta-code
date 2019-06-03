@@ -1,0 +1,65 @@
+@import 'colors';
+@import 'utilities';
+
+main.emblem-toc {
+	background: $red_dark;
+	color: $white;
+	display: grid;
+	font-family: $display-font_emblem;
+	font-size: 1.25rem;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+	margin-top: $topnav-h;
+	padding: 3rem 5rem;
+	text-align: center;
+	a {
+		color: $white;
+	}
+	a:hover, 
+	a:focus {
+		color: $black_pure;
+		outline: none;
+	}
+	h1, 
+	h3, 
+	h5, 
+	nav {
+		grid-column: 1 / 13;	
+	}
+	h1 {
+		font-family: $secondary-display-font_emblem;
+		font-size: 5rem;
+	}
+	h3 {
+		font-size: 1.5rem;
+		font-variant: small-caps;
+		letter-spacing: .05em;
+		margin-bottom: 2rem;
+	}
+	h5 {
+		color: $white_transparent;
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+	}
+	cite {
+		font-style: oblique;
+	}
+	nav {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: auto;
+	}
+	ul {
+		display: grid;
+		grid-template-columns: repeat(20, 1fr);
+		grid-template-rows: auto;
+		grid-column: 1 / 13;
+	}
+	li:nth-child(n+1):nth-child(-n+4){ /* front matter */
+		grid-column: 1 / 21;
+		a {
+			/*color: green;*/
+		}
+	}
+
+}
