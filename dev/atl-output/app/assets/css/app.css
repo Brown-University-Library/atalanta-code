@@ -2053,8 +2053,8 @@ main.home {
   main.home .hero-text h5 cite {
     font-style: oblique; }
   main.home .hero-text h6 {
-    /*    font-size: 1.125rem;*/
-    font-size: .75rem;
+    font-size: 1rem;
+    letter-spacing: .05em;
     text-transform: uppercase; }
   main.home .hero-image {
     background-color: #ffae00;
@@ -2129,7 +2129,6 @@ main.home {
     color: white;
     font-size: 1rem;
     font-weight: 300;
-    letter-spacing: .09375rem;
     line-height: 1rem;
     margin-top: .375rem; }
   main.home .intro-text {
@@ -2152,7 +2151,7 @@ main.home {
   main.home .intro-text p cite {
     font-style: oblique; }
   main.home .intro-text a {
-    color: #333;
+    color: white;
     font-size: 1rem;
     font-weight: 600;
     grid-area: 2 / 4 / 3 / 10;
@@ -2160,17 +2159,15 @@ main.home {
     text-transform: uppercase;
     padding: 0 5rem; }
   main.home .intro-text a:hover {
-    color: white;
+    color: #000;
     -webkit-transition: .3s;
     -o-transition: .3s;
-    transition: .3s;
-    -webkit-text-decoration: underline solid white;
-    text-decoration: underline solid white; }
+    transition: .3s; }
   main.home .intro-text a:focus {
-    color: white;
+    color: #222;
     outline: none;
-    -webkit-text-decoration: underline solid white;
-    text-decoration: underline solid white; }
+    -webkit-text-decoration: underline solid #000;
+    text-decoration: underline solid #000; }
 
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -7998,6 +7995,8 @@ main#image-search {
     position: absolute;
     text-align: center;
     width: 100%; }
+  .image-search__hero cite {
+    font-style: oblique; }
 
 .image-search__results-viz.stickyyy {
   position: fixed;
@@ -8156,7 +8155,7 @@ main#image-search {
     height: 1.75rem; }
   .image-results__container .image-results__button {
     background-color: #ffae00;
-    color: white;
+    color: #4d4d4d;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -8184,9 +8183,11 @@ main#image-search {
     .image-results__container .image-results__button span.icon {
       display: none; }
   .image-results__container .image-results__button:hover,
+  .image-results__container .image-results__button:focus,
   .image-results__container .image-results__button:active {
     background-color: #ffcd61;
     color: #4d4d4d;
+    outline: none;
     -webkit-transition: background-color .2s;
     -o-transition: background-color .2s;
     transition: background-color .2s; }
@@ -8215,7 +8216,10 @@ main#image-search {
     height: 100%;
     max-height: 100vh;
     margin-bottom: -3rem;
-    padding: .5rem; }
+    padding: .5rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word; }
   .image-results__container .all-terms--active {
     display: inline-block; }
   .image-results__container .all-terms--inactive {
