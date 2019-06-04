@@ -12,22 +12,22 @@ $(document).ready(function() {
 	var activeImage = document.querySelector('.item--active');
 	var inactiveImage = document.querySelector('.item--inactive');
 	var resultsTermsTrigger = '.image-results__button-row button:nth-child(1)';
-	var resultsTermsEscapeX = 'image-results__button--open' 
+	var resultsTermsEscapeX = 'image-results__button--open';
 	var resultsTermsContainer = '.image-results__all-terms';
 	var resultsTermsHidden = 'all-terms--inactive';
 	var resultsTermsRevealed = 'all-terms--active';
-
 
 	// var browserHeight = $(window).height(),
 	// 	elementPosition = $('#btn-shuffle').offset().top,
 	// 	elementTrigger = elementPosition - browserHeight,
 	// 	myElement = $('.image-search__results-viz').offset().top;
 
-
+	var heroPlaceholder = $('h1.hero__heading').html();
+	console.log("--", heroPlaceholder, "--")
 
 
 	$("#btn-shuffle").on("click", function() {
-	   makeImageArrays();
+	   
 	});
 	$(resultsVizBtn).on('click', function() {
 		var container = '.image-results__container';
@@ -43,14 +43,19 @@ $(document).ready(function() {
 
 		// };
 	});
+	
+	$('html').on('click', 'span.selected-filter', ev => {
+		console.log('clicky.', ev.currentTarget);
+		var tid = $(ev.currentTarget).attr('data-id');
+		$('li.subcategory__term-item a[data-id="'+tid+'"]').click();
+	});
+	
 	function makeImageArrays() {
 		var activeArray = [];
 		var inactiveArray = [];
 		var imageResultsWrapper = $('.image-results__wrapper');
 		var imageItems = imageResultsWrapper.children().children();
-		console.log(imageItems);
 		// children = Array.prototype.slice.call(children, 0);
-		console.log(imageItems);
 		var thisChild;
 		// console.log(activeContainer);
 		console.log(imageItems.length);
@@ -86,8 +91,6 @@ $(document).ready(function() {
 		// console.log(inactiveChildLast);
 		var myActiveArray = moveActiveArray;
 		var myInactiveArray = moveInactiveArray;
-		console.log(myActiveArray.length);
-		console.log(myInactiveArray.length);
 			for (var i = 0; i < myInactiveArray.length; i++) {
 				var oldPosition = getBCR(myInactiveArray[i]);
 				inactiveImageContainer.appendChild(myInactiveArray[i]);
@@ -161,11 +164,18 @@ $(document).ready(function() {
 	$('body').on('click', imageTermTrigger, function() {
 		var that = this; // store which term was clicked
 		checkTermSelected(that);
+		updateEmblemView();
 	})
 	$('body').on('click', resultsTermsTrigger, function() {
 		var that = this; // store which results item terms button was clicked
 		checkResultsItemTermsState(that);
 	});
+
+	$('body').on('click', 'button#reset-button', ev => {
+		$('li.'+imageTermSelected).removeClass(imageTermSelected);
+		updateEmblemView();
+	});
+	
 /* FUNCTIONS */
 	function checkCategorySelected(selectedCategory) {
 		var currentCategory = $(selectedCategory).parent(); // store which category is selected
@@ -230,4 +240,48 @@ $(document).ready(function() {
 		$(currentSelectedTerm).removeClass(imageTermSelected); // remove selected term class
 		categoriesHide(currentSelectedCategory);
 	}
+
+	var updateEmblemView = function() {
+		var actives = activeEmblems(); //Array of emblem numbers. Not zero-padded strings.
+		var filts = activeFilters();
+
+		if ( filts.length == 0 ) {
+			//No filters are selected.
+			$('h1.hero__heading').html(heroPlaceholder);
+			filterList = '';
+		} else {
+			//Breadcrumbs — Create an <li><a> element containing the selected term and add 
+			//to/remove from ul.filters__list (ex: line 57) 
+			var filterList = filterselectionTemplate( { filterData: filts } );
+			//Hero — Replace the text in h1.hero__heading with the number of results (line 67)
+			var resultsLabel = actives.length === 1 ? " result" : " results";
+			$('h1.hero__heading').text(actives.length + resultsLabel);
+		}
+
+		$('.filters__list').html(filterList);
+		
+		//Visualization — Add/remove the class "image--active" from the corresponding 
+		//<li> in ul.results-viz__items (ex: line 72)
+		var linkcls = 'image--active';
+		$('ul.results-viz__items li').removeClass(linkcls);
+
+		//Image Results — Add the class "item--active" and remove the class 
+		//"item--inactive" from the corresponding div.image-results__item when a term is 
+		//added/removed and the filters apply to that image. Remove the class "item--active" 
+		//and add "item--inactive" from the corresponding div.image-results__item when a term 
+		//is added/removed and the filters do not apply to that image (ex: lines 170 and 149)
+		$('div.image-results__item').removeClass('item--active').addClass('item--inactive');
+
+		actives.forEach(el => {
+			var imgid = '#image'+el;
+			var linksel = 'a[data-href="'+imgid+'"]';
+			$(linksel).parents('li').addClass(linkcls);
+
+			$('div.image-results__item'+imgid).removeClass('item--inactive').addClass('item--active');
+		}, this);
+		
+		makeImageArrays();
+	}
 });
+
+
