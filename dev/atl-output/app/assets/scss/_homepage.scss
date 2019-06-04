@@ -46,8 +46,8 @@ main.home {
     font-style: oblique;
   }
   .hero-text h6 {
-/*    font-size: 1.125rem;*/
-    font-size: .75rem;
+    font-size: 1rem;
+    letter-spacing: .05em;
     text-transform: uppercase;
   }
   .hero-image {
@@ -106,7 +106,6 @@ main.home {
     color: $white;
     font-size: 1rem;
     font-weight: 300;
-    letter-spacing: .09375rem;
     line-height: 1rem;
     margin-top: .375rem;
   }
@@ -133,7 +132,7 @@ main.home {
     font-style: oblique;
   }
   .intro-text a {
-    color: $gray;
+    color: $white;
     font-size: 1rem;
     font-weight: 600;
     grid-area: 2 / 4 / 3 / 10;
@@ -142,14 +141,13 @@ main.home {
     padding: 0 5rem;
   }
   .intro-text a:hover {
-    color: $white;
+    color: $black_pure;
     transition: .3s;
-    text-decoration: underline solid $white;
   }
   .intro-text a:focus {
-    color: $white;
+    color: $black;
     outline: none;
-    text-decoration: underline solid $white;
+    text-decoration: underline solid $black_pure;
   }
 }
 
