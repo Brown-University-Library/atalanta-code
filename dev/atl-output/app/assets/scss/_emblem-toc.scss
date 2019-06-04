@@ -6,7 +6,7 @@ main.emblem-toc {
 	color: $white;
 	display: grid;
 	font-family: $display-font_emblem;
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
 	margin-top: $topnav-h;
@@ -34,12 +34,13 @@ main.emblem-toc {
 		font-size: 1.5rem;
 		font-variant: small-caps;
 		letter-spacing: .05em;
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 	}
 	h5 {
+		display: none;
 		color: $white_transparent;
 		font-size: 1.5rem;
-		margin-bottom: 2rem;
+		margin-bottom: 3rem;
 	}
 	cite {
 		font-style: oblique;
@@ -50,16 +51,23 @@ main.emblem-toc {
 		grid-template-rows: auto;
 	}
 	ul {
-		display: grid;
-		grid-template-columns: repeat(20, 1fr);
-		grid-template-rows: auto;
+		border-top: 1px solid $black;
+		display: flex;
+		flex-wrap: wrap;
 		grid-column: 1 / 13;
+		padding-top: 3rem;
+		width: 100%;
 	}
-	li:nth-child(n+1):nth-child(-n+4){ /* front matter */
-		grid-column: 1 / 21;
-		a {
-			/*color: green;*/
-		}
+	li:nth-child(n+1):nth-child(-n+4) { /* front matter */
+		flex: 1 0 25%;
+		margin-bottom: 4rem;
 	}
-
+	li:nth-child(n+5):nth-child(-n+54) { /* emblems */
+		flex: 1 0 15%;
+		margin: 0 1rem 3rem 1rem;
+	}
+	img {
+		height: auto;
+		width: 200px;
+	}
 }

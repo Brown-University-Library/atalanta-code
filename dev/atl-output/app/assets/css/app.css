@@ -4039,7 +4039,7 @@ main.emblem-toc {
   color: white;
   display: grid;
   font-family: "GTAmerica", "Usual", Helvetica, Arial, sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
   margin-top: 3.125rem;
@@ -4063,11 +4063,12 @@ main.emblem-toc {
     font-size: 1.5rem;
     font-variant: small-caps;
     letter-spacing: .05em;
-    margin-bottom: 2rem; }
+    margin-bottom: 3rem; }
   main.emblem-toc h5 {
+    display: none;
     color: rgba(255, 255, 255, 0.75);
     font-size: 1.5rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 3rem; }
   main.emblem-toc cite {
     font-style: oblique; }
   main.emblem-toc nav {
@@ -4075,15 +4076,34 @@ main.emblem-toc {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto; }
   main.emblem-toc ul {
-    display: grid;
-    grid-template-columns: repeat(20, 1fr);
-    grid-template-rows: auto;
-    grid-column: 1 / 13; }
+    border-top: 1px solid #222;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    grid-column: 1 / 13;
+    padding-top: 3rem;
+    width: 100%; }
   main.emblem-toc li:nth-child(n+1):nth-child(-n+4) {
     /* front matter */
-    grid-column: 1 / 21; }
-    main.emblem-toc li:nth-child(n+1):nth-child(-n+4) a {
-      color: green; }
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 25%;
+    -ms-flex: 1 0 25%;
+    flex: 1 0 25%;
+    margin-bottom: 4rem; }
+  main.emblem-toc li:nth-child(n+5):nth-child(-n+54) {
+    /* emblems */
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 15%;
+    -ms-flex: 1 0 15%;
+    flex: 1 0 15%;
+    margin: 0 1rem 3rem 1rem; }
+  main.emblem-toc img {
+    height: auto;
+    width: 200px; }
 
 main.emblem-page {
   background: white;
