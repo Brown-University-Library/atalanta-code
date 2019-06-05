@@ -2008,7 +2008,7 @@ main.home {
     background-color: #dc4928;
     color: white;
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 4fr 6fr;
     grid-template-rows: auto;
     grid-area: 1 / 1 / 2 / 13;
     height: 78vh; }
@@ -2017,7 +2017,8 @@ main.home {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    grid-area: 1 / 1 / 2 / 2;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
@@ -2031,9 +2032,8 @@ main.home {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-transform: translate(12vw, 0);
-    -ms-transform: translate(12vw, 0);
-    transform: translate(12vw, 0); }
+    padding-left: 11rem;
+    z-index: 1; }
   main.home .hero-text h1 {
     font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
     font-size: 9rem;
@@ -2041,29 +2041,30 @@ main.home {
     line-height: .97;
     margin: 0;
     padding: 2rem 0 0 0;
-    text-transform: lowercase;
-    width: 110%; }
+    text-transform: lowercase; }
   main.home .hero-text h5 {
     font-size: 1.125rem;
     font-weight: 300;
     line-height: 1.75rem;
     padding-top: 2.75rem;
     margin-bottom: 2rem;
-    width: 50%; }
+    width: 20%; }
   main.home .hero-text h5 cite {
     font-style: oblique; }
   main.home .hero-text h6 {
     font-size: 1rem;
     letter-spacing: .05em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    width: 30%; }
   main.home .hero-image {
-    background-color: #ffae00;
-    background-image: url("../../assets/img/default/bkg_homepage.png");
-    background-position: 84% 25%;
+    background: #ffae00;
+    background-image: url("../../assets/img/default/bkg_homepage_3.png");
+    background-position: 50%;
     background-repeat: no-repeat;
-    background-size: 160%;
-    grid-area: 1 / 2 / 2 / 3;
-    margin: -15rem 0 0 0; }
+    background-size: cover;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin: 0 0 0 0; }
   main.home nav.home {
     background-color: #333;
     color: #fff;
@@ -2113,7 +2114,7 @@ main.home {
   main.home ul li a {
     color: #ffae00;
     font-size: 1rem;
-    letter-spacing: .125rem;
+    letter-spacing: .075em;
     line-height: 1.25rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -2130,41 +2131,33 @@ main.home {
     font-size: 1rem;
     font-weight: 300;
     line-height: 1rem;
-    margin-top: .375rem; }
+    margin-top: .625rem; }
   main.home .intro-text {
     background-image: url(../../assets/img/default/bkg_homepage_2.png);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 61%;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
+    background-position: 50% 60%;
+    background-size: 55%;
     grid-area: 3 / 1 / 4 / 13;
-    height: 45vh;
-    padding: 11rem 0 11.5rem 0; }
+    height: 51vh;
+    padding: 8rem 25rem 8rem 25rem; }
   main.home .intro-text p {
     font-size: 1.5rem;
-    grid-area: 1 / 4 / 2 / 10;
     line-height: 1.5;
-    padding: 0 5rem; }
+    margin-bottom: 2rem; }
   main.home .intro-text p cite {
     font-style: oblique; }
   main.home .intro-text a {
     color: white;
     font-size: 1rem;
-    font-weight: 600;
-    grid-area: 2 / 4 / 3 / 10;
-    letter-spacing: .05em;
-    text-transform: uppercase;
-    padding: 0 5rem; }
+    letter-spacing: .075em;
+    text-transform: uppercase; }
   main.home .intro-text a:hover {
     color: #000;
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
   main.home .intro-text a:focus {
-    color: #222;
+    color: #000;
     outline: none;
     -webkit-text-decoration: underline solid #000;
     text-decoration: underline solid #000; }
@@ -2191,10 +2184,6 @@ main.home {
     margin-left: -40vh; }
   main.home .intro-text {
     background-color: #dc4928; }
-  main.home .intro-text p {
-    grid-area: 1 / 2 / 2 / 12; }
-  main.home .intro-text a {
-    grid-area: 2 / 2 / 3 / 12; }
   nav.home ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2213,26 +2202,28 @@ main.home {
     margin-top: 1rem; } }
 
 @media screen and (min-width: 768px) and (max-width: 999px) {
-  main.home .hero-text {
-    -webkit-transform: translate(8vw, 0);
-    -ms-transform: translate(8vw, 0);
-    transform: translate(8vw, 0); }
-  main.home .hero-text h1 {
-    font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
-    font-size: 7rem;
-    height: auto;
-    line-height: .97;
-    margin: 0;
-    padding: 2rem 0 0 0;
-    text-transform: lowercase;
-    width: 150%; }
-  main.home .hero-text h5 {
-    margin-top: 2rem;
-    padding-top: 0;
-    width: 70%; }
-  main.home .hero-image {
-    background-position: 5% 0%;
-    background-size: 260%; } }
+  main.home {
+    /*    .hero-text h1 {
+      font-family: $secondary-display-font_emblem;
+      font-size: 7rem;
+      height: auto;
+      line-height: .97;
+      margin: 0;
+      padding: 2rem 0 0 0;
+      text-transform: lowercase;
+      width: 150%;
+    }
+    .hero-text h5 {
+      margin-top: 2rem;
+      padding-top: 0;
+      width: 70%;
+    }
+    .hero-image {
+      background-position: 5% 0%;
+      background-size: 260%;
+    }*/ }
+    main.home .hero-text {
+      /*      transform: translate(8vw, 0);*/ } }
 
 @media screen and (min-width: 1000px) and (max-width: 1399px) {
   main.home .hero-text h1 {
@@ -2262,6 +2253,27 @@ main.home {
   main.home .hero-text h5 {
     padding-top: 1.5rem;
     width: 70%; } }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main.home .hero-text {
+    padding-left: 1rem; }
+  main.home .hero-text h1 {
+    font-size: 4rem;
+    height: auto;
+    line-height: .97;
+    margin: 0;
+    padding: 2rem 0 0 0; }
+  main.home .hero-text h5 {
+    margin-top: 2rem;
+    padding-top: 0; }
+  main.home .intro-text {
+    /*      background-image: url(../../assets/img/default/bkg_homepage_2.png);
+      background-repeat: no-repeat;
+      background-position: 50% 60%;
+      background-size: 55%;
+      grid-area: 3 / 1 / 4 / 13;
+      height: 51vh;*/
+    padding: 8rem 1rem 8rem 1rem; } }
 
 /* 1366px width */
 main.toc-wrapper {
@@ -6625,7 +6637,6 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
   main.emblem-page .panel--right section.section__discourse .original div.margin-note {
     display: none; } }
 
-/*@import 'music-snippets';*/
 body {
   /* background-color: #ddd; */
   padding: 3em; }
@@ -8529,51 +8540,45 @@ main#image-search {
   width: 100vw;
   z-index: 10000000; }
 
+div._footer {
+  background: #333;
+  display: block;
+  padding: 100px 0;
+  width: 100%; }
+
 footer {
-  background-color: #333;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   color: white;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   font-size: .75rem;
-  font-weight: 600;
-  height: 30vh;
-  padding: 3rem 6rem; }
-  footer ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    height: 20vh; }
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding: 0 25px;
+  position: relative;
+  width: 100%;
+  max-width: 1137px;
+  /*	.footer--branding {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-around;
+		flex-direction: column;
+		height: 100%;
+	}
+	h6 {
+		font-size: .75rem;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	img {
+		height: auto;
+		width: 10rem;
+	}*/ }
   footer li {
     line-height: 1.5;
-    padding: .5rem; }
+    margin-bottom: .75rem; }
   footer li a {
     color: white;
+    font-size: .75rem;
+    letter-spacing: .8px;
     text-transform: uppercase; }
   footer li a:hover {
     color: #ffcd61;
@@ -8585,44 +8590,22 @@ footer {
     outline: none;
     -webkit-text-decoration: underline solid #ffcd61;
     text-decoration: underline solid #ffcd61; }
-  footer .footer--branding {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    height: 100%; }
-  footer h6 {
-    font-size: .75rem;
-    font-weight: 600;
-    text-transform: uppercase; }
-  footer img {
-    height: auto;
-    width: 10rem; }
 
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {
   footer {
-    height: 30vh;
-    padding: 2rem;
-    width: calc(100vw - 4rem); }
-    footer .footer--main {
-      width: calc(60vw - 2rem); }
-    footer .footer--branding {
-      width: calc(40vw - 2rem); }
-    footer ul {
-      height: 30vh; } }
+    /*		height: 30vh;
+		padding: 2rem;
+		width: calc(100vw - 4rem);
+		.footer--main {
+			width: calc(60vw - 2rem);
+		}
+		.footer--branding {
+			width: calc(40vw - 2rem);
+		}
+		ul {
+			height: 30vh;
+		}*/ } }
 
 @media screen and (min-width: 1000px) and (max-width: 1399px) {
   footer {
@@ -8631,12 +8614,4 @@ footer {
     footer .footer--branding h6 {
       margin-bottom: 2.25rem; } }
 
-/***     Breakpoints     ***/
-/* large  -  desktop */
-/* medium-large - laptop */
-/* medium - small laptop */
-/* medium - tablet */
-/* small  -  mobile */
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  ._sidenav {
-    display: none; } }
+/*@import 'breakpoints';*/
