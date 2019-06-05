@@ -1,5 +1,26 @@
+$breakpoints: (
+	'xs-phone': 320px,
+	'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1025px,
+	'widescreen': 1200px,
+	'wider': 1550px
+	);
+
+// keywords
+$media-expressions: (
+	'screen': 'screen',
+	'print': 'print',
+	'handheld': 'handheld',
+	'landscape': '(orientation: landscape)',
+	'portrait': '(orientation: portrait)',
+	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+	);
+
 @import 'fonts';
 @import 'reset';
+@import 'include-media';
 @import 'utilities';
 @import 'global';
 @import 'buttons';
@@ -17,7 +38,6 @@
 @import 'atalanta-proof-eng';
 @import 'atalanta-proof-lat3';
 @import 'xml5';
-/*@import 'music-snippets';*/
 @import 'atalanta-notation5';
 @import 'subnav-v3';
 @import 'music5';
@@ -26,4 +46,4 @@
 @import 'image-search-grid';
 @import 'collections';
 @import 'footer';
-@import 'breakpoints';
+/*@import 'breakpoints';*/
