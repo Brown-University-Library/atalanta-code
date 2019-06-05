@@ -4,19 +4,36 @@
 div._footer {
 	background: $gray;
 	display: block;
+	max-height: 30vh;
 	padding: 100px 0;
 	width: 100%;
-}
-footer {
-	color: $white;
-	font-size: .75rem;
-	letter-spacing: .8px;
-	text-transform: uppercase;
-	margin: 0 auto;
-	padding: 0 25px;
-	position: relative;
-	width: 100%;
-	max-width: 1137px;
+
+	@include media ('>=desktop', '<widescreen') {
+
+	}
+
+	footer {
+		box-sizing: border-box;
+		color: $white;
+		font-size: .75rem;
+		height: auto;
+		letter-spacing: .8px;
+		margin: 0 auto;
+		padding: 0 25px;
+		position: relative;
+		text-transform: uppercase;
+		width: 100%;
+		max-width: 1137px;
+		@include media ('>=xs-phone', '<tablet') {
+			padding: 0rem 1rem;
+		}
+		@include media ('>=tablet', '<desktop') {
+			padding: 0rem 2rem;
+		}
+		@include media ('>=desktop', '<widescreen') {
+			padding: 0 5rem;
+		}
+	}
 	ul {
 
 	}
@@ -56,13 +73,13 @@ footer {
 		width: 10rem;
 	}*/
 }
-@include media ('>=tablet') {
-	div._footer {
 
-	}
+/*	@include media ('>=tablet') {
+		div._footer {
 
-}
+		}
 
+	}*/
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {
 	footer {
@@ -79,17 +96,4 @@ footer {
 			height: 30vh;
 		}*/
 	}
-
-}
-@media screen and (min-width: 768px) and (max-width: 999px) {
-
-}
-@media screen and (min-width: 1000px) and (max-width: 1399px) {
-  footer {
-  	height: 35vh;
-  	padding: 3rem 3.5rem;
-  	.footer--branding h6 {
-  		margin-bottom: 2.25rem;
-  	}
-  } 
 }
