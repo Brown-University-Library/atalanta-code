@@ -25,7 +25,7 @@ div._footer {
 		width: 100%;
 		max-width: 1137px;
 		@include media ('>=xs-phone', '<tablet') {
-			padding: 0rem 1rem;
+			padding: 0rem 1.5rem;
 		}
 		@include media ('>=tablet', '<desktop') {
 			padding: 0rem 2rem;
@@ -72,28 +72,4 @@ div._footer {
 		height: auto;
 		width: 10rem;
 	}*/
-}
-
-/*	@include media ('>=tablet') {
-		div._footer {
-
-		}
-
-	}*/
-/* BREAKPOINTS */
-@media screen and (min-width: 320px) and (max-width: 767px) {
-	footer {
-/*		height: 30vh;
-		padding: 2rem;
-		width: calc(100vw - 4rem);
-		.footer--main {
-			width: calc(60vw - 2rem);
-		}
-		.footer--branding {
-			width: calc(40vw - 2rem);
-		}
-		ul {
-			height: 30vh;
-		}*/
-	}
 }
