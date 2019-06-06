@@ -2298,8 +2298,7 @@ main.toc-wrapper {
   box-sizing: border-box;
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  line-height: 1.5;
-  margin-top: 3.375rem; }
+  line-height: 1.5; }
   main.toc-wrapper h2 {
     border-bottom: 1px solid #333;
     color: white;
@@ -3749,14 +3748,13 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   background: #869791; }
 
 main.emblem-toc {
-  background: #ba4221;
+  background: #dc4928;
   color: white;
   display: grid;
   font-family: "GTAmerica", "Usual", Helvetica, Arial, sans-serif;
   font-size: 1.125rem;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
-  margin-top: 3.375rem;
   padding: 3rem 5rem;
   text-align: center; }
   main.emblem-toc a {
@@ -3772,12 +3770,13 @@ main.emblem-toc {
     grid-column: 1 / 13; }
   main.emblem-toc h1 {
     font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
-    font-size: 5rem; }
+    font-size: 5rem;
+    margin-bottom: .5rem; }
   main.emblem-toc h3 {
-    font-size: 1.5rem;
-    font-variant: small-caps;
+    font-size: 1.125rem;
     letter-spacing: .05em;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    text-transform: uppercase; }
   main.emblem-toc h5 {
     display: none;
     color: rgba(255, 255, 255, 0.75);

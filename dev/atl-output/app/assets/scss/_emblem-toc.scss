@@ -2,14 +2,13 @@
 @import 'utilities';
 
 main.emblem-toc {
-	background: $red_dark;
+	background: $red;
 	color: $white;
 	display: grid;
 	font-family: $display-font_emblem;
 	font-size: 1.125rem;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
-	margin-top: $topnav-h;
 	padding: 3rem 5rem;
 	text-align: center;
 	a {
@@ -29,12 +28,13 @@ main.emblem-toc {
 	h1 {
 		font-family: $secondary-display-font_emblem;
 		font-size: 5rem;
+		margin-bottom: .5rem;
 	}
 	h3 {
-		font-size: 1.5rem;
-		font-variant: small-caps;
+		font-size: 1.125rem;
 		letter-spacing: .05em;
 		margin-bottom: 3rem;
+		text-transform: uppercase;
 	}
 	h5 {
 		display: none;
