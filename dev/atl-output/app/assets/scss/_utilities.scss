@@ -1,7 +1,9 @@
-$topnav-h: 3.125rem;
+$topnav-h: 3.375rem;
 $subnav-h: 3.125rem;
-$emblemnav-h: 6.25rem;
-$lessemblemnav-h: calc(100vh - 6.25rem);
+$emblemnav-h: 6.5rem;
+$collections-h: 80px;
+$lessemblemnav-h: calc(100vh - 6.5rem);
+$lessemblemnavcollections-h: calc(100vh - 6.5rem - 80px);
 $imagesearchcatnav-h: 2.5rem;
 $imagesearchnav-h: 5.625rem;
 
