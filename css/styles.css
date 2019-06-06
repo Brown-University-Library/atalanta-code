@@ -3376,7 +3376,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     -ms-flex-pack: justify;
     justify-content: space-between;
     height: 100%;
-    padding: 0 4.125rem 0 3.375rem;
+    padding: 0 4.375rem 0 3.375rem;
     width: auto; }
   .topnav .topnav__logo {
     display: -webkit-box;
@@ -3392,9 +3392,9 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     -ms-flex-pack: start;
     justify-content: flex-start;
     -webkit-box-flex: 1;
-    -webkit-flex: 1 0 58%;
-    -ms-flex: 1 0 58%;
-    flex: 1 0 58%; }
+    -webkit-flex: 1 0 56%;
+    -ms-flex: 1 0 56%;
+    flex: 1 0 56%; }
   .topnav .topnav__logo a {
     background-image: url("../icons/fandf-logotype_white.svg");
     background-position: center left;
@@ -3426,9 +3426,9 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     filter: brightness(1); }
   .topnav .topnav__content {
     -webkit-box-flex: 1;
-    -webkit-flex: 1 0 42%;
-    -ms-flex: 1 0 42%;
-    flex: 1 0 42%; }
+    -webkit-flex: 1 0 44%;
+    -ms-flex: 1 0 44%;
+    flex: 1 0 44%; }
   .topnav .topnav__content ul {
     display: -webkit-box;
     display: -webkit-flex;

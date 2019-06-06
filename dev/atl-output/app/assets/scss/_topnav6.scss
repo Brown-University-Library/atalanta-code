@@ -62,14 +62,14 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 		align-items: center;
 		justify-content: space-between;
 		height: 100%;
-		padding: 0 4.125rem 0 3.375rem;
+		padding: 0 4.375rem 0 3.375rem;
 		width: auto;
 	}
 	.topnav__logo {
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		flex: 1 0 58%;
+		flex: 1 0 56%;
 	}
 	.topnav__logo a {
 		background-image: url("../icons/fandf-logotype_white.svg");
@@ -94,7 +94,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 	}
 
 	.topnav__content {
-		flex: 1 0 42%;
+		flex: 1 0 44%;
 	}
 
 	.topnav__content ul {
