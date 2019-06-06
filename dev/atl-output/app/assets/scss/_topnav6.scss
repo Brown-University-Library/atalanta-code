@@ -1,0 +1,154 @@
+@import 'utilities';
+@import 'colors';
+
+header {
+	height: $topnav-h;
+}
+a.a11y_skip-main {
+	height: 1px;
+    left: -999px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    z-index: -999;
+}
+a.a11y_skip-main:focus, a.a11y_skip-main:active {
+    background-color:$black_pure;
+    border-radius: 15px;
+    color: $white;
+    font-size: 1.2em;
+    height: auto;
+    left: auto;
+    margin: 10px 10%;
+    overflow: auto;
+    padding: 15px;
+    text-align: center;
+    top: $emblemnav-h;
+    width: 80%;
+	z-index: 999;
+}
+._topnav {
+	height: $topnav-h;
+}
+.topnav {
+	background: $red;
+	color: $gray;
+	font-family: $display-font_secondary;
+	font-size: 13px;
+	height: $topnav-h;
+	letter-spacing: .7px;
+	line-height: 1.25;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+	z-index: $topnav-z;
+
+	a {
+		box-sizing: border-box;
+		color: $gray;
+	}
+
+	> button {
+		display: none;
+	}
+
+	.topnav-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		padding: 0 4.375rem 0 3.375rem;
+		width: auto;
+	}
+	.topnav__logo {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex: 1 0 56%;
+	}
+	.topnav__logo a {
+		background-image: url("../icons/fandf-logotype_white.svg");
+		background-position: center left;
+		background-repeat: no-repeat;
+		background-size: 58% 80%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		filter: brightness(0);
+		height: $topnav-h;
+		width: 5.5rem;
+	}
+	.topnav__logo a:focus, 
+	.topnav__content a:focus, 
+	.topnav__search button:focus {
+		outline: 1px dotted $white;
+	}
+	.topnav__logo a:hover, 
+	.topnav__logo a:focus {
+		filter: brightness(1);
+	}
+
+	.topnav__content {
+		flex: 1 0 44%;
+	}
+
+	.topnav__content ul {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		height: 100%;
+		width: auto;
+	}
+	.topnav__content a {
+/*		border-bottom: none;
+		box-sizing: border-box;*/
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: $topnav-h;
+/*		padding: 0 1rem;*/
+	}
+	.topnav__content a:hover, 
+	.topnav__content a:focus {
+		color: $white;
+		transition: .2s;
+	}
+
+/*	li.topnav__search {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}*/
+	li.topnav__search button {
+		color: $gray;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		height: $topnav-h;
+		width: 5.5rem;
+	}
+	li.topnav__search svg {
+		width: 5.5rem;
+	}
+	li.topnav__search svg .st0 {
+		stroke: $gray;
+	}
+	li.topnav__search button:hover svg .st0, 
+	li.topnav__search button:focus svg .st0 {
+		stroke: $white;
+		transition: .2s;
+	}
+	li.topnav__search span.topnav__search-label {
+		display: none;
+	}
+	li.topnav__search a:hover span.topnav__search-label, 
+	li.topnav__search a:focus span.topnav__search-label {
+		color: $white;
+		transition: .2s;
+	}
+}
