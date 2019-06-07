@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0">
+    <title>Michael Maier &middot; Atalanta Fugiens</title>
+
+    <link rel="stylesheet" href="../../css/style-mod-for-101s-20190605.css">
+    <link rel="stylesheet" href="../../css/fresco/fresco.css">
+
+    <style>
+      @media(min-width:768px) {
+        .header-banner h1 {opacity: 0;}
+        .header-banner .caption .by {opacity: 0;}
+      }
+      div.fr-caption {
+        font-size: 15px;
+        font-weight: bolder;
+      }
+      a.fresco:hover {
+        background-color: rgb(83,181,140) !important;
+        color: rgb(255,255,255) !important;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- <script src="../../js/bundle.82c417f2334776021edd7bfc773ffc47991da9af206badd335dc64ac3835efd9.js" defer></script> -->
+    <!-- <script src="../../js/jquery.main.js" defer></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="../../js/fresco/fresco.js"></script>
+
+    <!-- <script src="../../js/bundle.min.5fdfc9832e91662c74bb276973165475b3b388c5340357fe98217a9bdff7ca8f.js" defer></script> -->
+
+    <!-- force Hype-exported animation to proportionally scale within header area, via gist.github.com/tangent405/7da80afb17602bc0c322 -->
+    <script>
+      function myCallback(hypeDocument, element, event) {
+        if (isScalePossible()){
+          window.myHypeContainerId = hypeDocument.documentId();
+          $('#' + window.myHypeContainerId).css({
+            '-moz-transform-origin': '0% 0%',
+            '-webkit-transform-origin': '0% 0%',
+            '-ms-transform-origin': '0% 0%',
+            '-o-transform-origin': '0% 0%',         
+            'transform-origin': '0% 0%',
+            margin: 0
+          });
+          scaleSite();
+          $(window).resize(scaleSite);
+        }
+        return true;
+      }
+      if("HYPE_eventListeners" in window === false) {
+        window.HYPE_eventListeners = Array();
+      }
+      window.HYPE_eventListeners.push({"type":"HypeDocumentLoad", "callback":myCallback});
+      function scaleSite()
+      {
+        var hypeContainer = $('#' + window.myHypeContainerId);
+        var containerWidth = hypeContainer.width();
+        var containerHeight = hypeContainer.height();
+        var parentWidth = hypeContainer.parent().width();
+        var parentHeight = hypeContainer.parent().height();
+        var scaleWidth = parentWidth / containerWidth;
+        var scaleHeight = parentHeight / containerHeight;
+        var scale = Math.min(scaleWidth, scaleHeight);
+        var left = (containerWidth * scale < parentWidth) ? ((parentWidth - (containerWidth * scale)) / 2) + 'px' : '0px';
+        var top = (containerHeight * scale < parentHeight) ? ((parentHeight - (containerHeight * scale)) / 2) + 'px' : '0px' ;
+        hypeContainer.css({
+            "-moz-transform"    : "scale("+scale+")",
+            "-webkit-transform" : "scale("+scale+")",
+            "-ms-transform"     : "scale("+scale+")",
+            "-o-transform"      : "scale("+scale+")",
+            "transform"         : "scale("+scale+")",
+            "left" : left,
+            "top" : top
+        });
+      }
+      function isScalePossible() 
+      {
+        can = 'MozTransform' in document.body.style;
+        if(!can) can = 'webkitTransform' in document.body.style;
+        if(!can) can = 'msTransform' in document.body.style;
+        if(!can) can = 'OTransform' in document.body.style;
+        if(!can) can = 'transform' in document.body.style;
+        if(!can) can = 'Transform' in document.body.style;
+        return can;
+      }
+    </script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<header id="header">
+  <!-- <div class="header-wrap">
+    <div class="frame">
+      <div class="logo">
+        <a href="#">
+          <img src="../../images/logo.png" alt="ff" class="dark-logo">
+          <img src="../../images/logo01.png" alt="ff" class="light-logo">
+        </a>
+      </div>
+      <nav id="nav">
+        <a href="#" class="nav-opener"><span>Menu</span></a>
+        <div class="nav-drop">
+          <ul>
+            <li><a href="#">DIGITAL EDITION</a></li>
+            <li><a href="#">ESSAYS</a></li>
+            <li><a href="#">IMAGES</a></li>
+            <li><a href="#">CONTENTS</a></li>
+            <li class="topnav__search">
+              <button class="topnav__search--closed">
+                <span class="topnav__search-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 960 560"
+                    xml:space="preserve">
+                    <style type="text/css">
+                      .st0 {
+                        fill: none;
+                        stroke: #fff;
+                        stroke-width: 20;
+                        stroke-miterlimit: 10;
+                      }
+                    </style>
+                    <g id="handle">
+                      <g>
+                        <path class="st0" d="M537.6,337.5l97,97L537.6,337.5z" />
+                      </g>
+                    </g>
+                    <g id="glass">
+                      <g>
+                        <path class="st0" d="M480,153c33.9,0,65.8,13.2,89.8,37.2S607,246.1,607,280s-13.2,65.8-37.2,89.8S513.9,407,480,407s-65.8-13.2-89.8-37.2
+                        S353,313.9,353,280s13.2-65.8,37.2-89.8S446.1,153,480,153 M480,143c-75.7,0-137,61.3-137,137s61.3,137,137,137s137-61.3,137-137
+                        S555.7,143,480,143L480,143z" />
+                      </g>
+                    </g>
+                  </svg></span>
+                <span class="topnav__search-label">Search</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="search__modal" aria-hidden="true">
+        <button class="x-close" aria-label="Close search modal"></button>
+        <form id="ataSearch" class="search__bar">
+          <label class="label search__bar__label" for="search__bar__field">Enter your search below</label>
+          <input type="text" id="search__bar__field"
+            aria-label="Search the digital edition, scholarly essays or emblem images" />
+          <button class="submit" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div> -->
+  <div class="header-area" style="width: 100%; position: fixed;
+  max-height: 552px !important;
+  background-color: rgba(219,74,41,1);
+  margin-bottom: 0px;
+  z-index: 100;
+  overflow: hidden;">
+
+    <section class="header-banner">
+      
+      <div class="container" style="z-index: -100;">
+        <h1>Michael Maier</h1>
+        <div class="caption">
+          <!--<h4></h4>-->
+          <span class="by">by Hereward Tilton</span>
+        </div>
+      </div>
+
+      <!-- <div class="header-bg" style="background-image: url('');"></div> -->
+
+      <div class="header-bg">
+
+        <div id="1366x552maph4bfresco201905203_hype_container" class="HYPE_document" style="margin:auto;position:relative;width:1366px;height:552px;overflow:hidden;z-index:499;">
+          <script src="../../1366x552map_H4b-fresco-20190520-3.hyperesources/1366x552maph4bfresco201905203_hype_generated_script.js?18798"></script>
+        </div>
+
+      </div>
+
+    </section>
+    
+  </div>
+</header>
+
+    <div id="forced-gutter-fade" style="position: fixed; width: 100%; margin-top: 438px; height: 49px; background-image: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0)); z-index: 3;"></div>
+
+    <main id="main" style="background-color: white;">
+      
+      <section id="intro" class="text-section">
+        <div class="container" style="background-color: white;">
+          <div class="content" style="margin-top: 438px;">
+            <p>Michael Maier (1568&ndash;1622) was an alchemist of the German late Renaissance known chiefly for a remarkable multimedia book of emblems &mdash; <em>Atalanta fugiens</em> (1617) &mdash; and for his printed defense of the semi-fictitious Rosicrucian brotherhood. His life was dedicated to an ill-fated quest for the Philosophers’ Stone, a quintessential extract of gold thought to possess divine healing powers mediated by the sun. In both his printed works and his practice as a physician, Maier charted an uneasy course between the traditional Galenic &ldquo;book learning&rdquo; of his schooling and the empirical chemical medicine pioneered by Paracelsus. As Paracelsian practice involved recourse to supernatural forces, Maier was also obliged to negotiate theological tensions between the Lutheran faith of his upbringing and the inspirationist pursuit of divine revelation unmediated by the ecclesiastical hierarchies. The Paracelsian inspirationism of Maier’s time was epitomised by the Rosicrucian manifestos, and anyone publically defending their programme &mdash; as Maier did in his <em>Silentium post clamores</em> (1617) and <em>Themis aurea</em> (1618) &mdash; ran substantial risk of persecution amid the rising sectarian hostilities of the Counter-Reformation. Yet esoteric knowledge transmitted in manuscript and oral form possessed significant currency among certain sections of the nobility, and as Europe descended into economic collapse and the devastation of the Thirty Years’ War (1618&ndash;1648), Maier’s resort to this &ldquo;economy of secrets&rdquo; became increasingly desperate.</p>
+            <p class="p-indented">A <a id="mapstart" href="../../images/101s/tilton/map-start-fullsaturation-highres.jpg" class="fresco" data-fresco-caption="&quot;Germania&quot; map. From Ortelius, Abraham, Aegid. Coppenius Diesth, and Humphrey Llwyd. <em>Theatrum Orbis Terrarum</em>. Antverpiae: Apud Aegid. Coppenium Diesth, 1570. Image courtesy of Library of Congress.">map of Maier’s peregrinations</a> graphically depicts an early modern alchemist’s quest for medicines, for the knowledge and raw materials required to manufacture them, and for the patrons willing to purchase them. Maier was born in 1568 near <a id="kiel" href="../../images/101s/tilton/Kiel-UH.jpg" class="fresco" data-fresco-caption="View of Kiel. From <em>Liber&hellip;urbium praecipuarum totius mundi</em>. 1594. Bd. 4. Civitates orbis terrarvm. Coloniae: Buchholtz. Image courtesy of Universitätsbibliothek Heidelberg.">Kiel</a> on the northern border of the Holy Roman Empire, the son of a gold embroiderer (<em>Goldsticker</em>) in the service of Heinrich Rantzau (1526&ndash;1598), Governor of Schleswig-Holstein. Rantzau seems to have been an early patron of Maier’s, as well as an inspiration for his interest in Egypt as the font of the <em>prisca sapientia</em>. From 1587 Maier studied physics, mathematics, logic and astronomy at the University of <a id="rostock" href="../../images/101s/tilton/Rostock-UH.jpg" class="fresco" data-fresco-caption="View of Rostock. From <em>Urbium praecipuarum mundi theatrum quintum</em>. 1599. Bd. 5. Civitates orbis terrarvm. [Coloniae Agrippinae]. Image courtesy of Universitätsbibliothek Heidelberg.">Rostock</a>; yet this first attempt to transcend his artisanal background came to nought, as he returned home without a degree four years later. In 1592 he defended some purely Galenic theses for his Master of Arts at <a id="frankfurt" href="../../images/101s/tilton/Frankfurt.jpg" class="fresco" data-fresco-caption="View of Frankfurt am Main (Merian, 1617&ndash;1618).">Frankfurt</a> an der Oder. There followed a period of three years’ medical training, during which Maier conducted his first laboratory experiments; however, at this point he was &ldquo;unwilling to squander money&rdquo; on the &ldquo;dark and profound&rdquo; art of alchemy. <span id="KRF"></span>In 1595 he undertook a journey to the University of <a id="padua" href="../../images/101s/tilton/Padua.jpg" class="fresco" data-fresco-caption="View of University of Padua (c. 1601).">Padua</a>, one of the foremost medical schools in Europe, where he acquired the title of Poet Laureate. Before a year had passed, however, he had fled in disgrace after wounding a fellow student. Despite the best efforts of the Paduan authorities, Maier managed to gain his doctorate at the University of <a id="basel" href="../../images/101s/tilton/Basel.jpg" class="fresco" data-fresco-caption="View of Basel. From <em>De praecipuis, totius universi urbibus</em>. 1575. Bd. 2. Civitates orbis terrarvm. Coloniae Agrippinae: apud auctores. Image courtesy of Universitätsbibliothek Heidelberg.">Basel</a> shortly thereafter.</p>
+            <p class="p-indented">In the years immediately following his <em>peregrinatio academica</em>, Maier roamed the Hanseatic ports as a travelling vendor of Galenic remedies. <span id="FPB"></span>During this period he claims to have become a &ldquo;close acquaintance&rdquo; of the famed astronomer Tycho Brahe (1546&ndash;1601), whom he met in Rostock and <a id="hamburg" href="../../images/101s/tilton/Hamburg.jpg" class="fresco" data-fresco-caption="View of Hamburg. From <em>Liber&hellip;urbium praecipuarum totius mundi</em>. 1594. Bd. 4. Civitates orbis terrarvm. Coloniae: Buchholtz. Image courtesy of Universitätsbibliothek Heidelberg.">Hamburg</a>; he also met the alchemist and Christian Cabalist Heinrich Khunrath (1560&ndash;1605) while in <a id="danzig" href="../../images/101s/tilton/Danzig.jpg" class="fresco" data-fresco-caption="View of Danzig. From <em>De praecipuis, totius universi urbibus</em>. 1575. Bd. 2. Civitates orbis terrarvm. Coloniae Agrippinae: apud auctores. Image courtesy of Universitätsbibliothek Heidelberg.">Danzig</a>, but he came to regard the man as a fraud (<em>Betrüger</em>). In December of 1601 Maier was to be found prescribing dried frogs in vinegar at the White Horse Inn in Danzig, but his sights were set upon a more lucrative business. His interest in alchemy had been piqued by the healing of a chronically ill man with an English <em>aurum potabile</em> (&ldquo;potable gold,&rdquo; a liquid or powdered form of the Philosophers’ Stone), and in 1603 he struck out along the trading route linking Danzig with the gold and silver mines of Hungarian Carpathia. Returning to his hometown near Kiel with the minerals he had acquired, he completed his first alchemical experiment at Easter, 1604.</p>
+            <p class="p-indented">The pinnacle of Maier’s career was reached with his appointment as personal physician (<em>Leibarzt</em>) to Rudolf II &mdash; the melancholy emperor who felt he had been &ldquo;bewitched,&rdquo; such was his fascination with alchemy and occult philosophy. Maier had moved to <a id="prague" href="../../images/101s/tilton/Prague.jpg" class="fresco" data-fresco-caption="View of Prague (1620).">Prague</a>, the seat of the imperial court, at some time in 1608. <span id="HDP"></span>The unique culture of pansophic humanist learning fostered there inspired his <em>Arcana arcanissima</em> (1614), the first comprehensive statement of Maier’s innovative hermeneutic paradigm: mythoalchemy, or the interpretation of Greek and Egyptian myths as ancient ciphers for alchemical processes.</p>
+            <p class="p-indented">Despite gaining the prestigious title of Imperial Count Palatine, for reasons unknown Maier left Rudolf’s service in 1610. He subsequently gravitated towards the court of Landgrave Moritz of Hessen-<a id="kassel" href="../../images/101s/tilton/Kassel.jpg" class="fresco" data-fresco-caption="View of Kassel (1593).">Kassel</a>, Germany’s foremost patron of alchemy, where the opportunity arose to investigate the English alchemical remedy he had first encountered in Danzig. Travelling to <a id="london" href="../../images/101s/tilton/London.jpg" class="fresco" data-fresco-caption="View of London (1616).">London</a>, Maier met the infamous Francis Anthony (1550&ndash;1623), who for many years had been engaged in an acrimonious dispute with the College of Physicians concerning his <em>aurum potabile</em>. Maier defended his &ldquo;good friend&rdquo; in print, co-authoring Anthony’s <em>Apologia veritatis illucescentis, pro auro potabili</em> (1616), and when he returned to the continent in 1616, he took with him 200 <em>Königsthaler</em> worth of Anthony’s medicine in the hope of selling it at the annual Frankfurt Fair. But like Anthony before him, he was refused a license by the authorities &mdash; in this case by the city physician (<em>Stadtarzt</em>) of <a id="frankfurt2" href="../../images/101s/tilton/Frankfurt.jpg" class="fresco" data-fresco-caption="View of Frankfurt am Main (Merian, 1617&ndash;1618).">Frankfurt am Main</a>, who personally testified to Maier’s inability to cure his patients with the <em>aurum potabile</em>.</p>
+            <p class="p-indented">The Frankfurt Fair also provided an opportunity for Maier to sell his books, the majority of which were printed by the Frankfurt publishers Lucas Jennis and Johann Theodor de Bry; but in this enterprise, too, he failed to turn a profit. Despite his earlier attempts to secure the patronage of Moritz of Hessen-Kassel, Maier only gained a modest extra-mural position at the Hessian court in mid-1618, and this was revoked before his death. By 1619 he was living with his wife and children in <a id="magdeburg" href="../../images/101s/tilton/Magdeburg.jpg" class="fresco" data-fresco-caption="View of Magdeburg (1631).">Magdeburg</a>, where his fortunes steadily declined amid the <em>Kipper und Wipper</em> financial crisis accompanying the early years of the Thirty Years’ War. <span id="KLFM"></span>In his desperation to procure raw materials for his aurum potabile (&ldquo;red extract of common gold,&rdquo; i.e. colloidal gold) and <em>luna potabile</em> (in all probability colloidal silver), Maier turned to his own wife’s pawned jewellery, as well as to debased coinage withdrawn from circulation. In this twilight of his career Maier also began to compose astrological, geomantic and medical tracts for Gebhardt Johann von Alvensleben (1576&ndash;1631), a noble landholder in the vicinity of Magdeburg; the unfinished <em>Strategemata medica triaria</em> included Paracelsian &ldquo;white magical&rdquo; remedies operating via the power of the imagination (<em>vis imaginativa</em>). Maier’s journey to Torgau to meet Paul Nagel (†1624), a Paracelsian chiliast who moved in the circles of both Jacob Böhme and the early Rosicrucians, provides another indication of this turn toward theologically equivocal arts.</p>
+            <p class="p-indented"><span id="zoomedout"></span>The end of Maier’s star-crossed quest for patronage came in 1622. Having produced an <em>aurum potabile</em> &ldquo;far excelling&rdquo; Anthony’s in efficacy, he set out for his native Holstein to deliver a sample to Duke Friedrich of Schleswig-Holstein-Gottorf (1597&ndash;1659). Along the route home he stayed at Rostock, where he dedicated his <em>Cantilenae intellectuales de phoenice redivivo</em> to Duke Friedrich on 25 August 1622. However, he died before reaching Holstein, apparently from a chronic illness. Shortly thereafter bittersweet news arrived in Magdeburg: the King of Sweden (Gustav II Adolf, the Lutheran &ldquo;Lion of the North&rdquo;) was offering Maier free housing, upkeep and a salary of 2000 <em>Reichsthaler</em> in exchange for his services. Thus it seems Maier had been tantalizingly close to securing the kind of lucrative sponsorship for which he had vainly striven in the course of his itinerant and ultimately tragic life.</p>
+
+
+          </div>  
+
+
+          <div class="sidebar" style="margin-top: -.75em;padding-right: .7em;">
+            <div style="text-align: right;">
+              <h4 style="color:#dc4929;"><strong>Michael Maier:<br>An Itinerant Alchemist<br>in Late Renaissance Germany</strong></h4>
+              <span class="by" style="font-size: 88%;">by Hereward Tilton</span>
+            </div>
+            <ul style="text-align: right; margin-top: 49px;">
+              <!-- <li><a href="#illustration-list" class="anchor">List of Illustrations</a></li> -->
+              <li><a href="#works-cite" class="anchor">Printed Works by Maier</a></li>
+              <li><a href="#citation" class="anchor">Citation</a></li>
+              <li><a href="#biography" class="anchor">Author Biography</a></li>
+            </ul>
+          </div>
+
+        </div>
+         
+      </section>
+
+
+      <section id="citation" class="citation">
+        <div class="container">
+          <h2>Citation</h2>
+          <p>
+               Tilton, Hereward. “Michael Maier: An Itinerant Alchemist in Late Renaissance Germany.” <em>Furnace and Fugue: A digital edition of Michael Maier's</em> Atalanta fugiens <em>(1618) with Scholarly Commentary</em>. (Publisher info to follow.)
+          </p>
+        </div>
+      </section>
+   
+
+      <section id="biography" class="biography">
+        <div class="container">
+          <div class="text-hold">
+            <h2>Author Biography</h2>
+            <p>
+              <strong>Hereward Tilton</strong> is Curator of Rare Books at the Huntington Library. Prior to that he worked for UCLA’s Clark Library and the English Short-Title Catalogue (University of California, Riverside). He has published descriptive bibliographies of Sylvia Plath (1987) and Ted Hughes (with Keith Sagar, 1983, 1998). His catalogue of the work of Los Angeles’s Plantin Press (co-authored with Tyrus Harmsen) appeared in 2005. His articles include “James Shirley’s <em>Triumph of Peace</em>: Analyzing Greg’s Nightmare” (<em>Studies in Bibliography</em>, 2018). Since 2011 he has taught analytical bibliography at Rare Book School.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- <div class="collections-wrapper">
+        <div class="collection-opener">
+          <div class="opener-holder-bg">
+            <div class="opener-holder">
+              <span class="collection-name">Emblem Collections</span>
+              <div class="js-btns">
+                <a href="#" class="btn-up">
+                  <span class="icon-up"></span>
+                </a>
+                <a href="#" class="btn-down">
+                  <span class="icon-down"></span>
+                </a>
+                <a href="#" class="btn-close">
+                  <span class="icon-cancel"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="all-collections">
+          <div class="container">
+            <div class="create-collection">
+              <div class="new-collection">
+                <a class="lightbox btn" data-link="create" data-type="ajax" href="templates/modals/modal-create.html">Create a New Collection</a>
+              </div>
+              <div class="collection-view">
+                <span class="title">view<em>:</em></span>
+                <ul class="grids" data-target="#grid">
+                  <li class="view-icon sm-view">
+                    <a href="javascript:;" data-grid="small"><span class="icon-viewsm"></span></a>
+                  </li>
+                  <li class="view-icon">
+                    <a href="javascript:;" data-grid="medium"><span class="icon-viewmd"></span></a>
+                  </li>
+                  <li class="view-icon">
+                    <a href="javascript:;" data-grid="large"><span class="icon-viewlg"></span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="grids-content small-grid" id="grid"></div>
+          </div>
+        </div>
+      </div> -->
+
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-holder">
+          <ul class="quick-links">
+            <li><a href="#">CONTENTS</a></li>
+            <li><a href="#">DIGITAL EDITION</a></li>
+            <li><a href="#">SCHOLARLY ESSAYS</a></li>
+            <li><a href="#">ABOUT THE PROJECT</a></li>
+          </ul>
+          <!-- <div class="footer-logo">
+            <span class="text-before">A project of</span>
+            <div class="logo-text">
+              <a href="#">
+                <img src="../../images/f-logo.png" alt="A Project Of Brown University">
+                <span class="text"><strong>A PROJECT OF</strong> <br>Brown University</span>
+                <span class="text-after">
+                  BROWN
+                </span>
+              </a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="target"></div>
+  <script id="template" type="x-tmpl-mustache">
+    <div class="image-description" data-emblem-id="{{ id }}">
+      <div class="image-holder" data-thing="{{size}}">
+
+          
+          <img src="/images/emblems/{{size}}/emblem{{id}}.{{size}}.jpg" >
+
+       
+        <div class="drag-image">
+          <div class="drag-icon">
+            <img src="/images/drag-icon.png" alt="drag-icon">
+          </div>
+          <span class="drag-text">
+            Drag to Reorder
+          </span>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="name-tags">
+          <div class="name">Emblem {{name}}</div>
+          <ul class="extra-edits">
+            <li>
+              <a class="lightbox" data-link="zoom" data-type="ajax" data-src="/templates/modals/modal-zoom.html" href="javascript:;"><span class="icon-search"></span></a>
+            </li>
+            <li><a href="#"> <span class="icon-trash"></span></a></li>
+          </ul>
+        </div>
+        <div class="tag-wrapper">
+          <a class="tag-opener" href="#">
+            TAGS <span class="icon-down"></span><span class="icon-cancel"></span>
+          </a>
+          <ul class="slide"></ul>
+          <div class="tag-no">
+            <span class="tags-count"></span>
+            <div class="tag-detail">
+              <span class="title">
+                <span class="tags-count"></span> Matching Tags in this Collection:
+              </span>
+              <ul class="tag-list"></ul>
+              <a class="all-tags" href="javascript:;'">
+                Show All Tags
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <div class="cookies-bar">
+    <div class="container">
+      <p>This website use cookies, which are necessary to its functioning. Please enable Cookies in your browser and try again.</p>
+    </div>
+    <a href="javascript:;" class="close"><span class="icon-cancel"></span></a>
+  </div>
+</body>
+</html>
