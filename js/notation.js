@@ -16,8 +16,11 @@
     TRACK_NUMBER_ATTNAME = 'data-track',
     TIME_START_ATTNAME = 'data-time-start',
     TIME_END_ATTNAME = 'data-time-end',
-    AUDIO_POLLING_INTERVAL = 200;
-  
+    AUDIO_POLLING_INTERVAL = 200,
+    SCROLL_OFFSET = 100;
+
+  // Set up mute button click event for a single mute button (including pianoroll)
+
   function initTrackMuteButton(buttonElement, musicRoot) {
   
     const trackNumber = parseInt(buttonElement.getAttribute(TRACK_NUMBER_ATTNAME)),
@@ -25,15 +28,17 @@
       audioElements = Array.from(
         musicRoot.querySelectorAll(`.${AUDIO_CONTAINER_CLASSNAME} > audio[${TRACK_NUMBER_ATTNAME}="${trackNumber}"]`)
       );
-      
+
     let isMuted = false;
   
     const staffElements = Array.from(musicRoot.querySelectorAll('.measure'))
       .map(measure => measure.querySelectorAll('.staff')[trackNumber - 1]);
   
     const barLinesElements = Array.from(musicRoot.querySelectorAll(`.barLineAttr path:nth-child(${trackNumber})`));
+
+    const pianoRollNotes = musicRoot.querySelectorAll(`rect.note.voice-${trackNumber}`);
   
-    const musicSvgElements = staffElements.concat(barLinesElements, buttonElement);
+    const musicSvgElements = staffElements.concat(barLinesElements, buttonElement, pianoRollNotes);
   
     const updateMute = function() {
   
@@ -57,7 +62,7 @@
   function initializeMarkup(musicRoot) {
   
     // Add classname to indicate that it's all-systems-go
-    // TODO: put this on the HTML element?
+    // TODO: THIS HAS BEEN DONE WITH html.music-ready
   
     musicRoot.classList.add('with-js');
     
@@ -70,25 +75,87 @@
   
     Array.from(musicRoot.querySelectorAll(`.audio *[${TRACK_NUMBER_ATTNAME}]`))
       .forEach(trackElem => trackElem.removeAttribute('hidden'));
+
+    /*
+
+    <svg width="100%" viewBox="961 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+    (where 961 is the x-coord of the bar)
+
+    */
   }
   
+  // Given an element, and the last (music) system which was scrolled,
+  //  scroll to that system if it's changed
+
+  function scrollToSystem(elemInSystem, lastScrolledSystemElem) {
+
+    /*
+
+    Uncaught TypeError: Failed to execute 'scrollTo' on 'Window': parameter 1 ('options') is not an object.
+
+    */
+
+    function recurseUpDomLookingForSystem(elem) {
+
+      // If the musical system element is found
+
+      if (elem.classList.contains('system')) {
+        // ... and the system element is different from the last
+        // one we scrolled to, then scroll to it
+        if (elem !== lastScrolledSystemElem) {
+          // const elem.getBoundingClientRect()
+          // TweenLite.to(window, 2, { scrollTo:400, offsetY: SCROLL_OFFSET });
+          // TweenLite.to(window, 2, { scrollTo: `#${elem.id}`, offsetY: SCROLL_OFFSET });
+          TweenMax.to(window, 2, { scrollTo:{ y: `#${elem.id}`, offsetY: SCROLL_OFFSET }, ease:Power2.easeInOut });
+          console.log("Scrolling to " + elem.id);
+        }
+        return elem;
+      } else if (elem.parentElement) {
+        return recurseUpDomLookingForSystem(elem.parentElement);
+      }
+    }
+
+    return recurseUpDomLookingForSystem(elemInSystem);
+  }
+
   // Given a master audio track, a classname, a timetable
   //  update classname 
   // TODO: Too much DOM accessing - this can be made more efficient
   
-  function updateHighlights(audioTrack, highlightClassname, timeTable) {
+  function updateHighlights_OLD(audioTrack, highlightClassname, timeTable) {
     timeTable.forEach(({elem, start, end}) => {
       const isPlaying = (audioTrack.currentTime > start && audioTrack.currentTime < end),
           classOperation = isPlaying ? 'add' : 'remove';
       elem.classList[classOperation](highlightClassname);
     });
   }
+
+  function updateHighlights(audioTrack, highlightClassname, timeTable, lastScrolledSystem) {
+
+    let scrollNeedsToBeUpdated = true,
+      scrolledSystem;
+  
+    timeTable.forEach(({ elem, start, end }) => {
+  
+      const isPlaying = (audioTrack.currentTime > start && audioTrack.currentTime < end),
+          classOperation = isPlaying ? 'add' : 'remove';
+      elem.classList[classOperation](highlightClassname);
+  
+      if (scrollNeedsToBeUpdated && isPlaying) {
+        scrolledSystem = scrollToSystem(elem, lastScrolledSystem);
+        scrollNeedsToBeUpdated = false;
+      }
+    });
+  
+    return scrolledSystem;
+  }
   
   function main() {
   
-    // Page elements
-  
+    // Get page elements
+
     const musicRoot = document.getElementsByClassName(MAIN_COMPONENT_CLASSNAME)[0], // TODO: make this fail OK
+      pianorollContainer = musicRoot.getElementsByClassName('pianoroll')[0],
       playButtons = Array.from(musicRoot.getElementsByClassName(PLAY_BUTTON_CLASSNAME)),
       pauseButtons = Array.from(musicRoot.getElementsByClassName(STOP_BUTTON_CLASSNAME)),
       audio = Array.from(musicRoot.querySelectorAll('audio')),
@@ -96,6 +163,8 @@
   
     const elementsWithTimes = Array.from(document.querySelectorAll(`*[${TIME_START_ATTNAME}]`));
   
+    // Get table of DOM ID's with timestamps
+
     const timeTable = elementsWithTimes.map(elem => { 
       return {
         elem: elem,
@@ -116,31 +185,39 @@
   
     // Start updateHighlights when play button is pressed
   
-    let timerId;
+    let timerId, scrolledSystem;
   
+    // Set onclick for play button
+
     playButtons.forEach(playButton => playButton.onclick = function() {
       audio.forEach(a => a.play());
       musicRoot.classList.remove(PAUSED_CLASSNAME);
       musicRoot.classList.add(PLAYING_CLASSNAME);
+      pianorollContainer.classList.remove(PAUSED_CLASSNAME);
+      pianorollContainer.classList.add(PLAYING_CLASSNAME);
       timerId = window.setInterval(
-        function() { 
-          updateHighlights(masterAudioTrack, HIGHLIGHT_CLASSNAME, timeTable) 
+        function() {
+          scrolledSystem = updateHighlights(masterAudioTrack, HIGHLIGHT_CLASSNAME, timeTable, scrolledSystem); 
         }, 
         AUDIO_POLLING_INTERVAL
       );
     });
+
+    // Set onclick for pause/stop button
   
     pauseButtons.forEach(pauseButton => pauseButton.onclick = function() {
       audio.forEach(a => a.pause());
       musicRoot.classList.remove(PLAYING_CLASSNAME);
       musicRoot.classList.add(PAUSED_CLASSNAME);
+      pianorollContainer.classList.remove(PLAYING_CLASSNAME);
+      pianorollContainer.classList.add(PAUSED_CLASSNAME);
       window.clearInterval(timerId);
     });
   };
   
   // Check browser and do something only if capable
   
-  const MUSIC_CAPABLE = true; // Check the browser here
+  const MUSIC_CAPABLE = true; // TODO: Check the browser here
   
   if (MUSIC_CAPABLE) {
     console.log(document.firstElementChild.classList.add('music-ready'));

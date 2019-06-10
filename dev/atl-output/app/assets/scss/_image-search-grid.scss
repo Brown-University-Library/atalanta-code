@@ -264,6 +264,9 @@ main#image-search {
 		text-align: center;
 		width: 100%;
 	}
+	cite {
+		font-style: oblique;
+	}
 }
 .image-search__results-viz.stickyyy {
 	position: fixed;
@@ -376,7 +379,7 @@ background-color: orange;
 	}
 	.image-results__button {
 		background-color: $yellow;
-		color: $white;
+		color: $text-body;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -395,10 +398,12 @@ background-color: orange;
 			display: none;	
 		}
 	}
-	.image-results__button:hover, 
+	.image-results__button:hover,
+	.image-results__button:focus, 
 	.image-results__button:active {
 		background-color: $yellow_bright;
 		color: $text-body;
+		outline: none;
 		transition: background-color .2s;
 	}
 	.image-results__button--open {
@@ -427,6 +432,9 @@ background-color: orange;
 		max-height: 100vh;
 		margin-bottom: -3rem;
 		padding: .5rem;
+		overflow-wrap: break-word;
+		word-break: break-word;
+		word-wrap: break-word;
 	}
 	.all-terms--active {
 		display: inline-block;

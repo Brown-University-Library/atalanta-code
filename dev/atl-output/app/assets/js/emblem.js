@@ -221,10 +221,11 @@ $(function () {
 		$(musicNotation).attr('aria-hidden', 'true');
 	}
 	function onLoad() {
-		console.log("I AM IN ONLOAD()");
 		checkState();
-		musicAccessibility();
-		createScrollingScene();
+		if (emblemPage >= 5) {
+			musicAccessibility();
+			createScrollingScene();
+		}
 	}
 		/* language selections */
 	function selectLangEnglishOrig() {

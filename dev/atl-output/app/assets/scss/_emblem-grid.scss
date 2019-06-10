@@ -110,7 +110,7 @@ main.emblem-page {
 .section__facsimile {
 	grid-row-start: 1;
 	grid-row-end: 2;
-	margin-top: $subnav-h;
+	margin-top: -5px;
 	/*padding-top: $subnav-h;*/
 }
 .frontmatter section.facsimile, .frontmatter div._facsimile {
@@ -118,7 +118,7 @@ main.emblem-page {
 }
 .facsimile--full {
 	background-color: $black;
-	height: 100vh;
+	height: $lessemblemnavcollections-h;
 	width: 100%;
 	position: fixed;
 }
