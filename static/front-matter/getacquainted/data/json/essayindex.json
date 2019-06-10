@@ -1,0 +1,1 @@
+{"_ref":"id","_fields":{"title":{},"subtitle":{},"author":{},"body":{},"footnotes":{}},"_documents":{},"invertedIndex":{},"fieldTermFrequencies":{},"fieldLengths":{},"pipeline":["trimmer","stopWordFilter","stemmer"],"searchPipeline":["stemmer"],"documentCount":0,"_b":0.75,"_k1":1.2,"termIndex":0,"metadataWhitelist":["position"]}
