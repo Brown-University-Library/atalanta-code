@@ -2891,7 +2891,6 @@ main.toc-wrapper {
   grid-template-rows: auto;
   min-height: calc(100vh - 3.125rem);
   line-height: 1.5;
-  margin-top: 3.375rem;
   padding: 3rem 0; }
   .search-results .hidden {
     display: none; }
@@ -3847,7 +3846,8 @@ main.emblem-page {
   grid-column-end: 3; }
 
 .emblem {
-  margin-top: 3.125rem;
+  /*	margin-top: $subnav-h;*/
+  margin-top: -4px;
   display: grid;
   grid-row-start: 1;
   grid-row-end: 2;
@@ -8234,6 +8234,169 @@ main#image-search {
     font-size: 9rem; }
   .image-search__hero h1.hero__heading {
     font-size: 1.625rem; } }
+
+main#essay-toc .toc--essays {
+  background: #333;
+  color: white;
+  font-family: "GTAmerica", "Usual", Helvetica, Arial, sans-serif; }
+
+main#essay-toc ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+main#essay-toc li {
+  background: #ba4221;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+  padding: 0 6.75rem; }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  main#essay-toc li {
+    padding: 0 3rem; } }
+
+main#essay-toc a {
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 17.75rem;
+  /*		height: 100%;
+		width: 100%;
+		outline: 5px solid red;*/ }
+
+main#essay-toc li:hover {
+  cursor: pointer; }
+
+main#essay-toc .essay1 {
+  background-position: 50% 90%;
+  background-size: 112%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay1:hover {
+  background: #dc4928;
+  background-position: 50% 90%;
+  background-size: 112%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay2 {
+  background-position: 50% 36%;
+  background-size: 108%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay2:hover {
+  background: #dc4928;
+  background-position: 50% 36%;
+  background-size: 108%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay3 {
+  background-position: 46% 8%;
+  background-size: 109%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay3:hover {
+  background: #dc4928;
+  background-position: 46% 8%;
+  background-size: 109%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay4 {
+  background-position: 38% 23%;
+  background-size: 106%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay4:hover {
+  background: #dc4928;
+  background-position: 38% 23%;
+  background-size: 106%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay5 {
+  background-position: 38% 22%;
+  background-size: 108%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay5:hover {
+  background: #dc4928;
+  background-position: 38% 22%;
+  background-size: 108%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay6 {
+  background-position: 38% 93%;
+  background-size: 108%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay6:hover {
+  background: #dc4928;
+  background-position: 38% 93%;
+  background-size: 108%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay7 {
+  background-position: 38% 96%;
+  background-size: 108%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay7:hover {
+  background: #dc4928;
+  background-position: 38% 96%;
+  background-size: 108%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay8 {
+  background-position: 38% 18%;
+  background-size: 108%;
+  background-blend-mode: multiply; }
+
+main#essay-toc .essay8:hover {
+  background: #dc4928;
+  background-position: 38% 18%;
+  background-size: 108%;
+  background-blend-mode: multiply; }
+
+main#essay-toc h2 {
+  font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin: .625rem 0 0 0; }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  main#essay-toc h2 {
+    font-size: 2.5rem; } }
+
+main#essay-toc h4 {
+  font-size: 1.0625rem;
+  margin-top: .75rem; }
+
+main#essay-toc h6 {
+  font-size: .875rem;
+  margin-top: 2rem; }
+
+main#essay-toc cite {
+  font-style: oblique; }
 
 ._collections {
   background-color: #dc4928;
