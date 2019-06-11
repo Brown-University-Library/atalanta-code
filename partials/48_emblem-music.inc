@@ -15,7 +15,7 @@
             <div class="piano-roll__label">Show piano roll</div></a></div>
    </div>
    <div class="audio"><audio hidden src="../assets/audio/48-H-50bpm-Dry.mp3" data-track="1" class="dry" type="audio/mpeg"></audio><audio hidden src="../assets/audio/48-H-50bpm-Reverb.mp3" data-track="1" class="reverb" type="audio/mpeg"></audio><audio hidden src="../assets/audio/48-A-50bpm-Dry.mp3" data-track="2" class="dry" type="audio/mpeg"></audio><audio hidden src="../assets/audio/48-A-50bpm-Reverb.mp3" data-track="2" class="reverb" type="audio/mpeg"></audio><audio hidden src="../assets/audio/48-P-50bpm-Dry.mp3" data-track="3" class="dry" type="audio/mpeg"></audio><audio hidden src="../assets/audio/48-P-50bpm-Reverb.mp3" data-track="3" class="reverb" type="audio/mpeg"></audio></div>
-   <div class="cmn ata-viz-cmn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin" viewBox="0 0 21000 58997" version="1.1">
+   <div class="cmn ata-viz-cmn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin" viewBox="0 0 21000 58737" version="1.1">
          	
          <desc>Engraved by Verovio 2.1.0-dev-[undefined]</desc>
          	
@@ -87,7 +87,7 @@
             		
             <g class="page-margin" transform="translate(500, 500)">
                			
-               <g class="system" id="system-0000001278258411">
+               <g class="system" id="system-0000000829760634">
                   				
                   <path d="M3297 720 L3297 4805" stroke="#000000" stroke-width="27"></path>
                   				
@@ -97,40 +97,40 @@
                   				
                   <rect x="3130" y="702" height="4121" width="90"></rect>
                   				
-                  <g class="label" id="label-0000002075849845">
+                  <g class="label" id="label-0000000442370376">
                      					
                      <text x="3014" y="1170" text-anchor="end" font-size="0px">
                         						
-                        <tspan class="text" id="text-0000000789015753">
+                        <tspan class="text" id="text-0000000330523518">
                            							
                            <tspan font-size="405px" class="text">Hippom. sequens.</tspan>
                            						</tspan>
                         					</text>
                      				</g>
                   				
-                  <g class="label" id="label-0000000594693007">
+                  <g class="label" id="label-0000001210274376">
                      					
                      <text x="3014" y="2610" text-anchor="end" font-size="0px">
                         						
-                        <tspan class="text" id="text-0000000616475511">
+                        <tspan class="text" id="text-0000000116333048">
                            							
                            <tspan font-size="405px" class="text">Atalanta fugiens.</tspan>
                            						</tspan>
                         					</text>
                      				</g>
                   				
-                  <g class="label" id="label-0000000600766520">
+                  <g class="label" id="label-0000001144923773">
                      					
                      <text x="3014" y="4535" text-anchor="end" font-size="0px">
                         						
-                        <tspan class="text" id="text-0000001762277093">
+                        <tspan class="text" id="text-0000001280375691">
                            							
                            <tspan font-size="405px" class="text">Pomum morans.</tspan>
                            						</tspan>
                         					</text>
                      				</g>
                   				
-                  <g class="section boundaryStart" id="section-0000000445533111"></g>
+                  <g class="section boundaryStart" id="section-0000000447234064"></g>
                   				
                   <g class="sb" id="e48-m-40"></g>
                   				
@@ -148,17 +148,17 @@
                         						
                         <path d="M3284 1440 L9429 1440" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000895032221">
+                        <g class="clef" id="clef-0000001899906508">
                            							
                            <use xlink:href="#E050" x="3374" y="1260" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001831074759">
+                        <g class="keySig" id="keysig-0000000794332713">
                            							
                            <use xlink:href="#E260" x="4055" y="1080" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="meterSig" id="msig-0000001432813003">
+                        <g class="meterSig" id="msig-0000001591557639">
                            							
                            <use xlink:href="#E084" x="4383" y="900" height="720px" width="720px"></use>
                            							
@@ -177,7 +177,7 @@
                                     										
                                     <text x="4883" y="1932" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000072835008">
+                                       <tspan class="text" id="text-0000000358351602">
                                           												
                                           <tspan font-size="405px" class="text">Di</tspan>
                                           											</tspan>
@@ -203,7 +203,7 @@
                                     										
                                     <text x="6797" y="1932" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000059797722">
+                                       <tspan class="text" id="text-0000001143061293">
                                           												
                                           <tspan font-size="405px" class="text">vi</tspan>
                                           											</tspan>
@@ -229,7 +229,7 @@
                                     										
                                     <text x="8061" y="1932" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000180435325">
+                                       <tspan class="text" id="text-0000001784641630">
                                           												
                                           <tspan font-size="405px" class="text">ti</tspan>
                                           											</tspan>
@@ -254,17 +254,17 @@
                         						
                         <path d="M3284 2880 L9429 2880" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001554007610">
+                        <g class="clef" id="clef-0000000252931641">
                            							
                            <use xlink:href="#E050" x="3374" y="2700" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000509786456">
+                        <g class="keySig" id="keysig-0000001151952874">
                            							
                            <use xlink:href="#E260" x="4055" y="2520" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="meterSig" id="msig-0000001668698109">
+                        <g class="meterSig" id="msig-0000001306875613">
                            							
                            <use xlink:href="#E084" x="4383" y="2340" height="720px" width="720px"></use>
                            							
@@ -283,7 +283,7 @@
                                     										
                                     <text x="4883" y="3772" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002033333163">
+                                       <tspan class="text" id="text-0000000412396047">
                                           												
                                           <tspan font-size="405px" class="text">Por</tspan>
                                           											</tspan>
@@ -299,7 +299,7 @@
                                     										
                                     <text x="4883" y="3372" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001628782626">
+                                       <tspan class="text" id="text-0000002073165822">
                                           												
                                           <tspan font-size="405px" class="text">Di</tspan>
                                           											</tspan>
@@ -320,7 +320,7 @@
                                     										
                                     <text x="6797" y="3772" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000621744106">
+                                       <tspan class="text" id="text-0000001630984157">
                                           												
                                           <tspan font-size="405px" class="text">ta</tspan>
                                           											</tspan>
@@ -338,7 +338,7 @@
                                     										
                                     <text x="6797" y="3372" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001153183453">
+                                       <tspan class="text" id="text-0000000955586538">
                                           												
                                           <tspan font-size="405px" class="text">vi</tspan>
                                           											</tspan>
@@ -365,17 +365,17 @@
                         						
                         <path d="M3284 4805 L9429 4805" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001820171790">
+                        <g class="clef" id="clef-0000000195686175">
                            							
                            <use xlink:href="#E062" x="3374" y="4265" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000722723015">
+                        <g class="keySig" id="keysig-0000001100079668">
                            							
                            <use xlink:href="#E260" x="4055" y="4625" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="meterSig" id="msig-0000000638205673">
+                        <g class="meterSig" id="msig-0000001352263053">
                            							
                            <use xlink:href="#E084" x="4383" y="4265" height="720px" width="720px"></use>
                            							
@@ -394,7 +394,7 @@
                                     										
                                     <text x="4883" y="5387" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001193781046">
+                                       <tspan class="text" id="text-0000001775017186">
                                           												
                                           <tspan font-size="405px" class="text">Di</tspan>
                                           											</tspan>
@@ -420,7 +420,7 @@
                                     										
                                     <text x="6797" y="5387" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000505975670">
+                                       <tspan class="text" id="text-0000001128051086">
                                           												
                                           <tspan font-size="405px" class="text">vi</tspan>
                                           											</tspan>
@@ -446,7 +446,7 @@
                                     										
                                     <text x="8061" y="5387" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001708442731">
+                                       <tspan class="text" id="text-0000000881091575">
                                           												
                                           <tspan font-size="405px" class="text">ti</tspan>
                                           											</tspan>
@@ -459,7 +459,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001628042148">
+                     <g class="barLineAttr" id="bline-0000000952506582">
                         						
                         <path d="M9416 1440 L9416 720" stroke="#000000" stroke-width="27"></path>
                         						
@@ -497,7 +497,7 @@
                                     										
                                     <text x="9556" y="1932" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001960122425">
+                                       <tspan class="text" id="text-0000001338919306">
                                           												
                                           <tspan font-size="405px" class="text">us</tspan>
                                           											</tspan>
@@ -521,7 +521,7 @@
                                     										
                                     <text x="12084" y="1932" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001744532674">
+                                       <tspan class="text" id="text-0000000712434496">
                                           												
                                           <tspan font-size="405px" class="text">po</tspan>
                                           											</tspan>
@@ -547,7 +547,7 @@
                                     										
                                     <text x="13348" y="1932" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000160777265">
+                                       <tspan class="text" id="text-0000001239562143">
                                           												
                                           <tspan font-size="405px" class="text">pu</tspan>
                                           											</tspan>
@@ -584,7 +584,7 @@
                                     										
                                     <text x="9556" y="3772" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000267266707">
+                                       <tspan class="text" id="text-0000000503335750">
                                           												
                                           <tspan font-size="405px" class="text">ri</tspan>
                                           											</tspan>
@@ -598,7 +598,7 @@
                                     										
                                     <text x="9556" y="3372" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000547051149">
+                                       <tspan class="text" id="text-0000001183325113">
                                           												
                                           <tspan font-size="405px" class="text">ti</tspan>
                                           											</tspan>
@@ -619,7 +619,7 @@
                                     										
                                     <text x="12084" y="3372" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001412452635">
+                                       <tspan class="text" id="text-0000000398960661">
                                           												
                                           <tspan font-size="405px" class="text">us</tspan>
                                           											</tspan>
@@ -633,7 +633,7 @@
                                     										
                                     <text x="12084" y="3772" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000761065339">
+                                       <tspan class="text" id="text-0000001713795947">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -675,7 +675,7 @@
                                     										
                                     <text x="9556" y="5387" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001690934594">
+                                       <tspan class="text" id="text-0000001281095984">
                                           												
                                           <tspan font-size="405px" class="text">us</tspan>
                                           											</tspan>
@@ -699,7 +699,7 @@
                                     										
                                     <text x="10820" y="5387" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001314311874">
+                                       <tspan class="text" id="text-0000000146460698">
                                           												
                                           <tspan font-size="405px" class="text">po</tspan>
                                           											</tspan>
@@ -720,7 +720,7 @@
                                     										
                                     <text x="12084" y="5387" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000856106934">
+                                       <tspan class="text" id="text-0000000986340238">
                                           												
                                           <tspan font-size="405px" class="text">pu</tspan>
                                           											</tspan>
@@ -733,7 +733,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001601992831">
+                     <g class="barLineAttr" id="bline-0000000237124745">
                         						
                         <path d="M14702 1440 L14702 720" stroke="#000000" stroke-width="27"></path>
                         						
@@ -771,7 +771,7 @@
                                     										
                                     <text x="14842" y="1932" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000977906626">
+                                       <tspan class="text" id="text-0000001638208456">
                                           												
                                           <tspan font-size="405px" class="text">li</tspan>
                                           											</tspan>
@@ -797,7 +797,7 @@
                                     										
                                     <text x="17370" y="1932" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000050927967">
+                                       <tspan class="text" id="text-0000000993233020">
                                           												
                                           <tspan font-size="405px" class="text">sque</tspan>
                                           											</tspan>
@@ -821,7 +821,7 @@
                                     										
                                     <text x="18634" y="1932" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001681786940">
+                                       <tspan class="text" id="text-0000001403865775">
                                           												
                                           <tspan font-size="405px" class="text">po</tspan>
                                           											</tspan>
@@ -858,7 +858,7 @@
                                     										
                                     <text x="14842" y="3772" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002060744427">
+                                       <tspan class="text" id="text-0000001734853171">
                                           												
                                           <tspan font-size="405px" class="text">ser</tspan>
                                           											</tspan>
@@ -874,7 +874,7 @@
                                     										
                                     <text x="14842" y="3372" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001556827139">
+                                       <tspan class="text" id="text-0000000503649500">
                                           												
                                           <tspan font-size="405px" class="text">po</tspan>
                                           											</tspan>
@@ -895,7 +895,7 @@
                                     										
                                     <text x="17370" y="3772" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001469643578">
+                                       <tspan class="text" id="text-0000001327529877">
                                           												
                                           <tspan font-size="405px" class="text">vis,</tspan>
                                           											</tspan>
@@ -909,7 +909,7 @@
                                     										
                                     <text x="17370" y="3372" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000572414871">
+                                       <tspan class="text" id="text-0000000932260941">
                                           												
                                           <tspan font-size="405px" class="text">pu</tspan>
                                           											</tspan>
@@ -951,7 +951,7 @@
                                     										
                                     <text x="14842" y="5387" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000850959294">
+                                       <tspan class="text" id="text-0000000186444193">
                                           												
                                           <tspan font-size="405px" class="text">li</tspan>
                                           											</tspan>
@@ -979,7 +979,7 @@
                                     										
                                     <text x="16106" y="5387" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000460828316">
+                                       <tspan class="text" id="text-0000001366124511">
                                           												
                                           <tspan font-size="405px" class="text">sque</tspan>
                                           											</tspan>
@@ -998,7 +998,7 @@
                                     										
                                     <text x="17370" y="5387" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001991707279">
+                                       <tspan class="text" id="text-0000000416628249">
                                           												
                                           <tspan font-size="405px" class="text">po</tspan>
                                           											</tspan>
@@ -1011,7 +1011,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000597004221">
+                     <g class="barLineAttr" id="bline-0000001300148108">
                         						
                         <path d="M19988 1440 L19988 720" stroke="#000000" stroke-width="27"></path>
                         						
@@ -1022,7 +1022,7 @@
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000001056918877">
+               <g class="system" id="system-0000000425899785">
                   				
                   <polygon points="-270,5885 270,5525 270,5390 -270,5750 "></polygon>
                   				
@@ -1038,11 +1038,11 @@
                   				
                   <g class="measure" id="e48-m-156">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000001748052139">
+                     <g class="mNum autogenerated" id="mnum-0000002128912277">
                         						
                         <text x="0" y="6245" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000001936009213">
+                           <tspan class="text" id="text-0000001403596872">
                               								
                               <tspan font-size="324px" class="text">4</tspan>
                               							</tspan>
@@ -1061,12 +1061,12 @@
                         						
                         <path d="M0 7235 L6807 7235" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001214304868">
+                        <g class="clef" id="clef-0000000943612557">
                            							
                            <use xlink:href="#E050" x="90" y="7055" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001284819035">
+                        <g class="keySig" id="keysig-0000000129512404">
                            							
                            <use xlink:href="#E260" x="771" y="6875" height="720px" width="720px"></use>
                            						</g>
@@ -1085,7 +1085,7 @@
                                     										
                                     <text x="1151" y="7817" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001617808027">
+                                       <tspan class="text" id="text-0000000094897839">
                                           												
                                           <tspan font-size="405px" class="text">tens</tspan>
                                           											</tspan>
@@ -1104,7 +1104,7 @@
                                     										
                                     <text x="3928" y="7817" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000022259111">
+                                       <tspan class="text" id="text-0000000808742880">
                                           												
                                           <tspan font-size="405px" class="text">Rex</tspan>
                                           											</tspan>
@@ -1127,12 +1127,12 @@
                         						
                         <path d="M0 8675 L6807 8675" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001005450660">
+                        <g class="clef" id="clef-0000001314039617">
                            							
                            <use xlink:href="#E050" x="90" y="8495" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000060424377">
+                        <g class="keySig" id="keysig-0000000342017171">
                            							
                            <use xlink:href="#E260" x="771" y="8315" height="720px" width="720px"></use>
                            						</g>
@@ -1149,7 +1149,7 @@
                                     										
                                     <text x="1151" y="9172" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001788739300">
+                                       <tspan class="text" id="text-0000002047489106">
                                           												
                                           <tspan font-size="405px" class="text">li</tspan>
                                           											</tspan>
@@ -1167,7 +1167,7 @@
                                     										
                                     <text x="1151" y="9572" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000213498955">
+                                       <tspan class="text" id="text-0000001352808483">
                                           												
                                           <tspan font-size="405px" class="text">por</tspan>
                                           											</tspan>
@@ -1188,7 +1188,7 @@
                                     										
                                     <text x="3928" y="9172" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001881772409">
+                                       <tspan class="text" id="text-0000000418998331">
                                           												
                                           <tspan font-size="405px" class="text">sque</tspan>
                                           											</tspan>
@@ -1202,7 +1202,7 @@
                                     										
                                     <text x="3928" y="9572" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000859356048">
+                                       <tspan class="text" id="text-0000001920787067">
                                           												
                                           <tspan font-size="405px" class="text">ta</tspan>
                                           											</tspan>
@@ -1229,12 +1229,12 @@
                         						
                         <path d="M0 10695 L6807 10695" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001940222855">
+                        <g class="clef" id="clef-0000001616353625">
                            							
                            <use xlink:href="#E062" x="90" y="10155" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001933827937">
+                        <g class="keySig" id="keysig-0000000387240825">
                            							
                            <use xlink:href="#E260" x="771" y="10515" height="720px" width="720px"></use>
                            						</g>
@@ -1256,7 +1256,7 @@
                                     										
                                     <text x="1151" y="11277" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000077746109">
+                                       <tspan class="text" id="text-0000000643899693">
                                           												
                                           <tspan font-size="405px" class="text">tens</tspan>
                                           											</tspan>
@@ -1280,7 +1280,7 @@
                                     										
                                     <text x="2540" y="11277" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000320801561">
+                                       <tspan class="text" id="text-0000000300472681">
                                           												
                                           <tspan font-size="405px" class="text">Rex</tspan>
                                           											</tspan>
@@ -1304,7 +1304,7 @@
                                     										
                                     <text x="3928" y="11277" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000588192472">
+                                       <tspan class="text" id="text-0000001675128500">
                                           												
                                           <tspan font-size="405px" class="text">fon</tspan>
                                           											</tspan>
@@ -1330,7 +1330,7 @@
                                     										
                                     <text x="5316" y="11277" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001888024138">
+                                       <tspan class="text" id="text-0000001103226171">
                                           												
                                           <tspan font-size="405px" class="text">tis</tspan>
                                           											</tspan>
@@ -1341,7 +1341,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000221874905">
+                     <g class="barLineAttr" id="bline-0000000248466243">
                         						
                         <path d="M6794 7235 L6794 6515" stroke="#000000" stroke-width="27"></path>
                         						
@@ -1379,7 +1379,7 @@
                                     										
                                     <text x="6955" y="7817" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001975800164">
+                                       <tspan class="text" id="text-0000000152709961">
                                           												
                                           <tspan font-size="405px" class="text">fon</tspan>
                                           											</tspan>
@@ -1409,7 +1409,7 @@
                                     										
                                     <text x="10882" y="7817" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000113367555">
+                                       <tspan class="text" id="text-0000000101554722">
                                           												
                                           <tspan font-size="405px" class="text">tis</tspan>
                                           											</tspan>
@@ -1435,7 +1435,7 @@
                                     										
                                     <text x="12270" y="7817" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000192247357">
+                                       <tspan class="text" id="text-0000001473390344">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -1472,7 +1472,7 @@
                                     										
                                     <text x="6955" y="9572" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001852088476">
+                                       <tspan class="text" id="text-0000001859517118">
                                           												
                                           <tspan font-size="405px" class="text">ri</tspan>
                                           											</tspan>
@@ -1486,7 +1486,7 @@
                                     										
                                     <text x="6955" y="9172" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001378014625">
+                                       <tspan class="text" id="text-0000000157989557">
                                           												
                                           <tspan font-size="405px" class="text">po</tspan>
                                           											</tspan>
@@ -1509,7 +1509,7 @@
                                     										
                                     <text x="10882" y="9172" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001178308167">
+                                       <tspan class="text" id="text-0000000344837149">
                                           												
                                           <tspan font-size="405px" class="text">tens</tspan>
                                           											</tspan>
@@ -1523,7 +1523,7 @@
                                     										
                                     <text x="10882" y="9572" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000367378657">
+                                       <tspan class="text" id="text-0000000160978982">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -1563,7 +1563,7 @@
                                     										
                                     <text x="6955" y="11277" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001741666347">
+                                       <tspan class="text" id="text-0000001964183682">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -1593,7 +1593,7 @@
                                        											
                                        <text x="7868" y="11277" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000397143814">
+                                          <tspan class="text" id="text-0000000062712302">
                                              													
                                              <tspan font-size="405px" class="text">ma</tspan>
                                              												</tspan>
@@ -1630,7 +1630,7 @@
                                     										
                                     <text x="9058" y="11277" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001374630856">
+                                       <tspan class="text" id="text-0000001907604687">
                                           												
                                           <tspan font-size="405px" class="text">vit,</tspan>
                                           											</tspan>
@@ -1654,7 +1654,7 @@
                                     										
                                     <text x="9970" y="11277" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000967321167">
+                                       <tspan class="text" id="text-0000000752349819">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -1675,7 +1675,7 @@
                                     										
                                     <text x="10882" y="11277" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001840167826">
+                                       <tspan class="text" id="text-0000001582551981">
                                           												
                                           <tspan font-size="405px" class="text">ma</tspan>
                                           											</tspan>
@@ -1690,7 +1690,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000329434239">
+                     <g class="barLineAttr" id="bline-0000001395221631">
                         						
                         <path d="M13748 7235 L13748 6515" stroke="#000000" stroke-width="27"></path>
                         						
@@ -1731,7 +1731,7 @@
                                     										
                                     <text x="13909" y="7817" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001576874402">
+                                       <tspan class="text" id="text-0000000960381295">
                                           												
                                           <tspan font-size="405px" class="text">ma</tspan>
                                           											</tspan>
@@ -1757,7 +1757,7 @@
                                     										
                                     <text x="15298" y="7817" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001082353672">
+                                       <tspan class="text" id="text-0000001392778581">
                                           												
                                           <tspan font-size="405px" class="text">vit,</tspan>
                                           											</tspan>
@@ -1776,7 +1776,7 @@
                                     										
                                     <text x="16686" y="7817" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000967720038">
+                                       <tspan class="text" id="text-0000001966675185">
                                           												
                                           <tspan font-size="405px" class="text">Por</tspan>
                                           											</tspan>
@@ -1815,7 +1815,7 @@
                                     										
                                     <text x="13909" y="9172" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000244531112">
+                                       <tspan class="text" id="text-0000000599677414">
                                           												
                                           <tspan font-size="405px" class="text">Rex</tspan>
                                           											</tspan>
@@ -1829,7 +1829,7 @@
                                     										
                                     <text x="13909" y="9572" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001437675353">
+                                       <tspan class="text" id="text-0000001328335307">
                                           												
                                           <tspan font-size="405px" class="text">ser</tspan>
                                           											</tspan>
@@ -1850,7 +1850,7 @@
                                     										
                                     <text x="16686" y="9572" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000679767744">
+                                       <tspan class="text" id="text-0000001705371545">
                                           												
                                           <tspan font-size="405px" class="text">vis,</tspan>
                                           											</tspan>
@@ -1864,7 +1864,7 @@
                                     										
                                     <text x="16686" y="9172" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000478697437">
+                                       <tspan class="text" id="text-0000001550411480">
                                           												
                                           <tspan font-size="405px" class="text">fon</tspan>
                                           											</tspan>
@@ -1908,7 +1908,7 @@
                                     										
                                     <text x="13909" y="11277" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000650391817">
+                                       <tspan class="text" id="text-0000000288901668">
                                           												
                                           <tspan font-size="405px" class="text">vit,</tspan>
                                           											</tspan>
@@ -1921,7 +1921,7 @@
                               								
                               <use xlink:href="#E0A3" x="15388" y="10335" height="720px" width="720px"></use>
                               								
-                              <g class="dots" id="dots-0000000882398091">
+                              <g class="dots" id="dots-0000001341263644">
                                  									
                                  <ellipse cx="15704" cy="10245" rx="36" ry="36"></ellipse>
                                  								</g>
@@ -1937,7 +1937,7 @@
                                     										
                                     <text x="15298" y="11277" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001436627662">
+                                       <tspan class="text" id="text-0000000303019708">
                                           												
                                           <tspan font-size="405px" class="text">Por</tspan>
                                           											</tspan>
@@ -1963,7 +1963,7 @@
                                     										
                                     <text x="17598" y="11277" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001505765094">
+                                       <tspan class="text" id="text-0000000106526101">
                                           												
                                           <tspan font-size="405px" class="text">ta</tspan>
                                           											</tspan>
@@ -1986,7 +1986,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000725790068">
+                     <g class="barLineAttr" id="bline-0000001595388279">
                         						
                         <path d="M19988 7235 L19988 6515" stroke="#000000" stroke-width="27"></path>
                         						
@@ -1997,7 +1997,7 @@
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000001266151405">
+               <g class="system" id="system-0000000574925137">
                   				
                   <polygon points="-270,11775 270,11415 270,11280 -270,11640 "></polygon>
                   				
@@ -2013,11 +2013,11 @@
                   				
                   <g class="measure" id="e48-m-274">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000000031176930">
+                     <g class="mNum autogenerated" id="mnum-0000002009619691">
                         						
                         <text x="0" y="12135" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000000004652642">
+                           <tspan class="text" id="text-0000000055346621">
                               								
                               <tspan font-size="324px" class="text">7</tspan>
                               							</tspan>
@@ -2036,12 +2036,12 @@
                         						
                         <path d="M0 13125 L6793 13125" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000046325232">
+                        <g class="clef" id="clef-0000000307014535">
                            							
                            <use xlink:href="#E050" x="90" y="12945" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001199094010">
+                        <g class="keySig" id="keysig-0000001737569651">
                            							
                            <use xlink:href="#E260" x="771" y="12765" height="720px" width="720px"></use>
                            						</g>
@@ -2058,7 +2058,7 @@
                                     										
                                     <text x="1120" y="13707" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000878619815">
+                                       <tspan class="text" id="text-0000000633381091">
                                           												
                                           <tspan font-size="405px" class="text">ta</tspan>
                                           											</tspan>
@@ -2081,7 +2081,7 @@
                                     										
                                     <text x="4283" y="13707" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000129507452">
+                                       <tspan class="text" id="text-0000002029303838">
                                           												
                                           <tspan font-size="405px" class="text">ri</tspan>
                                           											</tspan>
@@ -2104,12 +2104,12 @@
                         						
                         <path d="M0 14565 L6793 14565" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001186482622">
+                        <g class="clef" id="clef-0000001850492451">
                            							
                            <use xlink:href="#E050" x="90" y="14385" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001827765559">
+                        <g class="keySig" id="keysig-0000001368448103">
                            							
                            <use xlink:href="#E260" x="771" y="14205" height="720px" width="720px"></use>
                            						</g>
@@ -2126,7 +2126,7 @@
                                     										
                                     <text x="1120" y="15057" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000672901582">
+                                       <tspan class="text" id="text-0000000388589037">
                                           												
                                           <tspan font-size="405px" class="text">tis</tspan>
                                           											</tspan>
@@ -2140,7 +2140,7 @@
                                     										
                                     <text x="1120" y="15457" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001444521134">
+                                       <tspan class="text" id="text-0000001081993933">
                                           												
                                           <tspan font-size="405px" class="text">quas</tspan>
                                           											</tspan>
@@ -2159,7 +2159,7 @@
                                     										
                                     <text x="4283" y="15457" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001450218396">
+                                       <tspan class="text" id="text-0000000237987894">
                                           												
                                           <tspan font-size="405px" class="text">si</tspan>
                                           											</tspan>
@@ -2177,7 +2177,7 @@
                                     										
                                     <text x="4283" y="15057" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000778987422">
+                                       <tspan class="text" id="text-0000000696616669">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -2204,12 +2204,12 @@
                         						
                         <path d="M0 16490 L6793 16490" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001649663425">
+                        <g class="clef" id="clef-0000002104891398">
                            							
                            <use xlink:href="#E062" x="90" y="15950" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001879301205">
+                        <g class="keySig" id="keysig-0000001411609155">
                            							
                            <use xlink:href="#E260" x="771" y="16310" height="720px" width="720px"></use>
                            						</g>
@@ -2271,7 +2271,7 @@
                                     										
                                     <text x="4283" y="17072" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000795985375">
+                                       <tspan class="text" id="text-0000001520983124">
                                           												
                                           <tspan font-size="405px" class="text">ri</tspan>
                                           											</tspan>
@@ -2295,7 +2295,7 @@
                                     										
                                     <text x="5487" y="17072" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000543069091">
+                                       <tspan class="text" id="text-0000001022073422">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -2306,7 +2306,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000681767054">
+                     <g class="barLineAttr" id="bline-0000001797390326">
                         						
                         <path d="M6780 13125 L6780 12405" stroke="#000000" stroke-width="27"></path>
                         						
@@ -2351,7 +2351,7 @@
                                     										
                                     <text x="7134" y="13707" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002010125962">
+                                       <tspan class="text" id="text-0000001410938285">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -2377,7 +2377,7 @@
                                     										
                                     <text x="8338" y="13707" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001342647675">
+                                       <tspan class="text" id="text-0000000555154326">
                                           												
                                           <tspan font-size="405px" class="text">ser</tspan>
                                           											</tspan>
@@ -2398,7 +2398,7 @@
                                     										
                                     <text x="9541" y="13707" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000570076299">
+                                       <tspan class="text" id="text-0000001842054720">
                                           												
                                           <tspan font-size="405px" class="text">vis</tspan>
                                           											</tspan>
@@ -2433,7 +2433,7 @@
                                     										
                                     <text x="7134" y="15457" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001232589354">
+                                       <tspan class="text" id="text-0000001423820946">
                                           												
                                           <tspan font-size="405px" class="text">bi</tspan>
                                           											</tspan>
@@ -2447,7 +2447,7 @@
                                     										
                                     <text x="7134" y="15057" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002068752317">
+                                       <tspan class="text" id="text-0000001396652510">
                                           												
                                           <tspan font-size="405px" class="text">ma</tspan>
                                           											</tspan>
@@ -2468,7 +2468,7 @@
                                     										
                                     <text x="9541" y="15057" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000234057205">
+                                       <tspan class="text" id="text-0000002067418101">
                                           												
                                           <tspan font-size="405px" class="text">vit,</tspan>
                                           											</tspan>
@@ -2482,7 +2482,7 @@
                                     										
                                     <text x="9541" y="15457" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001709598722">
+                                       <tspan class="text" id="text-0000000682789733">
                                           												
                                           <tspan font-size="405px" class="text">po</tspan>
                                           											</tspan>
@@ -2531,7 +2531,7 @@
                                     										
                                     <text x="7134" y="17072" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001626216263">
+                                       <tspan class="text" id="text-0000002027603492">
                                           												
                                           <tspan font-size="405px" class="text">ser</tspan>
                                           											</tspan>
@@ -2557,7 +2557,7 @@
                                     										
                                     <text x="8338" y="17072" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001204757013">
+                                       <tspan class="text" id="text-0000000202392713">
                                           												
                                           <tspan font-size="405px" class="text">vis,</tspan>
                                           											</tspan>
@@ -2581,7 +2581,7 @@
                                     										
                                     <text x="9271" y="17072" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002036138140">
+                                       <tspan class="text" id="text-0000001111955886">
                                           												
                                           <tspan font-size="405px" class="text">quas</tspan>
                                           											</tspan>
@@ -2594,7 +2594,7 @@
                               								
                               <use xlink:href="#E0A4" x="10422" y="15950" height="720px" width="720px"></use>
                               								
-                              <g class="dots" id="dots-0000001514035549">
+                              <g class="dots" id="dots-0000000932046519">
                                  									
                                  <ellipse cx="10738" cy="15860" rx="36" ry="36"></ellipse>
                                  								</g>
@@ -2610,7 +2610,7 @@
                                     										
                                     <text x="10332" y="17072" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001128216298">
+                                       <tspan class="text" id="text-0000001732924677">
                                           												
                                           <tspan font-size="405px" class="text">si</tspan>
                                           											</tspan>
@@ -2629,7 +2629,7 @@
                                  									
                                  <rect x="11431" y="16062" height="608" width="18"></rect>
                                  									
-                                 <g class="flag" id="flag-0000000613287812">
+                                 <g class="flag" id="flag-0000001193566192">
                                     										
                                     <use xlink:href="#E241" x="11431" y="16670" height="720px" width="720px"></use>
                                     									</g>
@@ -2643,7 +2643,7 @@
                                     										
                                     <text x="11341" y="17072" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000620289180">
+                                       <tspan class="text" id="text-0000001736596286">
                                           												
                                           <tspan font-size="405px" class="text">bi</tspan>
                                           											</tspan>
@@ -2667,7 +2667,7 @@
                                     										
                                     <text x="11857" y="17072" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000510431482">
+                                       <tspan class="text" id="text-0000001442404783">
                                           												
                                           <tspan font-size="405px" class="text">po</tspan>
                                           											</tspan>
@@ -2680,7 +2680,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000778984332">
+                     <g class="barLineAttr" id="bline-0000001445968596">
                         						
                         <path d="M12738 13125 L12738 12405" stroke="#000000" stroke-width="27"></path>
                         						
@@ -2716,7 +2716,7 @@
                                     										
                                     <text x="12868" y="13707" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001301203587">
+                                       <tspan class="text" id="text-0000000204491075">
                                           												
                                           <tspan font-size="405px" class="text">quas</tspan>
                                           											</tspan>
@@ -2740,7 +2740,7 @@
                                     										
                                     <text x="16552" y="13707" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001797047434">
+                                       <tspan class="text" id="text-0000001129400224">
                                           												
                                           <tspan font-size="405px" class="text">si</tspan>
                                           											</tspan>
@@ -2766,7 +2766,7 @@
                                     										
                                     <text x="18076" y="13707" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001453408398">
+                                       <tspan class="text" id="text-0000001571900425">
                                           												
                                           <tspan font-size="405px" class="text">bi</tspan>
                                           											</tspan>
@@ -2803,7 +2803,7 @@
                                     										
                                     <text x="12868" y="15457" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000615943632">
+                                       <tspan class="text" id="text-0000000475694756">
                                           												
                                           <tspan font-size="405px" class="text">scit,</tspan>
                                           											</tspan>
@@ -2817,7 +2817,7 @@
                                     										
                                     <text x="12868" y="15057" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001098092094">
+                                       <tspan class="text" id="text-0000000802874805">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -2840,7 +2840,7 @@
                                     										
                                     <text x="16552" y="15057" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001669017151">
+                                       <tspan class="text" id="text-0000000496634845">
                                           												
                                           <tspan font-size="405px" class="text">ma</tspan>
                                           											</tspan>
@@ -2858,7 +2858,7 @@
                                     										
                                     <text x="16552" y="15457" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000280013449">
+                                       <tspan class="text" id="text-0000000149261681">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -2902,7 +2902,7 @@
                                     										
                                     <text x="12784" y="17072" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002048618276">
+                                       <tspan class="text" id="text-0000000476146480">
                                           												
                                           <tspan font-size="405px" class="text">scit,</tspan>
                                           											</tspan>
@@ -2915,7 +2915,7 @@
                               								
                               <use xlink:href="#E0A4" x="13749" y="16310" height="720px" width="720px"></use>
                               								
-                              <g class="dots" id="dots-0000000645221864">
+                              <g class="dots" id="dots-0000000491853770">
                                  									
                                  <ellipse cx="14065" cy="16220" rx="36" ry="36"></ellipse>
                                  								</g>
@@ -2933,7 +2933,7 @@
                                     										
                                     <text x="13659" y="17072" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000894643427">
+                                       <tspan class="text" id="text-0000001617331532">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -2952,7 +2952,7 @@
                                  									
                                  <rect x="14965" y="15590" height="608" width="18"></rect>
                                  									
-                                 <g class="flag" id="flag-0000001830022904">
+                                 <g class="flag" id="flag-0000002138201398">
                                     										
                                     <use xlink:href="#E240" x="14965" y="15590" height="720px" width="720px"></use>
                                     									</g>
@@ -2964,7 +2964,7 @@
                                     										
                                     <text x="14397" y="17072" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001756634691">
+                                       <tspan class="text" id="text-0000001107574016">
                                           												
                                           <tspan font-size="405px" class="text">quas,</tspan>
                                           											</tspan>
@@ -2988,7 +2988,7 @@
                                     										
                                     <text x="15451" y="17072" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001650250074">
+                                       <tspan class="text" id="text-0000001188384232">
                                           												
                                           <tspan font-size="405px" class="text">quas</tspan>
                                           											</tspan>
@@ -3001,7 +3001,7 @@
                               								
                               <use xlink:href="#E0A4" x="16642" y="16040" height="720px" width="720px"></use>
                               								
-                              <g class="dots" id="dots-0000000002599230">
+                              <g class="dots" id="dots-0000000544731722">
                                  									
                                  <ellipse cx="16958" cy="16040" rx="36" ry="36"></ellipse>
                                  								</g>
@@ -3022,7 +3022,7 @@
                                     										
                                     <text x="16552" y="17072" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002070620536">
+                                       <tspan class="text" id="text-0000000572996712">
                                           												
                                           <tspan font-size="405px" class="text">si</tspan>
                                           											</tspan>
@@ -3043,7 +3043,7 @@
                                  									
                                  <rect x="17650" y="16152" height="608" width="18"></rect>
                                  									
-                                 <g class="flag" id="flag-0000002072483558">
+                                 <g class="flag" id="flag-0000001810968943">
                                     										
                                     <use xlink:href="#E241" x="17650" y="16760" height="720px" width="720px"></use>
                                     									</g>
@@ -3089,7 +3089,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000318805549">
+                     <g class="barLineAttr" id="bline-0000001832745261">
                         						
                         <path d="M19989 13125 L19989 12405" stroke="#000000" stroke-width="27"></path>
                         						
@@ -3100,7 +3100,7 @@
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000000693033785">
+               <g class="system" id="system-0000000817995030">
                   				
                   <polygon points="-270,17570 270,17210 270,17075 -270,17435 "></polygon>
                   				
@@ -3116,11 +3116,11 @@
                   				
                   <g class="measure" id="e48-m-406">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000000483200635">
+                     <g class="mNum autogenerated" id="mnum-0000000795145228">
                         						
                         <text x="0" y="17930" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000001517403138">
+                           <tspan class="text" id="text-0000000215111715">
                               								
                               <tspan font-size="324px" class="text">10</tspan>
                               							</tspan>
@@ -3129,22 +3129,22 @@
                      					
                      <g class="staff" id="e48-m-407">
                         						
-                        <path d="M0 18200 L11312 18200" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 18200 L10523 18200" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 18380 L11312 18380" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 18380 L10523 18380" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 18560 L11312 18560" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 18560 L10523 18560" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 18740 L11312 18740" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 18740 L10523 18740" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 18920 L11312 18920" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 18920 L10523 18920" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001479439532">
+                        <g class="clef" id="clef-0000001524093040">
                            							
                            <use xlink:href="#E050" x="90" y="18740" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001374549358">
+                        <g class="keySig" id="keysig-0000000246781864">
                            							
                            <use xlink:href="#E260" x="771" y="18560" height="720px" width="720px"></use>
                            						</g>
@@ -3153,43 +3153,43 @@
                            							
                            <g data-time-start="22.86" data-time-end="24" class="note" id="e48-m-409">
                               								
-                              <use xlink:href="#E0A2" x="1192" y="18380" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="1210" y="18380" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-413">
                                  									
                                  <g class="syl" id="e48-m-414">
                                     										
-                                    <text x="1102" y="19412" font-size="0px">
+                                    <text x="1120" y="19412" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000438744704">
+                                       <tspan class="text" id="text-0000001439757506">
                                           												
                                           <tspan font-size="405px" class="text">po</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2100" y="19313" height="18" width="108"></rect>
+                                    <rect x="2250" y="19313" height="18" width="108"></rect>
                                     										
-                                    <rect x="3300" y="19313" height="18" width="108"></rect>
+                                    <rect x="3450" y="19313" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
                            <g data-time-start="24" data-time-end="24.6" class="note" id="e48-m-410">
                               								
-                              <use xlink:href="#E0A3" x="4090" y="18290" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="4372" y="18290" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="4090" y="18312" height="608" width="18"></rect>
+                                 <rect x="4372" y="18312" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-415">
                                  									
                                  <g class="syl" id="e48-m-416">
                                     										
-                                    <text x="4000" y="19412" font-size="0px">
+                                    <text x="4282" y="19412" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000795244780">
+                                       <tspan class="text" id="text-0000000138891358">
                                           												
                                           <tspan font-size="405px" class="text">scit,</tspan>
                                           											</tspan>
@@ -3200,52 +3200,47 @@
                            							
                            <g data-time-start="24.6" data-time-end="25.2" class="note" id="e48-m-411">
                               								
-                              <use xlink:href="#E0A3" x="5193" y="18290" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="5574" y="18290" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="5193" y="18312" height="608" width="18"></rect>
+                                 <rect x="5574" y="18312" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-417">
                                  									
                                  <g class="syl" id="e48-m-418">
                                     										
-                                    <text x="5103" y="19412" font-size="0px">
+                                    <text x="5484" y="19412" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000554983659">
+                                       <tspan class="text" id="text-0000001438227831">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="5690" y="19313" height="18" width="108"></rect>
+                                    <rect x="6121" y="19313" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="25.2" data-time-end="30" class="note" id="e48-m-412">
+                           <g data-time-start="25.2" data-time-end="27.6" class="note" id="e48-m-412">
                               								
-                              <polygon points="6295,18200 6527,18200 6527,18245 6295,18245 "></polygon>
+                              <polygon points="6777,18200 7009,18200 7009,18245 6777,18245 "></polygon>
                               								
-                              <polygon points="6295,18380 6527,18380 6527,18335 6295,18335 "></polygon>
+                              <polygon points="6777,18380 7009,18380 7009,18335 6777,18335 "></polygon>
                               								
-                              <rect x="6286" y="18155" height="270" width="18"></rect>
+                              <rect x="6768" y="18155" height="270" width="18"></rect>
                               								
-                              <rect x="6518" y="18155" height="270" width="18"></rect>
-                              								
-                              <g class="stem">
-                                 									
-                                 <rect x="6518" y="18200" height="720" width="18"></rect>
-                                 								</g>
+                              <rect x="7000" y="18155" height="270" width="18"></rect>
                               								
                               <g class="verse" id="e48-m-419">
                                  									
                                  <g class="syl" id="e48-m-420">
                                     										
-                                    <text x="6205" y="19412" font-size="0px">
+                                    <text x="6687" y="19412" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000892727406">
+                                       <tspan class="text" id="text-0000000910804350">
                                           												
                                           <tspan font-size="405px" class="text">quas.</tspan>
                                           											</tspan>
@@ -3258,22 +3253,22 @@
                      					
                      <g class="staff" id="e48-m-421">
                         						
-                        <path d="M0 19640 L11312 19640" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 19640 L10523 19640" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 19820 L11312 19820" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 19820 L10523 19820" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 20000 L11312 20000" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 20000 L10523 20000" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 20180 L11312 20180" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 20180 L10523 20180" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 20360 L11312 20360" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 20360 L10523 20360" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001569469127">
+                        <g class="clef" id="clef-0000000871865891">
                            							
                            <use xlink:href="#E050" x="90" y="20180" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000525981388">
+                        <g class="keySig" id="keysig-0000001169106556">
                            							
                            <use xlink:href="#E260" x="771" y="20000" height="720px" width="720px"></use>
                            						</g>
@@ -3282,31 +3277,26 @@
                            							
                            <g data-time-start="22.86" data-time-end="24" class="note" id="e48-m-423">
                               								
-                              <use xlink:href="#E0A2" x="1192" y="19820" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="1210" y="19820" height="720px" width="720px"></use>
                               							</g>
                            							
-                           <g data-time-start="24" data-time-end="28.799999999999997" class="note" id="e48-m-424">
+                           <g data-time-start="24" data-time-end="26.4" class="note" id="e48-m-424">
                               								
-                              <polygon points="4090,19820 4322,19820 4322,19865 4090,19865 "></polygon>
+                              <polygon points="4372,19820 4604,19820 4604,19865 4372,19865 "></polygon>
                               								
-                              <polygon points="4090,20000 4322,20000 4322,19955 4090,19955 "></polygon>
+                              <polygon points="4372,20000 4604,20000 4604,19955 4372,19955 "></polygon>
                               								
-                              <rect x="4081" y="19775" height="270" width="18"></rect>
+                              <rect x="4363" y="19775" height="270" width="18"></rect>
                               								
-                              <rect x="4313" y="19775" height="270" width="18"></rect>
-                              								
-                              <g class="stem">
-                                 									
-                                 <rect x="4313" y="19820" height="720" width="18"></rect>
-                                 								</g>
+                              <rect x="4595" y="19775" height="270" width="18"></rect>
                               								
                               <g class="verse" id="e48-m-430">
                                  									
                                  <g class="syl" id="e48-m-431">
                                     										
-                                    <text x="4000" y="20852" font-size="0px">
+                                    <text x="4282" y="20852" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000428259218">
+                                       <tspan class="text" id="text-0000000198072073">
                                           												
                                           <tspan font-size="405px" class="text">vit,</tspan>
                                           											</tspan>
@@ -3318,9 +3308,9 @@
                                  									
                                  <g class="syl" id="e48-m-435">
                                     										
-                                    <text x="4000" y="21252" font-size="0px">
+                                    <text x="4282" y="21252" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000858742146">
+                                       <tspan class="text" id="text-0000001153205465">
                                           												
                                           <tspan font-size="405px" class="text">quas.</tspan>
                                           											</tspan>
@@ -3335,22 +3325,22 @@
                      					
                      <g class="staff" id="e48-m-436">
                         						
-                        <path d="M0 21565 L11312 21565" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 21565 L10523 21565" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 21745 L11312 21745" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 21745 L10523 21745" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 21925 L11312 21925" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 21925 L10523 21925" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 22105 L11312 22105" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 22105 L10523 22105" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 22285 L11312 22285" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 22285 L10523 22285" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001126497064">
+                        <g class="clef" id="clef-0000001846000289">
                            							
                            <use xlink:href="#E062" x="90" y="21745" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000820322696">
+                        <g class="keySig" id="keysig-0000001030609014">
                            							
                            <use xlink:href="#E260" x="771" y="22105" height="720px" width="720px"></use>
                            						</g>
@@ -3359,11 +3349,11 @@
                            							
                            <g data-time-start="22.86" data-time-end="23.1" class="note" id="e48-m-438">
                               								
-                              <use xlink:href="#E0A4" x="1192" y="22105" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="1210" y="22105" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="1400" y="21475" height="608" width="18"></rect>
+                                 <rect x="1418" y="21475" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-439"></g>
@@ -3372,9 +3362,9 @@
                                  									
                                  <g class="syl" id="e48-m-448">
                                     										
-                                    <text x="1102" y="22957" font-size="0px">
+                                    <text x="1120" y="22867" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001733411467">
+                                       <tspan class="text" id="text-0000001048451123">
                                           												
                                           <tspan font-size="405px" class="text">bi</tspan>
                                           											</tspan>
@@ -3385,46 +3375,46 @@
                            							
                            <g data-time-start="23.1" data-time-end="23.400000000000002" class="note" id="e48-m-440">
                               								
-                              <use xlink:href="#E0A4" x="1917" y="21925" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="2000" y="21925" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="1917" y="21947" height="608" width="18"></rect>
+                                 <rect x="2000" y="21947" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-449">
                                  									
                                  <g class="syl" id="e48-m-450">
                                     										
-                                    <text x="1827" y="22957" font-size="0px">
+                                    <text x="1910" y="22867" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000036871780">
+                                       <tspan class="text" id="text-0000001888150419">
                                           												
                                           <tspan font-size="405px" class="text">po</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2338" y="22858" height="18" width="108"></rect>
+                                    <rect x="2454" y="22768" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
                            <g data-time-start="23.400000000000002" data-time-end="23.700000000000003" class="note" id="e48-m-441">
                               								
-                              <use xlink:href="#E0A4" x="2641" y="21745" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="2791" y="21745" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="2641" y="21767" height="608" width="18"></rect>
+                                 <rect x="2791" y="21767" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-451">
                                  									
                                  <g class="syl" id="e48-m-452">
                                     										
-                                    <text x="2551" y="22957" font-size="0px">
+                                    <text x="2701" y="22867" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001634777078">
+                                       <tspan class="text" id="text-0000001644255316">
                                           												
                                           <tspan font-size="405px" class="text">scit</tspan>
                                           											</tspan>
@@ -3435,52 +3425,47 @@
                            							
                            <g data-time-start="23.700000000000003" data-time-end="24" class="note" id="e48-m-442">
                               								
-                              <use xlink:href="#E0A4" x="3366" y="21655" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="3581" y="21655" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="3366" y="21677" height="608" width="18"></rect>
+                                 <rect x="3581" y="21677" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-453">
                                  									
                                  <g class="syl" id="e48-m-454">
                                     										
-                                    <text x="3276" y="22957" font-size="0px">
+                                    <text x="3491" y="22867" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001052548190">
+                                       <tspan class="text" id="text-0000001286842629">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="3674" y="22858" height="18" width="108"></rect>
+                                    <rect x="3922" y="22768" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="24" data-time-end="28.799999999999997" class="note" id="e48-m-443">
+                           <g data-time-start="24" data-time-end="26.4" class="note" id="e48-m-443">
                               								
-                              <polygon points="4090,21925 4322,21925 4322,21970 4090,21970 "></polygon>
+                              <polygon points="4372,21925 4604,21925 4604,21970 4372,21970 "></polygon>
                               								
-                              <polygon points="4090,22105 4322,22105 4322,22060 4090,22060 "></polygon>
+                              <polygon points="4372,22105 4604,22105 4604,22060 4372,22060 "></polygon>
                               								
-                              <rect x="4081" y="21880" height="270" width="18"></rect>
+                              <rect x="4363" y="21880" height="270" width="18"></rect>
                               								
-                              <rect x="4313" y="21880" height="270" width="18"></rect>
-                              								
-                              <g class="stem">
-                                 									
-                                 <rect x="4313" y="21925" height="720" width="18"></rect>
-                                 								</g>
+                              <rect x="4595" y="21880" height="270" width="18"></rect>
                               								
                               <g class="verse" id="e48-m-455">
                                  									
                                  <g class="syl" id="e48-m-456">
                                     										
-                                    <text x="4000" y="22957" font-size="0px">
+                                    <text x="4282" y="22867" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000427967218">
+                                       <tspan class="text" id="text-0000001193073855">
                                           												
                                           <tspan font-size="405px" class="text">quas.</tspan>
                                           											</tspan>
@@ -3493,19 +3478,19 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000883326959">
+                     <g class="barLineAttr" id="bline-0000000211864117">
                         						
-                        <path d="M11209 18920 L11209 18200" stroke="#000000" stroke-width="27"></path>
+                        <path d="M10420 18920 L10420 18200" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M11299 18920 L11299 18200" stroke="#000000" stroke-width="27"></path>
+                        <path d="M10510 18920 L10510 18200" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M11209 20360 L11209 19640" stroke="#000000" stroke-width="27"></path>
+                        <path d="M10420 20360 L10420 19640" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M11299 20360 L11299 19640" stroke="#000000" stroke-width="27"></path>
+                        <path d="M10510 20360 L10510 19640" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M11209 22285 L11209 21565" stroke="#000000" stroke-width="27"></path>
+                        <path d="M10420 22285 L10420 21565" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M11299 22285 L11299 21565" stroke="#000000" stroke-width="27"></path>
+                        <path d="M10510 22285 L10510 21565" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -3517,29 +3502,29 @@
                      					
                      <g class="staff" id="e48-m-460">
                         						
-                        <path d="M11312 18200 L15389 18200" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 18200 L14970 18200" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11312 18380 L15389 18380" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 18380 L14970 18380" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11312 18560 L15389 18560" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 18560 L14970 18560" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11312 18740 L15389 18740" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 18740 L14970 18740" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11312 18920 L15389 18920" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 18920 L14970 18920" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-461">
                            							
-                           <g data-time-start="30.06" data-time-end="31.200000000000003" class="note" id="e48-m-462">
+                           <g data-time-start="27.66" data-time-end="28.799999999999997" class="note" id="e48-m-462">
                               								
-                              <use xlink:href="#E0A2" x="11501" y="18650" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="10730" y="18650" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-465">
                                  									
                                  <g class="syl" id="e48-m-466">
                                     										
-                                    <text x="11411" y="19412" font-size="0px">
+                                    <text x="10640" y="19412" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000722479485">
+                                       <tspan class="text" id="text-0000001502039207">
                                           												
                                           <tspan font-size="405px" class="text">Has</tspan>
                                           											</tspan>
@@ -3548,48 +3533,48 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="31.200000000000003" data-time-end="31.8" class="note" id="e48-m-463">
+                           <g data-time-start="28.799999999999997" data-time-end="29.4" class="note" id="e48-m-463">
                               								
-                              <use xlink:href="#E0A3" x="13171" y="18650" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="12551" y="18650" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="13379" y="18020" height="608" width="18"></rect>
+                                 <rect x="12759" y="18020" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-467">
                                  									
                                  <g class="syl" id="e48-m-468">
                                     										
-                                    <text x="13081" y="19412" font-size="0px">
+                                    <text x="12461" y="19412" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000230286913">
+                                       <tspan class="text" id="text-0000000955078646">
                                           												
                                           <tspan font-size="405px" class="text">bi</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="13736" y="19313" height="18" width="108"></rect>
+                                    <rect x="13166" y="19313" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="31.8" data-time-end="32.400000000000006" class="note" id="e48-m-464">
+                           <g data-time-start="29.4" data-time-end="30" class="note" id="e48-m-464">
                               								
-                              <use xlink:href="#E0A3" x="14273" y="18650" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="13754" y="18650" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="14481" y="18020" height="608" width="18"></rect>
+                                 <rect x="13962" y="18020" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-469">
                                  									
                                  <g class="syl" id="e48-m-470">
                                     										
-                                    <text x="14183" y="19412" font-size="0px">
+                                    <text x="13664" y="19412" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000059472173">
+                                       <tspan class="text" id="text-0000002115635006">
                                           												
                                           <tspan font-size="405px" class="text">bet</tspan>
                                           											</tspan>
@@ -3602,29 +3587,29 @@
                      					
                      <g class="staff" id="e48-m-471">
                         						
-                        <path d="M11312 19640 L15389 19640" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 19640 L14970 19640" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11312 19820 L15389 19820" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 19820 L14970 19820" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11312 20000 L15389 20000" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 20000 L14970 20000" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11312 20180 L15389 20180" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 20180 L14970 20180" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11312 20360 L15389 20360" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 20360 L14970 20360" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-472">
                            							
-                           <g data-time-start="30.06" data-time-end="31.200000000000003" class="note" id="e48-m-473">
+                           <g data-time-start="27.66" data-time-end="28.799999999999997" class="note" id="e48-m-473">
                               								
-                              <use xlink:href="#E0A2" x="11501" y="20090" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="10730" y="20090" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-475">
                                  									
                                  <g class="syl" id="e48-m-476">
                                     										
-                                    <text x="11411" y="20852" font-size="0px">
+                                    <text x="10640" y="20852" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001308340290">
+                                       <tspan class="text" id="text-0000001032906439">
                                           												
                                           <tspan font-size="405px" class="text">Has</tspan>
                                           											</tspan>
@@ -3636,36 +3621,36 @@
                                  									
                                  <g class="syl" id="e48-m-506">
                                     										
-                                    <text x="11411" y="21252" font-size="0px">
+                                    <text x="10640" y="21252" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000786393928">
+                                       <tspan class="text" id="text-0000001369921553">
                                           												
                                           <tspan font-size="405px" class="text">Dis</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="12467" y="21153" height="18" width="108"></rect>
+                                    <rect x="11771" y="21153" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="31.200000000000003" data-time-end="32.400000000000006" class="note" id="e48-m-474">
+                           <g data-time-start="28.799999999999997" data-time-end="30" class="note" id="e48-m-474">
                               								
-                              <use xlink:href="#E0A2" x="13171" y="20090" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="12551" y="20090" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-501">
                                  									
                                  <g class="syl" id="e48-m-502">
                                     										
-                                    <text x="13081" y="20852" font-size="0px">
+                                    <text x="12461" y="20852" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001763082958">
+                                       <tspan class="text" id="text-0000000017666327">
                                           												
                                           <tspan font-size="405px" class="text">bi</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="14388" y="20753" height="18" width="108"></rect>
+                                    <rect x="13878" y="20753" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -3673,15 +3658,15 @@
                                  									
                                  <g class="syl" id="e48-m-508">
                                     										
-                                    <text x="13081" y="21252" font-size="0px">
+                                    <text x="12461" y="21252" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001151399632">
+                                       <tspan class="text" id="text-0000001513627681">
                                           												
                                           <tspan font-size="405px" class="text">co</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="14422" y="21153" height="18" width="108"></rect>
+                                    <rect x="13911" y="21153" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -3690,29 +3675,29 @@
                      					
                      <g class="staff" id="e48-m-477">
                         						
-                        <path d="M11312 21565 L15389 21565" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 21565 L14970 21565" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11312 21745 L15389 21745" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 21745 L14970 21745" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11312 21925 L15389 21925" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 21925 L14970 21925" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11312 22105 L15389 22105" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 22105 L14970 22105" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11312 22285 L15389 22285" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10523 22285 L14970 22285" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-478">
                            							
-                           <g data-time-start="30.06" data-time-end="31.200000000000003" class="note" id="e48-m-479">
+                           <g data-time-start="27.66" data-time-end="28.799999999999997" class="note" id="e48-m-479">
                               								
-                              <use xlink:href="#E0A2" x="11501" y="21925" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="10730" y="21925" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-482">
                                  									
                                  <g class="syl" id="e48-m-483">
                                     										
-                                    <text x="11411" y="22957" font-size="0px">
+                                    <text x="10640" y="22867" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001205130582">
+                                       <tspan class="text" id="text-0000000935088037">
                                           												
                                           <tspan font-size="405px" class="text">Has</tspan>
                                           											</tspan>
@@ -3721,48 +3706,48 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="31.200000000000003" data-time-end="31.8" class="note" id="e48-m-480">
+                           <g data-time-start="28.799999999999997" data-time-end="29.4" class="note" id="e48-m-480">
                               								
-                              <use xlink:href="#E0A3" x="13171" y="21925" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="12551" y="21925" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="13171" y="21947" height="608" width="18"></rect>
+                                 <rect x="12551" y="21947" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-484">
                                  									
                                  <g class="syl" id="e48-m-485">
                                     										
-                                    <text x="13081" y="22957" font-size="0px">
+                                    <text x="12461" y="22867" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000900403856">
+                                       <tspan class="text" id="text-0000001138357949">
                                           												
                                           <tspan font-size="405px" class="text">bi</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="13736" y="22858" height="18" width="108"></rect>
+                                    <rect x="13166" y="22768" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="31.8" data-time-end="32.400000000000006" class="note" id="e48-m-481">
+                           <g data-time-start="29.4" data-time-end="30" class="note" id="e48-m-481">
                               								
-                              <use xlink:href="#E0A3" x="14273" y="22015" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="13754" y="22015" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="14481" y="21385" height="608" width="18"></rect>
+                                 <rect x="13962" y="21385" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-486">
                                  									
                                  <g class="syl" id="e48-m-487">
                                     										
-                                    <text x="14183" y="22957" font-size="0px">
+                                    <text x="13664" y="22867" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000727529739">
+                                       <tspan class="text" id="text-0000001041437561">
                                           												
                                           <tspan font-size="405px" class="text">bet</tspan>
                                           											</tspan>
@@ -3773,13 +3758,13 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001583931157">
+                     <g class="barLineAttr" id="bline-0000000801502904">
                         						
-                        <path d="M15376 18920 L15376 18200" stroke="#000000" stroke-width="27"></path>
+                        <path d="M14957 18920 L14957 18200" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M15376 20360 L15376 19640" stroke="#000000" stroke-width="27"></path>
+                        <path d="M14957 20360 L14957 19640" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M15376 22285 L15376 21565" stroke="#000000" stroke-width="27"></path>
+                        <path d="M14957 22285 L14957 21565" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -3787,21 +3772,21 @@
                      					
                      <g class="staff" id="e48-m-489">
                         						
-                        <path d="M15389 18200 L20001 18200" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 18200 L20001 18200" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15389 18380 L20001 18380" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 18380 L20001 18380" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15389 18560 L20001 18560" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 18560 L20001 18560" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15389 18740 L20001 18740" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 18740 L20001 18740" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15389 18920 L20001 18920" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 18920 L20001 18920" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-490">
                            							
-                           <g data-time-start="32.46" data-time-end="33.6" class="note" id="e48-m-491">
+                           <g data-time-start="30.06" data-time-end="31.200000000000003" class="note" id="e48-m-491">
                               								
-                              <use xlink:href="#E0A2" x="15578" y="18560" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="15177" y="18560" height="720px" width="720px"></use>
                               								
                               <g class="accid" id="e48-m-492"></g>
                               								
@@ -3809,9 +3794,9 @@
                                  									
                                  <g class="syl" id="e48-m-496">
                                     										
-                                    <text x="15488" y="19412" font-size="0px">
+                                    <text x="15087" y="19412" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000870547696">
+                                       <tspan class="text" id="text-0000000876603164">
                                           												
                                           <tspan font-size="405px" class="text">et</tspan>
                                           											</tspan>
@@ -3820,54 +3805,54 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="33.6" data-time-end="34.2" class="note" id="e48-m-493">
+                           <g data-time-start="31.200000000000003" data-time-end="31.8" class="note" id="e48-m-493">
                               								
-                              <use xlink:href="#E0A3" x="17783" y="18650" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="17582" y="18650" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="17991" y="18020" height="608" width="18"></rect>
+                                 <rect x="17790" y="18020" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-529">
                                  									
                                  <g class="syl" id="e48-m-530">
                                     										
-                                    <text x="17693" y="19412" font-size="0px">
+                                    <text x="17492" y="19412" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001322967663">
+                                       <tspan class="text" id="text-0000001746146980">
                                           												
                                           <tspan font-size="405px" class="text">re</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="18349" y="19313" height="18" width="108"></rect>
+                                    <rect x="18198" y="19313" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="34.2" data-time-end="34.8" class="note" id="e48-m-494">
+                           <g data-time-start="31.8" data-time-end="32.400000000000006" class="note" id="e48-m-494">
                               								
-                              <use xlink:href="#E0A3" x="18886" y="18650" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="18785" y="18650" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="19094" y="18020" height="608" width="18"></rect>
+                                 <rect x="18993" y="18020" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-531">
                                  									
                                  <g class="syl" id="e48-m-532">
                                     										
-                                    <text x="18796" y="19412" font-size="0px">
+                                    <text x="18695" y="19412" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000355209683">
+                                       <tspan class="text" id="text-0000001577826166">
                                           												
                                           <tspan font-size="405px" class="text">bi</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="19496" y="19313" height="18" width="108"></rect>
+                                    <rect x="19445" y="19313" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -3876,29 +3861,29 @@
                      					
                      <g class="staff" id="e48-m-497">
                         						
-                        <path d="M15389 19640 L20001 19640" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 19640 L20001 19640" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15389 19820 L20001 19820" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 19820 L20001 19820" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15389 20000 L20001 20000" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 20000 L20001 20000" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15389 20180 L20001 20180" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 20180 L20001 20180" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15389 20360 L20001 20360" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 20360 L20001 20360" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-498">
                            							
-                           <g data-time-start="32.46" data-time-end="33.6" class="note" id="e48-m-499">
+                           <g data-time-start="30.06" data-time-end="31.200000000000003" class="note" id="e48-m-499">
                               								
-                              <use xlink:href="#E0A2" x="15578" y="20180" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="15177" y="20180" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-503">
                                  									
                                  <g class="syl" id="e48-m-504">
                                     										
-                                    <text x="15488" y="20852" font-size="0px">
+                                    <text x="15087" y="20852" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000355492095">
+                                       <tspan class="text" id="text-0000001019046301">
                                           												
                                           <tspan font-size="405px" class="text">bet</tspan>
                                           											</tspan>
@@ -3910,9 +3895,9 @@
                                  									
                                  <g class="syl" id="e48-m-510">
                                     										
-                                    <text x="15488" y="21252" font-size="0px">
+                                    <text x="15087" y="21252" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002105097389">
+                                       <tspan class="text" id="text-0000001285831197">
                                           												
                                           <tspan font-size="405px" class="text">lor</tspan>
                                           											</tspan>
@@ -3921,17 +3906,17 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="33.6" data-time-end="34.8" class="note" id="e48-m-500">
+                           <g data-time-start="31.200000000000003" data-time-end="32.400000000000006" class="note" id="e48-m-500">
                               								
-                              <use xlink:href="#E0A2" x="17783" y="20270" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="17582" y="20270" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-511">
                                  									
                                  <g class="syl" id="e48-m-512">
                                     										
-                                    <text x="17693" y="20852" font-size="0px">
+                                    <text x="17492" y="20852" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000379156797">
+                                       <tspan class="text" id="text-0000000290633370">
                                           												
                                           <tspan font-size="405px" class="text">et</tspan>
                                           											</tspan>
@@ -3943,9 +3928,9 @@
                                  									
                                  <g class="syl" id="e48-m-514">
                                     										
-                                    <text x="17693" y="21252" font-size="0px">
+                                    <text x="17492" y="21252" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001631275410">
+                                       <tspan class="text" id="text-0000000385426723">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -3958,25 +3943,25 @@
                      					
                      <g class="staff" id="e48-m-515">
                         						
-                        <path d="M15389 21565 L20001 21565" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 21565 L20001 21565" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15389 21745 L20001 21745" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 21745 L20001 21745" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15389 21925 L20001 21925" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 21925 L20001 21925" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15389 22105 L20001 22105" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 22105 L20001 22105" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15389 22285 L20001 22285" stroke="#000000" stroke-width="13"></path>
+                        <path d="M14970 22285 L20001 22285" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-516">
                            							
-                           <g data-time-start="32.46" data-time-end="33" class="note" id="e48-m-517">
+                           <g data-time-start="30.06" data-time-end="30.6" class="note" id="e48-m-517">
                               								
-                              <use xlink:href="#E0A3" x="15578" y="22105" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="15177" y="22105" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="15786" y="21475" height="608" width="18"></rect>
+                                 <rect x="15385" y="21475" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-518"></g>
@@ -3985,9 +3970,9 @@
                                  									
                                  <g class="syl" id="e48-m-522">
                                     										
-                                    <text x="15488" y="22957" font-size="0px">
+                                    <text x="15087" y="22867" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001296174965">
+                                       <tspan class="text" id="text-0000000563375268">
                                           												
                                           <tspan font-size="405px" class="text">et</tspan>
                                           											</tspan>
@@ -3996,56 +3981,56 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="33" data-time-end="33.6" class="note" id="e48-m-519">
+                           <g data-time-start="30.6" data-time-end="31.200000000000003" class="note" id="e48-m-519">
                               								
-                              <use xlink:href="#E0A3" x="16681" y="22015" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="16380" y="22015" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="16889" y="21385" height="608" width="18"></rect>
+                                 <rect x="16588" y="21385" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-549">
                                  									
                                  <g class="syl" id="e48-m-550">
                                     										
-                                    <text x="16591" y="22957" font-size="0px">
+                                    <text x="16290" y="22867" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001488468724">
+                                       <tspan class="text" id="text-0000002127315764">
                                           												
                                           <tspan font-size="405px" class="text">re</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="17246" y="22858" height="18" width="108"></rect>
+                                    <rect x="16995" y="22768" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="33.6" data-time-end="34.8" class="note" id="e48-m-520">
+                           <g data-time-start="31.200000000000003" data-time-end="32.400000000000006" class="note" id="e48-m-520">
                               								
-                              <use xlink:href="#E0A2" x="17783" y="21925" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="17582" y="21925" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-551">
                                  									
                                  <g class="syl" id="e48-m-552">
                                     										
-                                    <text x="17693" y="22957" font-size="0px">
+                                    <text x="17492" y="22867" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001345459120">
+                                       <tspan class="text" id="text-0000001721064927">
                                           												
                                           <tspan font-size="405px" class="text">bi</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="18944" y="22858" height="18" width="108"></rect>
+                                    <rect x="18844" y="22768" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001808070705">
+                     <g class="barLineAttr" id="bline-0000000194449379">
                         						
                         <path d="M19988 18920 L19988 18200" stroke="#000000" stroke-width="27"></path>
                         						
@@ -4056,27 +4041,27 @@
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000000873957953">
+               <g class="system" id="system-0000000423238684">
                   				
-                  <polygon points="-270,23450 270,23090 270,22955 -270,23315 "></polygon>
+                  <polygon points="-270,23365 270,23005 270,22870 -270,23230 "></polygon>
                   				
-                  <polygon points="-270,23270 270,22910 270,22775 -270,23135 "></polygon>
+                  <polygon points="-270,23185 270,22825 270,22690 -270,23050 "></polygon>
                   				
-                  <path d="M13 24080 L13 28260" stroke="#000000" stroke-width="27"></path>
+                  <path d="M13 23995 L13 28175" stroke="#000000" stroke-width="27"></path>
                   				
-                  <use xlink:href="#E003" x="-154" y="24080" height="720px" width="720px"></use>
+                  <use xlink:href="#E003" x="-154" y="23995" height="720px" width="720px"></use>
                   				
-                  <use xlink:href="#E004" x="-154" y="28260" height="720px" width="720px"></use>
+                  <use xlink:href="#E004" x="-154" y="28175" height="720px" width="720px"></use>
                   				
-                  <rect x="-154" y="24062" height="4216" width="90"></rect>
+                  <rect x="-154" y="23977" height="4216" width="90"></rect>
                   				
                   <g class="measure" id="e48-m-523">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000001874359321">
+                     <g class="mNum autogenerated" id="mnum-0000000291078272">
                         						
-                        <text x="0" y="23810" text-anchor="middle" font-size="0px">
+                        <text x="0" y="23725" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000000919490204">
+                           <tspan class="text" id="text-0000000184769638">
                               								
                               <tspan font-size="324px" class="text">13</tspan>
                               							</tspan>
@@ -4085,31 +4070,31 @@
                      					
                      <g class="staff" id="e48-m-524">
                         						
-                        <path d="M0 24080 L5043 24080" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 23995 L5043 23995" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 24260 L5043 24260" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 24175 L5043 24175" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 24440 L5043 24440" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 24355 L5043 24355" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 24620 L5043 24620" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 24535 L5043 24535" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 24800 L5043 24800" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 24715 L5043 24715" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001411565582">
+                        <g class="clef" id="clef-0000000565049745">
                            							
-                           <use xlink:href="#E050" x="90" y="24620" height="720px" width="720px"></use>
+                           <use xlink:href="#E050" x="90" y="24535" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000930888265">
+                        <g class="keySig" id="keysig-0000000618377181">
                            							
-                           <use xlink:href="#E260" x="771" y="24440" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="24355" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-525">
                            							
-                           <g data-time-start="34.86000000000001" data-time-end="36" class="note" id="e48-m-526">
+                           <g data-time-start="32.46" data-time-end="33.6" class="note" id="e48-m-526">
                               								
-                              <use xlink:href="#E0A2" x="1191" y="24440" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="1191" y="24355" height="720px" width="720px"></use>
                               								
                               <g class="accid" id="e48-m-527"></g>
                               								
@@ -4117,9 +4102,9 @@
                                  									
                                  <g class="syl" id="e48-m-534">
                                     										
-                                    <text x="1101" y="25382" font-size="0px">
+                                    <text x="1101" y="25297" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002122911475">
+                                       <tspan class="text" id="text-0000001233229953">
                                           												
                                           <tspan font-size="405px" class="text">bet,</tspan>
                                           											</tspan>
@@ -4128,23 +4113,23 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="36" data-time-end="37.2" class="note" id="e48-m-528">
+                           <g data-time-start="33.6" data-time-end="34.8" class="note" id="e48-m-528">
                               								
-                              <use xlink:href="#E0A2" x="3376" y="24350" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="3376" y="24265" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-565">
                                  									
                                  <g class="syl" id="e48-m-566">
                                     										
-                                    <text x="3286" y="25382" font-size="0px">
+                                    <text x="3286" y="25297" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000151514234">
+                                       <tspan class="text" id="text-0000001364509314">
                                           												
                                           <tspan font-size="405px" class="text">ve</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="4351" y="25283" height="18" width="108"></rect>
+                                    <rect x="4351" y="25198" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -4153,45 +4138,45 @@
                      					
                      <g class="staff" id="e48-m-535">
                         						
-                        <path d="M0 25520 L5043 25520" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 25435 L5043 25435" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 25700 L5043 25700" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 25615 L5043 25615" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 25880 L5043 25880" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 25795 L5043 25795" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 26060 L5043 26060" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 25975 L5043 25975" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 26240 L5043 26240" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 26155 L5043 26155" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001020701460">
+                        <g class="clef" id="clef-0000001391913234">
                            							
-                           <use xlink:href="#E050" x="90" y="26060" height="720px" width="720px"></use>
+                           <use xlink:href="#E050" x="90" y="25975" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000830065984">
+                        <g class="keySig" id="keysig-0000001346357067">
                            							
-                           <use xlink:href="#E260" x="771" y="25880" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="25795" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-536">
                            							
-                           <g data-time-start="34.86000000000001" data-time-end="36" class="note" id="e48-m-537">
+                           <g data-time-start="32.46" data-time-end="33.6" class="note" id="e48-m-537">
                               								
-                              <use xlink:href="#E0A2" x="1191" y="26060" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="1191" y="25975" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-539">
                                  									
                                  <g class="syl" id="e48-m-540">
                                     										
-                                    <text x="1101" y="27137" font-size="0px">
+                                    <text x="1101" y="27052" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000845601497">
+                                       <tspan class="text" id="text-0000000280334105">
                                           												
                                           <tspan font-size="405px" class="text">cla</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2376" y="27038" height="18" width="108"></rect>
+                                    <rect x="2376" y="26953" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -4199,30 +4184,30 @@
                                  									
                                  <g class="syl" id="e48-m-576">
                                     										
-                                    <text x="1101" y="26737" font-size="0px">
+                                    <text x="1101" y="26652" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001265485104">
+                                       <tspan class="text" id="text-0000001569340838">
                                           												
                                           <tspan font-size="405px" class="text">re</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2298" y="26638" height="18" width="108"></rect>
+                                    <rect x="2298" y="26553" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="36" data-time-end="37.2" class="note" id="e48-m-538">
+                           <g data-time-start="33.6" data-time-end="34.8" class="note" id="e48-m-538">
                               								
-                              <use xlink:href="#E0A2" x="3376" y="25970" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="3376" y="25885" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-541">
                                  									
                                  <g class="syl" id="e48-m-542">
                                     										
-                                    <text x="3286" y="27137" font-size="0px">
+                                    <text x="3286" y="27052" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001925777309">
+                                       <tspan class="text" id="text-0000000819386250">
                                           												
                                           <tspan font-size="405px" class="text">ris</tspan>
                                           											</tspan>
@@ -4234,15 +4219,15 @@
                                  									
                                  <g class="syl" id="e48-m-578">
                                     										
-                                    <text x="3286" y="26737" font-size="0px">
+                                    <text x="3286" y="26652" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000091974709">
+                                       <tspan class="text" id="text-0000000930783933">
                                           												
                                           <tspan font-size="405px" class="text">bi</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="4317" y="26638" height="18" width="108"></rect>
+                                    <rect x="4317" y="26553" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -4251,44 +4236,44 @@
                      					
                      <g class="staff" id="e48-m-543">
                         						
-                        <path d="M0 27540 L5043 27540" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 27455 L5043 27455" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 27720 L5043 27720" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 27635 L5043 27635" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 27900 L5043 27900" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 27815 L5043 27815" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 28080 L5043 28080" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 27995 L5043 27995" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 28260 L5043 28260" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 28175 L5043 28175" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000865222176">
+                        <g class="clef" id="clef-0000000188036630">
                            							
-                           <use xlink:href="#E062" x="90" y="27720" height="720px" width="720px"></use>
+                           <use xlink:href="#E062" x="90" y="27635" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001177338195">
+                        <g class="keySig" id="keysig-0000001383195673">
                            							
-                           <use xlink:href="#E260" x="771" y="28080" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="27995" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-544">
                            							
-                           <g data-time-start="34.86000000000001" data-time-end="35.4" class="note" id="e48-m-545">
+                           <g data-time-start="32.46" data-time-end="33" class="note" id="e48-m-545">
                               								
-                              <use xlink:href="#E0A3" x="1191" y="28260" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="1191" y="28175" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="1399" y="27630" height="608" width="18"></rect>
+                                 <rect x="1399" y="27545" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-553">
                                  									
                                  <g class="syl" id="e48-m-554">
                                     										
-                                    <text x="1101" y="28842" font-size="0px">
+                                    <text x="1101" y="28757" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000956495419">
+                                       <tspan class="text" id="text-0000001324868052">
                                           												
                                           <tspan font-size="405px" class="text">bet,</tspan>
                                           											</tspan>
@@ -4297,13 +4282,13 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="35.4" data-time-end="36" class="note" id="e48-m-546">
+                           <g data-time-start="33" data-time-end="33.6" class="note" id="e48-m-546">
                               								
-                              <use xlink:href="#E0A3" x="2283" y="28080" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="2283" y="27995" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="2491" y="27450" height="608" width="18"></rect>
+                                 <rect x="2491" y="27365" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-547"></g>
@@ -4312,30 +4297,30 @@
                                  									
                                  <g class="syl" id="e48-m-556">
                                     										
-                                    <text x="2193" y="28842" font-size="0px">
+                                    <text x="2193" y="28757" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002100293283">
+                                       <tspan class="text" id="text-0000002146801083">
                                           												
                                           <tspan font-size="405px" class="text">ve</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2877" y="28743" height="18" width="108"></rect>
+                                    <rect x="2877" y="28658" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="36" data-time-end="37.2" class="note" id="e48-m-548">
+                           <g data-time-start="33.6" data-time-end="34.8" class="note" id="e48-m-548">
                               								
-                              <use xlink:href="#E0A2" x="3376" y="28170" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="3376" y="28085" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-557">
                                  									
                                  <g class="syl" id="e48-m-558">
                                     										
-                                    <text x="3286" y="28842" font-size="0px">
+                                    <text x="3286" y="28757" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000699831437">
+                                       <tspan class="text" id="text-0000002000067061">
                                           												
                                           <tspan font-size="405px" class="text">nas</tspan>
                                           											</tspan>
@@ -4346,13 +4331,13 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000893548792">
+                     <g class="barLineAttr" id="bline-0000000263176928">
                         						
-                        <path d="M5030 24800 L5030 24080" stroke="#000000" stroke-width="27"></path>
+                        <path d="M5030 24715 L5030 23995" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M5030 26240 L5030 25520" stroke="#000000" stroke-width="27"></path>
+                        <path d="M5030 26155 L5030 25435" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M5030 28260 L5030 27540" stroke="#000000" stroke-width="27"></path>
+                        <path d="M5030 28175 L5030 27455" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -4360,21 +4345,21 @@
                      					
                      <g class="staff" id="e48-m-560">
                         						
-                        <path d="M5043 24080 L9613 24080" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 23995 L9613 23995" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 24260 L9613 24260" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 24175 L9613 24175" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 24440 L9613 24440" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 24355 L9613 24355" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 24620 L9613 24620" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 24535 L9613 24535" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 24800 L9613 24800" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 24715 L9613 24715" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-561">
                            							
-                           <g data-time-start="37.26" data-time-end="38.4" class="note" id="e48-m-562">
+                           <g data-time-start="34.86000000000001" data-time-end="36" class="note" id="e48-m-562">
                               								
-                              <use xlink:href="#E0A2" x="5231" y="24440" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="5231" y="24355" height="720px" width="720px"></use>
                               								
                               <g class="accid" id="e48-m-563"></g>
                               								
@@ -4382,9 +4367,9 @@
                                  									
                                  <g class="syl" id="e48-m-568">
                                     										
-                                    <text x="5141" y="25382" font-size="0px">
+                                    <text x="5141" y="25297" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001032777802">
+                                       <tspan class="text" id="text-0000001921977207">
                                           												
                                           <tspan font-size="405px" class="text">nas</tspan>
                                           											</tspan>
@@ -4393,17 +4378,17 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="38.4" data-time-end="39.6" class="note" id="e48-m-564">
+                           <g data-time-start="36" data-time-end="37.2" class="note" id="e48-m-564">
                               								
-                              <use xlink:href="#E0A2" x="7416" y="24530" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="7416" y="24445" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-569">
                                  									
                                  <g class="syl" id="e48-m-570">
                                     										
-                                    <text x="7326" y="25382" font-size="0px">
+                                    <text x="7326" y="25297" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000289716991">
+                                       <tspan class="text" id="text-0000001169117153">
                                           												
                                           <tspan font-size="405px" class="text">mox</tspan>
                                           											</tspan>
@@ -4416,29 +4401,29 @@
                      					
                      <g class="staff" id="e48-m-571">
                         						
-                        <path d="M5043 25520 L9613 25520" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 25435 L9613 25435" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 25700 L9613 25700" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 25615 L9613 25615" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 25880 L9613 25880" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 25795 L9613 25795" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 26060 L9613 26060" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 25975 L9613 25975" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 26240 L9613 26240" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 26155 L9613 26155" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-572">
                            							
-                           <g data-time-start="37.26" data-time-end="38.4" class="note" id="e48-m-573">
+                           <g data-time-start="34.86000000000001" data-time-end="36" class="note" id="e48-m-573">
                               								
-                              <use xlink:href="#E0A2" x="5231" y="26330" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="5231" y="26245" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-579">
                                  									
                                  <g class="syl" id="e48-m-580">
                                     										
-                                    <text x="5141" y="26737" font-size="0px">
+                                    <text x="5141" y="26652" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001320235740">
+                                       <tspan class="text" id="text-0000001166284436">
                                           												
                                           <tspan font-size="405px" class="text">bet,</tspan>
                                           											</tspan>
@@ -4450,36 +4435,36 @@
                                  									
                                  <g class="syl" id="e48-m-617">
                                     										
-                                    <text x="5141" y="27137" font-size="0px">
+                                    <text x="5141" y="27052" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001494859323">
+                                       <tspan class="text" id="text-0000000074802459">
                                           												
                                           <tspan font-size="405px" class="text">su</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="6360" y="27038" height="18" width="108"></rect>
+                                    <rect x="6360" y="26953" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="38.4" data-time-end="39.6" class="note" id="e48-m-574">
+                           <g data-time-start="36" data-time-end="37.2" class="note" id="e48-m-574">
                               								
-                              <use xlink:href="#E0A2" x="7416" y="26150" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="7416" y="26065" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-610">
                                  									
                                  <g class="syl" id="e48-m-611">
                                     										
-                                    <text x="7326" y="26737" font-size="0px">
+                                    <text x="7326" y="26652" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001505274559">
+                                       <tspan class="text" id="text-0000001478646443">
                                           												
                                           <tspan font-size="405px" class="text">ve</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="8656" y="26638" height="18" width="108"></rect>
+                                    <rect x="8656" y="26553" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -4487,15 +4472,15 @@
                                  									
                                  <g class="syl" id="e48-m-619">
                                     										
-                                    <text x="7326" y="27137" font-size="0px">
+                                    <text x="7326" y="27052" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000311775011">
+                                       <tspan class="text" id="text-0000002094988052">
                                           												
                                           <tspan font-size="405px" class="text">sci</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="8690" y="27038" height="18" width="108"></rect>
+                                    <rect x="8690" y="26953" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -4504,34 +4489,34 @@
                      					
                      <g class="staff" id="e48-m-581">
                         						
-                        <path d="M5043 27540 L9613 27540" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 27455 L9613 27455" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 27720 L9613 27720" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 27635 L9613 27635" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 27900 L9613 27900" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 27815 L9613 27815" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 28080 L9613 28080" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 27995 L9613 27995" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 28260 L9613 28260" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 28175 L9613 28175" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-582">
                            							
-                           <g data-time-start="37.26" data-time-end="37.8" class="note" id="e48-m-583">
+                           <g data-time-start="34.86000000000001" data-time-end="35.4" class="note" id="e48-m-583">
                               								
-                              <use xlink:href="#E0A3" x="5231" y="28260" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="5231" y="28175" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="5439" y="27630" height="608" width="18"></rect>
+                                 <rect x="5439" y="27545" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-587">
                                  									
                                  <g class="syl" id="e48-m-588">
                                     										
-                                    <text x="5141" y="28842" font-size="0px">
+                                    <text x="5141" y="28757" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001559054698">
+                                       <tspan class="text" id="text-0000000500344431">
                                           												
                                           <tspan font-size="405px" class="text">mox</tspan>
                                           											</tspan>
@@ -4540,48 +4525,48 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="37.8" data-time-end="38.4" class="note" id="e48-m-584">
+                           <g data-time-start="35.4" data-time-end="36" class="note" id="e48-m-584">
                               								
-                              <use xlink:href="#E0A3" x="6323" y="27630" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="6323" y="27545" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="6323" y="27652" height="608" width="18"></rect>
+                                 <rect x="6323" y="27567" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-589">
                                  									
                                  <g class="syl" id="e48-m-590">
                                     										
-                                    <text x="6233" y="28842" font-size="0px">
+                                    <text x="6233" y="28757" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001961883910">
+                                       <tspan class="text" id="text-0000000612705365">
                                           												
                                           <tspan font-size="405px" class="text">in</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="6883" y="28743" height="18" width="108"></rect>
+                                    <rect x="6883" y="28658" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="38.4" data-time-end="39" class="note" id="e48-m-585">
+                           <g data-time-start="36" data-time-end="36.6" class="note" id="e48-m-585">
                               								
-                              <use xlink:href="#E0A3" x="7416" y="27900" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="7416" y="27815" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="7416" y="27922" height="608" width="18"></rect>
+                                 <rect x="7416" y="27837" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-591">
                                  									
                                  <g class="syl" id="e48-m-592">
                                     										
-                                    <text x="7326" y="28842" font-size="0px">
+                                    <text x="7326" y="28757" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000300631622">
+                                       <tspan class="text" id="text-0000001046801958">
                                           												
                                           <tspan font-size="405px" class="text">de</tspan>
                                           											</tspan>
@@ -4590,41 +4575,41 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="39" data-time-end="39.6" class="note" id="e48-m-586">
+                           <g data-time-start="36.6" data-time-end="37.2" class="note" id="e48-m-586">
                               								
-                              <use xlink:href="#E0A3" x="8508" y="27720" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="8508" y="27635" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="8508" y="27742" height="608" width="18"></rect>
+                                 <rect x="8508" y="27657" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-659">
                                  									
                                  <g class="syl" id="e48-m-660">
                                     										
-                                    <text x="8418" y="28842" font-size="0px">
+                                    <text x="8418" y="28757" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000194692025">
+                                       <tspan class="text" id="text-0000000288675532">
                                           												
                                           <tspan font-size="405px" class="text">re</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="9169" y="28743" height="18" width="108"></rect>
+                                    <rect x="9169" y="28658" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001815850938">
+                     <g class="barLineAttr" id="bline-0000002081977148">
                         						
-                        <path d="M9600 24800 L9600 24080" stroke="#000000" stroke-width="27"></path>
+                        <path d="M9600 24715 L9600 23995" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M9600 26240 L9600 25520" stroke="#000000" stroke-width="27"></path>
+                        <path d="M9600 26155 L9600 25435" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M9600 28260 L9600 27540" stroke="#000000" stroke-width="27"></path>
+                        <path d="M9600 28175 L9600 27455" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -4634,48 +4619,48 @@
                      					
                      <g class="staff" id="e48-m-595">
                         						
-                        <path d="M9613 24080 L15088 24080" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 23995 L15088 23995" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 24260 L15088 24260" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 24175 L15088 24175" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 24440 L15088 24440" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 24355 L15088 24355" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 24620 L15088 24620" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 24535 L15088 24535" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 24800 L15088 24800" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 24715 L15088 24715" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-596">
                            							
-                           <g data-time-start="39.66" data-time-end="40.800000000000004" class="note" id="e48-m-597">
+                           <g data-time-start="37.26" data-time-end="38.4" class="note" id="e48-m-597">
                               								
-                              <use xlink:href="#E0A2" x="9801" y="24350" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="9801" y="24265" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-602">
                                  									
                                  <g class="syl" id="e48-m-603">
                                     										
-                                    <text x="9711" y="25382" font-size="0px">
+                                    <text x="9711" y="25297" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000608412834">
+                                       <tspan class="text" id="text-0000000239510801">
                                           												
                                           <tspan font-size="405px" class="text">in</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="10760" y="25283" height="18" width="108"></rect>
+                                    <rect x="10760" y="25198" height="18" width="108"></rect>
                                     										
-                                    <rect x="11960" y="25283" height="18" width="108"></rect>
+                                    <rect x="11960" y="25198" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="40.800000000000004" data-time-end="41.400000000000006" class="note" id="e48-m-598">
+                           <g data-time-start="38.4" data-time-end="39" class="note" id="e48-m-598">
                               								
-                              <use xlink:href="#E0A3" x="12891" y="24440" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="12891" y="24355" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="12891" y="24462" height="608" width="18"></rect>
+                                 <rect x="12891" y="24377" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-599"></g>
@@ -4684,9 +4669,9 @@
                                  									
                                  <g class="syl" id="e48-m-605">
                                     										
-                                    <text x="12801" y="25382" font-size="0px">
+                                    <text x="12801" y="25297" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001667067292">
+                                       <tspan class="text" id="text-0000001673202901">
                                           												
                                           <tspan font-size="405px" class="text">de</tspan>
                                           											</tspan>
@@ -4695,13 +4680,13 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="41.400000000000006" data-time-end="42.00000000000001" class="note" id="e48-m-600">
+                           <g data-time-start="39" data-time-end="39.6" class="note" id="e48-m-600">
                               								
-                              <use xlink:href="#E0A3" x="13983" y="24440" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="13983" y="24355" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="13983" y="24462" height="608" width="18"></rect>
+                                 <rect x="13983" y="24377" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-601"></g>
@@ -4710,15 +4695,15 @@
                                  									
                                  <g class="syl" id="e48-m-640">
                                     										
-                                    <text x="13893" y="25382" font-size="0px">
+                                    <text x="13893" y="25297" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001587046315">
+                                       <tspan class="text" id="text-0000000420471441">
                                           												
                                           <tspan font-size="405px" class="text">re</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="14644" y="25283" height="18" width="108"></rect>
+                                    <rect x="14644" y="25198" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -4727,29 +4712,29 @@
                      					
                      <g class="staff" id="e48-m-606">
                         						
-                        <path d="M9613 25520 L15088 25520" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 25435 L15088 25435" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 25700 L15088 25700" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 25615 L15088 25615" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 25880 L15088 25880" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 25795 L15088 25795" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 26060 L15088 26060" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 25975 L15088 25975" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 26240 L15088 26240" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 26155 L15088 26155" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-607">
                            							
-                           <g data-time-start="39.66" data-time-end="40.800000000000004" class="note" id="e48-m-608">
+                           <g data-time-start="37.26" data-time-end="38.4" class="note" id="e48-m-608">
                               								
-                              <use xlink:href="#E0A2" x="9801" y="26240" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="9801" y="26155" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-612">
                                  									
                                  <g class="syl" id="e48-m-613">
                                     										
-                                    <text x="9711" y="26737" font-size="0px">
+                                    <text x="9711" y="26652" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001712390937">
+                                       <tspan class="text" id="text-0000001278954604">
                                           												
                                           <tspan font-size="405px" class="text">nas</tspan>
                                           											</tspan>
@@ -4761,32 +4746,32 @@
                                  									
                                  <g class="syl" id="e48-m-621">
                                     										
-                                    <text x="9711" y="27137" font-size="0px">
+                                    <text x="9711" y="27052" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001451140266">
+                                       <tspan class="text" id="text-0000001349137557">
                                           												
                                           <tspan font-size="405px" class="text">pi</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="10760" y="27038" height="18" width="108"></rect>
+                                    <rect x="10760" y="26953" height="18" width="108"></rect>
                                     										
-                                    <rect x="11960" y="27038" height="18" width="108"></rect>
+                                    <rect x="11960" y="26953" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="40.800000000000004" data-time-end="42.00000000000001" class="note" id="e48-m-609">
+                           <g data-time-start="38.4" data-time-end="39.6" class="note" id="e48-m-609">
                               								
-                              <use xlink:href="#E0A2" x="12891" y="26330" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="12891" y="26245" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-614">
                                  									
                                  <g class="syl" id="e48-m-615">
                                     										
-                                    <text x="12801" y="26737" font-size="0px">
+                                    <text x="12801" y="26652" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000945599950">
+                                       <tspan class="text" id="text-0000001075739160">
                                           												
                                           <tspan font-size="405px" class="text">mox</tspan>
                                           											</tspan>
@@ -4798,9 +4783,9 @@
                                  									
                                  <g class="syl" id="e48-m-623">
                                     										
-                                    <text x="12801" y="27137" font-size="0px">
+                                    <text x="12801" y="27052" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001905585312">
+                                       <tspan class="text" id="text-0000001266187282">
                                           												
                                           <tspan font-size="405px" class="text">tur</tspan>
                                           											</tspan>
@@ -4813,109 +4798,109 @@
                      					
                      <g class="staff" id="e48-m-624">
                         						
-                        <path d="M9613 27540 L15088 27540" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 27455 L15088 27455" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 27720 L15088 27720" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 27635 L15088 27635" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 27900 L15088 27900" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 27815 L15088 27815" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 28080 L15088 28080" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 27995 L15088 27995" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 28260 L15088 28260" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 28175 L15088 28175" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-625">
                            							
-                           <g data-time-start="39.66" data-time-end="39.900000000000006" class="note" id="e48-m-626">
+                           <g data-time-start="37.26" data-time-end="37.5" class="note" id="e48-m-626">
                               								
-                              <use xlink:href="#E0A4" x="9801" y="27990" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="9801" y="27905" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="10009" y="27360" height="608" width="18"></rect>
+                                 <rect x="10009" y="27275" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-661">
                                  									
                                  <g class="syl" id="e48-m-662">
                                     										
-                                    <text x="9711" y="28842" font-size="0px">
+                                    <text x="9711" y="28757" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000846710241">
+                                       <tspan class="text" id="text-0000000012232665">
                                           												
                                           <tspan font-size="405px" class="text">ple</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="10842" y="28743" height="18" width="108"></rect>
+                                    <rect x="10842" y="28658" height="18" width="108"></rect>
                                     										
-                                    <rect x="12042" y="28743" height="18" width="108"></rect>
+                                    <rect x="12042" y="28658" height="18" width="108"></rect>
                                     										
-                                    <rect x="13242" y="28743" height="18" width="108"></rect>
+                                    <rect x="13242" y="28658" height="18" width="108"></rect>
                                     										
-                                    <rect x="14442" y="28743" height="18" width="108"></rect>
+                                    <rect x="14442" y="28658" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
                            <g class="beam" id="e48-m-628">
                               								
-                              <polygon points="10727,27318 11213,27271 11213,27361 10727,27408 "></polygon>
+                              <polygon points="10727,27233 11213,27186 11213,27276 10727,27323 "></polygon>
                               								
-                              <g data-time-start="39.900000000000006" data-time-end="40.02" class="note" id="e48-m-627">
+                              <g data-time-start="37.5" data-time-end="37.62" class="note" id="e48-m-627">
                                  									
-                                 <use xlink:href="#E0A4" x="10519" y="27990" height="720px" width="720px"></use>
-                                 									
-                                 <g class="stem">
-                                    										
-                                    <rect x="10727" y="27336" height="632" width="18"></rect>
-                                    									</g>
-                                 								</g>
-                              								
-                              <g data-time-start="40.080000000000005" data-time-end="40.2" class="note" id="e48-m-629">
-                                 									
-                                 <use xlink:href="#E0A4" x="10987" y="27900" height="720px" width="720px"></use>
+                                 <use xlink:href="#E0A4" x="10519" y="27905" height="720px" width="720px"></use>
                                  									
                                  <g class="stem">
                                     										
-                                    <rect x="11195" y="27289" height="589" width="18"></rect>
+                                    <rect x="10727" y="27251" height="632" width="18"></rect>
+                                    									</g>
+                                 								</g>
+                              								
+                              <g data-time-start="37.68" data-time-end="37.8" class="note" id="e48-m-629">
+                                 									
+                                 <use xlink:href="#E0A4" x="10987" y="27815" height="720px" width="720px"></use>
+                                 									
+                                 <g class="stem">
+                                    										
+                                    <rect x="11195" y="27204" height="589" width="18"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="40.2" data-time-end="40.5" class="note" id="e48-m-630">
+                           <g data-time-start="37.8" data-time-end="38.1" class="note" id="e48-m-630">
                               								
-                              <use xlink:href="#E0A4" x="11455" y="27810" height="720px" width="720px"></use>
-                              								
-                              <g class="stem">
-                                 									
-                                 <rect x="11455" y="27832" height="608" width="18"></rect>
-                                 								</g>
-                              							</g>
-                           							
-                           <g data-time-start="40.5" data-time-end="40.800000000000004" class="note" id="e48-m-631">
-                              								
-                              <use xlink:href="#E0A4" x="12173" y="27990" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="11455" y="27725" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="12381" y="27360" height="608" width="18"></rect>
+                                 <rect x="11455" y="27747" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="40.800000000000004" data-time-end="42.00000000000001" class="note" id="e48-m-632">
+                           <g data-time-start="38.1" data-time-end="38.4" class="note" id="e48-m-631">
                               								
-                              <use xlink:href="#E0A2" x="12891" y="27630" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="12173" y="27905" height="720px" width="720px"></use>
+                              								
+                              <g class="stem">
+                                 									
+                                 <rect x="12381" y="27275" height="608" width="18"></rect>
+                                 								</g>
+                              							</g>
+                           							
+                           <g data-time-start="38.4" data-time-end="39.6" class="note" id="e48-m-632">
+                              								
+                              <use xlink:href="#E0A2" x="12891" y="27545" height="720px" width="720px"></use>
                               							</g>
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001425572681">
+                     <g class="barLineAttr" id="bline-0000002131031892">
                         						
-                        <path d="M15075 24800 L15075 24080" stroke="#000000" stroke-width="27"></path>
+                        <path d="M15075 24715 L15075 23995" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M15075 26240 L15075 25520" stroke="#000000" stroke-width="27"></path>
+                        <path d="M15075 26155 L15075 25435" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M15075 28260 L15075 27540" stroke="#000000" stroke-width="27"></path>
+                        <path d="M15075 28175 L15075 27455" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -4923,60 +4908,60 @@
                      					
                      <g class="staff" id="e48-m-634">
                         						
-                        <path d="M15088 24080 L20002 24080" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 23995 L20002 23995" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 24260 L20002 24260" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 24175 L20002 24175" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 24440 L20002 24440" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 24355 L20002 24355" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 24620 L20002 24620" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 24535 L20002 24535" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 24800 L20002 24800" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 24715 L20002 24715" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-635">
                            							
-                           <g data-time-start="42.059999999999995" data-time-end="42.599999999999994" class="note" id="e48-m-636">
+                           <g data-time-start="39.66" data-time-end="40.2" class="note" id="e48-m-636">
                               								
-                              <use xlink:href="#E0A3" x="15276" y="24530" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="15276" y="24445" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="15484" y="23900" height="608" width="18"></rect>
+                                 <rect x="15484" y="23815" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-641">
                                  									
                                  <g class="syl" id="e48-m-642">
                                     										
-                                    <text x="15186" y="25382" font-size="0px">
+                                    <text x="15186" y="25297" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000101553473">
+                                       <tspan class="text" id="text-0000000145472493">
                                           												
                                           <tspan font-size="405px" class="text">ple</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="15926" y="25283" height="18" width="108"></rect>
+                                    <rect x="15926" y="25198" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="42.599999999999994" data-time-end="43.199999999999996" class="note" id="e48-m-637">
+                           <g data-time-start="40.2" data-time-end="40.800000000000004" class="note" id="e48-m-637">
                               								
-                              <use xlink:href="#E0A3" x="16368" y="24530" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="16368" y="24445" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="16576" y="23900" height="608" width="18"></rect>
+                                 <rect x="16576" y="23815" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-643">
                                  									
                                  <g class="syl" id="e48-m-644">
                                     										
-                                    <text x="16278" y="25382" font-size="0px">
+                                    <text x="16278" y="25297" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001693794323">
+                                       <tspan class="text" id="text-0000000226952628">
                                           												
                                           <tspan font-size="405px" class="text">tus</tspan>
                                           											</tspan>
@@ -4985,23 +4970,23 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="43.199999999999996" data-time-end="44.4" class="note" id="e48-m-638">
+                           <g data-time-start="40.800000000000004" data-time-end="42.00000000000001" class="note" id="e48-m-638">
                               								
-                              <use xlink:href="#E0A2" x="17461" y="24260" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="17461" y="24175" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-671">
                                  									
                                  <g class="syl" id="e48-m-672">
                                     										
-                                    <text x="17371" y="25382" font-size="0px">
+                                    <text x="17371" y="25297" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001492800651">
+                                       <tspan class="text" id="text-0000001659088980">
                                           												
                                           <tspan font-size="405px" class="text">Dis</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="18901" y="25283" height="18" width="108"></rect>
+                                    <rect x="18901" y="25198" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -5010,35 +4995,35 @@
                      					
                      <g class="staff" id="e48-m-645">
                         						
-                        <path d="M15088 25520 L20002 25520" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 25435 L20002 25435" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 25700 L20002 25700" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 25615 L20002 25615" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 25880 L20002 25880" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 25795 L20002 25795" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 26060 L20002 26060" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 25975 L20002 25975" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 26240 L20002 26240" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 26155 L20002 26155" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-646">
                            							
-                           <g data-time-start="42.059999999999995" data-time-end="43.199999999999996" class="note" id="e48-m-647">
+                           <g data-time-start="39.66" data-time-end="40.800000000000004" class="note" id="e48-m-647">
                               								
-                              <use xlink:href="#E0A2" x="15276" y="25700" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="15276" y="25615" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-649">
                                  									
                                  <g class="syl" id="e48-m-650">
                                     										
-                                    <text x="15186" y="26737" font-size="0px">
+                                    <text x="15186" y="26652" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001917710567">
+                                       <tspan class="text" id="text-0000000229139429">
                                           												
                                           <tspan font-size="405px" class="text">in</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="16382" y="26638" height="18" width="108"></rect>
+                                    <rect x="16382" y="26553" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -5046,30 +5031,30 @@
                                  									
                                  <g class="syl" id="e48-m-684">
                                     										
-                                    <text x="15186" y="27137" font-size="0px">
+                                    <text x="15186" y="27052" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001835786821">
+                                       <tspan class="text" id="text-0000000165637433">
                                           												
                                           <tspan font-size="405px" class="text">me</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="16472" y="27038" height="18" width="108"></rect>
+                                    <rect x="16472" y="26953" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="43.199999999999996" data-time-end="44.4" class="note" id="e48-m-648">
+                           <g data-time-start="40.800000000000004" data-time-end="42.00000000000001" class="note" id="e48-m-648">
                               								
-                              <use xlink:href="#E0A2" x="17461" y="25970" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="17461" y="25885" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-651">
                                  									
                                  <g class="syl" id="e48-m-652">
                                     										
-                                    <text x="17371" y="26737" font-size="0px">
+                                    <text x="17371" y="26652" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001363608269">
+                                       <tspan class="text" id="text-0000001067109304">
                                           												
                                           <tspan font-size="405px" class="text">de</tspan>
                                           											</tspan>
@@ -5081,15 +5066,15 @@
                                  									
                                  <g class="syl" id="e48-m-686">
                                     										
-                                    <text x="17371" y="27137" font-size="0px">
+                                    <text x="17371" y="27052" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000956825382">
+                                       <tspan class="text" id="text-0000001001237749">
                                           												
                                           <tspan font-size="405px" class="text">di</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="18784" y="27038" height="18" width="108"></rect>
+                                    <rect x="18784" y="26953" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -5098,34 +5083,34 @@
                      					
                      <g class="staff" id="e48-m-653">
                         						
-                        <path d="M15088 27540 L20002 27540" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 27455 L20002 27455" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 27720 L20002 27720" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 27635 L20002 27635" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 27900 L20002 27900" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 27815 L20002 27815" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 28080 L20002 28080" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 27995 L20002 27995" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 28260 L20002 28260" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 28175 L20002 28175" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-654">
                            							
-                           <g data-time-start="42.059999999999995" data-time-end="42.599999999999994" class="note" id="e48-m-655">
+                           <g data-time-start="39.66" data-time-end="40.2" class="note" id="e48-m-655">
                               								
-                              <use xlink:href="#E0A3" x="15276" y="27720" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="15276" y="27635" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="15276" y="27742" height="608" width="18"></rect>
+                                 <rect x="15276" y="27657" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-663">
                                  									
                                  <g class="syl" id="e48-m-664">
                                     										
-                                    <text x="15186" y="28842" font-size="0px">
+                                    <text x="15186" y="28757" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000216432475">
+                                       <tspan class="text" id="text-0000001808200034">
                                           												
                                           <tspan font-size="405px" class="text">tus</tspan>
                                           											</tspan>
@@ -5134,107 +5119,107 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="42.599999999999994" data-time-end="43.5" class="note" id="e48-m-656">
+                           <g data-time-start="40.2" data-time-end="41.1" class="note" id="e48-m-656">
                               								
-                              <use xlink:href="#E0A3" x="16368" y="27900" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="16368" y="27815" height="720px" width="720px"></use>
                               								
-                              <g class="dots" id="dots-0000000310977839">
+                              <g class="dots" id="dots-0000001050110326">
                                  									
-                                 <ellipse cx="16684" cy="27810" rx="36" ry="36"></ellipse>
+                                 <ellipse cx="16684" cy="27725" rx="36" ry="36"></ellipse>
                                  								</g>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="16368" y="27922" height="608" width="18"></rect>
+                                 <rect x="16368" y="27837" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-697">
                                  									
                                  <g class="syl" id="e48-m-698">
                                     										
-                                    <text x="16278" y="28842" font-size="0px">
+                                    <text x="16278" y="28757" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000453695949">
+                                       <tspan class="text" id="text-0000000296536324">
                                           												
                                           <tspan font-size="405px" class="text">Dis</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="17404" y="28743" height="18" width="108"></rect>
+                                    <rect x="17404" y="28658" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="43.5" data-time-end="43.8" class="note" id="e48-m-657">
+                           <g data-time-start="41.1" data-time-end="41.400000000000006" class="note" id="e48-m-657">
                               								
-                              <use xlink:href="#E0A4" x="18178" y="27810" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="18178" y="27725" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="18178" y="27832" height="608" width="18"></rect>
+                                 <rect x="18178" y="27747" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-699">
                                  									
                                  <g class="syl" id="e48-m-700">
                                     										
-                                    <text x="18088" y="28842" font-size="0px">
+                                    <text x="18088" y="28757" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001851097660">
+                                       <tspan class="text" id="text-0000000263484864">
                                           												
                                           <tspan font-size="405px" class="text">co</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="19176" y="28743" height="18" width="108"></rect>
+                                    <rect x="19176" y="28658" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="43.8" data-time-end="44.4" class="note" id="e48-m-658">
+                           <g data-time-start="41.400000000000006" data-time-end="42.00000000000001" class="note" id="e48-m-658">
                               								
-                              <use xlink:href="#E0A3" x="18896" y="27720" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="18896" y="27635" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="18896" y="27742" height="608" width="18"></rect>
+                                 <rect x="18896" y="27657" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001917281956">
+                     <g class="barLineAttr" id="bline-0000000583797589">
                         						
-                        <path d="M19989 24800 L19989 24080" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 24715 L19989 23995" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M19989 26240 L19989 25520" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 26155 L19989 25435" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M19989 28260 L19989 27540" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 28175 L19989 27455" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000001420510409">
+               <g class="system" id="system-0000000406350838">
                   				
-                  <polygon points="-270,29340 270,28980 270,28845 -270,29205 "></polygon>
+                  <polygon points="-270,29255 270,28895 270,28760 -270,29120 "></polygon>
                   				
-                  <polygon points="-270,29160 270,28800 270,28665 -270,29025 "></polygon>
+                  <polygon points="-270,29075 270,28715 270,28580 -270,28940 "></polygon>
                   				
-                  <path d="M13 29970 L13 34055" stroke="#000000" stroke-width="27"></path>
+                  <path d="M13 29885 L13 33970" stroke="#000000" stroke-width="27"></path>
                   				
-                  <use xlink:href="#E003" x="-154" y="29970" height="720px" width="720px"></use>
+                  <use xlink:href="#E003" x="-154" y="29885" height="720px" width="720px"></use>
                   				
-                  <use xlink:href="#E004" x="-154" y="34055" height="720px" width="720px"></use>
+                  <use xlink:href="#E004" x="-154" y="33970" height="720px" width="720px"></use>
                   				
-                  <rect x="-154" y="29952" height="4121" width="90"></rect>
+                  <rect x="-154" y="29867" height="4121" width="90"></rect>
                   				
                   <g class="measure" id="e48-m-665">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000001632430215">
+                     <g class="mNum autogenerated" id="mnum-0000001519987920">
                         						
-                        <text x="0" y="29700" text-anchor="middle" font-size="0px">
+                        <text x="0" y="29615" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000000003549433">
+                           <tspan class="text" id="text-0000002118990375">
                               								
                               <tspan font-size="324px" class="text">17</tspan>
                               							</tspan>
@@ -5243,67 +5228,67 @@
                      					
                      <g class="staff" id="e48-m-666">
                         						
-                        <path d="M0 29970 L6958 29970" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 29885 L6958 29885" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 30150 L6958 30150" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 30065 L6958 30065" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 30330 L6958 30330" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 30245 L6958 30245" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 30510 L6958 30510" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 30425 L6958 30425" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 30690 L6958 30690" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 30605 L6958 30605" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000561934229">
+                        <g class="clef" id="clef-0000000290838453">
                            							
-                           <use xlink:href="#E050" x="90" y="30510" height="720px" width="720px"></use>
+                           <use xlink:href="#E050" x="90" y="30425" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001942990944">
+                        <g class="keySig" id="keysig-0000000449098999">
                            							
-                           <use xlink:href="#E260" x="771" y="30330" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="30245" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-667">
                            							
-                           <g data-time-start="44.46" data-time-end="45.6" class="note" id="e48-m-668">
+                           <g data-time-start="42.059999999999995" data-time-end="43.199999999999996" class="note" id="e48-m-668">
                               								
-                              <use xlink:href="#E0A2" x="1216" y="30060" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="1216" y="29975" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-673">
                                  									
                                  <g class="syl" id="e48-m-674">
                                     										
-                                    <text x="1126" y="31182" font-size="0px">
+                                    <text x="1126" y="31097" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000825207144">
+                                       <tspan class="text" id="text-0000000862620591">
                                           												
                                           <tspan font-size="405px" class="text">co</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2290" y="31083" height="18" width="108"></rect>
+                                    <rect x="2290" y="30998" height="18" width="108"></rect>
                                     										
-                                    <rect x="3490" y="31083" height="18" width="108"></rect>
+                                    <rect x="3490" y="30998" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="45.6" data-time-end="46.2" class="note" id="e48-m-669">
+                           <g data-time-start="43.199999999999996" data-time-end="43.8" class="note" id="e48-m-669">
                               								
-                              <use xlink:href="#E0A3" x="4469" y="30150" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="4469" y="30065" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="4469" y="30172" height="608" width="18"></rect>
+                                 <rect x="4469" y="30087" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-675">
                                  									
                                  <g class="syl" id="e48-m-676">
                                     										
-                                    <text x="4379" y="31182" font-size="0px">
+                                    <text x="4379" y="31097" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000987354597">
+                                       <tspan class="text" id="text-0000001851203469">
                                           												
                                           <tspan font-size="405px" class="text">lor</tspan>
                                           											</tspan>
@@ -5312,22 +5297,22 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="46.2" data-time-end="46.800000000000004" class="note" id="e48-m-670">
+                           <g data-time-start="43.8" data-time-end="44.4" class="note" id="e48-m-670">
                               								
-                              <use xlink:href="#E0A3" x="5707" y="30150" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="5707" y="30065" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="5707" y="30172" height="608" width="18"></rect>
+                                 <rect x="5707" y="30087" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-677">
                                  									
                                  <g class="syl" id="e48-m-678">
                                     										
-                                    <text x="5617" y="31182" font-size="0px">
+                                    <text x="5617" y="31097" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000363513374">
+                                       <tspan class="text" id="text-0000000588403997">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -5340,39 +5325,39 @@
                      					
                      <g class="staff" id="e48-m-679">
                         						
-                        <path d="M0 31410 L6958 31410" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 31325 L6958 31325" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 31590 L6958 31590" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 31505 L6958 31505" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 31770 L6958 31770" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 31685 L6958 31685" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 31950 L6958 31950" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 31865 L6958 31865" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 32130 L6958 32130" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 32045 L6958 32045" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001212459526">
+                        <g class="clef" id="clef-0000001749340635">
                            							
-                           <use xlink:href="#E050" x="90" y="31950" height="720px" width="720px"></use>
+                           <use xlink:href="#E050" x="90" y="31865" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000334927099">
+                        <g class="keySig" id="keysig-0000002116925015">
                            							
-                           <use xlink:href="#E260" x="771" y="31770" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="31685" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-680">
                            							
-                           <g data-time-start="44.46" data-time-end="45.6" class="note" id="e48-m-681">
+                           <g data-time-start="42.059999999999995" data-time-end="43.199999999999996" class="note" id="e48-m-681">
                               								
-                              <use xlink:href="#E0A2" x="1216" y="31680" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="1216" y="31595" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-687">
                                  									
                                  <g class="syl" id="e48-m-688">
                                     										
-                                    <text x="1126" y="33022" font-size="0px">
+                                    <text x="1126" y="32937" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001267914704">
+                                       <tspan class="text" id="text-0000000891884564">
                                           												
                                           <tspan font-size="405px" class="text">cis,</tspan>
                                           											</tspan>
@@ -5384,40 +5369,40 @@
                                  									
                                  <g class="syl" id="e48-m-721">
                                     										
-                                    <text x="1126" y="32622" font-size="0px">
+                                    <text x="1126" y="32537" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000927154986">
+                                       <tspan class="text" id="text-0000000734432391">
                                           												
                                           <tspan font-size="405px" class="text">re</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2257" y="32523" height="18" width="108"></rect>
+                                    <rect x="2257" y="32438" height="18" width="108"></rect>
                                     										
-                                    <rect x="3457" y="32523" height="18" width="108"></rect>
+                                    <rect x="3457" y="32438" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="45.6" data-time-end="46.800000000000004" class="note" id="e48-m-682">
+                           <g data-time-start="43.199999999999996" data-time-end="44.4" class="note" id="e48-m-682">
                               								
-                              <use xlink:href="#E0A2" x="4469" y="31950" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="4469" y="31865" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-722">
                                  									
                                  <g class="syl" id="e48-m-723">
                                     										
-                                    <text x="4379" y="32622" font-size="0px">
+                                    <text x="4379" y="32537" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001379508656">
+                                       <tspan class="text" id="text-0000000045106367">
                                           												
                                           <tspan font-size="405px" class="text">ple</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="5439" y="32523" height="18" width="108"></rect>
+                                    <rect x="5439" y="32438" height="18" width="108"></rect>
                                     										
-                                    <rect x="6639" y="32523" height="18" width="108"></rect>
+                                    <rect x="6639" y="32438" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -5425,17 +5410,17 @@
                                  									
                                  <g class="syl" id="e48-m-764">
                                     										
-                                    <text x="4379" y="33022" font-size="0px">
+                                    <text x="4379" y="32937" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001047364834">
+                                       <tspan class="text" id="text-0000002083236121">
                                           												
                                           <tspan font-size="405px" class="text">su</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="5372" y="32923" height="18" width="108"></rect>
+                                    <rect x="5372" y="32838" height="18" width="108"></rect>
                                     										
-                                    <rect x="6572" y="32923" height="18" width="108"></rect>
+                                    <rect x="6572" y="32838" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -5444,84 +5429,84 @@
                      					
                      <g class="staff" id="e48-m-689">
                         						
-                        <path d="M0 33335 L6958 33335" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 33250 L6958 33250" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 33515 L6958 33515" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 33430 L6958 33430" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 33695 L6958 33695" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 33610 L6958 33610" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 33875 L6958 33875" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 33790 L6958 33790" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 34055 L6958 34055" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 33970 L6958 33970" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000565114106">
+                        <g class="clef" id="clef-0000001797147256">
                            							
-                           <use xlink:href="#E062" x="90" y="33515" height="720px" width="720px"></use>
+                           <use xlink:href="#E062" x="90" y="33430" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001700092508">
+                        <g class="keySig" id="keysig-0000000296436537">
                            							
-                           <use xlink:href="#E260" x="771" y="33875" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="33790" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-690">
                            							
-                           <g data-time-start="44.46" data-time-end="44.7" class="note" id="e48-m-691">
+                           <g data-time-start="42.059999999999995" data-time-end="42.3" class="note" id="e48-m-691">
                               								
-                              <use xlink:href="#E0A4" x="1216" y="33785" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="1216" y="33700" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="1424" y="33155" height="608" width="18"></rect>
+                                 <rect x="1424" y="33070" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="44.7" data-time-end="45" class="note" id="e48-m-692">
+                           <g data-time-start="42.3" data-time-end="42.599999999999994" class="note" id="e48-m-692">
                               								
-                              <use xlink:href="#E0A4" x="2029" y="33695" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="2029" y="33610" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="2029" y="33717" height="608" width="18"></rect>
+                                 <rect x="2029" y="33632" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="45" data-time-end="45.3" class="note" id="e48-m-693">
+                           <g data-time-start="42.599999999999994" data-time-end="42.9" class="note" id="e48-m-693">
                               								
-                              <use xlink:href="#E0A4" x="2842" y="33605" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="2842" y="33520" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="2842" y="33627" height="608" width="18"></rect>
+                                 <rect x="2842" y="33542" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="45.3" data-time-end="45.6" class="note" id="e48-m-694">
+                           <g data-time-start="42.9" data-time-end="43.199999999999996" class="note" id="e48-m-694">
                               								
-                              <use xlink:href="#E0A4" x="3656" y="33515" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="3656" y="33430" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="3656" y="33537" height="608" width="18"></rect>
+                                 <rect x="3656" y="33452" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="45.6" data-time-end="46.2" class="note" id="e48-m-695">
+                           <g data-time-start="43.199999999999996" data-time-end="43.8" class="note" id="e48-m-695">
                               								
-                              <use xlink:href="#E0A3" x="4469" y="33425" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="4469" y="33340" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="4469" y="33447" height="608" width="18"></rect>
+                                 <rect x="4469" y="33362" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-701">
                                  									
                                  <g class="syl" id="e48-m-702">
                                     										
-                                    <text x="4379" y="34637" font-size="0px">
+                                    <text x="4379" y="34552" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001713786863">
+                                       <tspan class="text" id="text-0000001859777495">
                                           												
                                           <tspan font-size="405px" class="text">lor</tspan>
                                           											</tspan>
@@ -5530,22 +5515,22 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="46.2" data-time-end="46.800000000000004" class="note" id="e48-m-696">
+                           <g data-time-start="43.8" data-time-end="44.4" class="note" id="e48-m-696">
                               								
-                              <use xlink:href="#E0A3" x="5707" y="34055" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="5707" y="33970" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="5915" y="33425" height="608" width="18"></rect>
+                                 <rect x="5915" y="33340" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-703">
                                  									
                                  <g class="syl" id="e48-m-704">
                                     										
-                                    <text x="5617" y="34637" font-size="0px">
+                                    <text x="5617" y="34552" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001725770064">
+                                       <tspan class="text" id="text-0000000923443839">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -5556,13 +5541,13 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001062337636">
+                     <g class="barLineAttr" id="bline-0000001221349366">
                         						
-                        <path d="M6945 30690 L6945 29970" stroke="#000000" stroke-width="27"></path>
+                        <path d="M6945 30605 L6945 29885" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M6945 32130 L6945 31410" stroke="#000000" stroke-width="27"></path>
+                        <path d="M6945 32045 L6945 31325" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M6945 34055 L6945 33335" stroke="#000000" stroke-width="27"></path>
+                        <path d="M6945 33970 L6945 33250" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -5572,21 +5557,21 @@
                      					
                      <g class="staff" id="e48-m-707">
                         						
-                        <path d="M6958 29970 L13085 29970" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 29885 L13085 29885" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 30150 L13085 30150" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 30065 L13085 30065" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 30330 L13085 30330" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 30245 L13085 30245" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 30510 L13085 30510" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 30425 L13085 30425" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 30690 L13085 30690" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 30605 L13085 30605" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-708">
                            							
-                           <g data-time-start="46.85999999999999" data-time-end="48" class="note" id="e48-m-709">
+                           <g data-time-start="44.46" data-time-end="45.6" class="note" id="e48-m-709">
                               								
-                              <use xlink:href="#E0A2" x="7402" y="30330" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="7402" y="30245" height="720px" width="720px"></use>
                               								
                               <g class="accid" id="e48-m-710"></g>
                               								
@@ -5594,30 +5579,30 @@
                                  									
                                  <g class="syl" id="e48-m-713">
                                     										
-                                    <text x="7312" y="31182" font-size="0px">
+                                    <text x="7312" y="31097" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001100677723">
+                                       <tspan class="text" id="text-0000001663814692">
                                           												
                                           <tspan font-size="405px" class="text">cla</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="8732" y="31083" height="18" width="108"></rect>
+                                    <rect x="8732" y="30998" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="48" data-time-end="49.2" class="note" id="e48-m-711">
+                           <g data-time-start="45.6" data-time-end="46.800000000000004" class="note" id="e48-m-711">
                               								
-                              <use xlink:href="#E0A2" x="9877" y="30240" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="9877" y="30155" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-714">
                                  									
                                  <g class="syl" id="e48-m-715">
                                     										
-                                    <text x="9787" y="31182" font-size="0px">
+                                    <text x="9787" y="31097" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001845014380">
+                                       <tspan class="text" id="text-0000002108771267">
                                           												
                                           <tspan font-size="405px" class="text">ris</tspan>
                                           											</tspan>
@@ -5630,29 +5615,29 @@
                      					
                      <g class="staff" id="e48-m-716">
                         						
-                        <path d="M6958 31410 L13085 31410" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 31325 L13085 31325" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 31590 L13085 31590" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 31505 L13085 31505" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 31770 L13085 31770" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 31685 L13085 31685" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 31950 L13085 31950" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 31865 L13085 31865" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 32130 L13085 32130" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 32045 L13085 32045" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-717">
                            							
-                           <g data-time-start="46.85999999999999" data-time-end="48" class="note" id="e48-m-718">
+                           <g data-time-start="44.46" data-time-end="45.6" class="note" id="e48-m-718">
                               								
-                              <use xlink:href="#E0A2" x="7402" y="31950" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="7402" y="31865" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-724">
                                  									
                                  <g class="syl" id="e48-m-725">
                                     										
-                                    <text x="7312" y="32622" font-size="0px">
+                                    <text x="7312" y="32537" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000877088351">
+                                       <tspan class="text" id="text-0000001662960144">
                                           												
                                           <tspan font-size="405px" class="text">tus,</tspan>
                                           											</tspan>
@@ -5664,38 +5649,38 @@
                                  									
                                  <g class="syl" id="e48-m-766">
                                     										
-                                    <text x="7312" y="33022" font-size="0px">
+                                    <text x="7312" y="32937" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000109232601">
+                                       <tspan class="text" id="text-0000000868912367">
                                           												
                                           <tspan font-size="405px" class="text">sci</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="8721" y="32923" height="18" width="108"></rect>
+                                    <rect x="8721" y="32838" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="48" data-time-end="49.2" class="note" id="e48-m-719">
+                           <g data-time-start="45.6" data-time-end="46.800000000000004" class="note" id="e48-m-719">
                               								
-                              <use xlink:href="#E0A2" x="9877" y="31860" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="9877" y="31775" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-759">
                                  									
                                  <g class="syl" id="e48-m-760">
                                     										
-                                    <text x="9787" y="32622" font-size="0px">
+                                    <text x="9787" y="32537" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001844670196">
+                                       <tspan class="text" id="text-0000001620204649">
                                           												
                                           <tspan font-size="405px" class="text">in</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="11001" y="32523" height="18" width="108"></rect>
+                                    <rect x="11001" y="32438" height="18" width="108"></rect>
                                     										
-                                    <rect x="12201" y="32523" height="18" width="108"></rect>
+                                    <rect x="12201" y="32438" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -5703,17 +5688,17 @@
                                  									
                                  <g class="syl" id="e48-m-768">
                                     										
-                                    <text x="9787" y="33022" font-size="0px">
+                                    <text x="9787" y="32937" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001701140109">
+                                       <tspan class="text" id="text-0000001781414392">
                                           												
                                           <tspan font-size="405px" class="text">pi</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="11001" y="32923" height="18" width="108"></rect>
+                                    <rect x="11001" y="32838" height="18" width="108"></rect>
                                     										
-                                    <rect x="12201" y="32923" height="18" width="108"></rect>
+                                    <rect x="12201" y="32838" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -5722,65 +5707,65 @@
                      					
                      <g class="staff" id="e48-m-726">
                         						
-                        <path d="M6958 33335 L13085 33335" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 33250 L13085 33250" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 33515 L13085 33515" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 33430 L13085 33430" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 33695 L13085 33695" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 33610 L13085 33610" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 33875 L13085 33875" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 33790 L13085 33790" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 34055 L13085 34055" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 33970 L13085 33970" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-727">
                            							
-                           <g data-time-start="46.85999999999999" data-time-end="47.400000000000006" class="note" id="e48-m-728">
+                           <g data-time-start="44.46" data-time-end="45" class="note" id="e48-m-728">
                               								
-                              <use xlink:href="#E0A3" x="7402" y="33605" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="7402" y="33520" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="7402" y="33627" height="608" width="18"></rect>
+                                 <rect x="7402" y="33542" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-729">
                                  									
-                                 <use xlink:href="#E260" x="7206" y="33605" height="720px" width="720px"></use>
+                                 <use xlink:href="#E260" x="7206" y="33520" height="720px" width="720px"></use>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-736">
                                  									
                                  <g class="syl" id="e48-m-737">
                                     										
-                                    <text x="7312" y="34637" font-size="0px">
+                                    <text x="7312" y="34552" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001191797795">
+                                       <tspan class="text" id="text-0000000838811716">
                                           												
                                           <tspan font-size="405px" class="text">cla</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="8113" y="34538" height="18" width="108"></rect>
+                                    <rect x="8113" y="34453" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="47.400000000000006" data-time-end="48" class="note" id="e48-m-730">
+                           <g data-time-start="45" data-time-end="45.6" class="note" id="e48-m-730">
                               								
-                              <use xlink:href="#E0A3" x="8640" y="33695" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="8640" y="33610" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="8640" y="33717" height="608" width="18"></rect>
+                                 <rect x="8640" y="33632" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-738">
                                  									
                                  <g class="syl" id="e48-m-739">
                                     										
-                                    <text x="8550" y="34637" font-size="0px">
+                                    <text x="8550" y="34552" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001938804005">
+                                       <tspan class="text" id="text-0000000434510840">
                                           												
                                           <tspan font-size="405px" class="text">ris</tspan>
                                           											</tspan>
@@ -5789,74 +5774,74 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="48" data-time-end="48.300000000000004" class="note" id="e48-m-731">
+                           <g data-time-start="45.6" data-time-end="45.9" class="note" id="e48-m-731">
                               								
-                              <use xlink:href="#E0A4" x="9877" y="33785" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="9877" y="33700" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="10085" y="33155" height="608" width="18"></rect>
+                                 <rect x="10085" y="33070" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-740">
                                  									
                                  <g class="syl" id="e48-m-741">
                                     										
-                                    <text x="9787" y="34637" font-size="0px">
+                                    <text x="9787" y="34552" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001432289626">
+                                       <tspan class="text" id="text-0000000189340982">
                                           												
                                           <tspan font-size="405px" class="text">su</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="10320" y="34538" height="18" width="108"></rect>
+                                    <rect x="10320" y="34453" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="48.300000000000004" data-time-end="48.720000000000006" class="note" id="e48-m-732">
+                           <g data-time-start="45.9" data-time-end="46.32" class="note" id="e48-m-732">
                               								
-                              <use xlink:href="#E0A4" x="10691" y="33515" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="10691" y="33430" height="720px" width="720px"></use>
                               								
-                              <g class="dots" id="dots-0000001579588292">
+                              <g class="dots" id="dots-0000000010950857">
                                  									
-                                 <ellipse cx="11007" cy="33425" rx="36" ry="36"></ellipse>
+                                 <ellipse cx="11007" cy="33340" rx="36" ry="36"></ellipse>
                                  								</g>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="10691" y="33537" height="608" width="18"></rect>
+                                 <rect x="10691" y="33452" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-742">
                                  									
                                  <g class="syl" id="e48-m-743">
                                     										
-                                    <text x="10601" y="34637" font-size="0px">
+                                    <text x="10601" y="34552" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001970290133">
+                                       <tspan class="text" id="text-0000000800615054">
                                           												
                                           <tspan font-size="405px" class="text">sci</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="11250" y="34538" height="18" width="108"></rect>
+                                    <rect x="11250" y="34453" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="48.779999999999994" data-time-end="48.900000000000006" class="note" id="e48-m-733">
+                           <g data-time-start="46.38" data-time-end="46.5" class="note" id="e48-m-733">
                               								
-                              <use xlink:href="#E0A4" x="11728" y="33605" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="11728" y="33520" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="11728" y="33627" height="608" width="18"></rect>
+                                 <rect x="11728" y="33542" height="608" width="18"></rect>
                                  									
-                                 <g class="flag" id="flag-0000000228753858">
+                                 <g class="flag" id="flag-0000001091033596">
                                     										
-                                    <use xlink:href="#E241" x="11728" y="34235" height="720px" width="720px"></use>
+                                    <use xlink:href="#E241" x="11728" y="34150" height="720px" width="720px"></use>
                                     									</g>
                                  								</g>
                               								
@@ -5866,35 +5851,35 @@
                                  									
                                  <g class="syl" id="e48-m-745">
                                     										
-                                    <text x="11556" y="34637" font-size="0px">
+                                    <text x="11556" y="34552" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000126412633">
+                                       <tspan class="text" id="text-0000001181491130">
                                           												
                                           <tspan font-size="405px" class="text">pi</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="11966" y="34538" height="18" width="108"></rect>
+                                    <rect x="11966" y="34453" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="48.900000000000006" data-time-end="49.2" class="note" id="e48-m-735">
+                           <g data-time-start="46.5" data-time-end="46.800000000000004" class="note" id="e48-m-735">
                               								
-                              <use xlink:href="#E0A4" x="12259" y="33515" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="12259" y="33430" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="12259" y="33537" height="608" width="18"></rect>
+                                 <rect x="12259" y="33452" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-746">
                                  									
                                  <g class="syl" id="e48-m-747">
                                     										
-                                    <text x="12169" y="34637" font-size="0px">
+                                    <text x="12169" y="34552" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001722798524">
+                                       <tspan class="text" id="text-0000001376290426">
                                           												
                                           <tspan font-size="405px" class="text">tur,</tspan>
                                           											</tspan>
@@ -5905,13 +5890,13 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001821382730">
+                     <g class="barLineAttr" id="bline-0000000244008639">
                         						
-                        <path d="M13072 30690 L13072 29970" stroke="#000000" stroke-width="27"></path>
+                        <path d="M13072 30605 L13072 29885" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M13072 32130 L13072 31410" stroke="#000000" stroke-width="27"></path>
+                        <path d="M13072 32045 L13072 31325" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M13072 34055 L13072 33335" stroke="#000000" stroke-width="27"></path>
+                        <path d="M13072 33970 L13072 33250" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -5919,89 +5904,89 @@
                      					
                      <g class="staff" id="e48-m-749">
                         						
-                        <path d="M13085 29970 L20002 29970" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 29885 L20002 29885" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 30150 L20002 30150" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 30065 L20002 30065" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 30330 L20002 30330" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 30245 L20002 30245" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 30510 L20002 30510" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 30425 L20002 30425" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 30690 L20002 30690" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 30605 L20002 30605" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-750">
                            							
-                           <g data-time-start="49.26" data-time-end="50.4" class="note" id="e48-m-751">
+                           <g data-time-start="46.85999999999999" data-time-end="48" class="note" id="e48-m-751">
                               								
-                              <use xlink:href="#E0A2" x="13298" y="30150" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="13298" y="30065" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-801">
                                  									
                                  <g class="syl" id="e48-m-802">
                                     										
-                                    <text x="13208" y="31182" font-size="0px">
+                                    <text x="13208" y="31097" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002030090813">
+                                       <tspan class="text" id="text-0000001009502270">
                                           												
                                           <tspan font-size="405px" class="text">su</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="14359" y="31083" height="18" width="108"></rect>
+                                    <rect x="14359" y="30998" height="18" width="108"></rect>
                                     										
-                                    <rect x="15559" y="31083" height="18" width="108"></rect>
+                                    <rect x="15559" y="30998" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="50.4" data-time-end="51" class="note" id="e48-m-752">
+                           <g data-time-start="48" data-time-end="48.6" class="note" id="e48-m-752">
                               								
-                              <use xlink:href="#E0A3" x="16547" y="30240" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="16547" y="30155" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="16547" y="30262" height="608" width="18"></rect>
+                                 <rect x="16547" y="30177" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-803">
                                  									
                                  <g class="syl" id="e48-m-804">
                                     										
-                                    <text x="16457" y="31182" font-size="0px">
+                                    <text x="16457" y="31097" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000427418861">
+                                       <tspan class="text" id="text-0000000671134857">
                                           												
                                           <tspan font-size="405px" class="text">sci</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="17412" y="31083" height="18" width="108"></rect>
+                                    <rect x="17412" y="30998" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="51" data-time-end="51.6" class="note" id="e48-m-753">
+                           <g data-time-start="48.6" data-time-end="49.2" class="note" id="e48-m-753">
                               								
-                              <use xlink:href="#E0A3" x="18114" y="30240" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="18114" y="30155" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="18114" y="30262" height="608" width="18"></rect>
+                                 <rect x="18114" y="30177" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-805">
                                  									
                                  <g class="syl" id="e48-m-806">
                                     										
-                                    <text x="18024" y="31182" font-size="0px">
+                                    <text x="18024" y="31097" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002113597286">
+                                       <tspan class="text" id="text-0000001506406676">
                                           												
                                           <tspan font-size="405px" class="text">pi</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="19110" y="31083" height="18" width="108"></rect>
+                                    <rect x="19110" y="30998" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -6010,21 +5995,21 @@
                      					
                      <g class="staff" id="e48-m-754">
                         						
-                        <path d="M13085 31410 L20002 31410" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 31325 L20002 31325" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 31590 L20002 31590" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 31505 L20002 31505" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 31770 L20002 31770" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 31685 L20002 31685" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 31950 L20002 31950" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 31865 L20002 31865" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 32130 L20002 32130" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 32045 L20002 32045" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-755">
                            							
-                           <g data-time-start="49.26" data-time-end="50.4" class="note" id="e48-m-756">
+                           <g data-time-start="46.85999999999999" data-time-end="48" class="note" id="e48-m-756">
                               								
-                              <use xlink:href="#E0A2" x="13298" y="31770" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="13298" y="31685" height="720px" width="720px"></use>
                               								
                               <g class="accid" id="e48-m-757"></g>
                               								
@@ -6032,9 +6017,9 @@
                                  									
                                  <g class="syl" id="e48-m-762">
                                     										
-                                    <text x="13208" y="32622" font-size="0px">
+                                    <text x="13208" y="32537" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000326094253">
+                                       <tspan class="text" id="text-0000002008669763">
                                           												
                                           <tspan font-size="405px" class="text">de</tspan>
                                           											</tspan>
@@ -6046,9 +6031,9 @@
                                  									
                                  <g class="syl" id="e48-m-770">
                                     										
-                                    <text x="13208" y="33022" font-size="0px">
+                                    <text x="13208" y="32937" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000223367678">
+                                       <tspan class="text" id="text-0000000977182438">
                                           												
                                           <tspan font-size="405px" class="text">tur</tspan>
                                           											</tspan>
@@ -6057,25 +6042,25 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="50.4" data-time-end="51.6" class="note" id="e48-m-758">
+                           <g data-time-start="48" data-time-end="49.2" class="note" id="e48-m-758">
                               								
-                              <use xlink:href="#E0A2" x="16547" y="31950" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="16547" y="31865" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-820">
                                  									
                                  <g class="syl" id="e48-m-821">
                                     										
-                                    <text x="16457" y="32622" font-size="0px">
+                                    <text x="16457" y="32537" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002109117866">
+                                       <tspan class="text" id="text-0000000218995666">
                                           												
                                           <tspan font-size="405px" class="text">re</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="17727" y="32523" height="18" width="108"></rect>
+                                    <rect x="17727" y="32438" height="18" width="108"></rect>
                                     										
-                                    <rect x="18927" y="32523" height="18" width="108"></rect>
+                                    <rect x="18927" y="32438" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -6083,17 +6068,17 @@
                                  									
                                  <g class="syl" id="e48-m-827">
                                     										
-                                    <text x="16457" y="33022" font-size="0px">
+                                    <text x="16457" y="32937" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001473669670">
+                                       <tspan class="text" id="text-0000001647647988">
                                           												
                                           <tspan font-size="405px" class="text">me</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="17817" y="32923" height="18" width="108"></rect>
+                                    <rect x="17817" y="32838" height="18" width="108"></rect>
                                     										
-                                    <rect x="19017" y="32923" height="18" width="108"></rect>
+                                    <rect x="19017" y="32838" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -6102,56 +6087,56 @@
                      					
                      <g class="staff" id="e48-m-771">
                         						
-                        <path d="M13085 33335 L20002 33335" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 33250 L20002 33250" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 33515 L20002 33515" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 33430 L20002 33430" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 33695 L20002 33695" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 33610 L20002 33610" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 33875 L20002 33875" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 33790 L20002 33790" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 34055 L20002 34055" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 33970 L20002 33970" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-772">
                            							
-                           <g data-time-start="49.26" data-time-end="49.50000000000001" class="note" id="e48-m-773">
+                           <g data-time-start="46.85999999999999" data-time-end="47.1" class="note" id="e48-m-773">
                               								
-                              <use xlink:href="#E0A4" x="13298" y="33695" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="13298" y="33610" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="13298" y="33717" height="608" width="18"></rect>
+                                 <rect x="13298" y="33632" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-786">
                                  									
                                  <g class="syl" id="e48-m-787">
                                     										
-                                    <text x="13208" y="34637" font-size="0px">
+                                    <text x="13208" y="34552" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001845945623">
+                                       <tspan class="text" id="text-0000001734297422">
                                           												
                                           <tspan font-size="405px" class="text">su</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="13741" y="34538" height="18" width="108"></rect>
+                                    <rect x="13741" y="34453" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="49.50000000000001" data-time-end="49.92" class="note" id="e48-m-774">
+                           <g data-time-start="47.1" data-time-end="47.52" class="note" id="e48-m-774">
                               								
-                              <use xlink:href="#E0A4" x="14111" y="33875" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="14111" y="33790" height="720px" width="720px"></use>
                               								
-                              <g class="dots" id="dots-0000001325193950">
+                              <g class="dots" id="dots-0000000937957396">
                                  									
-                                 <ellipse cx="14427" cy="33785" rx="36" ry="36"></ellipse>
+                                 <ellipse cx="14427" cy="33700" rx="36" ry="36"></ellipse>
                                  								</g>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="14319" y="33245" height="608" width="18"></rect>
+                                 <rect x="14319" y="33160" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-775"></g>
@@ -6160,30 +6145,30 @@
                                  									
                                  <g class="syl" id="e48-m-789">
                                     										
-                                    <text x="14021" y="34637" font-size="0px">
+                                    <text x="14021" y="34552" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002101947587">
+                                       <tspan class="text" id="text-0000000794541098">
                                           												
                                           <tspan font-size="405px" class="text">sci</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="14693" y="34538" height="18" width="108"></rect>
+                                    <rect x="14693" y="34453" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="49.98" data-time-end="50.099999999999994" class="note" id="e48-m-776">
+                           <g data-time-start="47.580000000000005" data-time-end="47.7" class="note" id="e48-m-776">
                               								
-                              <use xlink:href="#E0A4" x="15148" y="33785" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="15148" y="33700" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="15356" y="33155" height="608" width="18"></rect>
+                                 <rect x="15356" y="33070" height="608" width="18"></rect>
                                  									
-                                 <g class="flag" id="flag-0000000093857143">
+                                 <g class="flag" id="flag-0000000520472477">
                                     										
-                                    <use xlink:href="#E240" x="15356" y="33155" height="720px" width="720px"></use>
+                                    <use xlink:href="#E240" x="15356" y="33070" height="720px" width="720px"></use>
                                     									</g>
                                  								</g>
                               								
@@ -6191,35 +6176,35 @@
                                  									
                                  <g class="syl" id="e48-m-791">
                                     										
-                                    <text x="15022" y="34637" font-size="0px">
+                                    <text x="15022" y="34552" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000158325160">
+                                       <tspan class="text" id="text-0000000894002271">
                                           												
                                           <tspan font-size="405px" class="text">pi</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="15436" y="34538" height="18" width="108"></rect>
+                                    <rect x="15436" y="34453" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="50.099999999999994" data-time-end="50.4" class="note" id="e48-m-777">
+                           <g data-time-start="47.7" data-time-end="48" class="note" id="e48-m-777">
                               								
-                              <use xlink:href="#E0A4" x="15733" y="33695" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="15733" y="33610" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="15733" y="33717" height="608" width="18"></rect>
+                                 <rect x="15733" y="33632" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-792">
                                  									
                                  <g class="syl" id="e48-m-793">
                                     										
-                                    <text x="15643" y="34637" font-size="0px">
+                                    <text x="15643" y="34552" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001118412095">
+                                       <tspan class="text" id="text-0000001146784745">
                                           												
                                           <tspan font-size="405px" class="text">tur</tspan>
                                           											</tspan>
@@ -6228,130 +6213,130 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="50.4" data-time-end="50.82000000000001" class="note" id="e48-m-778">
+                           <g data-time-start="48" data-time-end="48.42" class="note" id="e48-m-778">
                               								
-                              <use xlink:href="#E0A4" x="16547" y="33605" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="16547" y="33520" height="720px" width="720px"></use>
                               								
-                              <g class="dots" id="dots-0000001668208907">
+                              <g class="dots" id="dots-0000001454344690">
                                  									
-                                 <ellipse cx="16863" cy="33605" rx="36" ry="36"></ellipse>
+                                 <ellipse cx="16863" cy="33520" rx="36" ry="36"></ellipse>
                                  								</g>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="16547" y="33627" height="608" width="18"></rect>
+                                 <rect x="16547" y="33542" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-779">
                                  									
-                                 <use xlink:href="#E260" x="16351" y="33605" height="720px" width="720px"></use>
+                                 <use xlink:href="#E260" x="16351" y="33520" height="720px" width="720px"></use>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-841">
                                  									
                                  <g class="syl" id="e48-m-842">
                                     										
-                                    <text x="16457" y="34637" font-size="0px">
+                                    <text x="16457" y="34552" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000303883016">
+                                       <tspan class="text" id="text-0000001073889870">
                                           												
                                           <tspan font-size="405px" class="text">me</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="17817" y="34538" height="18" width="108"></rect>
+                                    <rect x="17817" y="34453" height="18" width="108"></rect>
                                     										
-                                    <rect x="19017" y="34538" height="18" width="108"></rect>
+                                    <rect x="19017" y="34453" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="50.879999999999995" data-time-end="51" class="note" id="e48-m-780">
+                           <g data-time-start="48.48" data-time-end="48.6" class="note" id="e48-m-780">
                               								
-                              <use xlink:href="#E0A4" x="17584" y="33695" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="17584" y="33610" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="17584" y="33717" height="608" width="18"></rect>
+                                 <rect x="17584" y="33632" height="608" width="18"></rect>
                                  									
-                                 <g class="flag" id="flag-0000001691162520">
+                                 <g class="flag" id="flag-0000001546958709">
                                     										
-                                    <use xlink:href="#E241" x="17584" y="34325" height="720px" width="720px"></use>
+                                    <use xlink:href="#E241" x="17584" y="34240" height="720px" width="720px"></use>
                                     									</g>
                                  								</g>
                               							</g>
                            							
                            <g class="beam" id="e48-m-782">
                               								
-                              <polygon points="18322,33156 18871,33209 18871,33299 18322,33246 "></polygon>
+                              <polygon points="18322,33071 18871,33124 18871,33214 18322,33161 "></polygon>
                               								
-                              <g data-time-start="51" data-time-end="51.120000000000005" class="note" id="e48-m-781">
+                              <g data-time-start="48.6" data-time-end="48.720000000000006" class="note" id="e48-m-781">
                                  									
-                                 <use xlink:href="#E0A4" x="18114" y="33785" height="720px" width="720px"></use>
+                                 <use xlink:href="#E0A4" x="18114" y="33700" height="720px" width="720px"></use>
                                  									
                                  <g class="stem">
                                     										
-                                    <rect x="18322" y="33174" height="589" width="18"></rect>
+                                    <rect x="18322" y="33089" height="589" width="18"></rect>
                                     									</g>
                                  								</g>
                               								
-                              <g data-time-start="51.18" data-time-end="51.3" class="note" id="e48-m-783">
+                              <g data-time-start="48.779999999999994" data-time-end="48.900000000000006" class="note" id="e48-m-783">
                                  									
-                                 <use xlink:href="#E0A4" x="18645" y="33875" height="720px" width="720px"></use>
+                                 <use xlink:href="#E0A4" x="18645" y="33790" height="720px" width="720px"></use>
                                  									
                                  <g class="stem">
                                     										
-                                    <rect x="18853" y="33227" height="626" width="18"></rect>
+                                    <rect x="18853" y="33142" height="626" width="18"></rect>
                                     									</g>
                                  									
                                  <g class="accid" id="e48-m-784"></g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="51.3" data-time-end="51.6" class="note" id="e48-m-785">
+                           <g data-time-start="48.900000000000006" data-time-end="49.2" class="note" id="e48-m-785">
                               								
-                              <use xlink:href="#E0A4" x="19175" y="33785" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="19175" y="33700" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="19383" y="33155" height="608" width="18"></rect>
+                                 <rect x="19383" y="33070" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000716873937">
+                     <g class="barLineAttr" id="bline-0000001651715265">
                         						
-                        <path d="M19989 30690 L19989 29970" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 30605 L19989 29885" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M19989 32130 L19989 31410" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 32045 L19989 31325" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M19989 34055 L19989 33335" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 33970 L19989 33250" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000000588074282">
+               <g class="system" id="system-0000001870912989">
                   				
-                  <polygon points="-270,35135 270,34775 270,34640 -270,35000 "></polygon>
+                  <polygon points="-270,35050 270,34690 270,34555 -270,34915 "></polygon>
                   				
-                  <polygon points="-270,34955 270,34595 270,34460 -270,34820 "></polygon>
+                  <polygon points="-270,34870 270,34510 270,34375 -270,34735 "></polygon>
                   				
-                  <path d="M13 35765 L13 39850" stroke="#000000" stroke-width="27"></path>
+                  <path d="M13 35680 L13 39765" stroke="#000000" stroke-width="27"></path>
                   				
-                  <use xlink:href="#E003" x="-154" y="35765" height="720px" width="720px"></use>
+                  <use xlink:href="#E003" x="-154" y="35680" height="720px" width="720px"></use>
                   				
-                  <use xlink:href="#E004" x="-154" y="39850" height="720px" width="720px"></use>
+                  <use xlink:href="#E004" x="-154" y="39765" height="720px" width="720px"></use>
                   				
-                  <rect x="-154" y="35747" height="4121" width="90"></rect>
+                  <rect x="-154" y="35662" height="4121" width="90"></rect>
                   				
                   <g class="measure" id="e48-m-794">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000001318103103">
+                     <g class="mNum autogenerated" id="mnum-0000000411729494">
                         						
-                        <text x="0" y="35495" text-anchor="middle" font-size="0px">
+                        <text x="0" y="35410" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000002065033316">
+                           <tspan class="text" id="text-0000000745295024">
                               								
                               <tspan font-size="324px" class="text">20</tspan>
                               							</tspan>
@@ -6360,39 +6345,39 @@
                      					
                      <g class="staff" id="e48-m-795">
                         						
-                        <path d="M0 35765 L11610 35765" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 35680 L10824 35680" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 35945 L11610 35945" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 35860 L10824 35860" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 36125 L11610 36125" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 36040 L10824 36040" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 36305 L11610 36305" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 36220 L10824 36220" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 36485 L11610 36485" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 36400 L10824 36400" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000619382745">
+                        <g class="clef" id="clef-0000001250264658">
                            							
-                           <use xlink:href="#E050" x="90" y="36305" height="720px" width="720px"></use>
+                           <use xlink:href="#E050" x="90" y="36220" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001112558206">
+                        <g class="keySig" id="keysig-0000000070621111">
                            							
-                           <use xlink:href="#E260" x="771" y="36125" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="36040" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-796">
                            							
-                           <g data-time-start="51.66" data-time-end="52.8" class="note" id="e48-m-797">
+                           <g data-time-start="49.26" data-time-end="50.4" class="note" id="e48-m-797">
                               								
-                              <use xlink:href="#E0A2" x="1198" y="35945" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="1216" y="35860" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-807">
                                  									
                                  <g class="syl" id="e48-m-808">
                                     										
-                                    <text x="1108" y="36977" font-size="0px">
+                                    <text x="1126" y="36892" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000120124489">
+                                       <tspan class="text" id="text-0000001798125784">
                                           												
                                           <tspan font-size="405px" class="text">tur</tspan>
                                           											</tspan>
@@ -6401,80 +6386,75 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="52.8" data-time-end="53.4" class="note" id="e48-m-798">
+                           <g data-time-start="50.4" data-time-end="51" class="note" id="e48-m-798">
                               								
-                              <use xlink:href="#E0A3" x="4181" y="35855" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="4479" y="35770" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="4181" y="35877" height="608" width="18"></rect>
+                                 <rect x="4479" y="35792" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-809">
                                  									
                                  <g class="syl" id="e48-m-810">
                                     										
-                                    <text x="4091" y="36977" font-size="0px">
+                                    <text x="4389" y="36892" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001561407298">
+                                       <tspan class="text" id="text-0000000099977556">
                                           												
                                           <tspan font-size="405px" class="text">me</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="4852" y="36878" height="18" width="108"></rect>
+                                    <rect x="5203" y="36793" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="53.4" data-time-end="54" class="note" id="e48-m-799">
+                           <g data-time-start="51" data-time-end="51.6" class="note" id="e48-m-799">
                               								
-                              <use xlink:href="#E0A3" x="5315" y="35855" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="5720" y="35770" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="5315" y="35877" height="608" width="18"></rect>
+                                 <rect x="5720" y="35792" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-811">
                                  									
                                  <g class="syl" id="e48-m-812">
                                     										
-                                    <text x="5225" y="36977" font-size="0px">
+                                    <text x="5630" y="36892" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000459425123">
+                                       <tspan class="text" id="text-0000000534259655">
                                           												
                                           <tspan font-size="405px" class="text">di</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="5896" y="36878" height="18" width="108"></rect>
+                                    <rect x="6355" y="36793" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="54" data-time-end="58.8" class="note" id="e48-m-800">
+                           <g data-time-start="51.6" data-time-end="54" class="note" id="e48-m-800">
                               								
-                              <polygon points="6450,35765 6682,35765 6682,35810 6450,35810 "></polygon>
+                              <polygon points="6962,35680 7194,35680 7194,35725 6962,35725 "></polygon>
                               								
-                              <polygon points="6450,35945 6682,35945 6682,35900 6450,35900 "></polygon>
+                              <polygon points="6962,35860 7194,35860 7194,35815 6962,35815 "></polygon>
                               								
-                              <rect x="6441" y="35720" height="270" width="18"></rect>
+                              <rect x="6953" y="35635" height="270" width="18"></rect>
                               								
-                              <rect x="6673" y="35720" height="270" width="18"></rect>
-                              								
-                              <g class="stem">
-                                 									
-                                 <rect x="6673" y="35765" height="720" width="18"></rect>
-                                 								</g>
+                              <rect x="7185" y="35635" height="270" width="18"></rect>
                               								
                               <g class="verse" id="e48-m-813">
                                  									
                                  <g class="syl" id="e48-m-814">
                                     										
-                                    <text x="6360" y="36977" font-size="0px">
+                                    <text x="6872" y="36892" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000586041663">
+                                       <tspan class="text" id="text-0000000530700123">
                                           												
                                           <tspan font-size="405px" class="text">cis;</tspan>
                                           											</tspan>
@@ -6487,47 +6467,47 @@
                      					
                      <g class="staff" id="e48-m-815">
                         						
-                        <path d="M0 37205 L11610 37205" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 37120 L10824 37120" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 37385 L11610 37385" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 37300 L10824 37300" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 37565 L11610 37565" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 37480 L10824 37480" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 37745 L11610 37745" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 37660 L10824 37660" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 37925 L11610 37925" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 37840 L10824 37840" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000625653813">
+                        <g class="clef" id="clef-0000001518039433">
                            							
-                           <use xlink:href="#E050" x="90" y="37745" height="720px" width="720px"></use>
+                           <use xlink:href="#E050" x="90" y="37660" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001283699379">
+                        <g class="keySig" id="keysig-0000001583024071">
                            							
-                           <use xlink:href="#E260" x="771" y="37565" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="37480" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-816">
                            							
-                           <g data-time-start="51.66" data-time-end="52.8" class="note" id="e48-m-817">
+                           <g data-time-start="49.26" data-time-end="50.4" class="note" id="e48-m-817">
                               								
-                              <use xlink:href="#E0A2" x="1198" y="37385" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="1216" y="37300" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-822">
                                  									
                                  <g class="syl" id="e48-m-823">
                                     										
-                                    <text x="1108" y="38417" font-size="0px">
+                                    <text x="1126" y="38332" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001470684701">
+                                       <tspan class="text" id="text-0000000249746907">
                                           												
                                           <tspan font-size="405px" class="text">ple</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2193" y="38318" height="18" width="108"></rect>
+                                    <rect x="2351" y="38233" height="18" width="108"></rect>
                                     										
-                                    <rect x="3393" y="38318" height="18" width="108"></rect>
+                                    <rect x="3551" y="38233" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -6535,43 +6515,38 @@
                                  									
                                  <g class="syl" id="e48-m-829">
                                     										
-                                    <text x="1108" y="38817" font-size="0px">
+                                    <text x="1126" y="38732" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000743912184">
+                                       <tspan class="text" id="text-0000000281208687">
                                           												
                                           <tspan font-size="405px" class="text">di</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2103" y="38718" height="18" width="108"></rect>
+                                    <rect x="2261" y="38633" height="18" width="108"></rect>
                                     										
-                                    <rect x="3303" y="38718" height="18" width="108"></rect>
+                                    <rect x="3461" y="38633" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="52.8" data-time-end="57.599999999999994" class="note" id="e48-m-818">
+                           <g data-time-start="50.4" data-time-end="52.8" class="note" id="e48-m-818">
                               								
-                              <polygon points="4181,37385 4413,37385 4413,37430 4181,37430 "></polygon>
+                              <polygon points="4479,37300 4711,37300 4711,37345 4479,37345 "></polygon>
                               								
-                              <polygon points="4181,37565 4413,37565 4413,37520 4181,37520 "></polygon>
+                              <polygon points="4479,37480 4711,37480 4711,37435 4479,37435 "></polygon>
                               								
-                              <rect x="4172" y="37340" height="270" width="18"></rect>
+                              <rect x="4470" y="37255" height="270" width="18"></rect>
                               								
-                              <rect x="4404" y="37340" height="270" width="18"></rect>
-                              								
-                              <g class="stem">
-                                 									
-                                 <rect x="4404" y="37385" height="720" width="18"></rect>
-                                 								</g>
+                              <rect x="4702" y="37255" height="270" width="18"></rect>
                               								
                               <g class="verse" id="e48-m-824">
                                  									
                                  <g class="syl" id="e48-m-825">
                                     										
-                                    <text x="4091" y="38417" font-size="0px">
+                                    <text x="4389" y="38332" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000710948685">
+                                       <tspan class="text" id="text-0000000838742599">
                                           												
                                           <tspan font-size="405px" class="text">tus</tspan>
                                           											</tspan>
@@ -6583,9 +6558,9 @@
                                  									
                                  <g class="syl" id="e48-m-831">
                                     										
-                                    <text x="4091" y="38817" font-size="0px">
+                                    <text x="4389" y="38732" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000415667335">
+                                       <tspan class="text" id="text-0000001623700690">
                                           												
                                           <tspan font-size="405px" class="text">cis;</tspan>
                                           											</tspan>
@@ -6600,108 +6575,103 @@
                      					
                      <g class="staff" id="e48-m-832">
                         						
-                        <path d="M0 39130 L11610 39130" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 39045 L10824 39045" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 39310 L11610 39310" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 39225 L10824 39225" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 39490 L11610 39490" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 39405 L10824 39405" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 39670 L11610 39670" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 39585 L10824 39585" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 39850 L11610 39850" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 39765 L10824 39765" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001514745091">
+                        <g class="clef" id="clef-0000000710658614">
                            							
-                           <use xlink:href="#E062" x="90" y="39310" height="720px" width="720px"></use>
+                           <use xlink:href="#E062" x="90" y="39225" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000002049592899">
+                        <g class="keySig" id="keysig-0000001882764531">
                            							
-                           <use xlink:href="#E260" x="771" y="39670" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="39585" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-833">
                            							
-                           <g data-time-start="51.66" data-time-end="51.9" class="note" id="e48-m-834">
+                           <g data-time-start="49.26" data-time-end="49.50000000000001" class="note" id="e48-m-834">
                               								
-                              <use xlink:href="#E0A4" x="1198" y="39670" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="1216" y="39585" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="1406" y="39040" height="608" width="18"></rect>
+                                 <rect x="1424" y="38955" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-835"></g>
                               							</g>
                            							
-                           <g data-time-start="51.9" data-time-end="52.2" class="note" id="e48-m-836">
+                           <g data-time-start="49.50000000000001" data-time-end="49.800000000000004" class="note" id="e48-m-836">
                               								
-                              <use xlink:href="#E0A4" x="1944" y="39490" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="2032" y="39405" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="1944" y="39512" height="608" width="18"></rect>
+                                 <rect x="2032" y="39427" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="52.2" data-time-end="52.5" class="note" id="e48-m-837">
+                           <g data-time-start="49.800000000000004" data-time-end="50.099999999999994" class="note" id="e48-m-837">
                               								
-                              <use xlink:href="#E0A4" x="2689" y="39310" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="2848" y="39225" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="2689" y="39332" height="608" width="18"></rect>
+                                 <rect x="2848" y="39247" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="52.5" data-time-end="52.8" class="note" id="e48-m-838">
+                           <g data-time-start="50.099999999999994" data-time-end="50.4" class="note" id="e48-m-838">
                               								
-                              <use xlink:href="#E0A4" x="3435" y="39220" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="3663" y="39135" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="3435" y="39242" height="608" width="18"></rect>
+                                 <rect x="3663" y="39157" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-843">
                                  									
                                  <g class="syl" id="e48-m-844">
                                     										
-                                    <text x="3345" y="40522" font-size="0px">
+                                    <text x="3573" y="40347" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001110621358">
+                                       <tspan class="text" id="text-0000001796838811">
                                           												
                                           <tspan font-size="405px" class="text">di</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="3822" y="40423" height="18" width="108"></rect>
+                                    <rect x="4085" y="40248" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="52.8" data-time-end="57.599999999999994" class="note" id="e48-m-839">
+                           <g data-time-start="50.4" data-time-end="52.8" class="note" id="e48-m-839">
                               								
-                              <polygon points="4181,39490 4413,39490 4413,39535 4181,39535 "></polygon>
+                              <polygon points="4479,39405 4711,39405 4711,39450 4479,39450 "></polygon>
                               								
-                              <polygon points="4181,39670 4413,39670 4413,39625 4181,39625 "></polygon>
+                              <polygon points="4479,39585 4711,39585 4711,39540 4479,39540 "></polygon>
                               								
-                              <rect x="4172" y="39445" height="270" width="18"></rect>
+                              <rect x="4470" y="39360" height="270" width="18"></rect>
                               								
-                              <rect x="4404" y="39445" height="270" width="18"></rect>
-                              								
-                              <g class="stem">
-                                 									
-                                 <rect x="4404" y="39490" height="720" width="18"></rect>
-                                 								</g>
+                              <rect x="4702" y="39360" height="270" width="18"></rect>
                               								
                               <g class="verse" id="e48-m-845">
                                  									
                                  <g class="syl" id="e48-m-846">
                                     										
-                                    <text x="4091" y="40522" font-size="0px">
+                                    <text x="4389" y="40347" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000781040660">
+                                       <tspan class="text" id="text-0000001525408659">
                                           												
                                           <tspan font-size="405px" class="text">cis;</tspan>
                                           											</tspan>
@@ -6714,19 +6684,19 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001927627738">
+                     <g class="barLineAttr" id="bline-0000000661323214">
                         						
-                        <path d="M11507 36485 L11507 35765" stroke="#000000" stroke-width="27"></path>
+                        <path d="M10721 36400 L10721 35680" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M11597 36485 L11597 35765" stroke="#000000" stroke-width="27"></path>
+                        <path d="M10811 36400 L10811 35680" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M11507 37925 L11507 37205" stroke="#000000" stroke-width="27"></path>
+                        <path d="M10721 37840 L10721 37120" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M11597 37925 L11597 37205" stroke="#000000" stroke-width="27"></path>
+                        <path d="M10811 37840 L10811 37120" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M11507 39850 L11507 39130" stroke="#000000" stroke-width="27"></path>
+                        <path d="M10721 39765 L10721 39045" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M11597 39850 L11597 39130" stroke="#000000" stroke-width="27"></path>
+                        <path d="M10811 39765 L10811 39045" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -6738,29 +6708,29 @@
                      					
                      <g class="staff" id="e48-m-850">
                         						
-                        <path d="M11610 35765 L15806 35765" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 35680 L15413 35680" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11610 35945 L15806 35945" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 35860 L15413 35860" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11610 36125 L15806 36125" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 36040 L15413 36040" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11610 36305 L15806 36305" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 36220 L15413 36220" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11610 36485 L15806 36485" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 36400 L15413 36400" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-851">
                            							
-                           <g data-time-start="58.86" data-time-end="60" class="note" id="e48-m-852">
+                           <g data-time-start="54.059999999999995" data-time-end="55.2" class="note" id="e48-m-852">
                               								
-                              <use xlink:href="#E0A2" x="11805" y="36215" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="11037" y="36130" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-855">
                                  									
                                  <g class="syl" id="e48-m-856">
                                     										
-                                    <text x="11715" y="36977" font-size="0px">
+                                    <text x="10947" y="36892" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000943083528">
+                                       <tspan class="text" id="text-0000001943641698">
                                           												
                                           <tspan font-size="405px" class="text">A</tspan>
                                           											</tspan>
@@ -6769,48 +6739,48 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="60" data-time-end="60.6" class="note" id="e48-m-853">
+                           <g data-time-start="55.2" data-time-end="55.800000000000004" class="note" id="e48-m-853">
                               								
-                              <use xlink:href="#E0A3" x="13523" y="36215" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="12917" y="36130" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="13731" y="35585" height="608" width="18"></rect>
+                                 <rect x="13125" y="35500" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-857">
                                  									
                                  <g class="syl" id="e48-m-858">
                                     										
-                                    <text x="13433" y="36977" font-size="0px">
+                                    <text x="12827" y="36892" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001142529976">
+                                       <tspan class="text" id="text-0000000428674197">
                                           												
                                           <tspan font-size="405px" class="text">qui</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="14206" y="36878" height="18" width="108"></rect>
+                                    <rect x="13653" y="36793" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="60.6" data-time-end="61.2" class="note" id="e48-m-854">
+                           <g data-time-start="55.800000000000004" data-time-end="56.400000000000006" class="note" id="e48-m-854">
                               								
-                              <use xlink:href="#E0A3" x="14658" y="36215" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="14158" y="36130" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="14866" y="35585" height="608" width="18"></rect>
+                                 <rect x="14366" y="35500" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-859">
                                  									
                                  <g class="syl" id="e48-m-860">
                                     										
-                                    <text x="14568" y="36977" font-size="0px">
+                                    <text x="14068" y="36892" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000470074180">
+                                       <tspan class="text" id="text-0000000013376007">
                                           												
                                           <tspan font-size="405px" class="text">bus</tspan>
                                           											</tspan>
@@ -6823,29 +6793,29 @@
                      					
                      <g class="staff" id="e48-m-861">
                         						
-                        <path d="M11610 37205 L15806 37205" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 37120 L15413 37120" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11610 37385 L15806 37385" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 37300 L15413 37300" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11610 37565 L15806 37565" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 37480 L15413 37480" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11610 37745 L15806 37745" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 37660 L15413 37660" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11610 37925 L15806 37925" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 37840 L15413 37840" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-862">
                            							
-                           <g data-time-start="58.86" data-time-end="60" class="note" id="e48-m-863">
+                           <g data-time-start="54.059999999999995" data-time-end="55.2" class="note" id="e48-m-863">
                               								
-                              <use xlink:href="#E0A2" x="11805" y="37655" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="11037" y="37570" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-865">
                                  									
                                  <g class="syl" id="e48-m-866">
                                     										
-                                    <text x="11715" y="38417" font-size="0px">
+                                    <text x="10947" y="38332" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002075852787">
+                                       <tspan class="text" id="text-0000001307900951">
                                           												
                                           <tspan font-size="405px" class="text">A</tspan>
                                           											</tspan>
@@ -6857,36 +6827,36 @@
                                  									
                                  <g class="syl" id="e48-m-895">
                                     										
-                                    <text x="11715" y="38817" font-size="0px">
+                                    <text x="10947" y="38732" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002041382240">
+                                       <tspan class="text" id="text-0000001029815830">
                                           												
                                           <tspan font-size="405px" class="text">O</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="12659" y="38718" height="18" width="108"></rect>
+                                    <rect x="11972" y="38633" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="60" data-time-end="61.2" class="note" id="e48-m-864">
+                           <g data-time-start="55.2" data-time-end="56.400000000000006" class="note" id="e48-m-864">
                               								
-                              <use xlink:href="#E0A2" x="13523" y="37655" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="12917" y="37570" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-890">
                                  									
                                  <g class="syl" id="e48-m-891">
                                     										
-                                    <text x="13433" y="38417" font-size="0px">
+                                    <text x="12827" y="38332" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001464984169">
+                                       <tspan class="text" id="text-0000000614945738">
                                           												
                                           <tspan font-size="405px" class="text">qui</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="14877" y="38318" height="18" width="108"></rect>
+                                    <rect x="14387" y="38233" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -6894,15 +6864,15 @@
                                  									
                                  <g class="syl" id="e48-m-897">
                                     										
-                                    <text x="13433" y="38817" font-size="0px">
+                                    <text x="12827" y="38732" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000059846092">
+                                       <tspan class="text" id="text-0000001060754890">
                                           												
                                           <tspan font-size="405px" class="text">re</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="14776" y="38718" height="18" width="108"></rect>
+                                    <rect x="14286" y="38633" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -6911,29 +6881,29 @@
                      					
                      <g class="staff" id="e48-m-867">
                         						
-                        <path d="M11610 39130 L15806 39130" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 39045 L15413 39045" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11610 39310 L15806 39310" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 39225 L15413 39225" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11610 39490 L15806 39490" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 39405 L15413 39405" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11610 39670 L15806 39670" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 39585 L15413 39585" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M11610 39850 L15806 39850" stroke="#000000" stroke-width="13"></path>
+                        <path d="M10824 39765 L15413 39765" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-868">
                            							
-                           <g data-time-start="58.86" data-time-end="60" class="note" id="e48-m-869">
+                           <g data-time-start="54.059999999999995" data-time-end="55.2" class="note" id="e48-m-869">
                               								
-                              <use xlink:href="#E0A2" x="11805" y="39490" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="11037" y="39405" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-872">
                                  									
                                  <g class="syl" id="e48-m-873">
                                     										
-                                    <text x="11715" y="40522" font-size="0px">
+                                    <text x="10947" y="40347" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001308324427">
+                                       <tspan class="text" id="text-0000001305547611">
                                           												
                                           <tspan font-size="405px" class="text">A</tspan>
                                           											</tspan>
@@ -6942,48 +6912,48 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="60" data-time-end="60.6" class="note" id="e48-m-870">
+                           <g data-time-start="55.2" data-time-end="55.800000000000004" class="note" id="e48-m-870">
                               								
-                              <use xlink:href="#E0A3" x="13523" y="39490" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="12917" y="39405" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="13523" y="39512" height="608" width="18"></rect>
+                                 <rect x="12917" y="39427" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-874">
                                  									
                                  <g class="syl" id="e48-m-875">
                                     										
-                                    <text x="13433" y="40522" font-size="0px">
+                                    <text x="12827" y="40347" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000090669329">
+                                       <tspan class="text" id="text-0000000037568190">
                                           												
                                           <tspan font-size="405px" class="text">qui</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="14206" y="40423" height="18" width="108"></rect>
+                                    <rect x="13653" y="40248" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="60.6" data-time-end="61.2" class="note" id="e48-m-871">
+                           <g data-time-start="55.800000000000004" data-time-end="56.400000000000006" class="note" id="e48-m-871">
                               								
-                              <use xlink:href="#E0A3" x="14658" y="39580" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="14158" y="39495" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="14866" y="38950" height="608" width="18"></rect>
+                                 <rect x="14366" y="38865" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-876">
                                  									
                                  <g class="syl" id="e48-m-877">
                                     										
-                                    <text x="14568" y="40522" font-size="0px">
+                                    <text x="14068" y="40347" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001518830629">
+                                       <tspan class="text" id="text-0000000643440235">
                                           												
                                           <tspan font-size="405px" class="text">bus</tspan>
                                           											</tspan>
@@ -6994,13 +6964,13 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000117597918">
+                     <g class="barLineAttr" id="bline-0000001243014278">
                         						
-                        <path d="M15793 36485 L15793 35765" stroke="#000000" stroke-width="27"></path>
+                        <path d="M15400 36400 L15400 35680" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M15793 37925 L15793 37205" stroke="#000000" stroke-width="27"></path>
+                        <path d="M15400 37840 L15400 37120" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M15793 39850 L15793 39130" stroke="#000000" stroke-width="27"></path>
+                        <path d="M15400 39765 L15400 39045" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -7008,21 +6978,21 @@
                      					
                      <g class="staff" id="e48-m-879">
                         						
-                        <path d="M15806 35765 L20002 35765" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 35680 L20002 35680" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15806 35945 L20002 35945" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 35860 L20002 35860" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15806 36125 L20002 36125" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 36040 L20002 36040" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15806 36305 L20002 36305" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 36220 L20002 36220" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15806 36485 L20002 36485" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 36400 L20002 36400" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-880">
                            							
-                           <g data-time-start="61.25999999999999" data-time-end="62.400000000000006" class="note" id="e48-m-881">
+                           <g data-time-start="56.459999999999994" data-time-end="57.599999999999994" class="note" id="e48-m-881">
                               								
-                              <use xlink:href="#E0A2" x="16001" y="36125" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="15626" y="36040" height="720px" width="720px"></use>
                               								
                               <g class="accid" id="e48-m-882"></g>
                               								
@@ -7030,9 +7000,9 @@
                                  									
                                  <g class="syl" id="e48-m-885">
                                     										
-                                    <text x="15911" y="36977" font-size="0px">
+                                    <text x="15536" y="36892" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001770957968">
+                                       <tspan class="text" id="text-0000001887901053">
                                           												
                                           <tspan font-size="405px" class="text">ut</tspan>
                                           											</tspan>
@@ -7041,23 +7011,23 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="62.400000000000006" data-time-end="63.6" class="note" id="e48-m-883">
+                           <g data-time-start="57.599999999999994" data-time-end="58.8" class="note" id="e48-m-883">
                               								
-                              <use xlink:href="#E0A2" x="18270" y="36215" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="18109" y="36130" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-920">
                                  									
                                  <g class="syl" id="e48-m-921">
                                     										
-                                    <text x="18180" y="36977" font-size="0px">
+                                    <text x="18019" y="36892" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001404634009">
+                                       <tspan class="text" id="text-0000000036225525">
                                           												
                                           <tspan font-size="405px" class="text">pur</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="19302" y="36878" height="18" width="108"></rect>
+                                    <rect x="19221" y="36793" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -7066,29 +7036,29 @@
                      					
                      <g class="staff" id="e48-m-886">
                         						
-                        <path d="M15806 37205 L20002 37205" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 37120 L20002 37120" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15806 37385 L20002 37385" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 37300 L20002 37300" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15806 37565 L20002 37565" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 37480 L20002 37480" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15806 37745 L20002 37745" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 37660 L20002 37660" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15806 37925 L20002 37925" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 37840 L20002 37840" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-887">
                            							
-                           <g data-time-start="61.25999999999999" data-time-end="62.400000000000006" class="note" id="e48-m-888">
+                           <g data-time-start="56.459999999999994" data-time-end="57.599999999999994" class="note" id="e48-m-888">
                               								
-                              <use xlink:href="#E0A2" x="16001" y="37745" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="15626" y="37660" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-892">
                                  									
                                  <g class="syl" id="e48-m-893">
                                     										
-                                    <text x="15911" y="38417" font-size="0px">
+                                    <text x="15536" y="38332" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001501957655">
+                                       <tspan class="text" id="text-0000001027158383">
                                           												
                                           <tspan font-size="405px" class="text">bus</tspan>
                                           											</tspan>
@@ -7100,9 +7070,9 @@
                                  									
                                  <g class="syl" id="e48-m-899">
                                     										
-                                    <text x="15911" y="38817" font-size="0px">
+                                    <text x="15536" y="38732" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001781491356">
+                                       <tspan class="text" id="text-0000002001549979">
                                           												
                                           <tspan font-size="405px" class="text">que,</tspan>
                                           											</tspan>
@@ -7111,17 +7081,17 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="62.400000000000006" data-time-end="63.6" class="note" id="e48-m-889">
+                           <g data-time-start="57.599999999999994" data-time-end="58.8" class="note" id="e48-m-889">
                               								
-                              <use xlink:href="#E0A2" x="18270" y="37835" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="18109" y="37750" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-900">
                                  									
                                  <g class="syl" id="e48-m-901">
                                     										
-                                    <text x="18180" y="38417" font-size="0px">
+                                    <text x="18019" y="38332" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000966119733">
+                                       <tspan class="text" id="text-0000001975099015">
                                           												
                                           <tspan font-size="405px" class="text">ut</tspan>
                                           											</tspan>
@@ -7133,9 +7103,9 @@
                                  									
                                  <g class="syl" id="e48-m-903">
                                     										
-                                    <text x="18180" y="38817" font-size="0px">
+                                    <text x="18019" y="38732" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000284422345">
+                                       <tspan class="text" id="text-0000001280260526">
                                           												
                                           <tspan font-size="405px" class="text">mox</tspan>
                                           											</tspan>
@@ -7148,25 +7118,25 @@
                      					
                      <g class="staff" id="e48-m-904">
                         						
-                        <path d="M15806 39130 L20002 39130" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 39045 L20002 39045" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15806 39310 L20002 39310" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 39225 L20002 39225" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15806 39490 L20002 39490" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 39405 L20002 39405" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15806 39670 L20002 39670" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 39585 L20002 39585" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15806 39850 L20002 39850" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15413 39765 L20002 39765" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-905">
                            							
-                           <g data-time-start="61.25999999999999" data-time-end="61.800000000000004" class="note" id="e48-m-906">
+                           <g data-time-start="56.459999999999994" data-time-end="57.00000000000001" class="note" id="e48-m-906">
                               								
-                              <use xlink:href="#E0A3" x="16001" y="39670" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="15626" y="39585" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="16209" y="39040" height="608" width="18"></rect>
+                                 <rect x="15834" y="38955" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-907"></g>
@@ -7175,9 +7145,9 @@
                                  									
                                  <g class="syl" id="e48-m-911">
                                     										
-                                    <text x="15911" y="40522" font-size="0px">
+                                    <text x="15536" y="40347" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000136041300">
+                                       <tspan class="text" id="text-0000000215233989">
                                           												
                                           <tspan font-size="405px" class="text">ut</tspan>
                                           											</tspan>
@@ -7186,87 +7156,87 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="61.800000000000004" data-time-end="62.400000000000006" class="note" id="e48-m-908">
+                           <g data-time-start="57.00000000000001" data-time-end="57.599999999999994" class="note" id="e48-m-908">
                               								
-                              <use xlink:href="#E0A3" x="17136" y="39580" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="16868" y="39495" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="17344" y="38950" height="608" width="18"></rect>
+                                 <rect x="17076" y="38865" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-940">
                                  									
                                  <g class="syl" id="e48-m-941">
                                     										
-                                    <text x="17046" y="40522" font-size="0px">
+                                    <text x="16778" y="40347" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000412397480">
+                                       <tspan class="text" id="text-0000000964779003">
                                           												
                                           <tspan font-size="405px" class="text">pur</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="17830" y="40423" height="18" width="108"></rect>
+                                    <rect x="17616" y="40248" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="62.400000000000006" data-time-end="63.6" class="note" id="e48-m-909">
+                           <g data-time-start="57.599999999999994" data-time-end="58.8" class="note" id="e48-m-909">
                               								
-                              <use xlink:href="#E0A2" x="18270" y="39490" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="18109" y="39405" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-942">
                                  									
                                  <g class="syl" id="e48-m-943">
                                     										
-                                    <text x="18180" y="40522" font-size="0px">
+                                    <text x="18019" y="40347" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001303303614">
+                                       <tspan class="text" id="text-0000000006278975">
                                           												
                                           <tspan font-size="405px" class="text">ga</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="19222" y="40423" height="18" width="108"></rect>
+                                    <rect x="19141" y="40248" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000760769578">
+                     <g class="barLineAttr" id="bline-0000000013239472">
                         						
-                        <path d="M19989 36485 L19989 35765" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 36400 L19989 35680" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M19989 37925 L19989 37205" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 37840 L19989 37120" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M19989 39850 L19989 39130" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 39765 L19989 39045" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000000698410707">
+               <g class="system" id="system-0000001830123480">
                   				
-                  <polygon points="-270,41015 270,40655 270,40520 -270,40880 "></polygon>
+                  <polygon points="-270,40845 270,40485 270,40350 -270,40710 "></polygon>
                   				
-                  <polygon points="-270,40835 270,40475 270,40340 -270,40700 "></polygon>
+                  <polygon points="-270,40665 270,40305 270,40170 -270,40530 "></polygon>
                   				
-                  <path d="M13 41645 L13 45825" stroke="#000000" stroke-width="27"></path>
+                  <path d="M13 41475 L13 45655" stroke="#000000" stroke-width="27"></path>
                   				
-                  <use xlink:href="#E003" x="-154" y="41645" height="720px" width="720px"></use>
+                  <use xlink:href="#E003" x="-154" y="41475" height="720px" width="720px"></use>
                   				
-                  <use xlink:href="#E004" x="-154" y="45825" height="720px" width="720px"></use>
+                  <use xlink:href="#E004" x="-154" y="45655" height="720px" width="720px"></use>
                   				
-                  <rect x="-154" y="41627" height="4216" width="90"></rect>
+                  <rect x="-154" y="41457" height="4216" width="90"></rect>
                   				
                   <g class="measure" id="e48-m-912">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000001995895062">
+                     <g class="mNum autogenerated" id="mnum-0000002133560130">
                         						
-                        <text x="0" y="41375" text-anchor="middle" font-size="0px">
+                        <text x="0" y="41205" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000001313740894">
+                           <tspan class="text" id="text-0000000063167304">
                               								
                               <tspan font-size="324px" class="text">23</tspan>
                               							</tspan>
@@ -7275,35 +7245,35 @@
                      					
                      <g class="staff" id="e48-m-913">
                         						
-                        <path d="M0 41645 L5043 41645" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 41475 L5043 41475" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 41825 L5043 41825" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 41655 L5043 41655" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 42005 L5043 42005" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 41835 L5043 41835" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 42185 L5043 42185" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 42015 L5043 42015" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 42365 L5043 42365" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 42195 L5043 42195" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001837401208">
+                        <g class="clef" id="clef-0000002108830071">
                            							
-                           <use xlink:href="#E050" x="90" y="42185" height="720px" width="720px"></use>
+                           <use xlink:href="#E050" x="90" y="42015" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000387258996">
+                        <g class="keySig" id="keysig-0000001036893209">
                            							
-                           <use xlink:href="#E260" x="771" y="42005" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="41835" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-914">
                            							
-                           <g data-time-start="63.66" data-time-end="64.2" class="note" id="e48-m-915">
+                           <g data-time-start="58.86" data-time-end="59.4" class="note" id="e48-m-915">
                               								
-                              <use xlink:href="#E0A3" x="1191" y="42005" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="1191" y="41835" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="1191" y="42027" height="608" width="18"></rect>
+                                 <rect x="1191" y="41857" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-916"></g>
@@ -7312,26 +7282,26 @@
                                  									
                                  <g class="syl" id="e48-m-923">
                                     										
-                                    <text x="1101" y="42947" font-size="0px">
+                                    <text x="1101" y="42777" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000666183970">
+                                       <tspan class="text" id="text-0000000582927247">
                                           												
                                           <tspan font-size="405px" class="text">ga</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="1784" y="42848" height="18" width="108"></rect>
+                                    <rect x="1784" y="42678" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="64.2" data-time-end="64.80000000000001" class="note" id="e48-m-917">
+                           <g data-time-start="59.4" data-time-end="60" class="note" id="e48-m-917">
                               								
-                              <use xlink:href="#E0A3" x="2283" y="42005" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="2283" y="41835" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="2283" y="42027" height="608" width="18"></rect>
+                                 <rect x="2283" y="41857" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-918"></g>
@@ -7340,9 +7310,9 @@
                                  									
                                  <g class="syl" id="e48-m-925">
                                     										
-                                    <text x="2193" y="42947" font-size="0px">
+                                    <text x="2193" y="42777" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000655350629">
+                                       <tspan class="text" id="text-0000002139905624">
                                           												
                                           <tspan font-size="405px" class="text">tus</tspan>
                                           											</tspan>
@@ -7351,23 +7321,23 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="64.80000000000001" data-time-end="66" class="note" id="e48-m-919">
+                           <g data-time-start="60" data-time-end="61.2" class="note" id="e48-m-919">
                               								
-                              <use xlink:href="#E0A2" x="3376" y="41915" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="3376" y="41745" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-952">
                                  									
                                  <g class="syl" id="e48-m-953">
                                     										
-                                    <text x="3286" y="42947" font-size="0px">
+                                    <text x="3286" y="42777" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000959851038">
+                                       <tspan class="text" id="text-0000001613471180">
                                           												
                                           <tspan font-size="405px" class="text">e</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="4249" y="42848" height="18" width="108"></rect>
+                                    <rect x="4249" y="42678" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -7376,45 +7346,45 @@
                      					
                      <g class="staff" id="e48-m-926">
                         						
-                        <path d="M0 43085 L5043 43085" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 42915 L5043 42915" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 43265 L5043 43265" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 43095 L5043 43095" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 43445 L5043 43445" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 43275 L5043 43275" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 43625 L5043 43625" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 43455 L5043 43455" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 43805 L5043 43805" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 43635 L5043 43635" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001786495362">
+                        <g class="clef" id="clef-0000000234368258">
                            							
-                           <use xlink:href="#E050" x="90" y="43625" height="720px" width="720px"></use>
+                           <use xlink:href="#E050" x="90" y="43455" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001658680427">
+                        <g class="keySig" id="keysig-0000000542303608">
                            							
-                           <use xlink:href="#E260" x="771" y="43445" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="43275" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-927">
                            							
-                           <g data-time-start="63.66" data-time-end="64.80000000000001" class="note" id="e48-m-928">
+                           <g data-time-start="58.86" data-time-end="60" class="note" id="e48-m-928">
                               								
-                              <use xlink:href="#E0A2" x="1191" y="43625" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="1191" y="43455" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-930">
                                  									
                                  <g class="syl" id="e48-m-931">
                                     										
-                                    <text x="1101" y="44702" font-size="0px">
+                                    <text x="1101" y="44532" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000594107642">
+                                       <tspan class="text" id="text-0000001581887568">
                                           												
                                           <tspan font-size="405px" class="text">tin</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2354" y="44603" height="18" width="108"></rect>
+                                    <rect x="2354" y="44433" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -7422,30 +7392,30 @@
                                  									
                                  <g class="syl" id="e48-m-961">
                                     										
-                                    <text x="1101" y="44302" font-size="0px">
+                                    <text x="1101" y="44132" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000541040154">
+                                       <tspan class="text" id="text-0000001062913209">
                                           												
                                           <tspan font-size="405px" class="text">pur</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2411" y="44203" height="18" width="108"></rect>
+                                    <rect x="2411" y="44033" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="64.80000000000001" data-time-end="66" class="note" id="e48-m-929">
+                           <g data-time-start="60" data-time-end="61.2" class="note" id="e48-m-929">
                               								
-                              <use xlink:href="#E0A2" x="3376" y="43535" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="3376" y="43365" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-932">
                                  									
                                  <g class="syl" id="e48-m-933">
                                     										
-                                    <text x="3286" y="44702" font-size="0px">
+                                    <text x="3286" y="44532" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000017144046">
+                                       <tspan class="text" id="text-0000001140371421">
                                           												
                                           <tspan font-size="405px" class="text">cta</tspan>
                                           											</tspan>
@@ -7457,15 +7427,15 @@
                                  									
                                  <g class="syl" id="e48-m-963">
                                     										
-                                    <text x="3286" y="44302" font-size="0px">
+                                    <text x="3286" y="44132" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000862335954">
+                                       <tspan class="text" id="text-0000002118949775">
                                           												
                                           <tspan font-size="405px" class="text">ga</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="4351" y="44203" height="18" width="108"></rect>
+                                    <rect x="4351" y="44033" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -7474,44 +7444,44 @@
                      					
                      <g class="staff" id="e48-m-934">
                         						
-                        <path d="M0 45105 L5043 45105" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 44935 L5043 44935" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 45285 L5043 45285" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 45115 L5043 45115" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 45465 L5043 45465" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 45295 L5043 45295" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 45645 L5043 45645" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 45475 L5043 45475" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 45825 L5043 45825" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 45655 L5043 45655" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000956714882">
+                        <g class="clef" id="clef-0000000576141788">
                            							
-                           <use xlink:href="#E062" x="90" y="45285" height="720px" width="720px"></use>
+                           <use xlink:href="#E062" x="90" y="45115" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001296956685">
+                        <g class="keySig" id="keysig-0000000211266593">
                            							
-                           <use xlink:href="#E260" x="771" y="45645" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="45475" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-935">
                            							
-                           <g data-time-start="63.66" data-time-end="64.2" class="note" id="e48-m-936">
+                           <g data-time-start="58.86" data-time-end="59.4" class="note" id="e48-m-936">
                               								
-                              <use xlink:href="#E0A3" x="1191" y="45825" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="1191" y="45655" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="1399" y="45195" height="608" width="18"></rect>
+                                 <rect x="1399" y="45025" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-944">
                                  									
                                  <g class="syl" id="e48-m-945">
                                     										
-                                    <text x="1101" y="46407" font-size="0px">
+                                    <text x="1101" y="46237" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001780902922">
+                                       <tspan class="text" id="text-0000001297273654">
                                           												
                                           <tspan font-size="405px" class="text">tus</tspan>
                                           											</tspan>
@@ -7520,13 +7490,13 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="64.2" data-time-end="64.80000000000001" class="note" id="e48-m-937">
+                           <g data-time-start="59.4" data-time-end="60" class="note" id="e48-m-937">
                               								
-                              <use xlink:href="#E0A3" x="2283" y="45645" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="2283" y="45475" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="2491" y="45015" height="608" width="18"></rect>
+                                 <rect x="2491" y="44845" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-938"></g>
@@ -7535,35 +7505,35 @@
                                  									
                                  <g class="syl" id="e48-m-975">
                                     										
-                                    <text x="2193" y="46407" font-size="0px">
+                                    <text x="2193" y="46237" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001832232797">
+                                       <tspan class="text" id="text-0000001737679920">
                                           												
                                           <tspan font-size="405px" class="text">e</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="3103" y="46308" height="18" width="108"></rect>
+                                    <rect x="3103" y="46138" height="18" width="108"></rect>
                                     										
-                                    <rect x="4303" y="46308" height="18" width="108"></rect>
+                                    <rect x="4303" y="46138" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="64.80000000000001" data-time-end="66" class="note" id="e48-m-939">
+                           <g data-time-start="60" data-time-end="61.2" class="note" id="e48-m-939">
                               								
-                              <use xlink:href="#E0A2" x="3376" y="45735" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="3376" y="45565" height="720px" width="720px"></use>
                               							</g>
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001511973102">
+                     <g class="barLineAttr" id="bline-0000000321774530">
                         						
-                        <path d="M5030 42365 L5030 41645" stroke="#000000" stroke-width="27"></path>
+                        <path d="M5030 42195 L5030 41475" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M5030 43805 L5030 43085" stroke="#000000" stroke-width="27"></path>
+                        <path d="M5030 43635 L5030 42915" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M5030 45825 L5030 45105" stroke="#000000" stroke-width="27"></path>
+                        <path d="M5030 45655 L5030 44935" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -7571,21 +7541,21 @@
                      					
                      <g class="staff" id="e48-m-947">
                         						
-                        <path d="M5043 41645 L9613 41645" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 41475 L9613 41475" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 41825 L9613 41825" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 41655 L9613 41655" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 42005 L9613 42005" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 41835 L9613 41835" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 42185 L9613 42185" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 42015 L9613 42015" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 42365 L9613 42365" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 42195 L9613 42195" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-948">
                            							
-                           <g data-time-start="66.06" data-time-end="67.2" class="note" id="e48-m-949">
+                           <g data-time-start="61.25999999999999" data-time-end="62.400000000000006" class="note" id="e48-m-949">
                               								
-                              <use xlink:href="#E0A2" x="5231" y="42005" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="5231" y="41835" height="720px" width="720px"></use>
                               								
                               <g class="accid" id="e48-m-950"></g>
                               								
@@ -7593,9 +7563,9 @@
                                  									
                                  <g class="syl" id="e48-m-955">
                                     										
-                                    <text x="5141" y="42947" font-size="0px">
+                                    <text x="5141" y="42777" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000413761908">
+                                       <tspan class="text" id="text-0000000067413064">
                                           												
                                           <tspan font-size="405px" class="text">rat,</tspan>
                                           											</tspan>
@@ -7604,23 +7574,23 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="67.2" data-time-end="68.4" class="note" id="e48-m-951">
+                           <g data-time-start="62.400000000000006" data-time-end="63.6" class="note" id="e48-m-951">
                               								
-                              <use xlink:href="#E0A2" x="7416" y="42095" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="7416" y="41925" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-987">
                                  									
                                  <g class="syl" id="e48-m-988">
                                     										
-                                    <text x="7326" y="42947" font-size="0px">
+                                    <text x="7326" y="42777" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001479826873">
+                                       <tspan class="text" id="text-0000001496718642">
                                           												
                                           <tspan font-size="405px" class="text">su</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="8645" y="42848" height="18" width="108"></rect>
+                                    <rect x="8645" y="42678" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -7629,29 +7599,29 @@
                      					
                      <g class="staff" id="e48-m-956">
                         						
-                        <path d="M5043 43085 L9613 43085" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 42915 L9613 42915" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 43265 L9613 43265" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 43095 L9613 43095" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 43445 L9613 43445" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 43275 L9613 43275" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 43625 L9613 43625" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 43455 L9613 43455" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 43805 L9613 43805" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 43635 L9613 43635" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-957">
                            							
-                           <g data-time-start="66.06" data-time-end="67.2" class="note" id="e48-m-958">
+                           <g data-time-start="61.25999999999999" data-time-end="62.400000000000006" class="note" id="e48-m-958">
                               								
-                              <use xlink:href="#E0A2" x="5231" y="43895" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="5231" y="43725" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-964">
                                  									
                                  <g class="syl" id="e48-m-965">
                                     										
-                                    <text x="5141" y="44302" font-size="0px">
+                                    <text x="5141" y="44132" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000039776320">
+                                       <tspan class="text" id="text-0000000030933112">
                                           												
                                           <tspan font-size="405px" class="text">tus</tspan>
                                           											</tspan>
@@ -7663,9 +7633,9 @@
                                  									
                                  <g class="syl" id="e48-m-967">
                                     										
-                                    <text x="5141" y="44702" font-size="0px">
+                                    <text x="5141" y="44532" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000191840607">
+                                       <tspan class="text" id="text-0000000127249248">
                                           												
                                           <tspan font-size="405px" class="text">est</tspan>
                                           											</tspan>
@@ -7674,23 +7644,23 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="67.2" data-time-end="68.4" class="note" id="e48-m-959">
+                           <g data-time-start="62.400000000000006" data-time-end="63.6" class="note" id="e48-m-959">
                               								
-                              <use xlink:href="#E0A2" x="7416" y="43715" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="7416" y="43545" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-999">
                                  									
                                  <g class="syl" id="e48-m-1000">
                                     										
-                                    <text x="7326" y="44302" font-size="0px">
+                                    <text x="7326" y="44132" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001522189213">
+                                       <tspan class="text" id="text-0000000821111236">
                                           												
                                           <tspan font-size="405px" class="text">e</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="8554" y="44203" height="18" width="108"></rect>
+                                    <rect x="8554" y="44033" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -7698,15 +7668,15 @@
                                  									
                                  <g class="syl" id="e48-m-1004">
                                     										
-                                    <text x="7326" y="44702" font-size="0px">
+                                    <text x="7326" y="44532" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001569099859">
+                                       <tspan class="text" id="text-0000000076755288">
                                           												
                                           <tspan font-size="405px" class="text">u</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="8566" y="44603" height="18" width="108"></rect>
+                                    <rect x="8566" y="44433" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -7715,34 +7685,34 @@
                      					
                      <g class="staff" id="e48-m-968">
                         						
-                        <path d="M5043 45105 L9613 45105" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 44935 L9613 44935" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 45285 L9613 45285" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 45115 L9613 45115" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 45465 L9613 45465" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 45295 L9613 45295" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 45645 L9613 45645" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 45475 L9613 45475" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M5043 45825 L9613 45825" stroke="#000000" stroke-width="13"></path>
+                        <path d="M5043 45655 L9613 45655" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-969">
                            							
-                           <g data-time-start="66.06" data-time-end="66.60000000000001" class="note" id="e48-m-970">
+                           <g data-time-start="61.25999999999999" data-time-end="61.800000000000004" class="note" id="e48-m-970">
                               								
-                              <use xlink:href="#E0A3" x="5231" y="45825" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="5231" y="45655" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="5439" y="45195" height="608" width="18"></rect>
+                                 <rect x="5439" y="45025" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-976">
                                  									
                                  <g class="syl" id="e48-m-977">
                                     										
-                                    <text x="5141" y="46407" font-size="0px">
+                                    <text x="5141" y="46237" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000846454932">
+                                       <tspan class="text" id="text-0000000873721411">
                                           												
                                           <tspan font-size="405px" class="text">rat,</tspan>
                                           											</tspan>
@@ -7751,93 +7721,93 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="66.60000000000001" data-time-end="67.2" class="note" id="e48-m-971">
+                           <g data-time-start="61.800000000000004" data-time-end="62.400000000000006" class="note" id="e48-m-971">
                               								
-                              <use xlink:href="#E0A3" x="6323" y="45195" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="6323" y="45025" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="6323" y="45217" height="608" width="18"></rect>
+                                 <rect x="6323" y="45047" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1018">
                                  									
                                  <g class="syl" id="e48-m-1019">
                                     										
-                                    <text x="6233" y="46407" font-size="0px">
+                                    <text x="6233" y="46237" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000491890354">
+                                       <tspan class="text" id="text-0000000900852758">
                                           												
                                           <tspan font-size="405px" class="text">su</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="6906" y="46308" height="18" width="108"></rect>
+                                    <rect x="6906" y="46138" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="67.2" data-time-end="67.80000000000001" class="note" id="e48-m-972">
+                           <g data-time-start="62.400000000000006" data-time-end="63" class="note" id="e48-m-972">
                               								
-                              <use xlink:href="#E0A3" x="7416" y="45465" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="7416" y="45295" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="7416" y="45487" height="608" width="18"></rect>
+                                 <rect x="7416" y="45317" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1020">
                                  									
                                  <g class="syl" id="e48-m-1021">
                                     										
-                                    <text x="7326" y="46407" font-size="0px">
+                                    <text x="7326" y="46237" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001619142907">
+                                       <tspan class="text" id="text-0000000644896072">
                                           												
                                           <tspan font-size="405px" class="text">do</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="8021" y="46308" height="18" width="108"></rect>
+                                    <rect x="8021" y="46138" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="67.80000000000001" data-time-end="68.4" class="note" id="e48-m-973">
+                           <g data-time-start="63" data-time-end="63.6" class="note" id="e48-m-973">
                               								
-                              <use xlink:href="#E0A3" x="8508" y="45285" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="8508" y="45115" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="8508" y="45307" height="608" width="18"></rect>
+                                 <rect x="8508" y="45137" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1022">
                                  									
                                  <g class="syl" id="e48-m-1023">
                                     										
-                                    <text x="8418" y="46407" font-size="0px">
+                                    <text x="8418" y="46237" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001929443577">
+                                       <tspan class="text" id="text-0000001073128180">
                                           												
                                           <tspan font-size="405px" class="text">ri</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="9093" y="46308" height="18" width="108"></rect>
+                                    <rect x="9093" y="46138" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000141073660">
+                     <g class="barLineAttr" id="bline-0000001380887108">
                         						
-                        <path d="M9600 42365 L9600 41645" stroke="#000000" stroke-width="27"></path>
+                        <path d="M9600 42195 L9600 41475" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M9600 43805 L9600 43085" stroke="#000000" stroke-width="27"></path>
+                        <path d="M9600 43635 L9600 42915" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M9600 45825 L9600 45105" stroke="#000000" stroke-width="27"></path>
+                        <path d="M9600 45655 L9600 44935" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -7847,48 +7817,48 @@
                      					
                      <g class="staff" id="e48-m-980">
                         						
-                        <path d="M9613 41645 L15088 41645" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 41475 L15088 41475" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 41825 L15088 41825" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 41655 L15088 41655" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 42005 L15088 42005" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 41835 L15088 41835" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 42185 L15088 42185" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 42015 L15088 42015" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 42365 L15088 42365" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 42195 L15088 42195" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-981">
                            							
-                           <g data-time-start="68.46000000000001" data-time-end="69.6" class="note" id="e48-m-982">
+                           <g data-time-start="63.66" data-time-end="64.80000000000001" class="note" id="e48-m-982">
                               								
-                              <use xlink:href="#E0A2" x="9801" y="41915" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="9801" y="41745" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-989">
                                  									
                                  <g class="syl" id="e48-m-990">
                                     										
-                                    <text x="9711" y="42947" font-size="0px">
+                                    <text x="9711" y="42777" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001645375386">
+                                       <tspan class="text" id="text-0000000900678552">
                                           												
                                           <tspan font-size="405px" class="text">do</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="10805" y="42848" height="18" width="108"></rect>
+                                    <rect x="10805" y="42678" height="18" width="108"></rect>
                                     										
-                                    <rect x="12005" y="42848" height="18" width="108"></rect>
+                                    <rect x="12005" y="42678" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="69.6" data-time-end="70.19999999999999" class="note" id="e48-m-983">
+                           <g data-time-start="64.80000000000001" data-time-end="65.4" class="note" id="e48-m-983">
                               								
-                              <use xlink:href="#E0A3" x="12891" y="42005" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="12891" y="41835" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="12891" y="42027" height="608" width="18"></rect>
+                                 <rect x="12891" y="41857" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-984"></g>
@@ -7897,26 +7867,26 @@
                                  									
                                  <g class="syl" id="e48-m-992">
                                     										
-                                    <text x="12801" y="42947" font-size="0px">
+                                    <text x="12801" y="42777" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001943905574">
+                                       <tspan class="text" id="text-0000002030301479">
                                           												
                                           <tspan font-size="405px" class="text">ri</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="13418" y="42848" height="18" width="108"></rect>
+                                    <rect x="13418" y="42678" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="70.19999999999999" data-time-end="70.8" class="note" id="e48-m-985">
+                           <g data-time-start="65.4" data-time-end="66" class="note" id="e48-m-985">
                               								
-                              <use xlink:href="#E0A3" x="13983" y="42005" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="13983" y="41835" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="13983" y="42027" height="608" width="18"></rect>
+                                 <rect x="13983" y="41857" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-986"></g>
@@ -7925,9 +7895,9 @@
                                  									
                                  <g class="syl" id="e48-m-994">
                                     										
-                                    <text x="13893" y="42947" font-size="0px">
+                                    <text x="13893" y="42777" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000966576126">
+                                       <tspan class="text" id="text-0000000173240300">
                                           												
                                           <tspan font-size="405px" class="text">bus,</tspan>
                                           											</tspan>
@@ -7940,29 +7910,29 @@
                      					
                      <g class="staff" id="e48-m-995">
                         						
-                        <path d="M9613 43085 L15088 43085" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 42915 L15088 42915" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 43265 L15088 43265" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 43095 L15088 43095" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 43445 L15088 43445" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 43275 L15088 43275" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 43625 L15088 43625" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 43455 L15088 43455" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 43805 L15088 43805" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 43635 L15088 43635" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-996">
                            							
-                           <g data-time-start="68.46000000000001" data-time-end="69.6" class="note" id="e48-m-997">
+                           <g data-time-start="63.66" data-time-end="64.80000000000001" class="note" id="e48-m-997">
                               								
-                              <use xlink:href="#E0A2" x="9801" y="43805" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="9801" y="43635" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1001">
                                  									
                                  <g class="syl" id="e48-m-1002">
                                     										
-                                    <text x="9711" y="44302" font-size="0px">
+                                    <text x="9711" y="44132" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000157019138">
+                                       <tspan class="text" id="text-0000000273233515">
                                           												
                                           <tspan font-size="405px" class="text">rat,</tspan>
                                           											</tspan>
@@ -7974,32 +7944,32 @@
                                  									
                                  <g class="syl" id="e48-m-1006">
                                     										
-                                    <text x="9711" y="44702" font-size="0px">
+                                    <text x="9711" y="44532" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000771540162">
+                                       <tspan class="text" id="text-0000000292178989">
                                           												
                                           <tspan font-size="405px" class="text">tra</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="10817" y="44603" height="18" width="108"></rect>
+                                    <rect x="10817" y="44433" height="18" width="108"></rect>
                                     										
-                                    <rect x="12017" y="44603" height="18" width="108"></rect>
+                                    <rect x="12017" y="44433" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="69.6" data-time-end="70.8" class="note" id="e48-m-998">
+                           <g data-time-start="64.80000000000001" data-time-end="66" class="note" id="e48-m-998">
                               								
-                              <use xlink:href="#E0A2" x="12891" y="43895" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="12891" y="43725" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1007">
                                  									
                                  <g class="syl" id="e48-m-1008">
                                     										
-                                    <text x="12801" y="44702" font-size="0px">
+                                    <text x="12801" y="44532" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000183694537">
+                                       <tspan class="text" id="text-0000001825597405">
                                           												
                                           <tspan font-size="405px" class="text">que,</tspan>
                                           											</tspan>
@@ -8011,15 +7981,15 @@
                                  									
                                  <g class="syl" id="e48-m-1069">
                                     										
-                                    <text x="12801" y="44302" font-size="0px">
+                                    <text x="12801" y="44132" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001750956058">
+                                       <tspan class="text" id="text-0000000866384160">
                                           												
                                           <tspan font-size="405px" class="text">su</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="14120" y="44203" height="18" width="108"></rect>
+                                    <rect x="14120" y="44033" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -8028,34 +7998,34 @@
                      					
                      <g class="staff" id="e48-m-1009">
                         						
-                        <path d="M9613 45105 L15088 45105" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 44935 L15088 44935" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 45285 L15088 45285" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 45115 L15088 45115" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 45465 L15088 45465" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 45295 L15088 45295" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 45645 L15088 45645" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 45475 L15088 45475" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M9613 45825 L15088 45825" stroke="#000000" stroke-width="13"></path>
+                        <path d="M9613 45655 L15088 45655" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-1010">
                            							
-                           <g data-time-start="68.46000000000001" data-time-end="68.7" class="note" id="e48-m-1011">
+                           <g data-time-start="63.66" data-time-end="63.9" class="note" id="e48-m-1011">
                               								
-                              <use xlink:href="#E0A4" x="9801" y="45555" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="9801" y="45385" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="10009" y="44925" height="608" width="18"></rect>
+                                 <rect x="10009" y="44755" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1024">
                                  									
                                  <g class="syl" id="e48-m-1025">
                                     										
-                                    <text x="9627" y="46407" font-size="0px">
+                                    <text x="9627" y="46237" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001623327065">
+                                       <tspan class="text" id="text-0000001548649330">
                                           												
                                           <tspan font-size="405px" class="text">bus,</tspan>
                                           											</tspan>
@@ -8066,83 +8036,83 @@
                            							
                            <g class="beam" id="e48-m-1013">
                               								
-                              <polygon points="10727,44883 11213,44836 11213,44926 10727,44973 "></polygon>
+                              <polygon points="10727,44713 11213,44666 11213,44756 10727,44803 "></polygon>
                               								
-                              <g data-time-start="68.7" data-time-end="68.82000000000001" class="note" id="e48-m-1012">
+                              <g data-time-start="63.9" data-time-end="64.02" class="note" id="e48-m-1012">
                                  									
-                                 <use xlink:href="#E0A4" x="10519" y="45555" height="720px" width="720px"></use>
+                                 <use xlink:href="#E0A4" x="10519" y="45385" height="720px" width="720px"></use>
                                  									
                                  <g class="stem">
                                     										
-                                    <rect x="10727" y="44901" height="632" width="18"></rect>
+                                    <rect x="10727" y="44731" height="632" width="18"></rect>
                                     									</g>
                                  									
                                  <g class="verse" id="e48-m-1046">
                                     										
                                     <g class="syl" id="e48-m-1047">
                                        											
-                                       <text x="10429" y="46407" font-size="0px">
+                                       <text x="10429" y="46237" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001796273125">
+                                          <tspan class="text" id="text-0000000567594525">
                                              													
                                              <tspan font-size="405px" class="text">al</tspan>
                                              												</tspan>
                                           											</text>
                                        											
-                                       <rect x="11700" y="46308" height="18" width="108"></rect>
+                                       <rect x="11700" y="46138" height="18" width="108"></rect>
                                        											
-                                       <rect x="12900" y="46308" height="18" width="108"></rect>
+                                       <rect x="12900" y="46138" height="18" width="108"></rect>
                                        											
-                                       <rect x="14100" y="46308" height="18" width="108"></rect>
+                                       <rect x="14100" y="46138" height="18" width="108"></rect>
                                        										</g>
                                     									</g>
                                  								</g>
                               								
-                              <g data-time-start="68.88" data-time-end="69.00000000000001" class="note" id="e48-m-1014">
+                              <g data-time-start="64.08" data-time-end="64.2" class="note" id="e48-m-1014">
                                  									
-                                 <use xlink:href="#E0A4" x="10987" y="45465" height="720px" width="720px"></use>
+                                 <use xlink:href="#E0A4" x="10987" y="45295" height="720px" width="720px"></use>
                                  									
                                  <g class="stem">
                                     										
-                                    <rect x="11195" y="44854" height="589" width="18"></rect>
+                                    <rect x="11195" y="44684" height="589" width="18"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="69.00000000000001" data-time-end="69.3" class="note" id="e48-m-1015">
+                           <g data-time-start="64.2" data-time-end="64.5" class="note" id="e48-m-1015">
                               								
-                              <use xlink:href="#E0A4" x="11455" y="45375" height="720px" width="720px"></use>
-                              								
-                              <g class="stem">
-                                 									
-                                 <rect x="11455" y="45397" height="608" width="18"></rect>
-                                 								</g>
-                              							</g>
-                           							
-                           <g data-time-start="69.3" data-time-end="69.6" class="note" id="e48-m-1016">
-                              								
-                              <use xlink:href="#E0A4" x="12173" y="45555" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="11455" y="45205" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="12381" y="44925" height="608" width="18"></rect>
+                                 <rect x="11455" y="45227" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="69.6" data-time-end="70.8" class="note" id="e48-m-1017">
+                           <g data-time-start="64.5" data-time-end="64.80000000000001" class="note" id="e48-m-1016">
                               								
-                              <use xlink:href="#E0A2" x="12891" y="45195" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="12173" y="45385" height="720px" width="720px"></use>
+                              								
+                              <g class="stem">
+                                 									
+                                 <rect x="12381" y="44755" height="608" width="18"></rect>
+                                 								</g>
+                              							</g>
+                           							
+                           <g data-time-start="64.80000000000001" data-time-end="66" class="note" id="e48-m-1017">
+                              								
+                              <use xlink:href="#E0A2" x="12891" y="45025" height="720px" width="720px"></use>
                               							</g>
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001160842105">
+                     <g class="barLineAttr" id="bline-0000000601101578">
                         						
-                        <path d="M15075 42365 L15075 41645" stroke="#000000" stroke-width="27"></path>
+                        <path d="M15075 42195 L15075 41475" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M15075 43805 L15075 43085" stroke="#000000" stroke-width="27"></path>
+                        <path d="M15075 43635 L15075 42915" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M15075 45825 L15075 45105" stroke="#000000" stroke-width="27"></path>
+                        <path d="M15075 45655 L15075 44935" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -8150,60 +8120,60 @@
                      					
                      <g class="staff" id="e48-m-1027">
                         						
-                        <path d="M15088 41645 L20002 41645" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 41475 L20002 41475" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 41825 L20002 41825" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 41655 L20002 41655" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 42005 L20002 42005" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 41835 L20002 41835" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 42185 L20002 42185" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 42015 L20002 42015" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 42365 L20002 42365" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 42195 L20002 42195" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-1028">
                            							
-                           <g data-time-start="70.86" data-time-end="71.39999999999999" class="note" id="e48-m-1029">
+                           <g data-time-start="66.06" data-time-end="66.60000000000001" class="note" id="e48-m-1029">
                               								
-                              <use xlink:href="#E0A3" x="15276" y="42095" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="15276" y="41925" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="15484" y="41465" height="608" width="18"></rect>
+                                 <rect x="15484" y="41295" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1032">
                                  									
                                  <g class="syl" id="e48-m-1033">
                                     										
-                                    <text x="15186" y="42947" font-size="0px">
+                                    <text x="15186" y="42777" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000333726837">
+                                       <tspan class="text" id="text-0000000360327272">
                                           												
                                           <tspan font-size="405px" class="text">al</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="15824" y="42848" height="18" width="108"></rect>
+                                    <rect x="15824" y="42678" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="71.39999999999999" data-time-end="72" class="note" id="e48-m-1030">
+                           <g data-time-start="66.60000000000001" data-time-end="67.2" class="note" id="e48-m-1030">
                               								
-                              <use xlink:href="#E0A3" x="16368" y="42095" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="16368" y="41925" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="16576" y="41465" height="608" width="18"></rect>
+                                 <rect x="16576" y="41295" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1034">
                                  									
                                  <g class="syl" id="e48-m-1035">
                                     										
-                                    <text x="16278" y="42947" font-size="0px">
+                                    <text x="16278" y="42777" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001753303267">
+                                       <tspan class="text" id="text-0000001800485926">
                                           												
                                           <tspan font-size="405px" class="text">vo,</tspan>
                                           											</tspan>
@@ -8212,23 +8182,23 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="72" data-time-end="73.2" class="note" id="e48-m-1031">
+                           <g data-time-start="67.2" data-time-end="68.4" class="note" id="e48-m-1031">
                               								
-                              <use xlink:href="#E0A2" x="17461" y="41825" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="17461" y="41655" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1056">
                                  									
                                  <g class="syl" id="e48-m-1057">
                                     										
-                                    <text x="17371" y="42947" font-size="0px">
+                                    <text x="17371" y="42777" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001527643908">
+                                       <tspan class="text" id="text-0000001044136079">
                                           												
                                           <tspan font-size="405px" class="text">O</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="18765" y="42848" height="18" width="108"></rect>
+                                    <rect x="18765" y="42678" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -8237,35 +8207,35 @@
                      					
                      <g class="staff" id="e48-m-1036">
                         						
-                        <path d="M15088 43085 L20002 43085" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 42915 L20002 42915" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 43265 L20002 43265" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 43095 L20002 43095" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 43445 L20002 43445" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 43275 L20002 43275" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 43625 L20002 43625" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 43455 L20002 43455" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 43805 L20002 43805" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 43635 L20002 43635" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-1037">
                            							
-                           <g data-time-start="70.86" data-time-end="72" class="note" id="e48-m-1038">
+                           <g data-time-start="66.06" data-time-end="67.2" class="note" id="e48-m-1038">
                               								
-                              <use xlink:href="#E0A2" x="15276" y="43265" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="15276" y="43095" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1070">
                                  									
                                  <g class="syl" id="e48-m-1071">
                                     										
-                                    <text x="15186" y="44302" font-size="0px">
+                                    <text x="15186" y="44132" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000203461427">
+                                       <tspan class="text" id="text-0000000587643146">
                                           												
                                           <tspan font-size="405px" class="text">do</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="16427" y="44203" height="18" width="108"></rect>
+                                    <rect x="16427" y="44033" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -8273,36 +8243,36 @@
                                  									
                                  <g class="syl" id="e48-m-1077">
                                     										
-                                    <text x="15186" y="44702" font-size="0px">
+                                    <text x="15186" y="44532" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000220323732">
+                                       <tspan class="text" id="text-0000001436737322">
                                           												
                                           <tspan font-size="405px" class="text">u</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="16326" y="44603" height="18" width="108"></rect>
+                                    <rect x="16326" y="44433" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="72" data-time-end="73.2" class="note" id="e48-m-1039">
+                           <g data-time-start="67.2" data-time-end="68.4" class="note" id="e48-m-1039">
                               								
-                              <use xlink:href="#E0A2" x="17461" y="43535" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="17461" y="43365" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1072">
                                  									
                                  <g class="syl" id="e48-m-1073">
                                     										
-                                    <text x="17371" y="44302" font-size="0px">
+                                    <text x="17371" y="44132" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001605601980">
+                                       <tspan class="text" id="text-0000000589791862">
                                           												
                                           <tspan font-size="405px" class="text">ri</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="18751" y="44203" height="18" width="108"></rect>
+                                    <rect x="18751" y="44033" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -8310,15 +8280,15 @@
                                  									
                                  <g class="syl" id="e48-m-1079">
                                     										
-                                    <text x="17371" y="44702" font-size="0px">
+                                    <text x="17371" y="44532" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000890955093">
+                                       <tspan class="text" id="text-0000001963913683">
                                           												
                                           <tspan font-size="405px" class="text">tra</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="18841" y="44603" height="18" width="108"></rect>
+                                    <rect x="18841" y="44433" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -8327,34 +8297,34 @@
                      					
                      <g class="staff" id="e48-m-1040">
                         						
-                        <path d="M15088 45105 L20002 45105" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 44935 L20002 44935" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 45285 L20002 45285" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 45115 L20002 45115" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 45465 L20002 45465" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 45295 L20002 45295" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 45645 L20002 45645" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 45475 L20002 45475" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M15088 45825 L20002 45825" stroke="#000000" stroke-width="13"></path>
+                        <path d="M15088 45655 L20002 45655" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-1041">
                            							
-                           <g data-time-start="70.86" data-time-end="71.39999999999999" class="note" id="e48-m-1042">
+                           <g data-time-start="66.06" data-time-end="66.60000000000001" class="note" id="e48-m-1042">
                               								
-                              <use xlink:href="#E0A3" x="15276" y="45285" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="15276" y="45115" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="15276" y="45307" height="608" width="18"></rect>
+                                 <rect x="15276" y="45137" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1048">
                                  									
                                  <g class="syl" id="e48-m-1049">
                                     										
-                                    <text x="15186" y="46407" font-size="0px">
+                                    <text x="15186" y="46237" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000468469402">
+                                       <tspan class="text" id="text-0000000103687302">
                                           												
                                           <tspan font-size="405px" class="text">vo,</tspan>
                                           											</tspan>
@@ -8363,93 +8333,93 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="71.39999999999999" data-time-end="72.30000000000001" class="note" id="e48-m-1043">
+                           <g data-time-start="66.60000000000001" data-time-end="67.5" class="note" id="e48-m-1043">
                               								
-                              <use xlink:href="#E0A3" x="16368" y="45465" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="16368" y="45295" height="720px" width="720px"></use>
                               								
-                              <g class="dots" id="dots-0000001850540382">
+                              <g class="dots" id="dots-0000001925120483">
                                  									
-                                 <ellipse cx="16684" cy="45375" rx="36" ry="36"></ellipse>
+                                 <ellipse cx="16684" cy="45205" rx="36" ry="36"></ellipse>
                                  								</g>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="16368" y="45487" height="608" width="18"></rect>
+                                 <rect x="16368" y="45317" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1090">
                                  									
                                  <g class="syl" id="e48-m-1091">
                                     										
-                                    <text x="16278" y="46407" font-size="0px">
+                                    <text x="16278" y="46237" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000063134725">
+                                       <tspan class="text" id="text-0000001591471198">
                                           												
                                           <tspan font-size="405px" class="text">Or</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="17687" y="46308" height="18" width="108"></rect>
+                                    <rect x="17687" y="46138" height="18" width="108"></rect>
                                     										
-                                    <rect x="18887" y="46308" height="18" width="108"></rect>
+                                    <rect x="18887" y="46138" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="72.30000000000001" data-time-end="72.6" class="note" id="e48-m-1044">
+                           <g data-time-start="67.5" data-time-end="67.80000000000001" class="note" id="e48-m-1044">
                               								
-                              <use xlink:href="#E0A4" x="18178" y="45375" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="18178" y="45205" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="18178" y="45397" height="608" width="18"></rect>
+                                 <rect x="18178" y="45227" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="72.6" data-time-end="73.2" class="note" id="e48-m-1045">
+                           <g data-time-start="67.80000000000001" data-time-end="68.4" class="note" id="e48-m-1045">
                               								
-                              <use xlink:href="#E0A3" x="18896" y="45285" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="18896" y="45115" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="18896" y="45307" height="608" width="18"></rect>
+                                 <rect x="18896" y="45137" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000060055307">
+                     <g class="barLineAttr" id="bline-0000001971623440">
                         						
-                        <path d="M19989 42365 L19989 41645" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 42195 L19989 41475" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M19989 43805 L19989 43085" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 43635 L19989 42915" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M19989 45825 L19989 45105" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 45655 L19989 44935" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000000616748602">
+               <g class="system" id="system-0000001636587513">
                   				
-                  <polygon points="-270,46905 270,46545 270,46410 -270,46770 "></polygon>
+                  <polygon points="-270,46735 270,46375 270,46240 -270,46600 "></polygon>
                   				
-                  <polygon points="-270,46725 270,46365 270,46230 -270,46590 "></polygon>
+                  <polygon points="-270,46555 270,46195 270,46060 -270,46420 "></polygon>
                   				
-                  <path d="M13 47535 L13 51620" stroke="#000000" stroke-width="27"></path>
+                  <path d="M13 47365 L13 51450" stroke="#000000" stroke-width="27"></path>
                   				
-                  <use xlink:href="#E003" x="-154" y="47535" height="720px" width="720px"></use>
+                  <use xlink:href="#E003" x="-154" y="47365" height="720px" width="720px"></use>
                   				
-                  <use xlink:href="#E004" x="-154" y="51620" height="720px" width="720px"></use>
+                  <use xlink:href="#E004" x="-154" y="51450" height="720px" width="720px"></use>
                   				
-                  <rect x="-154" y="47517" height="4121" width="90"></rect>
+                  <rect x="-154" y="47347" height="4121" width="90"></rect>
                   				
                   <g class="measure" id="e48-m-1050">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000000351126244">
+                     <g class="mNum autogenerated" id="mnum-0000001232620769">
                         						
-                        <text x="0" y="47265" text-anchor="middle" font-size="0px">
+                        <text x="0" y="47095" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000000093720952">
+                           <tspan class="text" id="text-0000002030005621">
                               								
                               <tspan font-size="324px" class="text">27</tspan>
                               							</tspan>
@@ -8458,70 +8428,70 @@
                      					
                      <g class="staff" id="e48-m-1051">
                         						
-                        <path d="M0 47535 L6958 47535" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 47365 L6958 47365" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 47715 L6958 47715" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 47545 L6958 47545" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 47895 L6958 47895" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 47725 L6958 47725" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 48075 L6958 48075" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 47905 L6958 47905" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 48255 L6958 48255" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 48085 L6958 48085" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000395363363">
+                        <g class="clef" id="clef-0000000588824813">
                            							
-                           <use xlink:href="#E050" x="90" y="48075" height="720px" width="720px"></use>
+                           <use xlink:href="#E050" x="90" y="47905" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000557638123">
+                        <g class="keySig" id="keysig-0000000773986715">
                            							
-                           <use xlink:href="#E260" x="771" y="47895" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="47725" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-1052">
                            							
-                           <g data-time-start="73.25999999999999" data-time-end="73.8" class="note" id="e48-m-1053">
+                           <g data-time-start="68.46000000000001" data-time-end="69.00000000000001" class="note" id="e48-m-1053">
                               								
-                              <use xlink:href="#E0A3" x="1216" y="47625" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="1216" y="47455" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="1216" y="47647" height="608" width="18"></rect>
+                                 <rect x="1216" y="47477" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1058">
                                  									
                                  <g class="syl" id="e48-m-1059">
                                     										
-                                    <text x="1126" y="48837" font-size="0px">
+                                    <text x="1126" y="48667" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001712910418">
+                                       <tspan class="text" id="text-0000000675106388">
                                           												
                                           <tspan font-size="405px" class="text">re</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2043" y="48738" height="18" width="108"></rect>
+                                    <rect x="2043" y="48568" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="73.8" data-time-end="74.4" class="note" id="e48-m-1054">
+                           <g data-time-start="69.00000000000001" data-time-end="69.6" class="note" id="e48-m-1054">
                               								
-                              <use xlink:href="#E0A3" x="2842" y="47625" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="2842" y="47455" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="2842" y="47647" height="608" width="18"></rect>
+                                 <rect x="2842" y="47477" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1060">
                                  									
                                  <g class="syl" id="e48-m-1061">
                                     										
-                                    <text x="2752" y="48837" font-size="0px">
+                                    <text x="2752" y="48667" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000405338961">
+                                       <tspan class="text" id="text-0000001972599753">
                                           												
                                           <tspan font-size="405px" class="text">que,</tspan>
                                           											</tspan>
@@ -8530,17 +8500,17 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="74.4" data-time-end="75.6" class="note" id="e48-m-1055">
+                           <g data-time-start="69.6" data-time-end="70.8" class="note" id="e48-m-1055">
                               								
-                              <use xlink:href="#E0A2" x="4469" y="47715" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="4469" y="47545" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1062">
                                  									
                                  <g class="syl" id="e48-m-1063">
                                     										
-                                    <text x="4379" y="48837" font-size="0px">
+                                    <text x="4379" y="48667" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002010826089">
+                                       <tspan class="text" id="text-0000002030689482">
                                           												
                                           <tspan font-size="405px" class="text">mox</tspan>
                                           											</tspan>
@@ -8553,39 +8523,39 @@
                      					
                      <g class="staff" id="e48-m-1064">
                         						
-                        <path d="M0 48975 L6958 48975" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 48805 L6958 48805" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 49155 L6958 49155" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 48985 L6958 48985" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 49335 L6958 49335" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 49165 L6958 49165" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 49515 L6958 49515" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 49345 L6958 49345" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 49695 L6958 49695" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 49525 L6958 49525" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000605297753">
+                        <g class="clef" id="clef-0000001086269126">
                            							
-                           <use xlink:href="#E050" x="90" y="49515" height="720px" width="720px"></use>
+                           <use xlink:href="#E050" x="90" y="49345" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000609298832">
+                        <g class="keySig" id="keysig-0000001166717535">
                            							
-                           <use xlink:href="#E260" x="771" y="49335" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="49165" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-1065">
                            							
-                           <g data-time-start="73.25999999999999" data-time-end="74.4" class="note" id="e48-m-1066">
+                           <g data-time-start="68.46000000000001" data-time-end="69.6" class="note" id="e48-m-1066">
                               								
-                              <use xlink:href="#E0A2" x="1216" y="49245" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="1216" y="49075" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1074">
                                  									
                                  <g class="syl" id="e48-m-1075">
                                     										
-                                    <text x="1126" y="50187" font-size="0px">
+                                    <text x="1126" y="50017" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000632941140">
+                                       <tspan class="text" id="text-0000001425352052">
                                           												
                                           <tspan font-size="405px" class="text">bus,</tspan>
                                           											</tspan>
@@ -8597,9 +8567,9 @@
                                  									
                                  <g class="syl" id="e48-m-1081">
                                     										
-                                    <text x="1126" y="50587" font-size="0px">
+                                    <text x="1126" y="50417" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000043361202">
+                                       <tspan class="text" id="text-0000001058305184">
                                           												
                                           <tspan font-size="405px" class="text">que</tspan>
                                           											</tspan>
@@ -8608,25 +8578,25 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="74.4" data-time-end="75.6" class="note" id="e48-m-1067">
+                           <g data-time-start="69.6" data-time-end="70.8" class="note" id="e48-m-1067">
                               								
-                              <use xlink:href="#E0A2" x="4469" y="49515" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="4469" y="49345" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1117">
                                  									
                                  <g class="syl" id="e48-m-1118">
                                     										
-                                    <text x="4379" y="50587" font-size="0px">
+                                    <text x="4379" y="50417" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000037923129">
+                                       <tspan class="text" id="text-0000000551624708">
                                           												
                                           <tspan font-size="405px" class="text">ma</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="5439" y="50488" height="18" width="108"></rect>
+                                    <rect x="5439" y="50318" height="18" width="108"></rect>
                                     										
-                                    <rect x="6639" y="50488" height="18" width="108"></rect>
+                                    <rect x="6639" y="50318" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -8634,17 +8604,17 @@
                                  									
                                  <g class="syl" id="e48-m-1155">
                                     										
-                                    <text x="4379" y="50187" font-size="0px">
+                                    <text x="4379" y="50017" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000229112471">
+                                       <tspan class="text" id="text-0000000470473129">
                                           												
                                           <tspan font-size="405px" class="text">su</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="5372" y="50088" height="18" width="108"></rect>
+                                    <rect x="5372" y="49918" height="18" width="108"></rect>
                                     										
-                                    <rect x="6572" y="50088" height="18" width="108"></rect>
+                                    <rect x="6572" y="49918" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -8653,102 +8623,102 @@
                      					
                      <g class="staff" id="e48-m-1082">
                         						
-                        <path d="M0 50900 L6958 50900" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 50730 L6958 50730" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 51080 L6958 51080" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 50910 L6958 50910" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 51260 L6958 51260" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 51090 L6958 51090" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 51440 L6958 51440" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 51270 L6958 51270" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 51620 L6958 51620" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 51450 L6958 51450" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001283440528">
+                        <g class="clef" id="clef-0000000348429988">
                            							
-                           <use xlink:href="#E062" x="90" y="51080" height="720px" width="720px"></use>
+                           <use xlink:href="#E062" x="90" y="50910" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001459203628">
+                        <g class="keySig" id="keysig-0000002022386594">
                            							
-                           <use xlink:href="#E260" x="771" y="51440" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="51270" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-1083">
                            							
-                           <g data-time-start="73.25999999999999" data-time-end="73.5" class="note" id="e48-m-1084">
+                           <g data-time-start="68.46000000000001" data-time-end="68.7" class="note" id="e48-m-1084">
                               								
-                              <use xlink:href="#E0A4" x="1216" y="51350" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="1216" y="51180" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="1424" y="50720" height="608" width="18"></rect>
+                                 <rect x="1424" y="50550" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1092">
                                  									
                                  <g class="syl" id="e48-m-1093">
                                     										
-                                    <text x="1126" y="52202" font-size="0px">
+                                    <text x="1126" y="52032" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000489149952">
+                                       <tspan class="text" id="text-0000001106105877">
                                           												
                                           <tspan font-size="405px" class="text">re</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2257" y="52103" height="18" width="108"></rect>
+                                    <rect x="2257" y="51933" height="18" width="108"></rect>
                                     										
-                                    <rect x="3457" y="52103" height="18" width="108"></rect>
+                                    <rect x="3457" y="51933" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="73.5" data-time-end="73.8" class="note" id="e48-m-1085">
+                           <g data-time-start="68.7" data-time-end="69.00000000000001" class="note" id="e48-m-1085">
                               								
-                              <use xlink:href="#E0A4" x="2029" y="51260" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="2029" y="51090" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="2029" y="51282" height="608" width="18"></rect>
+                                 <rect x="2029" y="51112" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="73.8" data-time-end="74.10000000000001" class="note" id="e48-m-1086">
+                           <g data-time-start="69.00000000000001" data-time-end="69.3" class="note" id="e48-m-1086">
                               								
-                              <use xlink:href="#E0A4" x="2842" y="51170" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="2842" y="51000" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="2842" y="51192" height="608" width="18"></rect>
+                                 <rect x="2842" y="51022" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="74.10000000000001" data-time-end="74.4" class="note" id="e48-m-1087">
+                           <g data-time-start="69.3" data-time-end="69.6" class="note" id="e48-m-1087">
                               								
-                              <use xlink:href="#E0A4" x="3656" y="51080" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="3656" y="50910" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="3656" y="51102" height="608" width="18"></rect>
+                                 <rect x="3656" y="50932" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="74.4" data-time-end="75" class="note" id="e48-m-1088">
+                           <g data-time-start="69.6" data-time-end="70.19999999999999" class="note" id="e48-m-1088">
                               								
-                              <use xlink:href="#E0A3" x="4469" y="50990" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="4469" y="50820" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="4469" y="51012" height="608" width="18"></rect>
+                                 <rect x="4469" y="50842" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1094">
                                  									
                                  <g class="syl" id="e48-m-1095">
                                     										
-                                    <text x="4379" y="52202" font-size="0px">
+                                    <text x="4379" y="52032" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001638904351">
+                                       <tspan class="text" id="text-0000001022315166">
                                           												
                                           <tspan font-size="405px" class="text">que,</tspan>
                                           											</tspan>
@@ -8757,22 +8727,22 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="75" data-time-end="75.6" class="note" id="e48-m-1089">
+                           <g data-time-start="70.19999999999999" data-time-end="70.8" class="note" id="e48-m-1089">
                               								
-                              <use xlink:href="#E0A3" x="5707" y="51620" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="5707" y="51450" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="5915" y="50990" height="608" width="18"></rect>
+                                 <rect x="5915" y="50820" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1096">
                                  									
                                  <g class="syl" id="e48-m-1097">
                                     										
-                                    <text x="5617" y="52202" font-size="0px">
+                                    <text x="5617" y="52032" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001709536646">
+                                       <tspan class="text" id="text-0000001617576933">
                                           												
                                           <tspan font-size="405px" class="text">mox</tspan>
                                           											</tspan>
@@ -8783,13 +8753,13 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000427888194">
+                     <g class="barLineAttr" id="bline-0000001499535150">
                         						
-                        <path d="M6945 48255 L6945 47535" stroke="#000000" stroke-width="27"></path>
+                        <path d="M6945 48085 L6945 47365" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M6945 49695 L6945 48975" stroke="#000000" stroke-width="27"></path>
+                        <path d="M6945 49525 L6945 48805" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M6945 51620 L6945 50900" stroke="#000000" stroke-width="27"></path>
+                        <path d="M6945 51450 L6945 50730" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -8799,25 +8769,25 @@
                      					
                      <g class="staff" id="e48-m-1100">
                         						
-                        <path d="M6958 47535 L13085 47535" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 47365 L13085 47365" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 47715 L13085 47715" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 47545 L13085 47545" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 47895 L13085 47895" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 47725 L13085 47725" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 48075 L13085 48075" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 47905 L13085 47905" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 48255 L13085 48255" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 48085 L13085 48085" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-1101">
                            							
-                           <g data-time-start="75.66" data-time-end="76.2" class="note" id="e48-m-1102">
+                           <g data-time-start="70.86" data-time-end="71.39999999999999" class="note" id="e48-m-1102">
                               								
-                              <use xlink:href="#E0A3" x="7402" y="47895" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="7402" y="47725" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="7402" y="47917" height="608" width="18"></rect>
+                                 <rect x="7402" y="47747" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-1103"></g>
@@ -8826,26 +8796,26 @@
                                  									
                                  <g class="syl" id="e48-m-1108">
                                     										
-                                    <text x="7312" y="48837" font-size="0px">
+                                    <text x="7312" y="48667" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000043754093">
+                                       <tspan class="text" id="text-0000000602379077">
                                           												
                                           <tspan font-size="405px" class="text">tin</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="8091" y="48738" height="18" width="108"></rect>
+                                    <rect x="8091" y="48568" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="76.2" data-time-end="76.8" class="note" id="e48-m-1104">
+                           <g data-time-start="71.39999999999999" data-time-end="72" class="note" id="e48-m-1104">
                               								
-                              <use xlink:href="#E0A3" x="8640" y="47895" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="8640" y="47725" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="8640" y="47917" height="608" width="18"></rect>
+                                 <rect x="8640" y="47747" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-1105"></g>
@@ -8854,9 +8824,9 @@
                                  									
                                  <g class="syl" id="e48-m-1110">
                                     										
-                                    <text x="8550" y="48837" font-size="0px">
+                                    <text x="8550" y="48667" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000543496181">
+                                       <tspan class="text" id="text-0000001563759718">
                                           												
                                           <tspan font-size="405px" class="text">cta</tspan>
                                           											</tspan>
@@ -8865,17 +8835,17 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="76.8" data-time-end="78" class="note" id="e48-m-1106">
+                           <g data-time-start="72" data-time-end="73.2" class="note" id="e48-m-1106">
                               								
-                              <use xlink:href="#E0A2" x="9877" y="47805" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="9877" y="47635" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1111">
                                  									
                                  <g class="syl" id="e48-m-1112">
                                     										
-                                    <text x="9787" y="48837" font-size="0px">
+                                    <text x="9787" y="48667" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000248122133">
+                                       <tspan class="text" id="text-0000002055734244">
                                           												
                                           <tspan font-size="405px" class="text">est</tspan>
                                           											</tspan>
@@ -8888,29 +8858,29 @@
                      					
                      <g class="staff" id="e48-m-1113">
                         						
-                        <path d="M6958 48975 L13085 48975" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 48805 L13085 48805" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 49155 L13085 49155" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 48985 L13085 48985" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 49335 L13085 49335" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 49165 L13085 49165" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 49515 L13085 49515" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 49345 L13085 49345" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 49695 L13085 49695" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 49525 L13085 49525" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-1114">
                            							
-                           <g data-time-start="75.66" data-time-end="76.8" class="note" id="e48-m-1115">
+                           <g data-time-start="70.86" data-time-end="72" class="note" id="e48-m-1115">
                               								
-                              <use xlink:href="#E0A2" x="7402" y="49515" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="7402" y="49345" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1119">
                                  									
                                  <g class="syl" id="e48-m-1120">
                                     										
-                                    <text x="7312" y="50587" font-size="0px">
+                                    <text x="7312" y="50417" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000755206036">
+                                       <tspan class="text" id="text-0000000801080009">
                                           												
                                           <tspan font-size="405px" class="text">la</tspan>
                                           											</tspan>
@@ -8922,38 +8892,38 @@
                                  									
                                  <g class="syl" id="e48-m-1157">
                                     										
-                                    <text x="7312" y="50187" font-size="0px">
+                                    <text x="7312" y="50017" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000333748728">
+                                       <tspan class="text" id="text-0000000653790911">
                                           												
                                           <tspan font-size="405px" class="text">do</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="8698" y="50088" height="18" width="108"></rect>
+                                    <rect x="8698" y="49918" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="76.8" data-time-end="78" class="note" id="e48-m-1116">
+                           <g data-time-start="72" data-time-end="73.2" class="note" id="e48-m-1116">
                               								
-                              <use xlink:href="#E0A2" x="9877" y="49425" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="9877" y="49255" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1158">
                                  									
                                  <g class="syl" id="e48-m-1159">
                                     										
-                                    <text x="9787" y="50187" font-size="0px">
+                                    <text x="9787" y="50017" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000271621018">
+                                       <tspan class="text" id="text-0000001246618749">
                                           												
                                           <tspan font-size="405px" class="text">ri</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="10968" y="50088" height="18" width="108"></rect>
+                                    <rect x="10968" y="49918" height="18" width="108"></rect>
                                     										
-                                    <rect x="12168" y="50088" height="18" width="108"></rect>
+                                    <rect x="12168" y="49918" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -8961,17 +8931,17 @@
                                  									
                                  <g class="syl" id="e48-m-1163">
                                     										
-                                    <text x="9787" y="50587" font-size="0px">
+                                    <text x="9787" y="50417" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001762725272">
+                                       <tspan class="text" id="text-0000001057666310">
                                           												
                                           <tspan font-size="405px" class="text">ro</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="11013" y="50488" height="18" width="108"></rect>
+                                    <rect x="11013" y="50318" height="18" width="108"></rect>
                                     										
-                                    <rect x="12213" y="50488" height="18" width="108"></rect>
+                                    <rect x="12213" y="50318" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -8980,65 +8950,65 @@
                      					
                      <g class="staff" id="e48-m-1121">
                         						
-                        <path d="M6958 50900 L13085 50900" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 50730 L13085 50730" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 51080 L13085 51080" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 50910 L13085 50910" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 51260 L13085 51260" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 51090 L13085 51090" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 51440 L13085 51440" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 51270 L13085 51270" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M6958 51620 L13085 51620" stroke="#000000" stroke-width="13"></path>
+                        <path d="M6958 51450 L13085 51450" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-1122">
                            							
-                           <g data-time-start="75.66" data-time-end="76.2" class="note" id="e48-m-1123">
+                           <g data-time-start="70.86" data-time-end="71.39999999999999" class="note" id="e48-m-1123">
                               								
-                              <use xlink:href="#E0A3" x="7402" y="51170" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="7402" y="51000" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="7402" y="51192" height="608" width="18"></rect>
+                                 <rect x="7402" y="51022" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-1124">
                                  									
-                                 <use xlink:href="#E260" x="7206" y="51170" height="720px" width="720px"></use>
+                                 <use xlink:href="#E260" x="7206" y="51000" height="720px" width="720px"></use>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1131">
                                  									
                                  <g class="syl" id="e48-m-1132">
                                     										
-                                    <text x="7312" y="52202" font-size="0px">
+                                    <text x="7312" y="52032" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001960256717">
+                                       <tspan class="text" id="text-0000001367821905">
                                           												
                                           <tspan font-size="405px" class="text">tin</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="8091" y="52103" height="18" width="108"></rect>
+                                    <rect x="8091" y="51933" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="76.2" data-time-end="76.8" class="note" id="e48-m-1125">
+                           <g data-time-start="71.39999999999999" data-time-end="72" class="note" id="e48-m-1125">
                               								
-                              <use xlink:href="#E0A3" x="8640" y="51260" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="8640" y="51090" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="8640" y="51282" height="608" width="18"></rect>
+                                 <rect x="8640" y="51112" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1133">
                                  									
                                  <g class="syl" id="e48-m-1134">
                                     										
-                                    <text x="8550" y="52202" font-size="0px">
+                                    <text x="8550" y="52032" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001837983139">
+                                       <tspan class="text" id="text-0000000378029531">
                                           												
                                           <tspan font-size="405px" class="text">cta</tspan>
                                           											</tspan>
@@ -9047,22 +9017,22 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="76.8" data-time-end="77.1" class="note" id="e48-m-1126">
+                           <g data-time-start="72" data-time-end="72.30000000000001" class="note" id="e48-m-1126">
                               								
-                              <use xlink:href="#E0A4" x="9877" y="51350" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="9877" y="51180" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="10085" y="50720" height="608" width="18"></rect>
+                                 <rect x="10085" y="50550" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1135">
                                  									
                                  <g class="syl" id="e48-m-1136">
                                     										
-                                    <text x="9787" y="52202" font-size="0px">
+                                    <text x="9787" y="52032" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000376723239">
+                                       <tspan class="text" id="text-0000000567171180">
                                           												
                                           <tspan font-size="405px" class="text">est</tspan>
                                           											</tspan>
@@ -9071,75 +9041,75 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="77.1" data-time-end="77.51999999999998" class="note" id="e48-m-1127">
+                           <g data-time-start="72.30000000000001" data-time-end="72.72" class="note" id="e48-m-1127">
                               								
-                              <use xlink:href="#E0A4" x="10691" y="51080" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="10691" y="50910" height="720px" width="720px"></use>
                               								
-                              <g class="dots" id="dots-0000001265650975">
+                              <g class="dots" id="dots-0000000944749319">
                                  									
-                                 <ellipse cx="11007" cy="50990" rx="36" ry="36"></ellipse>
+                                 <ellipse cx="11007" cy="50820" rx="36" ry="36"></ellipse>
                                  								</g>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="10691" y="51102" height="608" width="18"></rect>
+                                 <rect x="10691" y="50932" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1181">
                                  									
                                  <g class="syl" id="e48-m-1182">
                                     										
-                                    <text x="10601" y="52202" font-size="0px">
+                                    <text x="10601" y="52032" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000571185801">
+                                       <tspan class="text" id="text-0000001138549448">
                                           												
                                           <tspan font-size="405px" class="text">u</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="11352" y="52103" height="18" width="108"></rect>
+                                    <rect x="11352" y="51933" height="18" width="108"></rect>
                                     										
-                                    <rect x="12552" y="52103" height="18" width="108"></rect>
+                                    <rect x="12552" y="51933" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="77.58000000000001" data-time-end="77.69999999999999" class="note" id="e48-m-1128">
+                           <g data-time-start="72.78" data-time-end="72.9" class="note" id="e48-m-1128">
                               								
-                              <use xlink:href="#E0A4" x="11728" y="51170" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="11728" y="51000" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="11728" y="51192" height="608" width="18"></rect>
+                                 <rect x="11728" y="51022" height="608" width="18"></rect>
                                  									
-                                 <g class="flag" id="flag-0000001745349712">
+                                 <g class="flag" id="flag-0000001655758386">
                                     										
-                                    <use xlink:href="#E241" x="11728" y="51800" height="720px" width="720px"></use>
+                                    <use xlink:href="#E241" x="11728" y="51630" height="720px" width="720px"></use>
                                     									</g>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-1129"></g>
                               							</g>
                            							
-                           <g data-time-start="77.69999999999999" data-time-end="78" class="note" id="e48-m-1130">
+                           <g data-time-start="72.9" data-time-end="73.2" class="note" id="e48-m-1130">
                               								
-                              <use xlink:href="#E0A4" x="12259" y="51080" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="12259" y="50910" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="12259" y="51102" height="608" width="18"></rect>
+                                 <rect x="12259" y="50932" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000787502588">
+                     <g class="barLineAttr" id="bline-0000001960334948">
                         						
-                        <path d="M13072 48255 L13072 47535" stroke="#000000" stroke-width="27"></path>
+                        <path d="M13072 48085 L13072 47365" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M13072 49695 L13072 48975" stroke="#000000" stroke-width="27"></path>
+                        <path d="M13072 49525 L13072 48805" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M13072 51620 L13072 50900" stroke="#000000" stroke-width="27"></path>
+                        <path d="M13072 51450 L13072 50730" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   				
@@ -9147,83 +9117,83 @@
                      					
                      <g class="staff" id="e48-m-1138">
                         						
-                        <path d="M13085 47535 L20002 47535" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 47365 L20002 47365" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 47715 L20002 47715" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 47545 L20002 47545" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 47895 L20002 47895" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 47725 L20002 47725" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 48075 L20002 48075" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 47905 L20002 47905" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 48255 L20002 48255" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 48085 L20002 48085" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-1139">
                            							
-                           <g data-time-start="78.06" data-time-end="79.2" class="note" id="e48-m-1140">
+                           <g data-time-start="73.25999999999999" data-time-end="74.4" class="note" id="e48-m-1140">
                               								
-                              <use xlink:href="#E0A2" x="13298" y="47715" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="13298" y="47545" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1143">
                                  									
                                  <g class="syl" id="e48-m-1144">
                                     										
-                                    <text x="13208" y="48837" font-size="0px">
+                                    <text x="13208" y="48667" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001411458111">
+                                       <tspan class="text" id="text-0000001420137637">
                                           												
                                           <tspan font-size="405px" class="text">u</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="14280" y="48738" height="18" width="108"></rect>
+                                    <rect x="14280" y="48568" height="18" width="108"></rect>
                                     										
-                                    <rect x="15480" y="48738" height="18" width="108"></rect>
+                                    <rect x="15480" y="48568" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="79.2" data-time-end="79.80000000000001" class="note" id="e48-m-1141">
+                           <g data-time-start="74.4" data-time-end="75" class="note" id="e48-m-1141">
                               								
-                              <use xlink:href="#E0A3" x="16547" y="47805" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="16547" y="47635" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="16547" y="47827" height="608" width="18"></rect>
+                                 <rect x="16547" y="47657" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1145">
                                  									
                                  <g class="syl" id="e48-m-1146">
                                     										
-                                    <text x="16457" y="48837" font-size="0px">
+                                    <text x="16457" y="48667" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001749281182">
+                                       <tspan class="text" id="text-0000001201528988">
                                           												
                                           <tspan font-size="405px" class="text">tra</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="17401" y="48738" height="18" width="108"></rect>
+                                    <rect x="17401" y="48568" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="79.80000000000001" data-time-end="80.4" class="note" id="e48-m-1142">
+                           <g data-time-start="75" data-time-end="75.6" class="note" id="e48-m-1142">
                               								
-                              <use xlink:href="#E0A3" x="18114" y="47805" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="18114" y="47635" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="18114" y="47827" height="608" width="18"></rect>
+                                 <rect x="18114" y="47657" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1147">
                                  									
                                  <g class="syl" id="e48-m-1148">
                                     										
-                                    <text x="18024" y="48837" font-size="0px">
+                                    <text x="18024" y="48667" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001923087288">
+                                       <tspan class="text" id="text-0000001838350188">
                                           												
                                           <tspan font-size="405px" class="text">que</tspan>
                                           											</tspan>
@@ -9236,21 +9206,21 @@
                      					
                      <g class="staff" id="e48-m-1149">
                         						
-                        <path d="M13085 48975 L20002 48975" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 48805 L20002 48805" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 49155 L20002 49155" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 48985 L20002 48985" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 49335 L20002 49335" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 49165 L20002 49165" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 49515 L20002 49515" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 49345 L20002 49345" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 49695 L20002 49695" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 49525 L20002 49525" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-1150">
                            							
-                           <g data-time-start="78.06" data-time-end="79.2" class="note" id="e48-m-1151">
+                           <g data-time-start="73.25999999999999" data-time-end="74.4" class="note" id="e48-m-1151">
                               								
-                              <use xlink:href="#E0A2" x="13298" y="49335" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="13298" y="49165" height="720px" width="720px"></use>
                               								
                               <g class="accid" id="e48-m-1152"></g>
                               								
@@ -9258,9 +9228,9 @@
                                  									
                                  <g class="syl" id="e48-m-1161">
                                     										
-                                    <text x="13208" y="50187" font-size="0px">
+                                    <text x="13208" y="50017" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000882437431">
+                                       <tspan class="text" id="text-0000000133763359">
                                           												
                                           <tspan font-size="405px" class="text">bus,</tspan>
                                           											</tspan>
@@ -9272,9 +9242,9 @@
                                  									
                                  <g class="syl" id="e48-m-1165">
                                     										
-                                    <text x="13208" y="50587" font-size="0px">
+                                    <text x="13208" y="50417" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000789656370">
+                                       <tspan class="text" id="text-0000002093978872">
                                           												
                                           <tspan font-size="405px" class="text">sis,</tspan>
                                           											</tspan>
@@ -9283,25 +9253,25 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="79.2" data-time-end="80.4" class="note" id="e48-m-1153">
+                           <g data-time-start="74.4" data-time-end="75.6" class="note" id="e48-m-1153">
                               								
-                              <use xlink:href="#E0A2" x="16547" y="49515" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="16547" y="49345" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1211">
                                  									
                                  <g class="syl" id="e48-m-1212">
                                     										
-                                    <text x="16457" y="50187" font-size="0px">
+                                    <text x="16457" y="50017" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000589896754">
+                                       <tspan class="text" id="text-0000001906354581">
                                           												
                                           <tspan font-size="405px" class="text">al</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="17715" y="50088" height="18" width="108"></rect>
+                                    <rect x="17715" y="49918" height="18" width="108"></rect>
                                     										
-                                    <rect x="18915" y="50088" height="18" width="108"></rect>
+                                    <rect x="18915" y="49918" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               								
@@ -9309,17 +9279,17 @@
                                  									
                                  <g class="syl" id="e48-m-1216">
                                     										
-                                    <text x="16457" y="50587" font-size="0px">
+                                    <text x="16457" y="50417" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001863960520">
+                                       <tspan class="text" id="text-0000000847144864">
                                           												
                                           <tspan font-size="405px" class="text">ro</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="17739" y="50488" height="18" width="108"></rect>
+                                    <rect x="17739" y="50318" height="18" width="108"></rect>
                                     										
-                                    <rect x="18939" y="50488" height="18" width="108"></rect>
+                                    <rect x="18939" y="50318" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
@@ -9328,56 +9298,56 @@
                      					
                      <g class="staff" id="e48-m-1166">
                         						
-                        <path d="M13085 50900 L20002 50900" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 50730 L20002 50730" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 51080 L20002 51080" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 50910 L20002 50910" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 51260 L20002 51260" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 51090 L20002 51090" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 51440 L20002 51440" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 51270 L20002 51270" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M13085 51620 L20002 51620" stroke="#000000" stroke-width="13"></path>
+                        <path d="M13085 51450 L20002 51450" stroke="#000000" stroke-width="13"></path>
                         						
                         <g class="layer" id="e48-m-1167">
                            							
-                           <g data-time-start="78.06" data-time-end="78.3" class="note" id="e48-m-1168">
+                           <g data-time-start="73.25999999999999" data-time-end="73.5" class="note" id="e48-m-1168">
                               								
-                              <use xlink:href="#E0A4" x="13298" y="51260" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="13298" y="51090" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="13298" y="51282" height="608" width="18"></rect>
+                                 <rect x="13298" y="51112" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1183">
                                  									
                                  <g class="syl" id="e48-m-1184">
                                     										
-                                    <text x="13208" y="52202" font-size="0px">
+                                    <text x="13208" y="52032" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001732770574">
+                                       <tspan class="text" id="text-0000000265129958">
                                           												
                                           <tspan font-size="405px" class="text">tra</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="13775" y="52103" height="18" width="108"></rect>
+                                    <rect x="13775" y="51933" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="78.3" data-time-end="78.71999999999998" class="note" id="e48-m-1169">
+                           <g data-time-start="73.5" data-time-end="73.92" class="note" id="e48-m-1169">
                               								
-                              <use xlink:href="#E0A4" x="14111" y="51440" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="14111" y="51270" height="720px" width="720px"></use>
                               								
-                              <g class="dots" id="dots-0000001712589920">
+                              <g class="dots" id="dots-0000002049713316">
                                  									
-                                 <ellipse cx="14427" cy="51350" rx="36" ry="36"></ellipse>
+                                 <ellipse cx="14427" cy="51180" rx="36" ry="36"></ellipse>
                                  								</g>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="14319" y="50810" height="608" width="18"></rect>
+                                 <rect x="14319" y="50640" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-1170"></g>
@@ -9386,138 +9356,138 @@
                                  									
                                  <g class="syl" id="e48-m-1186">
                                     										
-                                    <text x="14021" y="52202" font-size="0px">
+                                    <text x="14021" y="52032" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001673058843">
+                                       <tspan class="text" id="text-0000000598856855">
                                           												
                                           <tspan font-size="405px" class="text">que</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="14652" y="52184" height="18" width="1194"></rect>
+                                    <rect x="14652" y="52014" height="18" width="1194"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="78.78000000000002" data-time-end="78.89999999999999" class="note" id="e48-m-1171">
+                           <g data-time-start="73.98" data-time-end="74.10000000000001" class="note" id="e48-m-1171">
                               								
-                              <use xlink:href="#E0A4" x="15148" y="51350" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="15148" y="51180" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="15356" y="50720" height="608" width="18"></rect>
+                                 <rect x="15356" y="50550" height="608" width="18"></rect>
                                  									
-                                 <g class="flag" id="flag-0000000156942450">
+                                 <g class="flag" id="flag-0000001963304199">
                                     										
-                                    <use xlink:href="#E240" x="15356" y="50720" height="720px" width="720px"></use>
+                                    <use xlink:href="#E240" x="15356" y="50550" height="720px" width="720px"></use>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="78.89999999999999" data-time-end="79.2" class="note" id="e48-m-1172">
+                           <g data-time-start="74.10000000000001" data-time-end="74.4" class="note" id="e48-m-1172">
                               								
-                              <use xlink:href="#E0A4" x="15733" y="51260" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="15733" y="51090" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="15733" y="51282" height="608" width="18"></rect>
+                                 <rect x="15733" y="51112" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="79.2" data-time-end="79.62" class="note" id="e48-m-1173">
+                           <g data-time-start="74.4" data-time-end="74.82000000000001" class="note" id="e48-m-1173">
                               								
-                              <use xlink:href="#E0A4" x="16547" y="51170" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="16547" y="51000" height="720px" width="720px"></use>
                               								
-                              <g class="dots" id="dots-0000001070151000">
+                              <g class="dots" id="dots-0000001830207180">
                                  									
-                                 <ellipse cx="16863" cy="51170" rx="36" ry="36"></ellipse>
+                                 <ellipse cx="16863" cy="51000" rx="36" ry="36"></ellipse>
                                  								</g>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="16547" y="51192" height="608" width="18"></rect>
+                                 <rect x="16547" y="51022" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-1174">
                                  									
-                                 <use xlink:href="#E260" x="16351" y="51170" height="720px" width="720px"></use>
+                                 <use xlink:href="#E260" x="16351" y="51000" height="720px" width="720px"></use>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1187">
                                  									
                                  <g class="syl" id="e48-m-1188">
                                     										
-                                    <text x="16457" y="52202" font-size="0px">
+                                    <text x="16457" y="52032" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000371916675">
+                                       <tspan class="text" id="text-0000001956119590">
                                           												
                                           <tspan font-size="405px" class="text">ma</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="17965" y="52103" height="18" width="108"></rect>
+                                    <rect x="17965" y="51933" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="79.68" data-time-end="79.80000000000001" class="note" id="e48-m-1175">
+                           <g data-time-start="74.88" data-time-end="75" class="note" id="e48-m-1175">
                               								
-                              <use xlink:href="#E0A4" x="17584" y="51260" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="17584" y="51090" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="17584" y="51282" height="608" width="18"></rect>
+                                 <rect x="17584" y="51112" height="608" width="18"></rect>
                                  									
-                                 <g class="flag" id="flag-0000001114968135">
+                                 <g class="flag" id="flag-0000000646267432">
                                     										
-                                    <use xlink:href="#E241" x="17584" y="51890" height="720px" width="720px"></use>
+                                    <use xlink:href="#E241" x="17584" y="51720" height="720px" width="720px"></use>
                                     									</g>
                                  								</g>
                               							</g>
                            							
                            <g class="beam" id="e48-m-1177">
                               								
-                              <polygon points="18322,50721 18871,50774 18871,50864 18322,50811 "></polygon>
+                              <polygon points="18322,50551 18871,50604 18871,50694 18322,50641 "></polygon>
                               								
-                              <g data-time-start="79.80000000000001" data-time-end="79.91999999999999" class="note" id="e48-m-1176">
+                              <g data-time-start="75" data-time-end="75.12" class="note" id="e48-m-1176">
                                  									
-                                 <use xlink:href="#E0A4" x="18114" y="51350" height="720px" width="720px"></use>
+                                 <use xlink:href="#E0A4" x="18114" y="51180" height="720px" width="720px"></use>
                                  									
                                  <g class="stem">
                                     										
-                                    <rect x="18322" y="50739" height="589" width="18"></rect>
+                                    <rect x="18322" y="50569" height="589" width="18"></rect>
                                     									</g>
                                  								</g>
                               								
-                              <g data-time-start="79.98000000000002" data-time-end="80.1" class="note" id="e48-m-1178">
+                              <g data-time-start="75.17999999999999" data-time-end="75.30000000000001" class="note" id="e48-m-1178">
                                  									
-                                 <use xlink:href="#E0A4" x="18645" y="51440" height="720px" width="720px"></use>
+                                 <use xlink:href="#E0A4" x="18645" y="51270" height="720px" width="720px"></use>
                                  									
                                  <g class="stem">
                                     										
-                                    <rect x="18853" y="50792" height="626" width="18"></rect>
+                                    <rect x="18853" y="50622" height="626" width="18"></rect>
                                     									</g>
                                  									
                                  <g class="accid" id="e48-m-1179"></g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="80.1" data-time-end="80.4" class="note" id="e48-m-1180">
+                           <g data-time-start="75.30000000000001" data-time-end="75.6" class="note" id="e48-m-1180">
                               								
-                              <use xlink:href="#E0A4" x="19175" y="51350" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="19175" y="51180" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="19383" y="50720" height="608" width="18"></rect>
+                                 <rect x="19383" y="50550" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1189">
                                  									
                                  <g class="syl" id="e48-m-1190">
                                     										
-                                    <text x="19085" y="52202" font-size="0px">
+                                    <text x="19085" y="52032" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001284632005">
+                                       <tspan class="text" id="text-0000001876014688">
                                           												
                                           <tspan font-size="405px" class="text">la</tspan>
                                           											</tspan>
@@ -9528,38 +9498,38 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001142780533">
+                     <g class="barLineAttr" id="bline-0000001503522639">
                         						
-                        <path d="M19989 48255 L19989 47535" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 48085 L19989 47365" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M19989 49695 L19989 48975" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 49525 L19989 48805" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M19989 51620 L19989 50900" stroke="#000000" stroke-width="27"></path>
+                        <path d="M19989 51450 L19989 50730" stroke="#000000" stroke-width="27"></path>
                         					</g>
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000000273903624">
+               <g class="system" id="system-0000000130423404">
                   				
-                  <polygon points="-270,52700 270,52340 270,52205 -270,52565 "></polygon>
+                  <polygon points="-270,52530 270,52170 270,52035 -270,52395 "></polygon>
                   				
-                  <polygon points="-270,52520 270,52160 270,52025 -270,52385 "></polygon>
+                  <polygon points="-270,52350 270,51990 270,51855 -270,52215 "></polygon>
                   				
-                  <path d="M13 53330 L13 57325" stroke="#000000" stroke-width="27"></path>
+                  <path d="M13 53160 L13 57155" stroke="#000000" stroke-width="27"></path>
                   				
-                  <use xlink:href="#E003" x="-154" y="53330" height="720px" width="720px"></use>
+                  <use xlink:href="#E003" x="-154" y="53160" height="720px" width="720px"></use>
                   				
-                  <use xlink:href="#E004" x="-154" y="57325" height="720px" width="720px"></use>
+                  <use xlink:href="#E004" x="-154" y="57155" height="720px" width="720px"></use>
                   				
-                  <rect x="-154" y="53312" height="4031" width="90"></rect>
+                  <rect x="-154" y="53142" height="4031" width="90"></rect>
                   				
                   <g class="measure" id="e48-m-1191">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000001470335916">
+                     <g class="mNum autogenerated" id="mnum-0000001355803088">
                         						
-                        <text x="0" y="53060" text-anchor="middle" font-size="0px">
+                        <text x="0" y="52890" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000000841414183">
+                           <tspan class="text" id="text-0000000033521699">
                               								
                               <tspan font-size="324px" class="text">30</tspan>
                               							</tspan>
@@ -9568,65 +9538,65 @@
                      					
                      <g class="staff" id="e48-m-1192">
                         						
-                        <path d="M0 53330 L10768 53330" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 53160 L9268 53160" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 53510 L10768 53510" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 53340 L9268 53340" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 53690 L10768 53690" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 53520 L9268 53520" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 53870 L10768 53870" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 53700 L9268 53700" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 54050 L10768 54050" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 53880 L9268 53880" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001546145508">
+                        <g class="clef" id="clef-0000000317397933">
                            							
-                           <use xlink:href="#E050" x="90" y="53870" height="720px" width="720px"></use>
+                           <use xlink:href="#E050" x="90" y="53700" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001515424256">
+                        <g class="keySig" id="keysig-0000000157680783">
                            							
-                           <use xlink:href="#E260" x="771" y="53690" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="53520" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-1193">
                            							
-                           <g data-time-start="80.46" data-time-end="81.60000000000001" class="note" id="e48-m-1194">
+                           <g data-time-start="75.66" data-time-end="76.8" class="note" id="e48-m-1194">
                               								
-                              <use xlink:href="#E0A2" x="1183" y="53510" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="1183" y="53340" height="720px" width="720px"></use>
                               								
                               <g class="verse" id="e48-m-1198">
                                  									
                                  <g class="syl" id="e48-m-1199">
                                     										
-                                    <text x="1093" y="54542" font-size="0px">
+                                    <text x="1093" y="54372" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000897275966">
+                                       <tspan class="text" id="text-0000001262773692">
                                           												
                                           <tspan font-size="405px" class="text">ma</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="2667" y="54443" height="18" width="108"></rect>
+                                    <rect x="2667" y="54273" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="81.60000000000001" data-time-end="82.2" class="note" id="e48-m-1195">
+                           <g data-time-start="76.8" data-time-end="77.4" class="note" id="e48-m-1195">
                               								
-                              <use xlink:href="#E0A3" x="3943" y="53420" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="3943" y="53250" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="3943" y="53442" height="608" width="18"></rect>
+                                 <rect x="3943" y="53272" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1200">
                                  									
                                  <g class="syl" id="e48-m-1201">
                                     										
-                                    <text x="3853" y="54542" font-size="0px">
+                                    <text x="3853" y="54372" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000381479848">
+                                       <tspan class="text" id="text-0000000913241296">
                                           												
                                           <tspan font-size="405px" class="text">la</tspan>
                                           											</tspan>
@@ -9635,54 +9605,49 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="82.2" data-time-end="82.80000000000001" class="note" id="e48-m-1196">
+                           <g data-time-start="77.4" data-time-end="78" class="note" id="e48-m-1196">
                               								
-                              <use xlink:href="#E0A3" x="4993" y="53420" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A3" x="4993" y="53250" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="4993" y="53442" height="608" width="18"></rect>
+                                 <rect x="4993" y="53272" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="verse" id="e48-m-1202">
                                  									
                                  <g class="syl" id="e48-m-1203">
                                     										
-                                    <text x="4903" y="54542" font-size="0px">
+                                    <text x="4903" y="54372" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001312837030">
+                                       <tspan class="text" id="text-0000001907699488">
                                           												
                                           <tspan font-size="405px" class="text">ro</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="5544" y="54443" height="18" width="108"></rect>
+                                    <rect x="5544" y="54273" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="82.80000000000001" data-time-end="87.6" class="note" id="e48-m-1197">
+                           <g data-time-start="78" data-time-end="80.4" class="note" id="e48-m-1197">
                               								
-                              <polygon points="6043,53330 6275,53330 6275,53375 6043,53375 "></polygon>
+                              <polygon points="6043,53160 6275,53160 6275,53205 6043,53205 "></polygon>
                               								
-                              <polygon points="6043,53510 6275,53510 6275,53465 6043,53465 "></polygon>
+                              <polygon points="6043,53340 6275,53340 6275,53295 6043,53295 "></polygon>
                               								
-                              <rect x="6034" y="53285" height="270" width="18"></rect>
+                              <rect x="6034" y="53115" height="270" width="18"></rect>
                               								
-                              <rect x="6266" y="53285" height="270" width="18"></rect>
-                              								
-                              <g class="stem">
-                                 									
-                                 <rect x="6266" y="53330" height="720" width="18"></rect>
-                                 								</g>
+                              <rect x="6266" y="53115" height="270" width="18"></rect>
                               								
                               <g class="verse" id="e48-m-1204">
                                  									
                                  <g class="syl" id="e48-m-1205">
                                     										
-                                    <text x="5953" y="54542" font-size="0px">
+                                    <text x="5953" y="54372" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000007493321">
+                                       <tspan class="text" id="text-0000001807100317">
                                           												
                                           <tspan font-size="405px" class="text">sis.</tspan>
                                           											</tspan>
@@ -9695,55 +9660,50 @@
                      					
                      <g class="staff" id="e48-m-1206">
                         						
-                        <path d="M0 54770 L10768 54770" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 54600 L9268 54600" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 54950 L10768 54950" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 54780 L9268 54780" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 55130 L10768 55130" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 54960 L9268 54960" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 55310 L10768 55310" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 55140 L9268 55140" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 55490 L10768 55490" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 55320 L9268 55320" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000579417172">
+                        <g class="clef" id="clef-0000000146099483">
                            							
-                           <use xlink:href="#E050" x="90" y="55310" height="720px" width="720px"></use>
+                           <use xlink:href="#E050" x="90" y="55140" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001573554306">
+                        <g class="keySig" id="keysig-0000000920202260">
                            							
-                           <use xlink:href="#E260" x="771" y="55130" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="54960" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-1207">
                            							
-                           <g data-time-start="80.46" data-time-end="81.60000000000001" class="note" id="e48-m-1208">
+                           <g data-time-start="75.66" data-time-end="76.8" class="note" id="e48-m-1208">
                               								
-                              <use xlink:href="#E0A2" x="1183" y="54950" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A2" x="1183" y="54780" height="720px" width="720px"></use>
                               							</g>
                            							
-                           <g data-time-start="81.60000000000001" data-time-end="86.39999999999999" class="note" id="e48-m-1209">
+                           <g data-time-start="76.8" data-time-end="79.2" class="note" id="e48-m-1209">
                               								
-                              <polygon points="3943,54950 4175,54950 4175,54995 3943,54995 "></polygon>
+                              <polygon points="3943,54780 4175,54780 4175,54825 3943,54825 "></polygon>
                               								
-                              <polygon points="3943,55130 4175,55130 4175,55085 3943,55085 "></polygon>
+                              <polygon points="3943,54960 4175,54960 4175,54915 3943,54915 "></polygon>
                               								
-                              <rect x="3934" y="54905" height="270" width="18"></rect>
+                              <rect x="3934" y="54735" height="270" width="18"></rect>
                               								
-                              <rect x="4166" y="54905" height="270" width="18"></rect>
-                              								
-                              <g class="stem">
-                                 									
-                                 <rect x="4166" y="54950" height="720" width="18"></rect>
-                                 								</g>
+                              <rect x="4166" y="54735" height="270" width="18"></rect>
                               								
                               <g class="verse" id="e48-m-1213">
                                  									
                                  <g class="syl" id="e48-m-1214">
                                     										
-                                    <text x="3853" y="55982" font-size="0px">
+                                    <text x="3853" y="55812" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000881793184">
+                                       <tspan class="text" id="text-0000001877633468">
                                           												
                                           <tspan font-size="405px" class="text">vo,</tspan>
                                           											</tspan>
@@ -9755,9 +9715,9 @@
                                  									
                                  <g class="syl" id="e48-m-1218">
                                     										
-                                    <text x="3853" y="56382" font-size="0px">
+                                    <text x="3853" y="56212" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001944984998">
+                                       <tspan class="text" id="text-0000001186093037">
                                           												
                                           <tspan font-size="405px" class="text">sis.</tspan>
                                           											</tspan>
@@ -9772,35 +9732,35 @@
                      					
                      <g class="staff" id="e48-m-1219">
                         						
-                        <path d="M0 56605 L10768 56605" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 56435 L9268 56435" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 56785 L10768 56785" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 56615 L9268 56615" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 56965 L10768 56965" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 56795 L9268 56795" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 57145 L10768 57145" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 56975 L9268 56975" stroke="#000000" stroke-width="13"></path>
                         						
-                        <path d="M0 57325 L10768 57325" stroke="#000000" stroke-width="13"></path>
+                        <path d="M0 57155 L9268 57155" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000466108137">
+                        <g class="clef" id="clef-0000001809641773">
                            							
-                           <use xlink:href="#E062" x="90" y="56785" height="720px" width="720px"></use>
+                           <use xlink:href="#E062" x="90" y="56615" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000002006597950">
+                        <g class="keySig" id="keysig-0000001985869997">
                            							
-                           <use xlink:href="#E260" x="771" y="57145" height="720px" width="720px"></use>
+                           <use xlink:href="#E260" x="771" y="56975" height="720px" width="720px"></use>
                            						</g>
                         						
                         <g class="layer" id="e48-m-1220">
                            							
-                           <g data-time-start="80.46" data-time-end="80.7" class="note" id="e48-m-1221">
+                           <g data-time-start="75.66" data-time-end="75.9" class="note" id="e48-m-1221">
                               								
-                              <use xlink:href="#E0A4" x="1183" y="57145" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="1183" y="56975" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="1391" y="56515" height="608" width="18"></rect>
+                                 <rect x="1391" y="56345" height="608" width="18"></rect>
                                  								</g>
                               								
                               <g class="accid" id="e48-m-1222"></g>
@@ -9809,73 +9769,68 @@
                                  									
                                  <g class="syl" id="e48-m-1229">
                                     										
-                                    <text x="1093" y="57997" font-size="0px">
+                                    <text x="1093" y="57737" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002105388461">
+                                       <tspan class="text" id="text-0000001594484175">
                                           												
                                           <tspan font-size="405px" class="text">ro</tspan>
                                           											</tspan>
                                        										</text>
                                     										
-                                    <rect x="1989" y="57898" height="18" width="108"></rect>
+                                    <rect x="1989" y="57638" height="18" width="108"></rect>
                                     										
-                                    <rect x="3189" y="57898" height="18" width="108"></rect>
+                                    <rect x="3189" y="57638" height="18" width="108"></rect>
                                     									</g>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="80.7" data-time-end="81" class="note" id="e48-m-1223">
+                           <g data-time-start="75.9" data-time-end="76.2" class="note" id="e48-m-1223">
                               								
-                              <use xlink:href="#E0A4" x="1873" y="56965" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="1873" y="56795" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="1873" y="56987" height="608" width="18"></rect>
+                                 <rect x="1873" y="56817" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="81" data-time-end="81.3" class="note" id="e48-m-1224">
+                           <g data-time-start="76.2" data-time-end="76.50000000000001" class="note" id="e48-m-1224">
                               								
-                              <use xlink:href="#E0A4" x="2563" y="56785" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="2563" y="56615" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="2563" y="56807" height="608" width="18"></rect>
+                                 <rect x="2563" y="56637" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="81.3" data-time-end="81.60000000000001" class="note" id="e48-m-1225">
+                           <g data-time-start="76.50000000000001" data-time-end="76.8" class="note" id="e48-m-1225">
                               								
-                              <use xlink:href="#E0A4" x="3253" y="56695" height="720px" width="720px"></use>
+                              <use xlink:href="#E0A4" x="3253" y="56525" height="720px" width="720px"></use>
                               								
                               <g class="stem">
                                  									
-                                 <rect x="3253" y="56717" height="608" width="18"></rect>
+                                 <rect x="3253" y="56547" height="608" width="18"></rect>
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="81.60000000000001" data-time-end="86.39999999999999" class="note" id="e48-m-1226">
+                           <g data-time-start="76.8" data-time-end="79.2" class="note" id="e48-m-1226">
                               								
-                              <polygon points="3943,56965 4175,56965 4175,57010 3943,57010 "></polygon>
+                              <polygon points="3943,56795 4175,56795 4175,56840 3943,56840 "></polygon>
                               								
-                              <polygon points="3943,57145 4175,57145 4175,57100 3943,57100 "></polygon>
+                              <polygon points="3943,56975 4175,56975 4175,56930 3943,56930 "></polygon>
                               								
-                              <rect x="3934" y="56920" height="270" width="18"></rect>
+                              <rect x="3934" y="56750" height="270" width="18"></rect>
                               								
-                              <rect x="4166" y="56920" height="270" width="18"></rect>
-                              								
-                              <g class="stem">
-                                 									
-                                 <rect x="4166" y="56965" height="720" width="18"></rect>
-                                 								</g>
+                              <rect x="4166" y="56750" height="270" width="18"></rect>
                               								
                               <g class="verse" id="e48-m-1230">
                                  									
                                  <g class="syl" id="e48-m-1231">
                                     										
-                                    <text x="3853" y="57997" font-size="0px">
+                                    <text x="3853" y="57737" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000279500560">
+                                       <tspan class="text" id="text-0000000156651488">
                                           												
                                           <tspan font-size="405px" class="text">sis.</tspan>
                                           											</tspan>
@@ -9888,26 +9843,26 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001759177374">
+                     <g class="barLineAttr" id="bline-0000001836299026">
                         						
-                        <path d="M10606 54050 L10606 53330" stroke="#000000" stroke-width="27"></path>
+                        <path d="M9106 53880 L9106 53160" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M10723 54050 L10723 53330" stroke="#000000" stroke-width="90"></path>
+                        <path d="M9223 53880 L9223 53160" stroke="#000000" stroke-width="90"></path>
                         						
-                        <path d="M10606 55490 L10606 54770" stroke="#000000" stroke-width="27"></path>
+                        <path d="M9106 55320 L9106 54600" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M10723 55490 L10723 54770" stroke="#000000" stroke-width="90"></path>
+                        <path d="M9223 55320 L9223 54600" stroke="#000000" stroke-width="90"></path>
                         						
-                        <path d="M10606 57325 L10606 56605" stroke="#000000" stroke-width="27"></path>
+                        <path d="M9106 57155 L9106 56435" stroke="#000000" stroke-width="27"></path>
                         						
-                        <path d="M10723 57325 L10723 56605" stroke="#000000" stroke-width="90"></path>
+                        <path d="M9223 57155 L9223 56435" stroke="#000000" stroke-width="90"></path>
                         					</g>
                      				</g>
                   				
-                  <g class="boundaryEnd section-0000000445533111" id="bdend-0000001798131805"></g>
+                  <g class="boundaryEnd section-0000000447234064" id="bdend-0000001647887000"></g>
                   			</g>
                			
-               <g class="pgHead autogenerated" id="pghead-0000001811366051"></g>
+               <g class="pgHead autogenerated" id="pghead-0000002087697288"></g>
                		</g>
             	</svg>
          </svg></div>
@@ -10014,207 +9969,207 @@
          <rect class="note voice-1" id="e48-m-409-pianoroll" height="5" data-time-start="22.86" data-time-end="24" x="1083" width="57.00000000000003" y="10"></rect>
          <rect class="note voice-1" id="e48-m-410-pianoroll" height="5" data-time-start="24" data-time-end="24.6" x="1140" width="30.00000000000007" y="0"></rect>
          <rect class="note voice-1" id="e48-m-411-pianoroll" height="5" data-time-start="24.6" data-time-end="25.2" x="1170" width="29.999999999999893" y="0"></rect>
-         <rect class="note voice-1" id="e48-m-412-pianoroll" height="5" data-time-start="25.2" data-time-end="30" x="1200" width="240.00000000000003" y="0"></rect>
+         <rect class="note voice-1" id="e48-m-412-pianoroll" height="5" data-time-start="25.2" data-time-end="27.6" x="1200" width="120.00000000000011" y="0"></rect>
          <rect class="note voice-2" id="e48-m-423-pianoroll" height="5" data-time-start="22.86" data-time-end="24" x="1083" width="57.00000000000003" y="10"></rect>
-         <rect class="note voice-2" id="e48-m-424-pianoroll" height="5" data-time-start="24" data-time-end="28.799999999999997" x="1140" width="239.99999999999986" y="20"></rect>
+         <rect class="note voice-2" id="e48-m-424-pianoroll" height="5" data-time-start="24" data-time-end="26.4" x="1140" width="119.99999999999993" y="20"></rect>
          <rect class="note voice-3" id="e48-m-438-pianoroll" height="5" data-time-start="22.86" data-time-end="23.1" x="1083" width="12.0000000000001" y="150"></rect>
          <rect class="note voice-3" id="e48-m-440-pianoroll" height="5" data-time-start="23.1" data-time-end="23.400000000000002" x="1095" width="15.000000000000036" y="130"></rect>
          <rect class="note voice-3" id="e48-m-441-pianoroll" height="5" data-time-start="23.400000000000002" data-time-end="23.700000000000003" x="1110.0000000000002" width="15.000000000000036" y="115"></rect>
          <rect class="note voice-3" id="e48-m-442-pianoroll" height="5" data-time-start="23.700000000000003" data-time-end="24" x="1125.0000000000002" width="14.999999999999858" y="105"></rect>
-         <rect class="note voice-3" id="e48-m-443-pianoroll" height="5" data-time-start="24" data-time-end="28.799999999999997" x="1140" width="239.99999999999986" y="140"></rect>
-         <rect class="note voice-1" id="e48-m-462-pianoroll" height="5" data-time-start="30.06" data-time-end="31.200000000000003" x="1443" width="57.000000000000206" y="35"></rect>
-         <rect class="note voice-1" id="e48-m-463-pianoroll" height="5" data-time-start="31.200000000000003" data-time-end="31.8" x="1500.0000000000002" width="29.999999999999893" y="35"></rect>
-         <rect class="note voice-1" id="e48-m-464-pianoroll" height="5" data-time-start="31.8" data-time-end="32.400000000000006" x="1530" width="30.00000000000025" y="35"></rect>
-         <rect class="note voice-2" id="e48-m-473-pianoroll" height="5" data-time-start="30.06" data-time-end="31.200000000000003" x="1443" width="57.000000000000206" y="35"></rect>
-         <rect class="note voice-2" id="e48-m-474-pianoroll" height="5" data-time-start="31.200000000000003" data-time-end="32.400000000000006" x="1500.0000000000002" width="60.00000000000014" y="35"></rect>
-         <rect class="note voice-3" id="e48-m-479-pianoroll" height="5" data-time-start="30.06" data-time-end="31.200000000000003" x="1443" width="57.000000000000206" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-480-pianoroll" height="5" data-time-start="31.200000000000003" data-time-end="31.8" x="1500.0000000000002" width="29.999999999999893" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-481-pianoroll" height="5" data-time-start="31.8" data-time-end="32.400000000000006" x="1530" width="30.00000000000025" y="140"></rect>
-         <rect class="note voice-1" id="e48-m-491-pianoroll" height="5" data-time-start="32.46" data-time-end="33.6" x="1563" width="57.00000000000003" y="30"></rect>
-         <rect class="note voice-1" id="e48-m-493-pianoroll" height="5" data-time-start="33.6" data-time-end="34.2" x="1620" width="30.00000000000007" y="35"></rect>
-         <rect class="note voice-1" id="e48-m-494-pianoroll" height="5" data-time-start="34.2" data-time-end="34.8" x="1650" width="29.999999999999716" y="35"></rect>
-         <rect class="note voice-2" id="e48-m-499-pianoroll" height="5" data-time-start="32.46" data-time-end="33.6" x="1563" width="57.00000000000003" y="45"></rect>
-         <rect class="note voice-2" id="e48-m-500-pianoroll" height="5" data-time-start="33.6" data-time-end="34.8" x="1620" width="59.99999999999979" y="55"></rect>
-         <rect class="note voice-3" id="e48-m-517-pianoroll" height="5" data-time-start="32.46" data-time-end="33" x="1563" width="26.999999999999957" y="150"></rect>
-         <rect class="note voice-3" id="e48-m-519-pianoroll" height="5" data-time-start="33" data-time-end="33.6" x="1590" width="30.00000000000007" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-520-pianoroll" height="5" data-time-start="33.6" data-time-end="34.8" x="1620" width="59.99999999999979" y="130"></rect>
-         <rect class="note voice-1" id="e48-m-526-pianoroll" height="5" data-time-start="34.86000000000001" data-time-end="36" x="1683.0000000000002" width="56.99999999999967" y="30"></rect>
-         <rect class="note voice-1" id="e48-m-528-pianoroll" height="5" data-time-start="36" data-time-end="37.2" x="1739.9999999999998" width="60.00000000000014" y="20"></rect>
-         <rect class="note voice-2" id="e48-m-537-pianoroll" height="5" data-time-start="34.86000000000001" data-time-end="36" x="1683.0000000000002" width="56.99999999999967" y="45"></rect>
-         <rect class="note voice-2" id="e48-m-538-pianoroll" height="5" data-time-start="36" data-time-end="37.2" x="1739.9999999999998" width="60.00000000000014" y="35"></rect>
-         <rect class="note voice-3" id="e48-m-545-pianoroll" height="5" data-time-start="34.86000000000001" data-time-end="35.4" x="1683.0000000000002" width="26.999999999999602" y="165"></rect>
-         <rect class="note voice-3" id="e48-m-546-pianoroll" height="5" data-time-start="35.4" data-time-end="36" x="1709.9999999999998" width="30.00000000000007" y="150"></rect>
-         <rect class="note voice-3" id="e48-m-548-pianoroll" height="5" data-time-start="36" data-time-end="37.2" x="1739.9999999999998" width="60.00000000000014" y="155"></rect>
-         <rect class="note voice-1" id="e48-m-562-pianoroll" height="5" data-time-start="37.26" data-time-end="38.4" x="1802.9999999999998" width="57.00000000000003" y="30"></rect>
-         <rect class="note voice-1" id="e48-m-564-pianoroll" height="5" data-time-start="38.4" data-time-end="39.6" x="1859.9999999999998" width="60.00000000000014" y="35"></rect>
-         <rect class="note voice-2" id="e48-m-573-pianoroll" height="5" data-time-start="37.26" data-time-end="38.4" x="1802.9999999999998" width="57.00000000000003" y="70"></rect>
-         <rect class="note voice-2" id="e48-m-574-pianoroll" height="5" data-time-start="38.4" data-time-end="39.6" x="1859.9999999999998" width="60.00000000000014" y="55"></rect>
-         <rect class="note voice-3" id="e48-m-583-pianoroll" height="5" data-time-start="37.26" data-time-end="37.8" x="1802.9999999999998" width="26.999999999999957" y="165"></rect>
-         <rect class="note voice-3" id="e48-m-584-pianoroll" height="5" data-time-start="37.8" data-time-end="38.4" x="1829.9999999999998" width="30.00000000000007" y="105"></rect>
-         <rect class="note voice-3" id="e48-m-585-pianoroll" height="5" data-time-start="38.4" data-time-end="39" x="1859.9999999999998" width="30.00000000000007" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-586-pianoroll" height="5" data-time-start="39" data-time-end="39.6" x="1889.9999999999998" width="30.00000000000007" y="115"></rect>
-         <rect class="note voice-1" id="e48-m-597-pianoroll" height="5" data-time-start="39.66" data-time-end="40.800000000000004" x="1922.9999999999998" width="57.000000000000384" y="20"></rect>
-         <rect class="note voice-1" id="e48-m-598-pianoroll" height="5" data-time-start="40.800000000000004" data-time-end="41.400000000000006" x="1980" width="30.00000000000007" y="30"></rect>
-         <rect class="note voice-1" id="e48-m-600-pianoroll" height="5" data-time-start="41.400000000000006" data-time-end="42.00000000000001" x="2010.0000000000002" width="30.00000000000007" y="30"></rect>
-         <rect class="note voice-2" id="e48-m-608-pianoroll" height="5" data-time-start="39.66" data-time-end="40.800000000000004" x="1922.9999999999998" width="57.000000000000384" y="60"></rect>
-         <rect class="note voice-2" id="e48-m-609-pianoroll" height="5" data-time-start="40.800000000000004" data-time-end="42.00000000000001" x="1980" width="60.00000000000014" y="70"></rect>
-         <rect class="note voice-3" id="e48-m-626-pianoroll" height="5" data-time-start="39.66" data-time-end="39.900000000000006" x="1922.9999999999998" width="12.000000000000455" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-627-pianoroll" height="5" data-time-start="39.900000000000006" data-time-end="40.02" x="1935.0000000000002" width="5.999999999999872" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-629-pianoroll" height="5" data-time-start="40.080000000000005" data-time-end="40.2" x="1944.0000000000002" width="5.999999999999872" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-630-pianoroll" height="5" data-time-start="40.2" data-time-end="40.5" x="1950" width="14.999999999999858" y="120"></rect>
-         <rect class="note voice-3" id="e48-m-631-pianoroll" height="5" data-time-start="40.5" data-time-end="40.800000000000004" x="1964.9999999999998" width="15.000000000000213" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-632-pianoroll" height="5" data-time-start="40.800000000000004" data-time-end="42.00000000000001" x="1980" width="60.00000000000014" y="105"></rect>
-         <rect class="note voice-1" id="e48-m-636-pianoroll" height="5" data-time-start="42.059999999999995" data-time-end="42.599999999999994" x="2042.9999999999995" width="26.999999999999957" y="35"></rect>
-         <rect class="note voice-1" id="e48-m-637-pianoroll" height="5" data-time-start="42.599999999999994" data-time-end="43.199999999999996" x="2069.9999999999995" width="30.00000000000007" y="35"></rect>
-         <rect class="note voice-1" id="e48-m-638-pianoroll" height="5" data-time-start="43.199999999999996" data-time-end="44.4" x="2099.9999999999995" width="60.00000000000014" y="10"></rect>
-         <rect class="note voice-2" id="e48-m-647-pianoroll" height="5" data-time-start="42.059999999999995" data-time-end="43.199999999999996" x="2042.9999999999995" width="57.00000000000003" y="10"></rect>
-         <rect class="note voice-2" id="e48-m-648-pianoroll" height="5" data-time-start="43.199999999999996" data-time-end="44.4" x="2099.9999999999995" width="60.00000000000014" y="35"></rect>
-         <rect class="note voice-3" id="e48-m-655-pianoroll" height="5" data-time-start="42.059999999999995" data-time-end="42.599999999999994" x="2042.9999999999995" width="26.999999999999957" y="115"></rect>
-         <rect class="note voice-3" id="e48-m-656-pianoroll" height="5" data-time-start="42.599999999999994" data-time-end="43.5" x="2069.9999999999995" width="45.000000000000284" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-657-pianoroll" height="5" data-time-start="43.5" data-time-end="43.8" x="2115" width="14.999999999999858" y="120"></rect>
-         <rect class="note voice-3" id="e48-m-658-pianoroll" height="5" data-time-start="43.8" data-time-end="44.4" x="2129.9999999999995" width="30.00000000000007" y="115"></rect>
-         <rect class="note voice-1" id="e48-m-668-pianoroll" height="5" data-time-start="44.46" data-time-end="45.6" x="2163" width="57.00000000000003" y="0"></rect>
-         <rect class="note voice-1" id="e48-m-669-pianoroll" height="5" data-time-start="45.6" data-time-end="46.2" x="2220" width="30.00000000000007" y="10"></rect>
-         <rect class="note voice-1" id="e48-m-670-pianoroll" height="5" data-time-start="46.2" data-time-end="46.800000000000004" x="2250" width="30.00000000000007" y="10"></rect>
-         <rect class="note voice-2" id="e48-m-681-pianoroll" height="5" data-time-start="44.46" data-time-end="45.6" x="2163" width="57.00000000000003" y="20"></rect>
-         <rect class="note voice-2" id="e48-m-682-pianoroll" height="5" data-time-start="45.6" data-time-end="46.800000000000004" x="2220" width="60.00000000000014" y="45"></rect>
-         <rect class="note voice-3" id="e48-m-691-pianoroll" height="5" data-time-start="44.46" data-time-end="44.7" x="2163" width="12.0000000000001" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-692-pianoroll" height="5" data-time-start="44.7" data-time-end="45" x="2175" width="14.999999999999858" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-693-pianoroll" height="5" data-time-start="45" data-time-end="45.3" x="2190" width="14.999999999999858" y="120"></rect>
-         <rect class="note voice-3" id="e48-m-694-pianoroll" height="5" data-time-start="45.3" data-time-end="45.6" x="2204.9999999999995" width="15.000000000000213" y="115"></rect>
-         <rect class="note voice-3" id="e48-m-695-pianoroll" height="5" data-time-start="45.6" data-time-end="46.2" x="2220" width="30.00000000000007" y="105"></rect>
-         <rect class="note voice-3" id="e48-m-696-pianoroll" height="5" data-time-start="46.2" data-time-end="46.800000000000004" x="2250" width="30.00000000000007" y="165"></rect>
-         <rect class="note voice-1" id="e48-m-709-pianoroll" height="5" data-time-start="46.85999999999999" data-time-end="48" x="2282.9999999999995" width="57.000000000000384" y="30"></rect>
-         <rect class="note voice-1" id="e48-m-711-pianoroll" height="5" data-time-start="48" data-time-end="49.2" x="2340" width="60.00000000000014" y="20"></rect>
-         <rect class="note voice-2" id="e48-m-718-pianoroll" height="5" data-time-start="46.85999999999999" data-time-end="48" x="2282.9999999999995" width="57.000000000000384" y="45"></rect>
-         <rect class="note voice-2" id="e48-m-719-pianoroll" height="5" data-time-start="48" data-time-end="49.2" x="2340" width="60.00000000000014" y="35"></rect>
-         <rect class="note voice-3" id="e48-m-728-pianoroll" height="5" data-time-start="46.85999999999999" data-time-end="47.400000000000006" x="2282.9999999999995" width="27.000000000000668" y="125"></rect>
-         <rect class="note voice-3" id="e48-m-730-pianoroll" height="5" data-time-start="47.400000000000006" data-time-end="48" x="2310" width="29.999999999999716" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-731-pianoroll" height="5" data-time-start="48" data-time-end="48.300000000000004" x="2340" width="15.000000000000213" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-732-pianoroll" height="5" data-time-start="48.300000000000004" data-time-end="48.720000000000006" x="2355" width="21.000000000000085" y="115"></rect>
-         <rect class="note voice-3" id="e48-m-733-pianoroll" height="5" data-time-start="48.779999999999994" data-time-end="48.900000000000006" x="2378.9999999999995" width="6.000000000000583" y="125"></rect>
-         <rect class="note voice-3" id="e48-m-735-pianoroll" height="5" data-time-start="48.900000000000006" data-time-end="49.2" x="2385" width="14.999999999999858" y="115"></rect>
-         <rect class="note voice-1" id="e48-m-751-pianoroll" height="5" data-time-start="49.26" data-time-end="50.4" x="2402.9999999999995" width="57.00000000000003" y="10"></rect>
-         <rect class="note voice-1" id="e48-m-752-pianoroll" height="5" data-time-start="50.4" data-time-end="51" x="2460" width="30.00000000000007" y="20"></rect>
-         <rect class="note voice-1" id="e48-m-753-pianoroll" height="5" data-time-start="51" data-time-end="51.6" x="2490" width="30.00000000000007" y="20"></rect>
-         <rect class="note voice-2" id="e48-m-756-pianoroll" height="5" data-time-start="49.26" data-time-end="50.4" x="2402.9999999999995" width="57.00000000000003" y="30"></rect>
-         <rect class="note voice-2" id="e48-m-758-pianoroll" height="5" data-time-start="50.4" data-time-end="51.6" x="2460" width="60.00000000000014" y="45"></rect>
-         <rect class="note voice-3" id="e48-m-773-pianoroll" height="5" data-time-start="49.26" data-time-end="49.50000000000001" x="2402.9999999999995" width="12.000000000000455" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-774-pianoroll" height="5" data-time-start="49.50000000000001" data-time-end="49.92" x="2415" width="20.99999999999973" y="150"></rect>
-         <rect class="note voice-3" id="e48-m-776-pianoroll" height="5" data-time-start="49.98" data-time-end="50.099999999999994" x="2438.9999999999995" width="5.999999999999872" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-777-pianoroll" height="5" data-time-start="50.099999999999994" data-time-end="50.4" x="2444.9999999999995" width="15.000000000000213" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-778-pianoroll" height="5" data-time-start="50.4" data-time-end="50.82000000000001" x="2460" width="21.00000000000044" y="125"></rect>
-         <rect class="note voice-3" id="e48-m-780-pianoroll" height="5" data-time-start="50.879999999999995" data-time-end="51" x="2483.9999999999995" width="6.000000000000227" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-781-pianoroll" height="5" data-time-start="51" data-time-end="51.120000000000005" x="2490" width="6.000000000000227" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-783-pianoroll" height="5" data-time-start="51.18" data-time-end="51.3" x="2499" width="5.999999999999872" y="150"></rect>
-         <rect class="note voice-3" id="e48-m-785-pianoroll" height="5" data-time-start="51.3" data-time-end="51.6" x="2504.9999999999995" width="15.000000000000213" y="140"></rect>
-         <rect class="note voice-1" id="e48-m-797-pianoroll" height="5" data-time-start="51.66" data-time-end="52.8" x="2522.9999999999995" width="57.00000000000003" y="10"></rect>
-         <rect class="note voice-1" id="e48-m-798-pianoroll" height="5" data-time-start="52.8" data-time-end="53.4" x="2579.9999999999995" width="30.00000000000007" y="0"></rect>
-         <rect class="note voice-1" id="e48-m-799-pianoroll" height="5" data-time-start="53.4" data-time-end="54" x="2610" width="30.00000000000007" y="0"></rect>
-         <rect class="note voice-1" id="e48-m-800-pianoroll" height="5" data-time-start="54" data-time-end="58.8" x="2640" width="239.99999999999986" y="0"></rect>
-         <rect class="note voice-2" id="e48-m-817-pianoroll" height="5" data-time-start="51.66" data-time-end="52.8" x="2522.9999999999995" width="57.00000000000003" y="10"></rect>
-         <rect class="note voice-2" id="e48-m-818-pianoroll" height="5" data-time-start="52.8" data-time-end="57.599999999999994" x="2579.9999999999995" width="239.99999999999986" y="20"></rect>
-         <rect class="note voice-3" id="e48-m-834-pianoroll" height="5" data-time-start="51.66" data-time-end="51.9" x="2522.9999999999995" width="12.0000000000001" y="150"></rect>
-         <rect class="note voice-3" id="e48-m-836-pianoroll" height="5" data-time-start="51.9" data-time-end="52.2" x="2535" width="15.000000000000213" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-837-pianoroll" height="5" data-time-start="52.2" data-time-end="52.5" x="2550" width="14.999999999999858" y="115"></rect>
-         <rect class="note voice-3" id="e48-m-838-pianoroll" height="5" data-time-start="52.5" data-time-end="52.8" x="2565" width="14.999999999999858" y="105"></rect>
-         <rect class="note voice-3" id="e48-m-839-pianoroll" height="5" data-time-start="52.8" data-time-end="57.599999999999994" x="2579.9999999999995" width="239.99999999999986" y="140"></rect>
-         <rect class="note voice-1" id="e48-m-852-pianoroll" height="5" data-time-start="58.86" data-time-end="60" x="2883" width="57.00000000000003" y="35"></rect>
-         <rect class="note voice-1" id="e48-m-853-pianoroll" height="5" data-time-start="60" data-time-end="60.6" x="2940" width="30.00000000000007" y="35"></rect>
-         <rect class="note voice-1" id="e48-m-854-pianoroll" height="5" data-time-start="60.6" data-time-end="61.2" x="2970" width="30.00000000000007" y="35"></rect>
-         <rect class="note voice-2" id="e48-m-863-pianoroll" height="5" data-time-start="58.86" data-time-end="60" x="2883" width="57.00000000000003" y="35"></rect>
-         <rect class="note voice-2" id="e48-m-864-pianoroll" height="5" data-time-start="60" data-time-end="61.2" x="2940" width="60.00000000000014" y="35"></rect>
-         <rect class="note voice-3" id="e48-m-869-pianoroll" height="5" data-time-start="58.86" data-time-end="60" x="2883" width="57.00000000000003" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-870-pianoroll" height="5" data-time-start="60" data-time-end="60.6" x="2940" width="30.00000000000007" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-871-pianoroll" height="5" data-time-start="60.6" data-time-end="61.2" x="2970" width="30.00000000000007" y="140"></rect>
-         <rect class="note voice-1" id="e48-m-881-pianoroll" height="5" data-time-start="61.25999999999999" data-time-end="62.400000000000006" x="3002.9999999999995" width="57.00000000000074" y="30"></rect>
-         <rect class="note voice-1" id="e48-m-883-pianoroll" height="5" data-time-start="62.400000000000006" data-time-end="63.6" x="3060" width="59.99999999999979" y="35"></rect>
-         <rect class="note voice-2" id="e48-m-888-pianoroll" height="5" data-time-start="61.25999999999999" data-time-end="62.400000000000006" x="3002.9999999999995" width="57.00000000000074" y="45"></rect>
-         <rect class="note voice-2" id="e48-m-889-pianoroll" height="5" data-time-start="62.400000000000006" data-time-end="63.6" x="3060" width="59.99999999999979" y="55"></rect>
-         <rect class="note voice-3" id="e48-m-906-pianoroll" height="5" data-time-start="61.25999999999999" data-time-end="61.800000000000004" x="3002.9999999999995" width="27.000000000000668" y="150"></rect>
-         <rect class="note voice-3" id="e48-m-908-pianoroll" height="5" data-time-start="61.800000000000004" data-time-end="62.400000000000006" x="3030" width="30.00000000000007" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-909-pianoroll" height="5" data-time-start="62.400000000000006" data-time-end="63.6" x="3060" width="59.99999999999979" y="130"></rect>
-         <rect class="note voice-1" id="e48-m-915-pianoroll" height="5" data-time-start="63.66" data-time-end="64.2" x="3122.9999999999995" width="27.000000000000313" y="30"></rect>
-         <rect class="note voice-1" id="e48-m-917-pianoroll" height="5" data-time-start="64.2" data-time-end="64.80000000000001" x="3150" width="30.000000000000426" y="30"></rect>
-         <rect class="note voice-1" id="e48-m-919-pianoroll" height="5" data-time-start="64.80000000000001" data-time-end="66" x="3180.0000000000005" width="59.99999999999943" y="20"></rect>
-         <rect class="note voice-2" id="e48-m-928-pianoroll" height="5" data-time-start="63.66" data-time-end="64.80000000000001" x="3122.9999999999995" width="57.00000000000074" y="45"></rect>
-         <rect class="note voice-2" id="e48-m-929-pianoroll" height="5" data-time-start="64.80000000000001" data-time-end="66" x="3180.0000000000005" width="59.99999999999943" y="35"></rect>
-         <rect class="note voice-3" id="e48-m-936-pianoroll" height="5" data-time-start="63.66" data-time-end="64.2" x="3122.9999999999995" width="27.000000000000313" y="165"></rect>
-         <rect class="note voice-3" id="e48-m-937-pianoroll" height="5" data-time-start="64.2" data-time-end="64.80000000000001" x="3150" width="30.000000000000426" y="150"></rect>
-         <rect class="note voice-3" id="e48-m-939-pianoroll" height="5" data-time-start="64.80000000000001" data-time-end="66" x="3180.0000000000005" width="59.99999999999943" y="155"></rect>
-         <rect class="note voice-1" id="e48-m-949-pianoroll" height="5" data-time-start="66.06" data-time-end="67.2" x="3243" width="57.00000000000003" y="30"></rect>
-         <rect class="note voice-1" id="e48-m-951-pianoroll" height="5" data-time-start="67.2" data-time-end="68.4" x="3300" width="60.00000000000014" y="35"></rect>
-         <rect class="note voice-2" id="e48-m-958-pianoroll" height="5" data-time-start="66.06" data-time-end="67.2" x="3243" width="57.00000000000003" y="70"></rect>
-         <rect class="note voice-2" id="e48-m-959-pianoroll" height="5" data-time-start="67.2" data-time-end="68.4" x="3300" width="60.00000000000014" y="55"></rect>
-         <rect class="note voice-3" id="e48-m-970-pianoroll" height="5" data-time-start="66.06" data-time-end="66.60000000000001" x="3243" width="27.000000000000313" y="165"></rect>
-         <rect class="note voice-3" id="e48-m-971-pianoroll" height="5" data-time-start="66.60000000000001" data-time-end="67.2" x="3270.0000000000005" width="29.999999999999716" y="105"></rect>
-         <rect class="note voice-3" id="e48-m-972-pianoroll" height="5" data-time-start="67.2" data-time-end="67.80000000000001" x="3300" width="30.000000000000426" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-973-pianoroll" height="5" data-time-start="67.80000000000001" data-time-end="68.4" x="3330.0000000000005" width="29.999999999999716" y="115"></rect>
-         <rect class="note voice-1" id="e48-m-982-pianoroll" height="5" data-time-start="68.46000000000001" data-time-end="69.6" x="3363.0000000000005" width="56.99999999999932" y="20"></rect>
-         <rect class="note voice-1" id="e48-m-983-pianoroll" height="5" data-time-start="69.6" data-time-end="70.19999999999999" x="3419.9999999999995" width="29.999999999999716" y="30"></rect>
-         <rect class="note voice-1" id="e48-m-985-pianoroll" height="5" data-time-start="70.19999999999999" data-time-end="70.8" x="3449.999999999999" width="30.000000000000426" y="30"></rect>
-         <rect class="note voice-2" id="e48-m-997-pianoroll" height="5" data-time-start="68.46000000000001" data-time-end="69.6" x="3363.0000000000005" width="56.99999999999932" y="60"></rect>
-         <rect class="note voice-2" id="e48-m-998-pianoroll" height="5" data-time-start="69.6" data-time-end="70.8" x="3419.9999999999995" width="60.00000000000014" y="70"></rect>
-         <rect class="note voice-3" id="e48-m-1011-pianoroll" height="5" data-time-start="68.46000000000001" data-time-end="68.7" x="3363.0000000000005" width="11.999999999999744" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-1012-pianoroll" height="5" data-time-start="68.7" data-time-end="68.82000000000001" x="3375" width="6.000000000000227" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-1014-pianoroll" height="5" data-time-start="68.88" data-time-end="69.00000000000001" x="3383.9999999999995" width="6.000000000000938" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-1015-pianoroll" height="5" data-time-start="69.00000000000001" data-time-end="69.3" x="3390.0000000000005" width="14.999999999999147" y="120"></rect>
-         <rect class="note voice-3" id="e48-m-1016-pianoroll" height="5" data-time-start="69.3" data-time-end="69.6" x="3404.9999999999995" width="14.999999999999858" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-1017-pianoroll" height="5" data-time-start="69.6" data-time-end="70.8" x="3419.9999999999995" width="60.00000000000014" y="105"></rect>
-         <rect class="note voice-1" id="e48-m-1029-pianoroll" height="5" data-time-start="70.86" data-time-end="71.39999999999999" x="3483" width="26.999999999999602" y="35"></rect>
-         <rect class="note voice-1" id="e48-m-1030-pianoroll" height="5" data-time-start="71.39999999999999" data-time-end="72" x="3509.9999999999995" width="30.000000000000426" y="35"></rect>
-         <rect class="note voice-1" id="e48-m-1031-pianoroll" height="5" data-time-start="72" data-time-end="73.2" x="3540" width="60.00000000000014" y="10"></rect>
-         <rect class="note voice-2" id="e48-m-1038-pianoroll" height="5" data-time-start="70.86" data-time-end="72" x="3483" width="57.00000000000003" y="10"></rect>
-         <rect class="note voice-2" id="e48-m-1039-pianoroll" height="5" data-time-start="72" data-time-end="73.2" x="3540" width="60.00000000000014" y="35"></rect>
-         <rect class="note voice-3" id="e48-m-1042-pianoroll" height="5" data-time-start="70.86" data-time-end="71.39999999999999" x="3483" width="26.999999999999602" y="115"></rect>
-         <rect class="note voice-3" id="e48-m-1043-pianoroll" height="5" data-time-start="71.39999999999999" data-time-end="72.30000000000001" x="3509.9999999999995" width="45.000000000000995" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-1044-pianoroll" height="5" data-time-start="72.30000000000001" data-time-end="72.6" x="3555.0000000000005" width="14.999999999999147" y="120"></rect>
-         <rect class="note voice-3" id="e48-m-1045-pianoroll" height="5" data-time-start="72.6" data-time-end="73.2" x="3569.9999999999995" width="30.000000000000426" y="115"></rect>
-         <rect class="note voice-1" id="e48-m-1053-pianoroll" height="5" data-time-start="73.25999999999999" data-time-end="73.8" x="3602.9999999999995" width="27.000000000000313" y="0"></rect>
-         <rect class="note voice-1" id="e48-m-1054-pianoroll" height="5" data-time-start="73.8" data-time-end="74.4" x="3629.9999999999995" width="30.000000000000426" y="0"></rect>
-         <rect class="note voice-1" id="e48-m-1055-pianoroll" height="5" data-time-start="74.4" data-time-end="75.6" x="3660" width="59.99999999999943" y="10"></rect>
-         <rect class="note voice-2" id="e48-m-1066-pianoroll" height="5" data-time-start="73.25999999999999" data-time-end="74.4" x="3602.9999999999995" width="57.00000000000074" y="20"></rect>
-         <rect class="note voice-2" id="e48-m-1067-pianoroll" height="5" data-time-start="74.4" data-time-end="75.6" x="3660" width="59.99999999999943" y="45"></rect>
-         <rect class="note voice-3" id="e48-m-1084-pianoroll" height="5" data-time-start="73.25999999999999" data-time-end="73.5" x="3602.9999999999995" width="12.000000000000455" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-1085-pianoroll" height="5" data-time-start="73.5" data-time-end="73.8" x="3615" width="14.999999999999858" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-1086-pianoroll" height="5" data-time-start="73.8" data-time-end="74.10000000000001" x="3629.9999999999995" width="15.000000000000568" y="120"></rect>
-         <rect class="note voice-3" id="e48-m-1087-pianoroll" height="5" data-time-start="74.10000000000001" data-time-end="74.4" x="3645.0000000000005" width="14.999999999999858" y="115"></rect>
-         <rect class="note voice-3" id="e48-m-1088-pianoroll" height="5" data-time-start="74.4" data-time-end="75" x="3660" width="29.999999999999716" y="105"></rect>
-         <rect class="note voice-3" id="e48-m-1089-pianoroll" height="5" data-time-start="75" data-time-end="75.6" x="3690" width="29.999999999999716" y="165"></rect>
-         <rect class="note voice-1" id="e48-m-1102-pianoroll" height="5" data-time-start="75.66" data-time-end="76.2" x="3722.9999999999995" width="27.000000000000313" y="30"></rect>
-         <rect class="note voice-1" id="e48-m-1104-pianoroll" height="5" data-time-start="76.2" data-time-end="76.8" x="3750" width="29.999999999999716" y="30"></rect>
-         <rect class="note voice-1" id="e48-m-1106-pianoroll" height="5" data-time-start="76.8" data-time-end="78" x="3779.9999999999995" width="60.00000000000014" y="20"></rect>
-         <rect class="note voice-2" id="e48-m-1115-pianoroll" height="5" data-time-start="75.66" data-time-end="76.8" x="3722.9999999999995" width="57.00000000000003" y="45"></rect>
-         <rect class="note voice-2" id="e48-m-1116-pianoroll" height="5" data-time-start="76.8" data-time-end="78" x="3779.9999999999995" width="60.00000000000014" y="35"></rect>
-         <rect class="note voice-3" id="e48-m-1123-pianoroll" height="5" data-time-start="75.66" data-time-end="76.2" x="3722.9999999999995" width="27.000000000000313" y="125"></rect>
-         <rect class="note voice-3" id="e48-m-1125-pianoroll" height="5" data-time-start="76.2" data-time-end="76.8" x="3750" width="29.999999999999716" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-1126-pianoroll" height="5" data-time-start="76.8" data-time-end="77.1" x="3779.9999999999995" width="14.999999999999858" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-1127-pianoroll" height="5" data-time-start="77.1" data-time-end="77.51999999999998" x="3794.9999999999995" width="20.999999999999375" y="115"></rect>
-         <rect class="note voice-3" id="e48-m-1128-pianoroll" height="5" data-time-start="77.58000000000001" data-time-end="77.69999999999999" x="3819.0000000000005" width="5.999999999998806" y="125"></rect>
-         <rect class="note voice-3" id="e48-m-1130-pianoroll" height="5" data-time-start="77.69999999999999" data-time-end="78" x="3824.999999999999" width="15.000000000000568" y="115"></rect>
-         <rect class="note voice-1" id="e48-m-1140-pianoroll" height="5" data-time-start="78.06" data-time-end="79.2" x="3843" width="57.00000000000003" y="10"></rect>
-         <rect class="note voice-1" id="e48-m-1141-pianoroll" height="5" data-time-start="79.2" data-time-end="79.80000000000001" x="3900" width="30.000000000000426" y="20"></rect>
-         <rect class="note voice-1" id="e48-m-1142-pianoroll" height="5" data-time-start="79.80000000000001" data-time-end="80.4" x="3930.0000000000005" width="29.999999999999716" y="20"></rect>
-         <rect class="note voice-2" id="e48-m-1151-pianoroll" height="5" data-time-start="78.06" data-time-end="79.2" x="3843" width="57.00000000000003" y="30"></rect>
-         <rect class="note voice-2" id="e48-m-1153-pianoroll" height="5" data-time-start="79.2" data-time-end="80.4" x="3900" width="60.00000000000014" y="45"></rect>
-         <rect class="note voice-3" id="e48-m-1168-pianoroll" height="5" data-time-start="78.06" data-time-end="78.3" x="3843" width="11.999999999999744" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-1169-pianoroll" height="5" data-time-start="78.3" data-time-end="78.71999999999998" x="3854.9999999999995" width="20.999999999999375" y="150"></rect>
-         <rect class="note voice-3" id="e48-m-1171-pianoroll" height="5" data-time-start="78.78000000000002" data-time-end="78.89999999999999" x="3879.0000000000005" width="5.999999999998806" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-1172-pianoroll" height="5" data-time-start="78.89999999999999" data-time-end="79.2" x="3884.9999999999995" width="15.000000000000568" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-1173-pianoroll" height="5" data-time-start="79.2" data-time-end="79.62" x="3900" width="21.000000000000085" y="125"></rect>
-         <rect class="note voice-3" id="e48-m-1175-pianoroll" height="5" data-time-start="79.68" data-time-end="79.80000000000001" x="3924" width="6.000000000000227" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-1176-pianoroll" height="5" data-time-start="79.80000000000001" data-time-end="79.91999999999999" x="3930.0000000000005" width="5.999999999998806" y="140"></rect>
-         <rect class="note voice-3" id="e48-m-1178-pianoroll" height="5" data-time-start="79.98000000000002" data-time-end="80.1" x="3939.000000000001" width="5.999999999998806" y="150"></rect>
-         <rect class="note voice-3" id="e48-m-1180-pianoroll" height="5" data-time-start="80.1" data-time-end="80.4" x="3944.9999999999995" width="15.000000000000568" y="140"></rect>
-         <rect class="note voice-1" id="e48-m-1194-pianoroll" height="5" data-time-start="80.46" data-time-end="81.60000000000001" x="3962.9999999999995" width="57.00000000000074" y="10"></rect>
-         <rect class="note voice-1" id="e48-m-1195-pianoroll" height="5" data-time-start="81.60000000000001" data-time-end="82.2" x="4020.0000000000005" width="29.999999999999716" y="0"></rect>
-         <rect class="note voice-1" id="e48-m-1196-pianoroll" height="5" data-time-start="82.2" data-time-end="82.80000000000001" x="4050" width="30.000000000000426" y="0"></rect>
-         <rect class="note voice-1" id="e48-m-1197-pianoroll" height="5" data-time-start="82.80000000000001" data-time-end="87.6" x="4080.0000000000005" width="239.99999999999915" y="0"></rect>
-         <rect class="note voice-2" id="e48-m-1208-pianoroll" height="5" data-time-start="80.46" data-time-end="81.60000000000001" x="3962.9999999999995" width="57.00000000000074" y="10"></rect>
-         <rect class="note voice-2" id="e48-m-1209-pianoroll" height="5" data-time-start="81.60000000000001" data-time-end="86.39999999999999" x="4020.0000000000005" width="239.99999999999915" y="20"></rect>
-         <rect class="note voice-3" id="e48-m-1221-pianoroll" height="5" data-time-start="80.46" data-time-end="80.7" x="3962.9999999999995" width="12.000000000000455" y="150"></rect>
-         <rect class="note voice-3" id="e48-m-1223-pianoroll" height="5" data-time-start="80.7" data-time-end="81" x="3975" width="14.999999999999858" y="130"></rect>
-         <rect class="note voice-3" id="e48-m-1224-pianoroll" height="5" data-time-start="81" data-time-end="81.3" x="3990" width="14.999999999999858" y="115"></rect>
-         <rect class="note voice-3" id="e48-m-1225-pianoroll" height="5" data-time-start="81.3" data-time-end="81.60000000000001" x="4004.9999999999995" width="15.000000000000568" y="105"></rect>
-         <rect class="note voice-3" id="e48-m-1226-pianoroll" height="5" data-time-start="81.60000000000001" data-time-end="86.39999999999999" x="4020.0000000000005" width="239.99999999999915" y="140"></rect></svg></div>
+         <rect class="note voice-3" id="e48-m-443-pianoroll" height="5" data-time-start="24" data-time-end="26.4" x="1140" width="119.99999999999993" y="140"></rect>
+         <rect class="note voice-1" id="e48-m-462-pianoroll" height="5" data-time-start="27.66" data-time-end="28.799999999999997" x="1323" width="56.99999999999985" y="35"></rect>
+         <rect class="note voice-1" id="e48-m-463-pianoroll" height="5" data-time-start="28.799999999999997" data-time-end="29.4" x="1380" width="30.00000000000007" y="35"></rect>
+         <rect class="note voice-1" id="e48-m-464-pianoroll" height="5" data-time-start="29.4" data-time-end="30" x="1410" width="30.00000000000007" y="35"></rect>
+         <rect class="note voice-2" id="e48-m-473-pianoroll" height="5" data-time-start="27.66" data-time-end="28.799999999999997" x="1323" width="56.99999999999985" y="35"></rect>
+         <rect class="note voice-2" id="e48-m-474-pianoroll" height="5" data-time-start="28.799999999999997" data-time-end="30" x="1380" width="60.00000000000014" y="35"></rect>
+         <rect class="note voice-3" id="e48-m-479-pianoroll" height="5" data-time-start="27.66" data-time-end="28.799999999999997" x="1323" width="56.99999999999985" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-480-pianoroll" height="5" data-time-start="28.799999999999997" data-time-end="29.4" x="1380" width="30.00000000000007" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-481-pianoroll" height="5" data-time-start="29.4" data-time-end="30" x="1410" width="30.00000000000007" y="140"></rect>
+         <rect class="note voice-1" id="e48-m-491-pianoroll" height="5" data-time-start="30.06" data-time-end="31.200000000000003" x="1443" width="57.000000000000206" y="30"></rect>
+         <rect class="note voice-1" id="e48-m-493-pianoroll" height="5" data-time-start="31.200000000000003" data-time-end="31.8" x="1500.0000000000002" width="29.999999999999893" y="35"></rect>
+         <rect class="note voice-1" id="e48-m-494-pianoroll" height="5" data-time-start="31.8" data-time-end="32.400000000000006" x="1530" width="30.00000000000025" y="35"></rect>
+         <rect class="note voice-2" id="e48-m-499-pianoroll" height="5" data-time-start="30.06" data-time-end="31.200000000000003" x="1443" width="57.000000000000206" y="45"></rect>
+         <rect class="note voice-2" id="e48-m-500-pianoroll" height="5" data-time-start="31.200000000000003" data-time-end="32.400000000000006" x="1500.0000000000002" width="60.00000000000014" y="55"></rect>
+         <rect class="note voice-3" id="e48-m-517-pianoroll" height="5" data-time-start="30.06" data-time-end="30.6" x="1443" width="27.000000000000135" y="150"></rect>
+         <rect class="note voice-3" id="e48-m-519-pianoroll" height="5" data-time-start="30.6" data-time-end="31.200000000000003" x="1470" width="30.00000000000007" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-520-pianoroll" height="5" data-time-start="31.200000000000003" data-time-end="32.400000000000006" x="1500.0000000000002" width="60.00000000000014" y="130"></rect>
+         <rect class="note voice-1" id="e48-m-526-pianoroll" height="5" data-time-start="32.46" data-time-end="33.6" x="1563" width="57.00000000000003" y="30"></rect>
+         <rect class="note voice-1" id="e48-m-528-pianoroll" height="5" data-time-start="33.6" data-time-end="34.8" x="1620" width="59.99999999999979" y="20"></rect>
+         <rect class="note voice-2" id="e48-m-537-pianoroll" height="5" data-time-start="32.46" data-time-end="33.6" x="1563" width="57.00000000000003" y="45"></rect>
+         <rect class="note voice-2" id="e48-m-538-pianoroll" height="5" data-time-start="33.6" data-time-end="34.8" x="1620" width="59.99999999999979" y="35"></rect>
+         <rect class="note voice-3" id="e48-m-545-pianoroll" height="5" data-time-start="32.46" data-time-end="33" x="1563" width="26.999999999999957" y="165"></rect>
+         <rect class="note voice-3" id="e48-m-546-pianoroll" height="5" data-time-start="33" data-time-end="33.6" x="1590" width="30.00000000000007" y="150"></rect>
+         <rect class="note voice-3" id="e48-m-548-pianoroll" height="5" data-time-start="33.6" data-time-end="34.8" x="1620" width="59.99999999999979" y="155"></rect>
+         <rect class="note voice-1" id="e48-m-562-pianoroll" height="5" data-time-start="34.86000000000001" data-time-end="36" x="1683.0000000000002" width="56.99999999999967" y="30"></rect>
+         <rect class="note voice-1" id="e48-m-564-pianoroll" height="5" data-time-start="36" data-time-end="37.2" x="1739.9999999999998" width="60.00000000000014" y="35"></rect>
+         <rect class="note voice-2" id="e48-m-573-pianoroll" height="5" data-time-start="34.86000000000001" data-time-end="36" x="1683.0000000000002" width="56.99999999999967" y="70"></rect>
+         <rect class="note voice-2" id="e48-m-574-pianoroll" height="5" data-time-start="36" data-time-end="37.2" x="1739.9999999999998" width="60.00000000000014" y="55"></rect>
+         <rect class="note voice-3" id="e48-m-583-pianoroll" height="5" data-time-start="34.86000000000001" data-time-end="35.4" x="1683.0000000000002" width="26.999999999999602" y="165"></rect>
+         <rect class="note voice-3" id="e48-m-584-pianoroll" height="5" data-time-start="35.4" data-time-end="36" x="1709.9999999999998" width="30.00000000000007" y="105"></rect>
+         <rect class="note voice-3" id="e48-m-585-pianoroll" height="5" data-time-start="36" data-time-end="36.6" x="1739.9999999999998" width="30.00000000000007" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-586-pianoroll" height="5" data-time-start="36.6" data-time-end="37.2" x="1770" width="30.00000000000007" y="115"></rect>
+         <rect class="note voice-1" id="e48-m-597-pianoroll" height="5" data-time-start="37.26" data-time-end="38.4" x="1802.9999999999998" width="57.00000000000003" y="20"></rect>
+         <rect class="note voice-1" id="e48-m-598-pianoroll" height="5" data-time-start="38.4" data-time-end="39" x="1859.9999999999998" width="30.00000000000007" y="30"></rect>
+         <rect class="note voice-1" id="e48-m-600-pianoroll" height="5" data-time-start="39" data-time-end="39.6" x="1889.9999999999998" width="30.00000000000007" y="30"></rect>
+         <rect class="note voice-2" id="e48-m-608-pianoroll" height="5" data-time-start="37.26" data-time-end="38.4" x="1802.9999999999998" width="57.00000000000003" y="60"></rect>
+         <rect class="note voice-2" id="e48-m-609-pianoroll" height="5" data-time-start="38.4" data-time-end="39.6" x="1859.9999999999998" width="60.00000000000014" y="70"></rect>
+         <rect class="note voice-3" id="e48-m-626-pianoroll" height="5" data-time-start="37.26" data-time-end="37.5" x="1802.9999999999998" width="12.0000000000001" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-627-pianoroll" height="5" data-time-start="37.5" data-time-end="37.62" x="1814.9999999999998" width="5.999999999999872" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-629-pianoroll" height="5" data-time-start="37.68" data-time-end="37.8" x="1823.9999999999998" width="5.999999999999872" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-630-pianoroll" height="5" data-time-start="37.8" data-time-end="38.1" x="1829.9999999999998" width="15.000000000000213" y="120"></rect>
+         <rect class="note voice-3" id="e48-m-631-pianoroll" height="5" data-time-start="38.1" data-time-end="38.4" x="1845" width="14.999999999999858" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-632-pianoroll" height="5" data-time-start="38.4" data-time-end="39.6" x="1859.9999999999998" width="60.00000000000014" y="105"></rect>
+         <rect class="note voice-1" id="e48-m-636-pianoroll" height="5" data-time-start="39.66" data-time-end="40.2" x="1922.9999999999998" width="27.000000000000313" y="35"></rect>
+         <rect class="note voice-1" id="e48-m-637-pianoroll" height="5" data-time-start="40.2" data-time-end="40.800000000000004" x="1950" width="30.00000000000007" y="35"></rect>
+         <rect class="note voice-1" id="e48-m-638-pianoroll" height="5" data-time-start="40.800000000000004" data-time-end="42.00000000000001" x="1980" width="60.00000000000014" y="10"></rect>
+         <rect class="note voice-2" id="e48-m-647-pianoroll" height="5" data-time-start="39.66" data-time-end="40.800000000000004" x="1922.9999999999998" width="57.000000000000384" y="10"></rect>
+         <rect class="note voice-2" id="e48-m-648-pianoroll" height="5" data-time-start="40.800000000000004" data-time-end="42.00000000000001" x="1980" width="60.00000000000014" y="35"></rect>
+         <rect class="note voice-3" id="e48-m-655-pianoroll" height="5" data-time-start="39.66" data-time-end="40.2" x="1922.9999999999998" width="27.000000000000313" y="115"></rect>
+         <rect class="note voice-3" id="e48-m-656-pianoroll" height="5" data-time-start="40.2" data-time-end="41.1" x="1950" width="44.99999999999993" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-657-pianoroll" height="5" data-time-start="41.1" data-time-end="41.400000000000006" x="1995" width="15.000000000000213" y="120"></rect>
+         <rect class="note voice-3" id="e48-m-658-pianoroll" height="5" data-time-start="41.400000000000006" data-time-end="42.00000000000001" x="2010.0000000000002" width="30.00000000000007" y="115"></rect>
+         <rect class="note voice-1" id="e48-m-668-pianoroll" height="5" data-time-start="42.059999999999995" data-time-end="43.199999999999996" x="2042.9999999999995" width="57.00000000000003" y="0"></rect>
+         <rect class="note voice-1" id="e48-m-669-pianoroll" height="5" data-time-start="43.199999999999996" data-time-end="43.8" x="2099.9999999999995" width="30.00000000000007" y="10"></rect>
+         <rect class="note voice-1" id="e48-m-670-pianoroll" height="5" data-time-start="43.8" data-time-end="44.4" x="2129.9999999999995" width="30.00000000000007" y="10"></rect>
+         <rect class="note voice-2" id="e48-m-681-pianoroll" height="5" data-time-start="42.059999999999995" data-time-end="43.199999999999996" x="2042.9999999999995" width="57.00000000000003" y="20"></rect>
+         <rect class="note voice-2" id="e48-m-682-pianoroll" height="5" data-time-start="43.199999999999996" data-time-end="44.4" x="2099.9999999999995" width="60.00000000000014" y="45"></rect>
+         <rect class="note voice-3" id="e48-m-691-pianoroll" height="5" data-time-start="42.059999999999995" data-time-end="42.3" x="2042.9999999999995" width="12.0000000000001" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-692-pianoroll" height="5" data-time-start="42.3" data-time-end="42.599999999999994" x="2054.9999999999995" width="14.999999999999858" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-693-pianoroll" height="5" data-time-start="42.599999999999994" data-time-end="42.9" x="2069.9999999999995" width="15.000000000000213" y="120"></rect>
+         <rect class="note voice-3" id="e48-m-694-pianoroll" height="5" data-time-start="42.9" data-time-end="43.199999999999996" x="2085" width="14.999999999999858" y="115"></rect>
+         <rect class="note voice-3" id="e48-m-695-pianoroll" height="5" data-time-start="43.199999999999996" data-time-end="43.8" x="2099.9999999999995" width="30.00000000000007" y="105"></rect>
+         <rect class="note voice-3" id="e48-m-696-pianoroll" height="5" data-time-start="43.8" data-time-end="44.4" x="2129.9999999999995" width="30.00000000000007" y="165"></rect>
+         <rect class="note voice-1" id="e48-m-709-pianoroll" height="5" data-time-start="44.46" data-time-end="45.6" x="2163" width="57.00000000000003" y="30"></rect>
+         <rect class="note voice-1" id="e48-m-711-pianoroll" height="5" data-time-start="45.6" data-time-end="46.800000000000004" x="2220" width="60.00000000000014" y="20"></rect>
+         <rect class="note voice-2" id="e48-m-718-pianoroll" height="5" data-time-start="44.46" data-time-end="45.6" x="2163" width="57.00000000000003" y="45"></rect>
+         <rect class="note voice-2" id="e48-m-719-pianoroll" height="5" data-time-start="45.6" data-time-end="46.800000000000004" x="2220" width="60.00000000000014" y="35"></rect>
+         <rect class="note voice-3" id="e48-m-728-pianoroll" height="5" data-time-start="44.46" data-time-end="45" x="2163" width="26.999999999999957" y="125"></rect>
+         <rect class="note voice-3" id="e48-m-730-pianoroll" height="5" data-time-start="45" data-time-end="45.6" x="2190" width="30.00000000000007" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-731-pianoroll" height="5" data-time-start="45.6" data-time-end="45.9" x="2220" width="14.999999999999858" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-732-pianoroll" height="5" data-time-start="45.9" data-time-end="46.32" x="2235" width="21.000000000000085" y="115"></rect>
+         <rect class="note voice-3" id="e48-m-733-pianoroll" height="5" data-time-start="46.38" data-time-end="46.5" x="2259" width="5.999999999999872" y="125"></rect>
+         <rect class="note voice-3" id="e48-m-735-pianoroll" height="5" data-time-start="46.5" data-time-end="46.800000000000004" x="2265" width="15.000000000000213" y="115"></rect>
+         <rect class="note voice-1" id="e48-m-751-pianoroll" height="5" data-time-start="46.85999999999999" data-time-end="48" x="2282.9999999999995" width="57.000000000000384" y="10"></rect>
+         <rect class="note voice-1" id="e48-m-752-pianoroll" height="5" data-time-start="48" data-time-end="48.6" x="2340" width="30.00000000000007" y="20"></rect>
+         <rect class="note voice-1" id="e48-m-753-pianoroll" height="5" data-time-start="48.6" data-time-end="49.2" x="2370" width="30.00000000000007" y="20"></rect>
+         <rect class="note voice-2" id="e48-m-756-pianoroll" height="5" data-time-start="46.85999999999999" data-time-end="48" x="2282.9999999999995" width="57.000000000000384" y="30"></rect>
+         <rect class="note voice-2" id="e48-m-758-pianoroll" height="5" data-time-start="48" data-time-end="49.2" x="2340" width="60.00000000000014" y="45"></rect>
+         <rect class="note voice-3" id="e48-m-773-pianoroll" height="5" data-time-start="46.85999999999999" data-time-end="47.1" x="2282.9999999999995" width="12.000000000000455" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-774-pianoroll" height="5" data-time-start="47.1" data-time-end="47.52" x="2295" width="21.000000000000085" y="150"></rect>
+         <rect class="note voice-3" id="e48-m-776-pianoroll" height="5" data-time-start="47.580000000000005" data-time-end="47.7" x="2319" width="5.999999999999872" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-777-pianoroll" height="5" data-time-start="47.7" data-time-end="48" x="2325" width="14.999999999999858" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-778-pianoroll" height="5" data-time-start="48" data-time-end="48.42" x="2340" width="21.000000000000085" y="125"></rect>
+         <rect class="note voice-3" id="e48-m-780-pianoroll" height="5" data-time-start="48.48" data-time-end="48.6" x="2363.9999999999995" width="6.000000000000227" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-781-pianoroll" height="5" data-time-start="48.6" data-time-end="48.720000000000006" x="2370" width="6.000000000000227" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-783-pianoroll" height="5" data-time-start="48.779999999999994" data-time-end="48.900000000000006" x="2378.9999999999995" width="6.000000000000583" y="150"></rect>
+         <rect class="note voice-3" id="e48-m-785-pianoroll" height="5" data-time-start="48.900000000000006" data-time-end="49.2" x="2385" width="14.999999999999858" y="140"></rect>
+         <rect class="note voice-1" id="e48-m-797-pianoroll" height="5" data-time-start="49.26" data-time-end="50.4" x="2402.9999999999995" width="57.00000000000003" y="10"></rect>
+         <rect class="note voice-1" id="e48-m-798-pianoroll" height="5" data-time-start="50.4" data-time-end="51" x="2460" width="30.00000000000007" y="0"></rect>
+         <rect class="note voice-1" id="e48-m-799-pianoroll" height="5" data-time-start="51" data-time-end="51.6" x="2490" width="30.00000000000007" y="0"></rect>
+         <rect class="note voice-1" id="e48-m-800-pianoroll" height="5" data-time-start="51.6" data-time-end="54" x="2520" width="119.99999999999993" y="0"></rect>
+         <rect class="note voice-2" id="e48-m-817-pianoroll" height="5" data-time-start="49.26" data-time-end="50.4" x="2402.9999999999995" width="57.00000000000003" y="10"></rect>
+         <rect class="note voice-2" id="e48-m-818-pianoroll" height="5" data-time-start="50.4" data-time-end="52.8" x="2460" width="119.99999999999993" y="20"></rect>
+         <rect class="note voice-3" id="e48-m-834-pianoroll" height="5" data-time-start="49.26" data-time-end="49.50000000000001" x="2402.9999999999995" width="12.000000000000455" y="150"></rect>
+         <rect class="note voice-3" id="e48-m-836-pianoroll" height="5" data-time-start="49.50000000000001" data-time-end="49.800000000000004" x="2415" width="14.999999999999858" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-837-pianoroll" height="5" data-time-start="49.800000000000004" data-time-end="50.099999999999994" x="2430" width="14.999999999999503" y="115"></rect>
+         <rect class="note voice-3" id="e48-m-838-pianoroll" height="5" data-time-start="50.099999999999994" data-time-end="50.4" x="2444.9999999999995" width="15.000000000000213" y="105"></rect>
+         <rect class="note voice-3" id="e48-m-839-pianoroll" height="5" data-time-start="50.4" data-time-end="52.8" x="2460" width="119.99999999999993" y="140"></rect>
+         <rect class="note voice-1" id="e48-m-852-pianoroll" height="5" data-time-start="54.059999999999995" data-time-end="55.2" x="2642.9999999999995" width="57.000000000000384" y="35"></rect>
+         <rect class="note voice-1" id="e48-m-853-pianoroll" height="5" data-time-start="55.2" data-time-end="55.800000000000004" x="2700" width="30.00000000000007" y="35"></rect>
+         <rect class="note voice-1" id="e48-m-854-pianoroll" height="5" data-time-start="55.800000000000004" data-time-end="56.400000000000006" x="2730" width="30.00000000000007" y="35"></rect>
+         <rect class="note voice-2" id="e48-m-863-pianoroll" height="5" data-time-start="54.059999999999995" data-time-end="55.2" x="2642.9999999999995" width="57.000000000000384" y="35"></rect>
+         <rect class="note voice-2" id="e48-m-864-pianoroll" height="5" data-time-start="55.2" data-time-end="56.400000000000006" x="2700" width="60.00000000000014" y="35"></rect>
+         <rect class="note voice-3" id="e48-m-869-pianoroll" height="5" data-time-start="54.059999999999995" data-time-end="55.2" x="2642.9999999999995" width="57.000000000000384" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-870-pianoroll" height="5" data-time-start="55.2" data-time-end="55.800000000000004" x="2700" width="30.00000000000007" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-871-pianoroll" height="5" data-time-start="55.800000000000004" data-time-end="56.400000000000006" x="2730" width="30.00000000000007" y="140"></rect>
+         <rect class="note voice-1" id="e48-m-881-pianoroll" height="5" data-time-start="56.459999999999994" data-time-end="57.599999999999994" x="2762.9999999999995" width="57.00000000000003" y="30"></rect>
+         <rect class="note voice-1" id="e48-m-883-pianoroll" height="5" data-time-start="57.599999999999994" data-time-end="58.8" x="2819.9999999999995" width="60.00000000000014" y="35"></rect>
+         <rect class="note voice-2" id="e48-m-888-pianoroll" height="5" data-time-start="56.459999999999994" data-time-end="57.599999999999994" x="2762.9999999999995" width="57.00000000000003" y="45"></rect>
+         <rect class="note voice-2" id="e48-m-889-pianoroll" height="5" data-time-start="57.599999999999994" data-time-end="58.8" x="2819.9999999999995" width="60.00000000000014" y="55"></rect>
+         <rect class="note voice-3" id="e48-m-906-pianoroll" height="5" data-time-start="56.459999999999994" data-time-end="57.00000000000001" x="2762.9999999999995" width="27.000000000000668" y="150"></rect>
+         <rect class="note voice-3" id="e48-m-908-pianoroll" height="5" data-time-start="57.00000000000001" data-time-end="57.599999999999994" x="2790" width="29.99999999999936" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-909-pianoroll" height="5" data-time-start="57.599999999999994" data-time-end="58.8" x="2819.9999999999995" width="60.00000000000014" y="130"></rect>
+         <rect class="note voice-1" id="e48-m-915-pianoroll" height="5" data-time-start="58.86" data-time-end="59.4" x="2883" width="26.999999999999957" y="30"></rect>
+         <rect class="note voice-1" id="e48-m-917-pianoroll" height="5" data-time-start="59.4" data-time-end="60" x="2910" width="30.00000000000007" y="30"></rect>
+         <rect class="note voice-1" id="e48-m-919-pianoroll" height="5" data-time-start="60" data-time-end="61.2" x="2940" width="60.00000000000014" y="20"></rect>
+         <rect class="note voice-2" id="e48-m-928-pianoroll" height="5" data-time-start="58.86" data-time-end="60" x="2883" width="57.00000000000003" y="45"></rect>
+         <rect class="note voice-2" id="e48-m-929-pianoroll" height="5" data-time-start="60" data-time-end="61.2" x="2940" width="60.00000000000014" y="35"></rect>
+         <rect class="note voice-3" id="e48-m-936-pianoroll" height="5" data-time-start="58.86" data-time-end="59.4" x="2883" width="26.999999999999957" y="165"></rect>
+         <rect class="note voice-3" id="e48-m-937-pianoroll" height="5" data-time-start="59.4" data-time-end="60" x="2910" width="30.00000000000007" y="150"></rect>
+         <rect class="note voice-3" id="e48-m-939-pianoroll" height="5" data-time-start="60" data-time-end="61.2" x="2940" width="60.00000000000014" y="155"></rect>
+         <rect class="note voice-1" id="e48-m-949-pianoroll" height="5" data-time-start="61.25999999999999" data-time-end="62.400000000000006" x="3002.9999999999995" width="57.00000000000074" y="30"></rect>
+         <rect class="note voice-1" id="e48-m-951-pianoroll" height="5" data-time-start="62.400000000000006" data-time-end="63.6" x="3060" width="59.99999999999979" y="35"></rect>
+         <rect class="note voice-2" id="e48-m-958-pianoroll" height="5" data-time-start="61.25999999999999" data-time-end="62.400000000000006" x="3002.9999999999995" width="57.00000000000074" y="70"></rect>
+         <rect class="note voice-2" id="e48-m-959-pianoroll" height="5" data-time-start="62.400000000000006" data-time-end="63.6" x="3060" width="59.99999999999979" y="55"></rect>
+         <rect class="note voice-3" id="e48-m-970-pianoroll" height="5" data-time-start="61.25999999999999" data-time-end="61.800000000000004" x="3002.9999999999995" width="27.000000000000668" y="165"></rect>
+         <rect class="note voice-3" id="e48-m-971-pianoroll" height="5" data-time-start="61.800000000000004" data-time-end="62.400000000000006" x="3030" width="30.00000000000007" y="105"></rect>
+         <rect class="note voice-3" id="e48-m-972-pianoroll" height="5" data-time-start="62.400000000000006" data-time-end="63" x="3060" width="29.999999999999716" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-973-pianoroll" height="5" data-time-start="63" data-time-end="63.6" x="3090" width="30.00000000000007" y="115"></rect>
+         <rect class="note voice-1" id="e48-m-982-pianoroll" height="5" data-time-start="63.66" data-time-end="64.80000000000001" x="3122.9999999999995" width="57.00000000000074" y="20"></rect>
+         <rect class="note voice-1" id="e48-m-983-pianoroll" height="5" data-time-start="64.80000000000001" data-time-end="65.4" x="3180.0000000000005" width="29.999999999999716" y="30"></rect>
+         <rect class="note voice-1" id="e48-m-985-pianoroll" height="5" data-time-start="65.4" data-time-end="66" x="3210" width="29.999999999999716" y="30"></rect>
+         <rect class="note voice-2" id="e48-m-997-pianoroll" height="5" data-time-start="63.66" data-time-end="64.80000000000001" x="3122.9999999999995" width="57.00000000000074" y="60"></rect>
+         <rect class="note voice-2" id="e48-m-998-pianoroll" height="5" data-time-start="64.80000000000001" data-time-end="66" x="3180.0000000000005" width="59.99999999999943" y="70"></rect>
+         <rect class="note voice-3" id="e48-m-1011-pianoroll" height="5" data-time-start="63.66" data-time-end="63.9" x="3122.9999999999995" width="12.0000000000001" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-1012-pianoroll" height="5" data-time-start="63.9" data-time-end="64.02" x="3135" width="5.999999999999872" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-1014-pianoroll" height="5" data-time-start="64.08" data-time-end="64.2" x="3144" width="6.000000000000227" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-1015-pianoroll" height="5" data-time-start="64.2" data-time-end="64.5" x="3150" width="14.999999999999858" y="120"></rect>
+         <rect class="note voice-3" id="e48-m-1016-pianoroll" height="5" data-time-start="64.5" data-time-end="64.80000000000001" x="3165" width="15.000000000000568" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-1017-pianoroll" height="5" data-time-start="64.80000000000001" data-time-end="66" x="3180.0000000000005" width="59.99999999999943" y="105"></rect>
+         <rect class="note voice-1" id="e48-m-1029-pianoroll" height="5" data-time-start="66.06" data-time-end="66.60000000000001" x="3243" width="27.000000000000313" y="35"></rect>
+         <rect class="note voice-1" id="e48-m-1030-pianoroll" height="5" data-time-start="66.60000000000001" data-time-end="67.2" x="3270.0000000000005" width="29.999999999999716" y="35"></rect>
+         <rect class="note voice-1" id="e48-m-1031-pianoroll" height="5" data-time-start="67.2" data-time-end="68.4" x="3300" width="60.00000000000014" y="10"></rect>
+         <rect class="note voice-2" id="e48-m-1038-pianoroll" height="5" data-time-start="66.06" data-time-end="67.2" x="3243" width="57.00000000000003" y="10"></rect>
+         <rect class="note voice-2" id="e48-m-1039-pianoroll" height="5" data-time-start="67.2" data-time-end="68.4" x="3300" width="60.00000000000014" y="35"></rect>
+         <rect class="note voice-3" id="e48-m-1042-pianoroll" height="5" data-time-start="66.06" data-time-end="66.60000000000001" x="3243" width="27.000000000000313" y="115"></rect>
+         <rect class="note voice-3" id="e48-m-1043-pianoroll" height="5" data-time-start="66.60000000000001" data-time-end="67.5" x="3270.0000000000005" width="44.999999999999574" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-1044-pianoroll" height="5" data-time-start="67.5" data-time-end="67.80000000000001" x="3315" width="15.000000000000568" y="120"></rect>
+         <rect class="note voice-3" id="e48-m-1045-pianoroll" height="5" data-time-start="67.80000000000001" data-time-end="68.4" x="3330.0000000000005" width="29.999999999999716" y="115"></rect>
+         <rect class="note voice-1" id="e48-m-1053-pianoroll" height="5" data-time-start="68.46000000000001" data-time-end="69.00000000000001" x="3363.0000000000005" width="27.000000000000313" y="0"></rect>
+         <rect class="note voice-1" id="e48-m-1054-pianoroll" height="5" data-time-start="69.00000000000001" data-time-end="69.6" x="3390.0000000000005" width="29.999999999999005" y="0"></rect>
+         <rect class="note voice-1" id="e48-m-1055-pianoroll" height="5" data-time-start="69.6" data-time-end="70.8" x="3419.9999999999995" width="60.00000000000014" y="10"></rect>
+         <rect class="note voice-2" id="e48-m-1066-pianoroll" height="5" data-time-start="68.46000000000001" data-time-end="69.6" x="3363.0000000000005" width="56.99999999999932" y="20"></rect>
+         <rect class="note voice-2" id="e48-m-1067-pianoroll" height="5" data-time-start="69.6" data-time-end="70.8" x="3419.9999999999995" width="60.00000000000014" y="45"></rect>
+         <rect class="note voice-3" id="e48-m-1084-pianoroll" height="5" data-time-start="68.46000000000001" data-time-end="68.7" x="3363.0000000000005" width="11.999999999999744" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-1085-pianoroll" height="5" data-time-start="68.7" data-time-end="69.00000000000001" x="3375" width="15.000000000000568" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-1086-pianoroll" height="5" data-time-start="69.00000000000001" data-time-end="69.3" x="3390.0000000000005" width="14.999999999999147" y="120"></rect>
+         <rect class="note voice-3" id="e48-m-1087-pianoroll" height="5" data-time-start="69.3" data-time-end="69.6" x="3404.9999999999995" width="14.999999999999858" y="115"></rect>
+         <rect class="note voice-3" id="e48-m-1088-pianoroll" height="5" data-time-start="69.6" data-time-end="70.19999999999999" x="3419.9999999999995" width="29.999999999999716" y="105"></rect>
+         <rect class="note voice-3" id="e48-m-1089-pianoroll" height="5" data-time-start="70.19999999999999" data-time-end="70.8" x="3449.999999999999" width="30.000000000000426" y="165"></rect>
+         <rect class="note voice-1" id="e48-m-1102-pianoroll" height="5" data-time-start="70.86" data-time-end="71.39999999999999" x="3483" width="26.999999999999602" y="30"></rect>
+         <rect class="note voice-1" id="e48-m-1104-pianoroll" height="5" data-time-start="71.39999999999999" data-time-end="72" x="3509.9999999999995" width="30.000000000000426" y="30"></rect>
+         <rect class="note voice-1" id="e48-m-1106-pianoroll" height="5" data-time-start="72" data-time-end="73.2" x="3540" width="60.00000000000014" y="20"></rect>
+         <rect class="note voice-2" id="e48-m-1115-pianoroll" height="5" data-time-start="70.86" data-time-end="72" x="3483" width="57.00000000000003" y="45"></rect>
+         <rect class="note voice-2" id="e48-m-1116-pianoroll" height="5" data-time-start="72" data-time-end="73.2" x="3540" width="60.00000000000014" y="35"></rect>
+         <rect class="note voice-3" id="e48-m-1123-pianoroll" height="5" data-time-start="70.86" data-time-end="71.39999999999999" x="3483" width="26.999999999999602" y="125"></rect>
+         <rect class="note voice-3" id="e48-m-1125-pianoroll" height="5" data-time-start="71.39999999999999" data-time-end="72" x="3509.9999999999995" width="30.000000000000426" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-1126-pianoroll" height="5" data-time-start="72" data-time-end="72.30000000000001" x="3540" width="15.000000000000568" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-1127-pianoroll" height="5" data-time-start="72.30000000000001" data-time-end="72.72" x="3555.0000000000005" width="20.999999999999375" y="115"></rect>
+         <rect class="note voice-3" id="e48-m-1128-pianoroll" height="5" data-time-start="72.78" data-time-end="72.9" x="3579" width="6.000000000000227" y="125"></rect>
+         <rect class="note voice-3" id="e48-m-1130-pianoroll" height="5" data-time-start="72.9" data-time-end="73.2" x="3585" width="14.999999999999858" y="115"></rect>
+         <rect class="note voice-1" id="e48-m-1140-pianoroll" height="5" data-time-start="73.25999999999999" data-time-end="74.4" x="3602.9999999999995" width="57.00000000000074" y="10"></rect>
+         <rect class="note voice-1" id="e48-m-1141-pianoroll" height="5" data-time-start="74.4" data-time-end="75" x="3660" width="29.999999999999716" y="20"></rect>
+         <rect class="note voice-1" id="e48-m-1142-pianoroll" height="5" data-time-start="75" data-time-end="75.6" x="3690" width="29.999999999999716" y="20"></rect>
+         <rect class="note voice-2" id="e48-m-1151-pianoroll" height="5" data-time-start="73.25999999999999" data-time-end="74.4" x="3602.9999999999995" width="57.00000000000074" y="30"></rect>
+         <rect class="note voice-2" id="e48-m-1153-pianoroll" height="5" data-time-start="74.4" data-time-end="75.6" x="3660" width="59.99999999999943" y="45"></rect>
+         <rect class="note voice-3" id="e48-m-1168-pianoroll" height="5" data-time-start="73.25999999999999" data-time-end="73.5" x="3602.9999999999995" width="12.000000000000455" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-1169-pianoroll" height="5" data-time-start="73.5" data-time-end="73.92" x="3615" width="21.000000000000085" y="150"></rect>
+         <rect class="note voice-3" id="e48-m-1171-pianoroll" height="5" data-time-start="73.98" data-time-end="74.10000000000001" x="3639" width="6.000000000000227" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-1172-pianoroll" height="5" data-time-start="74.10000000000001" data-time-end="74.4" x="3645.0000000000005" width="14.999999999999858" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-1173-pianoroll" height="5" data-time-start="74.4" data-time-end="74.82000000000001" x="3660" width="21.000000000000085" y="125"></rect>
+         <rect class="note voice-3" id="e48-m-1175-pianoroll" height="5" data-time-start="74.88" data-time-end="75" x="3683.9999999999995" width="6.000000000000227" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-1176-pianoroll" height="5" data-time-start="75" data-time-end="75.12" x="3690" width="6.000000000000227" y="140"></rect>
+         <rect class="note voice-3" id="e48-m-1178-pianoroll" height="5" data-time-start="75.17999999999999" data-time-end="75.30000000000001" x="3698.9999999999995" width="6.000000000000938" y="150"></rect>
+         <rect class="note voice-3" id="e48-m-1180-pianoroll" height="5" data-time-start="75.30000000000001" data-time-end="75.6" x="3705.0000000000005" width="14.999999999999147" y="140"></rect>
+         <rect class="note voice-1" id="e48-m-1194-pianoroll" height="5" data-time-start="75.66" data-time-end="76.8" x="3722.9999999999995" width="57.00000000000003" y="10"></rect>
+         <rect class="note voice-1" id="e48-m-1195-pianoroll" height="5" data-time-start="76.8" data-time-end="77.4" x="3779.9999999999995" width="30.000000000000426" y="0"></rect>
+         <rect class="note voice-1" id="e48-m-1196-pianoroll" height="5" data-time-start="77.4" data-time-end="78" x="3810" width="29.999999999999716" y="0"></rect>
+         <rect class="note voice-1" id="e48-m-1197-pianoroll" height="5" data-time-start="78" data-time-end="80.4" x="3840" width="120.00000000000028" y="0"></rect>
+         <rect class="note voice-2" id="e48-m-1208-pianoroll" height="5" data-time-start="75.66" data-time-end="76.8" x="3722.9999999999995" width="57.00000000000003" y="10"></rect>
+         <rect class="note voice-2" id="e48-m-1209-pianoroll" height="5" data-time-start="76.8" data-time-end="79.2" x="3779.9999999999995" width="120.00000000000028" y="20"></rect>
+         <rect class="note voice-3" id="e48-m-1221-pianoroll" height="5" data-time-start="75.66" data-time-end="75.9" x="3722.9999999999995" width="12.000000000000455" y="150"></rect>
+         <rect class="note voice-3" id="e48-m-1223-pianoroll" height="5" data-time-start="75.9" data-time-end="76.2" x="3735" width="14.999999999999858" y="130"></rect>
+         <rect class="note voice-3" id="e48-m-1224-pianoroll" height="5" data-time-start="76.2" data-time-end="76.50000000000001" x="3750" width="15.000000000000568" y="115"></rect>
+         <rect class="note voice-3" id="e48-m-1225-pianoroll" height="5" data-time-start="76.50000000000001" data-time-end="76.8" x="3765.0000000000005" width="14.999999999999147" y="105"></rect>
+         <rect class="note voice-3" id="e48-m-1226-pianoroll" height="5" data-time-start="76.8" data-time-end="79.2" x="3779.9999999999995" width="120.00000000000028" y="140"></rect></svg></div>
 </div>
