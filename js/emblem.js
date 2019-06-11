@@ -1,6 +1,4 @@
 $(function () {
-/* VARIABLES */
-	/* emblem nav */
 	var languageEnglishOrigBtn = 'option.dropdown--language:nth-of-type(1)';
 	var languageEnglishNormBtn = 'option.dropdown--language:nth-of-type(2)';
 	var languageLatinOrigBtn = 'option.dropdown--language:nth-of-type(3)';
@@ -9,7 +7,6 @@ $(function () {
 	var layoutComparativeBtn = 'option.dropdown--layout:nth-of-type(1)';
 	var layoutDigitalEditionBtn = 'option.dropdown--layout:nth-of-type(2)';
 	var layoutBookBtn = 'option.dropdown--layout:nth-of-type(3)';
-	/* emblem languages */
 	var fullEnglishText = '.lang--english';
 	var fullGermanText = '.lang--german';
 	var fullLatinDiscourse = '.lang--latin._discourse--latin';
@@ -21,22 +18,18 @@ $(function () {
 	var languageLatinRegularized = '.lang--latin.edition--regularized';
 	var textTranslation = 'section > div.translation';
 	var textOriginal = 'section > div.original';
-	/* emblem containers */
 	var containerFacsimile = '.section__facsimile';
 	var containerEmblem = '.emblem';
 	var panelLeft = 'panel--left';
 	var panelRight = 'panel--right';
 	var panelFull = 'panel--full';
-	/* emblem sections */
 	var facsimileFull = '.facsimile--full';
 	var sectionFacsimile = '.section__facsimile';
 	var sectionImage = '.section__image';
 	var sectionMusic = '.section__music';
-	/* emblem grid */
 	var gridHalf = 'grid--half';
 	var gridLeft = 'grid--left';
 	var gridRight = 'grid--right';
-	/* other */
 	var musicNotation = '.cmn';
 	var playButton = '.atalanta-notation-start';
 	var pauseButton = '.atalanta-notation-stop';
@@ -56,54 +49,16 @@ $(function () {
 	let myMusic;
 	let myMusicControls;
 
-
-	// var thisEmblemPage = '.emblem-page';
-	// var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
-	// var myEmblemPage = $('.emblem-page').data("page");
-	// var startPage; // the number of first page of current emblem
-	// var newEmblemPageData;
-	// var viewer;
-
-	// var thisEmblemPage = '.emblem-page';
-	// var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
-	// var myEmblemPage = $('.emblem-page').data("page");
-	// var startPage; // the number of first page of current emblem
-	// var newEmblemPageData;
-	// var viewer;
-
-	/* emblem side nav */
-	// var sideNav = '.wrapper-sidenav';
-	// var mottoSideNav = 'ul.sidenav__options > li:nth-child(1)';
-	// var imageSideNav = 'ul.sidenav__options > li:nth-child(2)';
-	// var musicSideNav = 'ul.sidenav__options > li:nth-child(3)';
-	// var epigramSideNav = 'ul.sidenav__options > li:nth-child(4)';
-	// var discourseSideNav = 'ul.sidenav__options > li:nth-child(5)';
-	// var sideNavOption = 'ul.sidenav__options > li';
-	// var sideNavArrows = 'ul.sidenav__navigation li a';
-	// var dataID = $('.emblem-page').data('id');
-	// var myEmblem = dataID - 4;
-	// var currentEmblemNum = myEmblem;
-	// var prevEmblemNum = currentEmblemNum - 1;
-	// var nextEmblemNum = currentEmblemNum + 1;
-	// var prevBtn = '#sidenav__prev';
-	// var nextBtn = '#sidenav__next';
-	// var emblemNumTextArea = '#sidenav__titles';
-
-
-/* INITIALIZE */
 	onLoad(); // DISPLAY EMBLEM MENU AND DEFAULT OPTIONS ON PAGE LOAD
 
-/* EVENTS */
-	/* layout menu */
-	$("#layout").selectmenu({
+	$("#layout").selectmenu({ // layout menu
 	  change: function(event, ui) {},
 	  icons: { button: "custom-icon" }
 	});	
 	$( "#layout" ).on( "selectmenuchange", function( event, ui ) {
 	  selectLayout(ui.item.value);
 	});
-	/* language menu */
-	$("#language").selectmenu({
+	$("#language").selectmenu({ // language menu
 	  change: function(event, ui) {},
 	  icons: { button: "custom-icon" }
 	});	
@@ -111,8 +66,7 @@ $(function () {
 	  selectLanguage(ui.item.value);
 	});
 
-/* digital edition thumbnail navigation */
-	thumbnailPage = emblemPage - 1;
+	thumbnailPage = emblemPage - 1; // digital edition thumbnail nav
 	const $owlCarousel = $(".owl-carousel").owlCarousel({
 		center: true,
 		dots: false,
@@ -153,40 +107,34 @@ $(function () {
 	});
 
 
-
-/* FUNCTIONS */
 	function checkState() {
 		if ( $(layoutComparativeBtn).attr('data-layout')===('active') ) {
-			console.log("I AM IN CHECK STATE()");
-			console.log("Comparative Layout is ACTIVE");
 			showFacsimileLeft();
-			showDigitalEditionRight();
+			showDigitalEditionRight();	
 		}
 		else if ( $(layoutDigitalEditionBtn).attr('data-layout')===('active') ) { // if digital edition layout is active
 			showDigitalEditionFull();
-			console.log("Digital Edition Layout is ACTIVE");
 		}
 		else if ( $(layoutBookBtn).attr('data-layout')===('active') ) { // if book is active
 			showFacsimileFull();
-			console.log("Book Layout is ACTIVE");
 		}
 		else {
 			console.log("NONE OF THE STATES APPLY!!!");
 		}
-		// getDataState();
 	}
+	
 	function createScrollingScene() {
-		console.log("I AM IN THE STICKY FUNCTION");
 		myMusic = document.querySelector(".section__music");
 		myMusicControls = document.querySelector(".ata-music > .transport");
 		const controller = new ScrollMagic.Controller();
 		const scene = new ScrollMagic.Scene({
-			offset: -100,
+			offset: -104,
 			triggerElement: myMusic,
 			triggerHook: 0,
-			duration: getScrollingDuration(),
+			duration: getScrollingDuration, // this creates an endless callback over getScrollingDuration(), but the height/duration of the digital edition music isn't consistent otherwise
 			reverse: true
 		}).addTo(controller)
+		.refresh()
 		.on("enter", function(e) {
 			$(myMusicControls).addClass('is-stuck');
 		})
@@ -194,32 +142,16 @@ $(function () {
 			$(myMusicControls).removeClass('is-stuck');
 		});
 	}
-	function getDataState() {
-		// var mySingleData = document.querySelector('.subnav > ul li:nth-child(1)');
-		// console.log(mySingleData);
-		// singleData = mySingleData.getAttribute("data-state");
-		// mySingleData = $(singleViewBtn).attr('data-state');
-		// singleData = mySingleData.
-		// console.log(singleData);
-		// var mySingleData = document.querySelector(singleViewBtn);
-														//singleData = $(singleViewBtn).attr('data-state');
-	// var doubleData;
-	// var englishSingleData;
-	// var latinSingleData;
-	// var facsimileSingleData;
-	// var englishDoubleData;
-	// var latinDoubleData;
-	// var facsimileDoubleData;
-		// updateDataState();
-	}
 	function getScrollingDuration() {
-		let myDuration = (myMusic.offsetHeight - myMusicControls.offsetHeight) * 1.2;
-		console.log(myDuration + " is my sticky scrolling duration / approx. px height of the music-page notation SVG");
+		let myMusicHeight = $('.cmn').height();
+		let myDuration = myMusicHeight * .93;
 		return myDuration;
 	}
+
 	function musicAccessibility() {
 		$(musicNotation).attr('aria-hidden', 'true');
 	}
+
 	function onLoad() {
 		checkState();
 		if (emblemPage >= 5) {
@@ -227,7 +159,7 @@ $(function () {
 			createScrollingScene();
 		}
 	}
-		/* language selections */
+
 	function selectLangEnglishOrig() {
 		$(languageEnglishOrigBtn).attr('data-language', 'active'); // make English Original Button active
 		$(languageEnglishOrigBtn).siblings().attr('data-language', 'inactive'); // make non English Original Buttons inactive
@@ -253,58 +185,46 @@ $(function () {
 		$(languageLatinRegBtn).siblings().attr('data-language', 'inactive'); // make non Latin Regularized Buttons inactive
 		switchTextToLatinReg();
 	}
+
 	function selectLanguage(value) {
 		console.log(value);
 		var values = {
 			'english_original': function() {
-				// console.log("english_original");
 				selectLangEnglishOrig();
-				// checkState();
 			},
 			'english_modern': function() {
-				// console.log("english_modern");
 				selectLangEnglishNorm();
-				// checkState();
 			},
 			'latin_original': function() {
-				// console.log("latin_original");
 				selectLangLatinOrig();
-				// checkState();
 			},
 			'latin_normal': function() {
-				// console.log("latin_normal");
 				selectLangLatinReg();
-				// checkState();
 			},
 			'german': function() {
-				// console.log("german");
 				selectLangGerman();
-				// checkState();
 			}
 		};
 		return(values[value])();
 	}
-	/* page layout */
-	function selectLayout(value) {
+	function selectLayout(value) { // emblem page views / layouts
 		var values = {
 			'compare': function() {
-				// console.log("compare");
 				selectLayoutComparative();
 				checkState();
 			},
 			'digital-edition': function() {
-				// console.log("digital-edition");
 				selectLayoutDigitalEdition();
 				checkState();
 			},
 			'zooming-image': function() {
-				// console.log("zooming-image");
 				selectLayoutBook();
 				checkState();
 			}
 		};
 		return(values[value])();
 	}
+
 	function selectLayoutComparative() {
 		$(layoutComparativeBtn).attr('data-layout', 'active'); // make comparative layout state active
 		$(layoutComparativeBtn).siblings().attr('data-layout', 'inactive'); // make digital edition and book layout states inactive
@@ -317,6 +237,7 @@ $(function () {
 		$(layoutBookBtn).attr('data-layout', 'active'); // make book layout state active
 		$(layoutBookBtn).siblings().attr('data-layout', 'inactive'); // make comparative and digital edition layout states inactive
 	}
+
 	function showDigitalEditionFull() {
 		$(containerEmblem).removeClass(panelRight); // remove right half placement
 		$(containerEmblem).addClass(panelFull); // allow full width placement
@@ -341,7 +262,6 @@ $(function () {
 		$(facsimileFull).addClass(gridHalf); // make facsimile half the window width;
 		$(containerFacsimile).removeClass('is-hidden'); // show facsimile wrapper
 	}
-	/* text original/translation switches */
 	function showOriginalLanguage() {
 		$(textOriginal).removeClass('is-hidden'); // display Latin/German text block
 		$(textTranslation).addClass('is-hidden'); // hide English text block
@@ -350,7 +270,7 @@ $(function () {
 		$(textTranslation).removeClass('is-hidden'); // display English text block
 		$(textOriginal).addClass('is-hidden'); // hide Latin/German text block
 	}
-	/* emblem subnav */
+
 	function subnavHide() {
 		$(emblemNav).removeClass('is-visible');
 		$(emblemNav).addClass('is-hidden');
@@ -359,7 +279,7 @@ $(function () {
 		$(emblemNav).removeClass('is-hidden');
 		$(emblemNav).addClass('is-visible');
 	}
-	/* text switches */
+
 	function switchTextToEnglishOrig() {
 		console.log("I am switching text to English Original");
 		$(fullLatinText).removeClass('is-hidden'); // make full Latin text visible
@@ -398,6 +318,7 @@ $(function () {
 		$(fullLatinText).removeClass('edition--original'); // remove edition--original CSS from full Latin text
 		showOriginalLanguage();
 	}
+
 	function thumbnailNavAnimate() {
 		if ($(thumbnailNav).hasClass('de-nav--closed')) {
 			thumbnailNavOpen();
@@ -416,6 +337,7 @@ $(function () {
 		$(thumbnailNav).removeClass('de-nav--closed');
 		$(thumbnailNav).addClass('de-nav--open');
 	}
+
 	function WidthChange(jsMediaQuery) {
 		if(jsMediaQuery.matches) { // run on mobile devices/window widths
 			setTimeout(function(){
@@ -425,70 +347,14 @@ $(function () {
 			checkState(); // make necessary page updates based on layout selection
 		}
 		else {
-			// console.log("I am on a laptop or something");
+			console.log("I am on a laptop or something");
 		}
 	}
+
 	function updateDataState() {
 		var mySingleData = document.querySelector(singleViewBtn);
 		mySingleData.setAttribute("data-state", singleData);
 		var myTest = $(singleViewBtn).attr('data-state');
 		console.log("my new data state is " + myTest);
 	}
-	// function updateEmblemPageData() {
-	// 	var thisEmblemPageData = document.querySelector('.emblem-page');
-	// 	thisEmblemPageData.setAttribute("data-page", 'c');
-	// 	console.log("this emblem page is " + thisEmblemPageData.getAttribute('data-page'));
-	// 	newEmblemPageData = thisEmblemPageData.getAttribute('data-page');
-	// 	// getData();
-	// }
-
-// 	function getData() {
-// 		var theseEmblemPageData = document.querySelector('.emblem-page');
-// 		console.log("I'm getting data");
-// 		myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
-// 		myEmblemPage = theseEmblemPageData.getAttribute("data-page");
-// 		console.log("my emblem page is" + myEmblemPage);
-// 		processMyEmblemData();	
-// }
-
-/* SIDENAV */
-//http://jennamolby.com/how-to-display-dynamic-content-on-a-page-using-url-parameters/
-	// function sideNavSetNum() {
-	// 	if (dataID === 1) {
-	// 		$(prevBtn).addClass('is-hidden'); // do not display previous button on first emblem
-	// 		$(nextBtn).removeClass('is-hidden'); // display next button
-	// 		$(nextBtn).attr("href", "author-epigram.html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Frontispiece"); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID === 2) {
-	// 		$(prevBtn).attr("href", "frontispiece.html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "dedication.html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Author's Epigram"); // update the emblem title to reflect the current emblem number	
-	// 	}
-	// 	else if (dataID === 3) {
-	// 		$(prevBtn).attr("href", "author-epigram.html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "preface.html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Dedication"); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID === 4) {
-	// 		$(prevBtn).attr("href", "dedication.html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "emblem01.html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Preface"); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID === 5) {
-	// 		$(prevBtn).attr("href", "preface.html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID > 5 && dataID < 55) {
-	// 		$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID === 55) {
-	// 		$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).addClass('is-hidden'); // do not display next button
-	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-	// 	}	
-	// }
 });

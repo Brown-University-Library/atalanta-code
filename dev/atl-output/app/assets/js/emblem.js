@@ -157,18 +157,18 @@ $(function () {
 /* FUNCTIONS */
 	function checkState() {
 		if ( $(layoutComparativeBtn).attr('data-layout')===('active') ) {
-			console.log("I AM IN CHECK STATE()");
-			console.log("Comparative Layout is ACTIVE");
+			// console.log("I AM IN CHECK STATE()");
+			// console.log("Comparative Layout is ACTIVE");
 			showFacsimileLeft();
-			showDigitalEditionRight();
+			showDigitalEditionRight();	
 		}
 		else if ( $(layoutDigitalEditionBtn).attr('data-layout')===('active') ) { // if digital edition layout is active
 			showDigitalEditionFull();
-			console.log("Digital Edition Layout is ACTIVE");
+			// console.log("Digital Edition Layout is ACTIVE");
 		}
 		else if ( $(layoutBookBtn).attr('data-layout')===('active') ) { // if book is active
 			showFacsimileFull();
-			console.log("Book Layout is ACTIVE");
+			// console.log("Book Layout is ACTIVE");
 		}
 		else {
 			console.log("NONE OF THE STATES APPLY!!!");
@@ -176,17 +176,18 @@ $(function () {
 		// getDataState();
 	}
 	function createScrollingScene() {
-		console.log("I AM IN THE STICKY FUNCTION");
+		// console.log("I AM IN THE STICKY FUNCTION");
 		myMusic = document.querySelector(".section__music");
 		myMusicControls = document.querySelector(".ata-music > .transport");
 		const controller = new ScrollMagic.Controller();
 		const scene = new ScrollMagic.Scene({
-			offset: -100,
+			offset: -104,
 			triggerElement: myMusic,
 			triggerHook: 0,
-			duration: getScrollingDuration(),
+			duration: getScrollingDuration, // this creates an endless callback over getScrollingDuration(), but the height/duration of the digital edition music isn't consistent otherwise
 			reverse: true
 		}).addTo(controller)
+		.refresh()
 		.on("enter", function(e) {
 			$(myMusicControls).addClass('is-stuck');
 		})
@@ -213,8 +214,10 @@ $(function () {
 		// updateDataState();
 	}
 	function getScrollingDuration() {
-		let myDuration = (myMusic.offsetHeight - myMusicControls.offsetHeight) * 1.2;
-		console.log(myDuration + " is my sticky scrolling duration / approx. px height of the music-page notation SVG");
+		let myMusicHeight = $('.cmn').height();
+		// console.log("my music div height = " + myMusicHeight);
+		let myDuration = myMusicHeight * .93;
+		// console.log(myDuration + " is my sticky scrolling duration / approx. px height of the music-page notation SVG");
 		return myDuration;
 	}
 	function musicAccessibility() {
