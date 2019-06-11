@@ -2891,7 +2891,6 @@ main.toc-wrapper {
   grid-template-rows: auto;
   min-height: calc(100vh - 3.125rem);
   line-height: 1.5;
-  margin-top: 3.375rem;
   padding: 3rem 0; }
   .search-results .hidden {
     display: none; }
@@ -3847,7 +3846,8 @@ main.emblem-page {
   grid-column-end: 3; }
 
 .emblem {
-  margin-top: 3.125rem;
+  /*	margin-top: $subnav-h;*/
+  margin-top: -4px;
   display: grid;
   grid-row-start: 1;
   grid-row-end: 2;
