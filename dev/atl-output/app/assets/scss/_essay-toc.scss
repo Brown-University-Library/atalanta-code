@@ -1,0 +1,155 @@
+@import 'colors';
+@import 'utilities';
+
+main#essay-toc {
+
+	.toc--essays {
+		background: $gray;
+		color: $white;
+		font-family: $display-font_emblem;
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+	}
+	li {
+		background: $red_dark;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		margin-bottom: 10px;
+		padding: 0 6.75rem;
+	}
+	@include media ('>=xs-phone', '<tablet') {
+	    li {
+	      padding: 0 3rem;
+	    }
+	}
+	a {
+		color: $white;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		flex-direction: column;
+		height: 17.75rem;
+/*		height: 100%;
+		width: 100%;
+		outline: 5px solid red;*/
+	}
+	li:hover {
+		cursor: pointer;
+	}
+	a:hover {
+
+	}
+	.essay1 {
+		background-position: 50% 90%;
+		background-size: 112%;
+		background-blend-mode: multiply;
+	}
+	.essay1:hover {
+		background: $red;
+		background-position: 50% 90%;
+		background-size: 112%;
+		background-blend-mode: multiply;
+	}
+	.essay2 {
+		background-position: 50% 36%;
+		background-size: 108%;
+		background-blend-mode: multiply;
+	}
+	.essay2:hover {
+		background: $red;
+		background-position: 50% 36%;
+		background-size: 108%;
+		background-blend-mode: multiply;
+	}
+	.essay3 {
+		background-position: 46% 8%;
+		background-size: 109%;
+		background-blend-mode: multiply;
+	}
+	.essay3:hover {
+		background: $red;
+		background-position: 46% 8%;
+		background-size: 109%;
+		background-blend-mode: multiply;
+	}
+	.essay4 {
+		background-position: 38% 23%;
+		background-size: 106%;
+		background-blend-mode: multiply;
+	}
+	.essay4:hover {
+		background: $red;
+		background-position: 38% 23%;
+		background-size: 106%;
+		background-blend-mode: multiply;
+	}
+	.essay5 {
+		background-position: 38% 22%;
+		background-size: 108%;
+		background-blend-mode: multiply;
+	}
+	.essay5:hover {
+		background: $red;
+		background-position: 38% 22%;
+		background-size: 108%;
+		background-blend-mode: multiply;
+	}
+	.essay6 {
+		background-position: 38% 93%;
+		background-size: 108%;
+		background-blend-mode: multiply;
+	}
+	.essay6:hover {
+		background: $red;
+		background-position: 38% 93%;
+		background-size: 108%;
+		background-blend-mode: multiply;
+	}
+	.essay7 {
+		background-position: 38% 96%;
+		background-size: 108%;
+		background-blend-mode: multiply;
+	}
+	.essay7:hover {
+		background: $red;
+		background-position: 38% 96%;
+		background-size: 108%;
+		background-blend-mode: multiply;
+	}
+	.essay8 {
+		background-position: 38% 18%;
+		background-size: 108%;
+		background-blend-mode: multiply;
+	}
+	.essay8:hover {
+		background: $red;
+		background-position: 38% 18%;
+		background-size: 108%;
+		background-blend-mode: multiply;
+	}
+	h2 {
+		font-family: $secondary-display-font_emblem;
+		font-size: 3rem;
+		line-height: 1.2;
+		margin: .625rem 0 0 0;
+	}
+	@include media ('>=xs-phone', '<tablet') {
+	    h2 {
+	      font-size: 2.5rem;
+	    }
+	}
+	h4 {
+		font-size: 1.0625rem;
+		margin-top: .75rem;
+	}
+	h6 {
+		font-size: .875rem;
+		margin-top: 2rem;
+	}
+	cite {
+		font-style: oblique;
+	}
+}
