@@ -8761,7 +8761,7 @@ main#essay-toc cite {
   height: 20px;
   position: fixed;
   width: 100vw;
-  z-index: 9988; }
+  z-index: 99988; }
 
 .collections-wrapper {
   border: none;
@@ -8801,6 +8801,14 @@ main#image-search {
   main#essay-toc .all-collections,
   main#image-search .all-collections {
     line-height: 1.6; }
+
+body.emblem-body .opener-holder-bg {
+  margin-left: 40vw;
+  width: 60vw; }
+
+html.full-state body.emblem-body .opener-holder-bg {
+  margin-left: 0;
+  width: 100%; }
 
 div._footer {
   background: #333;

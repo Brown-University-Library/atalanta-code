@@ -38,3 +38,11 @@ main#image-search {
 		line-height: 1.6;
 	}
 }
+body.emblem-body .opener-holder-bg {
+	margin-left: 40vw;
+	width: 60vw;
+}
+html.full-state body.emblem-body .opener-holder-bg {
+	margin-left: 0;
+	width: 100%;
+}
