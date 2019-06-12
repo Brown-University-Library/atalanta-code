@@ -11,10 +11,14 @@ parseResults = function(results) {
         //Remove?:
         var resultcount = 0;
         
+        console.log('id', val.ref);
+
         var thisdoc = idxDocs.filter(doc => doc.id==val.ref)[0];
         if ('undefined' == typeof thisdoc) {
-            thisdoc = essayDocs.filter(doc => { console.log(doc.id, val.ref, doc.id==val.ref); return doc.id==val.ref; })[0];
+            thisdoc = essayDocs.filter(doc => { return doc.id==val.ref; })[0];
         }
+
+        console.log(essayDocs);
 
         var allresults = {};
         for (term in val.matchData.metadata) {  //Each search term matched in this essay.
@@ -134,7 +138,7 @@ parseResults = function(results) {
 
         thisoutp = {
             contexts: searchcontexts,
-            uri: ('/'+val.ref).replace('//', '/'),
+            uri: ('/'+val.ref),
             title: thisdoc.doctitle || thisdoc.title,
             type: thisdoc.type,
             resultcount: resultcount,
@@ -163,6 +167,7 @@ Promise.all([
         $.get('../data/json/essaydocs.json', data => essayDocs = data),
     ]).then(vals => {
         doSearch = function(searchTerm) {
+            searchTerm = searchTerm.trim();
             var outp = {
                 'keywords': [],
                 'emblems': [],
@@ -192,6 +197,7 @@ Promise.all([
             console.log('parsed ataidx results', results)
 
             var results = essayIdx.search(searchTerm);
+            console.log('essayidx results', results);
             if (results.length > 0) 
                 outp['scholarship'] = parseResults(results);
             else

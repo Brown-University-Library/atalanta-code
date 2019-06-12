@@ -1,6 +1,6 @@
 function pug_attr(t,e,n,f){return!1!==e&&null!=e&&(e||"class"!==t&&"style"!==t)?!0===e?" "+(f?t:t+'="'+t+'"'):("function"==typeof e.toJSON&&(e=e.toJSON()),"string"==typeof e||(e=JSON.stringify(e),n||-1===e.indexOf('"'))?(n&&(e=pug_escape(e))," "+t+'="'+e+'"'):" "+t+"='"+e.replace(/'/g,"&#39;")+"'"):""}
 function pug_escape(e){var a=""+e,t=pug_match_html.exec(a);if(!t)return e;var r,c,n,s="";for(r=t.index,c=0;r<a.length;r++){switch(a.charCodeAt(r)){case 34:n="&quot;";break;case 38:n="&amp;";break;case 60:n="&lt;";break;case 62:n="&gt;";break;default:continue}c!==r&&(s+=a.substring(c,r)),c=r+1,s+=n}return c!==r?s+a.substring(c,r):s}
-var pug_match_html=/["&<>]/;function pageTemplate(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (console, emblems, essaySectionNames, keywords, scholarship, searchTerm, sectionNames, str) {pug_html = pug_html + "\u003Cdiv class=\"search-results\"\u003E\u003Cp class=\"lead\"\u003ESearch results for \"" + (pug_escape(null == (pug_interp = searchTerm) ? "" : pug_interp)) + "\"\u003C\u002Fp\u003E\u003Cdiv class=\"results\"\u003E";
+var pug_match_html=/["&<>]/;function pageTemplate(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (console, emblems, essaySectionNames, keywords, scholarship, searchTerm, sectionNames, str) {pug_html = pug_html + ("\u003Cdiv class=\"search-results\"\u003E\u003Cp class=\"lead\"\u003ESearch results for \"" + (pug_escape(null == (pug_interp = searchTerm) ? "" : pug_interp)) + "\"\u003C\u002Fp\u003E\u003Cdiv class=\"results\"\u003E" + (pug_escape(null == (pug_interp = console.log('keywords', keywords)) ? "" : pug_interp)) + (pug_escape(null == (pug_interp = console.log('emblems', emblems)) ? "" : pug_interp)) + (pug_escape(null == (pug_interp = console.log('scholarship', scholarship)) ? "" : pug_interp)));
 if ( keywords.length )
 {
 pug_html = pug_html + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003E \u003CEmblem\u003EImages\u003C\u002FEmblem\u003E\u003C\u002Fh2\u003E\u003Cdiv class=\"results__item--image-terms\"\u003E";
@@ -287,7 +287,7 @@ pug_html = pug_html + "\u003C\u002Fdiv\u003E";
 }
 if ( scholarship.length )
 {
-pug_html = pug_html + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003E\u003CScholarly\u003EEssays\u003C\u002FScholarly\u003E\u003C\u002Fh2\u003E";
+pug_html = pug_html + (pug_escape(null == (pug_interp = console.log("Scholarship", scholarship)) ? "" : pug_interp)) + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003E\u003CScholarly\u003EEssays\u003C\u002FScholarly\u003E\u003C\u002Fh2\u003E";
 // iterate scholarship
 ;(function(){
   var $$obj = scholarship;
