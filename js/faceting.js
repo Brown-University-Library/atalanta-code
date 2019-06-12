@@ -8,6 +8,7 @@ const TERM_COUNT_SELECTOR = 'span.image-term__number';
 const FILTER_LIST_SELECTOR = 'nav.image-search-filters';
 const MAIN_CATEGORY_SELECTOR = 'li.category__item';
 
+/*
 $.get('../data/json/byterm_enh_array.json').then(facets => {
     //TODO: Much of this should be in the template.
 	var tdata = {};
@@ -33,6 +34,7 @@ $.get('../data/json/byterm_enh_array.json').then(facets => {
 	outp = navbarTemplate(templdata);
 	$(FILTER_LIST_SELECTOR).html(outp);
 });
+*/
 
 var _allemblems = Array.apply(0, Array(51))
                       .map((el, i) => i);
