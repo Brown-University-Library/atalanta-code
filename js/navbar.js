@@ -3,7 +3,6 @@ function pug_escape(e){var a=""+e,t=pug_match_html.exec(a);if(!t)return e;var r,
 var pug_match_html=/["&<>]/;function navbarTemplate(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (category, i, subcategory, termdata) {pug_html = pug_html + "\u003Cul class=\"image-search__categories\"\u003E";
 for ( category in termdata )
 {
-pug_html = pug_html + "\u003Cbalkjfas\u003E\u003C\u002Fbalkjfas\u003E";
 var catid = category.toLowerCase().replace(/[^\w]+/g, '-');
 pug_html = pug_html + "\u003Cli" + (" class=\"category__item category--actions\""+pug_attr("id", catid, true, false)) + "\u003E\u003Ca href=\"#\" aria-haspopup=\"true\" aria-expanded=\"false\"\u003E" + (pug_escape(null == (pug_interp = category) ? "" : pug_interp)) + "\u003C\u002Fa\u003E\u003Cul class=\"image-search__subcategories\"\u003E";
 for ( subcategory in termdata[category] )
