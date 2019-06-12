@@ -1,9 +1,6 @@
 
 (function () { 
 
-
-
-
   const MAIN_COMPONENT_CLASSNAME = 'music',
     AUDIO_CONTAINER_CLASSNAME = 'audio',
     MUTE_STATE_CLASSNAME = 'muted',
@@ -17,7 +14,8 @@
     TIME_START_ATTNAME = 'data-time-start',
     TIME_END_ATTNAME = 'data-time-end',
     AUDIO_POLLING_INTERVAL = 200,
-    SCROLL_OFFSET = 100;
+    SCROLL_OFFSET = 100, // CMN scroll offset - to account for topnav
+    PIANOROLL_SCROLL_OFFSET = 100;
 
   // Set up mute button click event for a single mute button (including pianoroll)
 
@@ -36,10 +34,10 @@
   
     const barLinesElements = Array.from(musicRoot.querySelectorAll(`.barLineAttr path:nth-child(${trackNumber})`));
 
-    const pianoRollNotes = musicRoot.querySelectorAll(`rect.note.voice-${trackNumber}`);
+    const pianoRollNotes = Array.from(document.querySelectorAll(`.pianoroll svg rect.note.voice-${trackNumber}`));
   
     const musicSvgElements = staffElements.concat(barLinesElements, buttonElement, pianoRollNotes);
-  
+
     const updateMute = function() {
   
       isMuted = ! isMuted;
@@ -76,7 +74,58 @@
     Array.from(musicRoot.querySelectorAll(`.audio *[${TRACK_NUMBER_ATTNAME}]`))
       .forEach(trackElem => trackElem.removeAttribute('hidden'));
 
+    // Add style element & filter to pianoroll
+    // TODO: this should be added to SVG transform
+
+    const pianoRollDefs = document.createElement('defs');
+    
+    pianoRollDefs.innerHTML = `
+        <filter id="highlightFilter" x="0" y="0" width="2000%" height="2000%">
+        <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0"></feOffset>
+        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10"></feGaussianBlur>
+        <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+      </filter>`;
+
+    Array.from(document.querySelectorAll('.pianoroll svg'))
+      .forEach(pianorollSvg => {
+        pianorollSvg.appendChild(document.createElement('style'));
+        pianorollSvg.appendChild(pianoRollDefs);
+      });
+
+    // Add to global style (TODO: should be migrated to main css file)
+
+    const tempStyle = document.createElement('style');
+    
+    tempStyle.textContent = `
+
+      .pianoroll svg rect.note { 
+        transition: transform 3s ease-out, fill 0.5s;
+      }
+
+      .pianoroll svg rect.note.${MUTE_STATE_CLASSNAME} {
+        fill: #eee;
+      }
+      
+      .pianoroll svg rect.note.${HIGHLIGHT_CLASSNAME} {
+        /* filter: url(#highlightFilter); */
+      }`;
+    
+      // The filter above isn't working for some reason ... 
+
+    document.head.appendChild(tempStyle);
+
+    
+
+    // filter: url(#displacementFilter);
+
+
     /*
+
+    // Get rightmost coordinate of rightmost bar
+
+    Array.from(document.querySelectorAll('.pianoroll rect'))
+      .map(rect => parseInt(rect.getAttribute('x')) + parseInt(rect.getAttribute('width')))
+      .sort((a, b) => b - a)[0];
 
     <svg width="100%" viewBox="961 0 1000 1000" preserveAspectRatio="xMidYMid slice">
     (where 961 is the x-coord of the bar)
@@ -86,6 +135,7 @@
   
   // Given an element, and the last (music) system which was scrolled,
   //  scroll to that system if it's changed
+  // TODO: move transition style & mute style to main CSS sheet
 
   function scrollToSystem(elemInSystem, lastScrolledSystemElem) {
 
@@ -118,34 +168,48 @@
     return recurseUpDomLookingForSystem(elemInSystem);
   }
 
+  function scrollPianoRollTo(elem, styleElem) {
+    const offset = (parseInt(elem.getAttribute('x')) - PIANOROLL_SCROLL_OFFSET) * -1;
+    styleElem.textContent = `
+
+      rect.note { 
+        transform: translate(${offset}px, 0);
+      }`
+  }
+
   // Given a master audio track, a classname, a timetable
   //  update classname 
   // TODO: Too much DOM accessing - this can be made more efficient
-  
-  function updateHighlights_OLD(audioTrack, highlightClassname, timeTable) {
-    timeTable.forEach(({elem, start, end}) => {
-      const isPlaying = (audioTrack.currentTime > start && audioTrack.currentTime < end),
-          classOperation = isPlaying ? 'add' : 'remove';
-      elem.classList[classOperation](highlightClassname);
-    });
-  }
-
-  function updateHighlights(audioTrack, highlightClassname, timeTable, lastScrolledSystem) {
+ 
+  function updateHighlights(audioTrack, highlightClassname, timeTable, lastScrolledSystem, pianoRollStyleElem) {
 
     let scrollNeedsToBeUpdated = true,
       scrolledSystem;
   
+    // For each element in the timetable ...
+
     timeTable.forEach(({ elem, start, end }) => {
   
+      // See if the element is currently playing - 
+      //  add the highlight classname or remove it, depending
+
       const isPlaying = (audioTrack.currentTime > start && audioTrack.currentTime < end),
           classOperation = isPlaying ? 'add' : 'remove';
       elem.classList[classOperation](highlightClassname);
   
+      // Update CMN scroll, if necessary
+      //  TODO: do we need to check this for _every_ element in the timetable??
+
       if (scrollNeedsToBeUpdated && isPlaying) {
         scrolledSystem = scrollToSystem(elem, lastScrolledSystem);
         scrollNeedsToBeUpdated = false;
       }
     });
+
+    // Update pianoroll scrolling
+
+    const pianorollHighlightedElem = document.querySelector(`.pianoroll rect.note.${highlightClassname}`);
+    scrollPianoRollTo(pianorollHighlightedElem, pianoRollStyleElem);
   
     return scrolledSystem;
   }
@@ -186,6 +250,7 @@
     // Start updateHighlights when play button is pressed
   
     let timerId, scrolledSystem;
+    const pianoRollStyleElem = document.querySelector('.pianoroll svg style');
   
     // Set onclick for play button
 
@@ -197,7 +262,7 @@
       pianorollContainer.classList.add(PLAYING_CLASSNAME);
       timerId = window.setInterval(
         function() {
-          scrolledSystem = updateHighlights(masterAudioTrack, HIGHLIGHT_CLASSNAME, timeTable, scrolledSystem); 
+          scrolledSystem = updateHighlights(masterAudioTrack, HIGHLIGHT_CLASSNAME, timeTable, scrolledSystem, pianoRollStyleElem); 
         }, 
         AUDIO_POLLING_INTERVAL
       );

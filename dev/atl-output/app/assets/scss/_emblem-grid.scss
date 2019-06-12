@@ -30,7 +30,8 @@ main.emblem-page {
 	grid-column-end: 3;
 }
 .emblem {
-	margin-top: $subnav-h;
+/*	margin-top: $subnav-h;*/
+	margin-top: -4px;
 	display: grid;
 	grid-row-start: 1;
 	grid-row-end: 2;
