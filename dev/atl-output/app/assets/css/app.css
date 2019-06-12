@@ -2768,7 +2768,7 @@ main.toc-wrapper {
   position: fixed;
   top: -60vh;
   width: calc(100vw - 8rem);
-  z-index: 1000; }
+  z-index: 2000; }
   .search__modal button.x-close {
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
@@ -3349,7 +3349,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   text-align: center;
   text-transform: uppercase;
   width: 100%;
-  z-index: 100000;
+  z-index: 4000;
   /*	li.topnav__search {
 		display: flex;
 		align-items: center;
@@ -3986,7 +3986,7 @@ nav.digital-edition-nav {
   position: fixed;
   top: 3.375rem;
   width: 100%;
-  z-index: 150; }
+  z-index: 300; }
   nav.digital-edition-nav .owl-carousel {
     background-color: #dae4ec;
     height: 10rem;
@@ -7385,7 +7385,7 @@ main#image-search {
   top: 3.375rem;
   left: 0;
   width: 100vw;
-  z-index: 100; }
+  z-index: 200; }
   .image-search-filters ul.image-search__categories {
     background-color: white;
     display: -webkit-box;
@@ -7480,7 +7480,7 @@ main#image-search {
     /*top: $imagesearchnav-h;*/
     left: 0;
     width: 100vw;
-    z-index: 100; }
+    z-index: 200; }
   .image-search-filters .category--active .faceting--help {
     display: -webkit-box;
     display: -webkit-flex;
@@ -7506,7 +7506,7 @@ main#image-search {
     top: 5.625rem;
     left: 0;
     width: 100vw;
-    z-index: 100; }
+    z-index: 200; }
   .image-search-filters .category__item.category--active ul.image-search__subcategories {
     display: -webkit-box;
     display: -webkit-flex;
@@ -8405,7 +8405,7 @@ main#essay-toc cite {
   height: 20px;
   position: fixed;
   width: 100vw;
-  z-index: 10000000; }
+  z-index: 9988; }
 
 div._footer {
   background: #333;
