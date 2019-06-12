@@ -7,7 +7,9 @@
 	<meta name="author" content="">
 	<title>Furnace and Fugue: Atalanta Fugiens (Digital Edition)</title>
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css">
-<!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
+	<!-- 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
+	<link rel="stylesheet" href="/css/style.min.ecac28db361b4f0a087bba9cec862bba177b39d4e3ebe5c7fd2518b3942d47c8.css">
+	<script src="/js/bundle.82c417f2334776021edd7bfc773ffc47991da9af206badd335dc64ac3835efd9.js" defer></script>
 </head>
 <body>
 <!-- GLOBAL NAVIGATION -->
@@ -110,8 +112,52 @@
 				<li><a href="../atalanta-fugiens/emblem50.html"><img class="image-results__image" src="../assets/img/emblem-images_cropped/320/emblem50.320.jpg" alt="In a grave a dragon with wings is embracing a dying woman. Around them are ruins, including a round stone building." /><div>Emblem <span>50</span></div></a></li>
 			</ul>
 		</nav>
+		<div class="collections-wrapper">
+		  <div class="collection-opener">
+		    <div class="opener-holder-bg">
+		      <div class="opener-holder">
+		        <span class="collection-name">Emblem Collections</span>
+		        <div class="js-btns">
+		          <a href="#" class="btn-up">
+		            <span class="icon-up"></span>
+		          </a>
+		          <a href="#" class="btn-down">
+		            <span class="icon-down"></span>
+		          </a>
+		          <a href="#" class="btn-close">
+		            <span class="icon-cancel"></span>
+		          </a>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="all-collections">
+		    <div class="container">
+		      <div class="create-collection">
+		        <div class="new-collection">
+		          <a class="lightbox btn" data-link="create" data-type="ajax" href="/templates/modals/modal-create.html">Create
+		            a New Collection</a>
+		        </div>
+		        <div class="collection-view">
+		          <span class="title">view<em>:</em></span>
+		          <ul class="grids" data-target="#grid">
+		            <li class="view-icon sm-view">
+		              <a href="javascript:;" data-grid="small"><span class="icon-viewsm"></span></a>
+		            </li>
+		            <li class="view-icon">
+		              <a href="javascript:;" data-grid="medium"><span class="icon-viewmd"></span></a>
+		            </li>
+		            <li class="view-icon">
+		              <a href="javascript:;" data-grid="large"><span class="icon-viewlg"></span></a>
+		            </li>
+		          </ul>
+		        </div>
+		      </div>
+		      <div class="grids-content small-grid" id="grid"></div>
+		    </div>
+		  </div>
+		</div>
 	</main>
-	<div class="_collections"></div>
 	<div class="_footer">
 		<footer>
 			<div class="footer--main">
@@ -129,6 +175,54 @@
 		</footer>
 	</div>
 <!-- JS -->
+	<script id="template" type="x-tmpl-mustache">
+		<div class="image-description" data-emblem-id="{{ id }}">
+		  <div class="image-holder" data-thing="{{size}}">
+
+		      
+		      <img src="/images/emblems/{{size}}/emblem{{id}}.{{size}}.jpg" >
+
+		   
+		    <div class="drag-image">
+		      <div class="drag-icon">
+		        <img src="/images/drag-icon.png" alt="drag-icon">
+		      </div>
+		      <span class="drag-text">
+		        Drag to Reorder
+		      </span>
+		    </div>
+		  </div>
+		  <div class="detail">
+		    <div class="name-tags">
+		      <div class="name">Emblem {{name}}</div>
+		      <ul class="extra-edits">
+		        <li>
+		          <a class="lightbox" data-link="zoom" data-type="ajax" data-src="/templates/modals/modal-zoom.html" href="javascript:;"><span class="icon-search"></span></a>
+		        </li>
+		        <li><a href="#"> <span class="icon-trash"></span></a></li>
+		      </ul>
+		    </div>
+		    <div class="tag-wrapper">
+		      <a class="tag-opener" href="#">
+		        TAGS <span class="icon-down"></span><span class="icon-cancel"></span>
+		      </a>
+		      <ul class="slide"></ul>
+		      <div class="tag-no">
+		        <span class="tags-count"></span>
+		        <div class="tag-detail">
+		          <span class="title">
+		            <span class="tags-count"></span> Matching Tags in this Collection:
+		          </span>
+		          <ul class="tag-list"></ul>
+		          <a class="all-tags" href="javascript:;'">
+		            Show All Tags
+		          </a>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</script>
     <script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.js"></script>
