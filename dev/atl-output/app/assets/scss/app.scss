@@ -18,9 +18,10 @@ $media-expressions: (
 	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
 	);
 
+@import 'include-media';
+@import 'normalize';
 @import 'fonts';
 @import 'reset';
-@import 'include-media';
 @import 'utilities';
 @import 'global';
 @import 'buttons';

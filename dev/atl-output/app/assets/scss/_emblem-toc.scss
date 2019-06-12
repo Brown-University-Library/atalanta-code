@@ -3,10 +3,7 @@
 
 main#emblem-toc {
 	background: $red;
-	color: $white;
 	display: grid;
-	font-family: $display-font_emblem;
-	font-size: 1.125rem;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
 	padding: 3rem 5rem;
@@ -23,7 +20,10 @@ main#emblem-toc {
 	h3, 
 	h5, 
 	nav {
-		grid-column: 1 / 13;	
+		color: $white;
+		grid-column: 1 / 13;
+		font-family: $display-font_emblem;
+		font-size: 1.125rem;
 	}
 	h1 {
 		font-family: $secondary-display-font_emblem;
