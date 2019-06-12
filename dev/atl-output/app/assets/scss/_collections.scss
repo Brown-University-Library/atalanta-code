@@ -18,6 +18,12 @@ main#emblem-toc,
 main#emblem-page, 
 main#essay-toc, 
 main#image-search {
+	@media (min-width: 1450px) {
+		.collections-wrapper {
+			font-size: 20px;
+			line-height: 1.6;
+		}
+	}
 	.opener-holder a {
 		color: #fff;
 	}

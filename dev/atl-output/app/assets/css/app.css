@@ -8766,6 +8766,14 @@ main#essay-toc cite {
   border: none;
   color: #333; }
 
+@media (min-width: 1450px) {
+  main#emblem-toc .collections-wrapper,
+  main#emblem-page .collections-wrapper,
+  main#essay-toc .collections-wrapper,
+  main#image-search .collections-wrapper {
+    font-size: 20px;
+    line-height: 1.6; } }
+
 main#emblem-toc .opener-holder a,
 main#emblem-page .opener-holder a,
 main#essay-toc .opener-holder a,
