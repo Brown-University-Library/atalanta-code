@@ -358,8 +358,13 @@ function initStickyCollections(activate) {
 		function getFullHeight() {
 			var fullHeight = 0;
 
-			if ($body.hasClass('fixed-header')) {
+			if ($body.hasClass('fixed-header') && !$body.hasClass('bul')) {
 				fullHeight = jQuery('#header .header-wrap').outerHeight();
+				// console.log("not this one"); //CB
+			}
+			else if($body.hasClass('fixed-header') && $body.hasClass('bul')) {
+				fullHeight = jQuery('header').outerHeight();
+				// console.log("it's this one"); //CB
 			}
 
 			return fullHeight;
