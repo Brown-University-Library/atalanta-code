@@ -13,3 +13,15 @@
 	border: none;
 	color: $gray;
 }
+
+main#emblem-toc, 
+main#emblem-page, 
+main#essay-toc, 
+main#image-search {
+	.opener-holder a {
+		color: #fff;
+	}
+	.all-collections {
+		line-height: 1.6;
+	}
+}
