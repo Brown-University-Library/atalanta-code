@@ -360,11 +360,11 @@ function initStickyCollections(activate) {
 
 			if ($body.hasClass('fixed-header') && !$body.hasClass('bul')) {
 				fullHeight = jQuery('#header .header-wrap').outerHeight();
-				// console.log("not this one"); //CB
+				// console.log("full-height collections: essay page"); //CB
 			}
 			else if($body.hasClass('fixed-header') && $body.hasClass('bul')) {
 				fullHeight = jQuery('header').outerHeight();
-				// console.log("it's this one"); //CB
+				// console.log("full height collections: non-essay page"); //CB
 			}
 
 			return fullHeight;

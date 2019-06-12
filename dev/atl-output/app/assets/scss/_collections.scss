@@ -15,9 +15,16 @@
 }
 
 main#emblem-toc, 
-main#emblem-page, 
+main#emblem-data, 
 main#essay-toc, 
 main#image-search {
+	#layout-button, 
+	#language-button {
+		box-sizing: content-box;
+	}
+/*	form {
+		max-height: auto;
+	}*/
 	@media (min-width: 1450px) {
 		.collections-wrapper {
 			font-size: 20px;

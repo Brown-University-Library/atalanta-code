@@ -7442,6 +7442,7 @@ button.lity-close {
 .frontmatter section {
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   height: auto;
+  min-height: calc(100vh - 6.5rem);
   padding: 2rem; }
 
 /*.my-offset-debug {
@@ -8766,25 +8767,40 @@ main#essay-toc cite {
   border: none;
   color: #333; }
 
-@media (min-width: 1450px) {
-  main#emblem-toc .collections-wrapper,
-  main#emblem-page .collections-wrapper,
-  main#essay-toc .collections-wrapper,
-  main#image-search .collections-wrapper {
-    font-size: 20px;
-    line-height: 1.6; } }
-
-main#emblem-toc .opener-holder a,
-main#emblem-page .opener-holder a,
-main#essay-toc .opener-holder a,
-main#image-search .opener-holder a {
-  color: #fff; }
-
-main#emblem-toc .all-collections,
-main#emblem-page .all-collections,
-main#essay-toc .all-collections,
-main#image-search .all-collections {
-  line-height: 1.6; }
+main#emblem-toc,
+main#emblem-data,
+main#essay-toc,
+main#image-search {
+  /*	form {
+		max-height: auto;
+	}*/ }
+  main#emblem-toc #layout-button,
+  main#emblem-toc #language-button,
+  main#emblem-data #layout-button,
+  main#emblem-data #language-button,
+  main#essay-toc #layout-button,
+  main#essay-toc #language-button,
+  main#image-search #layout-button,
+  main#image-search #language-button {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box; }
+  @media (min-width: 1450px) {
+    main#emblem-toc .collections-wrapper,
+    main#emblem-data .collections-wrapper,
+    main#essay-toc .collections-wrapper,
+    main#image-search .collections-wrapper {
+      font-size: 20px;
+      line-height: 1.6; } }
+  main#emblem-toc .opener-holder a,
+  main#emblem-data .opener-holder a,
+  main#essay-toc .opener-holder a,
+  main#image-search .opener-holder a {
+    color: #fff; }
+  main#emblem-toc .all-collections,
+  main#emblem-data .all-collections,
+  main#essay-toc .all-collections,
+  main#image-search .all-collections {
+    line-height: 1.6; }
 
 div._footer {
   background: #333;
