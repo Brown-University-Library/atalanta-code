@@ -20,6 +20,11 @@ var essaySectionNames = {
     'footnotes':    "Footnotes",
 }
 
+$('html').on('click', '.search-results .results__item--image-terms a', ev=>{
+    if ( window.location.pathname.includes('/search/image-search.html') )
+        window.location.reload();
+})
+
 $("#ataSearch").submit(function(ev) {
     ev.preventDefault();
 
