@@ -8,34 +8,6 @@ const TERM_COUNT_SELECTOR = 'span.image-term__number';
 const FILTER_LIST_SELECTOR = 'nav.image-search-filters';
 const MAIN_CATEGORY_SELECTOR = 'li.category__item';
 
-/*
-$.get('../data/json/byterm_enh_array.json').then(facets => {
-    //TODO: Much of this should be in the template.
-	var tdata = {};
-	var cats = _.uniq(facets.map(fac=>{return fac.category}));
-	cats.forEach(cat => {
-		tcdata = {}
-		var subcats = _.uniq(facets.filter(fac=>fac.category==cat)
-                                    .map(fac => { return fac.subcategory })
-                                    .sort());
-        
-		subcats.forEach(subcat => {
-			tcdata[subcat] = facets.filter(fac=>fac.category==cat && fac.subcategory==subcat)
-                                    .map(fac => { return {id: fac.id, term:fac.searchTerm,emblems: fac.emblems}; })
-                                    .sort( (v1, v2) => { 
-                                        return v1.term < v2.term ? -1 : 1; } );
-		});
-
-		tdata[cat] = tcdata;
-	});
-    templdata = {'termdata': tdata};
-    
-    console.log(templdata);
-	outp = navbarTemplate(templdata);
-	$(FILTER_LIST_SELECTOR).html(outp);
-});
-*/
-
 var _allemblems = Array.apply(0, Array(51))
                       .map((el, i) => i);
 
