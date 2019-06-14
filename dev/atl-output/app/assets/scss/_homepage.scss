@@ -271,7 +271,7 @@ main.home {
     font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom: 2rem;
-    text-align: justify;
+    text-align: left;
   }
   @include media ('>=xs-phone', '<tablet') {
     .intro-text p {
