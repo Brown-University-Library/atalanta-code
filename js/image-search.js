@@ -23,12 +23,11 @@ $(document).ready(function() {
 	// 	myElement = $('.image-search__results-viz').offset().top;
 
 	var heroPlaceholder = $('h1.hero__heading').html();
-	console.log("--", heroPlaceholder, "--")
-
 
 	$("#btn-shuffle").on("click", function() {
 	   
 	});
+
 	$(resultsVizBtn).on('click', function() {
 		var container = '.image-results__container';
 		var that = this;
@@ -44,6 +43,10 @@ $(document).ready(function() {
 		// };
 	});
 	
+	$('html').on('click', 'a[href="#"]', ev => {
+		return false;
+	});
+
 	$('html').on('click', 'span.selected-filter', ev => {
 		console.log('clicky.', ev.currentTarget);
 		var tid = $(ev.currentTarget).attr('data-id');
@@ -70,9 +73,6 @@ $(document).ready(function() {
 
 			// inactiveArray.sort(compare($(thisChild)));
 		};
-		console.log(inactiveArray.length);
-		console.log(activeArray.length);
-		console.log(inactiveArray[0].attributes.dataItemNum);
 		// activeArray.sort(compare(activeContainer.children()));
 		// inactiveArray.sort(compare);
 		setTimeout(function() { changeLocation(activeArray, inactiveArray) },500); // delay start of active/inactive container transfers in DOM and animation so users have a moment to see the illuminated/darkened images in situ
@@ -245,6 +245,13 @@ $(document).ready(function() {
 		var actives = activeEmblems(); //Array of emblem numbers. Not zero-padded strings.
 		var filts = activeFilters();
 
+		var filtnums = filts.map(cat => {
+			return cat.subcategories.map(sc => {
+				return sc.terms.map(trm => { return trm.id })
+			})
+		}).flat(2);
+		window.history.pushState({}, '', '#terms='+filtnums.sort((a, b) => {return a-b;}).join(','));
+
 		if ( filts.length == 0 ) {
 			//No filters are selected.
 			$('h1.hero__heading').html(heroPlaceholder);
@@ -281,6 +288,16 @@ $(document).ready(function() {
 		}, this);
 		
 		makeImageArrays();
+	}
+
+	if ( window.location.hash.startsWith('#terms=') ) {
+		(() => {
+			embs = window.location.hash.replace('#terms=', '').split(',');
+			$('li.subcategory__term-item').filter((i, el) => {
+				return embs.includes($(el).attr('data-id'));
+			}).addClass(imageTermSelected);
+			updateEmblemView();
+		})();
 	}
 });
 

@@ -2254,7 +2254,7 @@ main.home {
     font-size: 1.5rem;
     line-height: 1.5;
     margin-bottom: 2rem;
-    text-align: justify; }
+    text-align: left; }
 
 @media (min-width: 320px) and (max-width: 767px) {
   main.home .intro-text p {
