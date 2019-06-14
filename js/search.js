@@ -20,6 +20,11 @@ var essaySectionNames = {
     'footnotes':    "Footnotes",
 }
 
+$('html').on('click', '.search-results .results__item--image-terms a', ev=>{
+    if ( window.location.pathname.includes('/search/image-search.html') )
+        window.location.reload();
+})
+
 $("#ataSearch").submit(function(ev) {
     ev.preventDefault();
 
@@ -33,6 +38,8 @@ $("#ataSearch").submit(function(ev) {
     $('main').removeAttr("data-id");
     $('main').removeAttr("data-page");
     $('body').removeAttr("class");
+    $('.fake-header').css("display", "none"); /* essays, 101, about pages */
+    $('.header-wrap').css("display", "none"); /* essays, 101, about pages */
 });
 
 //searchfunction.js throws this event when it's done loading the search index.
