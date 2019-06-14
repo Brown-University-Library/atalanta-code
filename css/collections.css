@@ -219,64 +219,64 @@ th {
 
 @font-face {
     font-family: gt_america;
-    src: url(../fonts/gt-america-standard-regular-webfont.woff2) format("woff2"), url(../fonts/gt-america-standard-regular-webfont.woff) format("woff");
+    src: url(../../fonts/gt-america-standard-regular-webfont.woff2) format("woff2"), url(../../fonts/gt-america-standard-regular-webfont.woff) format("woff");
     font-weight: 400;
     font-style: normal
 }
 
 @font-face {
     font-family: gt_america;
-    src: url(../fonts/gt-america-standard-regular-italic-webfont.woff2) format("woff2"), url(../fonts/gt-america-standard-regular-italic-webfont.woff) format("woff");
+    src: url(../../fonts/gt-america-standard-regular-italic-webfont.woff2) format("woff2"), url(../../fonts/gt-america-standard-regular-italic-webfont.woff) format("woff");
     font-weight: 400;
     font-style: italic
 }
 
 @font-face {
     font-family: gt_america;
-    src: url(../fonts/GT-America-Standard-Medium.woff2) format("woff2"), url(../fonts/GT-America-Standard-Medium.woff) format("woff");
+    src: url(../../fonts/GT-America-Standard-Medium.woff2) format("woff2"), url(../../fonts/GT-America-Standard-Medium.woff) format("woff");
     font-weight: 600;
     font-style: normal
 }
 
 @font-face {
     font-family: gt_america;
-    src: url(../fonts/GT-America-Standard-Medium-Italic.woff2) format("woff2"), url(../fonts/GT-America-Standard-Medium-Italic.woff) format("woff");
+    src: url(../../fonts/GT-America-Standard-Medium-Italic.woff2) format("woff2"), url(../../fonts/GT-America-Standard-Medium-Italic.woff) format("woff");
     font-weight: 600;
     font-style: italic
 }
 
 @font-face {
     font-family: gt_america;
-    src: url(../fonts/GT-America-Standard-Bold.woff2) format("woff2"), url(../fonts/GT-America-Standard-Bold.woff) format("woff");
+    src: url(../../fonts/GT-America-Standard-Bold.woff2) format("woff2"), url(../../fonts/GT-America-Standard-Bold.woff) format("woff");
     font-weight: 700;
     font-style: normal
 }
 
 @font-face {
     font-family: gt_america;
-    src: url(../fonts/GT-America-Standard-Bold-Italic.woff2) format("woff2"), url(../fonts/GT-America-Standard-Bold-Italic.woff) format("woff");
+    src: url(../../fonts/GT-America-Standard-Bold-Italic.woff2) format("woff2"), url(../../fonts/GT-America-Standard-Bold-Italic.woff) format("woff");
     font-weight: 700;
     font-style: italic
 }
 
 @font-face {
     font-family: gt_sectra;
-    src: url(../fonts/gt-sectra-display-bold-webfont.woff2) format("woff2"), url(../fonts/gt-sectra-display-bold-webfont.woff) format("woff");
+    src: url(../../fonts/gt-sectra-display-bold-webfont.woff2) format("woff2"), url(../../fonts/gt-sectra-display-bold-webfont.woff) format("woff");
     font-weight: 700;
     font-style: normal
 }
 
 @font-face {
     font-family: gt_sectra;
-    src: url(../fonts/gt-sectra-display-bold-italic-webfont.woff2) format("woff2"), url(../fonts/gt-sectra-display-bold-italic-webfont.woff) format("woff");
+    src: url(../../fonts/gt-sectra-display-bold-italic-webfont.woff2) format("woff2"), url(../../fonts/gt-sectra-display-bold-italic-webfont.woff) format("woff");
     font-weight: 700;
     font-style: italic
 }
 
 @font-face {
     font-family: icomoon;
-    src: url(../fonts/icomoon.eot?p8v8v);
-    src: url(../fonts/icomoon.eot?p8v8v#iefix) format("embedded-opentype"), url(../fonts/icomoon.ttf?p8v8v) format("truetype"), url(../fonts/icomoon.woff?p8v8v) format("woff"), url(../fonts/icomoon.svg?p8v8v#icomoon) format("svg");
+    src: url(../../fonts/icomoon.eot?p8v8v);
+    src: url(../../fonts/icomoon.eot?p8v8v#iefix) format("embedded-opentype"), url(../../fonts/icomoon.ttf?p8v8v) format("truetype"), url(../../fonts/icomoon.woff?p8v8v) format("woff"), url(../../fonts/icomoon.svg?p8v8v#icomoon) format("svg");
     font-weight: 400;
     font-style: normal
 }
