@@ -4,6 +4,7 @@
 .search__modal {
 /*	background-color: $red_transparent;*/
 	background: $red;
+	box-sizing: content-box;
 	color: $black;
 	display: none;
 	align-items: center;
