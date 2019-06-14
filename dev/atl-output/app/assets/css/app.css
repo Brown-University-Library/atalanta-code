@@ -20,11 +20,7 @@ body {
   margin: 0; }
 
 /* HTML5 display definitions
-<<<<<<< HEAD
    ========================================================================== */
-=======
-   ========================================================================== */
->>>>>>> viz
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
  * Correct `block` display not defined for `details` or `summary` in IE 10/11
@@ -76,11 +72,7 @@ template {
   display: none; }
 
 /* Links
-<<<<<<< HEAD
    ========================================================================== */
-=======
-   ========================================================================== */
->>>>>>> viz
 /**
  * Remove the gray background color from active links in IE 10.
  */
@@ -96,11 +88,7 @@ a:hover {
   outline: 0; }
 
 /* Text-level semantics
-<<<<<<< HEAD
    ========================================================================== */
-=======
-   ========================================================================== */
->>>>>>> viz
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
@@ -158,11 +146,7 @@ sub {
   bottom: -0.25em; }
 
 /* Embedded content
-<<<<<<< HEAD
    ========================================================================== */
-=======
-   ========================================================================== */
->>>>>>> viz
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
@@ -176,11 +160,7 @@ svg:not(:root) {
   overflow: hidden; }
 
 /* Grouping content
-<<<<<<< HEAD
    ========================================================================== */
-=======
-   ========================================================================== */
->>>>>>> viz
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
@@ -212,11 +192,7 @@ samp {
   font-size: 1em; }
 
 /* Forms
-<<<<<<< HEAD
    ========================================================================== */
-=======
-   ========================================================================== */
->>>>>>> viz
 /**
  * Known limitation: by default, Chrome and Safari on OS X allow very limited
  * styling of `select`, unless a `border` property is set.
@@ -369,11 +345,7 @@ optgroup {
   font-weight: bold; }
 
 /* Tables
-<<<<<<< HEAD
    ========================================================================== */
-=======
-   ========================================================================== */
->>>>>>> viz
 /**
  * Remove most spacing between table cells.
  */
@@ -553,14 +525,6 @@ h1, h2, h3, h4, h5, h6, fieldset, ul {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-}*/
-h1, h2, h3, h4, h5, h6, fieldset, ul {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
@@ -583,14 +547,9 @@ q:before, q:after {
   content: none; }
 
 /*table {
-<<<<<<< HEAD
   border-collapse: collapse;
   border-spacing: 0;
-=======
-  border-collapse: collapse;
-  border-spacing: 0;
->>>>>>> viz
-}*/
+======= }*/
 body {
   background-color: white;
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
@@ -613,7 +572,6 @@ button {
   padding: 0; }
 
 /*.btn {
-<<<<<<< HEAD
   background-color: $gray;
   border-radius: .25rem;
   color: $white;
@@ -631,25 +589,6 @@ button {
   display: flex;
   align-self: center;
   font-size: .825rem;
-=======
-  background-color: $gray;
-  border-radius: .25rem;
-  color: $white;
-  display: flex;
-  justify-content: center;
-  margin-bottom: .75rem;
-  width: 10rem;
-  height: 2.5rem;
-}
-.btn:hover {
-  background-color: $gray_medium;
-  color: $black;
-}
-.btn p {
-  display: flex;
-  align-self: center;
-  font-size: .825rem;
->>>>>>> viz
 }*/
 /*! jQuery UI - v1.12.1 - 2018-11-25
 * http://jqueryui.com
@@ -4147,7 +4086,6 @@ html.full-state body.emblem-body .opener-holder-bg {
     padding: 50px 40px;
   }
 
-<<<<<<< HEAD
   .image-list {
     display: flex;
     flex-wrap: wrap;
@@ -4210,7 +4148,6 @@ html.full-state body.emblem-body .opener-holder-bg {
       display: none;
     }
   }
-=======
 @media (min-width: 320px) and (max-width: 767px) {
   main.home nav.home ul {
     -webkit-box-sizing: border-box;
@@ -5779,7 +5716,6 @@ html.full-state body.emblem-body .opener-holder-bg {
       display: none;
     }
   }
->>>>>>> viz
 }*/
 /* 1366px width */
 main.toc-wrapper {
@@ -6845,19 +6781,11 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   text-transform: uppercase;
   width: 100%;
   z-index: 4000;
-<<<<<<< HEAD
   /*  li.topnav__search {
     display: flex;
     align-items: center;
     justify-content: flex-end;
   }*/ }
-=======
-  /*  li.topnav__search {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }*/ }
->>>>>>> viz
   .topnav a {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
