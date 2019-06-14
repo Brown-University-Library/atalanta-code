@@ -48,10 +48,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
+		font-family: $display-font_emblem;
 		font-size: 1.5rem;
+		/*font-weight: 600;*/
 		grid-column-start: 1;
 		grid-column-end: 10;
 		height: 3rem;
+		margin-bottom: 0;
 		padding: 0 3rem;
 	}
 	.results__item {

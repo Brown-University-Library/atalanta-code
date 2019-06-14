@@ -3,27 +3,19 @@
 
 main#emblem-toc {
 	background: $red;
-	color: $white;
 	display: grid;
-	font-family: $display-font_emblem;
-	font-size: 1.125rem;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: auto;
 	padding: 3rem 5rem;
-	text-align: center;
-	a {
-		color: $white;
-	}
-	a:hover, 
-	a:focus {
-		color: $black_pure;
-		outline: none;
-	}
 	h1, 
 	h3, 
 	h5, 
-	nav {
-		grid-column: 1 / 13;	
+	nav.af-toc {
+		color: $white;
+		grid-column: 1 / 13;
+		font-family: $display-font_emblem;
+		font-size: 1.125rem;
+		text-align: center;
 	}
 	h1 {
 		font-family: $secondary-display-font_emblem;
@@ -45,10 +37,20 @@ main#emblem-toc {
 	cite {
 		font-style: oblique;
 	}
-	nav {
+	nav.af-toc {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		grid-template-rows: auto;
+	}
+}
+main#emblem-toc nav.af-toc {
+	a {
+		color: $white;
+	}
+	a:hover, 
+	a:focus {
+		color: $black_pure;
+		outline: none;
 	}
 	ul {
 		border-top: 1px solid $black;
