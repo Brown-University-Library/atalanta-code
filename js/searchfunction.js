@@ -138,7 +138,7 @@ parseResults = function(results) {
 
         thisoutp = {
             contexts: searchcontexts,
-            uri: ('/'+val.ref),
+            uri: (val.ref),
             title: thisdoc.doctitle || thisdoc.title,
             type: thisdoc.type,
             resultcount: resultcount,
