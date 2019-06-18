@@ -2513,6 +2513,7 @@ main.home {
   main.home .hero-text h5 {
     width: 40%; } }
   main.home .hero-text h5 cite {
+    font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
     font-style: oblique; }
   main.home .hero-text h6 {
     font-size: 1rem;
@@ -2647,7 +2648,7 @@ main.home {
     box-sizing: border-box;
     grid-area: 3 / 1 / 4 / 13;
     max-height: 95vh;
-    padding: 7rem 27rem; }
+    padding: 7rem 23rem; }
 
 @media (min-width: 320px) and (max-width: 767px) {
   main.home .intro-text {
@@ -2667,11 +2668,18 @@ main.home {
 @media (min-width: 1025px) and (max-width: 1199px) {
   main.home .intro-text {
     max-height: 100vh;
-    padding: 6rem 14rem; } }
+    padding: 6rem 12rem; } }
 
 @media (min-width: 1200px) and (max-width: 1349px) {
   main.home .intro-text {
-    padding: 6rem 21rem; } }
+    padding: 6rem 14rem; } }
+
+@media (min-width: 1600px) and (max-width: 1999px) {
+  main.home .intro-text {
+    padding: 6rem 30rem; } }
+  @media (min-width: 2000px) {
+    main.home .intro-text {
+      padding: 10rem 45rem; } }
   main.home .intro-text p {
     font-size: 1.5rem;
     line-height: 1.5;
@@ -2690,6 +2698,7 @@ main.home {
     text-align: left;
     /* justified at this size creates too many gaps */ } }
   main.home .intro-text p cite {
+    font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
     font-style: oblique; }
   main.home .intro-text a {
     color: white;
