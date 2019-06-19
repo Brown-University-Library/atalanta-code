@@ -494,7 +494,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   grid-template-rows: auto;
   min-height: calc(100vh - 3.125rem);
   line-height: 1.5;
-  padding: 3rem 0; }
+  padding: 7rem 0 3rem 0; }
   .search-results .hidden {
     display: none; }
   .search-results .lead {
