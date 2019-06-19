@@ -1984,7 +1984,7 @@ input[type=submit] {
     }
 }
 
-/*.search__modal {
+.search__modal {
     height: 388px;
     min-height: 0;
     max-height: 0;
@@ -2085,7 +2085,7 @@ input[type=submit] {
 .search__modal.search__modal--slide-in {
     max-height: 400px;
     transition: max-height .35s ease
-}*/
+}
 
 .page-anchor {
     background: #333
