@@ -104,9 +104,9 @@ $(function () {
 	}
 	function searchModalOpen() {
 		var topnavHeight = $(topNav).height();
-		console.log("my topnav height is " topnavHeight);
+		console.log("my topnav height is " + topnavHeight);
 		var searchModalHeight = $(searchModal).height();
-		console.log("my search modal height is " searchModalHeight);
+		console.log("my search modal height is " + searchModalHeight);
 
 		$(topnavSearchBtn).removeClass(searchModalClosed);
 		$(topnavSearchBtn).addClass(searchModalOpened);
