@@ -104,6 +104,7 @@ main.home {
   }
 
   .hero-text h5 cite {
+    font-family: $body-font;
     font-style: oblique;
   }
 
@@ -236,7 +237,7 @@ main.home {
     box-sizing: border-box;
     grid-area: 3 / 1 / 4 / 13;
     max-height: 95vh;
-    padding: 7rem 27rem;
+    padding: 7rem 23rem;
   }
   @include media ('>=xs-phone', '<tablet') {
     .intro-text {
@@ -258,12 +259,22 @@ main.home {
   @include media ('>=desktop', '<widescreen') {
     .intro-text {
       max-height: 100vh;
-      padding: 6rem 14rem;
+      padding: 6rem 12rem;
     }
   }
   @include media ('>=widescreen', '<1350px') {
     .intro-text {
-      padding: 6rem 21rem;
+      padding: 6rem 14rem;
+    }
+  }
+  @include media ('>=1600px', '<2000px') {
+    .intro-text {
+      padding: 6rem 30rem;
+    }
+  }
+  @include media ('>=2000px') {
+    .intro-text {
+      padding: 10rem 45rem;
     }
   }
 
@@ -287,6 +298,7 @@ main.home {
   }
 
   .intro-text p cite {
+    font-family: $body-font;
     font-style: oblique;
   }
 

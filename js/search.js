@@ -39,7 +39,10 @@ $("#ataSearch").submit(function(ev) {
     $('main').removeAttr("data-page");
     $('body').removeAttr("class");
     $('.fake-header').css("display", "none"); /* essays, 101, about pages */
-    $('.header-wrap').css("display", "none"); /* essays, 101, about pages */
+    $('.header-area').css("display", "none"); /* essays, 101, about pages */
+    $('body#maier .header-area').css("display", "block"); /* maier 101 page */
+    $('.header-banner').css("display", "none"); /* maier 101 page */
+    $('#forced-gutter-fade').css("display", "none"); /* maier 101 page */
 });
 
 //searchfunction.js throws this event when it's done loading the search index.

@@ -1501,7 +1501,8 @@ ul {
 }
 
 html {
-    box-sizing: border-box
+    box-sizing: border-box;
+    box-sizing: content-box !important;
 }
 
 *,
