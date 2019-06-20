@@ -1402,6 +1402,7 @@ $(document).ready(function() {
       searchURL: '../search/search.html?q=',
       searchQueryInput: 'input#search__bar__field',
       submitSearchBtn: '.search__modal button.submit',
+      searchForm: '#ataSearch',
       $documentElement: $('html, body')
     },
 
@@ -1430,6 +1431,21 @@ $(document).ready(function() {
         else {
           console.log("THE SEARCH BUTTON HAS NO STATE");
         }
+        event.preventDefault();
+      });
+
+      /* X button to close search modal */
+      $(s.xCloseBtnSVG).click(function(event) {
+        event.stopPropagation();
+        event.preventDefault();
+      });
+      $(s.xCloseBtn).click(function() {
+        searchModule.searchModalClose();
+      });
+
+      /* submit on enter key */
+      $(s.searchForm).submit(function(event){
+        searchModule.searchModalClose();
         event.preventDefault();
       });
 

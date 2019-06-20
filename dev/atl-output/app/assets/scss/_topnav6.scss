@@ -62,14 +62,44 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 		align-items: center;
 		justify-content: space-between;
 		height: 100%;
-		padding: 0 4.375rem 0 3.375rem;
+		padding: 0 67px 0 54px;
 		width: auto;
+	}
+	@include media ('>=xs-phone', '<tablet') {
+		.topnav-wrapper {
+			padding: 5px 20px;
+		}
+	}
+	@include media ('>=tablet', '<desktop') {
+		.topnav-wrapper {
+			padding: 0 20px;
+		}
+	}
+	@include media ('>=desktop', '<widescreen') {
+		.topnav-wrapper {
+			padding: 0 2.5rem;
+		}
 	}
 	.topnav__logo {
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		flex: 1 0 56%;
+		flex: 1 0 58%;
+	}
+	@include media ('>=xs-phone', '<tablet') {
+		.topnav__logo {
+			/*flex: 1 0 42%;*/
+		}
+	}
+	@include media ('>=tablet', '<desktop') {
+		.topnav__logo {
+			flex: 1 0 25%;
+		}
+	}
+	@include media ('>=desktop', '<widescreen') {
+		.topnav__logo {
+			flex: 1 0 51%;
+		}
 	}
 	.topnav__logo a {
 		background-image: url("../icons/fandf-logotype_white.svg");
@@ -94,7 +124,22 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 	}
 
 	.topnav__content {
-		flex: 1 0 44%;
+		flex: 1 0 42%;
+	}
+	@include media ('>=xs-phone', '<tablet') {
+		.topnav__content {
+			/*flex: 1 0 75%;*/
+		}
+	}
+	@include media ('>=tablet', '<desktop') {
+		.topnav__content {
+			flex: 1 0 75%;
+		}
+	}
+	@include media ('>=desktop', '<widescreen') {
+		.topnav__content {
+			flex: 1 0 49%;
+		}
 	}
 
 	.topnav__content ul {
