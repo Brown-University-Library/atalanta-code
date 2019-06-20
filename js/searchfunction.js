@@ -138,7 +138,7 @@ parseResults = function(results) {
 
         thisoutp = {
             contexts: searchcontexts,
-            uri: ('/'+val.ref),
+            uri: (val.ref),
             title: thisdoc.doctitle || thisdoc.title,
             type: thisdoc.type,
             resultcount: resultcount,
@@ -160,11 +160,11 @@ parseResults = function(results) {
 }
 
 Promise.all([
-        $.get('../data/json/searchindex.json', data => ataIdx = lunr.Index.load(data), 'json'),
-        $.get('../data/json/byterm_enh_array.json', data => keyWords = data),
-        $.get('../data/json/searchdocs.json', data => idxDocs = data),
-        $.get('../data/json/essayindex.json', data => { essayIdx = lunr.Index.load(data)}, 'json'),
-        $.get('../data/json/essaydocs.json', data => essayDocs = data),
+        $.get('/data/json/searchindex.json', data => ataIdx = lunr.Index.load(data), 'json'),
+        $.get('/data/json/byterm_enh_array.json', data => keyWords = data),
+        $.get('/data/json/searchdocs.json', data => idxDocs = data),
+        $.get('/data/json/essayindex.json', data => { essayIdx = lunr.Index.load(data)}, 'json'),
+        $.get('/data/json/essaydocs.json', data => essayDocs = data),
     ]).then(vals => {
         doSearch = function(searchTerm) {
             searchTerm = searchTerm.trim();

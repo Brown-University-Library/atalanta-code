@@ -10,14 +10,14 @@ pug_html = pug_html + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003E 
   if ('number' == typeof $$obj.length) {
       for (var pug_index0 = 0, $$l = $$obj.length; pug_index0 < $$l; pug_index0++) {
         var kw = $$obj[pug_index0];
-pug_html = pug_html + "\u003Ch3\u003E\u003Ca" + (pug_attr("data-facetid", kw.id, true, false)+pug_attr("href", '../search/image-search.html#terms='+kw.id, true, false)) + "\u003E\u003Cspan class=\"cat-subcat\"\u003E" + (pug_escape(null == (pug_interp = kw.category) ? "" : pug_interp)) + " &#62; " + (pug_escape(null == (pug_interp = kw.subcategory) ? "" : pug_interp)) + " \u003C\u002Fspan\u003E\u003Cspan class=\"term\"\u003E" + (pug_escape(null == (pug_interp = kw.searchTerm) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E\u003Cspan class=\"num-terms\"\u003E" + (pug_escape(null == (pug_interp = kw.emblems.length) ? "" : pug_interp)) + " emblem images\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E";
+pug_html = pug_html + "\u003Ch3\u003E\u003Ca" + (pug_attr("data-facetid", kw.id, true, false)+pug_attr("href", '/search/image-search.html#terms='+kw.id, true, false)) + "\u003E\u003Cspan class=\"cat-subcat\"\u003E" + (pug_escape(null == (pug_interp = kw.category) ? "" : pug_interp)) + " &#62; " + (pug_escape(null == (pug_interp = kw.subcategory) ? "" : pug_interp)) + " \u003C\u002Fspan\u003E\u003Cspan class=\"term\"\u003E" + (pug_escape(null == (pug_interp = kw.searchTerm) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E\u003Cspan class=\"num-terms\"\u003E" + (pug_escape(null == (pug_interp = kw.emblems.length) ? "" : pug_interp)) + " emblem images\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E";
       }
   } else {
     var $$l = 0;
     for (var pug_index0 in $$obj) {
       $$l++;
       var kw = $$obj[pug_index0];
-pug_html = pug_html + "\u003Ch3\u003E\u003Ca" + (pug_attr("data-facetid", kw.id, true, false)+pug_attr("href", '../search/image-search.html#terms='+kw.id, true, false)) + "\u003E\u003Cspan class=\"cat-subcat\"\u003E" + (pug_escape(null == (pug_interp = kw.category) ? "" : pug_interp)) + " &#62; " + (pug_escape(null == (pug_interp = kw.subcategory) ? "" : pug_interp)) + " \u003C\u002Fspan\u003E\u003Cspan class=\"term\"\u003E" + (pug_escape(null == (pug_interp = kw.searchTerm) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E\u003Cspan class=\"num-terms\"\u003E" + (pug_escape(null == (pug_interp = kw.emblems.length) ? "" : pug_interp)) + " emblem images\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E";
+pug_html = pug_html + "\u003Ch3\u003E\u003Ca" + (pug_attr("data-facetid", kw.id, true, false)+pug_attr("href", '/search/image-search.html#terms='+kw.id, true, false)) + "\u003E\u003Cspan class=\"cat-subcat\"\u003E" + (pug_escape(null == (pug_interp = kw.category) ? "" : pug_interp)) + " &#62; " + (pug_escape(null == (pug_interp = kw.subcategory) ? "" : pug_interp)) + " \u003C\u002Fspan\u003E\u003Cspan class=\"term\"\u003E" + (pug_escape(null == (pug_interp = kw.searchTerm) ? "" : pug_interp)) + "\u003C\u002Fspan\u003E\u003Cspan class=\"num-terms\"\u003E" + (pug_escape(null == (pug_interp = kw.emblems.length) ? "" : pug_interp)) + " emblem images\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fh3\u003E";
     }
   }
 }).call(this);
@@ -294,7 +294,7 @@ pug_html = pug_html + (pug_escape(null == (pug_interp = console.log("Scholarship
   if ('number' == typeof $$obj.length) {
       for (var pug_index8 = 0, $$l = $$obj.length; pug_index8 < $$l; pug_index8++) {
         var essay = $$obj[pug_index8];
-pug_html = pug_html + "\u003Cdiv class=\"results__item\"\u003E" + (pug_escape(null == (pug_interp = console.log('essay', essay)) ? "" : pug_interp)) + "\u003Ch3\u003E\u003Ca" + (pug_attr("href", essay.uri, true, false)) + "\u003E" + (pug_escape(null == (pug_interp = essay.title) ? "" : pug_interp)) + "\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\u003Cspan class=\"results__num\"\u003E" + (pug_escape(null == (pug_interp = essay.resultcount) ? "" : pug_interp)) + " search hits\u003C\u002Fspan\u003E";
+pug_html = pug_html + "\u003Cdiv class=\"results__item\"\u003E\u003Ch3\u003E\u003Ca" + (pug_attr("href", essay.uri, true, false)) + "\u003E" + (pug_escape(null == (pug_interp = essay.title) ? "" : pug_interp)) + "\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\u003Cspan class=\"results__num\"\u003E" + (pug_escape(null == (pug_interp = essay.resultcount) ? "" : pug_interp)) + " search hits\u003C\u002Fspan\u003E";
 // iterate essaySectionNames
 ;(function(){
   var $$obj = essaySectionNames;
@@ -426,7 +426,7 @@ pug_html = pug_html + "\u003C\u002Fdiv\u003E";
     for (var pug_index8 in $$obj) {
       $$l++;
       var essay = $$obj[pug_index8];
-pug_html = pug_html + "\u003Cdiv class=\"results__item\"\u003E" + (pug_escape(null == (pug_interp = console.log('essay', essay)) ? "" : pug_interp)) + "\u003Ch3\u003E\u003Ca" + (pug_attr("href", essay.uri, true, false)) + "\u003E" + (pug_escape(null == (pug_interp = essay.title) ? "" : pug_interp)) + "\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\u003Cspan class=\"results__num\"\u003E" + (pug_escape(null == (pug_interp = essay.resultcount) ? "" : pug_interp)) + " search hits\u003C\u002Fspan\u003E";
+pug_html = pug_html + "\u003Cdiv class=\"results__item\"\u003E\u003Ch3\u003E\u003Ca" + (pug_attr("href", essay.uri, true, false)) + "\u003E" + (pug_escape(null == (pug_interp = essay.title) ? "" : pug_interp)) + "\u003C\u002Fa\u003E\u003C\u002Fh3\u003E\u003Cspan class=\"results__num\"\u003E" + (pug_escape(null == (pug_interp = essay.resultcount) ? "" : pug_interp)) + " search hits\u003C\u002Fspan\u003E";
 // iterate essaySectionNames
 ;(function(){
   var $$obj = essaySectionNames;
