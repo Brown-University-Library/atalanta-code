@@ -397,6 +397,9 @@ background-color: orange;
 		span.icon {
 			display: none;	
 		}
+		a {
+			color: $body-font;
+		}
 	}
 	.image-results__button:hover,
 	.image-results__button:focus, 
