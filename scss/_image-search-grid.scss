@@ -349,6 +349,9 @@ background-color: orange;
 		letter-spacing: normal;
 		line-height: normal;
 		text-transform: uppercase;
+		a {
+			color: $red !important;
+		}
 		span.label {
 			display: inline-block;
 			

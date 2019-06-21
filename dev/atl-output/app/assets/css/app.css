@@ -9296,10 +9296,14 @@ button.lity-close {
 
 /* medium  -  tablet */
 main#image-search {
+  background: white;
   min-height: 100vh;
-  margin-top: 3.375rem;
+  margin-top: -2rem;
   padding: 0 1rem;
-  width: calc(100vw - 2rem); }
+  padding-top: 1px;
+  /* this is some conflict w/ collections css */
+  width: calc(100vw - 2rem);
+  /*	border: 5px solid blue;*/ }
   main#image-search .faceting--help {
     /*display: none;*/ }
   main#image-search .breadcrumbs__copy-link {
@@ -9728,10 +9732,8 @@ main#image-search {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  /*outline: 5px solid blue;*/
   padding: 2rem; }
   .image-results__container .image-results__item {
-    /*outline: 5px solid orange;*/
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -9752,7 +9754,8 @@ main#image-search {
     -webkit-flex-basis: calc(20% - 5rem);
     -ms-flex-preferred-size: calc(20% - 5rem);
     flex-basis: calc(20% - 5rem);
-    margin: 0 .5rem 3rem .5rem;
+    margin: 0 .5rem 4rem .5rem;
+    max-height: 100vh;
     /*margin: 1rem;*/
     /*max-width: 20%;*/ }
   .image-results__container .image-results__image {
@@ -9824,8 +9827,9 @@ main#image-search {
       display: inline-block; }
     .image-results__container .image-results__button span.icon {
       display: none; }
+    .image-results__container .image-results__button a {
+      color: #4d4d4d; }
   .image-results__container .image-results__button:hover,
-  .image-results__container .image-results__button:focus,
   .image-results__container .image-results__button:active {
     background-color: #ffcd61;
     color: #4d4d4d;
@@ -9833,6 +9837,9 @@ main#image-search {
     -webkit-transition: background-color .2s;
     -o-transition: background-color .2s;
     transition: background-color .2s; }
+  .image-results__container .image-results__button:focus {
+    border: 1px dotted #222;
+    outline: none; }
   .image-results__container .image-results__button--open {
     background-color: #ffcd61; }
     .image-results__container .image-results__button--open span.label {
@@ -9843,14 +9850,15 @@ main#image-search {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
+      -webkit-filter: invert(95%);
+      filter: invert(95%);
       height: 8px;
       margin-left: 5px;
       margin-right: -3px;
       width: 8px; }
   .image-results__container .image-results__button--open:hover span.icon,
   .image-results__container .image-results__button--open:active span.icon {
-    -webkit-filter: invert(95%);
-    filter: invert(95%); }
+    /*filter: invert(95%);*/ }
   .image-results__container .image-results__all-terms {
     display: none;
     font-size: .75rem;
