@@ -937,6 +937,26 @@ main.emblem-page section.section__discourse {
 		margin-bottom: 0;
 	}
 }
+main.emblem-page.frontmatter section.section__preface .translation {
+	.issue {
+		font-family: $secondary-display-font_emblem;
+		font-size: 4rem;
+	}
+}
+main.emblem-page.frontmatter section.section__preface .original {
+	h1 {
+		font-size: 4rem;
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
+	.preface.la {
+		grid-template-columns: 1fr;
+	}
+	.ab {
+		font-size: 1.25rem;
+		line-height: 1.5;
+	}
+}
 
 
 /*********** END OF COLLECTIONS OVERRIDES *************/
