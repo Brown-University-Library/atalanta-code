@@ -3266,6 +3266,7 @@ body {
 }
 
 .collections-wrapper {
+    box-sizing: border-box !important; /* CB */
     position: fixed;
     top: 100%;
     margin-top: -20px;
@@ -3274,6 +3275,10 @@ body {
     z-index: 100;
     transition: top .3s;
     z-index: 99988
+}
+
+.collections-wrapper * { /* CB */
+    box-sizing: border-box !important;
 }
 
 .cookies-disabled .collections-wrapper {
@@ -3285,6 +3290,7 @@ body {
 }
 
 .opener-holder-bg {
+    box-sizing: border-box; /* CB */
     position: absolute;
     left: 0;
     right: 0;
