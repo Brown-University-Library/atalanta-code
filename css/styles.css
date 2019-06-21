@@ -7563,6 +7563,17 @@ main.emblem-page.frontmatter .translation div.edition--facsimile span.underline2
   border-bottom: 2px solid #333; }
 
 /*********** END OF ENGLISH EMBLEM STYLES *************/
+/*********** COLLECTIONS OVERRIDES *************/
+main.emblem-page section.section__motto h1, main.emblem-page section.section__motto h3 {
+  margin-bottom: 0; }
+
+main.emblem-page section.section__epigram h3 {
+  font-size: 1rem; }
+
+main.emblem-page section.section__discourse h3 {
+  margin-bottom: 0; }
+
+/*********** END OF COLLECTIONS OVERRIDES *************/
 /*********** FRONTMATTER *************/
 main.emblem-page.frontmatter {
   background: white; }
@@ -9010,9 +9021,12 @@ button.lity-close {
     left: 50vw;
     width: calc(50vw/12 * 2); } }
 
-.frontmatter section {
+.frontmatter .section__frontispiece,
+.frontmatter .section__author-epigram,
+.frontmatter .section__dedication,
+.frontmatter .section__preface {
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
-  height: auto;
+  height: 100%;
   min-height: calc(100vh - 6.5rem);
   padding: 2rem; }
 
