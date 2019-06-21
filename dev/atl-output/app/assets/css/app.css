@@ -7573,6 +7573,22 @@ main.emblem-page section.section__epigram h3 {
 main.emblem-page section.section__discourse h3 {
   margin-bottom: 0; }
 
+main.emblem-page.frontmatter section.section__preface .translation .issue {
+  font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
+  font-size: 4rem; }
+
+main.emblem-page.frontmatter section.section__preface .original h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 0; }
+
+main.emblem-page.frontmatter section.section__preface .original .preface.la {
+  grid-template-columns: 1fr; }
+
+main.emblem-page.frontmatter section.section__preface .original .ab {
+  font-size: 1.25rem;
+  line-height: 1.5; }
+
 /*********** END OF COLLECTIONS OVERRIDES *************/
 /*********** FRONTMATTER *************/
 main.emblem-page.frontmatter {
