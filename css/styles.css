@@ -8014,7 +8014,7 @@ main.emblem-page.frontmatter {
   main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--normalized div.dedication {
     padding: 0 25%; }
   main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--normalized div.dedication > * {
-    grid-column: 1 / 3; }
+    grid-column: 1 / 13; }
   main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--normalized div.margin-note {
     left: 80vw; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile {
