@@ -1,471 +1,12 @@
 [
     {
         "category": "People",
-        "subcategory": "Attire",
-        "searchTerm": "Classical Clothing",
-        "emblems": [
-            "26",
-            "11",
-            "35",
-            "50",
-            "49",
-            "10",
-            "8",
-            "42",
-            "24",
-            "25",
-            "9",
-            "27",
-            "48",
-            "39",
-            "38",
-            "4",
-            "41",
-            "0",
-            "44",
-            "23",
-            "12",
-            "5"
-        ],
-        "id": 1
-    },
-    {
-        "category": "People",
-        "subcategory": "Attire",
-        "searchTerm": "Nude",
-        "emblems": [
-            "19",
-            "1",
-            "30",
-            "0",
-            "2",
-            "33",
-            "39",
-            "11",
-            "13",
-            "28",
-            "23",
-            "35",
-            "40",
-            "34",
-            "38",
-            "21",
-            "25",
-            "20"
-        ],
-        "id": 2
-    },
-    {
-        "category": "People",
-        "subcategory": "Bodily State",
-        "searchTerm": "Beardless",
-        "emblems": [
-            "49",
-            "27",
-            "10",
-            "48",
-            "18",
-            "0",
-            "2",
-            "3",
-            "34",
-            "38",
-            "6"
-        ],
-        "id": 3
-    },
-    {
-        "category": "People",
-        "subcategory": "Life Stage",
-        "searchTerm": "Adult",
-        "emblems": [
-            "30",
-            "26",
-            "11",
-            "35",
-            "50",
-            "21",
-            "20",
-            "22",
-            "1",
-            "49",
-            "10",
-            "18",
-            "8",
-            "42",
-            "34",
-            "24",
-            "25",
-            "27",
-            "48",
-            "36",
-            "2",
-            "31",
-            "39",
-            "13",
-            "40",
-            "46",
-            "38",
-            "6",
-            "4",
-            "41",
-            "19",
-            "0",
-            "3",
-            "32",
-            "44",
-            "28",
-            "23",
-            "12",
-            "15",
-            "5"
-        ],
-        "id": 4
-    },
-    {
-        "category": "People",
         "subcategory": "Mythological and Biblical",
         "searchTerm": "Aegle",
         "emblems": [
             "0"
         ],
-        "id": 5
-    },
-    {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Arethusa",
-        "emblems": [
-            "0"
-        ],
-        "id": 6
-    },
-    {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Atalanta",
-        "emblems": [
-            "0"
-        ],
-        "id": 7
-    },
-    {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Hercules",
-        "emblems": [
-            "0"
-        ],
-        "id": 8
-    },
-    {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Hespertusa",
-        "emblems": [
-            "0"
-        ],
-        "id": 9
-    },
-    {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Hippomenes",
-        "emblems": [
-            "0"
-        ],
-        "id": 10
-    },
-    {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Ladon",
-        "emblems": [
-            "0"
-        ],
-        "id": 11
-    },
-    {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Pallas/Minerva (Athena)",
-        "emblems": [
-            "0",
-            "23"
-        ],
-        "id": 12
-    },
-    {
-        "category": "People",
-        "subcategory": "Sex",
-        "searchTerm": "Female",
-        "emblems": [
-            "26",
-            "11",
-            "50",
-            "21",
-            "20",
-            "22",
-            "42",
-            "34",
-            "25",
-            "27",
-            "2",
-            "5",
-            "39",
-            "40",
-            "38",
-            "4",
-            "41",
-            "0",
-            "3",
-            "44",
-            "23",
-            "30"
-        ],
-        "id": 13
-    },
-    {
-        "category": "People",
-        "subcategory": "Sex",
-        "searchTerm": "Male",
-        "emblems": [
-            "30",
-            "11",
-            "35",
-            "21",
-            "20",
-            "1",
-            "49",
-            "10",
-            "18",
-            "8",
-            "42",
-            "34",
-            "24",
-            "25",
-            "9",
-            "27",
-            "48",
-            "36",
-            "31",
-            "39",
-            "13",
-            "40",
-            "46",
-            "38",
-            "6",
-            "4",
-            "41",
-            "19",
-            "0",
-            "32",
-            "44",
-            "28",
-            "23",
-            "12",
-            "15",
-            "5"
-        ],
-        "id": 14
-    },
-    {
-        "category": "Architecture",
-        "subcategory": "Architectural Elements",
-        "searchTerm": "Column",
-        "emblems": [
-            "9",
-            "48",
-            "0",
-            "8",
-            "40",
-            "28",
-            "50"
-        ],
-        "id": 15
-    },
-    {
-        "category": "Architecture",
-        "subcategory": "Architectural Elements",
-        "searchTerm": "Pediment",
-        "emblems": [
-            "27",
-            "9",
-            "0",
-            "8",
-            "40"
-        ],
-        "id": 16
-    },
-    {
-        "category": "Architecture",
-        "subcategory": "Buildings",
-        "searchTerm": "Temple",
-        "emblems": [
-            "40",
-            "0",
-            "23",
-            "9"
-        ],
-        "id": 17
-    },
-    {
-        "category": "Architecture",
-        "subcategory": "Structures",
-        "searchTerm": "Fence",
-        "emblems": [
-            "27",
-            "0",
-            "26",
-            "32",
-            "36",
-            "35",
-            "12"
-        ],
-        "id": 18
-    },
-    {
-        "category": "Things",
-        "subcategory": "Weapons",
-        "searchTerm": "Club",
-        "emblems": [
-            "0",
-            "25",
-            "19"
-        ],
-        "id": 19
-    },
-    {
-        "category": "Creatures",
-        "subcategory": "Animals",
-        "searchTerm": "Dragon",
-        "emblems": [
-            "0",
-            "50",
-            "14",
-            "25"
-        ],
-        "id": 20
-    },
-    {
-        "category": "Creatures",
-        "subcategory": "Animals",
-        "searchTerm": "Lion",
-        "emblems": [
-            "16",
-            "0",
-            "37"
-        ],
-        "id": 21
-    },
-    {
-        "category": "Creatures",
-        "subcategory": "Animal Parts",
-        "searchTerm": "Tail",
-        "emblems": [
-            "47",
-            "16",
-            "0",
-            "2",
-            "24"
-        ],
-        "id": 22
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Embracing",
-        "emblems": [
-            "0",
-            "23",
-            "50",
-            "34",
-            "38",
-            "4"
-        ],
-        "id": 23
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Picking",
-        "emblems": [
-            "0",
-            "9"
-        ],
-        "id": 24
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Proffering",
-        "emblems": [
-            "0",
-            "4",
-            "48"
-        ],
-        "id": 25
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Running",
-        "emblems": [
-            "34",
-            "41",
-            "0",
-            "25"
-        ],
-        "id": 26
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Walking",
-        "emblems": [
-            "10",
-            "0",
-            "36",
-            "42",
-            "40",
-            "24",
-            "5"
-        ],
-        "id": 27
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Static",
-        "searchTerm": "Standing",
-        "emblems": [
-            "26",
-            "37",
-            "11",
-            "21",
-            "22",
-            "1",
-            "49",
-            "10",
-            "18",
-            "8",
-            "24",
-            "27",
-            "48",
-            "2",
-            "5",
-            "39",
-            "40",
-            "46",
-            "38",
-            "4",
-            "41",
-            "0",
-            "3",
-            "44",
-            "23",
-            "30"
-        ],
-        "id": 28
+        "id": 1
     },
     {
         "category": "Nature",
@@ -474,122 +15,536 @@
         "emblems": [
             "0"
         ],
-        "id": 29
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Plants",
-        "searchTerm": "Bush",
-        "emblems": [
-            "41",
-            "1",
-            "49",
-            "9",
-            "0",
-            "3",
-            "37",
-            "24",
-            "39",
-            "13",
-            "40",
-            "43",
-            "23",
-            "12",
-            "46",
-            "38",
-            "6",
-            "4",
-            "25",
-            "30"
-        ],
-        "id": 30
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Plants",
-        "searchTerm": "Tree",
-        "emblems": [
-            "26",
-            "37",
-            "11",
-            "50",
-            "49",
-            "47",
-            "18",
-            "8",
-            "33",
-            "42",
-            "9",
-            "14",
-            "27",
-            "2",
-            "17",
-            "13",
-            "40",
-            "38",
-            "6",
-            "4",
-            "41",
-            "7",
-            "16",
-            "0",
-            "28",
-            "12"
-        ],
-        "id": 31
+        "id": 2
     },
     {
         "category": "People",
-        "subcategory": "Bodily State",
-        "searchTerm": "Bearded",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Arethusa",
         "emblems": [
-            "37",
-            "11",
-            "35",
-            "21",
-            "1",
+            "0"
+        ],
+        "id": 3
+    },
+    {
+        "category": "People",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Atalanta",
+        "emblems": [
+            "0"
+        ],
+        "id": 4
+    },
+    {
+        "category": "Traits",
+        "subcategory": "Attire",
+        "searchTerm": "Classical Clothing",
+        "emblems": [
             "49",
-            "10",
-            "8",
-            "42",
-            "24",
-            "25",
+            "50",
             "9",
+            "27",
+            "35",
+            "44",
+            "10",
+            "38",
+            "4",
+            "11",
+            "8",
+            "23",
+            "5",
+            "25",
+            "39",
+            "26",
+            "42",
+            "12",
+            "48",
+            "0",
+            "41",
+            "24"
+        ],
+        "id": 5
+    },
+    {
+        "category": "Architecture",
+        "subcategory": "Architectural Elements",
+        "searchTerm": "Column",
+        "emblems": [
+            "50",
+            "40",
+            "28",
+            "9",
+            "0",
+            "48",
+            "8"
+        ],
+        "id": 6
+    },
+    {
+        "category": "Creatures",
+        "subcategory": "Animals",
+        "searchTerm": "Dragon",
+        "emblems": [
+            "14",
+            "25",
+            "50",
+            "0"
+        ],
+        "id": 7
+    },
+    {
+        "category": "Nature",
+        "subcategory": "Elements",
+        "searchTerm": "Earth",
+        "emblems": [
+            "49",
+            "50",
+            "46",
+            "9",
+            "43",
+            "27",
+            "35",
+            "19",
+            "38",
+            "40",
+            "47",
+            "4",
+            "6",
+            "13",
+            "11",
+            "36",
+            "23",
+            "3",
+            "25",
+            "39",
+            "34",
+            "30",
+            "26",
+            "42",
+            "12",
+            "31",
+            "1",
+            "14",
+            "20",
+            "37",
+            "16",
+            "32",
+            "28",
+            "33",
+            "0",
+            "41",
+            "15",
+            "2",
+            "7",
+            "17",
+            "24"
+        ],
+        "id": 8
+    },
+    {
+        "category": "Actions",
+        "subcategory": "Dynamic",
+        "searchTerm": "Embracing",
+        "emblems": [
+            "38",
+            "50",
+            "34",
+            "4",
+            "0",
+            "23"
+        ],
+        "id": 9
+    },
+    {
+        "category": "Traits",
+        "subcategory": "Sex",
+        "searchTerm": "Female",
+        "emblems": [
+            "50",
+            "27",
+            "35",
+            "44",
+            "38",
+            "40",
+            "4",
+            "11",
+            "23",
+            "5",
+            "3",
+            "25",
+            "39",
+            "34",
+            "30",
+            "22",
+            "26",
+            "42",
+            "20",
+            "0",
+            "21",
+            "41",
+            "2"
+        ],
+        "id": 10
+    },
+    {
+        "category": "Architecture",
+        "subcategory": "Structures",
+        "searchTerm": "Fence",
+        "emblems": [
+            "32",
+            "26",
+            "0",
+            "12",
+            "27",
+            "35",
+            "36"
+        ],
+        "id": 11
+    },
+    {
+        "category": "People",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Hercules",
+        "emblems": [
+            "0"
+        ],
+        "id": 12
+    },
+    {
+        "category": "People",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Hespertusa",
+        "emblems": [
+            "0"
+        ],
+        "id": 13
+    },
+    {
+        "category": "People",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Hippomenes",
+        "emblems": [
+            "0"
+        ],
+        "id": 14
+    },
+    {
+        "category": "People",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Ladon",
+        "emblems": [
+            "0"
+        ],
+        "id": 15
+    },
+    {
+        "category": "Creatures",
+        "subcategory": "Animals",
+        "searchTerm": "Lion",
+        "emblems": [
+            "16",
+            "37",
+            "0"
+        ],
+        "id": 16
+    },
+    {
+        "category": "Traits",
+        "subcategory": "Sex",
+        "searchTerm": "Male",
+        "emblems": [
+            "49",
+            "18",
+            "46",
+            "9",
+            "27",
+            "35",
+            "19",
+            "44",
+            "10",
+            "38",
+            "40",
+            "4",
+            "6",
+            "13",
+            "11",
+            "36",
+            "8",
+            "23",
+            "5",
+            "25",
+            "39",
+            "34",
+            "30",
+            "42",
+            "12",
             "48",
             "31",
-            "39",
-            "13",
-            "46",
-            "4",
-            "41",
-            "19",
+            "1",
+            "20",
             "32",
-            "44",
             "28",
-            "23",
-            "12",
+            "0",
+            "21",
             "15",
-            "5"
+            "41",
+            "24"
         ],
-        "id": 32
+        "id": 17
+    },
+    {
+        "category": "Traits",
+        "subcategory": "Attire",
+        "searchTerm": "Nude",
+        "emblems": [
+            "38",
+            "25",
+            "39",
+            "40",
+            "34",
+            "30",
+            "28",
+            "33",
+            "0",
+            "13",
+            "20",
+            "1",
+            "11",
+            "21",
+            "35",
+            "19",
+            "2",
+            "23"
+        ],
+        "id": 18
     },
     {
         "category": "People",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Pallas/Minerva (Athena)",
+        "emblems": [
+            "23",
+            "0"
+        ],
+        "id": 19
+    },
+    {
+        "category": "Architecture",
+        "subcategory": "Architectural Elements",
+        "searchTerm": "Pediment",
+        "emblems": [
+            "40",
+            "9",
+            "0",
+            "27",
+            "8"
+        ],
+        "id": 20
+    },
+    {
+        "category": "Nature",
+        "subcategory": "Environment",
+        "searchTerm": "Plants",
+        "emblems": [
+            "49",
+            "50",
+            "18",
+            "46",
+            "9",
+            "43",
+            "27",
+            "35",
+            "38",
+            "40",
+            "47",
+            "4",
+            "6",
+            "13",
+            "11",
+            "8",
+            "23",
+            "3",
+            "25",
+            "39",
+            "30",
+            "26",
+            "42",
+            "12",
+            "1",
+            "14",
+            "37",
+            "16",
+            "32",
+            "28",
+            "33",
+            "0",
+            "41",
+            "2",
+            "7",
+            "17",
+            "24"
+        ],
+        "id": 21
+    },
+    {
+        "category": "Actions",
+        "subcategory": "Dynamic",
+        "searchTerm": "Presenting",
+        "emblems": [
+            "49",
+            "26",
+            "4",
+            "43",
+            "0",
+            "48"
+        ],
+        "id": 22
+    },
+    {
+        "category": "Actions",
+        "subcategory": "Dynamic",
+        "searchTerm": "Running",
+        "emblems": [
+            "34",
+            "25",
+            "41",
+            "0"
+        ],
+        "id": 23
+    },
+    {
+        "category": "Architecture",
+        "subcategory": "Buildings",
+        "searchTerm": "Temple",
+        "emblems": [
+            "23",
+            "9",
+            "0",
+            "40"
+        ],
+        "id": 24
+    },
+    {
+        "category": "Things",
+        "subcategory": "Implements",
+        "searchTerm": "Weapons",
+        "emblems": [
+            "49",
+            "25",
+            "39",
+            "22",
+            "0",
+            "19",
+            "48",
+            "41",
+            "35",
+            "20",
+            "8",
+            "23",
+            "44"
+        ],
+        "id": 25
+    },
+    {
+        "category": "Nature",
+        "subcategory": "Elements",
+        "searchTerm": "Air/Wind",
+        "emblems": [
+            "50",
+            "46",
+            "9",
+            "19",
+            "40",
+            "47",
+            "13",
+            "11",
+            "36",
+            "3",
+            "25",
+            "34",
+            "30",
+            "26",
+            "42",
+            "12",
+            "1",
+            "37",
+            "16",
+            "32",
+            "28",
+            "2",
+            "17",
+            "24"
+        ],
+        "id": 26
+    },
+    {
+        "category": "Architecture",
+        "subcategory": "Architectural Elements",
+        "searchTerm": "Arch",
+        "emblems": [
+            "50",
+            "18",
+            "9",
+            "44",
+            "10",
+            "40",
+            "47",
+            "4",
+            "13",
+            "36",
+            "5",
+            "39",
+            "12",
+            "1",
+            "14",
+            "37",
+            "16",
+            "32",
+            "28",
+            "7",
+            "24"
+        ],
+        "id": 27
+    },
+    {
+        "category": "Traits",
         "subcategory": "Bodily State",
-        "searchTerm": "Pregnant",
+        "searchTerm": "Birth/Pregnancy",
         "emblems": [
+            "34",
             "1"
         ],
-        "id": 33
+        "id": 28
     },
     {
-        "category": "People",
-        "subcategory": "Life Stage",
-        "searchTerm": "Fetus",
+        "category": "Nature",
+        "subcategory": "Environment",
+        "searchTerm": "Bodies of Water",
         "emblems": [
-            "1"
+            "49",
+            "46",
+            "43",
+            "27",
+            "19",
+            "47",
+            "13",
+            "11",
+            "36",
+            "23",
+            "25",
+            "34",
+            "30",
+            "26",
+            "42",
+            "12",
+            "31",
+            "1",
+            "20",
+            "7",
+            "17",
+            "24"
         ],
-        "id": 34
+        "id": 29
     },
     {
         "category": "People",
@@ -598,213 +553,282 @@
         "emblems": [
             "1"
         ],
-        "id": 35
+        "id": 30
     },
     {
         "category": "Architecture",
-        "subcategory": "Architectural Elements",
-        "searchTerm": "Arch",
+        "subcategory": "Settings",
+        "searchTerm": "Cityscape",
         "emblems": [
-            "37",
-            "50",
-            "1",
+            "46",
+            "43",
+            "27",
+            "35",
+            "19",
             "10",
-            "47",
-            "18",
-            "24",
-            "9",
-            "14",
-            "36",
-            "39",
-            "13",
             "40",
+            "47",
             "4",
-            "7",
-            "16",
-            "32",
-            "44",
-            "28",
+            "13",
+            "36",
+            "8",
+            "5",
+            "25",
+            "39",
+            "34",
             "12",
-            "5"
+            "31",
+            "1",
+            "20",
+            "32",
+            "28",
+            "7",
+            "24"
         ],
-        "id": 36
+        "id": 31
+    },
+    {
+        "category": "Nature",
+        "subcategory": "Environment",
+        "searchTerm": "Elevated Terrain",
+        "emblems": [
+            "38",
+            "25",
+            "39",
+            "49",
+            "46",
+            "42",
+            "12",
+            "27",
+            "36",
+            "43",
+            "31",
+            "1",
+            "41",
+            "35",
+            "19",
+            "2",
+            "7",
+            "37"
+        ],
+        "id": 32
+    },
+    {
+        "category": "Traits",
+        "subcategory": "Life Stage",
+        "searchTerm": "Fetus",
+        "emblems": [
+            "1"
+        ],
+        "id": 33
     },
     {
         "category": "Architecture",
         "subcategory": "Structures",
         "searchTerm": "Path",
         "emblems": [
-            "1",
-            "18",
-            "36",
             "32",
-            "35",
+            "18",
             "12",
+            "36",
+            "1",
+            "35",
             "20"
         ],
-        "id": 37
+        "id": 34
     },
     {
         "category": "Architecture",
         "subcategory": "Structures",
         "searchTerm": "Ruin",
         "emblems": [
+            "16",
+            "50",
             "1",
             "14",
-            "16",
-            "17",
-            "50"
+            "17"
         ],
-        "id": 38
-    },
-    {
-        "category": "Things",
-        "subcategory": "Other",
-        "searchTerm": "Boat",
-        "emblems": [
-            "7",
-            "19",
-            "1",
-            "47",
-            "26",
-            "36",
-            "31",
-            "17",
-            "13",
-            "43",
-            "23",
-            "12",
-            "46",
-            "24",
-            "25",
-            "30"
-        ],
-        "id": 39
-    },
-    {
-        "category": "Things",
-        "subcategory": "Other",
-        "searchTerm": "Cloth",
-        "emblems": [
-            "19",
-            "1",
-            "3",
-            "23",
-            "46",
-            "38",
-            "24"
-        ],
-        "id": 40
+        "id": 35
     },
     {
         "category": "Things",
         "subcategory": "Other",
         "searchTerm": "Shadow",
         "emblems": [
-            "1",
-            "10",
-            "48",
+            "5",
             "3",
+            "10",
+            "39",
+            "4",
+            "42",
+            "6",
+            "48",
+            "1",
+            "11",
             "2",
             "8",
-            "39",
-            "42",
-            "11",
-            "45",
-            "6",
-            "4",
-            "5"
+            "45"
         ],
-        "id": 41
+        "id": 36
     },
     {
         "category": "Nature",
-        "subcategory": "Bodies of Water",
-        "searchTerm": "River",
+        "subcategory": "Elements",
+        "searchTerm": "Water",
         "emblems": [
-            "7",
-            "19",
-            "1",
             "49",
-            "27",
-            "30",
-            "47",
-            "26",
-            "36",
-            "42",
-            "17",
-            "11",
-            "13",
-            "24",
-            "20"
-        ],
-        "id": 42
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Environment",
-        "searchTerm": "Cityscape",
-        "emblems": [
-            "43",
-            "35",
-            "20",
-            "1",
-            "10",
-            "47",
-            "8",
-            "34",
-            "24",
-            "25",
-            "27",
-            "36",
-            "31",
-            "39",
-            "13",
-            "40",
             "46",
-            "4",
-            "7",
+            "43",
+            "27",
             "19",
+            "40",
+            "47",
+            "13",
+            "11",
+            "36",
+            "23",
+            "3",
+            "25",
+            "34",
+            "30",
+            "22",
+            "26",
+            "42",
+            "12",
+            "48",
+            "31",
+            "1",
+            "14",
+            "20",
+            "37",
             "32",
             "28",
-            "12",
-            "5"
+            "15",
+            "7",
+            "17",
+            "24"
         ],
-        "id": 43
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Environment",
-        "searchTerm": "Hill",
-        "emblems": [
-            "1",
-            "27",
-            "2",
-            "42",
-            "41"
-        ],
-        "id": 44
+        "id": 37
     },
     {
         "category": "Nature",
         "subcategory": "Weather",
         "searchTerm": "Wind",
         "emblems": [
-            "1",
-            "32"
+            "32",
+            "1"
+        ],
+        "id": 38
+    },
+    {
+        "category": "Traits",
+        "subcategory": "Life Stage",
+        "searchTerm": "Baby",
+        "emblems": [
+            "39",
+            "40",
+            "34",
+            "35",
+            "2"
+        ],
+        "id": 39
+    },
+    {
+        "category": "Nature",
+        "subcategory": "Weather",
+        "searchTerm": "Cloud",
+        "emblems": [
+            "50",
+            "46",
+            "9",
+            "27",
+            "19",
+            "10",
+            "40",
+            "47",
+            "13",
+            "11",
+            "36",
+            "8",
+            "5",
+            "39",
+            "34",
+            "30",
+            "26",
+            "42",
+            "12",
+            "20",
+            "37",
+            "32",
+            "41",
+            "2",
+            "17"
+        ],
+        "id": 40
+    },
+    {
+        "category": "Actions",
+        "subcategory": "Wet",
+        "searchTerm": "Drinking",
+        "emblems": [
+            "5",
+            "35",
+            "2",
+            "40"
+        ],
+        "id": 41
+    },
+    {
+        "category": "Creatures",
+        "subcategory": "Animals",
+        "searchTerm": "Goat",
+        "emblems": [
+            "2"
+        ],
+        "id": 42
+    },
+    {
+        "category": "Actions",
+        "subcategory": "Static",
+        "searchTerm": "Lying",
+        "emblems": [
+            "33",
+            "44",
+            "48",
+            "41",
+            "2",
+            "23",
+            "24"
+        ],
+        "id": 43
+    },
+    {
+        "category": "People",
+        "subcategory": "Personification",
+        "searchTerm": "Mother Earth",
+        "emblems": [
+            "2"
+        ],
+        "id": 44
+    },
+    {
+        "category": "Actions",
+        "subcategory": "Bodily",
+        "searchTerm": "Nursing",
+        "emblems": [
+            "5",
+            "35",
+            "2"
         ],
         "id": 45
     },
     {
-        "category": "People",
-        "subcategory": "Life Stage",
-        "searchTerm": "Baby",
+        "category": "Nature",
+        "subcategory": "Celestial Bodies",
+        "searchTerm": "Planet Earth",
         "emblems": [
             "2",
-            "39",
-            "40",
-            "35",
-            "34"
+            "45"
         ],
         "id": 46
     },
@@ -818,307 +842,15 @@
         "id": 47
     },
     {
-        "category": "People",
-        "subcategory": "Personification",
-        "searchTerm": "Mother Earth",
-        "emblems": [
-            "2"
-        ],
-        "id": 48
-    },
-    {
-        "category": "Creatures",
-        "subcategory": "Animals",
-        "searchTerm": "Goat",
-        "emblems": [
-            "2"
-        ],
-        "id": 49
-    },
-    {
         "category": "Creatures",
         "subcategory": "Animals",
         "searchTerm": "Wolf",
         "emblems": [
             "2",
-            "24",
-            "47"
-        ],
-        "id": 50
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Bodily",
-        "searchTerm": "Nursing",
-        "emblems": [
-            "35",
-            "2",
-            "5"
-        ],
-        "id": 51
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Bodily",
-        "searchTerm": "Suckling",
-        "emblems": [
-            "35",
-            "2",
-            "5"
-        ],
-        "id": 52
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Static",
-        "searchTerm": "Looking",
-        "emblems": [
-            "49",
-            "27",
-            "48",
-            "2",
-            "8",
-            "35",
-            "30"
-        ],
-        "id": 53
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Static",
-        "searchTerm": "Lying",
-        "emblems": [
-            "48",
-            "2",
-            "33",
-            "44",
-            "23",
-            "41"
-        ],
-        "id": 54
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Celestial Bodies",
-        "searchTerm": "Earth",
-        "emblems": [
-            "45",
-            "2"
-        ],
-        "id": 55
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Environment",
-        "searchTerm": "Rocky Crag",
-        "emblems": [
-            "7",
-            "19",
-            "49",
-            "2",
-            "31",
-            "35",
-            "12",
-            "46",
-            "25"
-        ],
-        "id": 56
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Weather",
-        "searchTerm": "Cloud",
-        "emblems": [
-            "26",
-            "37",
-            "11",
-            "50",
-            "20",
-            "10",
             "47",
-            "8",
-            "42",
-            "34",
-            "9",
-            "27",
-            "36",
-            "2",
-            "5",
-            "39",
-            "17",
-            "13",
-            "40",
-            "46",
-            "41",
-            "19",
-            "32",
-            "12",
-            "30"
-        ],
-        "id": 57
-    },
-    {
-        "category": "People",
-        "subcategory": "Attire",
-        "searchTerm": "Early Modern Clothing",
-        "emblems": [
-            "22",
-            "49",
-            "18",
-            "36",
-            "3",
-            "32",
-            "40",
-            "44",
-            "15",
-            "6"
-        ],
-        "id": 58
-    },
-    {
-        "category": "Architecture",
-        "subcategory": "Buildings",
-        "searchTerm": "Church",
-        "emblems": [
-            "7",
-            "36",
-            "3",
-            "8",
-            "13",
-            "12",
-            "6",
-            "4",
-            "5"
-        ],
-        "id": 59
-    },
-    {
-        "category": "Things",
-        "subcategory": "Other",
-        "searchTerm": "Brick",
-        "emblems": [
-            "16",
-            "3",
-            "8",
-            "50",
-            "21",
-            "5"
-        ],
-        "id": 60
-    },
-    {
-        "category": "Things",
-        "subcategory": "Other",
-        "searchTerm": "Spigot",
-        "emblems": [
-            "3"
-        ],
-        "id": 61
-    },
-    {
-        "category": "Things",
-        "subcategory": "Vessels",
-        "searchTerm": "Basin",
-        "emblems": [
-            "40",
-            "3"
-        ],
-        "id": 62
-    },
-    {
-        "category": "Things",
-        "subcategory": "Vessels",
-        "searchTerm": "Tub",
-        "emblems": [
-            "3"
-        ],
-        "id": 63
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Fiery",
-        "searchTerm": "Burning",
-        "emblems": [
-            "3",
             "24"
         ],
-        "id": 64
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Fiery",
-        "searchTerm": "Heating",
-        "emblems": [
-            "18",
-            "22",
-            "3"
-        ],
-        "id": 65
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Wet",
-        "searchTerm": "Pouring",
-        "emblems": [
-            "3"
-        ],
-        "id": 66
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Wet",
-        "searchTerm": "Spouting",
-        "emblems": [
-            "40",
-            "3"
-        ],
-        "id": 67
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Wet",
-        "searchTerm": "Washing",
-        "emblems": [
-            "11",
-            "13",
-            "3"
-        ],
-        "id": 68
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Elements",
-        "searchTerm": "Fire",
-        "emblems": [
-            "19",
-            "22",
-            "10",
-            "18",
-            "3",
-            "8",
-            "17",
-            "33",
-            "42",
-            "28",
-            "35",
-            "29",
-            "24",
-            "20"
-        ],
-        "id": 69
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Elements",
-        "searchTerm": "Water",
-        "emblems": [
-            "22",
-            "3",
-            "11",
-            "40",
-            "28"
-        ],
-        "id": 70
+        "id": 48
     },
     {
         "category": "Nature",
@@ -1127,135 +859,222 @@
         "emblems": [
             "3"
         ],
-        "id": 71
+        "id": 49
+    },
+    {
+        "category": "Architecture",
+        "subcategory": "Architectural Elements",
+        "searchTerm": "Brick",
+        "emblems": [
+            "5",
+            "3",
+            "16",
+            "50",
+            "21",
+            "14",
+            "8"
+        ],
+        "id": 50
+    },
+    {
+        "category": "Actions",
+        "subcategory": "Fiery",
+        "searchTerm": "Burning",
+        "emblems": [
+            "3",
+            "18",
+            "22",
+            "24"
+        ],
+        "id": 51
+    },
+    {
+        "category": "Architecture",
+        "subcategory": "Buildings",
+        "searchTerm": "Church",
+        "emblems": [
+            "5",
+            "3",
+            "8",
+            "4",
+            "6",
+            "12",
+            "13",
+            "36",
+            "7"
+        ],
+        "id": 52
+    },
+    {
+        "category": "Traits",
+        "subcategory": "Attire",
+        "searchTerm": "Early Modern Clothing",
+        "emblems": [
+            "3",
+            "32",
+            "49",
+            "40",
+            "22",
+            "18",
+            "6",
+            "15",
+            "36",
+            "44"
+        ],
+        "id": 53
+    },
+    {
+        "category": "Nature",
+        "subcategory": "Elements",
+        "searchTerm": "Fire",
+        "emblems": [
+            "23",
+            "3",
+            "10",
+            "37",
+            "18",
+            "22",
+            "28",
+            "29",
+            "33",
+            "42",
+            "20",
+            "35",
+            "19",
+            "8",
+            "17",
+            "24"
+        ],
+        "id": 54
+    },
+    {
+        "category": "Actions",
+        "subcategory": "Wet",
+        "searchTerm": "Pouring",
+        "emblems": [
+            "3",
+            "40"
+        ],
+        "id": 55
     },
     {
         "category": "Nature",
         "subcategory": "States of Matter",
         "searchTerm": "Smoke",
         "emblems": [
-            "22",
+            "3",
             "10",
             "18",
-            "37",
-            "3",
-            "8",
+            "22",
+            "29",
             "33",
             "35",
-            "29",
-            "24",
-            "20"
+            "20",
+            "8",
+            "37",
+            "24"
         ],
-        "id": 72
+        "id": 56
     },
     {
         "category": "Nature",
         "subcategory": "States of Matter",
         "searchTerm": "Steam",
         "emblems": [
-            "28",
             "3",
+            "28",
             "37"
         ],
-        "id": 73
+        "id": 57
     },
     {
-        "category": "People",
-        "subcategory": "Attire",
-        "searchTerm": "Boots",
+        "category": "Things",
+        "subcategory": "Other",
+        "searchTerm": "Vessels",
         "emblems": [
-            "41",
-            "49",
-            "9",
-            "10",
-            "48",
-            "32",
-            "8",
-            "39",
-            "11",
-            "44",
-            "12",
-            "38",
-            "6",
+            "3",
+            "40",
+            "18",
             "4",
-            "25",
-            "5"
+            "22",
+            "6",
+            "48",
+            "11",
+            "15"
         ],
-        "id": 74
+        "id": 58
+    },
+    {
+        "category": "Actions",
+        "subcategory": "Wet",
+        "searchTerm": "Washing",
+        "emblems": [
+            "13",
+            "3",
+            "11"
+        ],
+        "id": 59
     },
     {
         "category": "Architecture",
         "subcategory": "Buildings",
         "searchTerm": "House",
         "emblems": [
-            "22",
-            "18",
-            "26",
-            "36",
             "32",
-            "37",
-            "17",
+            "30",
+            "18",
+            "4",
+            "22",
+            "26",
+            "6",
+            "13",
             "42",
             "11",
-            "13",
-            "44",
             "15",
             "21",
-            "6",
-            "4",
-            "30"
+            "37",
+            "36",
+            "17",
+            "44"
         ],
-        "id": 75
+        "id": 60
     },
     {
-        "category": "Things",
-        "subcategory": "Vessels",
-        "searchTerm": "Cup",
+        "category": "Actions",
+        "subcategory": "Dynamic",
+        "searchTerm": "Attacking",
         "emblems": [
-            "4",
-            "48"
+            "5",
+            "25",
+            "47",
+            "19",
+            "44"
         ],
-        "id": 76
-    },
-    {
-        "category": "Things",
-        "subcategory": "Vessels",
-        "searchTerm": "Pitcher",
-        "emblems": [
-            "4",
-            "48",
-            "15"
-        ],
-        "id": 77
+        "id": 61
     },
     {
         "category": "Architecture",
         "subcategory": "Architectural Elements",
-        "searchTerm": "Window",
+        "searchTerm": "Courtyard",
         "emblems": [
-            "22",
-            "48",
-            "8",
-            "13",
-            "44",
-            "28",
-            "15",
-            "21",
-            "5"
+            "5",
+            "10",
+            "18",
+            "8"
         ],
-        "id": 78
+        "id": 62
     },
     {
         "category": "Creatures",
         "subcategory": "Animals",
         "searchTerm": "Dog",
         "emblems": [
-            "18",
+            "5",
             "47",
-            "41",
-            "5"
+            "18",
+            "41"
         ],
-        "id": 79
+        "id": 63
     },
     {
         "category": "Creatures",
@@ -1264,83 +1083,55 @@
         "emblems": [
             "5"
         ],
-        "id": 80
+        "id": 64
     },
     {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Foisting",
+        "category": "Architecture",
+        "subcategory": "Architectural Elements",
+        "searchTerm": "Window",
         "emblems": [
-            "5"
-        ],
-        "id": 81
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Environment",
-        "searchTerm": "Courtyard",
-        "emblems": [
-            "18",
-            "8",
-            "10",
-            "5"
-        ],
-        "id": 82
-    },
-    {
-        "category": "People",
-        "subcategory": "Headgear",
-        "searchTerm": "Hat",
-        "emblems": [
-            "9",
+            "5",
+            "22",
+            "28",
+            "13",
             "48",
-            "18",
-            "36",
-            "32",
-            "11",
-            "40",
-            "15",
             "21",
-            "6"
+            "15",
+            "8",
+            "44"
         ],
-        "id": 83
-    },
-    {
-        "category": "People",
-        "subcategory": "Headgear",
-        "searchTerm": "Plume",
-        "emblems": [
-            "49",
-            "11",
-            "6",
-            "41",
-            "20"
-        ],
-        "id": 84
+        "id": 65
     },
     {
         "category": "Things",
         "subcategory": "Other",
         "searchTerm": "Coins",
         "emblems": [
-            "6",
-            "18"
-        ],
-        "id": 85
-    },
-    {
-        "category": "Things",
-        "subcategory": "Vessels",
-        "searchTerm": "Bowl",
-        "emblems": [
-            "22",
             "18",
-            "11",
-            "40",
-            "15",
             "6"
         ],
-        "id": 86
+        "id": 66
+    },
+    {
+        "category": "Nature",
+        "subcategory": "Environment",
+        "searchTerm": "Field",
+        "emblems": [
+            "7",
+            "6"
+        ],
+        "id": 67
+    },
+    {
+        "category": "Nature",
+        "subcategory": "Elements",
+        "searchTerm": "Gold",
+        "emblems": [
+            "18",
+            "23",
+            "6"
+        ],
+        "id": 68
     },
     {
         "category": "Actions",
@@ -1349,45 +1140,34 @@
         "emblems": [
             "6"
         ],
-        "id": 87
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Elements",
-        "searchTerm": "Gold",
-        "emblems": [
-            "6",
-            "18",
-            "23"
-        ],
-        "id": 88
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Environment",
-        "searchTerm": "Field",
-        "emblems": [
-            "6",
-            "7"
-        ],
-        "id": 89
+        "id": 69
     },
     {
         "category": "Architecture",
         "subcategory": "Structures",
         "searchTerm": "Bridge",
         "emblems": [
-            "7",
-            "47",
-            "36",
             "32",
+            "40",
+            "47",
             "42",
             "13",
-            "40",
-            "24",
-            "20"
+            "36",
+            "20",
+            "7",
+            "24"
         ],
-        "id": 90
+        "id": 70
+    },
+    {
+        "category": "Nature",
+        "subcategory": "Environment",
+        "searchTerm": "Cave",
+        "emblems": [
+            "34",
+            "7"
+        ],
+        "id": 71
     },
     {
         "category": "Creatures",
@@ -1396,48 +1176,60 @@
         "emblems": [
             "7"
         ],
-        "id": 91
-    },
-    {
-        "category": "Creatures",
-        "subcategory": "Animal Parts",
-        "searchTerm": "Wing",
-        "emblems": [
-            "7",
-            "49",
-            "14",
-            "10",
-            "16",
-            "50",
-            "46",
-            "38",
-            "25"
-        ],
-        "id": 92
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Environment",
-        "searchTerm": "Cave",
-        "emblems": [
-            "7",
-            "34"
-        ],
-        "id": 93
+        "id": 72
     },
     {
         "category": "Architecture",
         "subcategory": "Architectural Elements",
         "searchTerm": "Door",
         "emblems": [
+            "40",
+            "12",
+            "13",
             "27",
             "8",
-            "13",
-            "40",
-            "44",
-            "12"
+            "44"
         ],
-        "id": 94
+        "id": 73
+    },
+    {
+        "category": "Things",
+        "subcategory": "Other",
+        "searchTerm": "Egg",
+        "emblems": [
+            "8"
+        ],
+        "id": 74
+    },
+    {
+        "category": "Things",
+        "subcategory": "Other",
+        "searchTerm": "Faggot",
+        "emblems": [
+            "10",
+            "18",
+            "22",
+            "33",
+            "20",
+            "8",
+            "24"
+        ],
+        "id": 75
+    },
+    {
+        "category": "Things",
+        "subcategory": "Other",
+        "searchTerm": "Furniture",
+        "emblems": [
+            "10",
+            "22",
+            "33",
+            "48",
+            "15",
+            "8",
+            "44"
+        ],
+        "id": 76
     },
     {
         "category": "Architecture",
@@ -1447,61 +1239,20 @@
             "18",
             "8"
         ],
-        "id": 95
+        "id": 77
     },
     {
-        "category": "Architecture",
-        "subcategory": "Furniture",
-        "searchTerm": "Table",
+        "category": "Actions",
+        "subcategory": "Bodily",
+        "searchTerm": "Eating",
         "emblems": [
-            "48",
-            "8",
-            "33",
-            "44",
-            "15"
+            "9",
+            "24"
         ],
-        "id": 96
+        "id": 78
     },
     {
-        "category": "Things",
-        "subcategory": "Other",
-        "searchTerm": "Egg",
-        "emblems": [
-            "8"
-        ],
-        "id": 97
-    },
-    {
-        "category": "Things",
-        "subcategory": "Other",
-        "searchTerm": "Faggot",
-        "emblems": [
-            "22",
-            "10",
-            "18",
-            "8",
-            "33",
-            "24",
-            "20"
-        ],
-        "id": 98
-    },
-    {
-        "category": "Things",
-        "subcategory": "Weapons",
-        "searchTerm": "Sword",
-        "emblems": [
-            "39",
-            "8",
-            "44",
-            "35",
-            "41",
-            "20"
-        ],
-        "id": 99
-    },
-    {
-        "category": "People",
+        "category": "Traits",
         "subcategory": "Life Stage",
         "searchTerm": "Elderly",
         "emblems": [
@@ -1509,33 +1260,16 @@
             "39",
             "9"
         ],
-        "id": 100
+        "id": 79
     },
     {
-        "category": "Actions",
-        "subcategory": "Bodily",
-        "searchTerm": "Eating",
+        "category": "Nature",
+        "subcategory": "Food",
+        "searchTerm": "Fruit",
         "emblems": [
-            "24",
             "9"
         ],
-        "id": 101
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Static",
-        "searchTerm": "Sitting",
-        "emblems": [
-            "9",
-            "10",
-            "27",
-            "11",
-            "13",
-            "28",
-            "15",
-            "38"
-        ],
-        "id": 102
+        "id": 80
     },
     {
         "category": "Nature",
@@ -1545,77 +1279,62 @@
             "27",
             "9"
         ],
-        "id": 103
+        "id": 81
     },
     {
-        "category": "Nature",
-        "subcategory": "Food",
-        "searchTerm": "Fruit",
+        "category": "Actions",
+        "subcategory": "Static",
+        "searchTerm": "Sitting",
         "emblems": [
-            "9"
-        ],
-        "id": 104
-    },
-    {
-        "category": "People",
-        "subcategory": "Headgear",
-        "searchTerm": "Helmet",
-        "emblems": [
-            "49",
             "10",
-            "48",
-            "39",
-            "35",
             "38",
-            "41",
-            "20"
+            "28",
+            "9",
+            "13",
+            "27",
+            "11",
+            "15"
         ],
-        "id": 105
-    },
-    {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Hermes/Mercury",
-        "emblems": [
-            "49",
-            "10",
-            "38"
-        ],
-        "id": 106
+        "id": 82
     },
     {
         "category": "Architecture",
         "subcategory": "Architectural Elements",
         "searchTerm": "Hearth",
         "emblems": [
-            "18",
-            "22",
             "23",
-            "10"
+            "10",
+            "18",
+            "22"
         ],
-        "id": 107
+        "id": 83
     },
     {
-        "category": "Architecture",
-        "subcategory": "Furniture",
-        "searchTerm": "Bench",
+        "category": "Traits",
+        "subcategory": "Headgear",
+        "searchTerm": "Helmet",
         "emblems": [
-            "44",
-            "22",
-            "10"
+            "10",
+            "38",
+            "49",
+            "39",
+            "48",
+            "41",
+            "35",
+            "20"
         ],
-        "id": 108
+        "id": 84
     },
     {
         "category": "People",
-        "subcategory": "Life Stage",
-        "searchTerm": "Child",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Hermes/Mercury",
         "emblems": [
-            "11",
-            "23",
-            "38"
+            "10",
+            "38",
+            "49"
         ],
-        "id": 109
+        "id": 85
     },
     {
         "category": "People",
@@ -1623,34 +1342,13 @@
         "searchTerm": "Apollo/Sol",
         "emblems": [
             "49",
-            "11",
-            "23",
-            "34",
             "25",
-            "30"
-        ],
-        "id": 110
-    },
-    {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Diana/Luna",
-        "emblems": [
-            "11",
             "34",
-            "25",
-            "30"
+            "30",
+            "11",
+            "23"
         ],
-        "id": 111
-    },
-    {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Latona",
-        "emblems": [
-            "11"
-        ],
-        "id": 112
+        "id": 86
     },
     {
         "category": "Things",
@@ -1659,7 +1357,66 @@
         "emblems": [
             "11"
         ],
-        "id": 113
+        "id": 87
+    },
+    {
+        "category": "Traits",
+        "subcategory": "Life Stage",
+        "searchTerm": "Child",
+        "emblems": [
+            "38",
+            "11",
+            "23"
+        ],
+        "id": 88
+    },
+    {
+        "category": "People",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Diana/Luna",
+        "emblems": [
+            "34",
+            "30",
+            "25",
+            "11"
+        ],
+        "id": 89
+    },
+    {
+        "category": "People",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Latona",
+        "emblems": [
+            "11"
+        ],
+        "id": 90
+    },
+    {
+        "category": "Nature",
+        "subcategory": "Celestial Bodies",
+        "searchTerm": "Moon",
+        "emblems": [
+            "25",
+            "34",
+            "30",
+            "11",
+            "45"
+        ],
+        "id": 91
+    },
+    {
+        "category": "Nature",
+        "subcategory": "Celestial Bodies",
+        "searchTerm": "Sun",
+        "emblems": [
+            "25",
+            "34",
+            "30",
+            "47",
+            "11",
+            "45"
+        ],
+        "id": 92
     },
     {
         "category": "Actions",
@@ -1668,73 +1425,7 @@
         "emblems": [
             "11"
         ],
-        "id": 114
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Celestial Bodies",
-        "searchTerm": "Moon",
-        "emblems": [
-            "11",
-            "45",
-            "34",
-            "25",
-            "30"
-        ],
-        "id": 115
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Celestial Bodies",
-        "searchTerm": "Sun",
-        "emblems": [
-            "47",
-            "11",
-            "45",
-            "34",
-            "25",
-            "30"
-        ],
-        "id": 116
-    },
-    {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Saturn",
-        "emblems": [
-            "12"
-        ],
-        "id": 117
-    },
-    {
-        "category": "Architecture",
-        "subcategory": "Architectural Elements",
-        "searchTerm": "Stairs",
-        "emblems": [
-            "13",
-            "32",
-            "12",
-            "44"
-        ],
-        "id": 118
-    },
-    {
-        "category": "Things",
-        "subcategory": "Implements",
-        "searchTerm": "Scythe",
-        "emblems": [
-            "12"
-        ],
-        "id": 119
-    },
-    {
-        "category": "Things",
-        "subcategory": "Other",
-        "searchTerm": "Stone",
-        "emblems": [
-            "12"
-        ],
-        "id": 120
+        "id": 93
     },
     {
         "category": "Things",
@@ -1743,7 +1434,46 @@
         "emblems": [
             "12"
         ],
-        "id": 121
+        "id": 94
+    },
+    {
+        "category": "People",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Saturn",
+        "emblems": [
+            "12"
+        ],
+        "id": 95
+    },
+    {
+        "category": "Things",
+        "subcategory": "Implements",
+        "searchTerm": "Scythe",
+        "emblems": [
+            "12"
+        ],
+        "id": 96
+    },
+    {
+        "category": "Architecture",
+        "subcategory": "Architectural Elements",
+        "searchTerm": "Stairs",
+        "emblems": [
+            "13",
+            "32",
+            "44",
+            "12"
+        ],
+        "id": 97
+    },
+    {
+        "category": "Things",
+        "subcategory": "Other",
+        "searchTerm": "Stone",
+        "emblems": [
+            "12"
+        ],
+        "id": 98
     },
     {
         "category": "Actions",
@@ -1752,43 +1482,7 @@
         "emblems": [
             "12"
         ],
-        "id": 122
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Bodies of Water",
-        "searchTerm": "Lake",
-        "emblems": [
-            "31",
-            "43",
-            "23",
-            "12",
-            "34",
-            "46",
-            "25"
-        ],
-        "id": 123
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Plants",
-        "searchTerm": "Stump",
-        "emblems": [
-            "39",
-            "12",
-            "41",
-            "47"
-        ],
-        "id": 124
-    },
-    {
-        "category": "People",
-        "subcategory": "Bodily State",
-        "searchTerm": "Leprous",
-        "emblems": [
-            "13"
-        ],
-        "id": 125
+        "id": 99
     },
     {
         "category": "People",
@@ -1797,76 +1491,37 @@
         "emblems": [
             "13"
         ],
-        "id": 126
+        "id": 100
     },
     {
-        "category": "Architecture",
-        "subcategory": "Other",
-        "searchTerm": "Brick",
+        "category": "Traits",
+        "subcategory": "Bodily State",
+        "searchTerm": "Sick",
         "emblems": [
-            "14"
+            "13",
+            "48"
         ],
-        "id": 127
-    },
-    {
-        "category": "Creatures",
-        "subcategory": "Animal Parts",
-        "searchTerm": "Claw",
-        "emblems": [
-            "14",
-            "47",
-            "16",
-            "37",
-            "43",
-            "29"
-        ],
-        "id": 128
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Bodily",
-        "searchTerm": "Biting",
-        "emblems": [
-            "14"
-        ],
-        "id": 129
-    },
-    {
-        "category": "Architecture",
-        "subcategory": "Furniture",
-        "searchTerm": "Chair",
-        "emblems": [
-            "15"
-        ],
-        "id": 130
+        "id": 101
     },
     {
         "category": "Things",
         "subcategory": "Implements",
-        "searchTerm": "Pottery wheel",
+        "searchTerm": "Pottery Wheel",
         "emblems": [
             "15"
         ],
-        "id": 131
+        "id": 102
     },
     {
         "category": "Things",
-        "subcategory": "Vessels",
-        "searchTerm": "Pot",
+        "subcategory": "Shapes",
+        "searchTerm": "Circle/Sphere",
         "emblems": [
-            "22",
-            "15"
+            "21",
+            "17",
+            "45"
         ],
-        "id": 132
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Turning",
-        "emblems": [
-            "15"
-        ],
-        "id": 133
+        "id": 103
     },
     {
         "category": "Architecture",
@@ -1876,25 +1531,7 @@
             "32",
             "17"
         ],
-        "id": 134
-    },
-    {
-        "category": "Things",
-        "subcategory": "Shapes",
-        "searchTerm": "Sphere",
-        "emblems": [
-            "17"
-        ],
-        "id": 135
-    },
-    {
-        "category": "Architecture",
-        "subcategory": "Implements",
-        "searchTerm": "Rod",
-        "emblems": [
-            "18"
-        ],
-        "id": 136
+        "id": 104
     },
     {
         "category": "Things",
@@ -1904,127 +1541,61 @@
             "18",
             "22"
         ],
-        "id": 137
+        "id": 105
+    },
+    {
+        "category": "Things",
+        "subcategory": "Implements",
+        "searchTerm": "Rod",
+        "emblems": [
+            "18"
+        ],
+        "id": 106
     },
     {
         "category": "Things",
         "subcategory": "Implements",
         "searchTerm": "Tongs",
         "emblems": [
+            "49",
             "18",
-            "23",
-            "49"
+            "23"
         ],
-        "id": 138
+        "id": 107
     },
     {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Attacking",
-        "emblems": [
-            "19",
-            "25",
-            "47"
-        ],
-        "id": 139
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Throwing",
-        "emblems": [
-            "19"
-        ],
-        "id": 140
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Elements",
-        "searchTerm": "Air",
-        "emblems": [
-            "19"
-        ],
-        "id": 141
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Elements",
-        "searchTerm": "Earth",
-        "emblems": [
-            "19"
-        ],
-        "id": 142
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Elements",
-        "searchTerm": "Wind",
-        "emblems": [
-            "19"
-        ],
-        "id": 143
-    },
-    {
-        "category": "People",
+        "category": "Traits",
         "subcategory": "Attire",
         "searchTerm": "Armor",
         "emblems": [
             "35",
-            "41",
-            "20"
+            "20",
+            "41"
         ],
-        "id": 144
-    },
-    {
-        "category": "Things",
-        "subcategory": "Weapons",
-        "searchTerm": "Shield",
-        "emblems": [
-            "35",
-            "41",
-            "20"
-        ],
-        "id": 145
+        "id": 108
     },
     {
         "category": "Actions",
         "subcategory": "Dynamic",
         "searchTerm": "Fleeing",
         "emblems": [
-            "41",
             "35",
+            "20",
             "25",
-            "20"
+            "41"
         ],
-        "id": 146
+        "id": 109
     },
     {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Shielding",
+        "category": "Things",
+        "subcategory": "Implements",
+        "searchTerm": "Shield",
         "emblems": [
-            "20"
+            "35",
+            "20",
+            "41"
         ],
-        "id": 147
-    },
-    {
-        "category": "People",
-        "subcategory": "Attire",
-        "searchTerm": "Eastern Clothing",
-        "emblems": [
-            "44",
-            "21"
-        ],
-        "id": 148
-    },
-    {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Hermes Trismegistus",
-        "emblems": [
-            "21"
-        ],
-        "id": 149
+        "id": 110
     },
     {
         "category": "Things",
@@ -2033,7 +1604,37 @@
         "emblems": [
             "21"
         ],
-        "id": 150
+        "id": 111
+    },
+    {
+        "category": "Things",
+        "subcategory": "Shapes",
+        "searchTerm": "Cube/Square",
+        "emblems": [
+            "36",
+            "21",
+            "40"
+        ],
+        "id": 112
+    },
+    {
+        "category": "Traits",
+        "subcategory": "Attire",
+        "searchTerm": "Eastern Clothing",
+        "emblems": [
+            "21",
+            "44"
+        ],
+        "id": 113
+    },
+    {
+        "category": "People",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Hermes Trismegistus",
+        "emblems": [
+            "21"
+        ],
+        "id": 114
     },
     {
         "category": "Things",
@@ -2042,36 +1643,7 @@
         "emblems": [
             "21"
         ],
-        "id": 151
-    },
-    {
-        "category": "Things",
-        "subcategory": "Implements",
-        "searchTerm": "T-Square",
-        "emblems": [
-            "21"
-        ],
-        "id": 152
-    },
-    {
-        "category": "Things",
-        "subcategory": "Shapes",
-        "searchTerm": "Circle",
-        "emblems": [
-            "21",
-            "45"
-        ],
-        "id": 153
-    },
-    {
-        "category": "Things",
-        "subcategory": "Shapes",
-        "searchTerm": "Square",
-        "emblems": [
-            "40",
-            "21"
-        ],
-        "id": 154
+        "id": 115
     },
     {
         "category": "Things",
@@ -2080,7 +1652,16 @@
         "emblems": [
             "21"
         ],
-        "id": 155
+        "id": 116
+    },
+    {
+        "category": "Things",
+        "subcategory": "Implements",
+        "searchTerm": "T-Square",
+        "emblems": [
+            "21"
+        ],
+        "id": 117
     },
     {
         "category": "Things",
@@ -2089,43 +1670,7 @@
         "emblems": [
             "21"
         ],
-        "id": 156
-    },
-    {
-        "category": "People",
-        "subcategory": "Attire",
-        "searchTerm": "Chatelaine",
-        "emblems": [
-            "22"
-        ],
-        "id": 157
-    },
-    {
-        "category": "Things",
-        "subcategory": "Vessels",
-        "searchTerm": "Cauldron",
-        "emblems": [
-            "22"
-        ],
-        "id": 158
-    },
-    {
-        "category": "Things",
-        "subcategory": "Vessels",
-        "searchTerm": "Lid",
-        "emblems": [
-            "22"
-        ],
-        "id": 159
-    },
-    {
-        "category": "Things",
-        "subcategory": "Weapons",
-        "searchTerm": "Dagger",
-        "emblems": [
-            "22"
-        ],
-        "id": 160
+        "id": 118
     },
     {
         "category": "Creatures",
@@ -2134,7 +1679,16 @@
         "emblems": [
             "22"
         ],
-        "id": 161
+        "id": 119
+    },
+    {
+        "category": "Traits",
+        "subcategory": "Attire",
+        "searchTerm": "Chatelaine",
+        "emblems": [
+            "22"
+        ],
+        "id": 120
     },
     {
         "category": "Creatures",
@@ -2143,49 +1697,37 @@
         "emblems": [
             "22"
         ],
-        "id": 162
+        "id": 121
     },
     {
-        "category": "People",
-        "subcategory": "Headgear",
-        "searchTerm": "Sun Rays",
+        "category": "Actions",
+        "subcategory": "Bodily",
+        "searchTerm": "Birthing",
         "emblems": [
             "34",
-            "23",
-            "25",
-            "30"
+            "23"
         ],
-        "id": 163
+        "id": 122
     },
     {
         "category": "People",
         "subcategory": "Mythological and Biblical",
         "searchTerm": "Cupid",
         "emblems": [
-            "23",
-            "38"
+            "38",
+            "23"
         ],
-        "id": 164
+        "id": 123
     },
     {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Jove/Jupiter (Zeus)",
+        "category": "Creatures",
+        "subcategory": "Animals",
+        "searchTerm": "Eagle",
         "emblems": [
-            "23",
-            "46"
+            "46",
+            "23"
         ],
-        "id": 165
-    },
-    {
-        "category": "Things",
-        "subcategory": "Implements",
-        "searchTerm": "Axe",
-        "emblems": [
-            "23",
-            "49"
-        ],
-        "id": 166
+        "id": 124
     },
     {
         "category": "Things",
@@ -2194,7 +1736,17 @@
         "emblems": [
             "23"
         ],
-        "id": 167
+        "id": 125
+    },
+    {
+        "category": "People",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Jove/Jupiter (Zeus)",
+        "emblems": [
+            "46",
+            "23"
+        ],
+        "id": 126
     },
     {
         "category": "Things",
@@ -2203,38 +1755,7 @@
         "emblems": [
             "23"
         ],
-        "id": 168
-    },
-    {
-        "category": "Things",
-        "subcategory": "Weapons",
-        "searchTerm": "Bow and arrow",
-        "emblems": [
-            "23",
-            "49",
-            "25"
-        ],
-        "id": 169
-    },
-    {
-        "category": "Creatures",
-        "subcategory": "Animals",
-        "searchTerm": "Eagle",
-        "emblems": [
-            "23",
-            "46"
-        ],
-        "id": 170
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Bodily",
-        "searchTerm": "Giving birth",
-        "emblems": [
-            "23",
-            "34"
-        ],
-        "id": 171
+        "id": 127
     },
     {
         "category": "Nature",
@@ -2243,35 +1764,47 @@
         "emblems": [
             "23"
         ],
-        "id": 172
+        "id": 128
     },
     {
-        "category": "People",
-        "subcategory": "Bodily State",
-        "searchTerm": "Dying",
+        "category": "Traits",
+        "subcategory": "Headgear",
+        "searchTerm": "Sun Rays",
         "emblems": [
-            "35",
-            "24",
-            "50",
-            "41"
+            "34",
+            "30",
+            "25",
+            "23"
         ],
-        "id": 173
+        "id": 129
     },
     {
-        "category": "People",
+        "category": "Traits",
         "subcategory": "Headgear",
         "searchTerm": "Crown",
         "emblems": [
-            "48",
-            "26",
             "39",
-            "31",
-            "44",
+            "26",
             "28",
+            "44",
             "46",
+            "48",
+            "31",
             "24"
         ],
-        "id": 174
+        "id": 130
+    },
+    {
+        "category": "Traits",
+        "subcategory": "Bodily State",
+        "searchTerm": "Death/Dying",
+        "emblems": [
+            "35",
+            "41",
+            "50",
+            "24"
+        ],
+        "id": 131
     },
     {
         "category": "Actions",
@@ -2279,60 +1812,31 @@
         "searchTerm": "Dying",
         "emblems": [
             "35",
-            "24",
+            "41",
             "50",
-            "41"
-        ],
-        "id": 175
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Static",
-        "searchTerm": "Lying ",
-        "emblems": [
             "24"
         ],
-        "id": 176
+        "id": 132
     },
     {
         "category": "Actions",
         "subcategory": "Wet",
         "searchTerm": "Swimming",
         "emblems": [
-            "31",
-            "25"
+            "25",
+            "31"
         ],
-        "id": 177
-    },
-    {
-        "category": "People",
-        "subcategory": "Personification",
-        "searchTerm": "Wisdom",
-        "emblems": [
-            "26"
-        ],
-        "id": 178
+        "id": 133
     },
     {
         "category": "Things",
         "subcategory": "Other",
         "searchTerm": "Banderole",
         "emblems": [
-            "43",
-            "26"
-        ],
-        "id": 179
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Holding",
-        "emblems": [
-            "43",
             "26",
-            "49"
+            "43"
         ],
-        "id": 180
+        "id": 134
     },
     {
         "category": "Nature",
@@ -2342,7 +1846,16 @@
             "26",
             "47"
         ],
-        "id": 181
+        "id": 135
+    },
+    {
+        "category": "People",
+        "subcategory": "Personification",
+        "searchTerm": "Wisdom",
+        "emblems": [
+            "26"
+        ],
+        "id": 136
     },
     {
         "category": "Architecture",
@@ -2351,25 +1864,17 @@
         "emblems": [
             "27"
         ],
-        "id": 182
-    },
-    {
-        "category": "Architecture",
-        "subcategory": "Architectural Elements",
-        "searchTerm": "Porch",
-        "emblems": [
-            "28"
-        ],
-        "id": 183
+        "id": 137
     },
     {
         "category": "Things",
         "subcategory": "Other",
         "searchTerm": "Lamp",
         "emblems": [
-            "28"
+            "28",
+            "42"
         ],
-        "id": 184
+        "id": 138
     },
     {
         "category": "Things",
@@ -2378,7 +1883,7 @@
         "emblems": [
             "28"
         ],
-        "id": 185
+        "id": 139
     },
     {
         "category": "Creatures",
@@ -2387,27 +1892,17 @@
         "emblems": [
             "29"
         ],
-        "id": 186
+        "id": 140
     },
     {
         "category": "Nature",
         "subcategory": "Celestial Bodies",
         "searchTerm": "Stars",
         "emblems": [
-            "45",
-            "29"
+            "29",
+            "45"
         ],
-        "id": 187
-    },
-    {
-        "category": "People",
-        "subcategory": "Headgear",
-        "searchTerm": "Moon Rays",
-        "emblems": [
-            "34",
-            "30"
-        ],
-        "id": 188
+        "id": 141
     },
     {
         "category": "Creatures",
@@ -2416,7 +1911,17 @@
         "emblems": [
             "30"
         ],
-        "id": 189
+        "id": 142
+    },
+    {
+        "category": "Traits",
+        "subcategory": "Headgear",
+        "searchTerm": "Moon Rays",
+        "emblems": [
+            "34",
+            "30"
+        ],
+        "id": 143
     },
     {
         "category": "Creatures",
@@ -2425,16 +1930,17 @@
         "emblems": [
             "30"
         ],
-        "id": 190
+        "id": 144
     },
     {
-        "category": "People",
-        "subcategory": "Mythological and Biblical",
-        "searchTerm": "Wind gods (Anemoi)",
+        "category": "Nature",
+        "subcategory": "Environment",
+        "searchTerm": "Bog",
         "emblems": [
-            "32"
+            "32",
+            "37"
         ],
-        "id": 191
+        "id": 145
     },
     {
         "category": "Things",
@@ -2443,7 +1949,7 @@
         "emblems": [
             "32"
         ],
-        "id": 192
+        "id": 146
     },
     {
         "category": "Creatures",
@@ -2453,45 +1959,16 @@
             "36",
             "32"
         ],
-        "id": 193
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Wet",
-        "searchTerm": "Trawling",
-        "emblems": [
-            "32"
-        ],
-        "id": 194
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Environment",
-        "searchTerm": "Bog",
-        "emblems": [
-            "37",
-            "32"
-        ],
-        "id": 195
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Plants",
-        "searchTerm": "Coral",
-        "emblems": [
-            "32"
-        ],
-        "id": 196
+        "id": 147
     },
     {
         "category": "People",
-        "subcategory": "Sex",
-        "searchTerm": "Hermaphrodite",
+        "subcategory": "Mythological and Biblical",
+        "searchTerm": "Wind Gods (Anemoi)",
         "emblems": [
-            "33",
-            "38"
+            "32"
         ],
-        "id": 197
+        "id": 148
     },
     {
         "category": "Things",
@@ -2500,36 +1977,28 @@
         "emblems": [
             "33"
         ],
-        "id": 198
+        "id": 149
     },
     {
         "category": "Nature",
         "subcategory": "Celestial Bodies",
         "searchTerm": "Eclipse",
         "emblems": [
-            "45",
+            "33",
             "42",
+            "45"
+        ],
+        "id": 150
+    },
+    {
+        "category": "Traits",
+        "subcategory": "Sex",
+        "searchTerm": "Hermaphrodite",
+        "emblems": [
+            "38",
             "33"
         ],
-        "id": 199
-    },
-    {
-        "category": "People",
-        "subcategory": "Bodily State",
-        "searchTerm": "Being born",
-        "emblems": [
-            "34"
-        ],
-        "id": 200
-    },
-    {
-        "category": "People",
-        "subcategory": "Bodily State",
-        "searchTerm": "Giving birth",
-        "emblems": [
-            "34"
-        ],
-        "id": 201
+        "id": 151
     },
     {
         "category": "People",
@@ -2538,73 +2007,7 @@
         "emblems": [
             "35"
         ],
-        "id": 202
-    },
-    {
-        "category": "People",
-        "subcategory": "Sex",
-        "searchTerm": "Female ",
-        "emblems": [
-            "35"
-        ],
-        "id": 203
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Dragging",
-        "emblems": [
-            "35"
-        ],
-        "id": 204
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Plants",
-        "searchTerm": "Wheat",
-        "emblems": [
-            "35"
-        ],
-        "id": 205
-    },
-    {
-        "category": "Architecture",
-        "subcategory": "Structures",
-        "searchTerm": "Signpost",
-        "emblems": [
-            "36"
-        ],
-        "id": 206
-    },
-    {
-        "category": "Architecture",
-        "subcategory": "Structures",
-        "searchTerm": "Tunnel",
-        "emblems": [
-            "36"
-        ],
-        "id": 207
-    },
-    {
-        "category": "Things",
-        "subcategory": "Implements",
-        "searchTerm": "Staff",
-        "emblems": [
-            "40",
-            "36",
-            "42",
-            "39"
-        ],
-        "id": 208
-    },
-    {
-        "category": "Things",
-        "subcategory": "Shapes",
-        "searchTerm": "Cube",
-        "emblems": [
-            "36"
-        ],
-        "id": 209
+        "id": 152
     },
     {
         "category": "Creatures",
@@ -2613,67 +2016,67 @@
         "emblems": [
             "36"
         ],
-        "id": 210
+        "id": 153
     },
     {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Riding",
+        "category": "Architecture",
+        "subcategory": "Structures",
+        "searchTerm": "Signpost",
         "emblems": [
             "36"
         ],
-        "id": 211
+        "id": 154
     },
     {
-        "category": "Nature",
-        "subcategory": "Environment",
-        "searchTerm": "Mountain",
+        "category": "Things",
+        "subcategory": "Implements",
+        "searchTerm": "Staff",
         "emblems": [
-            "43",
             "36",
             "39",
-            "38"
+            "42",
+            "40"
         ],
-        "id": 212
+        "id": 155
     },
     {
-        "category": "People",
+        "category": "Architecture",
+        "subcategory": "Structures",
+        "searchTerm": "Tunnel",
+        "emblems": [
+            "36"
+        ],
+        "id": 156
+    },
+    {
+        "category": "Traits",
         "subcategory": "Headgear",
         "searchTerm": "Laurel Wreath",
         "emblems": [
             "37"
         ],
-        "id": 213
+        "id": 157
     },
     {
         "category": "Architecture",
         "subcategory": "Structures",
         "searchTerm": "Obelisk",
         "emblems": [
-            "40",
+            "50",
             "37",
-            "50"
+            "40"
         ],
-        "id": 214
-    },
-    {
-        "category": "Nature",
-        "subcategory": "Environment",
-        "searchTerm": "Volcano",
-        "emblems": [
-            "37"
-        ],
-        "id": 215
+        "id": 158
     },
     {
         "category": "People",
         "subcategory": "Mythological and Biblical",
         "searchTerm": "Cytherea/Venus (Aphrodite)",
         "emblems": [
-            "41",
-            "38"
+            "38",
+            "41"
         ],
-        "id": 216
+        "id": 159
     },
     {
         "category": "People",
@@ -2682,7 +2085,7 @@
         "emblems": [
             "39"
         ],
-        "id": 217
+        "id": 160
     },
     {
         "category": "People",
@@ -2691,7 +2094,7 @@
         "emblems": [
             "39"
         ],
-        "id": 218
+        "id": 161
     },
     {
         "category": "Architecture",
@@ -2700,16 +2103,7 @@
         "emblems": [
             "40"
         ],
-        "id": 219
-    },
-    {
-        "category": "Actions",
-        "subcategory": "Wet",
-        "searchTerm": "Drinking",
-        "emblems": [
-            "40"
-        ],
-        "id": 220
+        "id": 162
     },
     {
         "category": "People",
@@ -2718,17 +2112,7 @@
         "emblems": [
             "41"
         ],
-        "id": 221
-    },
-    {
-        "category": "Things",
-        "subcategory": "Weapons",
-        "searchTerm": "Pike",
-        "emblems": [
-            "48",
-            "41"
-        ],
-        "id": 222
+        "id": 163
     },
     {
         "category": "Creatures",
@@ -2737,52 +2121,7 @@
         "emblems": [
             "41"
         ],
-        "id": 223
-    },
-    {
-        "category": "People",
-        "subcategory": "Attire",
-        "searchTerm": "Spectacles",
-        "emblems": [
-            "42"
-        ],
-        "id": 224
-    },
-    {
-        "category": "Things",
-        "subcategory": "Other",
-        "searchTerm": "Bouquet",
-        "emblems": [
-            "42"
-        ],
-        "id": 225
-    },
-    {
-        "category": "Things",
-        "subcategory": "Other",
-        "searchTerm": "Cornucopia",
-        "emblems": [
-            "42"
-        ],
-        "id": 226
-    },
-    {
-        "category": "Things",
-        "subcategory": "Other",
-        "searchTerm": "Footprints",
-        "emblems": [
-            "42"
-        ],
-        "id": 227
-    },
-    {
-        "category": "Things",
-        "subcategory": "Other",
-        "searchTerm": "Lantern",
-        "emblems": [
-            "42"
-        ],
-        "id": 228
+        "id": 164
     },
     {
         "category": "Creatures",
@@ -2791,7 +2130,7 @@
         "emblems": [
             "43"
         ],
-        "id": 229
+        "id": 165
     },
     {
         "category": "Creatures",
@@ -2800,26 +2139,7 @@
         "emblems": [
             "43"
         ],
-        "id": 230
-    },
-    {
-        "category": "Creatures",
-        "subcategory": "Animal Parts",
-        "searchTerm": "Beak",
-        "emblems": [
-            "43"
-        ],
-        "id": 231
-    },
-    {
-        "category": "People",
-        "subcategory": "Headgear",
-        "searchTerm": "Turban",
-        "emblems": [
-            "44",
-            "49"
-        ],
-        "id": 232
+        "id": 166
     },
     {
         "category": "Things",
@@ -2828,52 +2148,26 @@
         "emblems": [
             "44"
         ],
-        "id": 233
+        "id": 167
     },
     {
-        "category": "Actions",
-        "subcategory": "Dynamic",
-        "searchTerm": "Dismembering",
+        "category": "Traits",
+        "subcategory": "Headgear",
+        "searchTerm": "Turban",
         "emblems": [
+            "49",
             "44"
         ],
-        "id": 234
-    },
-    {
-        "category": "People",
-        "subcategory": "Bodily State",
-        "searchTerm": "Sick",
-        "emblems": [
-            "48"
-        ],
-        "id": 235
-    },
-    {
-        "category": "Architecture",
-        "subcategory": "Furniture",
-        "searchTerm": "Bed",
-        "emblems": [
-            "48"
-        ],
-        "id": 236
-    },
-    {
-        "category": "Things",
-        "subcategory": "Vessels",
-        "searchTerm": "Flask",
-        "emblems": [
-            "48"
-        ],
-        "id": 237
+        "id": 168
     },
     {
         "category": "Creatures",
-        "subcategory": "Animal Parts",
-        "searchTerm": "Ox hide",
+        "subcategory": "Animals",
+        "searchTerm": "Ox",
         "emblems": [
             "49"
         ],
-        "id": 238
+        "id": 169
     },
     {
         "category": "Nature",
@@ -2882,6 +2176,6 @@
         "emblems": [
             "50"
         ],
-        "id": 239
+        "id": 170
     }
 ]
