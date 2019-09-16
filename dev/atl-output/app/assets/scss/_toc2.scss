@@ -153,17 +153,42 @@ main.toc-wrapper {
 		align-items: flex-start;
 		justify-content: flex-start;
 		flex-direction: row;
-		flex-flow: column wrap;
-		height: 70vh;
+		flex-flow: row wrap;
+		height: auto;
 		margin: 4rem -5.375rem 0 0;
 	}
 	.section__essays li {
 		box-sizing: border-box;
 		display: inline-block;
-		flex: 0 0 15%;
+		flex: 1 0 50%;
 		line-height: 1.5;
+		margin-top: -25px;
 		padding-right: 7rem;
-		width: 50%;
+		padding-bottom: 30px;
+	}
+	.section__essays li:nth-child(1) {
+		order: 1;
+	}
+	.section__essays li:nth-child(2) {
+		order: 3;
+	}
+	.section__essays li:nth-child(3) {
+		order: 5;
+	}
+	.section__essays li:nth-child(4) {
+		order: 7;
+	}
+	.section__essays li:nth-child(5) {
+		order: 2;
+	}
+	.section__essays li:nth-child(6) {
+		order: 4;
+	}
+	.section__essays li:nth-child(7) {
+		order: 6;
+	}
+	.section__essays li:nth-child(8) {
+		order: 8;
 	}
 	.section__essays span.title {
 		display: block;
@@ -307,9 +332,6 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
 
 /* medium  -  tablet */
 @media screen and (min-width: 768px) and (max-width: 999px) {
-	nav.topnav {
-		width: 100vw;
-	}
 	main.toc-wrapper {
 		.toc__section {
 			padding: 0 1.875rem;
@@ -345,38 +367,12 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
 			grid-row: 2 / 3;
 		}
 		.section__essays ul {
-			flex-flow: row wrap;
-			height: auto;
 			margin: 4rem 0 0 0;
 		}
 		.section__essays li {
 			flex: 1 0 50%;
 			padding-bottom: 2rem;
 			padding-right: 3rem;
-		}
-		.section__essays li:nth-child(1) {
-			order: 1;
-		}
-		.section__essays li:nth-child(2) {
-			order: 3;
-		}
-		.section__essays li:nth-child(3) {
-			order: 5;
-		}
-		.section__essays li:nth-child(4) {
-			order: 7;
-		}
-		.section__essays li:nth-child(5) {
-			order: 2;
-		}
-		.section__essays li:nth-child(6) {
-			order: 4;
-		}
-		.section__essays li:nth-child(7) {
-			order: 6;
-		}
-		.section__essays li:nth-child(8) {
-			order: 8;
 		}
 	}
 /*	.drawer {
@@ -483,7 +479,7 @@ margin-right: 0;
 
 /* large  -  desktop */
 @media screen and (min-width: 1500px) and (max-width: 1999px) {
-	
+
 }
 
 /* extra-large */
@@ -521,7 +517,16 @@ margin-right: 0;
 		margin-top: -36px;
 	}
 }
-@media screen and (min-width: 1000px) and (max-width: 1300px) {
+@media screen and (min-width: 1000px) and (max-width: 1320px) {
+	main.toc-wrapper {
+		.section__essays li {
+			padding-right: 5rem;
+		}
+		.section__essays li:nth-child(3), 
+		.section__essays li:nth-child(4) {
+			margin-top: -61px;
+		}
+	}
 	/*nav.topnav__contents .topnav__contents__atalanta-fugiens,
 	nav.topnav__contents .topnav__contents__atalanta-essays,
 	nav.topnav__contents .topnav__contents__atalanta-images,
@@ -588,4 +593,63 @@ margin-right: 0;
 	nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
 		margin-bottom: 2rem;
 	}*/
+}
+@media screen and (min-width: 1207px) and (max-width: 1320px) {
+	main.toc-wrapper {
+		.section__essays li:nth-child(2) {
+			margin-top: -61px;
+		}
+		.section__essays li:nth-child(3), 
+		.section__essays li:nth-child(4) {
+			margin-top: -97px;
+		}
+	}
+}
+@media screen and (min-width: 1276px) and (max-width: 1320px) {
+	main.toc-wrapper {
+		.section__essays li:nth-child(3), 
+		.section__essays li:nth-child(4) {
+			margin-top: -61px;
+		}
+	}
+}
+@media screen and (min-width: 1321px) and (max-width: 1600px) {
+	main.toc-wrapper {
+		.section__essays li:nth-child(2) {
+			margin-top: -61px;
+		}
+		.section__essays li:nth-child(3), 
+		.section__essays li:nth-child(4) {
+			margin-top: -97px;
+		}
+	}
+}
+@media screen and (min-width: 1383px) and (max-width: 1600px) {
+	main.toc-wrapper {
+		.section__essays li:nth-child(3), 
+		.section__essays li:nth-child(4) {
+			margin-top: -61px;
+		}
+	}
+}
+@media screen and (min-width: 1467px) and (max-width: 1600px) {
+	main.toc-wrapper {
+		.section__essays li:nth-child(4) {
+			margin-top: -97px;
+		}
+	}
+}
+@media screen and (min-width: 1601px) and (max-width: 1826px) {
+	main.toc-wrapper {
+		.section__essays li:nth-child(4) {
+			margin-top: -61px;
+		}
+	}
+}
+@media screen and (min-width: 1827px) {
+	main.toc-wrapper {
+		.section__essays li:nth-child(4) {
+			margin-top: -25px;
+		}
+	}	
 }

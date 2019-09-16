@@ -4305,22 +4305,63 @@ main.toc-wrapper {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-flex-flow: column wrap;
-    -ms-flex-flow: column wrap;
-    flex-flow: column wrap;
-    height: 70vh;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    height: auto;
     margin: 4rem -5.375rem 0 0; }
   main.toc-wrapper .section__essays li {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 15%;
-    -ms-flex: 0 0 15%;
-    flex: 0 0 15%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 50%;
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%;
     line-height: 1.5;
+    margin-top: -25px;
     padding-right: 7rem;
-    width: 50%; }
+    padding-bottom: 30px; }
+  main.toc-wrapper .section__essays li:nth-child(1) {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1; }
+  main.toc-wrapper .section__essays li:nth-child(2) {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3; }
+  main.toc-wrapper .section__essays li:nth-child(3) {
+    -webkit-box-ordinal-group: 6;
+    -webkit-order: 5;
+    -ms-flex-order: 5;
+    order: 5; }
+  main.toc-wrapper .section__essays li:nth-child(4) {
+    -webkit-box-ordinal-group: 8;
+    -webkit-order: 7;
+    -ms-flex-order: 7;
+    order: 7; }
+  main.toc-wrapper .section__essays li:nth-child(5) {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2; }
+  main.toc-wrapper .section__essays li:nth-child(6) {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4; }
+  main.toc-wrapper .section__essays li:nth-child(7) {
+    -webkit-box-ordinal-group: 7;
+    -webkit-order: 6;
+    -ms-flex-order: 6;
+    order: 6; }
+  main.toc-wrapper .section__essays li:nth-child(8) {
+    -webkit-box-ordinal-group: 9;
+    -webkit-order: 8;
+    -ms-flex-order: 8;
+    order: 8; }
   main.toc-wrapper .section__essays span.title {
     display: block; }
   main.toc-wrapper .section__essays span.title a cite {
@@ -4452,8 +4493,6 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
 
 /* medium  -  tablet */
 @media screen and (min-width: 768px) and (max-width: 999px) {
-  nav.topnav {
-    width: 100vw; }
   main.toc-wrapper .toc__section {
     padding: 0 1.875rem; }
   main.toc-wrapper nav.toc {
@@ -4481,12 +4520,6 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
   main.toc-wrapper .section__aside {
     grid-row: 2 / 3; }
   main.toc-wrapper .section__essays ul {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    height: auto;
     margin: 4rem 0 0 0; }
   main.toc-wrapper .section__essays li {
     -webkit-box-flex: 1;
@@ -4495,46 +4528,6 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
     flex: 1 0 50%;
     padding-bottom: 2rem;
     padding-right: 3rem; }
-  main.toc-wrapper .section__essays li:nth-child(1) {
-    -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
-    -ms-flex-order: 1;
-    order: 1; }
-  main.toc-wrapper .section__essays li:nth-child(2) {
-    -webkit-box-ordinal-group: 4;
-    -webkit-order: 3;
-    -ms-flex-order: 3;
-    order: 3; }
-  main.toc-wrapper .section__essays li:nth-child(3) {
-    -webkit-box-ordinal-group: 6;
-    -webkit-order: 5;
-    -ms-flex-order: 5;
-    order: 5; }
-  main.toc-wrapper .section__essays li:nth-child(4) {
-    -webkit-box-ordinal-group: 8;
-    -webkit-order: 7;
-    -ms-flex-order: 7;
-    order: 7; }
-  main.toc-wrapper .section__essays li:nth-child(5) {
-    -webkit-box-ordinal-group: 3;
-    -webkit-order: 2;
-    -ms-flex-order: 2;
-    order: 2; }
-  main.toc-wrapper .section__essays li:nth-child(6) {
-    -webkit-box-ordinal-group: 5;
-    -webkit-order: 4;
-    -ms-flex-order: 4;
-    order: 4; }
-  main.toc-wrapper .section__essays li:nth-child(7) {
-    -webkit-box-ordinal-group: 7;
-    -webkit-order: 6;
-    -ms-flex-order: 6;
-    order: 6; }
-  main.toc-wrapper .section__essays li:nth-child(8) {
-    -webkit-box-ordinal-group: 9;
-    -webkit-order: 8;
-    -ms-flex-order: 8;
-    order: 8; }
   /*	.drawer {
 		padding: 4rem;
 		width: calc(100vw - 8rem);
@@ -4655,7 +4648,12 @@ margin-right: 0;
   main.toc-wrapper .section__essays li:nth-child(4) {
     margin-top: -36px; } }
 
-@media screen and (min-width: 1000px) and (max-width: 1300px) {
+@media screen and (min-width: 1000px) and (max-width: 1320px) {
+  main.toc-wrapper .section__essays li {
+    padding-right: 5rem; }
+  main.toc-wrapper .section__essays li:nth-child(3),
+  main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-top: -61px; }
   /*nav.topnav__contents .topnav__contents__atalanta-fugiens,
 	nav.topnav__contents .topnav__contents__atalanta-essays,
 	nav.topnav__contents .topnav__contents__atalanta-images,
@@ -4722,6 +4720,42 @@ margin-right: 0;
 	nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
 		margin-bottom: 2rem;
 	}*/ }
+
+@media screen and (min-width: 1207px) and (max-width: 1320px) {
+  main.toc-wrapper .section__essays li:nth-child(2) {
+    margin-top: -61px; }
+  main.toc-wrapper .section__essays li:nth-child(3),
+  main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-top: -97px; } }
+
+@media screen and (min-width: 1276px) and (max-width: 1320px) {
+  main.toc-wrapper .section__essays li:nth-child(3),
+  main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-top: -61px; } }
+
+@media screen and (min-width: 1321px) and (max-width: 1600px) {
+  main.toc-wrapper .section__essays li:nth-child(2) {
+    margin-top: -61px; }
+  main.toc-wrapper .section__essays li:nth-child(3),
+  main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-top: -97px; } }
+
+@media screen and (min-width: 1383px) and (max-width: 1600px) {
+  main.toc-wrapper .section__essays li:nth-child(3),
+  main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-top: -61px; } }
+
+@media screen and (min-width: 1467px) and (max-width: 1600px) {
+  main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-top: -97px; } }
+
+@media screen and (min-width: 1601px) and (max-width: 1826px) {
+  main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-top: -61px; } }
+
+@media screen and (min-width: 1827px) {
+  main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-top: -25px; } }
 
 .search__modal {
   /*	background-color: $red_transparent;*/
