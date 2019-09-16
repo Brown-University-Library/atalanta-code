@@ -617,21 +617,19 @@ function initAddCollectionFromUrl() {
 // Init load of Atalanta emblem JSON.
 function initAppendEmblem(id, index, counter, max, size, scrollFlag, newState) {
 	var path = '/json/atalanta-emblems.json';
-	var template = jQuery('#template');
+	var template = templates["mustache-template"];
 	var data = {
 		"id": id,
 		"name": parseFloat(id),
 		"size": size
 	};
 
-	if (template.length) {
-		Mustache.parse(template.html());
-
+	if (template) {
 		loadData(index);
 
 		// load data
 		function loadData(index) {
-			var $rendered = jQuery(Mustache.render(template.html(), data));
+			var $rendered = jQuery(template.render(data));
 			var tags = [];
 
 			if ($rendered) {
