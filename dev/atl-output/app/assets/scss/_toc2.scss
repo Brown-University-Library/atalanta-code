@@ -15,14 +15,18 @@ main.toc-wrapper {
 		font-size: 2.125rem;
 		letter-spacing: 1px;
 		line-height: 1.2;
-		padding: 4rem 0 1rem 0;
+		padding: 4.625rem 0 .75rem 0;
 	}
 	.toc__front h2 {
 		border-bottom: 1px solid $red;
 		color: $gray;
 	}
-	.toc__body h2 {
-		padding-top: 6rem;
+	.toc__body .section__essays h2, 
+	.toc__body .section__edition h2 {
+		padding: 4.625rem 0 .75rem 0;
+	}
+	.toc__body .section__images h2 {
+		padding: 6.75rem 0 .75rem 0;
 	}
 	.toc__back h2 {
 		border-bottom: none;
@@ -49,9 +53,12 @@ main.toc-wrapper {
 			border-bottom: 2px solid $black_pure;
 			transition: color .2s;
 	}
+	h3, 
+	h4 {
+		margin-top: 3.125rem;
+	}
 	h3 {
 		font-size: 1.5rem;
-		margin-top: 2rem;
 	}
 	h3 a:hover {
 		border-bottom: 2px solid $black_pure;
@@ -68,7 +75,6 @@ main.toc-wrapper {
 		font-size: 21px;
 		font-weight: 600;
 		line-height: 1.5;
-		margin-top: 2.625rem;
 	}
 	ul {
 		margin-top: 4.25rem;
@@ -91,7 +97,7 @@ main.toc-wrapper {
 		display: grid;
 		column-gap: 64px;
 		grid-template-columns: repeat(12, 1fr);
-		grid-template-rows: 1.875fr 4fr .625fr;
+		grid-template-rows: auto;
 		min-height: 100vh;
 	}
 	.toc__front, 
@@ -109,12 +115,12 @@ main.toc-wrapper {
 	.toc__body {
 		background: $red;
 		grid-row: 2 / 3;
-		padding-bottom: 2.5rem;
+		padding-bottom: 7.25rem;
 	}
 	.toc__back {
 		background: $gray_light-alt;
 		grid-row: 3 / 4;
-		padding-bottom: 2.75rem;
+		padding-bottom: 3rem;
 	}
 	.toc__section {
 		padding: 0 5.375rem;
@@ -146,6 +152,15 @@ main.toc-wrapper {
 	.article a cite {
 		font-style: oblique;
 	}
+	.toc__section.section__acquainted {
+		padding-bottom: 4rem;
+	}
+	.section__acquainted ul {
+		margin-top: 4.625rem;
+	}
+	.section__acquainted li:last-child {
+		margin-bottom: 0;
+	}
 	.section__essays ul {
 		box-sizing: border-box;
 		direction: ltr;
@@ -155,7 +170,7 @@ main.toc-wrapper {
 		flex-direction: row;
 		flex-flow: row wrap;
 		height: auto;
-		margin: 4rem -5.375rem 0 0;
+		margin: 4.75rem -5.375rem 0 0;
 	}
 	.section__essays li {
 		box-sizing: border-box;
@@ -164,7 +179,7 @@ main.toc-wrapper {
 		line-height: 1.5;
 		margin-top: -26px;
 		padding-right: 7rem;
-		padding-bottom: 30px;
+		padding-bottom: 2rem;
 	}
 	.section__essays li:nth-child(1) {
 		order: 1;
@@ -193,6 +208,11 @@ main.toc-wrapper {
 	.section__essays span.title {
 		display: block;
 	}
+	.section__essays li:nth-child(4), 
+	.section__essays li:nth-child(8) {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
 	.section__essays span.title a cite {
 		font-style: oblique;
 	}
@@ -203,168 +223,93 @@ main.toc-wrapper {
 	}
 }
 
-
-
 /*** GENERAL BREAKPOINTS ***/
 /* small  -  mobile */
 @media screen and (min-width: 300px) and (max-width: 767px) {
 	main.toc-wrapper {
-
-	}
-/*	.drawer {
-		padding: 2rem 1rem;
-		width: calc(100vw - 2rem);
-	}
-	nav.topnav__contents .topnav__contents__atalanta-fugiens,
-	nav.topnav__contents .topnav__contents__atalanta-essays,
-	nav.topnav__contents .topnav__contents__atalanta-images,
-	nav.topnav__contents .topnav__contents__atalanta-front,
-	nav.topnav__contents .topnav__contents__atalanta-back {
-flex-basis: 100%;
-max-height: 400vh;
-min-height: 5vh;
-		margin-bottom: 6rem;
-margin-left: 0;
-margin-right: 0;
-		.toc__heading {
-			margin-bottom: 2rem;
+		h2 {
+			font-size: 2rem;
 		}
-		.toc__subheading {
-			font-size: 1.375rem;
-			margin-top: -1.5rem;
-			margin-bottom: 2rem;
+		.toc__body .section__edition h2 {
+			padding: 6.75rem 0 .75rem 0;
 		}
-		.toc__description {
-			font-size: 1.25rem;
-			margin-bottom: 2rem;
+		.toc__section {
+			padding: 0;
 		}
-		.toc__content {
-			font-size: 1.25rem;
+		.toc__front, 
+		.toc__body, 
+		.toc__back {
+			box-sizing: border-box;
+			grid-template-columns: 1fr;
+			padding: 0 1rem;
+			width: 100vw;
 		}
-	}
-	nav.topnav__contents .topnav__contents__atalanta-fugiens {
-		margin-bottom: 6.5rem;
-		.toc__content > ul {
-			flex-direction: column;
+		.toc__body {
+			padding-bottom: 7.25rem;
 		}
-		li.toc__content--frontmatter, 
-		li.toc__content--digital-edition {
+		.toc__back {
+			padding-bottom: 3rem;
+		}
+		.section__hero-img {
+			display: none;
+		}
+		.section__acquainted, 
+		.section__essays, 
+		.section__edition, 
+		.section__images, 
+		.section__about, 
+		.section__performance {
+			box-sizing: border-box;
+		}
+		.section__essays, 
+		.section__performance {
+			grid-column: 1 / 2;
+		}
+		.section__aside {
+			grid-row: 2 / 3;
+		}
+		.section__essays ul {
+			flex-flow: column nowrap;
+			margin: 4.75rem 0 0 0;
+		}
+		.section__essays li {
+			flex: 1 0 100%;
+			padding-right: 0;
 			width: 100%;
-			height: auto;
 		}
-		li.toc__content--frontmatter {
-			border-right: none;
-			border-bottom: 1px solid $black;
-			margin-bottom: 1.5rem;
-			padding-bottom: 1rem;
+		.section__essays li:nth-child(2) {
+			order: 2;
 		}
-		li.toc__content--digital-edition {
-			min-height: 79vh;
-			max-height: 159vh;
+		.section__essays li:nth-child(3) {
+			order: 3;
 		}
-		ul.atalanta-section {
-			align-items: center;
-			min-height: 26vh;
-			max-height: 50vh;
+		.section__essays li:nth-child(4) {
+			margin-bottom: 1.875rem;
+			order: 4;
+			padding-bottom: 2rem;
 		}
-		ul.atalanta-section li a {
-			padding: .5rem;
+		.section__essays li:nth-child(5) {
+			order: 5;
 		}
-		ul.atalanta-section li.toc__subheading--emblem {
-			margin-bottom: 2rem;
+		.section__essays li:nth-child(6) {
+			order: 6;
 		}
-		ul.toc__content--emblem-list {
-			min-height: 70vh;
-			max-height: 150vh;
+		.section__essays li:nth-child(7) {
+			order: 7;
 		}
 	}
-	nav.topnav__contents .topnav__contents__atalanta-essays {
-		margin-bottom: 4rem;
-		.toc__content ul {
-			display: block;
-			height: auto;
-		}
-.toc__content li {
-	margin-bottom: 2.5rem;
-	width: 100%;
-}*/
- /* essays 1—4 */
-/*.toc__content li:nth-child(n+1):nth-child(-n+4) {
-	margin-right: 0;
-}*/
- /* essays 5—8 */
-/*.toc__content li:nth-child(n+5):nth-child(-n+8) {
-	margin-left: 0;
 }
-.toc__content li span {
-	margin-top: .25rem;
-}
-	}
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content li a, 
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li a, 
-nav.topnav__contents .topnav__contents__atalanta-images .toc__content li a, 
-nav.topnav__contents .topnav__contents__atalanta-front .toc__content li a, 
-nav.topnav__contents .topnav__contents__atalanta-back .toc__content li a, 
-nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__subheading--emblem {
-	font-size: 1.5rem;
-	line-height: 1.5;
-}
-nav.topnav__contents .topnav__contents__atalanta-images ul .toc__content ul li, 
-nav.topnav__contents .topnav__contents__atalanta-front ul .toc__content ul li, 
-nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
-	margin-bottom: 1.5rem;
-}
-nav.topnav__contents .topnav__contents__atalanta-essays ul .toc__content ul li:last-of-type, 
-nav.topnav__contents .topnav__contents__atalanta-images ul .toc__content ul li:last-of-type, 
-nav.topnav__contents .topnav__contents__atalanta-front ul .toc__content ul li:last-of-type, 
-nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li:last-of-type {
-	margin-bottom: none;
-} 
-nav.topnav__contents .topnav__contents__atalanta-essays ul .toc__content ul, 
-nav.topnav__contents .topnav__contents__atalanta-images ul .toc__content ul, 
-nav.topnav__contents .topnav__contents__atalanta-front ul .toc__content ul, 
-nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
-	max-height: 400vh;
-	min-height: 5vh;
-}*/
-
-}
-
 /* medium  -  tablet */
 @media screen and (min-width: 768px) and (max-width: 999px) {
 	main.toc-wrapper {
 		.toc__section {
 			padding: 0 1.875rem;
 		}
-		nav.toc {
-			display: grid;
-			column-gap: 64px;
-			grid-template-columns: repeat(12, 1fr);
-			grid-template-rows: auto;
-		}
 		h2 {
 			font-size: 2rem;
-			padding: 4.625rem 0 .75rem 0;
 		}
-		.toc__body .section__essays h2 {
-			padding: 4.625rem 0 .75rem 0;
-		}
-		.toc__body .section__edition h2, 
-		.toc__body .section__images h2 {
+		.toc__body .section__edition h2 {
 			padding: 6.75rem 0 .75rem 0;
-		}
-		h3, 
-		h4 {
-			margin-top: 3.125rem;
-		}
-		.section__acquainted {
-			padding-bottom: 4rem;
-		}
-		.section__acquainted ul {
-			margin-top: 4.625rem;
-		}
-		.section__acquainted li:last-child {
-			margin-bottom: 0;
 		}
 		.section__hero-img {
 			background-position: 54% 61%;
@@ -372,7 +317,6 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
 		}
 		.toc__body {
 			grid-template-columns: 1fr;
-			padding-bottom: 7.25rem;
 		}
 		.section__essays, 
 		.section__aside {
@@ -388,45 +332,17 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
 			margin: 4.75rem 0 0 0;
 		}
 		.section__essays li {
-			flex: 1 0 50%;
 			padding-right: 3rem;
-			padding-bottom: 2rem;
 		}
 		.section__essays li:nth-child(1), 
 		.section__essays li:nth-child(5) {
 			margin-top: 0;
 		}
-		.section__essays li:nth-child(4), 
-		.section__essays li:nth-child(8) {
-			margin-bottom: 0;
-			padding-bottom: 0;
-		}
 		.section__essays li:nth-child(2) {
 			margin-top: -26px;
 		}
-		.toc__back {
-			padding-bottom: 3rem;
-		}
 	}
 }
-/* large  -  laptop */
-@media screen and (min-width: 1000px) and (max-width: 1499px) {
-
-}
-/* large  -  desktop */
-@media screen and (min-width: 1500px) and (max-width: 1999px) {
-
-}
-/* extra-large */
-@media screen and (min-width: 2000px) and (max-width: 2800px) {
-
-}
-/* xxl */
-@media screen and (min-width: 2801px) {
-
-}
-
-
 /*** SPECIFIC BREAKPOINTS ***/
 @media screen and (min-width: 768px) and (max-width: 892px) {
 	main.toc-wrapper {

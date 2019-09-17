@@ -4173,12 +4173,15 @@ main.toc-wrapper {
     font-size: 2.125rem;
     letter-spacing: 1px;
     line-height: 1.2;
-    padding: 4rem 0 1rem 0; }
+    padding: 4.625rem 0 .75rem 0; }
   main.toc-wrapper .toc__front h2 {
     border-bottom: 1px solid #dc4928;
     color: #333; }
-  main.toc-wrapper .toc__body h2 {
-    padding-top: 6rem; }
+  main.toc-wrapper .toc__body .section__essays h2,
+  main.toc-wrapper .toc__body .section__edition h2 {
+    padding: 4.625rem 0 .75rem 0; }
+  main.toc-wrapper .toc__body .section__images h2 {
+    padding: 6.75rem 0 .75rem 0; }
   main.toc-wrapper .toc__back h2 {
     border-bottom: none;
     color: #333; }
@@ -4204,9 +4207,11 @@ main.toc-wrapper {
     -webkit-transition: color .2s;
     -o-transition: color .2s;
     transition: color .2s; }
+  main.toc-wrapper h3,
+  main.toc-wrapper h4 {
+    margin-top: 3.125rem; }
   main.toc-wrapper h3 {
-    font-size: 1.5rem;
-    margin-top: 2rem; }
+    font-size: 1.5rem; }
   main.toc-wrapper h3 a:hover {
     border-bottom: 2px solid #000;
     color: #000; }
@@ -4218,8 +4223,7 @@ main.toc-wrapper {
     color: #333;
     font-size: 21px;
     font-weight: 600;
-    line-height: 1.5;
-    margin-top: 2.625rem; }
+    line-height: 1.5; }
   main.toc-wrapper ul {
     margin-top: 4.25rem; }
   main.toc-wrapper li {
@@ -4238,7 +4242,7 @@ main.toc-wrapper {
     -moz-column-gap: 64px;
     column-gap: 64px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1.875fr 4fr .625fr;
+    grid-template-rows: auto;
     min-height: 100vh; }
   main.toc-wrapper .toc__front,
   main.toc-wrapper .toc__body,
@@ -4253,11 +4257,11 @@ main.toc-wrapper {
   main.toc-wrapper .toc__body {
     background: #dc4928;
     grid-row: 2 / 3;
-    padding-bottom: 2.5rem; }
+    padding-bottom: 7.25rem; }
   main.toc-wrapper .toc__back {
     background: #e2e3e4;
     grid-row: 3 / 4;
-    padding-bottom: 2.75rem; }
+    padding-bottom: 3rem; }
   main.toc-wrapper .toc__section {
     padding: 0 5.375rem; }
   main.toc-wrapper .section__acquainted,
@@ -4284,6 +4288,12 @@ main.toc-wrapper {
     padding-right: 0; }
   main.toc-wrapper .article a cite {
     font-style: oblique; }
+  main.toc-wrapper .toc__section.section__acquainted {
+    padding-bottom: 4rem; }
+  main.toc-wrapper .section__acquainted ul {
+    margin-top: 4.625rem; }
+  main.toc-wrapper .section__acquainted li:last-child {
+    margin-bottom: 0; }
   main.toc-wrapper .section__essays ul {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -4309,7 +4319,7 @@ main.toc-wrapper {
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     height: auto;
-    margin: 4rem -5.375rem 0 0; }
+    margin: 4.75rem -5.375rem 0 0; }
   main.toc-wrapper .section__essays li {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -4321,7 +4331,7 @@ main.toc-wrapper {
     line-height: 1.5;
     margin-top: -26px;
     padding-right: 7rem;
-    padding-bottom: 30px; }
+    padding-bottom: 2rem; }
   main.toc-wrapper .section__essays li:nth-child(1) {
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
@@ -4364,6 +4374,10 @@ main.toc-wrapper {
     order: 8; }
   main.toc-wrapper .section__essays span.title {
     display: block; }
+  main.toc-wrapper .section__essays li:nth-child(4),
+  main.toc-wrapper .section__essays li:nth-child(8) {
+    margin-bottom: 0;
+    padding-bottom: 0; }
   main.toc-wrapper .section__essays span.title a cite {
     font-style: oblique; }
   main.toc-wrapper .section__essays span.byline {
@@ -4374,157 +4388,99 @@ main.toc-wrapper {
 /*** GENERAL BREAKPOINTS ***/
 /* small  -  mobile */
 @media screen and (min-width: 300px) and (max-width: 767px) {
-  /*	.drawer {
-		padding: 2rem 1rem;
-		width: calc(100vw - 2rem);
-	}
-	nav.topnav__contents .topnav__contents__atalanta-fugiens,
-	nav.topnav__contents .topnav__contents__atalanta-essays,
-	nav.topnav__contents .topnav__contents__atalanta-images,
-	nav.topnav__contents .topnav__contents__atalanta-front,
-	nav.topnav__contents .topnav__contents__atalanta-back {
-flex-basis: 100%;
-max-height: 400vh;
-min-height: 5vh;
-		margin-bottom: 6rem;
-margin-left: 0;
-margin-right: 0;
-		.toc__heading {
-			margin-bottom: 2rem;
-		}
-		.toc__subheading {
-			font-size: 1.375rem;
-			margin-top: -1.5rem;
-			margin-bottom: 2rem;
-		}
-		.toc__description {
-			font-size: 1.25rem;
-			margin-bottom: 2rem;
-		}
-		.toc__content {
-			font-size: 1.25rem;
-		}
-	}
-	nav.topnav__contents .topnav__contents__atalanta-fugiens {
-		margin-bottom: 6.5rem;
-		.toc__content > ul {
-			flex-direction: column;
-		}
-		li.toc__content--frontmatter, 
-		li.toc__content--digital-edition {
-			width: 100%;
-			height: auto;
-		}
-		li.toc__content--frontmatter {
-			border-right: none;
-			border-bottom: 1px solid $black;
-			margin-bottom: 1.5rem;
-			padding-bottom: 1rem;
-		}
-		li.toc__content--digital-edition {
-			min-height: 79vh;
-			max-height: 159vh;
-		}
-		ul.atalanta-section {
-			align-items: center;
-			min-height: 26vh;
-			max-height: 50vh;
-		}
-		ul.atalanta-section li a {
-			padding: .5rem;
-		}
-		ul.atalanta-section li.toc__subheading--emblem {
-			margin-bottom: 2rem;
-		}
-		ul.toc__content--emblem-list {
-			min-height: 70vh;
-			max-height: 150vh;
-		}
-	}
-	nav.topnav__contents .topnav__contents__atalanta-essays {
-		margin-bottom: 4rem;
-		.toc__content ul {
-			display: block;
-			height: auto;
-		}
-.toc__content li {
-	margin-bottom: 2.5rem;
-	width: 100%;
-}*/
-  /* essays 1—4 */
-  /*.toc__content li:nth-child(n+1):nth-child(-n+4) {
-	margin-right: 0;
-}*/
-  /* essays 5—8 */
-  /*.toc__content li:nth-child(n+5):nth-child(-n+8) {
-	margin-left: 0;
-}
-.toc__content li span {
-	margin-top: .25rem;
-}
-	}
-nav.topnav__contents .topnav__contents__atalanta-fugiens .toc__content li a, 
-nav.topnav__contents .topnav__contents__atalanta-essays .toc__content li a, 
-nav.topnav__contents .topnav__contents__atalanta-images .toc__content li a, 
-nav.topnav__contents .topnav__contents__atalanta-front .toc__content li a, 
-nav.topnav__contents .topnav__contents__atalanta-back .toc__content li a, 
-nav.topnav__contents .topnav__contents__atalanta-fugiens li.toc__subheading--emblem {
-	font-size: 1.5rem;
-	line-height: 1.5;
-}
-nav.topnav__contents .topnav__contents__atalanta-images ul .toc__content ul li, 
-nav.topnav__contents .topnav__contents__atalanta-front ul .toc__content ul li, 
-nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li {
-	margin-bottom: 1.5rem;
-}
-nav.topnav__contents .topnav__contents__atalanta-essays ul .toc__content ul li:last-of-type, 
-nav.topnav__contents .topnav__contents__atalanta-images ul .toc__content ul li:last-of-type, 
-nav.topnav__contents .topnav__contents__atalanta-front ul .toc__content ul li:last-of-type, 
-nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul li:last-of-type {
-	margin-bottom: none;
-} 
-nav.topnav__contents .topnav__contents__atalanta-essays ul .toc__content ul, 
-nav.topnav__contents .topnav__contents__atalanta-images ul .toc__content ul, 
-nav.topnav__contents .topnav__contents__atalanta-front ul .toc__content ul, 
-nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
-	max-height: 400vh;
-	min-height: 5vh;
-}*/ }
+  main.toc-wrapper h2 {
+    font-size: 2rem; }
+  main.toc-wrapper .toc__body .section__edition h2 {
+    padding: 6.75rem 0 .75rem 0; }
+  main.toc-wrapper .toc__section {
+    padding: 0; }
+  main.toc-wrapper .toc__front,
+  main.toc-wrapper .toc__body,
+  main.toc-wrapper .toc__back {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    width: 100vw; }
+  main.toc-wrapper .toc__body {
+    padding-bottom: 7.25rem; }
+  main.toc-wrapper .toc__back {
+    padding-bottom: 3rem; }
+  main.toc-wrapper .section__hero-img {
+    display: none; }
+  main.toc-wrapper .section__acquainted,
+  main.toc-wrapper .section__essays,
+  main.toc-wrapper .section__edition,
+  main.toc-wrapper .section__images,
+  main.toc-wrapper .section__about,
+  main.toc-wrapper .section__performance {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  main.toc-wrapper .section__essays,
+  main.toc-wrapper .section__performance {
+    grid-column: 1 / 2; }
+  main.toc-wrapper .section__aside {
+    grid-row: 2 / 3; }
+  main.toc-wrapper .section__essays ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    margin: 4.75rem 0 0 0; }
+  main.toc-wrapper .section__essays li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 100%;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    padding-right: 0;
+    width: 100%; }
+  main.toc-wrapper .section__essays li:nth-child(2) {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2; }
+  main.toc-wrapper .section__essays li:nth-child(3) {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3; }
+  main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-bottom: 1.875rem;
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+    padding-bottom: 2rem; }
+  main.toc-wrapper .section__essays li:nth-child(5) {
+    -webkit-box-ordinal-group: 6;
+    -webkit-order: 5;
+    -ms-flex-order: 5;
+    order: 5; }
+  main.toc-wrapper .section__essays li:nth-child(6) {
+    -webkit-box-ordinal-group: 7;
+    -webkit-order: 6;
+    -ms-flex-order: 6;
+    order: 6; }
+  main.toc-wrapper .section__essays li:nth-child(7) {
+    -webkit-box-ordinal-group: 8;
+    -webkit-order: 7;
+    -ms-flex-order: 7;
+    order: 7; } }
 
 /* medium  -  tablet */
 @media screen and (min-width: 768px) and (max-width: 999px) {
   main.toc-wrapper .toc__section {
     padding: 0 1.875rem; }
-  main.toc-wrapper nav.toc {
-    display: grid;
-    -webkit-column-gap: 64px;
-    -moz-column-gap: 64px;
-    column-gap: 64px;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto; }
   main.toc-wrapper h2 {
-    font-size: 2rem;
-    padding: 4.625rem 0 .75rem 0; }
-  main.toc-wrapper .toc__body .section__essays h2 {
-    padding: 4.625rem 0 .75rem 0; }
-  main.toc-wrapper .toc__body .section__edition h2,
-  main.toc-wrapper .toc__body .section__images h2 {
+    font-size: 2rem; }
+  main.toc-wrapper .toc__body .section__edition h2 {
     padding: 6.75rem 0 .75rem 0; }
-  main.toc-wrapper h3,
-  main.toc-wrapper h4 {
-    margin-top: 3.125rem; }
-  main.toc-wrapper .section__acquainted {
-    padding-bottom: 4rem; }
-  main.toc-wrapper .section__acquainted ul {
-    margin-top: 4.625rem; }
-  main.toc-wrapper .section__acquainted li:last-child {
-    margin-bottom: 0; }
   main.toc-wrapper .section__hero-img {
     background-position: 54% 61%;
     background-size: 400%; }
   main.toc-wrapper .toc__body {
-    grid-template-columns: 1fr;
-    padding-bottom: 7.25rem; }
+    grid-template-columns: 1fr; }
   main.toc-wrapper .section__essays,
   main.toc-wrapper .section__aside {
     grid-column: 1 / 2; }
@@ -4535,28 +4491,13 @@ nav.topnav__contents .topnav__contents__atalanta-back ul .toc__content ul {
   main.toc-wrapper .section__essays ul {
     margin: 4.75rem 0 0 0; }
   main.toc-wrapper .section__essays li {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 50%;
-    -ms-flex: 1 0 50%;
-    flex: 1 0 50%;
-    padding-right: 3rem;
-    padding-bottom: 2rem; }
+    padding-right: 3rem; }
   main.toc-wrapper .section__essays li:nth-child(1),
   main.toc-wrapper .section__essays li:nth-child(5) {
     margin-top: 0; }
-  main.toc-wrapper .section__essays li:nth-child(4),
-  main.toc-wrapper .section__essays li:nth-child(8) {
-    margin-bottom: 0;
-    padding-bottom: 0; }
   main.toc-wrapper .section__essays li:nth-child(2) {
-    margin-top: -26px; }
-  main.toc-wrapper .toc__back {
-    padding-bottom: 3rem; } }
+    margin-top: -26px; } }
 
-/* large  -  laptop */
-/* large  -  desktop */
-/* extra-large */
-/* xxl */
 /*** SPECIFIC BREAKPOINTS ***/
 @media screen and (min-width: 768px) and (max-width: 892px) {
   main.toc-wrapper .section__essays li:nth-child(2),
