@@ -5636,6 +5636,8 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 
 main#emblem-toc {
   background: #dc4928;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
@@ -5652,7 +5654,8 @@ main#emblem-toc {
   main#emblem-toc h1 {
     font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
     font-size: 5rem;
-    margin-bottom: .5rem; }
+    line-height: 1;
+    margin-bottom: 1.5rem; }
   main#emblem-toc h3 {
     font-size: 1.125rem;
     letter-spacing: .05em;
@@ -5677,6 +5680,9 @@ main#emblem-toc nav.af-toc a:hover,
 main#emblem-toc nav.af-toc a:focus {
   color: #000;
   outline: none; }
+  main#emblem-toc nav.af-toc a:hover img,
+  main#emblem-toc nav.af-toc a:focus img {
+    mix-blend-mode: lighten; }
 
 main#emblem-toc nav.af-toc ul {
   border-top: 1px solid #222;
@@ -5710,6 +5716,22 @@ main#emblem-toc nav.af-toc li:nth-child(n+5):nth-child(-n+54) {
 main#emblem-toc nav.af-toc img {
   height: auto;
   width: 200px; }
+
+/*** GENERAL BREAKPOINTS ***/
+/* small  -  mobile */
+@media screen and (min-width: 300px) and (max-width: 767px) {
+  main#emblem-toc {
+    padding: 3rem 1rem; }
+    main#emblem-toc h1 {
+      font-size: 4.5rem; }
+    main#emblem-toc nav.af-toc li:nth-child(n+1):nth-child(-n+4) {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 0 100%;
+      -ms-flex: 1 0 100%;
+      flex: 1 0 100%;
+      margin-bottom: 1.5rem; }
+    main#emblem-toc nav.af-toc li:nth-child(n+4):nth-child(-n+4) {
+      margin-bottom: 3rem; } }
 
 main.emblem-page {
   background: white;
