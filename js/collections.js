@@ -639,7 +639,7 @@ function initAppendEmblem(id, index, counter, max, size, scrollFlag, newState) {
 				jQuery.getJSON(path, function(result) {
 					jQuery.each(result, function(i, field) {
 						if (field.emblems.indexOf(parseFloat(id).toString()) !== -1) {
-							tagsHolder.append('<li><a href="javascript:;">' + field.searchTerm + '</a></li>');
+							tagsHolder.append('<li><a href="/search/image-search.html#terms=' + field.id + '">' + field.searchTerm + '</a></li>');
 							tags.push(field.searchTerm);
 						}
 					});
