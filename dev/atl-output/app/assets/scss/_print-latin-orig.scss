@@ -1,0 +1,44 @@
+@import 'utilities';
+@import 'colors';
+
+@media print {
+	header {
+		display: none !important;
+	}
+	div#section__facsimile.panel--left {
+		display: none !important;
+	}
+	section.facsimile {
+		display: none !important;
+	}
+	div#tools {
+		display: none !important;
+	}
+	div.openseadragon-canvas > canvas {
+		display: none !important;
+	}
+	div#basic-waypoint__1 {
+		display: none;
+	}
+	section#basic-waypoint__2 {
+		display: none;
+	}
+	div.collections-wrapper {
+		display: none;
+	}
+	div.translation {
+		display: none !important;
+	}
+	div.lang--german {
+		display: none !important;
+	}
+	span.regularized {
+		display: none !important;
+	}
+	span.pb {
+		display: none !important;
+	}
+	.discourse-p1 > h3 {
+		margin-top: 8rem !important;
+	}
+}
