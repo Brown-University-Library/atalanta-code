@@ -10268,31 +10268,26 @@ div._footer {
     text-decoration: underline solid #ffcd61; }
 
 @media print {
-  header {
-    display: none !important; }
-  div#section__facsimile.panel--left {
-    display: none !important; }
-  section.facsimile {
-    display: none !important; }
-  div#tools {
-    display: none !important; }
-  div.openseadragon-canvas > canvas {
-    display: none !important; }
-  div#basic-waypoint__1 {
-    display: none; }
-  section#basic-waypoint__2 {
-    display: none; }
-  div.collections-wrapper {
-    display: none; }
-  div.translation {
-    display: none !important; }
-  div.lang--german {
-    display: none !important; }
-  span.regularized {
-    display: none !important; }
+  header,
+  nav,
+  div#section__facsimile.panel--left,
+  section.facsimile,
+  div#tools,
+  div#basic-waypoint__1,
+  section#basic-waypoint__2,
+  div.collections-wrapper,
+  .ui-menu-item,
+  div.translation,
+  div.lang--german,
+  span.regularized,
   span.pb {
     display: none !important; }
+  main.emblem-page .panel--right section.section__motto ._motto--latin div.image {
+    margin-top: 0 !important; }
+  main.emblem-page .panel--right section.section__motto .original h1.title {
+    font-size: 1.75rem !important;
+    margin-bottom: 5rem !important; }
   .discourse-p1 > h3 {
-    margin-top: 8rem !important; } }
+    margin-top: 5rem !important; } }
 
 /*@import 'breakpoints';*/
