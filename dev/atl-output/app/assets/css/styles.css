@@ -10247,7 +10247,7 @@ div._footer {
 
 @media (min-width: 1025px) and (max-width: 1199px) {
   div._footer footer {
-    padding: 0 5rem; } }
+    padding: 0 5rem; }
   div._footer li {
     line-height: 1.5;
     margin-bottom: .75rem; }
@@ -10266,5 +10266,6 @@ div._footer {
     outline: none;
     -webkit-text-decoration: underline solid #ffcd61;
     text-decoration: underline solid #ffcd61; }
+}
 
 /*@import 'breakpoints';*/
