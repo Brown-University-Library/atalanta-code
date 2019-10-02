@@ -1963,9 +1963,14 @@ input[type=submit] {
     }
 }
 
-#nav ul>li>a:hover {
-    color: #ffae00;
-    background: #4d4c4c
+#nav ul>li>a:hover, 
+#nav ul>li>a:focus {
+    color: #fff;
+    /*background: #4d4c4c*/
+}
+
+#nav ul>li>a:focus {
+    outline: 1px dotted #fff;
 }
 
 @media(min-width:768px) {
@@ -2543,8 +2548,13 @@ input[type=submit] {
     color: gray
 }
 
-.fixed-header #nav ul>li>a:hover {
+.fixed-header #nav ul>li>a:hover, 
+.fixed-header #nav ul>li>a:focus {
     color: #ffae00
+}
+
+.fixed-header #nav ul>li>a:focus {
+    outline: 1px dotted #ffae00;
 }
 
 .fixed-header .page-anchor {
