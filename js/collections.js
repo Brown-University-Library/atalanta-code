@@ -639,7 +639,7 @@ function initAppendEmblem(id, index, counter, max, size, scrollFlag, newState) {
 				jQuery.getJSON(path, function(result) {
 					jQuery.each(result, function(i, field) {
 						if (field.emblems.indexOf(parseFloat(id).toString()) !== -1) {
-							tagsHolder.append('<li><a href="javascript:;">' + field.searchTerm + '</a></li>');
+							tagsHolder.append('<li><a href="/search/image-search.html#terms=' + field.id + '">' + field.searchTerm + '</a></li>');
 							tags.push(field.searchTerm);
 						}
 					});
@@ -861,9 +861,12 @@ function initFancybox() {
 						var newName = holder.find('.name').text();
 						var newSrc = '/images/emblems/' + cropSize + '/emblem' + ('0' + holder.data('emblemId')).slice(-2) + '.' + cropSize + '.jpg';
 						var tagsHolder = holder.find('.tag-wrapper .slide');
+						var emblemLink = current.$content.find('.details .view a');
+
 
 						$img.attr('src', newSrc);
 						nameField.text(newName);
+						emblemLink.attr('href', '/atalanta-fugiens/emblem' + holder.data('emblemId') + '.html')
 
 						if (tagsHolder.length) {
 							current.$content.find('.slide').append(tagsHolder.children().clone())

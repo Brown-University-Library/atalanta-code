@@ -114,9 +114,12 @@ nav.digital-edition-nav {
 		border-left: 25px solid transparent;
 		border-right: 25px solid transparent;
 		border-top: 2rem solid $blue_light;
+		box-sizing: border-box;
 		display: block;
 		float: right;
+		-moz-osx-font-smoothing: grayscale; /* collections */
 		height: 0;
+		max-height: none; /* collections override */
 		left: calc(-50% + 5rem);
 		position: relative;
 		width: 10rem;
@@ -136,18 +139,20 @@ nav.digital-edition-nav {
 		align-items: flex-start;
 		justify-content: center;
 		font-size: 1rem;
-		transform: translate3d(4px, -23px, 0);
+		transform: translate3d(4px, -22px, 0);
 	}
 	.thumbnail-trigger__label {
+		box-sizing: border-box; /* collections override */
 		margin-right: .5rem;
 	}
 	.thumbnail-trigger__icon {
 		background-image: url('../icons/icon_dropdown-arrow.svg');
 		background-repeat: no-repeat;
 		background-size: contain;
+		box-sizing: border-box; /* collections override */
 		display: inline-block;
 		height: 2rem;
-		margin-top: -10px;
+		margin-top: -7px;
 		transform: rotate(-90deg) scale(0.7);
 		width: 2rem;
 	}

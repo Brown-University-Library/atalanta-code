@@ -1,0 +1,30 @@
+@import 'utilities';
+@import 'colors';
+
+@media print {
+	header, 
+	nav, 
+	div#section__facsimile.panel--left, 
+	section.facsimile, 
+	div#tools, 
+	div#basic-waypoint__1, 
+	section#basic-waypoint__2, 
+	div.collections-wrapper,
+	.ui-menu-item,  
+	div.translation, 
+	div.lang--german, 
+	span.regularized, 
+	span.pb {
+		display: none !important;
+	}
+	main.emblem-page .panel--right section.section__motto ._motto--latin div.image {
+		margin-top: 0 !important;
+	}
+	main.emblem-page .panel--right section.section__motto .original h1.title {
+		font-size: 1.75rem !important;
+		margin-bottom: 5rem !important;
+	}
+	.discourse-p1 > h3 {
+		margin-top: 5rem !important;
+	}
+}
