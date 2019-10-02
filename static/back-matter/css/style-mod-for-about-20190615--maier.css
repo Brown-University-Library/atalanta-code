@@ -1788,8 +1788,22 @@ input[type=submit] {
     }
 }
 
+#header .logo:focus {
+    outline: 1px dotted white;
+}
+
 #header .logo .light-logo {
     display: none
+}
+
+#header .logo:hover .dark-logo, 
+#header .logo:focus .dark-logo {
+    display: none;
+}
+
+#header .logo:hover .light-logo, 
+#header .logo:focus .light-logo {
+    display: block;
 }
 
 #header .logo a {
@@ -2321,6 +2335,20 @@ input[type=submit] {
     }
 }
 
+.header-banner h1 {
+    color: #658197;
+}
+
+@media(max-width:767px) {
+    .header-banner h1 {
+        color: #54677D;
+    }
+}
+
+.fixed-header .header-banner h1 {
+    color: #fff;
+}
+
 .header-banner .header-bg {
     background-size: cover;
     background-position: 50%;
@@ -2330,7 +2358,7 @@ input[type=submit] {
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: -1
+    z-index: -1;
 }
 
 @media(min-width:768px) {
