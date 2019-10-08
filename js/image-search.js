@@ -89,6 +89,21 @@ $(document).ready(function() {
 		updateEmblemView();
 		setTimeout(resetGrid, 500);
 	});
+
+	$('body').on('click', 'a[href*="#terms="]', ev => {
+		var href = $(ev.currentTarget).attr('href');
+		var term = href.split('#terms=')[1]
+
+		var link = $(imageTermTrigger+'[data-id='+term+']');
+
+		//Deselect all options.
+		$('li.'+imageTermSelected).removeClass(imageTermSelected);
+		//"click" the trigger to select this term.
+		link.click();
+
+		//Also close the collection pane.
+		$('.btn-down').click();
+	});
 	
 /* FUNCTIONS */
 	function checkCategorySelected(selectedCategory) {
