@@ -1,0 +1,32 @@
+@media print {
+  header,
+  nav,
+  div#section__facsimile.panel--left,
+  section.facsimile,
+  div#tools,
+  div#basic-waypoint__1,
+  section#basic-waypoint__2,
+  div.collections-wrapper,
+  .ui-menu-item,
+  div.translation,
+  div.lang--latin,
+  span.regularized,
+  span.pb {
+    display: none !important; }
+  body {
+    padding-top: 3rem; }
+  main.emblem-page .panel--right section.section__motto ._motto--latin div.image {
+    margin-top: 0 !important; }
+  main.emblem-page .panel--right section.section__motto .original h1.title {
+    font-size: 1.75rem !important;
+    margin-bottom: 5rem !important; }
+  .verse-epigram {
+    border: 2px solid black !important; }
+  span.v-line-indent {
+    margin-left: 15mm !important; }
+  .lang--german .verse-epigram span.v-line-indent:nth-of-type(1) {
+    border: 2px solid black !important; }
+  .verse-epigram > *:nth-child(4) {
+    margin-left: 30mm !important; }
+  .discourse-p1 > h3 {
+    margin-top: 5rem !important; } }
