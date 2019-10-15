@@ -4548,7 +4548,7 @@ main.toc-wrapper {
   background: #dc4928;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  color: #222222;
+  color: #222;
   display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4625,9 +4625,9 @@ main.toc-wrapper {
     appearance: none;
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid #222222;
+    border-bottom: 2px solid #222;
     border-radius: 0;
-    color: #222222;
+    color: #222;
     -webkit-box-flex: 1;
     -ms-flex: 1 0 70%;
     flex: 1 0 70%;
@@ -4640,8 +4640,8 @@ main.toc-wrapper {
   .search__modal button.submit {
     -ms-flex-item-align: end;
     align-self: flex-end;
-    background-color: #222222;
-    border-bottom: 2px solid #222222;
+    background-color: #222;
+    border-bottom: 2px solid #222;
     color: #f2f2f2;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 15%;
@@ -4654,8 +4654,8 @@ main.toc-wrapper {
   .search__modal button.submit:hover,
   .search__modal button.submit:focus {
     background-color: transparent;
-    border: 2px solid #222222;
-    color: #222222;
+    border: 2px solid #222;
+    color: #222;
     -webkit-transition: background-color .2s;
     -o-transition: background-color .2s;
     transition: background-color .2s; }
@@ -5608,7 +5608,7 @@ main#emblem-toc nav.af-toc a:active div {
   background-color: none; }
 
 main#emblem-toc nav.af-toc ul {
-  border-top: 1px solid #222222;
+  border-top: 1px solid #222;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5869,7 +5869,7 @@ main.emblem-page {
   padding: 0; }
 
 .facsimile--full {
-  background-color: #222222;
+  background-color: #222;
   height: calc(100vh - 6.5rem - 80px);
   width: 100%;
   position: fixed; }
@@ -8746,7 +8746,7 @@ body {
 
 /* Muted playing notes */
 .music.with-js .cmn .muted .highlighted {
-  fill: #222222; }
+  fill: #222; }
 
 /* general grid styles */
 @supports (display: grid) {
@@ -9802,7 +9802,7 @@ main#image-search {
     -o-transition: background-color .2s;
     transition: background-color .2s; }
   .image-results__container .image-results__button:focus {
-    border: 1px dotted #222222;
+    border: 1px dotted #222;
     outline: none; }
   .image-results__container .image-results__button--open {
     background-color: #ffcd61; }

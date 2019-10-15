@@ -1,0 +1,20 @@
+@import 'utilities';
+@import 'colors';
+
+@media print {
+	header, 
+	nav, 
+	div#section__facsimile.panel--left, 
+	section.facsimile, 
+	div#tools, 
+	div#basic-waypoint__1, 
+	section#basic-waypoint__2, 
+	div.collections-wrapper, 
+	.ui-menu-item, 
+	span.pb {
+		display: none !important;
+	}
+	body {
+		padding-top: 3rem;
+	}
+}
