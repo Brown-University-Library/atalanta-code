@@ -6674,17 +6674,44 @@ main.emblem-page.frontmatter {
   main.emblem-page .del,
   main.emblem-page.frontmatter .del {
     text-decoration: none; }
+  main.emblem-page .edition--normalized .del,
+  main.emblem-page.frontmatter .edition--normalized .del {
+    display: none; }
+  main.emblem-page .subst .del,
+  main.emblem-page.frontmatter .subst .del {
+    text-decoration: line-through; }
+  main.emblem-page .edition--normalized .subst .del,
+  main.emblem-page.frontmatter .edition--normalized .subst .del {
+    display: none; }
+  main.emblem-page .del .unclear,
+  main.emblem-page.frontmatter .del .unclear {
+    text-decoration: line-through; }
+  main.emblem-page .edition--normalized .del .unclear,
+  main.emblem-page.frontmatter .edition--normalized .del .unclear {
+    display: none; }
+  main.emblem-page .subst .del .unclear,
+  main.emblem-page.frontmatter .subst .del .unclear {
+    text-decoration: none; }
+  main.emblem-page .edition--normalized .subst .del .unclear,
+  main.emblem-page.frontmatter .edition--normalized .subst .del .unclear {
+    display: none; }
+  main.emblem-page .edition--normalized .unclear:before,
+  main.emblem-page.frontmatter .edition--normalized .unclear:before {
+    display: none; }
+  main.emblem-page .edition--normalized .unclear:after,
+  main.emblem-page.frontmatter .edition--normalized .unclear:after {
+    display: none; }
   main.emblem-page .add:before,
   main.emblem-page.frontmatter .add:before {
-    display: none; }
+    color: #4d4d4d; }
   main.emblem-page .add:after,
   main.emblem-page.frontmatter .add:after {
+    color: #4d4d4d; }
+  main.emblem-page .edition--normalized .add:before,
+  main.emblem-page.frontmatter .edition--normalized .add:before {
     display: none; }
-  main.emblem-page .unclear:before,
-  main.emblem-page.frontmatter .unclear:before {
-    display: none; }
-  main.emblem-page .unclear:after,
-  main.emblem-page.frontmatter .unclear:after {
+  main.emblem-page .edition--normalized .add:after,
+  main.emblem-page.frontmatter .edition--normalized .add:after {
     display: none; }
   main.emblem-page .note-mark,
   main.emblem-page span.superscript,
@@ -6732,9 +6759,6 @@ main.emblem-page.frontmatter {
     /*	.pb, .ab.pb {
 			display: none;
 		}*/ }
-    main.emblem-page .edition--normalized .del,
-    main.emblem-page.frontmatter .edition--normalized .del {
-      display: none; }
     main.emblem-page .edition--normalized .italics,
     main.emblem-page.frontmatter .edition--normalized .italics {
       font-style: normal; }
@@ -6753,9 +6777,6 @@ main.emblem-page.frontmatter {
 		.pb:after{
 		    content: " –––"
 		}*/ }
-    main.emblem-page .edition--facsimile .del,
-    main.emblem-page.frontmatter .edition--facsimile .del {
-      display: none; }
     main.emblem-page .edition--facsimile .italics,
     main.emblem-page.frontmatter .edition--facsimile .italics {
       font-style: oblique; }
