@@ -17,4 +17,31 @@
 	body {
 		padding-top: 3rem;
 	}
+	body div.margin-note {
+		font-family: sans-serif !important;
+		font-style: italic;
+	}
+	body div.margin-note .note-mark {
+		font-style: normal
+	}
+	section.section__motto div.title {
+		margin-top: 0 !important;
+	}
+	main.emblem-page h1, 
+	main.emblem-page h3 {
+		color: black !important;
+		font-family: serif !important;
+	}
+	main.emblem-page .panel--right section.section__motto h1 {
+		font-size: 4rem !important;
+		margin-top: 2rem !important;
+		margin-bottom: 0 !important;
+	}
+	main.emblem-page .panel--right section.section__epigram {
+    	margin-top: 6rem !important;
+    }
+    .discourse-p1 > h3 {
+		margin-top: 7rem !important;
+		margin-bottom: 5rem !important;
+	}
 }

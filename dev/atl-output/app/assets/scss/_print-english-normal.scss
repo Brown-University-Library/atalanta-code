@@ -9,15 +9,16 @@
 		span.regularized {
 			display: inline-block;
 		}
+		span.original, 
+		span.pb, 
+		span.del, 
+		span.subst .del {
+			display: none !important;
+		}
 	}
 	div.original.is-hidden div.lang--latin.edition--regularized, 
 	div.original.is-hidden div.lang--latin.edition--facsimile, 
 	div.original.is-hidden div.lang--german.edition--facsimile {
 		display: none !important;
-
-		span.original, 
-		span.pb {
-			display: none !important;
-		}
 	}
 }

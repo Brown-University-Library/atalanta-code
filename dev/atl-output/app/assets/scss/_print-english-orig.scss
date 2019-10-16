@@ -5,29 +5,28 @@
 	//else if edition english original = 
 	div.translation div.lang--english.edition--facsimile {
 		display: grid !important;
+
+		span.original {
+			display: inline-block;
+		}
+		span.regularized, 
+		span.pb {
+			display: none !important;
+		}
+		span.del .unclear, 
+		span.subst .del {
+			text-decoration: line-through;
+		}
+		//span.subst .add::before {
+		//	content: "<";
+		//}
+		//span.subst .add::after {
+		//	content: ">";
+		//}
 	}
 	div.original.is-hidden div.lang--latin.edition--regularized, 
 	div.original.is-hidden div.lang--latin.edition--facsimile, 
 	div.original.is-hidden div.lang--german.edition--facsimile {
 		display: none !important;
-		
-		span.regularized, 
-		span.pb {
-			display: none !important;
-		}
 	}
-
-	//main.emblem-page .panel--right section.section__motto ._motto--english div.title {
-	//	margin-top: 0 !important;
-	//}
-	//main.emblem-page .panel--right section.section__motto .original h1 {
-	//	font-size: 1.75rem !important;
-	//	margin-bottom: 5rem !important;
-	//}
-	//main.emblem-page .panel--right section.section__epigram {
-    //	margin-top: 8rem !important;
-    //}
-	//.discourse-p1 > h3 {
-	//	margin-top: 5rem !important;
-	//}
 }

@@ -5,6 +5,10 @@
 	//else if edition latin original
 	div.original div.lang--latin.edition--original {
 		display: grid !important;
+
+		span.regularized {
+			display: none !important;
+		}
 	}
 	div.translation.is-hidden div.lang--english.edition--normalized, 
 	div.translation.is-hidden div.lang--english.edition--facsimile, 
