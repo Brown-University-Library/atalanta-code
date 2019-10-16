@@ -3,7 +3,6 @@ function pug_escape(e){var a=""+e,t=pug_match_html.exec(a);if(!t)return e;var r,
 var pug_match_html=/["&<>]/;function navbarTemplate(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (category, i, subcategory, termdata) {pug_html = pug_html + "\u003Cul class=\"image-search__categories\"\u003E";
 for ( category in termdata )
 {
-pug_html = pug_html + "\u003Cbalkjfas\u003E\u003C\u002Fbalkjfas\u003E";
 var catid = category.toLowerCase().replace(/[^\w]+/g, '-');
 pug_html = pug_html + "\u003Cli" + (" class=\"category__item category--actions\""+pug_attr("id", catid, true, false)) + "\u003E\u003Ca href=\"#\" aria-haspopup=\"true\" aria-expanded=\"false\"\u003E" + (pug_escape(null == (pug_interp = category) ? "" : pug_interp)) + "\u003C\u002Fa\u003E\u003Cul class=\"image-search__subcategories\"\u003E";
 for ( subcategory in termdata[category] )
@@ -16,6 +15,6 @@ pug_html = pug_html + "\u003Cli" + (" class=\"subcategory__term-item\""+pug_attr
 }
 pug_html = pug_html + "\u003C\u002Ful\u003E\u003C\u002Fli\u003E";
 }
-pug_html = pug_html + "\u003C\u002Ful\u003E\u003Cdiv class=\"faceting--help\"\u003E(help text)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E";
+pug_html = pug_html + "\u003C\u002Ful\u003E\u003Cdiv class=\"faceting--help\"\u003E(Add to your search criteria by selecting facets within a single subcategory or limit your search criteria by selecting facets across multiple subcategories)\u003C\u002Fdiv\u003E\u003C\u002Fli\u003E";
 }
 pug_html = pug_html + "\u003C\u002Ful\u003E";}.call(this,"category" in locals_for_with?locals_for_with.category:typeof category!=="undefined"?category:undefined,"i" in locals_for_with?locals_for_with.i:typeof i!=="undefined"?i:undefined,"subcategory" in locals_for_with?locals_for_with.subcategory:typeof subcategory!=="undefined"?subcategory:undefined,"termdata" in locals_for_with?locals_for_with.termdata:typeof termdata!=="undefined"?termdata:undefined));;return pug_html;}

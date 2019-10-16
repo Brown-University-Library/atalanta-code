@@ -181,6 +181,37 @@ $(function () {
 		},
 		offset: 500, // moving the trigger location from 0 at the top of the viewport
 	})
+
+	// /*** DEDICATION WAYPOINT 1 ***/
+	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+	var waypoint = new Waypoint({
+		element: document.getElementById('basic-waypoint__dedication1'), // tells waypoint which DOM element's position to observe on scroll
+		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+			if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
+				zoomingViewer.goToPage(myEmblemDataNum + 8);
+			}
+			else { // if scrolling back up the page
+				zoomingViewer.goToPage(myEmblemDataNum + 7);
+			}
+		},
+		offset: 500, // moving the trigger location from 0 at the top of the viewport
+	})
+
+	// /*** DEDICATION WAYPOINT 2 ***/
+	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+	var waypoint = new Waypoint({
+		element: document.getElementById('basic-waypoint__dedication2'), // tells waypoint which DOM element's position to observe on scroll
+		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+			if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
+				zoomingViewer.goToPage(myEmblemDataNum + 9);
+			}
+			else { // if scrolling back up the page
+				zoomingViewer.goToPage(myEmblemDataNum + 8);
+			}
+		},
+		offset: 500, // moving the trigger location from 0 at the top of the viewport
+	})
+	// console.log(myEmblemDataNum);
 })
 
 // BOOK PAGE NUMBERS W/O ZERO INDEX

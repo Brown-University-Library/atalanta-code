@@ -2,10 +2,13 @@
 @import 'colors';
 
 main#image-search {
+	background: $white;
 	min-height: 100vh;
-	margin-top: $topnav-h;
+	margin-top: -2rem;
 	padding: 0 1rem;
+	padding-top: 1px; /* this is some conflict w/ collections css */
 	width: calc(100vw - 2rem);
+/*	border: 5px solid blue;*/
 	* {
 
 	}
@@ -332,16 +335,15 @@ background-color: orange;
 	justify-content: center;
 	flex-direction: row;
 	flex-wrap: wrap;
-	/*outline: 5px solid blue;*/
 	padding: 2rem;
 	.image-results__item {
-		/*outline: 5px solid orange;*/
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
 		flex-basis: calc(20% - 5rem);
-		margin: 0 .5rem 3rem .5rem;
+		margin: 0 .5rem 4rem .5rem;
+		max-height: 100vh;
 		/*margin: 1rem;*/
 		/*max-width: 20%;*/
 	}
@@ -379,7 +381,7 @@ background-color: orange;
 	}
 	.image-results__button {
 		background-color: $yellow;
-		color: $text-body;
+		color: $text_body;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -397,14 +399,20 @@ background-color: orange;
 		span.icon {
 			display: none;	
 		}
+		a {
+			color: $text_body;
+		}
 	}
 	.image-results__button:hover,
-	.image-results__button:focus, 
 	.image-results__button:active {
 		background-color: $yellow_bright;
-		color: $text-body;
+		color: $text_body;
 		outline: none;
 		transition: background-color .2s;
+	}
+	.image-results__button:focus {
+		border: 1px dotted $black;
+		outline: none;
 	}
 	.image-results__button--open {
 		background-color: $yellow_bright;
@@ -414,6 +422,7 @@ background-color: orange;
 		span.icon {
 			background-image: url(../icons/icon_X-close.svg);
 			display: flex;
+			filter: invert(95%);
 			height: 8px;
 			margin-left: 5px;
 			margin-right: -3px;
@@ -422,7 +431,7 @@ background-color: orange;
 	}
 	.image-results__button--open:hover span.icon, 
 	.image-results__button--open:active span.icon {
-		filter: invert(95%);
+		/*filter: invert(95%);*/
 	}
 	.image-results__all-terms {
 		display: none;

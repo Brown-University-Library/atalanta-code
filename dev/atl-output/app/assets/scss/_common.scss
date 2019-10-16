@@ -1,0 +1,30 @@
+html, body {
+	height: 100%;
+}
+#wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+
+.container {
+	position: relative;
+	max-width: 1110px;
+	padding: 0 15px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.text-hold {
+	@include media ('>=tablet') {
+		max-width: 69.2%;
+	}
+}
+
+.hidden {
+	display: none !important;
+}
+
+ul {
+	@extend %listreset;
+}

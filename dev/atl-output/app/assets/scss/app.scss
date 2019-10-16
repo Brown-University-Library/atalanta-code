@@ -18,15 +18,27 @@ $media-expressions: (
 	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
 	);
 
-@import 'fonts';
-@import 'reset';
 @import 'include-media';
+@import 'normalize';
+@import 'fonts';
+/*@import 'icomoon';
+@import 'fancybox';
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+@import 'helpers';
+@import 'reset';
+@import 'typography';
+@import 'forms';
+@import 'common';*/
+@import 'reset';
 @import 'utilities';
 @import 'global';
 @import 'buttons';
 @import 'jquery-ui';
 @import 'lity';
 @import 'homepage';
+@import 'collections';
 @import 'toc2';
 @import 'search-modal';
 @import 'search';
@@ -38,13 +50,13 @@ $media-expressions: (
 @import 'thumbnail-nav';
 @import 'atalanta-proof-eng';
 @import 'atalanta-proof-lat3';
-@import 'xml5';
+@import 'xml6';
 @import 'atalanta-notation5';
 @import 'subnav-v3';
 @import 'music5';
 @import 'frontmatter';
 @import 'openseadragon';
 @import 'image-search-grid';
-@import 'collections';
+@import 'essay-toc';
 @import 'footer';
 /*@import 'breakpoints';*/
