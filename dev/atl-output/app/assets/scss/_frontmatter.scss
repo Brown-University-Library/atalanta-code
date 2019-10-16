@@ -1,8 +1,10 @@
 @import 'colors';
 @import 'utilities';
 
-.frontmatter section {
+.frontmatter .section__frontispiece, 
+.frontmatter .section__author-epigram, 
+.frontmatter .section__dedication, 
+.frontmatter .section__preface {
 	font-family: $body-font_emblem;
-	height: auto;
 	padding: 2rem;
 }

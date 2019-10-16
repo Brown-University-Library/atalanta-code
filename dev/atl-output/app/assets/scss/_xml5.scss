@@ -920,6 +920,49 @@ main.emblem-page.frontmatter {
 	/*********** END OF ENGLISH EMBLEM STYLES *************/
 
 
+/*********** COLLECTIONS OVERRIDES *************/
+
+main.emblem-page section.section__motto {
+	h1, h3 {
+		margin-bottom: 0;
+	}
+}
+main.emblem-page section.section__epigram {
+	h3 {
+		font-size: 1rem;
+	}
+}
+main.emblem-page section.section__discourse {
+	h3 {
+		margin-bottom: 0;
+	}
+}
+main.emblem-page.frontmatter section.section__preface .translation {
+	.issue {
+		font-family: $secondary-display-font_emblem;
+		font-size: 4rem;
+	}
+}
+main.emblem-page.frontmatter section.section__preface .original {
+	h1 {
+		font-size: 4rem;
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
+	.preface.la {
+		grid-template-columns: 1fr;
+	}
+	.ab {
+		font-size: 1.25rem;
+		line-height: 1.5;
+	}
+}
+
+
+/*********** END OF COLLECTIONS OVERRIDES *************/
+
+
+
 /*********** FRONTMATTER *************/
 main.emblem-page.frontmatter {
 	background: $white;
@@ -1344,7 +1387,7 @@ main.emblem-page.frontmatter {
 			padding: 0 25%;
 		}
 		div.dedication > * {
-			grid-column: 1 / 3;
+			grid-column: 1 / 13;
 		}
 		div.margin-note {
 			left: 80vw;
@@ -1723,7 +1766,7 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
 				grid-column: 3 / 11;
 			}
 		}
-		section.section__discourse .translation, 
+		section.section__discourse .translation,
 		section.section__discourse .original {
 			div.discourse {
 				grid-column: 2 / 13;

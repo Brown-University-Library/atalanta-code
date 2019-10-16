@@ -1,0 +1,34 @@
+@import 'utilities';
+@import 'colors';
+
+@media print {
+	//else if edition latin original
+	div.original div.lang--latin.edition--original {
+		display: grid !important;
+
+		span.regularized {
+			display: none !important;
+		}
+	}
+	div.translation.is-hidden div.lang--english.edition--normalized, 
+	div.translation.is-hidden div.lang--english.edition--facsimile, 
+	div.original div.lang--german.edition--facsimile.is-hidden {
+		display: none !important;
+
+		span.regularized, 
+		span.pb {
+			display: none !important;
+		}
+	}
+ 
+	//main.emblem-page .panel--right section.section__motto ._motto--latin div.image {
+	//	margin-top: 0 !important;
+	//}
+	//main.emblem-page .panel--right section.section__motto .original h1.title {
+	//	font-size: 1.75rem !important;
+	//	margin-bottom: 5rem !important;
+	//}
+	//.discourse-p1 > h3 {
+	//	margin-top: 5rem !important;
+	//}
+}
