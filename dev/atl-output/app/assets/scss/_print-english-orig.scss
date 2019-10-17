@@ -6,23 +6,26 @@
 	div.translation div.lang--english.edition--facsimile {
 		display: grid !important;
 
-		span.original {
-			display: inline-block;
-		}
 		span.regularized, 
 		span.pb {
 			display: none !important;
 		}
 		span.del .unclear, 
 		span.subst .del {
-			text-decoration: line-through;
+			display: none !important;
 		}
-		//span.subst .add::before {
-		//	content: "<";
-		//}
-		//span.subst .add::after {
-		//	content: ">";
-		//}
+		span.subst .add:before {
+			content: "<";
+		}
+		span.subst .add:after {
+			content: ">";
+		}
+		span.unclear:before {
+			content: "[";
+		}
+		span.unclear:after {
+			content: "]";
+		}
 	}
 	div.original.is-hidden div.lang--latin.edition--regularized, 
 	div.original.is-hidden div.lang--latin.edition--facsimile, 
