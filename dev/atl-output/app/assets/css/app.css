@@ -8630,6 +8630,7 @@ body {
   height: calc(100vh - 6.25rem);
   /* viewheight - topnav - emblem nav */
   padding: 0 1rem;
+  visibility: visible;
   width: calc(60vw/12 * 2);
   /*	???	.atalanta-notation-start.playing {
 		  display: none;
@@ -8747,6 +8748,9 @@ body {
 
 .section__music ._music .ata-music .ata-viz-pianoroll {
   overflow: hidden; }
+
+.section__music ._music .ata-music.loading .transport {
+  visibility: hidden; }
 
 /* notation */
 .section__music .ata-viz-cmn {

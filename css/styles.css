@@ -6673,34 +6673,13 @@ main.emblem-page.frontmatter {
     color: #4d4d4d; }
   main.emblem-page .del,
   main.emblem-page.frontmatter .del {
-    text-decoration: none; }
-  main.emblem-page .edition--normalized .del,
-  main.emblem-page.frontmatter .edition--normalized .del {
     display: none; }
-  main.emblem-page .subst .del,
-  main.emblem-page.frontmatter .subst .del {
-    text-decoration: line-through; }
-  main.emblem-page .edition--normalized .subst .del,
-  main.emblem-page.frontmatter .edition--normalized .subst .del {
-    display: none; }
-  main.emblem-page .del .unclear,
-  main.emblem-page.frontmatter .del .unclear {
-    text-decoration: line-through; }
-  main.emblem-page .edition--normalized .del .unclear,
-  main.emblem-page.frontmatter .edition--normalized .del .unclear {
-    display: none; }
-  main.emblem-page .subst .del .unclear,
-  main.emblem-page.frontmatter .subst .del .unclear {
-    text-decoration: none; }
-  main.emblem-page .edition--normalized .subst .del .unclear,
-  main.emblem-page.frontmatter .edition--normalized .subst .del .unclear {
-    display: none; }
-  main.emblem-page .edition--normalized .unclear:before,
-  main.emblem-page.frontmatter .edition--normalized .unclear:before {
-    display: none; }
-  main.emblem-page .edition--normalized .unclear:after,
-  main.emblem-page.frontmatter .edition--normalized .unclear:after {
-    display: none; }
+  main.emblem-page .unclear:before,
+  main.emblem-page.frontmatter .unclear:before {
+    content: "["; }
+  main.emblem-page .unclear:after,
+  main.emblem-page.frontmatter .unclear:after {
+    content: "]"; }
   main.emblem-page .add:before,
   main.emblem-page.frontmatter .add:before {
     color: #4d4d4d; }
@@ -7368,6 +7347,13 @@ main.emblem-page.frontmatter section.section__preface {
   main.emblem-page.frontmatter section.section__preface .discourse-p1,
   main.emblem-page.frontmatter section.section__preface .discourse-p2 {
     /*line-height: 1.2;*/ }
+  main.emblem-page section.section__discourse .discourse-p2,
+  main.emblem-page section.section__preface .discourse-p2,
+  main.emblem-page.frontmatter section.section__discourse .discourse-p2,
+  main.emblem-page.frontmatter section.section__preface .discourse-p2 {
+    border-top: 2px solid gray;
+    margin-top: 4rem;
+    padding-top: 4rem; }
   main.emblem-page section.section__discourse .edition--facsimile .discourse-p1,
   main.emblem-page section.section__discourse .edition--facsimile .discourse-pagebreak,
   main.emblem-page section.section__discourse .edition--facsimile .discourse-p2,
@@ -7439,6 +7425,11 @@ main.emblem-page.frontmatter section.section__preface {
     grid-column: 1 / 2;
     line-height: 2;
     text-align: center; }
+  main.emblem-page section.section__discourse .discourse-p2 h3,
+  main.emblem-page section.section__preface .discourse-p2 h3,
+  main.emblem-page.frontmatter section.section__discourse .discourse-p2 h3,
+  main.emblem-page.frontmatter section.section__preface .discourse-p2 h3 {
+    display: none; }
   main.emblem-page section.section__discourse div.translation div.discourse .ab span.original:nth-of-type(1) br,
   main.emblem-page section.section__preface div.translation div.discourse .ab span.original:nth-of-type(1) br,
   main.emblem-page.frontmatter section.section__discourse div.translation div.discourse .ab span.original:nth-of-type(1) br,
@@ -8115,6 +8106,11 @@ main.emblem-page.frontmatter {
     text-align: center; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin .page:nth-of-type(1) > div:nth-of-type(2) {
     font-size: 1.125rem; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin div.page:nth-of-type(2),
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin div.page:nth-of-type(3) {
+    border-top: 2px solid gray;
+    margin-top: 3.5rem;
+    padding-top: 4rem; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin span.pb.atalanta-fugiens {
     /*display: block;*/ }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin span.caps {
@@ -8122,20 +8118,33 @@ main.emblem-page.frontmatter {
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--original .page:nth-of-type(1) > div:nth-of-type(2) {
     font-style: oblique; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--original span.original {
-    display: inline-block; }
+    display: inline; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--original span.regularized {
     display: none; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--original span.caps,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--original span.smallCaps {
+    font-variant: small-caps;
+    letter-spacing: .2em; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--original span.caps-large {
-    text-transform: uppercase;
-    letter-spacing: .1em; }
+    letter-spacing: .1em;
+    text-transform: uppercase; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.italic {
-    font-style: normal; }
+    font-style: oblique; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized br {
     /*display: none;*/ }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.original {
     display: none; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.regularized {
-    display: inline-block; }
+    display: inline; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.caps,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.smallCaps {
+    font-variant: small-caps;
+    letter-spacing: .2em; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.caps-large {
+    text-transform: uppercase;
+    letter-spacing: .1em; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized div.page div:nth-child(3) {
+    font-style: oblique; }
   main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--latin {
     display: grid;
     grid-template-columns: repeat(12, 1fr); }
@@ -8167,7 +8176,22 @@ main.emblem-page.frontmatter section.section__preface {
     display: grid;
     grid-template-columns: repeat(12, 1fr); }
   main.emblem-page.frontmatter section.section__preface ._preface--english .preface {
+    font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
+    font-size: 3rem;
     padding: 0 6rem 0 2rem; }
+  main.emblem-page.frontmatter section.section__preface ._preface--english .preface .ab {
+    font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
+    font-size: 1.25rem; }
+  main.emblem-page.frontmatter section.section__preface ._preface--latin h1 {
+    font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
+    font-size: 3rem; }
+  main.emblem-page.frontmatter section.section__preface ._preface--latin .page:nth-of-type(2),
+  main.emblem-page.frontmatter section.section__preface ._preface--latin .page:nth-of-type(3),
+  main.emblem-page.frontmatter section.section__preface ._preface--latin .page:nth-of-type(4),
+  main.emblem-page.frontmatter section.section__preface ._preface--latin .page:nth-of-type(5) {
+    border-top: 2px solid gray;
+    margin-top: 4rem;
+    padding-top: 3rem; }
   main.emblem-page.frontmatter section.section__preface .ab {
     margin-top: 1rem; }
   main.emblem-page.frontmatter section.section__preface .edition--facsimile h3.title {
@@ -8184,6 +8208,9 @@ main.emblem-page.frontmatter section.section__preface {
     margin-bottom: 2rem; }
   main.emblem-page.frontmatter section.section__preface .edition--original span.caps {
     letter-spacing: .2em; }
+  main.emblem-page.frontmatter section.section__preface .edition--original span.roman {
+    font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
+    font-style: normal; }
   main.emblem-page.frontmatter section.section__preface .edition--original span.caps:nth-of-type(2),
   main.emblem-page.frontmatter section.section__preface .edition--regularized span.caps:nth-of-type(2) {
     float: left;
@@ -8193,6 +8220,10 @@ main.emblem-page.frontmatter section.section__preface {
     padding: 1px 1px 0 1px; }
   main.emblem-page.frontmatter section.section__preface .edition--original span.caps:nth-of-type(3) {
     margin-left: -14px; }
+  main.emblem-page.frontmatter section.section__preface .edition--regularized .ab.italic {
+    font-style: normal; }
+  main.emblem-page.frontmatter section.section__preface .edition--regularized .ab.italic span.roman {
+    font-style: oblique; }
 
 main.emblem-page.frontmatter .panel--full section.section__preface {
   padding-top: 5rem; }
@@ -8599,6 +8630,7 @@ body {
   height: calc(100vh - 6.25rem);
   /* viewheight - topnav - emblem nav */
   padding: 0 1rem;
+  visibility: visible;
   width: calc(60vw/12 * 2);
   /*	???	.atalanta-notation-start.playing {
 		  display: none;
@@ -8716,6 +8748,9 @@ body {
 
 .section__music ._music .ata-music .ata-viz-pianoroll {
   overflow: hidden; }
+
+.section__music ._music .ata-music.loading .transport {
+  visibility: hidden; }
 
 /* notation */
 .section__music .ata-viz-cmn {
