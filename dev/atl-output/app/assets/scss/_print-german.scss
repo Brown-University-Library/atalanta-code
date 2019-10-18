@@ -9,13 +9,17 @@
 	div.translation.is-hidden div.lang--english.edition--normalized, 
 	div.translation.is-hidden div.lang--english.edition--facsimile, 
 	div.original div.lang--latin.edition--regularized.is-hidden, 
-	div.original div.lang--latin.edition--facsimile.is-hidden {
+	div.original div.lang--latin.edition--facsimile.is-hidden { 
+	/* div.original div.lang--latin._discourse--latin .discourse.la { */
 		display: none !important;
 
 		span.regularized {
 			display: none !important;
 		}
 	}
+	/* div.original div.lang--latin._discourse--latin .discourse.la:before {
+		content:"unavailable";
+	} */
 
 	//main.emblem-page .panel--right section.section__motto ._motto--latin div.image {
 	//	margin-top: 0 !important;

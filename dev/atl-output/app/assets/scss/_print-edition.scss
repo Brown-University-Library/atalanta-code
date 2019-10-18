@@ -8,7 +8,9 @@
 	section.facsimile, 
 	div#tools, 
 	div#basic-waypoint__1, 
-	section#basic-waypoint__2, 
+	/* section#basic-waypoint__2, */
+	section#basic-waypoint__2 .transport, 
+	section#basic-waypoint__2 .pianoroll, 
 	div.collections-wrapper, 
 	.ui-menu-item, 
 	span.pb {
@@ -40,8 +42,21 @@
 	main.emblem-page .panel--right section.section__epigram {
     	margin-top: 6rem !important;
     }
+    section#basic-waypoint__2 {
+    	margin-top: 4rem !important;
+    }
     .discourse-p1 > h3 {
 		margin-top: 7rem !important;
 		margin-bottom: 5rem !important;
+	}
+	span.italic {
+		font-style: italic !important;
+	}
+	span.smallCaps {
+		font-variant: small-caps !important;
+	}
+	.epigram .verse-epigram, 
+	.epigram .verse-epigram-italic {
+		font-family: sans-serif !important;
 	}
 }
