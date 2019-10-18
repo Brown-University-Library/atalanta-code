@@ -15,6 +15,7 @@ body {
 		box-sizing: border-box;
 		height: calc(100vh - 6.25rem); /* viewheight - topnav - emblem nav */
 		padding: 0 1rem;
+		visibility: visible;
 		width: calc(60vw/12 * 2);
 		.atalanta-notation-start, 
 		.atalanta-notation-stop, 
@@ -122,6 +123,11 @@ body {
 	}
 	.ata-viz-pianoroll {
 		overflow: hidden;
+	}
+}
+.section__music ._music .ata-music.loading {
+	.transport {
+		visibility: hidden;
 	}
 }
 
