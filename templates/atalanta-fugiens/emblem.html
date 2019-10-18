@@ -8,6 +8,341 @@
 	<title>Furnace and Fugue: Atalanta fugiens (Digital Edition)</title>
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css">
 	<link rel="stylesheet" href="../assets/css/collections.css">
+	<style>
+		@media print {
+  header,
+  nav,
+  div#section__facsimile.panel--left,
+  section.facsimile,
+  div#tools,
+  div#basic-waypoint__1,
+  section#basic-waypoint__2 .transport,
+  section#basic-waypoint__2 .pianoroll,
+  div.collections-wrapper,
+  .ui-menu-item,
+  span.pb {
+    display: none !important; }
+  body {
+    padding-top: 3rem; }
+  body div.margin-note {
+    font-family: sans-serif !important;
+    font-style: italic; }
+  body div.margin-note .note-mark {
+    font-style: normal; }
+  section.section__motto div.title {
+    margin-top: 0 !important; }
+  main.emblem-page h1,
+  main.emblem-page h3 {
+    color: black !important;
+    font-family: serif !important; }
+  main.emblem-page .panel--right section.section__motto h1 {
+    font-size: 4rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 0 !important; }
+  main.emblem-page .panel--right section.section__epigram {
+    margin-top: 6rem !important; }
+  section#basic-waypoint__2 {
+    margin-top: 4rem !important; }
+  .discourse-p1 > h3 {
+    margin-top: 7rem !important;
+    margin-bottom: 5rem !important; }
+  span.italic {
+    font-style: italic !important; }
+  span.smallCaps {
+    font-variant: small-caps !important; }
+  .epigram .verse-epigram,
+  .epigram .verse-epigram-italic {
+    font-family: sans-serif !important; } }
+
+@media print {
+  div.translation div.lang--english.edition--normalized {
+    display: grid !important; }
+    div.translation div.lang--english.edition--normalized span.regularized {
+      display: inline-block; }
+    div.translation div.lang--english.edition--normalized span.original,
+    div.translation div.lang--english.edition--normalized span.pb,
+    div.translation div.lang--english.edition--normalized span.del,
+    div.translation div.lang--english.edition--normalized span.subst .del {
+      display: none !important; }
+    div.translation div.lang--english.edition--normalized .discourse-p2 {
+      border-top: 2px solid gray;
+      margin-top: 4rem;
+      padding-top: 4rem; }
+    div.translation div.lang--english.edition--normalized .discourse-p2 h3 {
+      display: none !important; }
+  div.translation div.lang--english._author-epigram--english.edition--normalized span.v-line {
+    line-height: 1.8 !important; }
+  div.translation div.lang--english._dedication--english.edition--normalized .dedication {
+    font-family: sans-serif !important;
+    line-height: 1.8 !important; }
+  div.translation div.lang--english._preface--english.edition--normalized .preface {
+    line-height: 1.8 !important; }
+  div.translation div.lang--english._preface--english.edition--normalized .ab {
+    font-family: sans-serif !important; }
+  div.translation div.lang--english._preface--english.edition--normalized .margin-note {
+    margin-left: 20mm !important; }
+  div.translation div.lang--english._preface--english.edition--normalized .margin-note span.original {
+    display: none; }
+  div.original.is-hidden div.lang--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin.edition--facsimile,
+  div.original.is-hidden div.lang--german.edition--facsimile,
+  div.original.is-hidden div.lang--latin._frontispiece--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._frontispiece--latin.edition--facsimile,
+  div.original.is-hidden div.lang--latin._author-epigram--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._author-epigram--latin.edition--facsimile,
+  div.original.is-hidden div.lang--latin._dedication--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._dedication--latin.edition--facsimile,
+  div.original.is-hidden div.lang--latin._preface--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._preface--latin.edition--facsimile {
+    display: none !important; } }
+
+@media print {
+  div.translation div.lang--english.edition--facsimile {
+    display: grid !important; }
+    div.translation div.lang--english.edition--facsimile span.regularized,
+    div.translation div.lang--english.edition--facsimile span.pb {
+      display: none !important; }
+    div.translation div.lang--english.edition--facsimile span.del .unclear,
+    div.translation div.lang--english.edition--facsimile span.subst .del {
+      display: none !important; }
+    div.translation div.lang--english.edition--facsimile span.subst .add:before {
+      content: "<"; }
+    div.translation div.lang--english.edition--facsimile span.subst .add:after {
+      content: ">"; }
+    div.translation div.lang--english.edition--facsimile span.unclear:before {
+      content: "["; }
+    div.translation div.lang--english.edition--facsimile span.unclear:after {
+      content: "]"; }
+    div.translation div.lang--english.edition--facsimile .discourse-p2 {
+      border-top: 2px solid gray;
+      margin-top: 4rem;
+      padding-top: 4rem; }
+  div.translation div.lang--english._author-epigram--english.edition--facsimile span.v-line {
+    line-height: 1.8 !important; }
+  div.translation div.lang--english._dedication--english.edition--facsimile .dedication {
+    font-family: sans-serif !important;
+    line-height: 1.8 !important; }
+  div.translation div.lang--english._dedication--english.edition--facsimile .add:before {
+    content: "<"; }
+  div.translation div.lang--english._dedication--english.edition--facsimile .add:after {
+    content: ">"; }
+  div.translation div.lang--english._preface--english.edition--facsimile .preface {
+    line-height: 1.8 !important; }
+  div.translation div.lang--english._preface--english.edition--facsimile .ab {
+    font-family: sans-serif !important; }
+  div.translation div.lang--english._preface--english.edition--facsimile .margin-note {
+    margin-left: 20mm !important; }
+  div.original.is-hidden div.lang--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin.edition--facsimile,
+  div.original.is-hidden div.lang--german.edition--facsimile,
+  div.original.is-hidden div.lang--latin._frontispiece--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._frontispiece--latin.edition--facsimile,
+  div.original.is-hidden div.lang--latin._author-epigram--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._author-epigram--latin.edition--facsimile,
+  div.original.is-hidden div.lang--latin._dedication--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._dedication--latin.edition--facsimile,
+  div.original.is-hidden div.lang--latin._preface--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._preface--latin.edition--facsimile {
+    display: none !important; } }
+
+@media print {
+  div.original div.lang--latin.edition--regularized {
+    display: grid !important; }
+    div.original div.lang--latin.edition--regularized span.original {
+      display: none !important; }
+    div.original div.lang--latin.edition--regularized .discourse-p2 {
+      border-top: 2px solid gray;
+      margin-top: 4rem;
+      padding-top: 4rem; }
+  div.original div.lang--latin._frontispiece--latin.edition--regularized span.italic {
+    font-family: sans-serif !important; }
+  div.original div.lang--latin._frontispiece--latin.edition--regularized .caps {
+    font-variant: small-caps !important; }
+  div.original div.lang--latin._author-epigram--latin.edition--regularized span.v-line,
+  div.original div.lang--latin._author-epigram--latin.edition--regularized span.v-line-indent {
+    line-height: 1.8 !important; }
+  div.original div.lang--latin._author-epigram--latin.edition--regularized span.v-line-indent {
+    margin-left: 20mm !important; }
+  div.original div.lang--latin._dedication--latin.edition--regularized span.regularized {
+    display: inline !important; }
+  div.original div.lang--latin._dedication--latin.edition--regularized .preface.la {
+    font-family: sans-serif !important;
+    line-height: 1.8 !important; }
+  div.original div.lang--latin._dedication--latin.edition--regularized .caps {
+    font-variant: small-caps !important; }
+  div.original div.lang--latin._dedication--latin.edition--regularized .caps-large {
+    text-transform: uppercase !important; }
+  div.original div.lang--latin._dedication--latin.edition--regularized div.page:nth-of-type(2),
+  div.original div.lang--latin._dedication--latin.edition--regularized div.page:nth-of-type(3) {
+    border-top: 2px solid gray;
+    margin-top: 3rem;
+    padding-top: 4rem; }
+  div.original div.lang--latin._dedication--latin.edition--regularized div.page div:nth-child(3) {
+    font-style: italic !important; }
+  div.original div.lang--latin._preface--latin.edition--regularized div.page .ab.italic {
+    font-family: sans-serif !important;
+    font-style: normal !important;
+    line-height: 1.8 !important; }
+  div.original div.lang--latin._preface--latin.edition--regularized div.page .ab.italic span.roman {
+    font-style: italic !important; }
+  div.original div.lang--latin._preface--latin.edition--regularized .page:nth-of-type(2),
+  div.original div.lang--latin._preface--latin.edition--regularized .page:nth-of-type(3),
+  div.original div.lang--latin._preface--latin.edition--regularized .page:nth-of-type(4),
+  div.original div.lang--latin._preface--latin.edition--regularized .page:nth-of-type(5) {
+    border-top: 2px solid gray;
+    margin-top: 4rem;
+    padding-top: 3rem; }
+  div.translation.is-hidden div.lang--english.edition--normalized,
+  div.translation.is-hidden div.lang--english.edition--facsimile,
+  div.original div.lang--german.edition--facsimile.is-hidden,
+  div.translation.is-hidden div.lang--english._frontispiece--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._frontispiece--english.edition--facsimile,
+  div.translation.is-hidden div.lang--english._author-epigram--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._author-epigram--english.edition--facsimile,
+  div.translation.is-hidden div.lang--english._dedication--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._dedication--english.edition--facsimile,
+  div.translation.is-hidden div.lang--english._preface--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._preface--english.edition--facsimile {
+    display: none !important; }
+    div.translation.is-hidden div.lang--english.edition--normalized span.original,
+    div.translation.is-hidden div.lang--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english.edition--facsimile span.original,
+    div.translation.is-hidden div.lang--english.edition--facsimile span.pb,
+    div.original div.lang--german.edition--facsimile.is-hidden span.original,
+    div.original div.lang--german.edition--facsimile.is-hidden span.pb,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--normalized span.original,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--facsimile span.original,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--facsimile span.pb,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--normalized span.original,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--facsimile span.original,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--facsimile span.pb,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--normalized span.original,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--facsimile span.original,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--facsimile span.pb,
+    div.translation.is-hidden div.lang--english._preface--english.edition--normalized span.original,
+    div.translation.is-hidden div.lang--english._preface--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._preface--english.edition--facsimile span.original,
+    div.translation.is-hidden div.lang--english._preface--english.edition--facsimile span.pb {
+      display: none !important; } }
+
+@media print {
+  div.original div.lang--latin.edition--original {
+    display: grid !important; }
+    div.original div.lang--latin.edition--original span.regularized {
+      display: none !important; }
+    div.original div.lang--latin.edition--original .discourse-p2 {
+      border-top: 2px solid gray;
+      margin-top: 4rem;
+      padding-top: 4rem; }
+  div.original div.lang--latin._frontispiece--latin.edition--original span.title-1,
+  div.original div.lang--latin._frontispiece--latin.edition--original .caps-italic {
+    font-family: sans-serif !important;
+    font-style: italic !important;
+    text-transform: uppercase !important; }
+  div.original div.lang--latin._frontispiece--latin.edition--original span.title-1,
+  div.original div.lang--latin._frontispiece--latin.edition--original span.title-2 {
+    font-family: sans-serif !important;
+    font-style: italic !important; }
+  div.original div.lang--latin._frontispiece--latin.edition--original span.title-3,
+  div.original div.lang--latin._frontispiece--latin.edition--original span.title-4 {
+    text-transform: uppercase !important; }
+  div.original div.lang--latin._frontispiece--latin.edition--original span.italic {
+    font-family: sans-serif !important; }
+  div.original div.lang--latin._frontispiece--latin.edition--original .caps {
+    font-variant: small-caps !important; }
+  div.original div.lang--latin._author-epigram--latin.edition--original .verse-epigram-italic {
+    font-style: italic !important; }
+  div.original div.lang--latin._author-epigram--latin.edition--original span.v-line,
+  div.original div.lang--latin._author-epigram--latin.edition--original span.v-line-indent {
+    line-height: 1.8 !important; }
+  div.original div.lang--latin._author-epigram--latin.edition--original span.v-line-indent {
+    text-indent: 20mm !important; }
+  div.original div.lang--latin._dedication--latin.edition--original .preface.la {
+    font-family: sans-serif !important;
+    line-height: 1.8 !important; }
+  div.original div.lang--latin._dedication--latin.edition--original .caps {
+    font-variant: small-caps !important; }
+  div.original div.lang--latin._dedication--latin.edition--original .caps-large {
+    text-transform: uppercase !important; }
+  div.original div.lang--latin._dedication--latin.edition--original div.page:nth-of-type(2),
+  div.original div.lang--latin._dedication--latin.edition--original div.page:nth-of-type(3) {
+    border-top: 2px solid gray;
+    margin-top: 3rem;
+    padding-top: 4rem; }
+  div.original div.lang--latin._dedication--latin.edition--original div.page div:nth-child(3) {
+    font-style: italic !important; }
+  div.original div.lang--latin._preface--latin.edition--original div.page .ab.italic {
+    font-family: sans-serif !important;
+    font-style: italic !important;
+    line-height: 1.8 !important; }
+  div.original div.lang--latin._preface--latin.edition--original div.page .ab.italic span.roman {
+    font-family: 'GTSectraDisplayBold', serif !important;
+    font-style: normal !important; }
+  div.original div.lang--latin._preface--latin.edition--original .page:nth-of-type(2),
+  div.original div.lang--latin._preface--latin.edition--original .page:nth-of-type(3),
+  div.original div.lang--latin._preface--latin.edition--original .page:nth-of-type(4),
+  div.original div.lang--latin._preface--latin.edition--original .page:nth-of-type(5) {
+    border-top: 2px solid gray;
+    margin-top: 4rem;
+    padding-top: 3rem; }
+  div.translation.is-hidden div.lang--english.edition--normalized,
+  div.translation.is-hidden div.lang--english.edition--facsimile,
+  div.original div.lang--german.edition--facsimile.is-hidden,
+  div.translation.is-hidden div.lang--english._frontispiece--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._frontispiece--english.edition--facsimile,
+  div.translation.is-hidden div.lang--english._author-epigram--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._author-epigram--english.edition--facsimile,
+  div.translation.is-hidden div.lang--english._dedication--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._dedication--english.edition--facsimile,
+  div.translation.is-hidden div.lang--english._preface--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._preface--english.edition--facsimile {
+    display: none !important; }
+    div.translation.is-hidden div.lang--english.edition--normalized span.regularized,
+    div.translation.is-hidden div.lang--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english.edition--facsimile span.regularized,
+    div.translation.is-hidden div.lang--english.edition--facsimile span.pb,
+    div.original div.lang--german.edition--facsimile.is-hidden span.regularized,
+    div.original div.lang--german.edition--facsimile.is-hidden span.pb,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--normalized span.regularized,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--facsimile span.regularized,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--facsimile span.pb,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--normalized span.regularized,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--facsimile span.regularized,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--facsimile span.pb,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--normalized span.regularized,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--facsimile span.regularized,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--facsimile span.pb,
+    div.translation.is-hidden div.lang--english._preface--english.edition--normalized span.regularized,
+    div.translation.is-hidden div.lang--english._preface--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._preface--english.edition--facsimile span.regularized,
+    div.translation.is-hidden div.lang--english._preface--english.edition--facsimile span.pb {
+      display: none !important; } }
+
+@media print {
+  div.original div.lang--german.edition--facsimile {
+    display: grid !important; }
+  div.translation.is-hidden div.lang--english.edition--normalized,
+  div.translation.is-hidden div.lang--english.edition--facsimile,
+  div.original div.lang--latin.edition--regularized.is-hidden,
+  div.original div.lang--latin.edition--facsimile.is-hidden {
+    /* div.original div.lang--latin._discourse--latin .discourse.la { */
+    display: none !important; }
+    div.translation.is-hidden div.lang--english.edition--normalized span.regularized,
+    div.translation.is-hidden div.lang--english.edition--facsimile span.regularized,
+    div.original div.lang--latin.edition--regularized.is-hidden span.regularized,
+    div.original div.lang--latin.edition--facsimile.is-hidden span.regularized {
+      display: none !important; }
+  /* div.original div.lang--latin._discourse--latin .discourse.la:before {
+		content:"unavailable";
+	} */ }
+
+	</style>
 </head>
 <body class="emblem-body bul">
 	<div id="wrapper">
