@@ -1,0 +1,31 @@
+<html>
+<head>
+  <script src="js/verovio-toolkit.js"></script>
+  <script src="js/verovio-proxy.js"></script>
+</head>
+
+<body>
+
+<h1>Okay</h1>
+
+<h2>VerovioInstance1 output</h2>
+<div id="v1-out"></div>
+
+<h2>VerovioInstance2 output</h2>
+<div id="v2-out"></div>
+
+</body>
+<script>
+
+console.log("Create a VerovioInstance object");
+
+var v1 = new VerovioInstance('data/mei/Fuga 6.xml');
+
+console.log("Test that MEI is in registry");
+console.log(v1.__proto__.meiRegistry);
+
+console.log("Test MEI is loaded");
+document.getElementById('v1-out').innerHTML = v1.renderPage(1);
+
+</script>
+</html>
