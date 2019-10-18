@@ -31,7 +31,8 @@
   main.emblem-page .panel--right section.section__epigram {
     margin-top: 6rem !important; }
   section#basic-waypoint__2 {
-    margin-top: 4rem !important; }
+    /* margin-top: 4rem !important; */
+    display: none !important; }
   .discourse-p1 > h3 {
     margin-top: 7rem !important;
     margin-bottom: 5rem !important; }
