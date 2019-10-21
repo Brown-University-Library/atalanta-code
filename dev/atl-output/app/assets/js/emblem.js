@@ -56,6 +56,17 @@ $(function () {
 	let myMusic;
 	let myMusicControls;
 
+	// var dedicationLatinPage1 = document.querySelector(".section__dedication .page:nth-of-type(1)");
+	// var dedicationLatinPage2 = document.querySelector(".section__dedication .page:nth-of-type(2)");
+	// var dedicationLatinPage3 = document.querySelector(".section__dedication .page:nth-of-type(3)");
+
+	// function addWaypoints() {
+	// 	dedicationLatinPage1.setAttribute("id", "basic-waypoint__dedication1");
+	// 	dedicationLatinPage2.setAttribute("id", "basic-waypoint__dedication2");
+	// 	dedicationLatinPage3.setAttribute("id", "basic-waypoint__dedication3");
+	// }
+
+
 
 	// var thisEmblemPage = '.emblem-page';
 	// var myEmblemDataNum = $('.emblem-page').data("id"); // get the data ID for the current emblem page
@@ -230,6 +241,11 @@ $(function () {
 			createScrollingScene();
 		}
 	}
+	function refreshWaypoints() {
+		Waypoint.refreshAll();
+		console.log("I'm trying to refresh the waypoints");
+		console.log(Waypoint);
+	}
 		/* language selections */
 	function selectLangEnglishOrig() {
 		$(languageEnglishOrigBtn).attr('data-language', 'active'); // make English Original Button active
@@ -347,11 +363,23 @@ $(function () {
 	/* text original/translation switches */
 	function showOriginalLanguage() {
 		$(textOriginal).removeClass('is-hidden'); // display Latin/German text block
+		$(textOriginal).addClass('is-shown'); // display Latin/German text block
 		$(textTranslation).addClass('is-hidden'); // hide English text block
+		$(textTranslation).removeClass('is-shown'); // hide English text block
+		// console.log(Waypoint);
+		// waypointDedication2 = '.section__dedication .page:nth-of-type(2)';
+		// console.log(Waypoint);
+		// setTimeout(refreshWaypoints, 4000);
 	}
 	function showTranslation() {
 		$(textTranslation).removeClass('is-hidden'); // display English text block
+		$(textTranslation).addClass('is-shown'); // display English text block
 		$(textOriginal).addClass('is-hidden'); // hide Latin/German text block
+		$(textOriginal).removeClass('is-shown'); // hide Latin/German text block
+		// console.log(Waypoint);
+		// waypointDedication2 = '.section__dedication .ab:nth-of-type(2)';
+		// console.log(Waypoint);
+		// setTimeout(refreshWaypoints, 4000);
 	}
 	/* emblem subnav */
 	function subnavHide() {
