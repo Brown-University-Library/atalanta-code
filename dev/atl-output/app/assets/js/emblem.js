@@ -624,17 +624,20 @@ $(function () {
 					// 	zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
 					// }
 					// else { // german is not visible
-				if($('.section__motto div.original').hasClass('is-shown')) { // if latin is visible, then disable
-					console.log("showing english motto");
-					currentPage = myEmblemDataNum * 4;
-					zoomingViewer.goToPage(myEmblemDataNum * 4);
-					console.log("current page is " + currentPage);
-				}
-				else if($('.section__motto div.translation').hasClass('is-shown')) {
-					currentPage = myEmblemDataNum * 4;
-					zoomingViewer.goToPage(myEmblemDataNum * 4);
-					console.log("current page is " + currentPage);
-				}
+				// if(scrollPos < 10){
+					if($('.section__motto div.original').hasClass('is-shown')) { // if latin is visible, then disable
+						console.log("showing english motto");
+						currentPage = myEmblemDataNum * 4;
+						zoomingViewer.goToPage(myEmblemDataNum * 4);
+						console.log("current page is " + currentPage);
+					}
+					else if($('.section__motto div.translation').hasClass('is-shown')) {
+						currentPage = myEmblemDataNum * 4;
+						zoomingViewer.goToPage(myEmblemDataNum * 4);
+						console.log("current page is " + currentPage);
+						// waypoint.refreshAll();
+					}
+				// }
 						// if(scrollPos < 100){
 						// 	zoomingViewer.goToPage(myEmblemDataNum * 4);
 						// }
@@ -648,16 +651,20 @@ $(function () {
 		//element: document.querySelector(waypointMotto), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 				// if($('.section__motto .original.is-shown ._motto--latin').hasClass('is-hidden')) { // german is visible
-					if(scrollPos < 100){
+					if(scrollPos < 10){
 						zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
 					}
+
 				// }
 				// else { // german is not visible
 				// 	zoomingViewer.goToPage(myEmblemDataNum * 4);
 				// }
 		},
+		enabled: false,
 		offset: 150 // moving the trigger location from 0 at the top of the viewport
 	})
+
+
 
 	// /*** IMAGE WAYPOINT ***/
 	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
@@ -806,36 +813,33 @@ $(function () {
 
 		$("#language").on( "selectmenuchange", function( event, ui ) {
 		  console.log(ui.item.value);
-		  if((ui.item.value === 'latin_original') || (ui.item.value === 'latin_normal')) {
-		  	currentLanguage = 'latin';
-		  	if((currentLanguage === 'english') || (currentLanguage === 'latin')) {
-		  		console.log(currentLanguage);
+		  if((ui.item.value == 'latin_original') || (ui.item.value == 'latin_normal')) {
+		  	// currentLanguage = 'latin';
+		  	// if((currentLanguage == 'english') || (currentLanguage == 'latin')) {
+		  		// console.log(currentLanguage);
 			  	waypointD2E.disable();
 			  	waypointD2L.enable();
-			  	waypoint1B[0].disable();
-			  	waypoint1A[0].enable();
-			  	console.log(waypoint1B[0]);
-			  	console.log(waypoint1A[0]);
-		  	}
+		  	// }
 		  }
-		  else if((ui.item.value === 'english_original') || (ui.item.value === 'english_modern')) {
-		  	currentLanguage = 'english';
-		  	if((currentLanguage === 'english') || (currentLanguage === 'latin')) {
-			  	console.log(currentLanguage);
+		  else if((ui.item.value == 'english_original') || (ui.item.value == 'english_modern')) {
+		  	// currentLanguage = 'english';
+		  	// if((currentLanguage == 'english') || (currentLanguage == 'latin')) {
+			  	// console.log(currentLanguage);
 			  	waypointD2L.disable();
 			  	waypointD2E.enable();
-			  	waypoint1B[0].disable();
-			  	waypoint1A[0].enable();
-			  }
+			  // };
 		  }
-		  else if(ui.item.value === 'german') {
-		  	currentLanguage = 'german';
-		  	if(currentLanguage = 'german') {
-			  	console.log(currentLanguage);
+});
+		$("#language").on( "selectmenuchange", function( event, ui ) {
+		  console.log(ui.item.value);
+		  if(ui.item.value !== 'german') {
+			waypoint1B[0].disable();
+			waypoint1A[0].enable();
+		  }
+		  else if(ui.item.value == 'german') {
 			  	waypoint1A[0].disable();
 			  	waypoint1B[0].enable();
 			}
-		  }
 		});
 
 		$(window).scroll(function (event) { // calculate scroll position so enabling discourse 2 happens locally
