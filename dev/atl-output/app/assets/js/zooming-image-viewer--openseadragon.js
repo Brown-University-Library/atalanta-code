@@ -6,15 +6,19 @@ $(function () {
 	var pageTiles = "../data/json/pageView.json"; // file path to page view dzi files
 	var bookTiles = "../data/json/bookView.json"; // file path to book view dzi files
 	var waypointMotto = '.section__motto';
+	var waypointMottoGerman = '.section__motto ._motto--german';
 	var waypointImage = '.section__image';
 	var waypointMusic = '.section__music';
 	var waypointEpigram = '.section__epigram';
+	var waypointEpigramGerman = '.section__motto ._epigram--german';
 	var waypointDiscourse1 = '.section__discourse';
 	var waypointDiscourseEnglish2
 	var waypointDiscourseLatin2
 	var waypointDedication1 = '.section__dedication';
 	var waypointDedication2 = '.section__dedication .ab:nth-of-type(2)';
 	var waypointDedication3
+	var germanEpigramWaypoint
+	var englishEpigramWaypoint
 
 	$.get(pageTiles, function(data) { // after all the image tiles are ready, display zoomable pages
 		if (myEmblemDataNum <= 3) { // handle front matter (not in sets of 4)
@@ -205,7 +209,7 @@ $(function () {
 
 	// /*** EPIGRAM WAYPOINT ENGLISH / LATIN ***/
 	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
-	var waypoint = new Waypoint({
+	englishEpigramWaypoint = new Waypoint({
 		element: document.querySelector(waypointEpigram), // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 			if(direction === 'down') { // if scrolling down the page, change zooming page to 2/4 if Latin/English is active or 1/4 if German is active
@@ -220,7 +224,28 @@ $(function () {
 				console.log("waypoints doesn't detect a scroll direction");
 			}
 		},
-		offset: 350, // moving the trigger location from 0 at the top of the viewport
+		offset: 350 // moving the trigger location from 0 at the top of the viewport
+	})
+
+	// /*** EPIGRAM WAYPOINT GERMAN ***/
+	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+	germanEpigramWaypoint = new Waypoint({
+		element: document.querySelector(waypointEpigramGerman), // tells waypoint which DOM element's position to observe on scroll
+		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+			if(direction === 'down') { // if scrolling down the page, change zooming page to 2/4 if Latin/English is active or 1/4 if German is active
+				console.log("hit German epigram waypoint down");
+				zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
+			}
+			else if (direction === 'up') { // if scrolling back up the page
+				console.log("hit German epigram waypoint up");
+				zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
+			}
+			else {
+				console.log("waypoints doesn't detect a scroll direction");
+			}
+		},
+		enabled: false,
+		offset: 350 // moving the trigger location from 0 at the top of the viewport
 	})
 
 	// /*** DISCOURSE WAYPOINT 1 ***/
