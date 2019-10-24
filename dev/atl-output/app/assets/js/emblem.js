@@ -813,7 +813,7 @@ $(function () {
 
 		$("#language").on( "selectmenuchange", function( event, ui ) {
 		  console.log(ui.item.value);
-		  if((ui.item.value == 'latin_original') || (ui.item.value == 'latin_normal')) {
+		  if(ui.item.value == 'latin_original') {
 		  	// currentLanguage = 'latin';
 		  	// if((currentLanguage == 'english') || (currentLanguage == 'latin')) {
 		  		// console.log(currentLanguage);
@@ -821,13 +821,21 @@ $(function () {
 			  	waypointD2L.enable();
 		  	// }
 		  }
-		  else if((ui.item.value == 'english_original') || (ui.item.value == 'english_modern')) {
+		  else if(ui.item.value == 'latin_normal') {
+				waypointD2E.disable();
+			  	waypointD2L.enable();
+		  }
+		  else if(ui.item.value == 'english_original') {
 		  	// currentLanguage = 'english';
 		  	// if((currentLanguage == 'english') || (currentLanguage == 'latin')) {
 			  	// console.log(currentLanguage);
 			  	waypointD2L.disable();
 			  	waypointD2E.enable();
 			  // };
+		  }
+		  else if(ui.item.value == 'english_modern') {
+		  		waypointD2L.disable();
+			  	waypointD2E.enable();
 		  }
 });
 		$("#language").on( "selectmenuchange", function( event, ui ) {
