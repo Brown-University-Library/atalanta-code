@@ -26,7 +26,6 @@
   function initTrackMuteButton(buttonElement, musicRoot) {
   
     const trackNumber = parseInt(buttonElement.getAttribute(TRACK_NUMBER_ATTNAME)),
-      // muteClassname = `mute-${trackNumber}`,
       audioElements = Array.from(
         musicRoot.querySelectorAll(`.${AUDIO_CONTAINER_CLASSNAME} > audio[${TRACK_NUMBER_ATTNAME}="${trackNumber}"]`)
       );
@@ -218,8 +217,6 @@
 
   function removeLoadingClassnameWhenContentLoaded(musicRoot, audioElements) {
 
-    console.log('CHECKING FOR AUDIO');
-
     function canAllPlay() {
       if (audioElements.every(audioElement => audioElement.readyState === 4)) {
         musicRoot.classList.remove(AUDIO_LOADING_CLASSNAME);
@@ -229,6 +226,7 @@
         return true;
       } else {
         console.log('ALL CANNOT PLAY');
+        console.log(audioElements.map((ae, i) => `${i}:${ae.readyState}`).join(' / '));
         return false;
       }
     }
@@ -237,7 +235,10 @@
 
     if (canAllPlay() === false) {
       audioElements.forEach(
-        audioElement => audioElement.addEventListener('canplay', canAllPlay)
+        (audioElement, i) => {
+          audioElement.addEventListener('canplaythrough', canAllPlay); 
+          console.log(`Adding listener #${i}`);
+        }
       );
     }
   }
@@ -273,7 +274,7 @@
   
     // Setup track mute buttons
     // TODO: move mute state to musicRoot (like it is with the play button)
-    //  so that the CMN and pianoroll buttons stay syncronized in
+    //  so that the CMN and pianoroll buttons stay synchronized in
     //  a declarative way
   
     Array.from(musicRoot.getElementsByClassName(MUTE_BUTTON_CLASSNAME))
