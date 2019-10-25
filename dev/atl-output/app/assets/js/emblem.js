@@ -620,21 +620,21 @@ $(function () {
 		waypoint1A = $(waypointMotto).waypoint({
 			//element: document.querySelector(waypointMotto), // tells waypoint which DOM element's position to observe on scroll
 			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-					// if($('.section__motto .original.is-shown ._motto--latin').hasClass('is-hidden')) { // german is visible
-					// 	zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
-					// }
-					// else { // german is not visible
-				// if(scrollPos < 10){
-					if($('.section__motto div.original').hasClass('is-shown')) { // if latin is visible, then disable
-						console.log("showing english motto");
-						currentPage = myEmblemDataNum * 4;
-						zoomingViewer.goToPage(myEmblemDataNum * 4);
-						console.log("current page is " + currentPage);
+					if($('.section__motto .original.is-shown ._motto--latin').hasClass('is-hidden')) { // german is visible
+						zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
 					}
-					else if($('.section__motto div.translation').hasClass('is-shown')) {
-						currentPage = myEmblemDataNum * 4;
+					else { // german is not visible
+				// if(scrollPos < 10){
+					// if($('.section__motto div.original').hasClass('is-shown')) { // if latin is visible, then disable
+					// 	console.log("showing english motto");
+					// 	currentPage = myEmblemDataNum * 4;
+					// 	zoomingViewer.goToPage(myEmblemDataNum * 4);
+					// 	console.log("current page is " + currentPage);
+					// }
+					// else if($('.section__motto div.translation').hasClass('is-shown')) {
+					// 	currentPage = myEmblemDataNum * 4;
 						zoomingViewer.goToPage(myEmblemDataNum * 4);
-						console.log("current page is " + currentPage);
+						// console.log("current page is " + currentPage);
 						// waypoint.refreshAll();
 					}
 				// }
@@ -647,22 +647,22 @@ $(function () {
 		})
 
 
-	waypoint1B = $(waypointMottoGerman).waypoint({
-		//element: document.querySelector(waypointMotto), // tells waypoint which DOM element's position to observe on scroll
-		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-				// if($('.section__motto .original.is-shown ._motto--latin').hasClass('is-hidden')) { // german is visible
-					if(scrollPos < 10){
-						zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
-					}
+	// waypoint1B = $(waypointMottoGerman).waypoint({
+	// 	//element: document.querySelector(waypointMotto), // tells waypoint which DOM element's position to observe on scroll
+	// 	handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+	// 			// if($('.section__motto .original.is-shown ._motto--latin').hasClass('is-hidden')) { // german is visible
+	// 				if(scrollPos < 10){
+	// 					zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
+	// 				}
 
-				// }
-				// else { // german is not visible
-				// 	zoomingViewer.goToPage(myEmblemDataNum * 4);
-				// }
-		},
-		enabled: false,
-		offset: 150 // moving the trigger location from 0 at the top of the viewport
-	})
+	// 			// }
+	// 			// else { // german is not visible
+	// 			// 	zoomingViewer.goToPage(myEmblemDataNum * 4);
+	// 			// }
+	// 	},
+	// 	enabled: false,
+	// 	offset: 150 // moving the trigger location from 0 at the top of the viewport
+	// })
 
 
 
@@ -838,17 +838,30 @@ $(function () {
 			  	waypointD2E.enable();
 		  }
 });
-		$("#language").on( "selectmenuchange", function( event, ui ) {
-		  console.log(ui.item.value);
-		  if(ui.item.value !== 'german') {
-			waypoint1B[0].disable();
-			waypoint1A[0].enable();
-		  }
-		  else if(ui.item.value == 'german') {
-			  	waypoint1A[0].disable();
-			  	waypoint1B[0].enable();
-			}
-		});
+		// $("#language").on( "selectmenuchange", function( event, ui ) {
+		//   console.log(ui.item.value);
+		//   if(ui.item.value == 'latin_original') {
+		//   	waypoint1B[0].disable();
+		// 	waypoint1A[0].enable();
+		//   }
+		//   else if(ui.item.value == 'latin_normal') {
+		//   	waypoint1B[0].disable();
+		// 	waypoint1A[0].enable();
+		//   }
+		//   else if(ui.item.value == 'english_original') {
+		//   	waypoint1B[0].disable();
+		// 	waypoint1A[0].enable();
+		//   }
+		//   else if(ui.item.value == 'english_modern') {
+		// 		waypoint1B[0].disable();
+		// 	waypoint1A[0].enable();
+		// 	}
+		//   else if(ui.item.value == 'german') {
+		// 	  	waypoint1A[0].disable();
+		// 	  	waypoint1B[0].enable();
+		// 	}
+
+		// });
 
 		$(window).scroll(function (event) { // calculate scroll position so enabling discourse 2 happens locally
 		    var scrollPosition = $(window).scrollTop();
