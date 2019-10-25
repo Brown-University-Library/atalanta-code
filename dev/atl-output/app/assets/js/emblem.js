@@ -84,8 +84,8 @@ $(function () {
 	var waypointD2L
 	var scrollPos = 0;
 	var waypointDedication1 = '.section__dedication';
-	var waypointDedication2 = '.section__dedication .ab:nth-of-type(2)';
-	var waypointDedication3
+	var waypointDedication2 = '.section__dedication .page:nth-of-type(2)';
+	var waypointDedication3 = '.section__dedication .page:nth-of-type(3)';
 	// var germanEpigramWaypoint;
 	// var englishEpigramWaypoint;
 
@@ -540,35 +540,46 @@ $(function () {
 	});
 
 	if(myEmblemDataNum === 3) { // DEDICATION (frontispiece and author's epigram are single pages anyway)
-	var waypoint = new Waypoint({
-		element: document.querySelector(waypointDedication1), // tells waypoint which DOM element's position to observe on scroll
+	var waypoint = $('.dedication:nth-of-type(1)').waypoint({ // tells waypoint which DOM element's position to observe on scroll
 		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 			if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
-				console.log("hit dedication 1 waypoint down");
+				console.log("hit dedication Latin waypoint down");
+				console.log(myEmblemDataNum);
 				zoomingViewer.goToPage(myEmblemDataNum + 7);
+
 			}
 			else { // if scrolling back up the page
-				console.log("hit dedication 1 waypoint up");
 				// zoomingViewer.goToPage(myEmblemDataNum + 6);
 			}
 		},
-		offset: 0, // moving the trigger location from 0 at the top of the viewport
+		offset: 0 // moving the trigger location from 0 at the top of the viewport
 	})
-	var waypoint = new Waypoint({
-			element: document.querySelector(waypointDedication2), // tells waypoint which DOM element's position to observe on scroll
-			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-				if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
-					console.log(waypointDedication2);
-					console.log("hit dedication 2 Latin waypoint down");
-					zoomingViewer.goToPage(myEmblemDataNum + 9);
-				}
-				else { // if scrolling back up the page
-					console.log("hit dedication 2 Latin waypoint up");
-					zoomingViewer.goToPage(myEmblemDataNum + 8);
-				}
-			},
-			offset: 200, // moving the trigger location from 0 at the top of the viewport
-		})
+	var waypoint = $('.dedication:nth-of-type(2)').waypoint({
+		handler: function(direction) {
+			if(direction === 'down') {
+				console.log("hit dedication 2 Latin waypoint down");
+				zoomingViewer.goToPage(myEmblemDataNum + 8);
+			}
+			else {
+				console.log("hit dedication 2 Latin waypoint up");
+				zoomingViewer.goToPage(myEmblemDataNum + 7);
+			}
+		},
+		offset: 300
+	})
+	// var waypoint = $('.pc:nth-of-type(3)').waypoint({
+	// 	handler: function(direction) {
+	// 		if(direction === 'down') {
+	// 			console.log("hit dedication 3 Latin waypoint down");
+	// 			zoomingViewer.goToPage(myEmblemDataNum + 9);
+	// 		}
+	// 		else {
+	// 			console.log("hit dedication 3 Latin waypoint up");
+	// 			zoomingViewer.goToPage(myEmblemDataNum + 8);
+	// 		}
+	// 	},
+	// 	offset: 900
+	// })
 	/*if($('.section__dedication div.original').hasClass('is-shown')) {
 		console.log("THIS SHOULD WORK");
 
@@ -612,7 +623,20 @@ $(function () {
 
 	}
 	else if(myEmblemDataNum === 4) { // PREFACE
-
+		//THERE ARE NO PAGE BREAKS IN THE ENGLISH PREFACE TO TIE A WAYPOINT TO
+		// var waypoint = $('.dedication:nth-of-type(2)').waypoint({
+		// 	handler: function(direction) {
+		// 		if(direction === 'down') {
+		// 			console.log("hit preface 1 waypoint down");
+		// 			zoomingViewer.goToPage(myEmblemDataNum + 8);
+		// 		}
+		// 		else {
+		// 			console.log("hit preface 1  waypoint up");
+		// 			zoomingViewer.goToPage(myEmblemDataNum + 7);
+		// 		}
+		// 	},
+		// 	offset: 300
+		// })
 	}
 	else { // EMBLEMS 1—50
 		/*** MOTTO WAYPOINT ENGLISH / LATIN ***/
