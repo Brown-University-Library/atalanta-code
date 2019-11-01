@@ -423,7 +423,9 @@ main.emblem-page.frontmatter {
 }
 /*********** END OF LATIN/GERMAN EMBLEM OVERRIDES *************/
 
-/*********** EMBLEM LAYOUT *************/
+
+
+/*********** EMBLEM TEXT LAYOUT *************/
 main.emblem-page, 
 main.emblem-page.frontmatter {
 	color: $text_body;
@@ -948,15 +950,6 @@ main.emblem-page[data-id='5'] .edition--facsimile div.discourse div.margin-note:
 /*********** END OF EMBLEM LAYOUT *************/
 
 
-/*********** ENGLISH EMBLEM XML STYLES *************/
-main.emblem-page, 
-main.emblem-page.frontmatter {
-	.translation div.edition--facsimile span.underline2 {
-		border-bottom: 2px solid $gray;
-	}
-}
-	/*********** END OF ENGLISH EMBLEM STYLES *************/
-
 
 /*********** COLLECTIONS OVERRIDES *************/
 
@@ -995,10 +988,31 @@ main.emblem-page.frontmatter section.section__preface .original {
 		line-height: 1.5;
 	}
 }
-
-
 /*********** END OF COLLECTIONS OVERRIDES *************/
 
+
+/*********** GENERAL ENGLISH TEXT STYLES *************/
+main.emblem-page, 
+main.emblem-page.frontmatter {
+	.translation div.edition--facsimile span.underline2 {
+		border-bottom: 2px solid $gray;
+	}
+}
+/*********** END OF GENERAL ENGLISH TEXT STYLES *************/
+
+
+/*********** GENERAL GERMAN TEXT STYLES *************/
+main.emblem-page {
+	._motto--german .latin {
+		font-family: $body-font_emblem;
+		font-weight: 400;
+	}
+	._epigram--german .latin {
+		font-style: oblique;
+		font-weight: 600;
+	}
+}
+/*********** END OF GENERAL GERMAN TEXT STYLES *************/
 
 
 /*********** FRONTMATTER *************/

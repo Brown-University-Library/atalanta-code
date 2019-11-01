@@ -6857,7 +6857,7 @@ main.emblem-page.frontmatter {
     /*        vertical-align: super;*/ }
 
 /*********** END OF LATIN/GERMAN EMBLEM OVERRIDES *************/
-/*********** EMBLEM LAYOUT *************/
+/*********** EMBLEM TEXT LAYOUT *************/
 main.emblem-page,
 main.emblem-page.frontmatter {
   color: #4d4d4d;
@@ -7583,12 +7583,6 @@ main.emblem-page[data-id='5'] .edition--facsimile div.discourse div.margin-note:
   margin-top: 10px; }
 
 /*********** END OF EMBLEM LAYOUT *************/
-/*********** ENGLISH EMBLEM XML STYLES *************/
-main.emblem-page .translation div.edition--facsimile span.underline2,
-main.emblem-page.frontmatter .translation div.edition--facsimile span.underline2 {
-  border-bottom: 2px solid #333; }
-
-/*********** END OF ENGLISH EMBLEM STYLES *************/
 /*********** COLLECTIONS OVERRIDES *************/
 main.emblem-page section.section__motto h1, main.emblem-page section.section__motto h3 {
   margin-bottom: 0; }
@@ -7616,6 +7610,22 @@ main.emblem-page.frontmatter section.section__preface .original .ab {
   line-height: 1.5; }
 
 /*********** END OF COLLECTIONS OVERRIDES *************/
+/*********** GENERAL ENGLISH TEXT STYLES *************/
+main.emblem-page .translation div.edition--facsimile span.underline2,
+main.emblem-page.frontmatter .translation div.edition--facsimile span.underline2 {
+  border-bottom: 2px solid #333; }
+
+/*********** END OF GENERAL ENGLISH TEXT STYLES *************/
+/*********** GENERAL GERMAN TEXT STYLES *************/
+main.emblem-page ._motto--german .latin {
+  font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
+  font-weight: 400; }
+
+main.emblem-page ._epigram--german .latin {
+  font-style: oblique;
+  font-weight: 600; }
+
+/*********** END OF GENERAL GERMAN TEXT STYLES *************/
 /*********** FRONTMATTER *************/
 main.emblem-page.frontmatter {
   background: white; }
