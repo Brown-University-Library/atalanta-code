@@ -163,6 +163,13 @@
 		.ui-selectmenu-menu.ui-selectmenu-open ul li div.ui-state-active {
 			width: 101%; /* solves white gap between item and ul border */
 		}
+		#layout-button {
+			display: none !important;
+		}
+	}
+	.subnav-v3 form {
+		width: 50vw;
+		left: 40%;
 	}
 }
 

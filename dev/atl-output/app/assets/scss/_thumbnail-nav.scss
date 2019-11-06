@@ -236,6 +236,10 @@ nav.digital-edition-nav.de-nav--open {
 			width: 25px;*/
 		}	
 	}
+	nav.digital-edition-nav.de-nav--closed button.thumbnail-trigger {
+		left: -60%;
+		width: 6.5rem;
+	}
 	nav.digital-edition-nav.de-nav--open {
 		.thumbnail-trigger > div {
 			transform: translate3d(-6px, -30px, 0);
