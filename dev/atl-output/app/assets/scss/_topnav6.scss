@@ -129,6 +129,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 	@include media ('>=xs-phone', '<tablet') {
 		.topnav__content {
 			/*flex: 1 0 75%;*/
+			display: none;
 		}
 	}
 	@include media ('>=tablet', '<desktop') {
