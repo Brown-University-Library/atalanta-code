@@ -3,7 +3,7 @@ function pug_escape(e){var a=""+e,t=pug_match_html.exec(a);if(!t)return e;var r,
 var pug_match_html=/["&<>]/;function pageTemplate(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (console, emblems, essaySectionNames, keywords, scholarship, searchTerm, sectionNames, str) {pug_html = pug_html + ("\u003Cdiv class=\"search-results\"\u003E\u003Cp class=\"lead\"\u003ESearch results for \"" + (pug_escape(null == (pug_interp = searchTerm) ? "" : pug_interp)) + "\"\u003C\u002Fp\u003E\u003Cdiv class=\"results\"\u003E" + (pug_escape(null == (pug_interp = console.log('keywords', keywords)) ? "" : pug_interp)) + (pug_escape(null == (pug_interp = console.log('emblems', emblems)) ? "" : pug_interp)) + (pug_escape(null == (pug_interp = console.log('scholarship', scholarship)) ? "" : pug_interp)));
 if ( keywords.length )
 {
-pug_html = pug_html + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003E \u003CEmblem\u003EImages\u003C\u002FEmblem\u003E\u003C\u002Fh2\u003E\u003Cdiv class=\"results__item--image-terms\"\u003E";
+pug_html = pug_html + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003EAtalanta fugiens Images\u003C\u002Fh2\u003E\u003Cdiv class=\"results__item--image-terms\"\u003E";
 // iterate keywords
 ;(function(){
   var $$obj = keywords;
@@ -26,7 +26,7 @@ pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 }
 if ( emblems.length ) 
 {
-pug_html = pug_html + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003E\u003Ccite\u003EAtalanta fugiens\u003C\u002Fcite\u003E\u003C\u002Fh2\u003E";
+pug_html = pug_html + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003EAtalanta fugiens Text\u003C\u002Fh2\u003E";
 // iterate emblems
 ;(function(){
   var $$obj = emblems;
@@ -287,7 +287,7 @@ pug_html = pug_html + "\u003C\u002Fdiv\u003E";
 }
 if ( scholarship.length )
 {
-pug_html = pug_html + (pug_escape(null == (pug_interp = console.log("Scholarship", scholarship)) ? "" : pug_interp)) + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003E\u003CScholarly\u003EEssays\u003C\u002FScholarly\u003E\u003C\u002Fh2\u003E";
+pug_html = pug_html + (pug_escape(null == (pug_interp = console.log("Scholarship", scholarship)) ? "" : pug_interp)) + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003EScholarly Essays\u003C\u002Fh2\u003E";
 // iterate scholarship
 ;(function(){
   var $$obj = scholarship;

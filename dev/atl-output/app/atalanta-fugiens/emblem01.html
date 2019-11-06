@@ -19,7 +19,8 @@
   section.facsimile,
   div#tools,
   div#basic-waypoint__1,
-  section#basic-waypoint__2,
+  section#basic-waypoint__2 .transport,
+  section#basic-waypoint__2 .pianoroll,
   div.collections-wrapper,
   .ui-menu-item,
   span.pb {
@@ -27,9 +28,8 @@
   body {
     padding-top: 3rem; }
   body div.margin-note {
-  	font-family: sans-serif !important;
-    font-style: italic;
-	margin-left: .5in !important; }
+    font-family: sans-serif !important;
+    font-style: italic; }
   body div.margin-note .note-mark {
     font-style: normal; }
   section.section__motto div.title {
@@ -44,9 +44,11 @@
     margin-bottom: 0 !important; }
   main.emblem-page .panel--right section.section__epigram {
     margin-top: 6rem !important; }
+  section#basic-waypoint__2 {
+    margin-top: 4rem; }
   .discourse-p1 > h3 {
     margin-top: 7rem !important;
-    margin-bottom: 2.5rem !important; } }
+    margin-bottom: 5rem !important; } }
 
 @media print {
   div.translation div.lang--english.edition--normalized {
@@ -58,6 +60,12 @@
     div.translation div.lang--english.edition--normalized span.del,
     div.translation div.lang--english.edition--normalized span.subst .del {
       display: none !important; }
+    div.translation div.lang--english.edition--normalized .discourse-p2 {
+      border-top: 2px solid gray;
+      margin-top: 4rem;
+      padding-top: 4rem; }
+    div.translation div.lang--english.edition--normalized .discourse-p2 h3 {
+      display: none !important; }
   div.original.is-hidden div.lang--latin.edition--regularized,
   div.original.is-hidden div.lang--latin.edition--facsimile,
   div.original.is-hidden div.lang--german.edition--facsimile {
@@ -66,14 +74,24 @@
 @media print {
   div.translation div.lang--english.edition--facsimile {
     display: grid !important; }
-    div.translation div.lang--english.edition--facsimile span.original {
-      display: inline-block; }
     div.translation div.lang--english.edition--facsimile span.regularized,
     div.translation div.lang--english.edition--facsimile span.pb {
       display: none !important; }
     div.translation div.lang--english.edition--facsimile span.del .unclear,
     div.translation div.lang--english.edition--facsimile span.subst .del {
-      text-decoration: line-through; }
+      display: none !important; }
+    div.translation div.lang--english.edition--facsimile span.subst .add:before {
+      content: "<"; }
+    div.translation div.lang--english.edition--facsimile span.subst .add:after {
+      content: ">"; }
+    div.translation div.lang--english.edition--facsimile span.unclear:before {
+      content: "["; }
+    div.translation div.lang--english.edition--facsimile span.unclear:after {
+      content: "]"; }
+    div.translation div.lang--english.edition--facsimile .discourse-p2 {
+      border-top: 2px solid gray;
+      margin-top: 4rem;
+      padding-top: 4rem; }
   div.original.is-hidden div.lang--latin.edition--regularized,
   div.original.is-hidden div.lang--latin.edition--facsimile,
   div.original.is-hidden div.lang--german.edition--facsimile {
@@ -84,6 +102,10 @@
     display: grid !important; }
     div.original div.lang--latin.edition--regularized span.original {
       display: none !important; }
+    div.original div.lang--latin.edition--regularized .discourse-p2 {
+      border-top: 2px solid gray;
+      margin-top: 4rem;
+      padding-top: 4rem; }
   div.translation.is-hidden div.lang--english.edition--normalized,
   div.translation.is-hidden div.lang--english.edition--facsimile,
   div.original div.lang--german.edition--facsimile.is-hidden {
@@ -101,6 +123,10 @@
     display: grid !important; }
     div.original div.lang--latin.edition--original span.regularized {
       display: none !important; }
+    div.original div.lang--latin.edition--original .discourse-p2 {
+      border-top: 2px solid gray;
+      margin-top: 4rem;
+      padding-top: 4rem; }
   div.translation.is-hidden div.lang--english.edition--normalized,
   div.translation.is-hidden div.lang--english.edition--facsimile,
   div.original div.lang--german.edition--facsimile.is-hidden {
@@ -120,13 +146,16 @@
   div.translation.is-hidden div.lang--english.edition--facsimile,
   div.original div.lang--latin.edition--regularized.is-hidden,
   div.original div.lang--latin.edition--facsimile.is-hidden {
+    /* div.original div.lang--latin._discourse--latin .discourse.la { */
     display: none !important; }
     div.translation.is-hidden div.lang--english.edition--normalized span.regularized,
     div.translation.is-hidden div.lang--english.edition--facsimile span.regularized,
     div.original div.lang--latin.edition--regularized.is-hidden span.regularized,
     div.original div.lang--latin.edition--facsimile.is-hidden span.regularized {
-      display: none !important; } }
-
+      display: none !important; }
+  /* div.original div.lang--latin._discourse--latin .discourse.la:before {
+		content:"unavailable";
+	} */ }
 
 	</style>
 </head>
@@ -554,7 +583,7 @@
 				<!-- Motto -->
 				<div class="my-offset-debug"></div>
 				<section id="basic-waypoint__0" class="section__motto grid--full">
-					<div class="translation">
+					<div class="translation is-shown">
 						<div class="lang--english _motto--english edition--normalized" lang="en-US">
 							<div class="title">
 								<div xmlns:af="http://www.tei-c.org/ns/1.0" class="title">
@@ -585,7 +614,7 @@
 								<span class="pb atalanta-fugiens">12</span>
 					            <h3 class="title" lang="la">FUGA I. in Quarta, infrà.</h3>
 								<h1 class="title" lang="de">
-					                <br>Es hat ihn der Wind getragen im Bauche.
+					                <br>Es hat ihn der <span class="latin">Latonam</span> Wind getragen im Bauche.
 					            </h1>
 					        </div>
 					    </div>
@@ -11807,7 +11836,7 @@
 				<!-- Epigram -->
 				<div class="my-offset-debug"></div>
 				<section id="basic-waypoint__3" class="section__epigram grid--full">
-					<div class="translation">
+					<div id="my-waypoint" class="translation is-shown">
 						<div class="lang--english _epigram--english edition--normalized" lang="en-US">
 							<div xmlns:af="http://www.tei-c.org/ns/1.0" class="epigram">
 								<h3>the first <span class="original">Epigramme</span><span class="regularized">Epigram</span>.</h3>
@@ -11840,7 +11869,7 @@
 							<div xmlns:af="http://www.tei-c.org/ns/1.0" class="epigram de" lang="de">
 				               <h3 class="title" lang="la">II. Epigrammatis Latini versio Germanica.</h3>
 				               <div class="verse-epigram" lang="de">
-				                  <br/><span class="v-line">Romulus von einer Wölffin ist / aber Jupiter gesäuget</span>
+				                  <br/><span class="v-line">Romulus von einer <span class="latin">Latonam</span> Wölffin ist / aber Jupiter gesäuget</span>
 				                  <br/><span class="v-line-indent">Von einer Geiß/ wir solches das Gerüchte bezeuget.</span>
 				                  <br/><span class="v-line">Was Wunder ist / so wir sagen / daß der Weisen Kind ernehret</span>
 				                  <br/><span class="v-line-indent">Sey von der Erd / so ihm ihre Milch hat gewehret?</span>
@@ -11854,7 +11883,7 @@
 				<!-- Discourse -->
 				<div class="my-offset-debug"></div>
 				<section id="basic-waypoint__4" class="section__discourse grid--full">
-					<div class="translation">
+					<div class="translation is-shown">
 						<div class="lang--english _discourse--english edition--normalized text" lang="en-US">
 							<div xmlns:af="http://www.tei-c.org/ns/1.0" class="discourse">
 								<div class="discourse-p1">
@@ -12152,7 +12181,7 @@
 <!-- 	<script src="../assets/js/vendors/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 	<script src="../assets/js/vendors/OwlCarousel2-2.3.4/src/js/owl.navigation.js"></script> -->
 	<script src="../assets/js/emblem.js"></script>
-	<script src="../assets/js/zooming-image-viewer--openseadragon.js"></script>
+	<!-- <script src="../assets/js/zooming-image-viewer--openseadragon.js"></script> -->
 	<script src="../assets/js/notation.js"></script>
 </body>
 </html>

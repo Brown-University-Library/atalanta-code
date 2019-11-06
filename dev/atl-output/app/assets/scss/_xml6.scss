@@ -764,6 +764,11 @@ main.emblem-page.frontmatter {
 		.discourse-p2 {
 			/*line-height: 1.2;*/
 		}
+		.discourse-p2 {
+			border-top: 2px solid gray;
+			margin-top: 4rem;
+			padding-top: 4rem;
+		}
 		.edition--facsimile .discourse-p1, 
 		.edition--facsimile .discourse-pagebreak, 
 		.edition--facsimile .discourse-p2 {
@@ -800,6 +805,9 @@ main.emblem-page.frontmatter {
 			grid-column: 1 / 2;
 			line-height: 2;
 			text-align: center;
+		}
+		.discourse-p2 h3 {
+			display: none;
 		}
 /*		h3.title:nth-of-type(2) {
 			margin-top: 3rem;
@@ -931,15 +939,6 @@ main.emblem-page[data-id='5'] .edition--facsimile div.discourse div.margin-note:
 /*********** END OF EMBLEM LAYOUT *************/
 
 
-/*********** ENGLISH EMBLEM XML STYLES *************/
-main.emblem-page, 
-main.emblem-page.frontmatter {
-	.translation div.edition--facsimile span.underline2 {
-		border-bottom: 2px solid $gray;
-	}
-}
-	/*********** END OF ENGLISH EMBLEM STYLES *************/
-
 
 /*********** COLLECTIONS OVERRIDES *************/
 
@@ -978,10 +977,31 @@ main.emblem-page.frontmatter section.section__preface .original {
 		line-height: 1.5;
 	}
 }
-
-
 /*********** END OF COLLECTIONS OVERRIDES *************/
 
+
+/*********** GENERAL ENGLISH TEXT STYLES *************/
+main.emblem-page, 
+main.emblem-page.frontmatter {
+	.translation div.edition--facsimile span.underline2 {
+		border-bottom: 2px solid $gray;
+	}
+}
+/*********** END OF GENERAL ENGLISH TEXT STYLES *************/
+
+
+/*********** GENERAL GERMAN TEXT STYLES *************/
+main.emblem-page {
+	._motto--german .latin {
+		font-family: $body-font_emblem;
+		font-weight: 400;
+	}
+	._epigram--german .latin {
+		font-style: oblique;
+		font-weight: 600;
+	}
+}
+/*********** END OF GENERAL GERMAN TEXT STYLES *************/
 
 
 /*********** FRONTMATTER *************/
@@ -1497,6 +1517,12 @@ main.emblem-page.frontmatter {
 		.page:nth-of-type(1) > div:nth-of-type(2) {
 			font-size: 1.125rem;
 		}
+		div.page:nth-of-type(2), 
+		div.page:nth-of-type(3) {
+			border-top: 2px solid gray;
+			margin-top: 3.5rem;
+			padding-top: 4rem;
+		}
 		span.pb.atalanta-fugiens {
 			/*display: block;*/
 		}
@@ -1505,7 +1531,6 @@ main.emblem-page.frontmatter {
 		}	
 	}
 	section.section__dedication ._dedication--latin.edition--original {
-
 		.page:nth-of-type(1) > div:nth-of-type(2) {
 			font-style: oblique;
 		}
@@ -1513,19 +1538,28 @@ main.emblem-page.frontmatter {
 
 		}
 		span.original {
-			display: inline-block;
+/* HEAD
+			display: inline-block;  */
+			display: inline;
 		}
 		span.regularized {
 			display: none;
 		}
+		span.caps, 
+		span.smallCaps {
+			font-variant: small-caps;
+			letter-spacing: .2em;
+		}
 		span.caps-large {
-			text-transform: uppercase;
 			letter-spacing: .1em;
+			text-transform: uppercase;
 		}
 	}
 	section.section__dedication ._dedication--latin.edition--regularized {
 		span.italic {
-			font-style: normal;
+/* HEAD
+			font-style: normal;  */
+			font-style: oblique;
 		}
 		br {
 			/*display: none;*/
@@ -1534,7 +1568,21 @@ main.emblem-page.frontmatter {
 			display: none;
 		}
 		span.regularized {
-			display: inline-block;
+/* HEAD
+			display: inline-block;  */
+			display: inline;
+		}
+		span.caps, 
+		span.smallCaps {
+			font-variant: small-caps;
+			letter-spacing: .2em;
+		}
+		span.caps-large {
+			text-transform: uppercase;
+			letter-spacing: .1em;
+		}
+		div.page div:nth-child(3) {
+			font-style: oblique;
 		}
 	}
 	.panel--full section.section__dedication ._dedication--latin {
@@ -1573,7 +1621,25 @@ main.emblem-page.frontmatter {
 			grid-template-columns: repeat(12, 1fr);
 		}
 		._preface--english .preface {
+			font-family: $secondary-display-font_emblem;
+			font-size: 3rem;
 			padding: 0 6rem 0 2rem;
+		}
+		._preface--english .preface .ab {
+			font-family: $body-font_emblem;
+			font-size: 1.25rem;
+		}
+		._preface--latin h1 {
+			font-family: $secondary-display-font_emblem;
+			font-size: 3rem;
+		}
+		._preface--latin .page:nth-of-type(2), 
+		._preface--latin .page:nth-of-type(3), 
+		._preface--latin .page:nth-of-type(4), 
+		._preface--latin .page:nth-of-type(5) {
+			border-top: 2px solid gray;
+			margin-top: 4rem;
+			padding-top: 3rem;
 		}
 		div.margin-note {
 
@@ -1606,6 +1672,10 @@ main.emblem-page.frontmatter {
 			span.caps {
 				letter-spacing: .2em;
 			}
+			span.roman {
+				font-family: $secondary-display-font_emblem;
+				font-style: normal;
+			}
 		}
 		.edition--original, 
 		.edition--regularized {
@@ -1622,6 +1692,16 @@ main.emblem-page.frontmatter {
 				margin-left: -14px;
 			}
 		}
+/* HEAD */
+		.edition--regularized {
+			.ab.italic {
+				font-style: normal;
+			}
+			.ab.italic span.roman {
+				font-style: oblique;
+			}
+		}
+/* VIZ */
 	}
 	.panel--full section.section__preface {
 		padding-top: 5rem;
