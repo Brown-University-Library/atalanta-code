@@ -216,7 +216,8 @@ main.toc-wrapper {
 	.section__essays span.title a cite {
 		font-style: oblique;
 	}
-	.section__essays span.byline {
+	.section__essays span.byline, 
+	.section__performance span.byline {
 		color: $gray;
 		font-size: 17px;
 		font-weight: 600;
@@ -344,25 +345,29 @@ main.toc-wrapper {
 	}
 }
 /*** SPECIFIC BREAKPOINTS ***/
-@media screen and (min-width: 768px) and (max-width: 892px) {
+@media screen and (min-width: 768px) and (max-width: 811px) {
 	main.toc-wrapper {
 		.section__essays li:nth-child(2), 
 		.section__essays li:nth-child(3), 
 		.section__essays li:nth-child(4) {
-			margin-top: -62px;
+			margin-top: -26px;
 		}
 	}
 }
 @media screen and (min-width: 812px) and (max-width: 892px) {
 	main.toc-wrapper {
 		.section__essays li:nth-child(4) {
-			margin-top: -98px;
+			margin-top: -62px;
 		}
 	}
 }
 @media screen and (min-width: 893px) and (max-width: 999px) {
 	main.toc-wrapper {
 		.section__essays li:nth-child(4) {
+			margin-top: -26px;
+		}
+		.section__essays li:nth-child(6), 
+		.section__essays li:nth-child(7) {
 			margin-top: -62px;
 		}
 	}
@@ -381,14 +386,15 @@ main.toc-wrapper {
 		.section__essays li {
 			padding-right: 5rem;
 		}
-		.section__essays li:nth-child(2) {
+		.section__essays li:nth-child(2), 
+		.section__essays li:nth-child(3), 
+		.section__essays li:nth-child(7) {
+			margin-top: -26px;
+		}
+		.section__essays li:nth-child(4), 
+		.section__essays li:nth-child(6) {
+			//margin-top: -134px;
 			margin-top: -62px;
-		}
-		.section__essays li:nth-child(3) {
-			margin-top: -98px;
-		}
-		.section__essays li:nth-child(4) {
-			margin-top: -134px;
 		}
 	}
 }
@@ -402,20 +408,23 @@ main.toc-wrapper {
 }
 @media screen and (min-width: 1007px) and (max-width: 1320px) {
 	main.toc-wrapper {
-		.section__essays li:nth-child(2) {
+		.section__essays li:nth-child(4) {
 			margin-top: -26px;
 		}
-		.section__essays li:nth-child(3) {
-			margin-top: -62px;
-		}
-		.section__essays li:nth-child(4) {
+		.section__essays li:nth-child(6) {
 			margin-top: -98px;
+		}
+		.section__essays li:nth-child(7) {
+			margin-top: -62px;
 		}
 	}
 }
 @media screen and (min-width: 1054px) and (max-width: 1320px) {
 	main.toc-wrapper {
 		.section__essays li:nth-child(4) {
+			margin-top: -26px;
+		}
+		.section__essays li:nth-child(8) {
 			margin-top: -62px;
 		}
 	}
@@ -430,23 +439,49 @@ main.toc-wrapper {
 }
 @media screen and (min-width: 1274px) and (max-width: 1320px) {
 	main.toc-wrapper {
-		.section__essays li:nth-child(2) {
+		.section__essays li:nth-child(2), 
+		.section__essays li:nth-child(3), 
+		.section__essays li:nth-child(4), 
+		.section__essays li:nth-child(7), 
+		.section__essays li:nth-child(8) {
+			margin-top: -26px;
+		}
+		.section__essays li:nth-child(6) {
 			margin-top: -62px;
 		}
+	}
+}
+@media screen and (min-width: 1306px) and (max-width: 1320px) {
+	main.toc-wrapper {
 		.section__essays li:nth-child(3), 
 		.section__essays li:nth-child(4) {
-			margin-top: -98px;
+			margin-top: -62px;
+		}
+		.section__essays li:nth-child(6) {
+			margin-top: -26px;
 		}
 	}
 }
 @media screen and (min-width: 1321px) and (max-width: 1599px) {
 	main.toc-wrapper {
-		.section__essays li:nth-child(2) {
+		.section__essays li:nth-child(2), 
+		.section__essays li:nth-child(3), 
+		.section__essays li:nth-child(4) {
+			margin-top: -26px;
+		}
+		.section__essays li:nth-child(6) {
 			margin-top: -62px;
+		}
+	}
+}
+@media screen and (min-width: 1346px) and (max-width: 1599px) {
+	main.toc-wrapper {
+		.section__essays li:nth-child(6) {
+			margin-top: -26px;
 		}
 		.section__essays li:nth-child(3), 
 		.section__essays li:nth-child(4) {
-			margin-top: -98px;
+			margin-top: -62px;
 		}
 	}
 }
@@ -454,21 +489,50 @@ main.toc-wrapper {
 	main.toc-wrapper {
 		.section__essays li:nth-child(3), 
 		.section__essays li:nth-child(4) {
-			margin-top: -62px;
+			margin-top: -26px;
 		}
 	}
 }
 @media screen and (min-width: 1467px) and (max-width: 1599px) {
 	main.toc-wrapper {
 		.section__essays li:nth-child(4) {
-			margin-top: -98px;
+			margin-top: -62px;
 		}
 	}
 }
-@media screen and (min-width: 1600px) and (max-width: 1826px) {
+@media screen and (min-width: 1600px) and (max-width: 2000px) {
 	main.toc-wrapper {
 		.section__essays li:nth-child(4) {
+			margin-top: -26px;
+		}
+		.section__essays li:nth-child(6), 
+		.section__essays li:nth-child(7) {
 			margin-top: -62px;
+		}
+	}
+}
+@media screen and (min-width: 1827px) and (max-width: 1999px) {
+	main.toc-wrapper {
+		.section__essays li:nth-child(8) {
+			margin-top: -62px;
+		}
+	}
+}
+@media screen and (min-width: 2000px) and (max-width: 2999px) {
+	main.toc-wrapper {
+		.section__essays li:nth-child(6), 
+		.section__essays li:nth-child(7), 
+		.section__essays li:nth-child(8) {
+			margin-top: -62px;
+		}
+	}
+}
+@media screen and (min-width: 2072px) and (max-width: 2999px) {
+	main.toc-wrapper {
+		.section__essays li:nth-child(6), 
+		.section__essays li:nth-child(7), 
+		.section__essays li:nth-child(8) {
+			margin-top: -26px;
 		}
 	}
 }
