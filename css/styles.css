@@ -4353,7 +4353,8 @@ main.toc-wrapper {
     padding-bottom: 0; }
   main.toc-wrapper .section__essays span.title a cite {
     font-style: oblique; }
-  main.toc-wrapper .section__essays span.byline {
+  main.toc-wrapper .section__essays span.byline,
+  main.toc-wrapper .section__performance span.byline {
     color: #333;
     font-size: 17px;
     font-weight: 600; }
@@ -4464,18 +4465,21 @@ main.toc-wrapper {
     margin-top: -26px; } }
 
 /*** SPECIFIC BREAKPOINTS ***/
-@media screen and (min-width: 768px) and (max-width: 892px) {
+@media screen and (min-width: 768px) and (max-width: 811px) {
   main.toc-wrapper .section__essays li:nth-child(2),
   main.toc-wrapper .section__essays li:nth-child(3),
   main.toc-wrapper .section__essays li:nth-child(4) {
-    margin-top: -62px; } }
+    margin-top: -26px; } }
 
 @media screen and (min-width: 812px) and (max-width: 892px) {
   main.toc-wrapper .section__essays li:nth-child(4) {
-    margin-top: -98px; } }
+    margin-top: -62px; } }
 
 @media screen and (min-width: 893px) and (max-width: 999px) {
   main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-top: -26px; }
+  main.toc-wrapper .section__essays li:nth-child(6),
+  main.toc-wrapper .section__essays li:nth-child(7) {
     margin-top: -62px; } }
 
 @media screen and (min-width: 1000px) and (max-width: 1320px) {
@@ -4487,12 +4491,13 @@ main.toc-wrapper {
     margin: 4rem -2.5rem 0 0; }
   main.toc-wrapper .section__essays li {
     padding-right: 5rem; }
-  main.toc-wrapper .section__essays li:nth-child(2) {
-    margin-top: -62px; }
-  main.toc-wrapper .section__essays li:nth-child(3) {
-    margin-top: -98px; }
-  main.toc-wrapper .section__essays li:nth-child(4) {
-    margin-top: -134px; } }
+  main.toc-wrapper .section__essays li:nth-child(2),
+  main.toc-wrapper .section__essays li:nth-child(3),
+  main.toc-wrapper .section__essays li:nth-child(7) {
+    margin-top: -26px; }
+  main.toc-wrapper .section__essays li:nth-child(4),
+  main.toc-wrapper .section__essays li:nth-child(6) {
+    margin-top: -62px; } }
 
 @media screen and (min-width: 1000px) and (max-width: 1245px) {
   main.toc-wrapper .section__hero-img {
@@ -4500,15 +4505,17 @@ main.toc-wrapper {
     background-size: 245%; } }
 
 @media screen and (min-width: 1007px) and (max-width: 1320px) {
-  main.toc-wrapper .section__essays li:nth-child(2) {
-    margin-top: -26px; }
-  main.toc-wrapper .section__essays li:nth-child(3) {
-    margin-top: -62px; }
   main.toc-wrapper .section__essays li:nth-child(4) {
-    margin-top: -98px; } }
+    margin-top: -26px; }
+  main.toc-wrapper .section__essays li:nth-child(6) {
+    margin-top: -98px; }
+  main.toc-wrapper .section__essays li:nth-child(7) {
+    margin-top: -62px; } }
 
 @media screen and (min-width: 1054px) and (max-width: 1320px) {
   main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-top: -26px; }
+  main.toc-wrapper .section__essays li:nth-child(8) {
     margin-top: -62px; } }
 
 @media screen and (min-width: 1246px) and (max-width: 1320px) {
@@ -4517,31 +4524,68 @@ main.toc-wrapper {
     background-size: 220%; } }
 
 @media screen and (min-width: 1274px) and (max-width: 1320px) {
-  main.toc-wrapper .section__essays li:nth-child(2) {
-    margin-top: -62px; }
+  main.toc-wrapper .section__essays li:nth-child(2),
+  main.toc-wrapper .section__essays li:nth-child(3),
+  main.toc-wrapper .section__essays li:nth-child(4),
+  main.toc-wrapper .section__essays li:nth-child(7),
+  main.toc-wrapper .section__essays li:nth-child(8) {
+    margin-top: -26px; }
+  main.toc-wrapper .section__essays li:nth-child(6) {
+    margin-top: -62px; } }
+
+@media screen and (min-width: 1306px) and (max-width: 1320px) {
   main.toc-wrapper .section__essays li:nth-child(3),
   main.toc-wrapper .section__essays li:nth-child(4) {
-    margin-top: -98px; } }
+    margin-top: -62px; }
+  main.toc-wrapper .section__essays li:nth-child(6) {
+    margin-top: -26px; } }
 
 @media screen and (min-width: 1321px) and (max-width: 1599px) {
-  main.toc-wrapper .section__essays li:nth-child(2) {
-    margin-top: -62px; }
+  main.toc-wrapper .section__essays li:nth-child(2),
   main.toc-wrapper .section__essays li:nth-child(3),
   main.toc-wrapper .section__essays li:nth-child(4) {
-    margin-top: -98px; } }
+    margin-top: -26px; }
+  main.toc-wrapper .section__essays li:nth-child(6) {
+    margin-top: -62px; } }
+
+@media screen and (min-width: 1346px) and (max-width: 1599px) {
+  main.toc-wrapper .section__essays li:nth-child(6) {
+    margin-top: -26px; }
+  main.toc-wrapper .section__essays li:nth-child(3),
+  main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-top: -62px; } }
 
 @media screen and (min-width: 1383px) and (max-width: 1599px) {
   main.toc-wrapper .section__essays li:nth-child(3),
   main.toc-wrapper .section__essays li:nth-child(4) {
-    margin-top: -62px; } }
+    margin-top: -26px; } }
 
 @media screen and (min-width: 1467px) and (max-width: 1599px) {
   main.toc-wrapper .section__essays li:nth-child(4) {
-    margin-top: -98px; } }
-
-@media screen and (min-width: 1600px) and (max-width: 1826px) {
-  main.toc-wrapper .section__essays li:nth-child(4) {
     margin-top: -62px; } }
+
+@media screen and (min-width: 1600px) and (max-width: 2000px) {
+  main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-top: -26px; }
+  main.toc-wrapper .section__essays li:nth-child(6),
+  main.toc-wrapper .section__essays li:nth-child(7) {
+    margin-top: -62px; } }
+
+@media screen and (min-width: 1827px) and (max-width: 1999px) {
+  main.toc-wrapper .section__essays li:nth-child(8) {
+    margin-top: -62px; } }
+
+@media screen and (min-width: 2000px) and (max-width: 2999px) {
+  main.toc-wrapper .section__essays li:nth-child(6),
+  main.toc-wrapper .section__essays li:nth-child(7),
+  main.toc-wrapper .section__essays li:nth-child(8) {
+    margin-top: -62px; } }
+
+@media screen and (min-width: 2072px) and (max-width: 2999px) {
+  main.toc-wrapper .section__essays li:nth-child(6),
+  main.toc-wrapper .section__essays li:nth-child(7),
+  main.toc-wrapper .section__essays li:nth-child(8) {
+    margin-top: -26px; } }
 
 .search__modal {
   /*	background-color: $red_transparent;*/
@@ -6701,11 +6745,10 @@ main.emblem-page.frontmatter {
   main.emblem-page.frontmatter .edition--normalized .subst .del .unclear {
     display: none; }
   main.emblem-page .edition--normalized .unclear:before,
-  main.emblem-page.frontmatter .edition--normalized .unclear:before {
-    display: none; }
-  main.emblem-page .edition--normalized .unclear:after,
-  main.emblem-page.frontmatter .edition--normalized .unclear:after {
-    display: none; }
+  main.emblem-page .edition--facsimile .unclear:before,
+  main.emblem-page.frontmatter .edition--normalized .unclear:before,
+  main.emblem-page.frontmatter .edition--facsimile .unclear:before {
+    content: "["; }
   main.emblem-page .add:before,
   main.emblem-page.frontmatter .add:before {
     color: #4d4d4d; }
@@ -9070,7 +9113,7 @@ body {
 
 /* Playing notes */
 .music.with-js .cmn .highlighted {
-  fill: #0051ff; }
+  fill: #dc4928; }
 
 /* Muted playing notes */
 .music.with-js .cmn .muted .highlighted {
@@ -9202,7 +9245,7 @@ button.lity-close {
   display: block; }
 
 .pianoroll .note.highlighted {
-  fill: #0051ff; }
+  fill: #dc4928; }
 
 .pianoroll .voice-1 {
   fill: #608ca9; }
@@ -10030,9 +10073,7 @@ main#image-search {
     background-color: gray; }
 
 .container--inactive {
-  display: none;
-  background-color: orange;
-  /*height: 40vh;*/ }
+  display: none; }
 
 .image-results__container {
   display: -webkit-box;
@@ -10643,13 +10684,13 @@ main#essay-toc li:hover {
   cursor: pointer; }
 
 main#essay-toc .essay1 {
-  background-position: 50% 90%;
+  background-position: 50% 75%;
   background-size: 112%;
   background-blend-mode: multiply; }
 
 main#essay-toc .essay1:hover {
   background: #dc4928;
-  background-position: 50% 90%;
+  background-position: 50% 75%;
   background-size: 112%;
   background-blend-mode: multiply; }
 
@@ -10750,6 +10791,22 @@ main#essay-toc h6 {
 
 main#essay-toc cite {
   font-style: oblique; }
+
+@supports not (background-blend-mode: multiply) {
+  main#essay-toc li {
+    background: transparent;
+    background-blend-mode: unset; }
+  main#essay-toc li:before {
+    background: rgba(143, 26, 0, 0.85);
+    content: '';
+    height: 17.75rem;
+    position: absolute;
+    left: 0;
+    width: 100%; }
+  main#essay-toc h2,
+  main#essay-toc h4,
+  main#essay-toc h6 {
+    z-index: 2; } }
 
 div._footer {
   background: #333;
