@@ -223,11 +223,13 @@ main.emblem-page.frontmatter {
 	.edition--normalized .subst .del .unclear {
 		display: none;
 	}
-	.edition--normalized .unclear:before {
-		display: none;
+	.edition--normalized .unclear:before, 
+	.edition--facsimile .unclear:before {
+		content: "[";
 	}
-	.edition--normalized .unclear:after {
-		display: none;
+	.edition--normalized .unclear:after, 
+	.edition--facsimile .unclear:after {
+		
 	}
 	.add:before {
 		color: $text_body;

@@ -6745,11 +6745,10 @@ main.emblem-page.frontmatter {
   main.emblem-page.frontmatter .edition--normalized .subst .del .unclear {
     display: none; }
   main.emblem-page .edition--normalized .unclear:before,
-  main.emblem-page.frontmatter .edition--normalized .unclear:before {
-    display: none; }
-  main.emblem-page .edition--normalized .unclear:after,
-  main.emblem-page.frontmatter .edition--normalized .unclear:after {
-    display: none; }
+  main.emblem-page .edition--facsimile .unclear:before,
+  main.emblem-page.frontmatter .edition--normalized .unclear:before,
+  main.emblem-page.frontmatter .edition--facsimile .unclear:before {
+    content: "["; }
   main.emblem-page .add:before,
   main.emblem-page.frontmatter .add:before {
     color: #4d4d4d; }
