@@ -10074,9 +10074,7 @@ main#image-search {
     background-color: gray; }
 
 .container--inactive {
-  display: none;
-  background-color: orange;
-  /*height: 40vh;*/ }
+  display: none; }
 
 .image-results__container {
   display: -webkit-box;
