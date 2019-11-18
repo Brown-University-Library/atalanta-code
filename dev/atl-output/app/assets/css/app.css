@@ -10687,13 +10687,13 @@ main#essay-toc li:hover {
   cursor: pointer; }
 
 main#essay-toc .essay1 {
-  background-position: 50% 90%;
+  background-position: 50% 75%;
   background-size: 112%;
   background-blend-mode: multiply; }
 
 main#essay-toc .essay1:hover {
   background: #dc4928;
-  background-position: 50% 90%;
+  background-position: 50% 75%;
   background-size: 112%;
   background-blend-mode: multiply; }
 
@@ -10794,6 +10794,22 @@ main#essay-toc h6 {
 
 main#essay-toc cite {
   font-style: oblique; }
+
+@supports not (background-blend-mode: multiply) {
+  main#essay-toc li {
+    background: transparent;
+    background-blend-mode: unset; }
+  main#essay-toc li:before {
+    background: rgba(143, 26, 0, 0.85);
+    content: '';
+    height: 17.75rem;
+    position: absolute;
+    left: 0;
+    width: 100%; }
+  main#essay-toc h2,
+  main#essay-toc h4,
+  main#essay-toc h6 {
+    z-index: 2; } }
 
 div._footer {
   background: #333;

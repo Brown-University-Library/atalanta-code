@@ -15,7 +15,6 @@ main#essay-toc {
 		background: $red_dark;
 		background-repeat: no-repeat;
 		background-size: cover;
-
 		margin-bottom: 10px;
 		padding: 0 6.75rem;
 	}
@@ -42,13 +41,13 @@ main#essay-toc {
 
 	}
 	.essay1 {
-		background-position: 50% 90%;
+		background-position: 50% 75%;
 		background-size: 112%;
 		background-blend-mode: multiply;
 	}
 	.essay1:hover {
 		background: $red;
-		background-position: 50% 90%;
+		background-position: 50% 75%;
 		background-size: 112%;
 		background-blend-mode: multiply;
 	}
@@ -150,5 +149,26 @@ main#essay-toc {
 	}
 	cite {
 		font-style: oblique;
+	}
+}
+@supports not (background-blend-mode: multiply) {
+	main#essay-toc {
+		li {
+			background: transparent;
+			background-blend-mode: unset;
+		}
+		li:before {
+			background: hsla(11, 100%, 28%, 0.85);
+			content: '';
+			height: 17.75rem;
+			position: absolute;
+			left: 0;
+			width: 100%;
+		}
+		h2,
+		h4,  
+		h6 {
+			z-index: 2;
+		}
 	}
 }
