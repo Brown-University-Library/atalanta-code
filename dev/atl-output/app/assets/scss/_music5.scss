@@ -179,7 +179,7 @@ body {
 
 /* Playing notes */
 .music.with-js .cmn .highlighted {
-	fill: $yellow_inverse;
+	fill: $red;
 }
 /* Muted playing notes */
 .music.with-js .cmn .muted .highlighted {
@@ -327,7 +327,7 @@ button.lity-close {
 	display: block;
 }
 .pianoroll .note.highlighted {
-	fill: $yellow_inverse;
+	fill: $red;
 }
 .pianoroll .voice-1 {
 	fill: $blue_desaturated;

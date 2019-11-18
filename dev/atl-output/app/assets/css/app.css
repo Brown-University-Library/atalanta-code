@@ -9114,7 +9114,7 @@ body {
 
 /* Playing notes */
 .music.with-js .cmn .highlighted {
-  fill: #0051ff; }
+  fill: #dc4928; }
 
 /* Muted playing notes */
 .music.with-js .cmn .muted .highlighted {
@@ -9246,7 +9246,7 @@ button.lity-close {
   display: block; }
 
 .pianoroll .note.highlighted {
-  fill: #0051ff; }
+  fill: #dc4928; }
 
 .pianoroll .voice-1 {
   fill: #608ca9; }
