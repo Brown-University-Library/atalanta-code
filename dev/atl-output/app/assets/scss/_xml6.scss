@@ -482,18 +482,18 @@ main.emblem-page.frontmatter {
 			line-height: 3.25rem;
 			text-align: center;
 		}
-		.translation h1 br, 
-		.translation h1.title br, 
-		.original h1.title br, 
-		.translation h3 br, 
-		.translation h3.title br, 
-		.original h3.title br {
+		div.translation h1 > .original:first-of-type > br, 
+		div.translation h1.title > .original:first-of-type > br, 
+		div.original h1.title br, 
+		div.translation h3 > .original:first-of-type > br, 
+		div.translation h3.title > .original:first-of-type > br, 
+		div.original h3.title br {
 			display: none;
 		}
-		.translation .edition--facsimile h1 br, 
-		.translation .edition--facsimile h1.title br, 
-		.translation .edition--facsimile h3 br
-		.translation .edition--facsimile h3.title br {
+		div.translation .edition--facsimile h1 > .original:first-of-type > br, 
+		div.translation .edition--facsimile h1.title > .original:first-of-type > br, 
+		div.translation .edition--facsimile h3 > .original:first-of-type > br
+		div.translation .edition--facsimile h3.title > .original:first-of-type > br {
 			display: none;
 		}
 		.translation h3, 

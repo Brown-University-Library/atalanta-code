@@ -6994,28 +6994,28 @@ main.emblem-page.frontmatter section.section__motto .original h1.title {
   line-height: 3.25rem;
   text-align: center; }
 
-main.emblem-page section.section__motto .translation h1 br,
-main.emblem-page section.section__motto .translation h1.title br,
-main.emblem-page section.section__motto .original h1.title br,
-main.emblem-page section.section__motto .translation h3 br,
-main.emblem-page section.section__motto .translation h3.title br,
-main.emblem-page section.section__motto .original h3.title br,
-main.emblem-page.frontmatter section.section__motto .translation h1 br,
-main.emblem-page.frontmatter section.section__motto .translation h1.title br,
-main.emblem-page.frontmatter section.section__motto .original h1.title br,
-main.emblem-page.frontmatter section.section__motto .translation h3 br,
-main.emblem-page.frontmatter section.section__motto .translation h3.title br,
-main.emblem-page.frontmatter section.section__motto .original h3.title br {
+main.emblem-page section.section__motto div.translation h1 > .original:first-of-type > br,
+main.emblem-page section.section__motto div.translation h1.title > .original:first-of-type > br,
+main.emblem-page section.section__motto div.original h1.title br,
+main.emblem-page section.section__motto div.translation h3 > .original:first-of-type > br,
+main.emblem-page section.section__motto div.translation h3.title > .original:first-of-type > br,
+main.emblem-page section.section__motto div.original h3.title br,
+main.emblem-page.frontmatter section.section__motto div.translation h1 > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.translation h1.title > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.original h1.title br,
+main.emblem-page.frontmatter section.section__motto div.translation h3 > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.translation h3.title > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.original h3.title br {
   display: none; }
 
-main.emblem-page section.section__motto .translation .edition--facsimile h1 br,
-main.emblem-page section.section__motto .translation .edition--facsimile h1.title br,
-main.emblem-page section.section__motto .translation .edition--facsimile h3 br
-.translation .edition--facsimile h3.title br,
-main.emblem-page.frontmatter section.section__motto .translation .edition--facsimile h1 br,
-main.emblem-page.frontmatter section.section__motto .translation .edition--facsimile h1.title br,
-main.emblem-page.frontmatter section.section__motto .translation .edition--facsimile h3 br
-.translation .edition--facsimile h3.title br {
+main.emblem-page section.section__motto div.translation .edition--facsimile h1 > .original:first-of-type > br,
+main.emblem-page section.section__motto div.translation .edition--facsimile h1.title > .original:first-of-type > br,
+main.emblem-page section.section__motto div.translation .edition--facsimile h3 > .original:first-of-type > br
+div.translation .edition--facsimile h3.title > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.translation .edition--facsimile h1 > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.translation .edition--facsimile h1.title > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.translation .edition--facsimile h3 > .original:first-of-type > br
+div.translation .edition--facsimile h3.title > .original:first-of-type > br {
   display: none; }
 
 main.emblem-page section.section__motto .translation h3,
