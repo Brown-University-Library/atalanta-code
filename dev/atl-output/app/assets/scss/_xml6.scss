@@ -293,6 +293,10 @@ main.emblem-page.frontmatter {
 		span.original {
 			display: none;
 		}
+		/* 11/20 */
+		.margin-note span.original {
+			display: inline;
+		}
 		span.regularized {
 			color: $text_body;
 		}
@@ -336,7 +340,6 @@ main.emblem-page.frontmatter {
 		.epigram {
 			text-indent: 0 !important;
 		}
-		
 	}
 	span.underline2 {
 		border-bottom: none;
@@ -917,10 +920,6 @@ main.emblem-page.frontmatter {
 			padding-right: 1rem;
 		} */
 	}
-	.panel--right 
-		div.margin-note span.original:nth-of-type(2) br { /* why does this margin note need a line break after the sup??? */
-			display: none;
-		}
 }
 main.emblem-page .panel--right {
 	.section__discourse.grid--full span.note-mark:nth-of-type(2) { /* why is this a different size than other note marks??? */
@@ -939,9 +938,61 @@ main.emblem-page .panel--full section.section__discourse div.discourse {
 /*	grid-column: 3 / 13;
 	padding: 0;*/
 }
-/* overlapping discourse margin note in emblem 1 original English */
+/* Emblem 1 margin notes: overlapping in Diplomatic English */
 main.emblem-page[data-id='5'] .edition--facsimile div.discourse div.margin-note:nth-of-type(4) {
 	margin-top: 10px;
+}
+/* 11/20 */
+/* Dedication margin notes */
+main.emblem-page[data-id='3'] {
+	div.margin-note span.original:nth-of-type(2) > br {
+		display: none;
+	}
+	.edition--normalized div.margin-note span.original:nth-of-type(3) {
+		display: none;
+	}
+	.edition--facsimile div.margin-note span.original:nth-of-type(3) > br {
+		display: block;
+	}
+}
+
+
+/* Preface margin notes */
+main.emblem-page[data-id='4'] {
+	
+}
+
+
+
+
+/* Emblem 26 margin notes */
+main.emblem-page[data-id='30'] {
+	section.section__discourse .discourse-p2 {
+		div.margin-note:nth-of-type(2), 
+		div.margin-note:nth-of-type(6), 
+		div.margin-note:nth-of-type(8) {
+			line-height: .9;
+			margin-top: -5px;
+			span.original br {
+				display: block;
+			}
+		}
+	}
+	section.section__discourse .edition--normalized .discourse-p2 {
+		div.margin-note:nth-of-type(2) span.original,
+		div.margin-note:nth-of-type(6) span.original,
+		div.margin-note:nth-of-type(8) span.original {
+			line-height: 0;
+		}
+	}
+	section.section__discourse .edition--normalized div.margin-note:nth-of-type(8) span.original, 
+	section.section__discourse .edition--facsimile div.margin-note:nth-of-type(8) span.regularized {
+		display: none;
+	}
+	section.section__discourse .edition--facsimile div.margin-note:nth-of-type(8) span.original, 
+	section.section__discourse .edition--normalized div.margin-note:nth-of-type(8) span.regularized {
+		display: inline-block;
+	}
 }
 /*********** END OF EMBLEM LAYOUT *************/
 
@@ -1490,9 +1541,6 @@ main.emblem-page.frontmatter {
 		.ab:nth-child(even) {
 			margin-top: -1rem;
 		}*/
-		div.margin-note span.original:nth-of-type(2) br { /* why does "of blessed me=mory" need a line break after the sup??? */
-			display: none;
-		}
 	}
 	.panel--full section.section__dedication ._dedication--english.edition--facsimile {
 		padding: 3rem 0;
@@ -1550,8 +1598,6 @@ main.emblem-page.frontmatter {
 
 		}
 		span.original {
-/* HEAD
-			display: inline-block;  */
 			display: inline;
 		}
 		span.regularized {
@@ -1580,8 +1626,6 @@ main.emblem-page.frontmatter {
 			display: none;
 		}
 		span.regularized {
-/* HEAD
-			display: inline-block;  */
 			display: inline;
 		}
 		span.caps, 
@@ -1738,9 +1782,6 @@ main.emblem-page.frontmatter {
 		div.margin-note {
 			left: 78vw;
 			width: 15vw;
-		}
-		div.margin-note span.original:nth-of-type(2) br { /* why does the first note need a line break after the sup??? */
-			display: none;
 		}
 	}
 }
