@@ -6808,6 +6808,7 @@ main.emblem-page.frontmatter {
     font-style: oblique; }
   main.emblem-page .edition--normalized,
   main.emblem-page.frontmatter .edition--normalized {
+    /* 11/20 */
     /*	.pb, .ab.pb {
 			display: none;
 		}*/ }
@@ -6817,6 +6818,9 @@ main.emblem-page.frontmatter {
     main.emblem-page .edition--normalized span.original,
     main.emblem-page.frontmatter .edition--normalized span.original {
       display: none; }
+    main.emblem-page .edition--normalized .margin-note span.original,
+    main.emblem-page.frontmatter .edition--normalized .margin-note span.original {
+      display: inline; }
     main.emblem-page .edition--normalized span.regularized,
     main.emblem-page.frontmatter .edition--normalized span.regularized {
       color: #4d4d4d; }
@@ -6994,28 +6998,28 @@ main.emblem-page.frontmatter section.section__motto .original h1.title {
   line-height: 3.25rem;
   text-align: center; }
 
-main.emblem-page section.section__motto .translation h1 br,
-main.emblem-page section.section__motto .translation h1.title br,
-main.emblem-page section.section__motto .original h1.title br,
-main.emblem-page section.section__motto .translation h3 br,
-main.emblem-page section.section__motto .translation h3.title br,
-main.emblem-page section.section__motto .original h3.title br,
-main.emblem-page.frontmatter section.section__motto .translation h1 br,
-main.emblem-page.frontmatter section.section__motto .translation h1.title br,
-main.emblem-page.frontmatter section.section__motto .original h1.title br,
-main.emblem-page.frontmatter section.section__motto .translation h3 br,
-main.emblem-page.frontmatter section.section__motto .translation h3.title br,
-main.emblem-page.frontmatter section.section__motto .original h3.title br {
+main.emblem-page section.section__motto div.translation h1 > .original:first-of-type > br,
+main.emblem-page section.section__motto div.translation h1.title > .original:first-of-type > br,
+main.emblem-page section.section__motto div.original h1.title br,
+main.emblem-page section.section__motto div.translation h3 > .original:first-of-type > br,
+main.emblem-page section.section__motto div.translation h3.title > .original:first-of-type > br,
+main.emblem-page section.section__motto div.original h3.title br,
+main.emblem-page.frontmatter section.section__motto div.translation h1 > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.translation h1.title > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.original h1.title br,
+main.emblem-page.frontmatter section.section__motto div.translation h3 > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.translation h3.title > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.original h3.title br {
   display: none; }
 
-main.emblem-page section.section__motto .translation .edition--facsimile h1 br,
-main.emblem-page section.section__motto .translation .edition--facsimile h1.title br,
-main.emblem-page section.section__motto .translation .edition--facsimile h3 br
-.translation .edition--facsimile h3.title br,
-main.emblem-page.frontmatter section.section__motto .translation .edition--facsimile h1 br,
-main.emblem-page.frontmatter section.section__motto .translation .edition--facsimile h1.title br,
-main.emblem-page.frontmatter section.section__motto .translation .edition--facsimile h3 br
-.translation .edition--facsimile h3.title br {
+main.emblem-page section.section__motto div.translation .edition--facsimile h1 > .original:first-of-type > br,
+main.emblem-page section.section__motto div.translation .edition--facsimile h1.title > .original:first-of-type > br,
+main.emblem-page section.section__motto div.translation .edition--facsimile h3 > .original:first-of-type > br
+div.translation .edition--facsimile h3.title > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.translation .edition--facsimile h1 > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.translation .edition--facsimile h1.title > .original:first-of-type > br,
+main.emblem-page.frontmatter section.section__motto div.translation .edition--facsimile h3 > .original:first-of-type > br
+div.translation .edition--facsimile h3.title > .original:first-of-type > br {
   display: none; }
 
 main.emblem-page section.section__motto .translation h3,
@@ -7629,13 +7633,6 @@ main.emblem-page.frontmatter .panel--right section.section__discourse div.discou
 			padding-right: 1rem;
 		} */ }
 
-main.emblem-page .panel--right
-div.margin-note span.original:nth-of-type(2) br,
-main.emblem-page.frontmatter .panel--right
-div.margin-note span.original:nth-of-type(2) br {
-  /* why does this margin note need a line break after the sup??? */
-  display: none; }
-
 main.emblem-page .panel--right .section__discourse.grid--full span.note-mark:nth-of-type(2) {
   /* why is this a different size than other note marks??? */
   margin-left: 1rem; }
@@ -7651,9 +7648,110 @@ main.emblem-page .panel--full section.section__discourse div.discourse {
   /*	grid-column: 3 / 13;
 	padding: 0;*/ }
 
-/* overlapping discourse margin note in emblem 1 original English */
+/* Emblem 1 margin notes: overlapping in Diplomatic English */
 main.emblem-page[data-id='5'] .edition--facsimile div.discourse div.margin-note:nth-of-type(4) {
   margin-top: 10px; }
+
+/* 11/20 */
+/* Dedication margin notes */
+main.emblem-page[data-id='3'] div.margin-note span.original:nth-of-type(2) > br {
+  display: none; }
+
+main.emblem-page[data-id='3'] .edition--normalized div.margin-note span.original:nth-of-type(3) {
+  display: none; }
+
+main.emblem-page[data-id='3'] .edition--facsimile div.margin-note span.original:nth-of-type(3) > br {
+  display: block; }
+
+/* Preface margin notes */
+main.emblem-page[data-id='4'] div.margin-note span.original:nth-of-type(2) > br {
+  display: none; }
+
+main.emblem-page[data-id='4'] .edition--normalized div.margin-note span.original:nth-of-type(n+3) {
+  display: none; }
+
+/* Emblem 1 margin notes */
+main.emblem-page[data-id='5'] .panel--right section.section__discourse .edition--facsimile div.margin-note span.original:nth-of-type(2) br {
+  display: block; }
+
+main.emblem-page[data-id='5'] section.section__discourse .edition--normalized div.margin-note span.original {
+  display: none; }
+
+main.emblem-page[data-id='5'] section.section__discourse .edition--facsimile div.margin-note span.regularized {
+  display: none; }
+
+main.emblem-page[data-id='5'] section.section__discourse .edition--facsimile .discourse-p2 div.margin-note:nth-of-type(3) {
+  line-height: .9; }
+
+/* Emblem 5 margin notes */
+main.emblem-page[data-id='9'] section.section__discourse .edition--normalized div.margin-note span.original {
+  display: none; }
+
+main.emblem-page[data-id='9'] section.section__discourse .edition--facsimile div.margin-note span.regularized {
+  display: none; }
+
+/* Emblem 6 margin notes */
+main.emblem-page[data-id='10'] section.section__discourse .edition--normalized .discourse-p1 div.margin-note:nth-of-type(1) span.original {
+  display: none; }
+
+main.emblem-page[data-id='10'] section.section__discourse .edition--normalized .discourse-p2 div.margin-note span.original {
+  display: none; }
+
+main.emblem-page[data-id='10'] section.section__discourse .edition--facsimile .discourse-p1 div.margin-note:nth-of-type(1) span.regularized {
+  display: none; }
+
+main.emblem-page[data-id='10'] section.section__discourse .edition--facsimile .discourse-p2 div.margin-note span.regularized {
+  display: none; }
+
+main.emblem-page[data-id='10'] section.section__discourse .edition--regularized div.margin-note span.original {
+  display: none; }
+
+main.emblem-page[data-id='10'] section.section__discourse .edition--original div.margin-note span.regularized {
+  display: none; }
+
+/* Emblem 19 margin notes */
+main.emblem-page[data-id='23'] section.section__discourse div.original div.margin-note span.note-mark {
+  top: 0; }
+
+main.emblem-page[data-id='23'] section.section__discourse .edition--regularized div.margin-note span.original {
+  display: none; }
+
+main.emblem-page[data-id='23'] section.section__discourse .edition--original div.margin-note span.regularized {
+  display: none; }
+
+/* Emblem 24 margin notes */
+main.emblem-page[data-id='28'] section.section__discourse .edition--normalized .discourse-p1 div.margin-note span.original {
+  display: none; }
+
+main.emblem-page[data-id='28'] section.section__discourse .edition--facsimile .discourse-p1 div.margin-note span.regularized {
+  display: none; }
+
+/* Emblem 26 margin notes */
+main.emblem-page[data-id='30'] section.section__discourse .discourse-p2 div.margin-note:nth-of-type(2),
+main.emblem-page[data-id='30'] section.section__discourse .discourse-p2 div.margin-note:nth-of-type(6),
+main.emblem-page[data-id='30'] section.section__discourse .discourse-p2 div.margin-note:nth-of-type(8) {
+  line-height: .9;
+  margin-top: -5px; }
+  main.emblem-page[data-id='30'] section.section__discourse .discourse-p2 div.margin-note:nth-of-type(2) span.original br,
+  main.emblem-page[data-id='30'] section.section__discourse .discourse-p2 div.margin-note:nth-of-type(6) span.original br,
+  main.emblem-page[data-id='30'] section.section__discourse .discourse-p2 div.margin-note:nth-of-type(8) span.original br {
+    display: block; }
+
+main.emblem-page[data-id='30'] section.section__discourse .edition--normalized .discourse-p2 div.margin-note:nth-of-type(2) span.original,
+main.emblem-page[data-id='30'] section.section__discourse .edition--normalized .discourse-p2 div.margin-note:nth-of-type(6) span.original,
+main.emblem-page[data-id='30'] section.section__discourse .edition--normalized .discourse-p2 div.margin-note:nth-of-type(8) span.original {
+  line-height: 0; }
+
+main.emblem-page[data-id='30'] section.section__discourse .edition--facsimile .discourse-p2 div.margin-note:nth-of-type(8) {
+  margin-top: 5px; }
+
+main.emblem-page[data-id='30'] section.section__discourse .edition--normalized div.margin-note:nth-of-type(8) span.original,
+main.emblem-page[data-id='30'] section.section__discourse .edition--facsimile div.margin-note:nth-of-type(8) span.regularized {
+  display: none; }
+
+main.emblem-page[data-id='30'] section.section__discourse .edition--facsimile div.margin-note:nth-of-type(8) span.original,
+main.emblem-page[data-id='30'] section.section__discourse .edition--normalized div.margin-note:nth-of-type(8) span.regularized {
+  display: inline-block; }
 
 /*********** END OF EMBLEM LAYOUT *************/
 /*********** COLLECTIONS OVERRIDES *************/
@@ -8168,9 +8266,6 @@ main.emblem-page.frontmatter {
       font-size: 1rem;
       left: 94vw;
       line-height: 1.2; }
-    main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.margin-note span.original:nth-of-type(2) br {
-      /* why does "of blessed me=mory" need a line break after the sup??? */
-      display: none; }
   main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--facsimile {
     padding: 3rem 0; }
     main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-child(2) {
@@ -8205,8 +8300,6 @@ main.emblem-page.frontmatter {
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--original .page:nth-of-type(1) > div:nth-of-type(2) {
     font-style: oblique; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--original span.original {
-    /* HEAD
-			display: inline-block;  */
     display: inline; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--original span.regularized {
     display: none; }
@@ -8226,8 +8319,6 @@ main.emblem-page.frontmatter {
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.original {
     display: none; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.regularized {
-    /* HEAD
-			display: inline-block;  */
     display: inline; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.caps,
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin.edition--regularized span.smallCaps {
@@ -8336,9 +8427,6 @@ main.emblem-page.frontmatter .panel--full section.section__preface {
   main.emblem-page.frontmatter .panel--full section.section__preface div.margin-note {
     left: 78vw;
     width: 15vw; }
-  main.emblem-page.frontmatter .panel--full section.section__preface div.margin-note span.original:nth-of-type(2) br {
-    /* why does the first note need a line break after the sup??? */
-    display: none; }
 
 /*********** END OF FRONTMATTER *************/
 /*********** TESTS *************/
