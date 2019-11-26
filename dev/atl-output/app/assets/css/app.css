@@ -6640,21 +6640,14 @@ main.emblem-page.frontmatter {
     margin-left: .5rem; }
   main.emblem-page .subst,
   main.emblem-page.frontmatter .subst {
-    background: transparent;
-    /* which css file is this from??? */ }
+    background-color: transparent;
+    /* which css file is this from??? */
+    margin-left: 0; }
 
 main.emblem-page,
 main.emblem-page.frontmatter {
   /*********** ENGLISH EMBLEM OVERRIDES *************/
-  /*	h1.title {
-		text-align: left;
-	}
-	h3.title {
-	    margin-top: 0;
-	    text-align: left;
-	}*/
-  /********************************/
-  /*********** END OF ENGLISH EMBLEM OVERRIDES *************/ }
+  /********************************/ }
 
 @page {
   main.emblem-page,
@@ -6688,16 +6681,11 @@ main.emblem-page.frontmatter {
   main.emblem-page.frontmatter .verse-epigram {
     margin-top: 0;
     text-align: left;
-    margin-left: 0;
-    /*font-style: normal;*/ }
-  main.emblem-page .verse-discourse,
-  main.emblem-page.frontmatter .verse-discourse {
+    margin-left: 0; }
+  main.emblem-page div.translation .verse-discourse,
+  main.emblem-page.frontmatter div.translation .verse-discourse {
     margin-top: 0;
-    margin-left: 0;
-    /*	    margin-bottom: 0;*/ }
-  main.emblem-page h3.title,
-  main.emblem-page.frontmatter h3.title {
-    /*font-style: normal;*/ }
+    margin-left: 5rem; }
   main.emblem-page .pb,
   main.emblem-page.frontmatter .pb {
     background: rgba(242, 188, 176, 0.4);
@@ -6755,6 +6743,15 @@ main.emblem-page.frontmatter {
   main.emblem-page .add:after,
   main.emblem-page.frontmatter .add:after {
     color: #4d4d4d; }
+  main.emblem-page .panel--full section.section__motto .add:before,
+  main.emblem-page .panel--full section.section__epigram .add:before,
+  main.emblem-page .panel--full section.section__motto .add:after,
+  main.emblem-page .panel--full section.section__epigram .add:after,
+  main.emblem-page.frontmatter .panel--full section.section__motto .add:before,
+  main.emblem-page.frontmatter .panel--full section.section__epigram .add:before,
+  main.emblem-page.frontmatter .panel--full section.section__motto .add:after,
+  main.emblem-page.frontmatter .panel--full section.section__epigram .add:after {
+    color: white; }
   main.emblem-page .edition--normalized .add:before,
   main.emblem-page.frontmatter .edition--normalized .add:before {
     display: none; }
@@ -6868,6 +6865,7 @@ main.emblem-page.frontmatter {
     margin: 0 .25rem;
     white-space: nowrap; }
 
+/*********** END OF ENGLISH EMBLEM OVERRIDES *************/
 main.emblem-page,
 main.emblem-page.frontmatter {
   /*********** LATIN/GERMAN EMBLEM OVERRIDES *************/ }
@@ -6895,11 +6893,14 @@ main.emblem-page.frontmatter {
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 0; }
-  main.emblem-page .verse-discourse,
-  main.emblem-page.frontmatter .verse-discourse {
+  main.emblem-page div.original .verse-discourse,
+  main.emblem-page.frontmatter div.original .verse-discourse {
     margin-top: 0;
-    margin-left: 0;
+    margin-left: 3.5rem;
     margin-bottom: 0; }
+  main.emblem-page span.v-line-discourse,
+  main.emblem-page.frontmatter span.v-line-discourse {
+    margin-left: 0; }
   main.emblem-page span.v-line-indent,
   main.emblem-page span.v-line,
   main.emblem-page.frontmatter span.v-line-indent,
@@ -6934,6 +6935,94 @@ main.emblem-page.frontmatter {
     /*        vertical-align: super;*/ }
 
 /*********** END OF LATIN/GERMAN EMBLEM OVERRIDES *************/
+/* emblem 25 Latin verse in English discourse corrections */
+main.emblem-page[data-id='29'] div.translation .edition--normalized .verse-discourse {
+  margin-bottom: 1.6875rem; }
+
+/* emblem 33 Latin verse in English discourse corrections */
+main.emblem-page[data-id='37'] div.translation .verse-discourse {
+  margin-bottom: 1.6875rem; }
+
+main.emblem-page[data-id='37'] div.translation .verse-discourse span.v-line {
+  margin-bottom: .375rem; }
+
+main.emblem-page[data-id='37'] div.translation .verse-discourse br {
+  display: none; }
+
+main.emblem-page[data-id='37'] div.translation .verse-discourse > br:first-of-type {
+  display: block; }
+
+/* emblem 37 Latin verse in English discourse corrections */
+main.emblem-page[data-id='41'] div.translation .edition--regularized .verse-discourse:nth-of-type(2) {
+  margin-bottom: 1.6875rem; }
+
+main.emblem-page[data-id='41'] div.translation .verse-discourse span.v-line {
+  margin-bottom: .375rem; }
+
+main.emblem-page[data-id='41'] div.translation .verse-discourse br {
+  display: none; }
+
+main.emblem-page[data-id='41'] div.translation .verse-discourse:nth-of-type(1) > br:first-of-type {
+  display: block; }
+
+/* emblem 37 verse in Latin discourse corrections */
+main.emblem-page[data-id='41'] div.original .verse-discourse {
+  margin-top: 1.6875rem; }
+
+main.emblem-page[data-id='42'] {
+  /* emblem 38 Latin verse in English discourse corrections */
+  /* emblem 38 verse in Latin discourse corrections */ }
+  main.emblem-page[data-id='42'] div.translation .edition--normalized .verse-discourse {
+    margin-bottom: 1.6875rem; }
+  main.emblem-page[data-id='42'] div.translation .verse-discourse span.v-line {
+    margin-bottom: .375rem; }
+  main.emblem-page[data-id='42'] div.translation .verse-discourse br {
+    display: none; }
+  main.emblem-page[data-id='42'] div.translation .verse-discourse > br:first-of-type {
+    display: block; }
+  main.emblem-page[data-id='42'] div.original .verse-discourse {
+    margin-top: 1.6875rem; }
+
+/* emblem 41 Latin verse in English discourse corrections */
+main.emblem-page[data-id='45'] {
+  /* emblem 41 verse in Latin discourse corrections */ }
+  main.emblem-page[data-id='45'] div.translation .edition--normalized .verse-discourse:nth-of-type(2) {
+    margin-bottom: 1.6875rem; }
+  main.emblem-page[data-id='45'] div.translation .edition--facsimile .verse-discourse:first-of-type {
+    margin-bottom: -1.6875rem; }
+  main.emblem-page[data-id='45'] div.translation .verse-discourse:nth-of-type(2) {
+    margin-top: .375rem; }
+  main.emblem-page[data-id='45'] div.translation .verse-discourse span.v-line {
+    margin-bottom: .375rem; }
+  main.emblem-page[data-id='45'] div.translation .verse-discourse br {
+    display: none; }
+  main.emblem-page[data-id='45'] div.translation .verse-discourse:first-of-type > br:first-of-type {
+    display: block; }
+  main.emblem-page[data-id='45'] div.original .verse-discourse {
+    margin-top: 1.6875rem; }
+  main.emblem-page[data-id='45'] div.original .verse-discourse {
+    margin-bottom: -1.6875rem; }
+  main.emblem-page[data-id='45'] div.original .italic.indent .verse-discourse {
+    margin-top: 0;
+    margin-bottom: 0; }
+  main.emblem-page[data-id='45'] div.original span.indent {
+    /* override. check to see if this occurs elsewhere??? */
+    text-indent: 0; }
+
+/* emblem 43 Latin verse in English discourse corrections */
+main.emblem-page[data-id='47'] {
+  /* emblem 43 verse in Latin discourse corrections */ }
+  main.emblem-page[data-id='47'] div.translation .verse-discourse:first-of-type {
+    margin-top: 1.6875rem; }
+  main.emblem-page[data-id='47'] div.translation .edition--normalized .verse-discourse:last-of-type {
+    margin-bottom: 1.6875rem; }
+  main.emblem-page[data-id='47'] div.translation .verse-discourse > span.v-line {
+    margin-bottom: .375rem; }
+  main.emblem-page[data-id='47'] div.translation .verse-discourse > br {
+    display: none; }
+  main.emblem-page[data-id='47'] div.original .verse-discourse {
+    margin-top: 1.6875rem; }
+
 /*********** EMBLEM LAYOUT *************/
 main.emblem-page,
 main.emblem-page.frontmatter {
@@ -7000,16 +7089,18 @@ main.emblem-page.frontmatter section.section__motto .original h1.title {
 
 main.emblem-page section.section__motto div.translation h1 > .original:first-of-type > br,
 main.emblem-page section.section__motto div.translation h1.title > .original:first-of-type > br,
-main.emblem-page section.section__motto div.original h1.title br,
+main.emblem-page section.section__motto div.original h1.title > br:first-of-type,
 main.emblem-page section.section__motto div.translation h3 > .original:first-of-type > br,
 main.emblem-page section.section__motto div.translation h3.title > .original:first-of-type > br,
-main.emblem-page section.section__motto div.original h3.title br,
+main.emblem-page section.section__motto div.original h3.title > br:first-of-type,
+main.emblem-page section.section__motto div.original .edition--regularized h3.title > br,
 main.emblem-page.frontmatter section.section__motto div.translation h1 > .original:first-of-type > br,
 main.emblem-page.frontmatter section.section__motto div.translation h1.title > .original:first-of-type > br,
-main.emblem-page.frontmatter section.section__motto div.original h1.title br,
+main.emblem-page.frontmatter section.section__motto div.original h1.title > br:first-of-type,
 main.emblem-page.frontmatter section.section__motto div.translation h3 > .original:first-of-type > br,
 main.emblem-page.frontmatter section.section__motto div.translation h3.title > .original:first-of-type > br,
-main.emblem-page.frontmatter section.section__motto div.original h3.title br {
+main.emblem-page.frontmatter section.section__motto div.original h3.title > br:first-of-type,
+main.emblem-page.frontmatter section.section__motto div.original .edition--regularized h3.title > br {
   display: none; }
 
 main.emblem-page section.section__motto div.translation .edition--facsimile h1 > .original:first-of-type > br,
@@ -7443,7 +7534,7 @@ main.emblem-page.frontmatter section.section__preface {
   main.emblem-page.frontmatter section.section__preface .edition--facsimile .discourse-p1,
   main.emblem-page.frontmatter section.section__preface .edition--facsimile .discourse-pagebreak,
   main.emblem-page.frontmatter section.section__preface .edition--facsimile .discourse-p2 {
-    margin-right: -4rem; }
+    margin-right: -12rem; }
   main.emblem-page section.section__discourse ._discourse--english .ab,
   main.emblem-page section.section__discourse ._discourse--latin .discourse-p1,
   main.emblem-page section.section__discourse ._discourse--latin .discourse-p2,
@@ -7507,10 +7598,10 @@ main.emblem-page.frontmatter section.section__preface {
   main.emblem-page.frontmatter section.section__discourse .discourse-p2 h3,
   main.emblem-page.frontmatter section.section__preface .discourse-p2 h3 {
     display: none; }
-  main.emblem-page section.section__discourse div.translation div.discourse .ab span.original:nth-of-type(1) br,
-  main.emblem-page section.section__preface div.translation div.discourse .ab span.original:nth-of-type(1) br,
-  main.emblem-page.frontmatter section.section__discourse div.translation div.discourse .ab span.original:nth-of-type(1) br,
-  main.emblem-page.frontmatter section.section__preface div.translation div.discourse .ab span.original:nth-of-type(1) br {
+  main.emblem-page section.section__discourse div.translation div.discourse .ab .ab > span.original:nth-of-type(1) br,
+  main.emblem-page section.section__preface div.translation div.discourse .ab .ab > span.original:nth-of-type(1) br,
+  main.emblem-page.frontmatter section.section__discourse div.translation div.discourse .ab .ab > span.original:nth-of-type(1) br,
+  main.emblem-page.frontmatter section.section__preface div.translation div.discourse .ab .ab > span.original:nth-of-type(1) br {
     display: none; }
   main.emblem-page section.section__discourse div.original div.discourse.la .ab > br:nth-child(1),
   main.emblem-page section.section__preface div.original div.discourse.la .ab > br:nth-child(1),
@@ -7632,6 +7723,117 @@ main.emblem-page.frontmatter .panel--right section.section__discourse div.discou
 			left: 85vw;
 			padding-right: 1rem;
 		} */ }
+
+/* emblems with margin notes */
+main.emblem-page[data-id='5'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='5'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='5'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='5'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='5'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='5'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='7'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='7'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='7'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='7'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='7'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='7'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='8'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='8'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='8'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='8'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='8'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='8'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='9'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='9'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='9'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='9'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='9'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='9'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='10'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='10'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='10'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='10'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='10'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='10'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='13'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='13'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='13'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='13'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='13'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='13'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='14'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='14'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='14'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='14'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='14'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='14'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='15'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='15'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='15'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='15'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='15'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='15'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='17'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='17'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='17'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='17'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='17'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='17'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='23'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='23'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='23'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='23'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='23'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='23'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='28'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='28'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='28'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='28'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='28'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='28'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='30'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='30'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='30'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='30'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='30'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='30'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='43'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='43'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='43'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='43'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='43'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='43'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='49'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='49'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='49'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='49'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='49'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='49'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='53'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='53'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='53'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='53'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='53'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='53'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page.frontmatter[data-id='2'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page.frontmatter[data-id='2'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page.frontmatter[data-id='2'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page.frontmatter[data-id='2'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page.frontmatter[data-id='2'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page.frontmatter[data-id='2'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page.frontmatter[data-id='3'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page.frontmatter[data-id='3'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page.frontmatter[data-id='3'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page.frontmatter[data-id='3'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page.frontmatter[data-id='3'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page.frontmatter[data-id='3'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page.frontmatter[data-id='4'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page.frontmatter[data-id='4'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page.frontmatter[data-id='4'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page.frontmatter[data-id='4'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page.frontmatter[data-id='4'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page.frontmatter[data-id='4'] section.section__preface .edition--facsimile .discourse-p2 {
+  margin-right: -4rem; }
 
 main.emblem-page .panel--right .section__discourse.grid--full span.note-mark:nth-of-type(2) {
   /* why is this a different size than other note marks??? */
@@ -8529,7 +8731,7 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
   main.emblem-page .panel--full section.section__epigram *:before,
   main.emblem-page .panel--full section.section__motto *:after,
   main.emblem-page .panel--full section.section__epigram *:after {
-    color: white; }
+    color: white !important; }
   main.emblem-page section.section__epigram .translation .verse-epigram,
   main.emblem-page section.section__epigram .original .verse-epigram {
     font-size: 1.5rem;
