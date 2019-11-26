@@ -6647,15 +6647,7 @@ main.emblem-page.frontmatter {
 main.emblem-page,
 main.emblem-page.frontmatter {
   /*********** ENGLISH EMBLEM OVERRIDES *************/
-  /*	h1.title {
-		text-align: left;
-	}
-	h3.title {
-	    margin-top: 0;
-	    text-align: left;
-	}*/
-  /********************************/
-  /*********** END OF ENGLISH EMBLEM OVERRIDES *************/ }
+  /********************************/ }
 
 @page {
   main.emblem-page,
@@ -6689,16 +6681,11 @@ main.emblem-page.frontmatter {
   main.emblem-page.frontmatter .verse-epigram {
     margin-top: 0;
     text-align: left;
-    margin-left: 0;
-    /*font-style: normal;*/ }
-  main.emblem-page .verse-discourse,
-  main.emblem-page.frontmatter .verse-discourse {
+    margin-left: 0; }
+  main.emblem-page div.translation .verse-discourse,
+  main.emblem-page.frontmatter div.translation .verse-discourse {
     margin-top: 0;
-    margin-left: 0;
-    /*	    margin-bottom: 0;*/ }
-  main.emblem-page h3.title,
-  main.emblem-page.frontmatter h3.title {
-    /*font-style: normal;*/ }
+    margin-left: 5rem; }
   main.emblem-page .pb,
   main.emblem-page.frontmatter .pb {
     background: rgba(242, 188, 176, 0.4);
@@ -6878,6 +6865,7 @@ main.emblem-page.frontmatter {
     margin: 0 .25rem;
     white-space: nowrap; }
 
+/*********** END OF ENGLISH EMBLEM OVERRIDES *************/
 main.emblem-page,
 main.emblem-page.frontmatter {
   /*********** LATIN/GERMAN EMBLEM OVERRIDES *************/ }
@@ -6905,11 +6893,14 @@ main.emblem-page.frontmatter {
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 0; }
-  main.emblem-page .verse-discourse,
-  main.emblem-page.frontmatter .verse-discourse {
+  main.emblem-page div.original .verse-discourse,
+  main.emblem-page.frontmatter div.original .verse-discourse {
     margin-top: 0;
-    margin-left: 0;
+    margin-left: 3.5rem;
     margin-bottom: 0; }
+  main.emblem-page span.v-line-discourse,
+  main.emblem-page.frontmatter span.v-line-discourse {
+    margin-left: 0; }
   main.emblem-page span.v-line-indent,
   main.emblem-page span.v-line,
   main.emblem-page.frontmatter span.v-line-indent,
@@ -6944,6 +6935,94 @@ main.emblem-page.frontmatter {
     /*        vertical-align: super;*/ }
 
 /*********** END OF LATIN/GERMAN EMBLEM OVERRIDES *************/
+/* emblem 25 Latin verse in English discourse corrections */
+main.emblem-page[data-id='29'] div.translation .edition--normalized .verse-discourse {
+  margin-bottom: 1.6875rem; }
+
+/* emblem 33 Latin verse in English discourse corrections */
+main.emblem-page[data-id='37'] div.translation .verse-discourse {
+  margin-bottom: 1.6875rem; }
+
+main.emblem-page[data-id='37'] div.translation .verse-discourse span.v-line {
+  margin-bottom: .375rem; }
+
+main.emblem-page[data-id='37'] div.translation .verse-discourse br {
+  display: none; }
+
+main.emblem-page[data-id='37'] div.translation .verse-discourse > br:first-of-type {
+  display: block; }
+
+/* emblem 37 Latin verse in English discourse corrections */
+main.emblem-page[data-id='41'] div.translation .edition--regularized .verse-discourse:nth-of-type(2) {
+  margin-bottom: 1.6875rem; }
+
+main.emblem-page[data-id='41'] div.translation .verse-discourse span.v-line {
+  margin-bottom: .375rem; }
+
+main.emblem-page[data-id='41'] div.translation .verse-discourse br {
+  display: none; }
+
+main.emblem-page[data-id='41'] div.translation .verse-discourse:nth-of-type(1) > br:first-of-type {
+  display: block; }
+
+/* emblem 37 verse in Latin discourse corrections */
+main.emblem-page[data-id='41'] div.original .verse-discourse {
+  margin-top: 1.6875rem; }
+
+main.emblem-page[data-id='42'] {
+  /* emblem 38 Latin verse in English discourse corrections */
+  /* emblem 38 verse in Latin discourse corrections */ }
+  main.emblem-page[data-id='42'] div.translation .edition--normalized .verse-discourse {
+    margin-bottom: 1.6875rem; }
+  main.emblem-page[data-id='42'] div.translation .verse-discourse span.v-line {
+    margin-bottom: .375rem; }
+  main.emblem-page[data-id='42'] div.translation .verse-discourse br {
+    display: none; }
+  main.emblem-page[data-id='42'] div.translation .verse-discourse > br:first-of-type {
+    display: block; }
+  main.emblem-page[data-id='42'] div.original .verse-discourse {
+    margin-top: 1.6875rem; }
+
+/* emblem 41 Latin verse in English discourse corrections */
+main.emblem-page[data-id='45'] {
+  /* emblem 41 verse in Latin discourse corrections */ }
+  main.emblem-page[data-id='45'] div.translation .edition--normalized .verse-discourse:nth-of-type(2) {
+    margin-bottom: 1.6875rem; }
+  main.emblem-page[data-id='45'] div.translation .edition--facsimile .verse-discourse:first-of-type {
+    margin-bottom: -1.6875rem; }
+  main.emblem-page[data-id='45'] div.translation .verse-discourse:nth-of-type(2) {
+    margin-top: .375rem; }
+  main.emblem-page[data-id='45'] div.translation .verse-discourse span.v-line {
+    margin-bottom: .375rem; }
+  main.emblem-page[data-id='45'] div.translation .verse-discourse br {
+    display: none; }
+  main.emblem-page[data-id='45'] div.translation .verse-discourse:first-of-type > br:first-of-type {
+    display: block; }
+  main.emblem-page[data-id='45'] div.original .verse-discourse {
+    margin-top: 1.6875rem; }
+  main.emblem-page[data-id='45'] div.original .verse-discourse {
+    margin-bottom: -1.6875rem; }
+  main.emblem-page[data-id='45'] div.original .italic.indent .verse-discourse {
+    margin-top: 0;
+    margin-bottom: 0; }
+  main.emblem-page[data-id='45'] div.original span.indent {
+    /* override. check to see if this occurs elsewhere??? */
+    text-indent: 0; }
+
+/* emblem 43 Latin verse in English discourse corrections */
+main.emblem-page[data-id='47'] {
+  /* emblem 43 verse in Latin discourse corrections */ }
+  main.emblem-page[data-id='47'] div.translation .verse-discourse:first-of-type {
+    margin-top: 1.6875rem; }
+  main.emblem-page[data-id='47'] div.translation .edition--normalized .verse-discourse:last-of-type {
+    margin-bottom: 1.6875rem; }
+  main.emblem-page[data-id='47'] div.translation .verse-discourse > span.v-line {
+    margin-bottom: .375rem; }
+  main.emblem-page[data-id='47'] div.translation .verse-discourse > br {
+    display: none; }
+  main.emblem-page[data-id='47'] div.original .verse-discourse {
+    margin-top: 1.6875rem; }
+
 /*********** EMBLEM LAYOUT *************/
 main.emblem-page,
 main.emblem-page.frontmatter {

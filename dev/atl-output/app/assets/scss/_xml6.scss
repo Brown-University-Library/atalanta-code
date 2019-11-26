@@ -161,22 +161,10 @@ main.emblem-page.frontmatter {
 	    margin-top: 0;
 	    text-align: left;
 	    margin-left: 0;
-	    /*font-style: normal;*/
 	}
-	.verse-discourse {
+	div.translation .verse-discourse {
 	    margin-top: 0;
-	    margin-left: 0;
-/*	    margin-bottom: 0;*/
-	}
-/*	h1.title {
-		text-align: left;
-	}
-	h3.title {
-	    margin-top: 0;
-	    text-align: left;
-	}*/
-	h3.title {
-		/*font-style: normal;*/
+	    margin-left: 5rem;
 	}
 	.pb {
 		background: $error;
@@ -359,8 +347,8 @@ main.emblem-page.frontmatter {
 		margin: 0 .25rem;
 		white-space: nowrap;
 	}
-	/*********** END OF ENGLISH EMBLEM OVERRIDES *************/
 }
+/*********** END OF ENGLISH EMBLEM OVERRIDES *************/
 
 main.emblem-page, 
 main.emblem-page.frontmatter {
@@ -387,10 +375,13 @@ main.emblem-page.frontmatter {
 		margin-left: 0;
 		margin-bottom: 0;
 	}
-	.verse-discourse {
+	div.original .verse-discourse {
 		margin-top: 0;
-		margin-left: 0;
+		margin-left: 3.5rem;
 		margin-bottom: 0;
+	}
+	span.v-line-discourse {
+		margin-left: 0;
 	}
 	span.v-line-indent, 
 	span.v-line {
@@ -430,6 +421,122 @@ main.emblem-page.frontmatter {
 
 }
 /*********** END OF LATIN/GERMAN EMBLEM OVERRIDES *************/
+
+/* emblem 25 Latin verse in English discourse corrections */
+main.emblem-page[data-id='29'] {
+	div.translation .edition--normalized .verse-discourse {
+	    margin-bottom: 1.6875rem;
+	}
+}
+/* emblem 33 Latin verse in English discourse corrections */
+main.emblem-page[data-id='37'] {
+	div.translation .verse-discourse {
+	    margin-bottom: 1.6875rem;
+	}
+	div.translation .verse-discourse span.v-line {
+		margin-bottom: .375rem;
+	}
+	div.translation .verse-discourse br {
+		display: none;
+	}
+	div.translation .verse-discourse > br:first-of-type {
+		display: block;
+	}
+}
+/* emblem 37 Latin verse in English discourse corrections */
+main.emblem-page[data-id='41'] {
+	div.translation .edition--regularized .verse-discourse:nth-of-type(2) {
+	    margin-bottom: 1.6875rem;
+	}
+	div.translation .verse-discourse span.v-line {
+		margin-bottom: .375rem;
+	}
+	div.translation .verse-discourse br {
+		display: none;
+	}
+	div.translation .verse-discourse:nth-of-type(1) > br:first-of-type {
+		display: block;
+	}
+}
+/* emblem 37 verse in Latin discourse corrections */
+main.emblem-page[data-id='41'] {
+	div.original .verse-discourse {
+		margin-top: 1.6875rem;
+	}
+}
+main.emblem-page[data-id='42'] {
+/* emblem 38 Latin verse in English discourse corrections */
+	div.translation .edition--normalized .verse-discourse {
+	    margin-bottom: 1.6875rem;
+	}
+	div.translation .verse-discourse span.v-line {
+		margin-bottom: .375rem;
+	}
+	div.translation .verse-discourse br {
+		display: none;
+	}
+	div.translation .verse-discourse > br:first-of-type {
+		display: block;
+	}
+/* emblem 38 verse in Latin discourse corrections */
+	div.original .verse-discourse {
+		margin-top: 1.6875rem;
+	}
+}
+/* emblem 41 Latin verse in English discourse corrections */
+main.emblem-page[data-id='45'] {
+	div.translation .edition--normalized .verse-discourse:nth-of-type(2) {
+	    margin-bottom: 1.6875rem;
+	}
+	div.translation .edition--facsimile .verse-discourse:first-of-type {
+	    margin-bottom: -1.6875rem;
+	}
+	div.translation .verse-discourse:nth-of-type(2) {
+		margin-top: .375rem;
+	}
+	div.translation .verse-discourse span.v-line {
+		margin-bottom: .375rem;
+	}
+	div.translation .verse-discourse br {
+		display: none;
+	}
+	div.translation .verse-discourse:first-of-type > br:first-of-type {
+		display: block;
+	}
+/* emblem 41 verse in Latin discourse corrections */
+	div.original .verse-discourse {
+		margin-top: 1.6875rem;
+	}
+	div.original .verse-discourse {
+	    margin-bottom: -1.6875rem;
+	}
+	div.original .italic.indent .verse-discourse {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	div.original span.indent { /* override. check to see if this occurs elsewhere??? */
+		text-indent: 0;
+	}
+}
+/* emblem 43 Latin verse in English discourse corrections */
+main.emblem-page[data-id='47'] {
+	div.translation .verse-discourse:first-of-type {
+		margin-top: 1.6875rem;
+	}
+	div.translation .edition--normalized .verse-discourse:last-of-type {
+		margin-bottom: 1.6875rem;
+	}
+	div.translation .verse-discourse > span.v-line {
+		margin-bottom: .375rem;
+	}
+	div.translation .verse-discourse > br {
+		display: none;
+	}
+/* emblem 43 verse in Latin discourse corrections */
+	div.original .verse-discourse {
+		margin-top: 1.6875rem;
+	}	
+}
 
 /*********** EMBLEM LAYOUT *************/
 main.emblem-page, 
