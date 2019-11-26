@@ -494,10 +494,12 @@ main.emblem-page.frontmatter {
 		}
 		div.translation h1 > .original:first-of-type > br, 
 		div.translation h1.title > .original:first-of-type > br, 
-		div.original h1.title br, 
+		div.original h1.title > br:first-of-type, 
+		/* div.original .edition--regularized h1.title > br, */
 		div.translation h3 > .original:first-of-type > br, 
 		div.translation h3.title > .original:first-of-type > br, 
-		div.original h3.title br {
+		div.original h3.title > br:first-of-type, 
+		div.original .edition--regularized h3.title > br {
 			display: none;
 		}
 		div.translation .edition--facsimile h1 > .original:first-of-type > br, 
