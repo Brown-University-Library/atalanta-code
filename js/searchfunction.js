@@ -4,21 +4,20 @@ var doSearch;
 parseResults = function(results) {
     var outp = [];
     
-    console.log(results)
-    console.log('parseresults', results[0].ref); 
+    //console.log(results)
+    //console.log('parseresults', results[0].ref); 
     
     results.forEach((val, i) => {  //For each emblem/essay returned by the search engine.
-        //Remove?:
         var resultcount = 0;
         
-        console.log('id', val.ref);
+        //console.log('id', val.ref);
 
         var thisdoc = idxDocs.filter(doc => doc.id==val.ref)[0];
         if ('undefined' == typeof thisdoc) {
             thisdoc = essayDocs.filter(doc => { return doc.id==val.ref; })[0];
         }
 
-        console.log(essayDocs);
+        //console.log(essayDocs);
 
         var allresults = {};
         for (term in val.matchData.metadata) {  //Each search term matched in this essay.
@@ -82,25 +81,13 @@ parseResults = function(results) {
                 mergedresults[section] = allresults[section]
             }
 
-            //console.log(mergedresults)
-            //Cycle through mergedresults and insert context text for each hit.
             mergedresults[section].forEach( (val) => {
                 var newctx = [];
                 if ( !$.isArray(val) ) val = [val];
-                
-                
-                if ( 'footnotes' == section ) {
-                    //Return any <fn> elements that contain `matchword`.
-                    val.forEach( (mtch, i, mtchs) => {
-                        fnout = $('fn:contains('+mtch+')').get().map((v, i, arr) => {
-                            return v.replace(matchword, '%$%$%'+matchword+'%$%$%').split('%$%$%');
-                        });
 
-                        searchcontexts[section] = fnout;
-                    });
-                } else {
                     val.forEach( (mtch, i, mtchs) => {
                         var pos = mtch.startpos;
+                        mw = mtch.matchword;
                         if ( 0 == i ) {
                             prefstart = Math.max(0, pos - SURROUNDING_CHARACTERS);
                             preflen = pos - prefstart;
@@ -127,14 +114,34 @@ parseResults = function(results) {
 
                             newctx.push(suffix);
                         }
+
+                        if ( 'footnotes' == section ) {
+                            // Make a new context to push this content to.
+                            var newctxs = [[]];
+                            const fnseparator = '</fn><fn>';
+                            newctx.forEach((val,i,arr) => {
+                                if ( val.includes(fnseparator) ) {
+                                    //Split by the fn separator.
+                                    vals = val.split(fnseparator);
+                                    //Put the first half in the current ctx
+                                    newctxs[newctxs.length-1].push(vals[0]);
+                                    //Put the last half in the next ctx.
+                                    newctxs.push([vals[1]]);
+                                } else {
+                                    newctxs[newctxs.length-1].push(val);
+                                }
+                            });
+                            newctxs = newctxs.filter( v=>v.join(' ').includes(mw) )
+                            newctx = newctxs.pop();
+                            console.log(section, searchcontexts[section].length, newctxs.length)
+                            searchcontexts[section].concat(newctxs);
+                            console.log(section, searchcontexts[section].length, newctxs.length)
+                        }
                     });
-                }
+                //}
                 searchcontexts[section].push(newctx);
-                //console.log(searchcontexts[section]);
             });
         }
-
-        //console.log(searchcontexts)
 
         thisoutp = {
             contexts: searchcontexts,
