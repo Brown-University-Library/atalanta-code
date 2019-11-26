@@ -238,6 +238,12 @@ main.emblem-page.frontmatter {
 	.add:after {
 		color: $text_body;
 	}
+	.panel--full section.section__motto .add:before, 
+	.panel--full section.section__epigram .add:before, 
+	.panel--full section.section__motto .add:after, 
+	.panel--full section.section__epigram .add:after {
+		color: $white;
+	}
 	.edition--normalized .add:before {
 		display: none;
 	}
@@ -2036,7 +2042,7 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
 		.panel--full section.section__epigram *:before, 
 		.panel--full section.section__motto *:after, 
 		.panel--full section.section__epigram *:after {
-			color: $white;
+			color: $white !important;
 		}
 		section.section__epigram .translation, 
 		section.section__epigram .original {

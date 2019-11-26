@@ -6756,6 +6756,15 @@ main.emblem-page.frontmatter {
   main.emblem-page .add:after,
   main.emblem-page.frontmatter .add:after {
     color: #4d4d4d; }
+  main.emblem-page .panel--full section.section__motto .add:before,
+  main.emblem-page .panel--full section.section__epigram .add:before,
+  main.emblem-page .panel--full section.section__motto .add:after,
+  main.emblem-page .panel--full section.section__epigram .add:after,
+  main.emblem-page.frontmatter .panel--full section.section__motto .add:before,
+  main.emblem-page.frontmatter .panel--full section.section__epigram .add:before,
+  main.emblem-page.frontmatter .panel--full section.section__motto .add:after,
+  main.emblem-page.frontmatter .panel--full section.section__epigram .add:after {
+    color: white; }
   main.emblem-page .edition--normalized .add:before,
   main.emblem-page.frontmatter .edition--normalized .add:before {
     display: none; }
@@ -8641,7 +8650,7 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
   main.emblem-page .panel--full section.section__epigram *:before,
   main.emblem-page .panel--full section.section__motto *:after,
   main.emblem-page .panel--full section.section__epigram *:after {
-    color: white; }
+    color: white !important; }
   main.emblem-page section.section__epigram .translation .verse-epigram,
   main.emblem-page section.section__epigram .original .verse-epigram {
     font-size: 1.5rem;
