@@ -7955,6 +7955,10 @@ main.emblem-page[data-id='30'] section.section__discourse .edition--facsimile di
 main.emblem-page[data-id='30'] section.section__discourse .edition--normalized div.margin-note:nth-of-type(8) span.regularized {
   display: inline-block; }
 
+/* English emblems with page flaps */
+main.emblem-page[data-id='36'] section.section__discourse .edition--facsimile .discourse-p2 .ab .ab > span:nth-last-child(3) > br:first-child {
+  display: none; }
+
 /*********** END OF EMBLEM LAYOUT *************/
 /*********** COLLECTIONS OVERRIDES *************/
 main.emblem-page section.section__motto h1, main.emblem-page section.section__motto h3 {

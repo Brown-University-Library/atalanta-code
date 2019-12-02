@@ -1232,6 +1232,13 @@ main.emblem-page[data-id='30'] {
 		display: inline-block;
 	}
 }
+
+/* English emblems with page flaps */
+main.emblem-page[data-id='36'] {
+	section.section__discourse .edition--facsimile .discourse-p2 .ab .ab > span:nth-last-child(3) > br:first-child {
+		display: none;
+	}
+}
 /*********** END OF EMBLEM LAYOUT *************/
 
 
