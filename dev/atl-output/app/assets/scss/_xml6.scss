@@ -942,7 +942,7 @@ main.emblem-page.frontmatter {
 /*		div.original h3.title:nth-of-type(2) {
 			margin-bottom: 0;
 		}*/
-		div.translation div.discourse .ab .ab > span.original:nth-of-type(1) br {
+		div.translation div.discourse .discourse-p1 .ab .ab > span.original:first-child {
 			display: none;
 		}
 		div.original div.discourse.la .ab > br:nth-child(1) {

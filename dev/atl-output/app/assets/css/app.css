@@ -7598,10 +7598,10 @@ main.emblem-page.frontmatter section.section__preface {
   main.emblem-page.frontmatter section.section__discourse .discourse-p2 h3,
   main.emblem-page.frontmatter section.section__preface .discourse-p2 h3 {
     display: none; }
-  main.emblem-page section.section__discourse div.translation div.discourse .ab .ab > span.original:nth-of-type(1) br,
-  main.emblem-page section.section__preface div.translation div.discourse .ab .ab > span.original:nth-of-type(1) br,
-  main.emblem-page.frontmatter section.section__discourse div.translation div.discourse .ab .ab > span.original:nth-of-type(1) br,
-  main.emblem-page.frontmatter section.section__preface div.translation div.discourse .ab .ab > span.original:nth-of-type(1) br {
+  main.emblem-page section.section__discourse div.translation div.discourse .discourse-p1 .ab .ab > span.original:first-child,
+  main.emblem-page section.section__preface div.translation div.discourse .discourse-p1 .ab .ab > span.original:first-child,
+  main.emblem-page.frontmatter section.section__discourse div.translation div.discourse .discourse-p1 .ab .ab > span.original:first-child,
+  main.emblem-page.frontmatter section.section__preface div.translation div.discourse .discourse-p1 .ab .ab > span.original:first-child {
     display: none; }
   main.emblem-page section.section__discourse div.original div.discourse.la .ab > br:nth-child(1),
   main.emblem-page section.section__preface div.original div.discourse.la .ab > br:nth-child(1),
