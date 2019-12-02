@@ -8329,16 +8329,17 @@ main.emblem-page.frontmatter section.section__author-epigram {
       font-size: 1.25rem;
       line-height: 3.6; }
     main.emblem-page.frontmatter section.section__author-epigram .verse-epigram-italic span.v-line:nth-of-type(1):first-letter {
-      float: left;
+      /* float: left; */
       font-size: 3.5rem;
       font-style: normal;
       line-height: 0;
-      padding: 1.8rem 0 0 .25rem; }
+      padding: 1.8rem 0 0 .25rem;
+      vertical-align: text-bottom; }
   main.emblem-page.frontmatter section.section__author-epigram .edition--original span.caps-latin {
     letter-spacing: .2em; }
   main.emblem-page.frontmatter section.section__author-epigram .edition--original .verse-epigram-italic span.v-line,
   main.emblem-page.frontmatter section.section__author-epigram .edition--original .verse-epigram-italic span.v-line-indent {
-    line-height: 2;
+    line-height: 3.6;
     margin-bottom: -2.5rem; }
     main.emblem-page.frontmatter section.section__author-epigram .edition--original .verse-epigram-italic span.v-line span.original,
     main.emblem-page.frontmatter section.section__author-epigram .edition--original .verse-epigram-italic span.v-line-indent span.original {
