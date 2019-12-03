@@ -1050,6 +1050,7 @@ main.emblem-page[data-id='17'],
 main.emblem-page[data-id='23'], 
 main.emblem-page[data-id='28'], 
 main.emblem-page[data-id='30'], 
+main.emblem-page[data-id='36'], 
 main.emblem-page[data-id='43'], 
 main.emblem-page[data-id='49'], 
 main.emblem-page[data-id='53'], 
@@ -1086,7 +1087,6 @@ main.emblem-page .panel--full section.section__discourse div.discourse {
 main.emblem-page[data-id='5'] .edition--facsimile div.discourse div.margin-note:nth-of-type(4) {
 	margin-top: 10px;
 }
-/* 11/20 */
 /* Dedication margin notes */
 main.emblem-page[data-id='3'] {
 	div.margin-note span.original:nth-of-type(2) > br {
@@ -1234,11 +1234,11 @@ main.emblem-page[data-id='30'] {
 }
 
 /* English emblems with page flaps */
-/* main.emblem-page[data-id='36'] {
+main.emblem-page[data-id='36'] {
 	section.section__discourse .edition--facsimile .discourse-p2 .ab .ab > span:nth-last-child(3) > br:first-child {
 		display: none;
 	}
-} */
+}
 /*********** END OF EMBLEM LAYOUT *************/
 
 
