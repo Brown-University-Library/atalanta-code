@@ -542,17 +542,6 @@ main.emblem-page[data-id='47'] {
 main.emblem-page, 
 main.emblem-page.frontmatter {
 	color: $text_body;
-/*	div.translation, 
-	div.original {
-		height: 100%;
-		margin-top: 2.5rem;
-	}
-	.panel--left div.translation, 
-	.panel--left div.original, 
-	.panel--right div.translation, 
-	.panel--right div.original {
-		margin-top: 3.5rem;
-	}*/
 	.lang--english, 
 	.lang--german, 
 	.lang--latin {
@@ -1975,10 +1964,6 @@ main.emblem-page.frontmatter {
 
 
 /***************** BREAKPOINTS *****************/
-main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
-	/*border: 5px solid red;*/
-/*	margin-top: 3.5rem;*/
-}
 @media screen and (min-width: 320px) and (max-width: 767px) {
 	main.emblem-page {
 		section.section__motto > div.original {
@@ -2351,10 +2336,7 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
 		}
 		section.section__dedication {
 			box-sizing: border-box;
-			/* outline: 5px solid red; */
 			._dedication--english.edition--facsimile div.dedication:nth-of-type(1) {
-				/* background-color: blue; */
-				/* border: 1px solid green; */
 				box-sizing: border-box;
 				margin-right: 0;
 				padding: 0 0 0 0;

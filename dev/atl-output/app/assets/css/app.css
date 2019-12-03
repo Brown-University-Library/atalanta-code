@@ -7026,18 +7026,7 @@ main.emblem-page[data-id='47'] {
 /*********** EMBLEM LAYOUT *************/
 main.emblem-page,
 main.emblem-page.frontmatter {
-  color: #4d4d4d;
-  /*	div.translation, 
-	div.original {
-		height: 100%;
-		margin-top: 2.5rem;
-	}
-	.panel--left div.translation, 
-	.panel--left div.original, 
-	.panel--right div.translation, 
-	.panel--right div.original {
-		margin-top: 3.5rem;
-	}*/ }
+  color: #4d4d4d; }
   main.emblem-page .lang--english,
   main.emblem-page .lang--german,
   main.emblem-page .lang--latin,
@@ -8552,10 +8541,6 @@ main.emblem-page.frontmatter .discourse.la .pb {
 
 /************ END TESTS **************/
 /***************** BREAKPOINTS *****************/
-main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
-  /*border: 5px solid red;*/
-  /*	margin-top: 3.5rem;*/ }
-
 @media screen and (min-width: 320px) and (max-width: 767px) {
   main.emblem-page section.section__motto > div.original {
     margin-top: .5rem; }
@@ -8809,11 +8794,8 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
     padding-left: 6rem; }
   main.emblem-page.frontmatter section.section__dedication {
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    /* outline: 5px solid red; */ }
+    box-sizing: border-box; }
     main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(1) {
-      /* background-color: blue; */
-      /* border: 1px solid green; */
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-right: 0;
