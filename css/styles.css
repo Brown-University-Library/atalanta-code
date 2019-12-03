@@ -7598,10 +7598,10 @@ main.emblem-page.frontmatter section.section__preface {
   main.emblem-page.frontmatter section.section__discourse .discourse-p2 h3,
   main.emblem-page.frontmatter section.section__preface .discourse-p2 h3 {
     display: none; }
-  main.emblem-page section.section__discourse div.translation div.discourse .ab .ab > span.original:nth-of-type(1) br,
-  main.emblem-page section.section__preface div.translation div.discourse .ab .ab > span.original:nth-of-type(1) br,
-  main.emblem-page.frontmatter section.section__discourse div.translation div.discourse .ab .ab > span.original:nth-of-type(1) br,
-  main.emblem-page.frontmatter section.section__preface div.translation div.discourse .ab .ab > span.original:nth-of-type(1) br {
+  main.emblem-page section.section__discourse div.translation div.discourse .discourse-p1 .ab .ab > span.original:first-child,
+  main.emblem-page section.section__preface div.translation div.discourse .discourse-p1 .ab .ab > span.original:first-child,
+  main.emblem-page.frontmatter section.section__discourse div.translation div.discourse .discourse-p1 .ab .ab > span.original:first-child,
+  main.emblem-page.frontmatter section.section__preface div.translation div.discourse .discourse-p1 .ab .ab > span.original:first-child {
     display: none; }
   main.emblem-page section.section__discourse div.original div.discourse.la .ab > br:nth-child(1),
   main.emblem-page section.section__preface div.original div.discourse.la .ab > br:nth-child(1),
@@ -7955,6 +7955,12 @@ main.emblem-page[data-id='30'] section.section__discourse .edition--facsimile di
 main.emblem-page[data-id='30'] section.section__discourse .edition--normalized div.margin-note:nth-of-type(8) span.regularized {
   display: inline-block; }
 
+/* English emblems with page flaps */
+/* main.emblem-page[data-id='36'] {
+	section.section__discourse .edition--facsimile .discourse-p2 .ab .ab > span:nth-last-child(3) > br:first-child {
+		display: none;
+	}
+} */
 /*********** END OF EMBLEM LAYOUT *************/
 /*********** COLLECTIONS OVERRIDES *************/
 main.emblem-page section.section__motto h1, main.emblem-page section.section__motto h3 {
@@ -8325,16 +8331,17 @@ main.emblem-page.frontmatter section.section__author-epigram {
       font-size: 1.25rem;
       line-height: 3.6; }
     main.emblem-page.frontmatter section.section__author-epigram .verse-epigram-italic span.v-line:nth-of-type(1):first-letter {
-      float: left;
+      /* float: left; */
       font-size: 3.5rem;
       font-style: normal;
       line-height: 0;
-      padding: 1.8rem 0 0 .25rem; }
+      padding: 1.8rem 0 0 .25rem;
+      vertical-align: text-bottom; }
   main.emblem-page.frontmatter section.section__author-epigram .edition--original span.caps-latin {
     letter-spacing: .2em; }
   main.emblem-page.frontmatter section.section__author-epigram .edition--original .verse-epigram-italic span.v-line,
   main.emblem-page.frontmatter section.section__author-epigram .edition--original .verse-epigram-italic span.v-line-indent {
-    line-height: 2;
+    line-height: 3.6;
     margin-bottom: -2.5rem; }
     main.emblem-page.frontmatter section.section__author-epigram .edition--original .verse-epigram-italic span.v-line span.original,
     main.emblem-page.frontmatter section.section__author-epigram .edition--original .verse-epigram-italic span.v-line-indent span.original {
