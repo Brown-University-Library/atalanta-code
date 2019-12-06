@@ -179,7 +179,7 @@ body {
 
 /* Playing notes */
 .music.with-js .cmn .highlighted {
-	fill: $yellow_inverse;
+	fill: $red;
 }
 /* Muted playing notes */
 .music.with-js .cmn .muted .highlighted {
@@ -327,7 +327,7 @@ button.lity-close {
 	display: block;
 }
 .pianoroll .note.highlighted {
-	fill: $yellow_inverse;
+	fill: $red;
 }
 .pianoroll .voice-1 {
 	fill: $blue_desaturated;
@@ -471,15 +471,44 @@ button.lity-close {
 
 
 /* BREAKPOINTS */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.section__music ._music .ata-music .transport {
+		padding: 0;
+		width: calc(100vw/24 * 5);
+		.play-btn__label, 
+		.pause-btn__label, 
+		.mute-btn__label, 
+		.piano-roll__label {
+			
+		}
+		.atalanta-notation-start, 
+		.atalanta-notation-stop, 
+		.atalanta-notation-mute-track, 
+		.atalanta-notation__switch {
+			font-size: .5rem;
+		}
+	}
+	.panel--right .section__music ._music .ata-music .transport.is-stuck {
+		left: 0;
+		width: calc(100vw/24 * 5);
+	}
+}
 /* medium  -  tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 	.section__music ._music .ata-music .transport {
-		width: calc(50vw/12 * 2);
+		padding: 0 .5rem;
+		width: calc(50vw/24 * 5);
+		.atalanta-notation-start, 
+		.atalanta-notation-stop, 
+		.atalanta-notation-mute-track, 
+		.atalanta-notation__switch {
+			font-size: .75rem;
+		}
 	}
 	/* @supports (display: grid) {...} */
 	.panel--right .section__music ._music .ata-music .transport.is-stuck {
 		left: 50vw;
-		width: calc(50vw/12 * 2);
+		width: calc(50vw/24 * 5);
 	}
 	
 }
