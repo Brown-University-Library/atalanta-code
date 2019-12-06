@@ -167,7 +167,7 @@
                         						
                         <g class="layer" id="e34-m-61">
                            							
-                           <g data-time-start="0.5555555555555556" data-time-end="1.6666666666666665" class="note" id="e34-m-62">
+                           <g class="note" id="e34-m-62">
                               								
                               <use xlink:href="#E0A2" x="5620" y="900" height="720px" width="720px"></use>
                               								
@@ -190,7 +190,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="1.6666666666666665" data-time-end="2.2222222222222223" class="note" id="e34-m-63">
+                           <g class="note" id="e34-m-63">
                               								
                               <use xlink:href="#E0A3" x="8923" y="900" height="720px" width="720px"></use>
                               								
@@ -216,7 +216,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="2.2222222222222223" data-time-end="2.7777777777777777" class="note" id="e34-m-64">
+                           <g class="note" id="e34-m-64">
                               								
                               <use xlink:href="#E0A3" x="10799" y="900" height="720px" width="720px"></use>
                               								
@@ -278,7 +278,7 @@
                               <rect x="5620" y="2515" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="1.1111111111111112" data-time-end="1.3888888888888888" class="note" id="e34-m-74">
+                           <g class="note" id="e34-m-74">
                               								
                               <use xlink:href="#E0A4" x="7047" y="3055" height="720px" width="720px"></use>
                               								
@@ -304,7 +304,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="1.3888888888888888" data-time-end="1.6666666666666665" class="note" id="e34-m-75">
+                           <g class="note" id="e34-m-75">
                               								
                               <use xlink:href="#E0A4" x="7985" y="2965" height="720px" width="720px"></use>
                               								
@@ -314,7 +314,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="1.6666666666666665" data-time-end="1.9444444444444444" class="note" id="e34-m-76">
+                           <g class="note" id="e34-m-76">
                               								
                               <use xlink:href="#E0A4" x="8923" y="2875" height="720px" width="720px"></use>
                               								
@@ -324,7 +324,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="1.9444444444444444" data-time-end="2.2222222222222223" class="note" id="e34-m-77">
+                           <g class="note" id="e34-m-77">
                               								
                               <use xlink:href="#E0A4" x="9861" y="2785" height="720px" width="720px"></use>
                               								
@@ -350,7 +350,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="2.2222222222222223" data-time-end="2.7777777777777777" class="note" id="e34-m-78">
+                           <g class="note" id="e34-m-78">
                               								
                               <use xlink:href="#E0A3" x="10799" y="2695" height="720px" width="720px"></use>
                               								
@@ -417,7 +417,7 @@
                               <rect x="8923" y="3964" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="2.2222222222222223" data-time-end="2.5" class="note" id="e34-m-89">
+                           <g class="note" id="e34-m-89">
                               								
                               <use xlink:href="#E0A4" x="10799" y="4054" height="720px" width="720px"></use>
                               								
@@ -445,7 +445,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="2.5" data-time-end="2.7777777777777777" class="note" id="e34-m-90">
+                           <g class="note" id="e34-m-90">
                               								
                               <use xlink:href="#E0A4" x="11737" y="3964" height="720px" width="720px"></use>
                               								
@@ -483,7 +483,7 @@
                         						
                         <g class="layer" id="e34-m-93">
                            							
-                           <g data-time-start="2.7888888888888888" data-time-end="3.888888888888889" class="note" id="e34-m-94">
+                           <g class="note" id="e34-m-94">
                               								
                               <use xlink:href="#E0A2" x="12933" y="990" height="720px" width="720px"></use>
                               								
@@ -506,7 +506,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="3.888888888888889" data-time-end="5" class="note" id="e34-m-95">
+                           <g class="note" id="e34-m-95">
                               								
                               <use xlink:href="#E0A2" x="16236" y="900" height="720px" width="720px"></use>
                               								
@@ -550,7 +550,7 @@
                               <rect x="12933" y="2515" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="3.333333333333333" data-time-end="4.166666666666667" class="note" id="e34-m-99">
+                           <g class="note" id="e34-m-99">
                               								
                               <use xlink:href="#E0A3" x="14809" y="2875" height="720px" width="720px"></use>
                               								
@@ -581,7 +581,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="4.166666666666667" data-time-end="4.444444444444445" class="note" id="e34-m-100">
+                           <g class="note" id="e34-m-100">
                               								
                               <use xlink:href="#E0A4" x="17174" y="2785" height="720px" width="720px"></use>
                               								
@@ -607,7 +607,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="4.444444444444445" data-time-end="4.722222222222221" class="note" id="e34-m-101">
+                           <g class="note" id="e34-m-101">
                               								
                               <use xlink:href="#E0A4" x="18112" y="2695" height="720px" width="720px"></use>
                               								
@@ -617,7 +617,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="4.722222222222221" data-time-end="5" class="note" id="e34-m-102">
+                           <g class="note" id="e34-m-102">
                               								
                               <use xlink:href="#E0A4" x="19050" y="2875" height="720px" width="720px"></use>
                               								
@@ -657,7 +657,7 @@
                         						
                         <g class="layer" id="e34-m-110">
                            							
-                           <g data-time-start="2.7888888888888888" data-time-end="3.0555555555555554" class="note" id="e34-m-111">
+                           <g class="note" id="e34-m-111">
                               								
                               <use xlink:href="#E0A4" x="12933" y="3874" height="720px" width="720px"></use>
                               								
@@ -667,7 +667,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="3.0555555555555554" data-time-end="3.333333333333333" class="note" id="e34-m-112">
+                           <g class="note" id="e34-m-112">
                               								
                               <use xlink:href="#E0A4" x="13871" y="3784" height="720px" width="720px"></use>
                               								
@@ -693,7 +693,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="3.333333333333333" data-time-end="3.888888888888889" class="note" id="e34-m-113">
+                           <g class="note" id="e34-m-113">
                               								
                               <use xlink:href="#E0A3" x="14809" y="3694" height="720px" width="720px"></use>
                               								
@@ -722,7 +722,7 @@
                               <rect x="16236" y="3964" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="4.444444444444445" data-time-end="5" class="note" id="e34-m-115">
+                           <g class="note" id="e34-m-115">
                               								
                               <use xlink:href="#E0A3" x="18112" y="3874" height="720px" width="720px"></use>
                               								
@@ -817,7 +817,7 @@
                         						
                         <g class="layer" id="e34-m-124">
                            							
-                           <g data-time-start="5.01111111111111" data-time-end="6.111111111111111" class="note" id="e34-m-125">
+                           <g class="note" id="e34-m-125">
                               								
                               <use xlink:href="#E0A2" x="1221" y="6394" height="720px" width="720px"></use>
                               								
@@ -836,7 +836,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="6.111111111111111" data-time-end="6.666666666666666" class="note" id="e34-m-126">
+                           <g class="note" id="e34-m-126">
                               								
                               <use xlink:href="#E0A3" x="4874" y="6484" height="720px" width="720px"></use>
                               								
@@ -864,7 +864,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="6.666666666666666" data-time-end="7.222222222222221" class="note" id="e34-m-128">
+                           <g class="note" id="e34-m-128">
                               								
                               <use xlink:href="#E0A3" x="6145" y="6484" height="720px" width="720px"></use>
                               								
@@ -916,7 +916,7 @@
                         						
                         <g class="layer" id="e34-m-137">
                            							
-                           <g data-time-start="5.01111111111111" data-time-end="5.555555555555555" class="note" id="e34-m-138">
+                           <g class="note" id="e34-m-138">
                               								
                               <use xlink:href="#E0A3" x="1221" y="8099" height="720px" width="720px"></use>
                               								
@@ -944,7 +944,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="5.555555555555555" data-time-end="5.966666666666667" class="note" id="e34-m-140">
+                           <g class="note" id="e34-m-140">
                               								
                               <use xlink:href="#E0A4" x="2893" y="8189" height="720px" width="720px"></use>
                               								
@@ -975,7 +975,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="5.977777777777778" data-time-end="6.111111111111111" class="note" id="e34-m-141">
+                           <g class="note" id="e34-m-141">
                               								
                               <use xlink:href="#E0A4" x="4273" y="8279" height="720px" width="720px"></use>
                               								
@@ -990,7 +990,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="6.111111111111111" data-time-end="7.222222222222221" class="note" id="e34-m-142">
+                           <g class="note" id="e34-m-142">
                               								
                               <use xlink:href="#E0A2" x="4874" y="8369" height="720px" width="720px"></use>
                               								
@@ -1035,7 +1035,7 @@
                         						
                         <g class="layer" id="e34-m-150">
                            							
-                           <g data-time-start="5.01111111111111" data-time-end="5.277777777777778" class="note" id="e34-m-151">
+                           <g class="note" id="e34-m-151">
                               								
                               <use xlink:href="#E0A4" x="1221" y="9723" height="720px" width="720px"></use>
                               								
@@ -1045,7 +1045,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="5.277777777777778" data-time-end="5.555555555555555" class="note" id="e34-m-152">
+                           <g class="note" id="e34-m-152">
                               								
                               <use xlink:href="#E0A4" x="2057" y="9633" height="720px" width="720px"></use>
                               								
@@ -1071,7 +1071,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="5.555555555555555" data-time-end="5.833333333333332" class="note" id="e34-m-153">
+                           <g class="note" id="e34-m-153">
                               								
                               <use xlink:href="#E0A4" x="2893" y="9543" height="720px" width="720px"></use>
                               								
@@ -1081,7 +1081,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="5.833333333333332" data-time-end="6.111111111111111" class="note" id="e34-m-154">
+                           <g class="note" id="e34-m-154">
                               								
                               <use xlink:href="#E0A4" x="3728" y="9723" height="720px" width="720px"></use>
                               								
@@ -1105,7 +1105,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="6.111111111111111" data-time-end="6.666666666666666" class="note" id="e34-m-155">
+                           <g class="note" id="e34-m-155">
                               								
                               <use xlink:href="#E0A3" x="4874" y="9453" height="720px" width="720px"></use>
                               								
@@ -1133,7 +1133,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="6.666666666666666" data-time-end="7.0777777777777775" class="note" id="e34-m-157">
+                           <g class="note" id="e34-m-157">
                               								
                               <use xlink:href="#E0A4" x="6145" y="9543" height="720px" width="720px"></use>
                               								
@@ -1164,7 +1164,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="7.088888888888889" data-time-end="7.222222222222221" class="note" id="e34-m-158">
+                           <g class="note" id="e34-m-158">
                               								
                               <use xlink:href="#E0A4" x="7211" y="9633" height="720px" width="720px"></use>
                               								
@@ -1209,7 +1209,7 @@
                         						
                         <g class="layer" id="e34-m-168">
                            							
-                           <g data-time-start="7.2333333333333325" data-time-end="8.333333333333334" class="note" id="e34-m-169">
+                           <g class="note" id="e34-m-169">
                               								
                               <use xlink:href="#E0A2" x="7987" y="6394" height="720px" width="720px"></use>
                               								
@@ -1228,7 +1228,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="8.333333333333334" data-time-end="9.444444444444443" class="note" id="e34-m-170">
+                           <g class="note" id="e34-m-170">
                               								
                               <use xlink:href="#E0A2" x="10530" y="6304" height="720px" width="720px"></use>
                               								
@@ -1270,7 +1270,7 @@
                               <rect x="7987" y="8009" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="7.777777777777778" data-time-end="8.333333333333334" class="note" id="e34-m-180">
+                           <g class="note" id="e34-m-180">
                               								
                               <use xlink:href="#E0A3" x="9259" y="8369" height="720px" width="720px"></use>
                               								
@@ -1296,7 +1296,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="8.333333333333334" data-time-end="8.88888888888889" class="note" id="e34-m-181">
+                           <g class="note" id="e34-m-181">
                               								
                               <use xlink:href="#E0A3" x="10530" y="8549" height="720px" width="720px"></use>
                               								
@@ -1324,7 +1324,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="8.88888888888889" data-time-end="9.444444444444443" class="note" id="e34-m-182">
+                           <g class="note" id="e34-m-182">
                               								
                               <use xlink:href="#E0A3" x="11802" y="7919" height="720px" width="720px"></use>
                               								
@@ -1350,7 +1350,7 @@
                         						
                         <g class="layer" id="e34-m-184">
                            							
-                           <g data-time-start="7.2333333333333325" data-time-end="8.333333333333334" class="note" id="e34-m-185">
+                           <g class="note" id="e34-m-185">
                               								
                               <use xlink:href="#E0A2" x="7987" y="9723" height="720px" width="720px"></use>
                               								
@@ -1374,7 +1374,7 @@
                               <rect x="10530" y="9813" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="8.88888888888889" data-time-end="9.444444444444443" class="note" id="e34-m-187">
+                           <g class="note" id="e34-m-187">
                               								
                               <use xlink:href="#E0A3" x="11802" y="9723" height="720px" width="720px"></use>
                               								
@@ -1433,7 +1433,7 @@
                         						
                         <g class="layer" id="e34-m-196">
                            							
-                           <g data-time-start="9.455555555555556" data-time-end="10.555555555555555" class="note" id="e34-m-197">
+                           <g class="note" id="e34-m-197">
                               								
                               <use xlink:href="#E0A2" x="13304" y="6484" height="720px" width="720px"></use>
                               								
@@ -1458,7 +1458,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="10.555555555555555" data-time-end="11.11111111111111" class="note" id="e34-m-199">
+                           <g class="note" id="e34-m-199">
                               								
                               <use xlink:href="#E0A3" x="16647" y="6394" height="720px" width="720px"></use>
                               								
@@ -1484,7 +1484,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="11.11111111111111" data-time-end="11.666666666666664" class="note" id="e34-m-200">
+                           <g class="note" id="e34-m-200">
                               								
                               <use xlink:href="#E0A3" x="18318" y="6394" height="720px" width="720px"></use>
                               								
@@ -1524,7 +1524,7 @@
                         						
                         <g class="layer" id="e34-m-210">
                            							
-                           <g data-time-start="9.455555555555556" data-time-end="9.722222222222221" class="note" id="e34-m-211">
+                           <g class="note" id="e34-m-211">
                               								
                               <use xlink:href="#E0A4" x="13304" y="7919" height="720px" width="720px"></use>
                               								
@@ -1534,7 +1534,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="9.722222222222221" data-time-end="10" class="note" id="e34-m-212">
+                           <g class="note" id="e34-m-212">
                               								
                               <use xlink:href="#E0A4" x="14140" y="8009" height="720px" width="720px"></use>
                               								
@@ -1560,7 +1560,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="10" data-time-end="10.277777777777777" class="note" id="e34-m-213">
+                           <g class="note" id="e34-m-213">
                               								
                               <use xlink:href="#E0A4" x="14976" y="8099" height="720px" width="720px"></use>
                               								
@@ -1586,7 +1586,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="10.277777777777777" data-time-end="10.555555555555555" class="note" id="e34-m-215">
+                           <g class="note" id="e34-m-215">
                               								
                               <use xlink:href="#E0A4" x="15811" y="8189" height="720px" width="720px"></use>
                               								
@@ -1612,7 +1612,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="10.555555555555555" data-time-end="11.666666666666664" class="note" id="e34-m-216">
+                           <g class="note" id="e34-m-216">
                               								
                               <use xlink:href="#E0A2" x="16647" y="8279" height="720px" width="720px"></use>
                               								
@@ -1654,7 +1654,7 @@
                         						
                         <g class="layer" id="e34-m-230">
                            							
-                           <g data-time-start="9.455555555555556" data-time-end="10" class="note" id="e34-m-231">
+                           <g class="note" id="e34-m-231">
                               								
                               <use xlink:href="#E0A3" x="13304" y="9903" height="720px" width="720px"></use>
                               								
@@ -1684,7 +1684,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="10" data-time-end="10.833333333333334" class="note" id="e34-m-232">
+                           <g class="note" id="e34-m-232">
                               								
                               <use xlink:href="#E0A3" x="14976" y="9273" height="720px" width="720px"></use>
                               								
@@ -1699,7 +1699,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="10.833333333333334" data-time-end="11.11111111111111" class="note" id="e34-m-233">
+                           <g class="note" id="e34-m-233">
                               								
                               <use xlink:href="#E0A4" x="17482" y="9363" height="720px" width="720px"></use>
                               								
@@ -1725,7 +1725,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="11.11111111111111" data-time-end="11.388888888888888" class="note" id="e34-m-234">
+                           <g class="note" id="e34-m-234">
                               								
                               <use xlink:href="#E0A4" x="18318" y="9453" height="720px" width="720px"></use>
                               								
@@ -1751,7 +1751,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="11.388888888888888" data-time-end="11.666666666666664" class="note" id="e34-m-236">
+                           <g class="note" id="e34-m-236">
                               								
                               <use xlink:href="#E0A4" x="19153" y="9543" height="720px" width="720px"></use>
                               								
@@ -1846,7 +1846,7 @@
                         						
                         <g class="layer" id="e34-m-247">
                            							
-                           <g data-time-start="11.677777777777777" data-time-end="12.222222222222221" class="note" id="e34-m-248">
+                           <g class="note" id="e34-m-248">
                               								
                               <use xlink:href="#E0A3" x="1195" y="12153" height="720px" width="720px"></use>
                               								
@@ -1872,7 +1872,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="12.222222222222221" data-time-end="12.777777777777779" class="note" id="e34-m-249">
+                           <g class="note" id="e34-m-249">
                               								
                               <use xlink:href="#E0A3" x="2315" y="12153" height="720px" width="720px"></use>
                               								
@@ -1896,7 +1896,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="12.777777777777779" data-time-end="13.888888888888888" class="note" id="e34-m-250">
+                           <g class="note" id="e34-m-250">
                               								
                               <use xlink:href="#E0A2" x="3533" y="12423" height="720px" width="720px"></use>
                               								
@@ -1948,7 +1948,7 @@
                               <rect x="1195" y="13858" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="12.222222222222221" data-time-end="12.777777777777779" class="note" id="e34-m-258">
+                           <g class="note" id="e34-m-258">
                               								
                               <use xlink:href="#E0A3" x="2315" y="14398" height="720px" width="720px"></use>
                               								
@@ -1974,7 +1974,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="12.777777777777779" data-time-end="13.333333333333332" class="note" id="e34-m-259">
+                           <g class="note" id="e34-m-259">
                               								
                               <use xlink:href="#E0A3" x="3533" y="13858" height="720px" width="720px"></use>
                               								
@@ -1998,7 +1998,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="13.333333333333332" data-time-end="13.61111111111111" class="note" id="e34-m-260">
+                           <g class="note" id="e34-m-260">
                               								
                               <use xlink:href="#E0A4" x="4653" y="13948" height="720px" width="720px"></use>
                               								
@@ -2026,7 +2026,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="13.61111111111111" data-time-end="13.888888888888888" class="note" id="e34-m-262">
+                           <g class="note" id="e34-m-262">
                               								
                               <use xlink:href="#E0A4" x="5389" y="14038" height="720px" width="720px"></use>
                               								
@@ -2062,7 +2062,7 @@
                         						
                         <g class="layer" id="e34-m-270">
                            							
-                           <g data-time-start="11.677777777777777" data-time-end="12.777777777777779" class="note" id="e34-m-271">
+                           <g class="note" id="e34-m-271">
                               								
                               <use xlink:href="#E0A2" x="1195" y="15482" height="720px" width="720px"></use>
                               								
@@ -2086,7 +2086,7 @@
                               <rect x="3533" y="15662" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="13.333333333333332" data-time-end="13.888888888888888" class="note" id="e34-m-273">
+                           <g class="note" id="e34-m-273">
                               								
                               <use xlink:href="#E0A3" x="4653" y="15752" height="720px" width="720px"></use>
                               								
@@ -2140,7 +2140,7 @@
                         						
                         <g class="layer" id="e34-m-280">
                            							
-                           <g data-time-start="13.9" data-time-end="14.444444444444443" class="note" id="e34-m-281">
+                           <g class="note" id="e34-m-281">
                               								
                               <use xlink:href="#E0A3" x="6330" y="12513" height="720px" width="720px"></use>
                               								
@@ -2164,7 +2164,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="14.444444444444443" data-time-end="15" class="note" id="e34-m-282">
+                           <g class="note" id="e34-m-282">
                               								
                               <use xlink:href="#E0A3" x="7450" y="12513" height="720px" width="720px"></use>
                               								
@@ -2188,7 +2188,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="15" data-time-end="16.11111111111111" class="note" id="e34-m-283">
+                           <g class="note" id="e34-m-283">
                               								
                               <use xlink:href="#E0A2" x="8922" y="12423" height="720px" width="720px"></use>
                               								
@@ -2223,7 +2223,7 @@
                         						
                         <g class="layer" id="e34-m-293">
                            							
-                           <g data-time-start="13.9" data-time-end="14.444444444444443" class="note" id="e34-m-294">
+                           <g class="note" id="e34-m-294">
                               								
                               <use xlink:href="#E0A3" x="6330" y="13858" height="720px" width="720px"></use>
                               								
@@ -2247,7 +2247,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="14.444444444444443" data-time-end="15" class="note" id="e34-m-295">
+                           <g class="note" id="e34-m-295">
                               								
                               <use xlink:href="#E0A3" x="7450" y="13768" height="720px" width="720px"></use>
                               								
@@ -2273,7 +2273,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="15" data-time-end="15.555555555555555" class="note" id="e34-m-296">
+                           <g class="note" id="e34-m-296">
                               								
                               <use xlink:href="#E0A3" x="8922" y="13858" height="720px" width="720px"></use>
                               								
@@ -2299,7 +2299,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="15.555555555555555" data-time-end="16.11111111111111" class="note" id="e34-m-297">
+                           <g class="note" id="e34-m-297">
                               								
                               <use xlink:href="#E0A3" x="10042" y="14218" height="720px" width="720px"></use>
                               								
@@ -2348,7 +2348,7 @@
                         						
                         <g class="layer" id="e34-m-307">
                            							
-                           <g data-time-start="13.9" data-time-end="14.444444444444443" class="note" id="e34-m-308">
+                           <g class="note" id="e34-m-308">
                               								
                               <use xlink:href="#E0A3" x="6330" y="15212" height="720px" width="720px"></use>
                               								
@@ -2372,7 +2372,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="14.444444444444443" data-time-end="14.722222222222221" class="note" id="e34-m-309">
+                           <g class="note" id="e34-m-309">
                               								
                               <use xlink:href="#E0A4" x="7450" y="15302" height="720px" width="720px"></use>
                               								
@@ -2400,7 +2400,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="14.722222222222221" data-time-end="15" class="note" id="e34-m-311">
+                           <g class="note" id="e34-m-311">
                               								
                               <use xlink:href="#E0A4" x="8186" y="15392" height="720px" width="720px"></use>
                               								
@@ -2410,7 +2410,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="15" data-time-end="15.555555555555555" class="note" id="e34-m-312">
+                           <g class="note" id="e34-m-312">
                               								
                               <use xlink:href="#E0A3" x="8922" y="15212" height="720px" width="720px"></use>
                               								
@@ -2434,7 +2434,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="15.555555555555555" data-time-end="16.11111111111111" class="note" id="e34-m-313">
+                           <g class="note" id="e34-m-313">
                               								
                               <use xlink:href="#E0A3" x="10042" y="15122" height="720px" width="720px"></use>
                               								
@@ -2490,7 +2490,7 @@
                         						
                         <g class="layer" id="e34-m-325">
                            							
-                           <g data-time-start="16.12222222222222" data-time-end="16.666666666666668" class="note" id="e34-m-326">
+                           <g class="note" id="e34-m-326">
                               								
                               <use xlink:href="#E0A3" x="11367" y="12243" height="720px" width="720px"></use>
                               								
@@ -2516,7 +2516,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="16.666666666666668" data-time-end="17.22222222222222" class="note" id="e34-m-327">
+                           <g class="note" id="e34-m-327">
                               								
                               <use xlink:href="#E0A3" x="12487" y="12243" height="720px" width="720px"></use>
                               								
@@ -2542,7 +2542,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="17.22222222222222" data-time-end="18.333333333333332" class="note" id="e34-m-328">
+                           <g class="note" id="e34-m-328">
                               								
                               <use xlink:href="#E0A2" x="13607" y="12333" height="720px" width="720px"></use>
                               								
@@ -2584,7 +2584,7 @@
                               <rect x="11367" y="13768" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="17.22222222222222" data-time-end="18.333333333333332" class="note" id="e34-m-339">
+                           <g class="note" id="e34-m-339">
                               								
                               <use xlink:href="#E0A2" x="13607" y="14398" height="720px" width="720px"></use>
                               								
@@ -2624,7 +2624,7 @@
                         						
                         <g class="layer" id="e34-m-343">
                            							
-                           <g data-time-start="16.12222222222222" data-time-end="16.666666666666668" class="note" id="e34-m-344">
+                           <g class="note" id="e34-m-344">
                               								
                               <use xlink:href="#E0A3" x="11367" y="15212" height="720px" width="720px"></use>
                               								
@@ -2650,7 +2650,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="16.666666666666668" data-time-end="17.22222222222222" class="note" id="e34-m-345">
+                           <g class="note" id="e34-m-345">
                               								
                               <use xlink:href="#E0A3" x="12487" y="15572" height="720px" width="720px"></use>
                               								
@@ -2707,7 +2707,7 @@
                         						
                         <g class="layer" id="e34-m-355">
                            							
-                           <g data-time-start="18.344444444444445" data-time-end="19.444444444444443" class="note" id="e34-m-356">
+                           <g class="note" id="e34-m-356">
                               								
                               <use xlink:href="#E0A2" x="15508" y="12423" height="720px" width="720px"></use>
                               								
@@ -2726,7 +2726,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="19.444444444444443" data-time-end="20" class="note" id="e34-m-357">
+                           <g class="note" id="e34-m-357">
                               								
                               <use xlink:href="#E0A3" x="17748" y="12333" height="720px" width="720px"></use>
                               								
@@ -2754,7 +2754,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="20" data-time-end="20.555555555555554" class="note" id="e34-m-359">
+                           <g class="note" id="e34-m-359">
                               								
                               <use xlink:href="#E0A3" x="18868" y="12333" height="720px" width="720px"></use>
                               								
@@ -2794,7 +2794,7 @@
                         						
                         <g class="layer" id="e34-m-368">
                            							
-                           <g data-time-start="18.344444444444445" data-time-end="18.888888888888886" class="note" id="e34-m-369">
+                           <g class="note" id="e34-m-369">
                               								
                               <use xlink:href="#E0A3" x="15508" y="14398" height="720px" width="720px"></use>
                               								
@@ -2820,7 +2820,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="18.888888888888886" data-time-end="19.444444444444443" class="note" id="e34-m-370">
+                           <g class="note" id="e34-m-370">
                               								
                               <use xlink:href="#E0A3" x="16628" y="14398" height="720px" width="720px"></use>
                               								
@@ -2844,7 +2844,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="19.444444444444443" data-time-end="20.555555555555554" class="note" id="e34-m-371">
+                           <g class="note" id="e34-m-371">
                               								
                               <use xlink:href="#E0A2" x="17748" y="14218" height="720px" width="720px"></use>
                               								
@@ -2881,7 +2881,7 @@
                         						
                         <g class="layer" id="e34-m-377">
                            							
-                           <g data-time-start="18.344444444444445" data-time-end="19.444444444444443" class="note" id="e34-m-378">
+                           <g class="note" id="e34-m-378">
                               								
                               <use xlink:href="#E0A2" x="15508" y="15752" height="720px" width="720px"></use>
                               								
@@ -2900,7 +2900,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="19.444444444444443" data-time-end="20" class="note" id="e34-m-379">
+                           <g class="note" id="e34-m-379">
                               								
                               <use xlink:href="#E0A3" x="17748" y="15752" height="720px" width="720px"></use>
                               								
@@ -2926,7 +2926,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="20" data-time-end="20.555555555555554" class="note" id="e34-m-380">
+                           <g class="note" id="e34-m-380">
                               								
                               <use xlink:href="#E0A3" x="18868" y="15752" height="720px" width="720px"></use>
                               								
@@ -3014,7 +3014,7 @@
                         						
                         <g class="layer" id="e34-m-389">
                            							
-                           <g data-time-start="20.566666666666666" data-time-end="21.666666666666668" class="note" id="e34-m-390">
+                           <g class="note" id="e34-m-390">
                               								
                               <use xlink:href="#E0A2" x="1247" y="18272" height="720px" width="720px"></use>
                               								
@@ -3037,7 +3037,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="21.666666666666668" data-time-end="22.22222222222222" class="note" id="e34-m-391">
+                           <g class="note" id="e34-m-391">
                               								
                               <use xlink:href="#E0A3" x="4536" y="18362" height="720px" width="720px"></use>
                               								
@@ -3061,7 +3061,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="22.22222222222222" data-time-end="22.777777777777775" class="note" id="e34-m-392">
+                           <g class="note" id="e34-m-392">
                               								
                               <use xlink:href="#E0A3" x="5958" y="18362" height="720px" width="720px"></use>
                               								
@@ -3118,7 +3118,7 @@
                         						
                         <g class="layer" id="e34-m-398">
                            							
-                           <g data-time-start="20.566666666666666" data-time-end="21.388888888888886" class="note" id="e34-m-399">
+                           <g class="note" id="e34-m-399">
                               								
                               <use xlink:href="#E0A3" x="1247" y="20247" height="720px" width="720px"></use>
                               								
@@ -3149,7 +3149,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="21.388888888888886" data-time-end="21.666666666666668" class="note" id="e34-m-400">
+                           <g class="note" id="e34-m-400">
                               								
                               <use xlink:href="#E0A4" x="3602" y="20157" height="720px" width="720px"></use>
                               								
@@ -3159,7 +3159,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="21.666666666666668" data-time-end="22.777777777777775" class="note" id="e34-m-401">
+                           <g class="note" id="e34-m-401">
                               								
                               <use xlink:href="#E0A2" x="4536" y="20067" height="720px" width="720px"></use>
                               								
@@ -3208,7 +3208,7 @@
                         						
                         <g class="layer" id="e34-m-407">
                            							
-                           <g data-time-start="20.566666666666666" data-time-end="21.11111111111111" class="note" id="e34-m-408">
+                           <g class="note" id="e34-m-408">
                               								
                               <use xlink:href="#E0A3" x="1247" y="21147" height="720px" width="720px"></use>
                               								
@@ -3234,7 +3234,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="21.11111111111111" data-time-end="21.666666666666668" class="note" id="e34-m-409">
+                           <g class="note" id="e34-m-409">
                               								
                               <use xlink:href="#E0A3" x="2668" y="21147" height="720px" width="720px"></use>
                               								
@@ -3258,7 +3258,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="21.666666666666668" data-time-end="22.777777777777775" class="note" id="e34-m-410">
+                           <g class="note" id="e34-m-410">
                               								
                               <use xlink:href="#E0A2" x="4536" y="21417" height="720px" width="720px"></use>
                               								
@@ -3309,7 +3309,7 @@
                         						
                         <g class="layer" id="e34-m-417">
                            							
-                           <g data-time-start="22.78888888888889" data-time-end="27.22222222222222" class="note" id="e34-m-418">
+                           <g class="note" id="e34-m-418">
                               								
                               <polygon points="7648,18272 7880,18272 7880,18317 7648,18317 "></polygon>
                               								
@@ -3355,7 +3355,7 @@
                         						
                         <g class="layer" id="e34-m-424">
                            							
-                           <g data-time-start="22.78888888888889" data-time-end="27.22222222222222" class="note" id="e34-m-425">
+                           <g class="note" id="e34-m-425">
                               								
                               <polygon points="7648,19977 7880,19977 7880,20022 7648,20022 "></polygon>
                               								
@@ -3401,7 +3401,7 @@
                         						
                         <g class="layer" id="e34-m-431">
                            							
-                           <g data-time-start="22.78888888888889" data-time-end="27.22222222222222" class="note" id="e34-m-432">
+                           <g class="note" id="e34-m-432">
                               								
                               <polygon points="7648,21327 7880,21327 7880,21372 7648,21372 "></polygon>
                               								
@@ -3469,7 +3469,7 @@
                         						
                         <g class="layer" id="e34-m-441">
                            							
-                           <g data-time-start="27.233333333333334" data-time-end="28.333333333333332" class="note" id="e34-m-442">
+                           <g class="note" id="e34-m-442">
                               								
                               <use xlink:href="#E0A2" x="12963" y="18002" height="720px" width="720px"></use>
                               								
@@ -3492,7 +3492,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="28.333333333333332" data-time-end="28.888888888888886" class="note" id="e34-m-443">
+                           <g class="note" id="e34-m-443">
                               								
                               <use xlink:href="#E0A3" x="16252" y="18002" height="720px" width="720px"></use>
                               								
@@ -3516,7 +3516,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="28.888888888888886" data-time-end="29.444444444444443" class="note" id="e34-m-444">
+                           <g class="note" id="e34-m-444">
                               								
                               <use xlink:href="#E0A3" x="18120" y="18002" height="720px" width="720px"></use>
                               								
@@ -3563,7 +3563,7 @@
                               <rect x="12963" y="19617" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="27.777777777777775" data-time-end="28.055555555555554" class="note" id="e34-m-452">
+                           <g class="note" id="e34-m-452">
                               								
                               <use xlink:href="#E0A4" x="14384" y="20157" height="720px" width="720px"></use>
                               								
@@ -3589,7 +3589,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="28.055555555555554" data-time-end="28.333333333333332" class="note" id="e34-m-453">
+                           <g class="note" id="e34-m-453">
                               								
                               <use xlink:href="#E0A4" x="15318" y="20067" height="720px" width="720px"></use>
                               								
@@ -3599,7 +3599,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="28.333333333333332" data-time-end="28.611111111111107" class="note" id="e34-m-454">
+                           <g class="note" id="e34-m-454">
                               								
                               <use xlink:href="#E0A4" x="16252" y="19977" height="720px" width="720px"></use>
                               								
@@ -3623,7 +3623,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="28.611111111111107" data-time-end="28.888888888888886" class="note" id="e34-m-455">
+                           <g class="note" id="e34-m-455">
                               								
                               <use xlink:href="#E0A4" x="17186" y="19887" height="720px" width="720px"></use>
                               								
@@ -3649,7 +3649,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="28.888888888888886" data-time-end="29.444444444444443" class="note" id="e34-m-456">
+                           <g class="note" id="e34-m-456">
                               								
                               <use xlink:href="#E0A3" x="18120" y="19797" height="720px" width="720px"></use>
                               								
@@ -3699,7 +3699,7 @@
                               <rect x="16252" y="21237" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="28.888888888888886" data-time-end="29.166666666666668" class="note" id="e34-m-469">
+                           <g class="note" id="e34-m-469">
                               								
                               <use xlink:href="#E0A4" x="18120" y="21327" height="720px" width="720px"></use>
                               								
@@ -3725,7 +3725,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="29.166666666666668" data-time-end="29.444444444444443" class="note" id="e34-m-470">
+                           <g class="note" id="e34-m-470">
                               								
                               <use xlink:href="#E0A4" x="19054" y="21237" height="720px" width="720px"></use>
                               								
@@ -3799,7 +3799,7 @@
                         						
                         <g class="layer" id="e34-m-473">
                            							
-                           <g data-time-start="29.455555555555556" data-time-end="30.55555555555555" class="note" id="e34-m-474">
+                           <g class="note" id="e34-m-474">
                               								
                               <use xlink:href="#E0A2" x="1226" y="23667" height="720px" width="720px"></use>
                               								
@@ -3818,7 +3818,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="30.55555555555555" data-time-end="31.11111111111111" class="note" id="e34-m-475">
+                           <g class="note" id="e34-m-475">
                               								
                               <use xlink:href="#E0A3" x="4236" y="23577" height="720px" width="720px"></use>
                               								
@@ -3844,7 +3844,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="31.11111111111111" data-time-end="31.666666666666668" class="note" id="e34-m-476">
+                           <g class="note" id="e34-m-476">
                               								
                               <use xlink:href="#E0A3" x="5943" y="23577" height="720px" width="720px"></use>
                               								
@@ -3901,7 +3901,7 @@
                               <rect x="1226" y="25192" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="30" data-time-end="30.83333333333333" class="note" id="e34-m-484">
+                           <g class="note" id="e34-m-484">
                               								
                               <use xlink:href="#E0A3" x="2938" y="25552" height="720px" width="720px"></use>
                               								
@@ -3932,7 +3932,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="30.83333333333333" data-time-end="31.11111111111111" class="note" id="e34-m-485">
+                           <g class="note" id="e34-m-485">
                               								
                               <use xlink:href="#E0A4" x="5089" y="25462" height="720px" width="720px"></use>
                               								
@@ -3958,7 +3958,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="31.11111111111111" data-time-end="31.38888888888889" class="note" id="e34-m-486">
+                           <g class="note" id="e34-m-486">
                               								
                               <use xlink:href="#E0A4" x="5943" y="25372" height="720px" width="720px"></use>
                               								
@@ -3982,7 +3982,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="31.38888888888889" data-time-end="31.666666666666668" class="note" id="e34-m-487">
+                           <g class="note" id="e34-m-487">
                               								
                               <use xlink:href="#E0A4" x="6796" y="25552" height="720px" width="720px"></use>
                               								
@@ -4034,7 +4034,7 @@
                         						
                         <g class="layer" id="e34-m-495">
                            							
-                           <g data-time-start="29.455555555555556" data-time-end="29.72222222222222" class="note" id="e34-m-496">
+                           <g class="note" id="e34-m-496">
                               								
                               <use xlink:href="#E0A4" x="1226" y="26726" height="720px" width="720px"></use>
                               								
@@ -4058,7 +4058,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="29.72222222222222" data-time-end="30" class="note" id="e34-m-497">
+                           <g class="note" id="e34-m-497">
                               								
                               <use xlink:href="#E0A4" x="2084" y="26636" height="720px" width="720px"></use>
                               								
@@ -4084,7 +4084,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="30" data-time-end="30.55555555555555" class="note" id="e34-m-498">
+                           <g class="note" id="e34-m-498">
                               								
                               <use xlink:href="#E0A3" x="2938" y="26546" height="720px" width="720px"></use>
                               								
@@ -4113,7 +4113,7 @@
                               <rect x="4236" y="26816" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="31.11111111111111" data-time-end="31.666666666666668" class="note" id="e34-m-500">
+                           <g class="note" id="e34-m-500">
                               								
                               <use xlink:href="#E0A3" x="5943" y="26726" height="720px" width="720px"></use>
                               								
@@ -4172,7 +4172,7 @@
                         						
                         <g class="layer" id="e34-m-511">
                            							
-                           <g data-time-start="31.677777777777777" data-time-end="32.77777777777778" class="note" id="e34-m-512">
+                           <g class="note" id="e34-m-512">
                               								
                               <use xlink:href="#E0A2" x="7885" y="23667" height="720px" width="720px"></use>
                               								
@@ -4191,7 +4191,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="32.77777777777778" data-time-end="33.888888888888886" class="note" id="e34-m-513">
+                           <g class="note" id="e34-m-513">
                               								
                               <use xlink:href="#E0A2" x="11615" y="23757" height="720px" width="720px"></use>
                               								
@@ -4232,7 +4232,7 @@
                         						
                         <g class="layer" id="e34-m-522">
                            							
-                           <g data-time-start="31.677777777777777" data-time-end="32.22222222222222" class="note" id="e34-m-523">
+                           <g class="note" id="e34-m-523">
                               								
                               <use xlink:href="#E0A3" x="7885" y="25282" height="720px" width="720px"></use>
                               								
@@ -4260,7 +4260,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="32.22222222222222" data-time-end="32.63333333333333" class="note" id="e34-m-525">
+                           <g class="note" id="e34-m-525">
                               								
                               <use xlink:href="#E0A4" x="9592" y="25372" height="720px" width="720px"></use>
                               								
@@ -4291,7 +4291,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="32.644444444444446" data-time-end="32.77777777777778" class="note" id="e34-m-526">
+                           <g class="note" id="e34-m-526">
                               								
                               <use xlink:href="#E0A4" x="11001" y="25462" height="720px" width="720px"></use>
                               								
@@ -4306,7 +4306,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="32.77777777777778" data-time-end="33.888888888888886" class="note" id="e34-m-527">
+                           <g class="note" id="e34-m-527">
                               								
                               <use xlink:href="#E0A2" x="11615" y="25552" height="720px" width="720px"></use>
                               								
@@ -4341,7 +4341,7 @@
                         						
                         <g class="layer" id="e34-m-537">
                            							
-                           <g data-time-start="31.677777777777777" data-time-end="31.94444444444444" class="note" id="e34-m-538">
+                           <g class="note" id="e34-m-538">
                               								
                               <use xlink:href="#E0A4" x="7885" y="26726" height="720px" width="720px"></use>
                               								
@@ -4351,7 +4351,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="31.94444444444444" data-time-end="32.22222222222222" class="note" id="e34-m-539">
+                           <g class="note" id="e34-m-539">
                               								
                               <use xlink:href="#E0A4" x="8738" y="26636" height="720px" width="720px"></use>
                               								
@@ -4377,7 +4377,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="32.22222222222222" data-time-end="32.5" class="note" id="e34-m-540">
+                           <g class="note" id="e34-m-540">
                               								
                               <use xlink:href="#E0A4" x="9592" y="26546" height="720px" width="720px"></use>
                               								
@@ -4401,7 +4401,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="32.5" data-time-end="32.77777777777778" class="note" id="e34-m-541">
+                           <g class="note" id="e34-m-541">
                               								
                               <use xlink:href="#E0A4" x="10445" y="26726" height="720px" width="720px"></use>
                               								
@@ -4427,7 +4427,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="32.77777777777778" data-time-end="33.333333333333336" class="note" id="e34-m-542">
+                           <g class="note" id="e34-m-542">
                               								
                               <use xlink:href="#E0A3" x="11615" y="26456" height="720px" width="720px"></use>
                               								
@@ -4455,7 +4455,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="33.333333333333336" data-time-end="33.74444444444444" class="note" id="e34-m-544">
+                           <g class="note" id="e34-m-544">
                               								
                               <use xlink:href="#E0A4" x="12913" y="26546" height="720px" width="720px"></use>
                               								
@@ -4486,7 +4486,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="33.75555555555555" data-time-end="33.888888888888886" class="note" id="e34-m-545">
+                           <g class="note" id="e34-m-545">
                               								
                               <use xlink:href="#E0A4" x="14002" y="26636" height="720px" width="720px"></use>
                               								
@@ -4529,7 +4529,7 @@
                         						
                         <g class="layer" id="e34-m-554">
                            							
-                           <g data-time-start="33.9" data-time-end="34.44444444444444" class="note" id="e34-m-555">
+                           <g class="note" id="e34-m-555">
                               								
                               <use xlink:href="#E0A3" x="14794" y="23667" height="720px" width="720px"></use>
                               								
@@ -4555,7 +4555,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="34.44444444444444" data-time-end="34.99999999999999" class="note" id="e34-m-556">
+                           <g class="note" id="e34-m-556">
                               								
                               <use xlink:href="#E0A3" x="16093" y="23667" height="720px" width="720px"></use>
                               								
@@ -4581,7 +4581,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="34.99999999999999" data-time-end="36.111111111111114" class="note" id="e34-m-557">
+                           <g class="note" id="e34-m-557">
                               								
                               <use xlink:href="#E0A2" x="17391" y="23577" height="720px" width="720px"></use>
                               								
@@ -4621,7 +4621,7 @@
                               <rect x="14794" y="25192" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="34.44444444444444" data-time-end="34.99999999999999" class="note" id="e34-m-569">
+                           <g class="note" id="e34-m-569">
                               								
                               <use xlink:href="#E0A3" x="16093" y="25552" height="720px" width="720px"></use>
                               								
@@ -4647,7 +4647,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="34.99999999999999" data-time-end="35.55555555555556" class="note" id="e34-m-570">
+                           <g class="note" id="e34-m-570">
                               								
                               <use xlink:href="#E0A3" x="17391" y="25732" height="720px" width="720px"></use>
                               								
@@ -4673,7 +4673,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="35.55555555555556" data-time-end="36.111111111111114" class="note" id="e34-m-571">
+                           <g class="note" id="e34-m-571">
                               								
                               <use xlink:href="#E0A3" x="18690" y="25102" height="720px" width="720px"></use>
                               								
@@ -4699,7 +4699,7 @@
                         						
                         <g class="layer" id="e34-m-573">
                            							
-                           <g data-time-start="33.9" data-time-end="34.99999999999999" class="note" id="e34-m-574">
+                           <g class="note" id="e34-m-574">
                               								
                               <use xlink:href="#E0A2" x="14794" y="26726" height="720px" width="720px"></use>
                               								
@@ -4723,7 +4723,7 @@
                               <rect x="17391" y="26816" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="35.55555555555556" data-time-end="36.111111111111114" class="note" id="e34-m-576">
+                           <g class="note" id="e34-m-576">
                               								
                               <use xlink:href="#E0A3" x="18690" y="26726" height="720px" width="720px"></use>
                               								
@@ -4820,7 +4820,7 @@
                         						
                         <g class="layer" id="e34-m-588">
                            							
-                           <g data-time-start="36.12222222222221" data-time-end="37.22222222222222" class="note" id="e34-m-589">
+                           <g class="note" id="e34-m-589">
                               								
                               <use xlink:href="#E0A2" x="1183" y="29336" height="720px" width="720px"></use>
                               								
@@ -4843,7 +4843,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="37.22222222222222" data-time-end="37.77777777777777" class="note" id="e34-m-591">
+                           <g class="note" id="e34-m-591">
                               								
                               <use xlink:href="#E0A3" x="3937" y="29246" height="720px" width="720px"></use>
                               								
@@ -4869,7 +4869,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="37.77777777777777" data-time-end="38.33333333333333" class="note" id="e34-m-592">
+                           <g class="note" id="e34-m-592">
                               								
                               <use xlink:href="#E0A3" x="5313" y="29246" height="720px" width="720px"></use>
                               								
@@ -4919,7 +4919,7 @@
                         						
                         <g class="layer" id="e34-m-600">
                            							
-                           <g data-time-start="36.12222222222221" data-time-end="36.388888888888886" class="note" id="e34-m-601">
+                           <g class="note" id="e34-m-601">
                               								
                               <use xlink:href="#E0A4" x="1183" y="30681" height="720px" width="720px"></use>
                               								
@@ -4929,7 +4929,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="36.388888888888886" data-time-end="36.666666666666664" class="note" id="e34-m-602">
+                           <g class="note" id="e34-m-602">
                               								
                               <use xlink:href="#E0A4" x="1871" y="30771" height="720px" width="720px"></use>
                               								
@@ -4953,7 +4953,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="36.666666666666664" data-time-end="36.94444444444444" class="note" id="e34-m-603">
+                           <g class="note" id="e34-m-603">
                               								
                               <use xlink:href="#E0A4" x="2560" y="30861" height="720px" width="720px"></use>
                               								
@@ -4981,7 +4981,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="36.94444444444444" data-time-end="37.22222222222222" class="note" id="e34-m-605">
+                           <g class="note" id="e34-m-605">
                               								
                               <use xlink:href="#E0A4" x="3248" y="30951" height="720px" width="720px"></use>
                               								
@@ -4991,7 +4991,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="37.22222222222222" data-time-end="38.33333333333333" class="note" id="e34-m-606">
+                           <g class="note" id="e34-m-606">
                               								
                               <use xlink:href="#E0A2" x="3937" y="31041" height="720px" width="720px"></use>
                               								
@@ -5043,7 +5043,7 @@
                         						
                         <g class="layer" id="e34-m-618">
                            							
-                           <g data-time-start="36.12222222222221" data-time-end="36.666666666666664" class="note" id="e34-m-619">
+                           <g class="note" id="e34-m-619">
                               								
                               <use xlink:href="#E0A3" x="1183" y="32665" height="720px" width="720px"></use>
                               								
@@ -5071,7 +5071,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="36.666666666666664" data-time-end="37.5" class="note" id="e34-m-620">
+                           <g class="note" id="e34-m-620">
                               								
                               <use xlink:href="#E0A3" x="2560" y="32035" height="720px" width="720px"></use>
                               								
@@ -5086,7 +5086,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="37.5" data-time-end="37.77777777777777" class="note" id="e34-m-621">
+                           <g class="note" id="e34-m-621">
                               								
                               <use xlink:href="#E0A4" x="4625" y="32125" height="720px" width="720px"></use>
                               								
@@ -5110,7 +5110,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="37.77777777777777" data-time-end="38.05555555555555" class="note" id="e34-m-622">
+                           <g class="note" id="e34-m-622">
                               								
                               <use xlink:href="#E0A4" x="5313" y="32215" height="720px" width="720px"></use>
                               								
@@ -5138,7 +5138,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="38.05555555555555" data-time-end="38.33333333333333" class="note" id="e34-m-624">
+                           <g class="note" id="e34-m-624">
                               								
                               <use xlink:href="#E0A4" x="6002" y="32305" height="720px" width="720px"></use>
                               								
@@ -5176,7 +5176,7 @@
                         						
                         <g class="layer" id="e34-m-633">
                            							
-                           <g data-time-start="38.34444444444444" data-time-end="38.888888888888886" class="note" id="e34-m-634">
+                           <g class="note" id="e34-m-634">
                               								
                               <use xlink:href="#E0A3" x="6883" y="29156" height="720px" width="720px"></use>
                               								
@@ -5202,7 +5202,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="38.888888888888886" data-time-end="39.44444444444444" class="note" id="e34-m-635">
+                           <g class="note" id="e34-m-635">
                               								
                               <use xlink:href="#E0A3" x="7931" y="29156" height="720px" width="720px"></use>
                               								
@@ -5226,7 +5226,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="39.44444444444444" data-time-end="40.55555555555556" class="note" id="e34-m-636">
+                           <g class="note" id="e34-m-636">
                               								
                               <use xlink:href="#E0A2" x="8978" y="29426" height="720px" width="720px"></use>
                               								
@@ -5266,7 +5266,7 @@
                               <rect x="6883" y="30771" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="38.888888888888886" data-time-end="39.44444444444444" class="note" id="e34-m-646">
+                           <g class="note" id="e34-m-646">
                               								
                               <use xlink:href="#E0A3" x="7931" y="31311" height="720px" width="720px"></use>
                               								
@@ -5290,7 +5290,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="39.44444444444444" data-time-end="40" class="note" id="e34-m-647">
+                           <g class="note" id="e34-m-647">
                               								
                               <use xlink:href="#E0A3" x="8978" y="30771" height="720px" width="720px"></use>
                               								
@@ -5316,7 +5316,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="40" data-time-end="40.27777777777778" class="note" id="e34-m-648">
+                           <g class="note" id="e34-m-648">
                               								
                               <use xlink:href="#E0A4" x="10026" y="30861" height="720px" width="720px"></use>
                               								
@@ -5328,7 +5328,7 @@
                               <g class="accid" id="e34-m-649"></g>
                               							</g>
                            							
-                           <g data-time-start="40.27777777777778" data-time-end="40.55555555555556" class="note" id="e34-m-650">
+                           <g class="note" id="e34-m-650">
                               								
                               <use xlink:href="#E0A4" x="10714" y="30951" height="720px" width="720px"></use>
                               								
@@ -5354,7 +5354,7 @@
                         						
                         <g class="layer" id="e34-m-654">
                            							
-                           <g data-time-start="38.34444444444444" data-time-end="39.44444444444444" class="note" id="e34-m-655">
+                           <g class="note" id="e34-m-655">
                               								
                               <use xlink:href="#E0A2" x="6883" y="32395" height="720px" width="720px"></use>
                               								
@@ -5378,7 +5378,7 @@
                               <rect x="8978" y="32575" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="40" data-time-end="40.55555555555556" class="note" id="e34-m-657">
+                           <g class="note" id="e34-m-657">
                               								
                               <use xlink:href="#E0A3" x="10026" y="32665" height="720px" width="720px"></use>
                               								
@@ -5430,7 +5430,7 @@
                         						
                         <g class="layer" id="e34-m-666">
                            							
-                           <g data-time-start="40.56666666666666" data-time-end="41.11111111111111" class="note" id="e34-m-667">
+                           <g class="note" id="e34-m-667">
                               								
                               <use xlink:href="#E0A3" x="11595" y="29516" height="720px" width="720px"></use>
                               								
@@ -5456,7 +5456,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="41.11111111111111" data-time-end="41.666666666666664" class="note" id="e34-m-668">
+                           <g class="note" id="e34-m-668">
                               								
                               <use xlink:href="#E0A3" x="12643" y="29516" height="720px" width="720px"></use>
                               								
@@ -5482,7 +5482,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="41.666666666666664" data-time-end="42.77777777777777" class="note" id="e34-m-669">
+                           <g class="note" id="e34-m-669">
                               								
                               <use xlink:href="#E0A2" x="14019" y="29426" height="720px" width="720px"></use>
                               								
@@ -5517,7 +5517,7 @@
                         						
                         <g class="layer" id="e34-m-677">
                            							
-                           <g data-time-start="40.56666666666666" data-time-end="41.11111111111111" class="note" id="e34-m-678">
+                           <g class="note" id="e34-m-678">
                               								
                               <use xlink:href="#E0A3" x="11595" y="30771" height="720px" width="720px"></use>
                               								
@@ -5543,7 +5543,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="41.11111111111111" data-time-end="41.666666666666664" class="note" id="e34-m-679">
+                           <g class="note" id="e34-m-679">
                               								
                               <use xlink:href="#E0A3" x="12643" y="30681" height="720px" width="720px"></use>
                               								
@@ -5567,7 +5567,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="41.666666666666664" data-time-end="42.22222222222222" class="note" id="e34-m-680">
+                           <g class="note" id="e34-m-680">
                               								
                               <use xlink:href="#E0A3" x="14019" y="30771" height="720px" width="720px"></use>
                               								
@@ -5593,7 +5593,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="42.22222222222222" data-time-end="42.77777777777777" class="note" id="e34-m-681">
+                           <g class="note" id="e34-m-681">
                               								
                               <use xlink:href="#E0A3" x="15067" y="31131" height="720px" width="720px"></use>
                               								
@@ -5642,7 +5642,7 @@
                         						
                         <g class="layer" id="e34-m-693">
                            							
-                           <g data-time-start="40.56666666666666" data-time-end="41.11111111111111" class="note" id="e34-m-694">
+                           <g class="note" id="e34-m-694">
                               								
                               <use xlink:href="#E0A3" x="11595" y="32125" height="720px" width="720px"></use>
                               								
@@ -5668,7 +5668,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="41.11111111111111" data-time-end="41.388888888888886" class="note" id="e34-m-695">
+                           <g class="note" id="e34-m-695">
                               								
                               <use xlink:href="#E0A4" x="12643" y="32215" height="720px" width="720px"></use>
                               								
@@ -5680,7 +5680,7 @@
                               <g class="accid" id="e34-m-696"></g>
                               							</g>
                            							
-                           <g data-time-start="41.388888888888886" data-time-end="41.666666666666664" class="note" id="e34-m-697">
+                           <g class="note" id="e34-m-697">
                               								
                               <use xlink:href="#E0A4" x="13331" y="32305" height="720px" width="720px"></use>
                               								
@@ -5690,7 +5690,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="41.666666666666664" data-time-end="42.22222222222222" class="note" id="e34-m-698">
+                           <g class="note" id="e34-m-698">
                               								
                               <use xlink:href="#E0A3" x="14019" y="32125" height="720px" width="720px"></use>
                               								
@@ -5716,7 +5716,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="42.22222222222222" data-time-end="42.77777777777777" class="note" id="e34-m-699">
+                           <g class="note" id="e34-m-699">
                               								
                               <use xlink:href="#E0A3" x="15067" y="32035" height="720px" width="720px"></use>
                               								
@@ -5770,7 +5770,7 @@
                         						
                         <g class="layer" id="e34-m-709">
                            							
-                           <g data-time-start="42.788888888888884" data-time-end="43.888888888888886" class="note" id="e34-m-710">
+                           <g class="note" id="e34-m-710">
                               								
                               <use xlink:href="#E0A2" x="16307" y="29246" height="720px" width="720px"></use>
                               								
@@ -5791,7 +5791,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="43.888888888888886" data-time-end="45" class="note" id="e34-m-711">
+                           <g class="note" id="e34-m-711">
                               								
                               <use xlink:href="#E0A2" x="18402" y="29336" height="720px" width="720px"></use>
                               								
@@ -5833,7 +5833,7 @@
                               <rect x="16307" y="30681" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="43.888888888888886" data-time-end="45" class="note" id="e34-m-720">
+                           <g class="note" id="e34-m-720">
                               								
                               <use xlink:href="#E0A2" x="18402" y="31311" height="720px" width="720px"></use>
                               								
@@ -5875,7 +5875,7 @@
                         						
                         <g class="layer" id="e34-m-722">
                            							
-                           <g data-time-start="42.788888888888884" data-time-end="43.333333333333336" class="note" id="e34-m-723">
+                           <g class="note" id="e34-m-723">
                               								
                               <use xlink:href="#E0A3" x="16307" y="32125" height="720px" width="720px"></use>
                               								
@@ -5901,7 +5901,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="43.333333333333336" data-time-end="43.888888888888886" class="note" id="e34-m-724">
+                           <g class="note" id="e34-m-724">
                               								
                               <use xlink:href="#E0A3" x="17355" y="32485" height="720px" width="720px"></use>
                               								
@@ -5999,7 +5999,7 @@
                         						
                         <g class="layer" id="e34-m-732">
                            							
-                           <g data-time-start="45.011111111111106" data-time-end="46.11111111111111" class="note" id="e34-m-733">
+                           <g class="note" id="e34-m-733">
                               								
                               <use xlink:href="#E0A2" x="1189" y="35185" height="720px" width="720px"></use>
                               								
@@ -6020,7 +6020,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="46.11111111111111" data-time-end="46.66666666666666" class="note" id="e34-m-734">
+                           <g class="note" id="e34-m-734">
                               								
                               <use xlink:href="#E0A3" x="3350" y="35095" height="720px" width="720px"></use>
                               								
@@ -6048,7 +6048,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="46.66666666666666" data-time-end="47.22222222222222" class="note" id="e34-m-736">
+                           <g class="note" id="e34-m-736">
                               								
                               <use xlink:href="#E0A3" x="4431" y="35095" height="720px" width="720px"></use>
                               								
@@ -6098,7 +6098,7 @@
                         						
                         <g class="layer" id="e34-m-745">
                            							
-                           <g data-time-start="45.011111111111106" data-time-end="45.55555555555555" class="note" id="e34-m-746">
+                           <g class="note" id="e34-m-746">
                               								
                               <use xlink:href="#E0A3" x="1189" y="37160" height="720px" width="720px"></use>
                               								
@@ -6124,7 +6124,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="45.55555555555555" data-time-end="46.11111111111111" class="note" id="e34-m-747">
+                           <g class="note" id="e34-m-747">
                               								
                               <use xlink:href="#E0A3" x="2269" y="37160" height="720px" width="720px"></use>
                               								
@@ -6148,7 +6148,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="46.11111111111111" data-time-end="47.22222222222222" class="note" id="e34-m-748">
+                           <g class="note" id="e34-m-748">
                               								
                               <use xlink:href="#E0A2" x="3350" y="36980" height="720px" width="720px"></use>
                               								
@@ -6195,7 +6195,7 @@
                         						
                         <g class="layer" id="e34-m-756">
                            							
-                           <g data-time-start="45.011111111111106" data-time-end="46.11111111111111" class="note" id="e34-m-757">
+                           <g class="note" id="e34-m-757">
                               								
                               <use xlink:href="#E0A2" x="1189" y="38330" height="720px" width="720px"></use>
                               								
@@ -6216,7 +6216,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="46.11111111111111" data-time-end="46.66666666666666" class="note" id="e34-m-758">
+                           <g class="note" id="e34-m-758">
                               								
                               <use xlink:href="#E0A3" x="3350" y="38330" height="720px" width="720px"></use>
                               								
@@ -6242,7 +6242,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="46.66666666666666" data-time-end="47.22222222222222" class="note" id="e34-m-759">
+                           <g class="note" id="e34-m-759">
                               								
                               <use xlink:href="#E0A3" x="4431" y="38330" height="720px" width="720px"></use>
                               								
@@ -6294,7 +6294,7 @@
                         						
                         <g class="layer" id="e34-m-768">
                            							
-                           <g data-time-start="47.23333333333333" data-time-end="48.33333333333333" class="note" id="e34-m-769">
+                           <g class="note" id="e34-m-769">
                               								
                               <use xlink:href="#E0A2" x="5711" y="35185" height="720px" width="720px"></use>
                               								
@@ -6315,7 +6315,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="48.33333333333333" data-time-end="48.888888888888886" class="note" id="e34-m-770">
+                           <g class="note" id="e34-m-770">
                               								
                               <use xlink:href="#E0A3" x="8212" y="35275" height="720px" width="720px"></use>
                               								
@@ -6339,7 +6339,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="48.888888888888886" data-time-end="49.44444444444444" class="note" id="e34-m-771">
+                           <g class="note" id="e34-m-771">
                               								
                               <use xlink:href="#E0A3" x="9293" y="35275" height="720px" width="720px"></use>
                               								
@@ -6386,7 +6386,7 @@
                         						
                         <g class="layer" id="e34-m-777">
                            							
-                           <g data-time-start="47.23333333333333" data-time-end="48.05555555555556" class="note" id="e34-m-778">
+                           <g class="note" id="e34-m-778">
                               								
                               <use xlink:href="#E0A3" x="5711" y="37250" height="720px" width="720px"></use>
                               								
@@ -6417,7 +6417,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="48.05555555555556" data-time-end="48.33333333333333" class="note" id="e34-m-779">
+                           <g class="note" id="e34-m-779">
                               								
                               <use xlink:href="#E0A4" x="7502" y="37160" height="720px" width="720px"></use>
                               								
@@ -6427,7 +6427,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="48.33333333333333" data-time-end="49.44444444444444" class="note" id="e34-m-780">
+                           <g class="note" id="e34-m-780">
                               								
                               <use xlink:href="#E0A2" x="8212" y="37070" height="720px" width="720px"></use>
                               								
@@ -6464,7 +6464,7 @@
                         						
                         <g class="layer" id="e34-m-786">
                            							
-                           <g data-time-start="47.23333333333333" data-time-end="47.77777777777778" class="note" id="e34-m-787">
+                           <g class="note" id="e34-m-787">
                               								
                               <use xlink:href="#E0A3" x="5711" y="38150" height="720px" width="720px"></use>
                               								
@@ -6490,7 +6490,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="47.77777777777778" data-time-end="48.33333333333333" class="note" id="e34-m-788">
+                           <g class="note" id="e34-m-788">
                               								
                               <use xlink:href="#E0A3" x="6791" y="38150" height="720px" width="720px"></use>
                               								
@@ -6514,7 +6514,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="48.33333333333333" data-time-end="49.44444444444444" class="note" id="e34-m-789">
+                           <g class="note" id="e34-m-789">
                               								
                               <use xlink:href="#E0A2" x="8212" y="38420" height="720px" width="720px"></use>
                               								
@@ -6563,7 +6563,7 @@
                         						
                         <g class="layer" id="e34-m-796">
                            							
-                           <g data-time-start="49.45555555555555" data-time-end="53.888888888888886" class="note" id="e34-m-797">
+                           <g class="note" id="e34-m-797">
                               								
                               <polygon points="10581,35185 10813,35185 10813,35230 10581,35230 "></polygon>
                               								
@@ -6609,7 +6609,7 @@
                         						
                         <g class="layer" id="e34-m-803">
                            							
-                           <g data-time-start="49.45555555555555" data-time-end="53.888888888888886" class="note" id="e34-m-804">
+                           <g class="note" id="e34-m-804">
                               								
                               <polygon points="10581,36980 10813,36980 10813,37025 10581,37025 "></polygon>
                               								
@@ -6655,7 +6655,7 @@
                         						
                         <g class="layer" id="e34-m-810">
                            							
-                           <g data-time-start="49.45555555555555" data-time-end="53.888888888888886" class="note" id="e34-m-811">
+                           <g class="note" id="e34-m-811">
                               								
                               <polygon points="10581,38330 10813,38330 10813,38375 10581,38375 "></polygon>
                               								
@@ -6723,7 +6723,7 @@
                         						
                         <g class="layer" id="e34-m-820">
                            							
-                           <g data-time-start="53.89999999999999" data-time-end="55" class="note" id="e34-m-821">
+                           <g class="note" id="e34-m-821">
                               								
                               <use xlink:href="#E0A2" x="14647" y="34915" height="720px" width="720px"></use>
                               								
@@ -6742,7 +6742,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="55" data-time-end="56.11111111111111" class="note" id="e34-m-822">
+                           <g class="note" id="e34-m-822">
                               								
                               <use xlink:href="#E0A2" x="17148" y="34915" height="720px" width="720px"></use>
                               								
@@ -6786,7 +6786,7 @@
                               <rect x="14647" y="36620" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="54.44444444444444" data-time-end="54.72222222222222" class="note" id="e34-m-828">
+                           <g class="note" id="e34-m-828">
                               								
                               <use xlink:href="#E0A4" x="15727" y="37160" height="720px" width="720px"></use>
                               								
@@ -6812,7 +6812,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="54.72222222222222" data-time-end="55" class="note" id="e34-m-829">
+                           <g class="note" id="e34-m-829">
                               								
                               <use xlink:href="#E0A4" x="16438" y="37070" height="720px" width="720px"></use>
                               								
@@ -6822,7 +6822,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="55" data-time-end="55.27777777777778" class="note" id="e34-m-830">
+                           <g class="note" id="e34-m-830">
                               								
                               <use xlink:href="#E0A4" x="17148" y="36980" height="720px" width="720px"></use>
                               								
@@ -6848,7 +6848,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="55.27777777777778" data-time-end="55.55555555555555" class="note" id="e34-m-831">
+                           <g class="note" id="e34-m-831">
                               								
                               <use xlink:href="#E0A4" x="17858" y="36890" height="720px" width="720px"></use>
                               								
@@ -6858,7 +6858,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="55.55555555555555" data-time-end="56.11111111111111" class="note" id="e34-m-832">
+                           <g class="note" id="e34-m-832">
                               								
                               <use xlink:href="#E0A3" x="18568" y="36800" height="720px" width="720px"></use>
                               								
@@ -6908,7 +6908,7 @@
                               <rect x="17148" y="38240" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="55.55555555555555" data-time-end="55.83333333333333" class="note" id="e34-m-843">
+                           <g class="note" id="e34-m-843">
                               								
                               <use xlink:href="#E0A4" x="18568" y="38330" height="720px" width="720px"></use>
                               								
@@ -6934,7 +6934,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="55.83333333333333" data-time-end="56.11111111111111" class="note" id="e34-m-844">
+                           <g class="note" id="e34-m-844">
                               								
                               <use xlink:href="#E0A4" x="19278" y="38240" height="720px" width="720px"></use>
                               								
@@ -7008,7 +7008,7 @@
                         						
                         <g class="layer" id="e34-m-849">
                            							
-                           <g data-time-start="56.12222222222222" data-time-end="57.222222222222214" class="note" id="e34-m-850">
+                           <g class="note" id="e34-m-850">
                               								
                               <use xlink:href="#E0A2" x="1226" y="40670" height="720px" width="720px"></use>
                               								
@@ -7027,7 +7027,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="57.222222222222214" data-time-end="57.77777777777777" class="note" id="e34-m-851">
+                           <g class="note" id="e34-m-851">
                               								
                               <use xlink:href="#E0A3" x="4232" y="40580" height="720px" width="720px"></use>
                               								
@@ -7051,7 +7051,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="57.77777777777777" data-time-end="58.333333333333336" class="note" id="e34-m-852">
+                           <g class="note" id="e34-m-852">
                               								
                               <use xlink:href="#E0A3" x="5939" y="40580" height="720px" width="720px"></use>
                               								
@@ -7106,7 +7106,7 @@
                               <rect x="1226" y="42195" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="56.666666666666664" data-time-end="57.49999999999999" class="note" id="e34-m-864">
+                           <g class="note" id="e34-m-864">
                               								
                               <use xlink:href="#E0A3" x="2933" y="42555" height="720px" width="720px"></use>
                               								
@@ -7135,7 +7135,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="57.49999999999999" data-time-end="57.77777777777777" class="note" id="e34-m-865">
+                           <g class="note" id="e34-m-865">
                               								
                               <use xlink:href="#E0A4" x="5086" y="42465" height="720px" width="720px"></use>
                               								
@@ -7161,7 +7161,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="57.77777777777777" data-time-end="58.05555555555556" class="note" id="e34-m-866">
+                           <g class="note" id="e34-m-866">
                               								
                               <use xlink:href="#E0A4" x="5939" y="42375" height="720px" width="720px"></use>
                               								
@@ -7171,7 +7171,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="58.05555555555556" data-time-end="58.333333333333336" class="note" id="e34-m-867">
+                           <g class="note" id="e34-m-867">
                               								
                               <use xlink:href="#E0A4" x="6793" y="42555" height="720px" width="720px"></use>
                               								
@@ -7207,7 +7207,7 @@
                         						
                         <g class="layer" id="e34-m-873">
                            							
-                           <g data-time-start="56.12222222222222" data-time-end="56.388888888888886" class="note" id="e34-m-874">
+                           <g class="note" id="e34-m-874">
                               								
                               <use xlink:href="#E0A4" x="1226" y="43729" height="720px" width="720px"></use>
                               								
@@ -7233,7 +7233,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="56.388888888888886" data-time-end="56.666666666666664" class="note" id="e34-m-875">
+                           <g class="note" id="e34-m-875">
                               								
                               <use xlink:href="#E0A4" x="2080" y="43639" height="720px" width="720px"></use>
                               								
@@ -7243,7 +7243,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="56.666666666666664" data-time-end="57.222222222222214" class="note" id="e34-m-876">
+                           <g class="note" id="e34-m-876">
                               								
                               <use xlink:href="#E0A3" x="2933" y="43549" height="720px" width="720px"></use>
                               								
@@ -7272,7 +7272,7 @@
                               <rect x="4232" y="43819" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="57.77777777777777" data-time-end="58.333333333333336" class="note" id="e34-m-878">
+                           <g class="note" id="e34-m-878">
                               								
                               <use xlink:href="#E0A3" x="5939" y="43729" height="720px" width="720px"></use>
                               								
@@ -7331,7 +7331,7 @@
                         						
                         <g class="layer" id="e34-m-887">
                            							
-                           <g data-time-start="58.344444444444434" data-time-end="59.44444444444444" class="note" id="e34-m-888">
+                           <g class="note" id="e34-m-888">
                               								
                               <use xlink:href="#E0A2" x="7882" y="40670" height="720px" width="720px"></use>
                               								
@@ -7350,7 +7350,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="59.44444444444444" data-time-end="60.55555555555556" class="note" id="e34-m-889">
+                           <g class="note" id="e34-m-889">
                               								
                               <use xlink:href="#E0A2" x="11613" y="40760" height="720px" width="720px"></use>
                               								
@@ -7391,7 +7391,7 @@
                         						
                         <g class="layer" id="e34-m-894">
                            							
-                           <g data-time-start="58.344444444444434" data-time-end="58.888888888888886" class="note" id="e34-m-895">
+                           <g class="note" id="e34-m-895">
                               								
                               <use xlink:href="#E0A3" x="7882" y="42285" height="720px" width="720px"></use>
                               								
@@ -7417,7 +7417,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="58.888888888888886" data-time-end="59.3" class="note" id="e34-m-897">
+                           <g class="note" id="e34-m-897">
                               								
                               <use xlink:href="#E0A4" x="9589" y="42375" height="720px" width="720px"></use>
                               								
@@ -7448,7 +7448,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="59.31111111111111" data-time-end="59.44444444444444" class="note" id="e34-m-898">
+                           <g class="note" id="e34-m-898">
                               								
                               <use xlink:href="#E0A4" x="10999" y="42465" height="720px" width="720px"></use>
                               								
@@ -7463,7 +7463,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="59.44444444444444" data-time-end="60.55555555555556" class="note" id="e34-m-899">
+                           <g class="note" id="e34-m-899">
                               								
                               <use xlink:href="#E0A2" x="11613" y="42555" height="720px" width="720px"></use>
                               								
@@ -7498,7 +7498,7 @@
                         						
                         <g class="layer" id="e34-m-907">
                            							
-                           <g data-time-start="58.344444444444434" data-time-end="58.61111111111111" class="note" id="e34-m-908">
+                           <g class="note" id="e34-m-908">
                               								
                               <use xlink:href="#E0A4" x="7882" y="43729" height="720px" width="720px"></use>
                               								
@@ -7508,7 +7508,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="58.61111111111111" data-time-end="58.888888888888886" class="note" id="e34-m-909">
+                           <g class="note" id="e34-m-909">
                               								
                               <use xlink:href="#E0A4" x="8736" y="43639" height="720px" width="720px"></use>
                               								
@@ -7534,7 +7534,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="58.888888888888886" data-time-end="59.166666666666664" class="note" id="e34-m-910">
+                           <g class="note" id="e34-m-910">
                               								
                               <use xlink:href="#E0A4" x="9589" y="43549" height="720px" width="720px"></use>
                               								
@@ -7544,7 +7544,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="59.166666666666664" data-time-end="59.44444444444444" class="note" id="e34-m-911">
+                           <g class="note" id="e34-m-911">
                               								
                               <use xlink:href="#E0A4" x="10443" y="43729" height="720px" width="720px"></use>
                               								
@@ -7554,7 +7554,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="59.44444444444444" data-time-end="60" class="note" id="e34-m-912">
+                           <g class="note" id="e34-m-912">
                               								
                               <use xlink:href="#E0A3" x="11613" y="43459" height="720px" width="720px"></use>
                               								
@@ -7580,7 +7580,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="60" data-time-end="60.4111111111111" class="note" id="e34-m-914">
+                           <g class="note" id="e34-m-914">
                               								
                               <use xlink:href="#E0A4" x="12912" y="43549" height="720px" width="720px"></use>
                               								
@@ -7611,7 +7611,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="60.42222222222222" data-time-end="60.55555555555556" class="note" id="e34-m-915">
+                           <g class="note" id="e34-m-915">
                               								
                               <use xlink:href="#E0A4" x="14000" y="43639" height="720px" width="720px"></use>
                               								
@@ -7654,7 +7654,7 @@
                         						
                         <g class="layer" id="e34-m-922">
                            							
-                           <g data-time-start="60.56666666666666" data-time-end="61.66666666666666" class="note" id="e34-m-923">
+                           <g class="note" id="e34-m-923">
                               								
                               <use xlink:href="#E0A2" x="14793" y="40670" height="720px" width="720px"></use>
                               								
@@ -7673,7 +7673,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="61.66666666666666" data-time-end="62.77777777777778" class="note" id="e34-m-924">
+                           <g class="note" id="e34-m-924">
                               								
                               <use xlink:href="#E0A2" x="17391" y="40580" height="720px" width="720px"></use>
                               								
@@ -7713,7 +7713,7 @@
                               <rect x="14793" y="42195" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="61.1111111111111" data-time-end="61.66666666666666" class="note" id="e34-m-934">
+                           <g class="note" id="e34-m-934">
                               								
                               <use xlink:href="#E0A3" x="16092" y="42555" height="720px" width="720px"></use>
                               								
@@ -7737,7 +7737,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="61.66666666666666" data-time-end="62.22222222222222" class="note" id="e34-m-935">
+                           <g class="note" id="e34-m-935">
                               								
                               <use xlink:href="#E0A3" x="17391" y="42735" height="720px" width="720px"></use>
                               								
@@ -7763,7 +7763,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="62.22222222222222" data-time-end="62.77777777777778" class="note" id="e34-m-936">
+                           <g class="note" id="e34-m-936">
                               								
                               <use xlink:href="#E0A3" x="18690" y="42105" height="720px" width="720px"></use>
                               								
@@ -7789,7 +7789,7 @@
                         						
                         <g class="layer" id="e34-m-940">
                            							
-                           <g data-time-start="60.56666666666666" data-time-end="61.66666666666666" class="note" id="e34-m-941">
+                           <g class="note" id="e34-m-941">
                               								
                               <use xlink:href="#E0A2" x="14793" y="43729" height="720px" width="720px"></use>
                               								
@@ -7813,7 +7813,7 @@
                               <rect x="17391" y="43819" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="62.22222222222222" data-time-end="62.77777777777778" class="note" id="e34-m-943">
+                           <g class="note" id="e34-m-943">
                               								
                               <use xlink:href="#E0A3" x="18690" y="43729" height="720px" width="720px"></use>
                               								
@@ -7908,7 +7908,7 @@
                         						
                         <g class="layer" id="e34-m-953">
                            							
-                           <g data-time-start="62.78888888888888" data-time-end="63.88888888888888" class="note" id="e34-m-954">
+                           <g class="note" id="e34-m-954">
                               								
                               <use xlink:href="#E0A2" x="1183" y="46339" height="720px" width="720px"></use>
                               								
@@ -7931,7 +7931,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="63.88888888888888" data-time-end="64.44444444444444" class="note" id="e34-m-956">
+                           <g class="note" id="e34-m-956">
                               								
                               <use xlink:href="#E0A3" x="3937" y="46249" height="720px" width="720px"></use>
                               								
@@ -7957,7 +7957,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="64.44444444444444" data-time-end="65" class="note" id="e34-m-957">
+                           <g class="note" id="e34-m-957">
                               								
                               <use xlink:href="#E0A3" x="5313" y="46249" height="720px" width="720px"></use>
                               								
@@ -8007,7 +8007,7 @@
                         						
                         <g class="layer" id="e34-m-965">
                            							
-                           <g data-time-start="62.78888888888888" data-time-end="63.05555555555555" class="note" id="e34-m-966">
+                           <g class="note" id="e34-m-966">
                               								
                               <use xlink:href="#E0A4" x="1183" y="47684" height="720px" width="720px"></use>
                               								
@@ -8017,7 +8017,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="63.05555555555555" data-time-end="63.333333333333336" class="note" id="e34-m-967">
+                           <g class="note" id="e34-m-967">
                               								
                               <use xlink:href="#E0A4" x="1871" y="47774" height="720px" width="720px"></use>
                               								
@@ -8043,7 +8043,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="63.333333333333336" data-time-end="63.61111111111111" class="note" id="e34-m-968">
+                           <g class="note" id="e34-m-968">
                               								
                               <use xlink:href="#E0A4" x="2560" y="47864" height="720px" width="720px"></use>
                               								
@@ -8069,7 +8069,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="63.61111111111111" data-time-end="63.88888888888888" class="note" id="e34-m-970">
+                           <g class="note" id="e34-m-970">
                               								
                               <use xlink:href="#E0A4" x="3248" y="47954" height="720px" width="720px"></use>
                               								
@@ -8095,7 +8095,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="63.88888888888888" data-time-end="65" class="note" id="e34-m-971">
+                           <g class="note" id="e34-m-971">
                               								
                               <use xlink:href="#E0A2" x="3937" y="48044" height="720px" width="720px"></use>
                               								
@@ -8147,7 +8147,7 @@
                         						
                         <g class="layer" id="e34-m-983">
                            							
-                           <g data-time-start="62.78888888888888" data-time-end="63.333333333333336" class="note" id="e34-m-984">
+                           <g class="note" id="e34-m-984">
                               								
                               <use xlink:href="#E0A3" x="1183" y="49668" height="720px" width="720px"></use>
                               								
@@ -8175,7 +8175,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="63.333333333333336" data-time-end="64.16666666666667" class="note" id="e34-m-985">
+                           <g class="note" id="e34-m-985">
                               								
                               <use xlink:href="#E0A3" x="2560" y="49038" height="720px" width="720px"></use>
                               								
@@ -8190,7 +8190,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="64.16666666666667" data-time-end="64.44444444444444" class="note" id="e34-m-986">
+                           <g class="note" id="e34-m-986">
                               								
                               <use xlink:href="#E0A4" x="4625" y="49128" height="720px" width="720px"></use>
                               								
@@ -8216,7 +8216,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="64.44444444444444" data-time-end="64.72222222222223" class="note" id="e34-m-987">
+                           <g class="note" id="e34-m-987">
                               								
                               <use xlink:href="#E0A4" x="5313" y="49218" height="720px" width="720px"></use>
                               								
@@ -8242,7 +8242,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="64.72222222222223" data-time-end="65" class="note" id="e34-m-989">
+                           <g class="note" id="e34-m-989">
                               								
                               <use xlink:href="#E0A4" x="6002" y="49308" height="720px" width="720px"></use>
                               								
@@ -8296,7 +8296,7 @@
                         						
                         <g class="layer" id="e34-m-998">
                            							
-                           <g data-time-start="65.0111111111111" data-time-end="65.55555555555556" class="note" id="e34-m-999">
+                           <g class="note" id="e34-m-999">
                               								
                               <use xlink:href="#E0A3" x="6883" y="46159" height="720px" width="720px"></use>
                               								
@@ -8322,7 +8322,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="65.55555555555556" data-time-end="66.11111111111111" class="note" id="e34-m-1000">
+                           <g class="note" id="e34-m-1000">
                               								
                               <use xlink:href="#E0A3" x="7931" y="46159" height="720px" width="720px"></use>
                               								
@@ -8346,7 +8346,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="66.11111111111111" data-time-end="67.22222222222221" class="note" id="e34-m-1001">
+                           <g class="note" id="e34-m-1001">
                               								
                               <use xlink:href="#E0A2" x="8978" y="46429" height="720px" width="720px"></use>
                               								
@@ -8388,7 +8388,7 @@
                               <rect x="6883" y="47774" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="65.55555555555556" data-time-end="66.11111111111111" class="note" id="e34-m-1009">
+                           <g class="note" id="e34-m-1009">
                               								
                               <use xlink:href="#E0A3" x="7931" y="48314" height="720px" width="720px"></use>
                               								
@@ -8414,7 +8414,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="66.11111111111111" data-time-end="66.66666666666667" class="note" id="e34-m-1010">
+                           <g class="note" id="e34-m-1010">
                               								
                               <use xlink:href="#E0A3" x="8978" y="47774" height="720px" width="720px"></use>
                               								
@@ -8440,7 +8440,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="66.66666666666667" data-time-end="66.94444444444444" class="note" id="e34-m-1011">
+                           <g class="note" id="e34-m-1011">
                               								
                               <use xlink:href="#E0A4" x="10026" y="47864" height="720px" width="720px"></use>
                               								
@@ -8452,7 +8452,7 @@
                               <g class="accid" id="e34-m-1012"></g>
                               							</g>
                            							
-                           <g data-time-start="66.94444444444444" data-time-end="67.22222222222221" class="note" id="e34-m-1013">
+                           <g class="note" id="e34-m-1013">
                               								
                               <use xlink:href="#E0A4" x="10714" y="47954" height="720px" width="720px"></use>
                               								
@@ -8478,7 +8478,7 @@
                         						
                         <g class="layer" id="e34-m-1019">
                            							
-                           <g data-time-start="65.0111111111111" data-time-end="66.11111111111111" class="note" id="e34-m-1020">
+                           <g class="note" id="e34-m-1020">
                               								
                               <use xlink:href="#E0A2" x="6883" y="49398" height="720px" width="720px"></use>
                               								
@@ -8502,7 +8502,7 @@
                               <rect x="8978" y="49578" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="66.66666666666667" data-time-end="67.22222222222221" class="note" id="e34-m-1022">
+                           <g class="note" id="e34-m-1022">
                               								
                               <use xlink:href="#E0A3" x="10026" y="49668" height="720px" width="720px"></use>
                               								
@@ -8556,7 +8556,7 @@
                         						
                         <g class="layer" id="e34-m-1029">
                            							
-                           <g data-time-start="67.23333333333333" data-time-end="68.33333333333333" class="note" id="e34-m-1030">
+                           <g class="note" id="e34-m-1030">
                               								
                               <use xlink:href="#E0A2" x="11595" y="46519" height="720px" width="720px"></use>
                               								
@@ -8575,7 +8575,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="68.33333333333333" data-time-end="68.88888888888889" class="note" id="e34-m-1031">
+                           <g class="note" id="e34-m-1031">
                               								
                               <use xlink:href="#E0A3" x="14019" y="46429" height="720px" width="720px"></use>
                               								
@@ -8601,7 +8601,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="68.88888888888889" data-time-end="69.44444444444444" class="note" id="e34-m-1032">
+                           <g class="note" id="e34-m-1032">
                               								
                               <use xlink:href="#E0A3" x="15067" y="46429" height="720px" width="720px"></use>
                               								
@@ -8641,7 +8641,7 @@
                         						
                         <g class="layer" id="e34-m-1042">
                            							
-                           <g data-time-start="67.23333333333333" data-time-end="67.77777777777777" class="note" id="e34-m-1043">
+                           <g class="note" id="e34-m-1043">
                               								
                               <use xlink:href="#E0A3" x="11595" y="47774" height="720px" width="720px"></use>
                               								
@@ -8667,7 +8667,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="67.77777777777777" data-time-end="68.33333333333333" class="note" id="e34-m-1044">
+                           <g class="note" id="e34-m-1044">
                               								
                               <use xlink:href="#E0A3" x="12643" y="47684" height="720px" width="720px"></use>
                               								
@@ -8691,7 +8691,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="68.33333333333333" data-time-end="68.88888888888889" class="note" id="e34-m-1045">
+                           <g class="note" id="e34-m-1045">
                               								
                               <use xlink:href="#E0A3" x="14019" y="47774" height="720px" width="720px"></use>
                               								
@@ -8717,7 +8717,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="68.88888888888889" data-time-end="69.44444444444444" class="note" id="e34-m-1046">
+                           <g class="note" id="e34-m-1046">
                               								
                               <use xlink:href="#E0A3" x="15067" y="48134" height="720px" width="720px"></use>
                               								
@@ -8766,7 +8766,7 @@
                         						
                         <g class="layer" id="e34-m-1056">
                            							
-                           <g data-time-start="67.23333333333333" data-time-end="67.77777777777777" class="note" id="e34-m-1057">
+                           <g class="note" id="e34-m-1057">
                               								
                               <use xlink:href="#E0A3" x="11595" y="49128" height="720px" width="720px"></use>
                               								
@@ -8792,7 +8792,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="67.77777777777777" data-time-end="68.05555555555556" class="note" id="e34-m-1058">
+                           <g class="note" id="e34-m-1058">
                               								
                               <use xlink:href="#E0A4" x="12643" y="49218" height="720px" width="720px"></use>
                               								
@@ -8804,7 +8804,7 @@
                               <g class="accid" id="e34-m-1059"></g>
                               							</g>
                            							
-                           <g data-time-start="68.05555555555556" data-time-end="68.33333333333333" class="note" id="e34-m-1060">
+                           <g class="note" id="e34-m-1060">
                               								
                               <use xlink:href="#E0A4" x="13331" y="49308" height="720px" width="720px"></use>
                               								
@@ -8814,7 +8814,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="68.33333333333333" data-time-end="68.88888888888889" class="note" id="e34-m-1061">
+                           <g class="note" id="e34-m-1061">
                               								
                               <use xlink:href="#E0A3" x="14019" y="49128" height="720px" width="720px"></use>
                               								
@@ -8840,7 +8840,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="68.88888888888889" data-time-end="69.44444444444444" class="note" id="e34-m-1062">
+                           <g class="note" id="e34-m-1062">
                               								
                               <use xlink:href="#E0A3" x="15067" y="49038" height="720px" width="720px"></use>
                               								
@@ -8894,7 +8894,7 @@
                         						
                         <g class="layer" id="e34-m-1074">
                            							
-                           <g data-time-start="69.45555555555555" data-time-end="70.55555555555554" class="note" id="e34-m-1075">
+                           <g class="note" id="e34-m-1075">
                               								
                               <use xlink:href="#E0A2" x="16307" y="46249" height="720px" width="720px"></use>
                               								
@@ -8915,7 +8915,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="70.55555555555554" data-time-end="71.66666666666667" class="note" id="e34-m-1076">
+                           <g class="note" id="e34-m-1076">
                               								
                               <use xlink:href="#E0A2" x="18402" y="46339" height="720px" width="720px"></use>
                               								
@@ -8957,7 +8957,7 @@
                               <rect x="16307" y="47684" height="90" width="216"></rect>
                               							</g>
                            							
-                           <g data-time-start="70.55555555555554" data-time-end="71.66666666666667" class="note" id="e34-m-1085">
+                           <g class="note" id="e34-m-1085">
                               								
                               <use xlink:href="#E0A2" x="18402" y="48314" height="720px" width="720px"></use>
                               								
@@ -8997,7 +8997,7 @@
                         						
                         <g class="layer" id="e34-m-1089">
                            							
-                           <g data-time-start="69.45555555555555" data-time-end="69.99999999999999" class="note" id="e34-m-1090">
+                           <g class="note" id="e34-m-1090">
                               								
                               <use xlink:href="#E0A3" x="16307" y="49128" height="720px" width="720px"></use>
                               								
@@ -9023,7 +9023,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="69.99999999999999" data-time-end="70.55555555555554" class="note" id="e34-m-1091">
+                           <g class="note" id="e34-m-1091">
                               								
                               <use xlink:href="#E0A3" x="17355" y="49488" height="720px" width="720px"></use>
                               								
@@ -9121,7 +9121,7 @@
                         						
                         <g class="layer" id="e34-m-1099">
                            							
-                           <g data-time-start="71.67777777777778" data-time-end="72.77777777777777" class="note" id="e34-m-1100">
+                           <g class="note" id="e34-m-1100">
                               								
                               <use xlink:href="#E0A2" x="1183" y="52188" height="720px" width="720px"></use>
                               								
@@ -9140,7 +9140,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="72.77777777777777" data-time-end="73.33333333333333" class="note" id="e34-m-1101">
+                           <g class="note" id="e34-m-1101">
                               								
                               <use xlink:href="#E0A3" x="3283" y="52098" height="720px" width="720px"></use>
                               								
@@ -9166,7 +9166,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="73.33333333333333" data-time-end="73.88888888888889" class="note" id="e34-m-1103">
+                           <g class="note" id="e34-m-1103">
                               								
                               <use xlink:href="#E0A3" x="4333" y="52098" height="720px" width="720px"></use>
                               								
@@ -9218,7 +9218,7 @@
                         						
                         <g class="layer" id="e34-m-1110">
                            							
-                           <g data-time-start="71.67777777777778" data-time-end="72.22222222222223" class="note" id="e34-m-1111">
+                           <g class="note" id="e34-m-1111">
                               								
                               <use xlink:href="#E0A3" x="1183" y="53988" height="720px" width="720px"></use>
                               								
@@ -9242,7 +9242,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="72.22222222222223" data-time-end="72.77777777777777" class="note" id="e34-m-1112">
+                           <g class="note" id="e34-m-1112">
                               								
                               <use xlink:href="#E0A3" x="2233" y="53988" height="720px" width="720px"></use>
                               								
@@ -9268,7 +9268,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="72.77777777777777" data-time-end="73.88888888888889" class="note" id="e34-m-1113">
+                           <g class="note" id="e34-m-1113">
                               								
                               <use xlink:href="#E0A2" x="3283" y="53808" height="720px" width="720px"></use>
                               								
@@ -9315,7 +9315,7 @@
                         						
                         <g class="layer" id="e34-m-1117">
                            							
-                           <g data-time-start="71.67777777777778" data-time-end="72.77777777777777" class="note" id="e34-m-1118">
+                           <g class="note" id="e34-m-1118">
                               								
                               <use xlink:href="#E0A2" x="1183" y="55158" height="720px" width="720px"></use>
                               								
@@ -9334,7 +9334,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="72.77777777777777" data-time-end="73.33333333333333" class="note" id="e34-m-1119">
+                           <g class="note" id="e34-m-1119">
                               								
                               <use xlink:href="#E0A3" x="3283" y="55158" height="720px" width="720px"></use>
                               								
@@ -9358,7 +9358,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="73.33333333333333" data-time-end="73.88888888888889" class="note" id="e34-m-1120">
+                           <g class="note" id="e34-m-1120">
                               								
                               <use xlink:href="#E0A3" x="4333" y="55158" height="720px" width="720px"></use>
                               								
@@ -9412,7 +9412,7 @@
                         						
                         <g class="layer" id="e34-m-1127">
                            							
-                           <g data-time-start="73.9" data-time-end="75" class="note" id="e34-m-1128">
+                           <g class="note" id="e34-m-1128">
                               								
                               <use xlink:href="#E0A2" x="5576" y="52188" height="720px" width="720px"></use>
                               								
@@ -9433,7 +9433,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="75" data-time-end="75.55555555555554" class="note" id="e34-m-1129">
+                           <g class="note" id="e34-m-1129">
                               								
                               <use xlink:href="#E0A3" x="8006" y="52278" height="720px" width="720px"></use>
                               								
@@ -9457,7 +9457,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="75.55555555555554" data-time-end="76.1111111111111" class="note" id="e34-m-1130">
+                           <g class="note" id="e34-m-1130">
                               								
                               <use xlink:href="#E0A3" x="9056" y="52278" height="720px" width="720px"></use>
                               								
@@ -9504,7 +9504,7 @@
                         						
                         <g class="layer" id="e34-m-1138">
                            							
-                           <g data-time-start="73.9" data-time-end="74.72222222222221" class="note" id="e34-m-1139">
+                           <g class="note" id="e34-m-1139">
                               								
                               <use xlink:href="#E0A3" x="5576" y="54078" height="720px" width="720px"></use>
                               								
@@ -9535,7 +9535,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="74.72222222222221" data-time-end="75" class="note" id="e34-m-1140">
+                           <g class="note" id="e34-m-1140">
                               								
                               <use xlink:href="#E0A4" x="7316" y="53988" height="720px" width="720px"></use>
                               								
@@ -9545,7 +9545,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="75" data-time-end="76.1111111111111" class="note" id="e34-m-1141">
+                           <g class="note" id="e34-m-1141">
                               								
                               <use xlink:href="#E0A2" x="8006" y="53898" height="720px" width="720px"></use>
                               								
@@ -9582,7 +9582,7 @@
                         						
                         <g class="layer" id="e34-m-1149">
                            							
-                           <g data-time-start="73.9" data-time-end="74.44444444444444" class="note" id="e34-m-1150">
+                           <g class="note" id="e34-m-1150">
                               								
                               <use xlink:href="#E0A3" x="5576" y="54978" height="720px" width="720px"></use>
                               								
@@ -9608,7 +9608,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="74.44444444444444" data-time-end="75" class="note" id="e34-m-1151">
+                           <g class="note" id="e34-m-1151">
                               								
                               <use xlink:href="#E0A3" x="6626" y="54978" height="720px" width="720px"></use>
                               								
@@ -9632,7 +9632,7 @@
                                  								</g>
                               							</g>
                            							
-                           <g data-time-start="75" data-time-end="76.1111111111111" class="note" id="e34-m-1152">
+                           <g class="note" id="e34-m-1152">
                               								
                               <use xlink:href="#E0A2" x="8006" y="55248" height="720px" width="720px"></use>
                               								
@@ -9681,7 +9681,7 @@
                         						
                         <g class="layer" id="e34-m-1161">
                            							
-                           <g data-time-start="76.12222222222222" data-time-end="80.55555555555556" class="note" id="e34-m-1162">
+                           <g class="note" id="e34-m-1162">
                               								
                               <polygon points="10308,52188 10540,52188 10540,52233 10308,52233 "></polygon>
                               								
@@ -9727,7 +9727,7 @@
                         						
                         <g class="layer" id="e34-m-1168">
                            							
-                           <g data-time-start="76.12222222222222" data-time-end="80.55555555555556" class="note" id="e34-m-1169">
+                           <g class="note" id="e34-m-1169">
                               								
                               <polygon points="10308,53808 10540,53808 10540,53853 10308,53853 "></polygon>
                               								
@@ -9773,7 +9773,7 @@
                         						
                         <g class="layer" id="e34-m-1175">
                            							
-                           <g data-time-start="76.12222222222222" data-time-end="80.55555555555556" class="note" id="e34-m-1176">
+                           <g class="note" id="e34-m-1176">
                               								
                               <polygon points="10308,55158 10540,55158 10540,55203 10308,55203 "></polygon>
                               								
@@ -9840,309 +9840,5 @@
                <div class="mute-btn__label">Hear/mute <em>Atalanta fugiens.</em></div></button><button class="atalanta-notation-mute-track" aria-label="Play or Mute Voice 3" data-track="3">
                <div class="mute-btn__icon"></div>
                <div class="mute-btn__label">Hear/mute <em>Hippomenes sequens.</em></div></button></div>
-      </div><svg width="100%">
-         <rect class="note voice-1" id="e34-m-62-pianoroll" height="5" data-time-start="0.5555555555555556" data-time-end="1.6666666666666665" x="0" width="55.55555555555555" y="0"></rect>
-         <rect class="note voice-1" id="e34-m-63-pianoroll" height="5" data-time-start="1.6666666666666665" data-time-end="2.2222222222222223" x="55.55555555555555" width="27.77777777777779" y="0"></rect>
-         <rect class="note voice-1" id="e34-m-64-pianoroll" height="5" data-time-start="2.2222222222222223" data-time-end="2.7777777777777777" x="83.33333333333334" width="27.777777777777768" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-74-pianoroll" height="5" data-time-start="1.1111111111111112" data-time-end="1.3888888888888888" x="27.77777777777778" width="13.888888888888884" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-75-pianoroll" height="5" data-time-start="1.3888888888888888" data-time-end="1.6666666666666665" x="41.666666666666664" width="13.888888888888884" y="50"></rect>
-         <rect class="note voice-2" id="e34-m-76-pianoroll" height="5" data-time-start="1.6666666666666665" data-time-end="1.9444444444444444" x="55.55555555555555" width="13.888888888888895" y="45"></rect>
-         <rect class="note voice-2" id="e34-m-77-pianoroll" height="5" data-time-start="1.9444444444444444" data-time-end="2.2222222222222223" x="69.44444444444444" width="13.888888888888895" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-78-pianoroll" height="5" data-time-start="2.2222222222222223" data-time-end="2.7777777777777777" x="83.33333333333334" width="27.777777777777768" y="25"></rect>
-         <rect class="note voice-3" id="e34-m-89-pianoroll" height="5" data-time-start="2.2222222222222223" data-time-end="2.5" x="83.33333333333334" width="13.888888888888884" y="120"></rect>
-         <rect class="note voice-3" id="e34-m-90-pianoroll" height="5" data-time-start="2.5" data-time-end="2.7777777777777777" x="97.22222222222221" width="13.888888888888884" y="110"></rect>
-         <rect class="note voice-1" id="e34-m-94-pianoroll" height="5" data-time-start="2.7888888888888888" data-time-end="3.888888888888889" x="111.66666666666667" width="55.00000000000001" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-95-pianoroll" height="5" data-time-start="3.888888888888889" data-time-end="5" x="166.66666666666666" width="55.55555555555556" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-99-pianoroll" height="5" data-time-start="3.333333333333333" data-time-end="4.166666666666667" x="138.88888888888889" width="41.6666666666667" y="45"></rect>
-         <rect class="note voice-2" id="e34-m-100-pianoroll" height="5" data-time-start="4.166666666666667" data-time-end="4.444444444444445" x="180.55555555555557" width="13.888888888888884" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-101-pianoroll" height="5" data-time-start="4.444444444444445" data-time-end="4.722222222222221" x="194.44444444444446" width="13.88888888888884" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-102-pianoroll" height="5" data-time-start="4.722222222222221" data-time-end="5" x="208.33333333333331" width="13.888888888888928" y="45"></rect>
-         <rect class="note voice-3" id="e34-m-111-pianoroll" height="5" data-time-start="2.7888888888888888" data-time-end="3.0555555555555554" x="111.66666666666667" width="13.33333333333333" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-112-pianoroll" height="5" data-time-start="3.0555555555555554" data-time-end="3.333333333333333" x="125" width="13.888888888888884" y="95"></rect>
-         <rect class="note voice-3" id="e34-m-113-pianoroll" height="5" data-time-start="3.333333333333333" data-time-end="3.888888888888889" x="138.88888888888889" width="27.77777777777779" y="85"></rect>
-         <rect class="note voice-3" id="e34-m-115-pianoroll" height="5" data-time-start="4.444444444444445" data-time-end="5" x="194.44444444444446" width="27.777777777777768" y="105"></rect>
-         <rect class="note voice-1" id="e34-m-125-pianoroll" height="5" data-time-start="5.01111111111111" data-time-end="6.111111111111111" x="222.77777777777774" width="55.00000000000003" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-126-pianoroll" height="5" data-time-start="6.111111111111111" data-time-end="6.666666666666666" x="277.77777777777777" width="27.777777777777768" y="20"></rect>
-         <rect class="note voice-1" id="e34-m-128-pianoroll" height="5" data-time-start="6.666666666666666" data-time-end="7.222222222222221" x="305.55555555555554" width="27.777777777777768" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-138-pianoroll" height="5" data-time-start="5.01111111111111" data-time-end="5.555555555555555" x="222.77777777777774" width="27.222222222222257" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-140-pianoroll" height="5" data-time-start="5.555555555555555" data-time-end="5.966666666666667" x="250" width="20.55555555555557" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-141-pianoroll" height="5" data-time-start="5.977777777777778" data-time-end="6.111111111111111" x="271.11111111111114" width="6.666666666666643" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-142-pianoroll" height="5" data-time-start="6.111111111111111" data-time-end="7.222222222222221" x="277.77777777777777" width="55.555555555555536" y="45"></rect>
-         <rect class="note voice-3" id="e34-m-151-pianoroll" height="5" data-time-start="5.01111111111111" data-time-end="5.277777777777778" x="222.77777777777774" width="13.333333333333375" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-152-pianoroll" height="5" data-time-start="5.277777777777778" data-time-end="5.555555555555555" x="236.11111111111111" width="13.888888888888884" y="95"></rect>
-         <rect class="note voice-3" id="e34-m-153-pianoroll" height="5" data-time-start="5.555555555555555" data-time-end="5.833333333333332" x="250" width="13.88888888888884" y="85"></rect>
-         <rect class="note voice-3" id="e34-m-154-pianoroll" height="5" data-time-start="5.833333333333332" data-time-end="6.111111111111111" x="263.88888888888886" width="13.888888888888928" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-155-pianoroll" height="5" data-time-start="6.111111111111111" data-time-end="6.666666666666666" x="277.77777777777777" width="27.777777777777768" y="80"></rect>
-         <rect class="note voice-3" id="e34-m-157-pianoroll" height="5" data-time-start="6.666666666666666" data-time-end="7.0777777777777775" x="305.55555555555554" width="20.55555555555557" y="85"></rect>
-         <rect class="note voice-3" id="e34-m-158-pianoroll" height="5" data-time-start="7.088888888888889" data-time-end="7.222222222222221" x="326.6666666666667" width="6.666666666666643" y="95"></rect>
-         <rect class="note voice-1" id="e34-m-169-pianoroll" height="5" data-time-start="7.2333333333333325" data-time-end="8.333333333333334" x="333.88888888888886" width="55.00000000000007" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-170-pianoroll" height="5" data-time-start="8.333333333333334" data-time-end="9.444444444444443" x="388.8888888888889" width="55.55555555555544" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-180-pianoroll" height="5" data-time-start="7.777777777777778" data-time-end="8.333333333333334" x="361.11111111111114" width="27.777777777777814" y="45"></rect>
-         <rect class="note voice-2" id="e34-m-181-pianoroll" height="5" data-time-start="8.333333333333334" data-time-end="8.88888888888889" x="388.8888888888889" width="27.777777777777768" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-182-pianoroll" height="5" data-time-start="8.88888888888889" data-time-end="9.444444444444443" x="416.6666666666667" width="27.77777777777768" y="0"></rect>
-         <rect class="note voice-3" id="e34-m-185-pianoroll" height="5" data-time-start="7.2333333333333325" data-time-end="8.333333333333334" x="333.88888888888886" width="55.00000000000007" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-187-pianoroll" height="5" data-time-start="8.88888888888889" data-time-end="9.444444444444443" x="416.6666666666667" width="27.77777777777768" y="105"></rect>
-         <rect class="note voice-1" id="e34-m-197-pianoroll" height="5" data-time-start="9.455555555555556" data-time-end="10.555555555555555" x="445" width="54.999999999999986" y="20"></rect>
-         <rect class="note voice-1" id="e34-m-199-pianoroll" height="5" data-time-start="10.555555555555555" data-time-end="11.11111111111111" x="500" width="27.777777777777768" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-200-pianoroll" height="5" data-time-start="11.11111111111111" data-time-end="11.666666666666664" x="527.7777777777777" width="27.77777777777768" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-211-pianoroll" height="5" data-time-start="9.455555555555556" data-time-end="9.722222222222221" x="445" width="13.333333333333286" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-212-pianoroll" height="5" data-time-start="9.722222222222221" data-time-end="10" x="458.3333333333333" width="13.888888888888928" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-213-pianoroll" height="5" data-time-start="10" data-time-end="10.277777777777777" x="472.22222222222223" width="13.88888888888884" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-215-pianoroll" height="5" data-time-start="10.277777777777777" data-time-end="10.555555555555555" x="486.1111111111111" width="13.888888888888928" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-216-pianoroll" height="5" data-time-start="10.555555555555555" data-time-end="11.666666666666664" x="500" width="55.55555555555544" y="35"></rect>
-         <rect class="note voice-3" id="e34-m-231-pianoroll" height="5" data-time-start="9.455555555555556" data-time-end="10" x="445" width="27.222222222222214" y="120"></rect>
-         <rect class="note voice-3" id="e34-m-232-pianoroll" height="5" data-time-start="10" data-time-end="10.833333333333334" x="472.22222222222223" width="41.6666666666667" y="60"></rect>
-         <rect class="note voice-3" id="e34-m-233-pianoroll" height="5" data-time-start="10.833333333333334" data-time-end="11.11111111111111" x="513.8888888888889" width="13.88888888888884" y="70"></rect>
-         <rect class="note voice-3" id="e34-m-234-pianoroll" height="5" data-time-start="11.11111111111111" data-time-end="11.388888888888888" x="527.7777777777777" width="13.88888888888884" y="80"></rect>
-         <rect class="note voice-3" id="e34-m-236-pianoroll" height="5" data-time-start="11.388888888888888" data-time-end="11.666666666666664" x="541.6666666666666" width="13.88888888888884" y="85"></rect>
-         <rect class="note voice-1" id="e34-m-248-pianoroll" height="5" data-time-start="11.677777777777777" data-time-end="12.222222222222221" x="556.1111111111111" width="27.222222222222214" y="0"></rect>
-         <rect class="note voice-1" id="e34-m-249-pianoroll" height="5" data-time-start="12.222222222222221" data-time-end="12.777777777777779" x="583.3333333333333" width="27.777777777777857" y="0"></rect>
-         <rect class="note voice-1" id="e34-m-250-pianoroll" height="5" data-time-start="12.777777777777779" data-time-end="13.888888888888888" x="611.1111111111112" width="55.55555555555544" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-258-pianoroll" height="5" data-time-start="12.222222222222221" data-time-end="12.777777777777779" x="583.3333333333333" width="27.777777777777857" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-259-pianoroll" height="5" data-time-start="12.777777777777779" data-time-end="13.333333333333332" x="611.1111111111112" width="27.77777777777768" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-260-pianoroll" height="5" data-time-start="13.333333333333332" data-time-end="13.61111111111111" x="638.8888888888888" width="13.888888888888928" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-262-pianoroll" height="5" data-time-start="13.61111111111111" data-time-end="13.888888888888888" x="652.7777777777777" width="13.88888888888884" y="25"></rect>
-         <rect class="note voice-3" id="e34-m-271-pianoroll" height="5" data-time-start="11.677777777777777" data-time-end="12.777777777777779" x="556.1111111111111" width="55.00000000000007" y="95"></rect>
-         <rect class="note voice-3" id="e34-m-273-pianoroll" height="5" data-time-start="13.333333333333332" data-time-end="13.888888888888888" x="638.8888888888888" width="27.777777777777768" y="120"></rect>
-         <rect class="note voice-1" id="e34-m-281-pianoroll" height="5" data-time-start="13.9" data-time-end="14.444444444444443" x="667.2222222222223" width="27.222222222222126" y="35"></rect>
-         <rect class="note voice-1" id="e34-m-282-pianoroll" height="5" data-time-start="14.444444444444443" data-time-end="15" x="694.4444444444443" width="27.777777777777857" y="35"></rect>
-         <rect class="note voice-1" id="e34-m-283-pianoroll" height="5" data-time-start="15" data-time-end="16.11111111111111" x="722.2222222222223" width="55.555555555555536" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-294-pianoroll" height="5" data-time-start="13.9" data-time-end="14.444444444444443" x="667.2222222222223" width="27.222222222222126" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-295-pianoroll" height="5" data-time-start="14.444444444444443" data-time-end="15" x="694.4444444444443" width="27.777777777777857" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-296-pianoroll" height="5" data-time-start="15" data-time-end="15.555555555555555" x="722.2222222222223" width="27.777777777777768" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-297-pianoroll" height="5" data-time-start="15.555555555555555" data-time-end="16.11111111111111" x="750" width="27.777777777777768" y="45"></rect>
-         <rect class="note voice-3" id="e34-m-308-pianoroll" height="5" data-time-start="13.9" data-time-end="14.444444444444443" x="667.2222222222223" width="27.222222222222126" y="70"></rect>
-         <rect class="note voice-3" id="e34-m-309-pianoroll" height="5" data-time-start="14.444444444444443" data-time-end="14.722222222222221" x="694.4444444444443" width="13.888888888888928" y="80"></rect>
-         <rect class="note voice-3" id="e34-m-311-pianoroll" height="5" data-time-start="14.722222222222221" data-time-end="15" x="708.3333333333333" width="13.888888888888928" y="85"></rect>
-         <rect class="note voice-3" id="e34-m-312-pianoroll" height="5" data-time-start="15" data-time-end="15.555555555555555" x="722.2222222222223" width="27.777777777777768" y="70"></rect>
-         <rect class="note voice-3" id="e34-m-313-pianoroll" height="5" data-time-start="15.555555555555555" data-time-end="16.11111111111111" x="750" width="27.777777777777768" y="60"></rect>
-         <rect class="note voice-1" id="e34-m-326-pianoroll" height="5" data-time-start="16.12222222222222" data-time-end="16.666666666666668" x="778.3333333333333" width="27.222222222222392" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-327-pianoroll" height="5" data-time-start="16.666666666666668" data-time-end="17.22222222222222" x="805.5555555555555" width="27.77777777777768" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-328-pianoroll" height="5" data-time-start="17.22222222222222" data-time-end="18.333333333333332" x="833.3333333333333" width="55.555555555555536" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-339-pianoroll" height="5" data-time-start="17.22222222222222" data-time-end="18.333333333333332" x="833.3333333333333" width="55.555555555555536" y="60"></rect>
-         <rect class="note voice-3" id="e34-m-344-pianoroll" height="5" data-time-start="16.12222222222222" data-time-end="16.666666666666668" x="778.3333333333333" width="27.222222222222392" y="70"></rect>
-         <rect class="note voice-3" id="e34-m-345-pianoroll" height="5" data-time-start="16.666666666666668" data-time-end="17.22222222222222" x="805.5555555555555" width="27.77777777777768" y="105"></rect>
-         <rect class="note voice-1" id="e34-m-356-pianoroll" height="5" data-time-start="18.344444444444445" data-time-end="19.444444444444443" x="889.4444444444443" width="54.99999999999989" y="25"></rect>
-         <rect class="note voice-1" id="e34-m-357-pianoroll" height="5" data-time-start="19.444444444444443" data-time-end="20" x="944.4444444444443" width="27.777777777777857" y="20"></rect>
-         <rect class="note voice-1" id="e34-m-359-pianoroll" height="5" data-time-start="20" data-time-end="20.555555555555554" x="972.2222222222222" width="27.77777777777768" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-369-pianoroll" height="5" data-time-start="18.344444444444445" data-time-end="18.888888888888886" x="889.4444444444443" width="27.222222222222037" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-370-pianoroll" height="5" data-time-start="18.888888888888886" data-time-end="19.444444444444443" x="916.6666666666664" width="27.777777777777857" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-371-pianoroll" height="5" data-time-start="19.444444444444443" data-time-end="20.555555555555554" x="944.4444444444443" width="55.555555555555536" y="45"></rect>
-         <rect class="note voice-3" id="e34-m-378-pianoroll" height="5" data-time-start="18.344444444444445" data-time-end="19.444444444444443" x="889.4444444444443" width="54.99999999999989" y="120"></rect>
-         <rect class="note voice-3" id="e34-m-379-pianoroll" height="5" data-time-start="19.444444444444443" data-time-end="20" x="944.4444444444443" width="27.777777777777857" y="120"></rect>
-         <rect class="note voice-3" id="e34-m-380-pianoroll" height="5" data-time-start="20" data-time-end="20.555555555555554" x="972.2222222222222" width="27.77777777777768" y="120"></rect>
-         <rect class="note voice-1" id="e34-m-390-pianoroll" height="5" data-time-start="20.566666666666666" data-time-end="21.666666666666668" x="1000.5555555555554" width="55.00000000000007" y="25"></rect>
-         <rect class="note voice-1" id="e34-m-391-pianoroll" height="5" data-time-start="21.666666666666668" data-time-end="22.22222222222222" x="1055.5555555555554" width="27.77777777777768" y="35"></rect>
-         <rect class="note voice-1" id="e34-m-392-pianoroll" height="5" data-time-start="22.22222222222222" data-time-end="22.777777777777775" x="1083.3333333333333" width="27.77777777777768" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-399-pianoroll" height="5" data-time-start="20.566666666666666" data-time-end="21.388888888888886" x="1000.5555555555554" width="41.111111111110965" y="70"></rect>
-         <rect class="note voice-2" id="e34-m-400-pianoroll" height="5" data-time-start="21.388888888888886" data-time-end="21.666666666666668" x="1041.6666666666665" width="13.888888888889106" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-401-pianoroll" height="5" data-time-start="21.666666666666668" data-time-end="22.777777777777775" x="1055.5555555555554" width="55.55555555555536" y="50"></rect>
-         <rect class="note voice-3" id="e34-m-408-pianoroll" height="5" data-time-start="20.566666666666666" data-time-end="21.11111111111111" x="1000.5555555555554" width="27.222222222222214" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-409-pianoroll" height="5" data-time-start="21.11111111111111" data-time-end="21.666666666666668" x="1027.7777777777776" width="27.777777777777857" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-410-pianoroll" height="5" data-time-start="21.666666666666668" data-time-end="22.777777777777775" x="1055.5555555555554" width="55.55555555555536" y="130"></rect>
-         <rect class="note voice-1" id="e34-m-418-pianoroll" height="5" data-time-start="22.78888888888889" data-time-end="27.22222222222222" x="1111.6666666666667" width="221.66666666666652" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-425-pianoroll" height="5" data-time-start="22.78888888888889" data-time-end="27.22222222222222" x="1111.6666666666667" width="221.66666666666652" y="50"></rect>
-         <rect class="note voice-3" id="e34-m-432-pianoroll" height="5" data-time-start="22.78888888888889" data-time-end="27.22222222222222" x="1111.6666666666667" width="221.66666666666652" y="130"></rect>
-         <rect class="note voice-1" id="e34-m-442-pianoroll" height="5" data-time-start="27.233333333333334" data-time-end="28.333333333333332" x="1333.888888888889" width="54.99999999999989" y="0"></rect>
-         <rect class="note voice-1" id="e34-m-443-pianoroll" height="5" data-time-start="28.333333333333332" data-time-end="28.888888888888886" x="1388.8888888888887" width="27.77777777777768" y="0"></rect>
-         <rect class="note voice-1" id="e34-m-444-pianoroll" height="5" data-time-start="28.888888888888886" data-time-end="29.444444444444443" x="1416.6666666666665" width="27.777777777777857" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-452-pianoroll" height="5" data-time-start="27.777777777777775" data-time-end="28.055555555555554" x="1361.1111111111109" width="13.888888888888928" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-453-pianoroll" height="5" data-time-start="28.055555555555554" data-time-end="28.333333333333332" x="1374.9999999999998" width="13.888888888888928" y="50"></rect>
-         <rect class="note voice-2" id="e34-m-454-pianoroll" height="5" data-time-start="28.333333333333332" data-time-end="28.611111111111107" x="1388.8888888888887" width="13.88888888888875" y="45"></rect>
-         <rect class="note voice-2" id="e34-m-455-pianoroll" height="5" data-time-start="28.611111111111107" data-time-end="28.888888888888886" x="1402.7777777777776" width="13.888888888888928" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-456-pianoroll" height="5" data-time-start="28.888888888888886" data-time-end="29.444444444444443" x="1416.6666666666665" width="27.777777777777857" y="25"></rect>
-         <rect class="note voice-3" id="e34-m-469-pianoroll" height="5" data-time-start="28.888888888888886" data-time-end="29.166666666666668" x="1416.6666666666665" width="13.888888888889106" y="120"></rect>
-         <rect class="note voice-3" id="e34-m-470-pianoroll" height="5" data-time-start="29.166666666666668" data-time-end="29.444444444444443" x="1430.5555555555554" width="13.88888888888875" y="110"></rect>
-         <rect class="note voice-1" id="e34-m-474-pianoroll" height="5" data-time-start="29.455555555555556" data-time-end="30.55555555555555" x="1445" width="54.999999999999716" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-475-pianoroll" height="5" data-time-start="30.55555555555555" data-time-end="31.11111111111111" x="1499.9999999999995" width="27.777777777778034" y="0"></rect>
-         <rect class="note voice-1" id="e34-m-476-pianoroll" height="5" data-time-start="31.11111111111111" data-time-end="31.666666666666668" x="1527.7777777777776" width="27.777777777777857" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-484-pianoroll" height="5" data-time-start="30" data-time-end="30.83333333333333" x="1472.2222222222222" width="41.66666666666643" y="45"></rect>
-         <rect class="note voice-2" id="e34-m-485-pianoroll" height="5" data-time-start="30.83333333333333" data-time-end="31.11111111111111" x="1513.8888888888887" width="13.888888888889106" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-486-pianoroll" height="5" data-time-start="31.11111111111111" data-time-end="31.38888888888889" x="1527.7777777777776" width="13.888888888888928" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-487-pianoroll" height="5" data-time-start="31.38888888888889" data-time-end="31.666666666666668" x="1541.6666666666665" width="13.888888888888928" y="45"></rect>
-         <rect class="note voice-3" id="e34-m-496-pianoroll" height="5" data-time-start="29.455555555555556" data-time-end="29.72222222222222" x="1445" width="13.333333333333286" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-497-pianoroll" height="5" data-time-start="29.72222222222222" data-time-end="30" x="1458.3333333333333" width="13.888888888888928" y="95"></rect>
-         <rect class="note voice-3" id="e34-m-498-pianoroll" height="5" data-time-start="30" data-time-end="30.55555555555555" x="1472.2222222222222" width="27.7777777777775" y="85"></rect>
-         <rect class="note voice-3" id="e34-m-500-pianoroll" height="5" data-time-start="31.11111111111111" data-time-end="31.666666666666668" x="1527.7777777777776" width="27.777777777777857" y="105"></rect>
-         <rect class="note voice-1" id="e34-m-512-pianoroll" height="5" data-time-start="31.677777777777777" data-time-end="32.77777777777778" x="1556.111111111111" width="55.00000000000007" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-513-pianoroll" height="5" data-time-start="32.77777777777778" data-time-end="33.888888888888886" x="1611.111111111111" width="55.55555555555536" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-523-pianoroll" height="5" data-time-start="31.677777777777777" data-time-end="32.22222222222222" x="1556.111111111111" width="27.222222222222214" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-525-pianoroll" height="5" data-time-start="32.22222222222222" data-time-end="32.63333333333333" x="1583.3333333333333" width="20.55555555555557" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-526-pianoroll" height="5" data-time-start="32.644444444444446" data-time-end="32.77777777777778" x="1604.4444444444443" width="6.666666666666643" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-527-pianoroll" height="5" data-time-start="32.77777777777778" data-time-end="33.888888888888886" x="1611.111111111111" width="55.55555555555536" y="45"></rect>
-         <rect class="note voice-3" id="e34-m-538-pianoroll" height="5" data-time-start="31.677777777777777" data-time-end="31.94444444444444" x="1556.111111111111" width="13.333333333333108" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-539-pianoroll" height="5" data-time-start="31.94444444444444" data-time-end="32.22222222222222" x="1569.4444444444441" width="13.888888888889106" y="95"></rect>
-         <rect class="note voice-3" id="e34-m-540-pianoroll" height="5" data-time-start="32.22222222222222" data-time-end="32.5" x="1583.3333333333333" width="13.888888888888928" y="85"></rect>
-         <rect class="note voice-3" id="e34-m-541-pianoroll" height="5" data-time-start="32.5" data-time-end="32.77777777777778" x="1597.2222222222222" width="13.888888888888928" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-542-pianoroll" height="5" data-time-start="32.77777777777778" data-time-end="33.333333333333336" x="1611.111111111111" width="27.777777777777857" y="80"></rect>
-         <rect class="note voice-3" id="e34-m-544-pianoroll" height="5" data-time-start="33.333333333333336" data-time-end="33.74444444444444" x="1638.888888888889" width="20.555555555555216" y="85"></rect>
-         <rect class="note voice-3" id="e34-m-545-pianoroll" height="5" data-time-start="33.75555555555555" data-time-end="33.888888888888886" x="1659.9999999999998" width="6.666666666666643" y="95"></rect>
-         <rect class="note voice-1" id="e34-m-555-pianoroll" height="5" data-time-start="33.9" data-time-end="34.44444444444444" x="1667.2222222222222" width="27.222222222222214" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-556-pianoroll" height="5" data-time-start="34.44444444444444" data-time-end="34.99999999999999" x="1694.4444444444443" width="27.7777777777775" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-557-pianoroll" height="5" data-time-start="34.99999999999999" data-time-end="36.111111111111114" x="1722.2222222222217" width="55.55555555555607" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-569-pianoroll" height="5" data-time-start="34.44444444444444" data-time-end="34.99999999999999" x="1694.4444444444443" width="27.7777777777775" y="45"></rect>
-         <rect class="note voice-2" id="e34-m-570-pianoroll" height="5" data-time-start="34.99999999999999" data-time-end="35.55555555555556" x="1722.2222222222217" width="27.777777777778212" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-571-pianoroll" height="5" data-time-start="35.55555555555556" data-time-end="36.111111111111114" x="1750" width="27.777777777777857" y="0"></rect>
-         <rect class="note voice-3" id="e34-m-574-pianoroll" height="5" data-time-start="33.9" data-time-end="34.99999999999999" x="1667.2222222222222" width="54.999999999999716" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-576-pianoroll" height="5" data-time-start="35.55555555555556" data-time-end="36.111111111111114" x="1750" width="27.777777777777857" y="105"></rect>
-         <rect class="note voice-1" id="e34-m-589-pianoroll" height="5" data-time-start="36.12222222222221" data-time-end="37.22222222222222" x="1778.3333333333328" width="55.000000000000426" y="20"></rect>
-         <rect class="note voice-1" id="e34-m-591-pianoroll" height="5" data-time-start="37.22222222222222" data-time-end="37.77777777777777" x="1833.3333333333333" width="27.7777777777775" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-592-pianoroll" height="5" data-time-start="37.77777777777777" data-time-end="38.33333333333333" x="1861.1111111111106" width="27.777777777777857" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-601-pianoroll" height="5" data-time-start="36.12222222222221" data-time-end="36.388888888888886" x="1778.3333333333328" width="13.333333333333641" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-602-pianoroll" height="5" data-time-start="36.388888888888886" data-time-end="36.666666666666664" x="1791.6666666666665" width="13.888888888888928" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-603-pianoroll" height="5" data-time-start="36.666666666666664" data-time-end="36.94444444444444" x="1805.5555555555554" width="13.888888888888928" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-605-pianoroll" height="5" data-time-start="36.94444444444444" data-time-end="37.22222222222222" x="1819.4444444444443" width="13.888888888888928" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-606-pianoroll" height="5" data-time-start="37.22222222222222" data-time-end="38.33333333333333" x="1833.3333333333333" width="55.55555555555536" y="35"></rect>
-         <rect class="note voice-3" id="e34-m-619-pianoroll" height="5" data-time-start="36.12222222222221" data-time-end="36.666666666666664" x="1778.3333333333328" width="27.22222222222257" y="120"></rect>
-         <rect class="note voice-3" id="e34-m-620-pianoroll" height="5" data-time-start="36.666666666666664" data-time-end="37.5" x="1805.5555555555554" width="41.666666666666785" y="60"></rect>
-         <rect class="note voice-3" id="e34-m-621-pianoroll" height="5" data-time-start="37.5" data-time-end="37.77777777777777" x="1847.2222222222222" width="13.888888888888573" y="70"></rect>
-         <rect class="note voice-3" id="e34-m-622-pianoroll" height="5" data-time-start="37.77777777777777" data-time-end="38.05555555555555" x="1861.1111111111106" width="13.888888888888928" y="80"></rect>
-         <rect class="note voice-3" id="e34-m-624-pianoroll" height="5" data-time-start="38.05555555555555" data-time-end="38.33333333333333" x="1874.9999999999995" width="13.888888888888928" y="85"></rect>
-         <rect class="note voice-1" id="e34-m-634-pianoroll" height="5" data-time-start="38.34444444444444" data-time-end="38.888888888888886" x="1889.4444444444441" width="27.222222222222214" y="0"></rect>
-         <rect class="note voice-1" id="e34-m-635-pianoroll" height="5" data-time-start="38.888888888888886" data-time-end="39.44444444444444" x="1916.6666666666665" width="27.777777777777857" y="0"></rect>
-         <rect class="note voice-1" id="e34-m-636-pianoroll" height="5" data-time-start="39.44444444444444" data-time-end="40.55555555555556" x="1944.4444444444443" width="55.55555555555571" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-646-pianoroll" height="5" data-time-start="38.888888888888886" data-time-end="39.44444444444444" x="1916.6666666666665" width="27.777777777777857" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-647-pianoroll" height="5" data-time-start="39.44444444444444" data-time-end="40" x="1944.4444444444443" width="27.777777777777857" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-648-pianoroll" height="5" data-time-start="40" data-time-end="40.27777777777778" x="1972.2222222222222" width="13.888888888888928" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-650-pianoroll" height="5" data-time-start="40.27777777777778" data-time-end="40.55555555555556" x="1986.111111111111" width="13.888888888888928" y="25"></rect>
-         <rect class="note voice-3" id="e34-m-655-pianoroll" height="5" data-time-start="38.34444444444444" data-time-end="39.44444444444444" x="1889.4444444444441" width="55.00000000000007" y="95"></rect>
-         <rect class="note voice-3" id="e34-m-657-pianoroll" height="5" data-time-start="40" data-time-end="40.55555555555556" x="1972.2222222222222" width="27.777777777777857" y="120"></rect>
-         <rect class="note voice-1" id="e34-m-667-pianoroll" height="5" data-time-start="40.56666666666666" data-time-end="41.11111111111111" x="2000.5555555555552" width="27.222222222222214" y="35"></rect>
-         <rect class="note voice-1" id="e34-m-668-pianoroll" height="5" data-time-start="41.11111111111111" data-time-end="41.666666666666664" x="2027.7777777777776" width="27.777777777777857" y="35"></rect>
-         <rect class="note voice-1" id="e34-m-669-pianoroll" height="5" data-time-start="41.666666666666664" data-time-end="42.77777777777777" x="2055.555555555555" width="55.55555555555536" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-678-pianoroll" height="5" data-time-start="40.56666666666666" data-time-end="41.11111111111111" x="2000.5555555555552" width="27.222222222222214" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-679-pianoroll" height="5" data-time-start="41.11111111111111" data-time-end="41.666666666666664" x="2027.7777777777776" width="27.777777777777857" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-680-pianoroll" height="5" data-time-start="41.666666666666664" data-time-end="42.22222222222222" x="2055.555555555555" width="27.777777777777857" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-681-pianoroll" height="5" data-time-start="42.22222222222222" data-time-end="42.77777777777777" x="2083.333333333333" width="27.7777777777775" y="45"></rect>
-         <rect class="note voice-3" id="e34-m-694-pianoroll" height="5" data-time-start="40.56666666666666" data-time-end="41.11111111111111" x="2000.5555555555552" width="27.222222222222214" y="70"></rect>
-         <rect class="note voice-3" id="e34-m-695-pianoroll" height="5" data-time-start="41.11111111111111" data-time-end="41.388888888888886" x="2027.7777777777776" width="13.888888888888928" y="80"></rect>
-         <rect class="note voice-3" id="e34-m-697-pianoroll" height="5" data-time-start="41.388888888888886" data-time-end="41.666666666666664" x="2041.6666666666665" width="13.888888888888928" y="85"></rect>
-         <rect class="note voice-3" id="e34-m-698-pianoroll" height="5" data-time-start="41.666666666666664" data-time-end="42.22222222222222" x="2055.555555555555" width="27.777777777777857" y="70"></rect>
-         <rect class="note voice-3" id="e34-m-699-pianoroll" height="5" data-time-start="42.22222222222222" data-time-end="42.77777777777777" x="2083.333333333333" width="27.7777777777775" y="60"></rect>
-         <rect class="note voice-1" id="e34-m-710-pianoroll" height="5" data-time-start="42.788888888888884" data-time-end="43.888888888888886" x="2111.6666666666665" width="55.00000000000007" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-711-pianoroll" height="5" data-time-start="43.888888888888886" data-time-end="45" x="2166.6666666666665" width="55.55555555555571" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-720-pianoroll" height="5" data-time-start="43.888888888888886" data-time-end="45" x="2166.6666666666665" width="55.55555555555571" y="60"></rect>
-         <rect class="note voice-3" id="e34-m-723-pianoroll" height="5" data-time-start="42.788888888888884" data-time-end="43.333333333333336" x="2111.6666666666665" width="27.22222222222257" y="70"></rect>
-         <rect class="note voice-3" id="e34-m-724-pianoroll" height="5" data-time-start="43.333333333333336" data-time-end="43.888888888888886" x="2138.888888888889" width="27.7777777777775" y="105"></rect>
-         <rect class="note voice-1" id="e34-m-733-pianoroll" height="5" data-time-start="45.011111111111106" data-time-end="46.11111111111111" x="2222.7777777777774" width="55.00000000000007" y="25"></rect>
-         <rect class="note voice-1" id="e34-m-734-pianoroll" height="5" data-time-start="46.11111111111111" data-time-end="46.66666666666666" x="2277.7777777777774" width="27.7777777777775" y="20"></rect>
-         <rect class="note voice-1" id="e34-m-736-pianoroll" height="5" data-time-start="46.66666666666666" data-time-end="47.22222222222222" x="2305.555555555555" width="27.777777777778212" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-746-pianoroll" height="5" data-time-start="45.011111111111106" data-time-end="45.55555555555555" x="2222.7777777777774" width="27.222222222222214" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-747-pianoroll" height="5" data-time-start="45.55555555555555" data-time-end="46.11111111111111" x="2249.9999999999995" width="27.777777777777857" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-748-pianoroll" height="5" data-time-start="46.11111111111111" data-time-end="47.22222222222222" x="2277.7777777777774" width="55.55555555555571" y="45"></rect>
-         <rect class="note voice-3" id="e34-m-757-pianoroll" height="5" data-time-start="45.011111111111106" data-time-end="46.11111111111111" x="2222.7777777777774" width="55.00000000000007" y="120"></rect>
-         <rect class="note voice-3" id="e34-m-758-pianoroll" height="5" data-time-start="46.11111111111111" data-time-end="46.66666666666666" x="2277.7777777777774" width="27.7777777777775" y="120"></rect>
-         <rect class="note voice-3" id="e34-m-759-pianoroll" height="5" data-time-start="46.66666666666666" data-time-end="47.22222222222222" x="2305.555555555555" width="27.777777777778212" y="120"></rect>
-         <rect class="note voice-1" id="e34-m-769-pianoroll" height="5" data-time-start="47.23333333333333" data-time-end="48.33333333333333" x="2333.8888888888887" width="55.00000000000007" y="25"></rect>
-         <rect class="note voice-1" id="e34-m-770-pianoroll" height="5" data-time-start="48.33333333333333" data-time-end="48.888888888888886" x="2388.8888888888887" width="27.777777777777857" y="35"></rect>
-         <rect class="note voice-1" id="e34-m-771-pianoroll" height="5" data-time-start="48.888888888888886" data-time-end="49.44444444444444" x="2416.6666666666665" width="27.777777777777857" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-778-pianoroll" height="5" data-time-start="47.23333333333333" data-time-end="48.05555555555556" x="2333.8888888888887" width="41.1111111111115" y="70"></rect>
-         <rect class="note voice-2" id="e34-m-779-pianoroll" height="5" data-time-start="48.05555555555556" data-time-end="48.33333333333333" x="2375" width="13.888888888888573" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-780-pianoroll" height="5" data-time-start="48.33333333333333" data-time-end="49.44444444444444" x="2388.8888888888887" width="55.55555555555571" y="50"></rect>
-         <rect class="note voice-3" id="e34-m-787-pianoroll" height="5" data-time-start="47.23333333333333" data-time-end="47.77777777777778" x="2333.8888888888887" width="27.22222222222257" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-788-pianoroll" height="5" data-time-start="47.77777777777778" data-time-end="48.33333333333333" x="2361.111111111111" width="27.7777777777775" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-789-pianoroll" height="5" data-time-start="48.33333333333333" data-time-end="49.44444444444444" x="2388.8888888888887" width="55.55555555555571" y="130"></rect>
-         <rect class="note voice-1" id="e34-m-797-pianoroll" height="5" data-time-start="49.45555555555555" data-time-end="53.888888888888886" x="2444.9999999999995" width="221.66666666666686" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-804-pianoroll" height="5" data-time-start="49.45555555555555" data-time-end="53.888888888888886" x="2444.9999999999995" width="221.66666666666686" y="50"></rect>
-         <rect class="note voice-3" id="e34-m-811-pianoroll" height="5" data-time-start="49.45555555555555" data-time-end="53.888888888888886" x="2444.9999999999995" width="221.66666666666686" y="130"></rect>
-         <rect class="note voice-1" id="e34-m-821-pianoroll" height="5" data-time-start="53.89999999999999" data-time-end="55" x="2667.2222222222217" width="55.000000000000426" y="0"></rect>
-         <rect class="note voice-1" id="e34-m-822-pianoroll" height="5" data-time-start="55" data-time-end="56.11111111111111" x="2722.222222222222" width="55.55555555555536" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-828-pianoroll" height="5" data-time-start="54.44444444444444" data-time-end="54.72222222222222" x="2694.4444444444443" width="13.888888888888928" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-829-pianoroll" height="5" data-time-start="54.72222222222222" data-time-end="55" x="2708.333333333333" width="13.888888888888928" y="50"></rect>
-         <rect class="note voice-2" id="e34-m-830-pianoroll" height="5" data-time-start="55" data-time-end="55.27777777777778" x="2722.222222222222" width="13.888888888888928" y="45"></rect>
-         <rect class="note voice-2" id="e34-m-831-pianoroll" height="5" data-time-start="55.27777777777778" data-time-end="55.55555555555555" x="2736.111111111111" width="13.888888888888573" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-832-pianoroll" height="5" data-time-start="55.55555555555555" data-time-end="56.11111111111111" x="2749.9999999999995" width="27.777777777777857" y="25"></rect>
-         <rect class="note voice-3" id="e34-m-843-pianoroll" height="5" data-time-start="55.55555555555555" data-time-end="55.83333333333333" x="2749.9999999999995" width="13.888888888888928" y="120"></rect>
-         <rect class="note voice-3" id="e34-m-844-pianoroll" height="5" data-time-start="55.83333333333333" data-time-end="56.11111111111111" x="2763.8888888888887" width="13.888888888888928" y="110"></rect>
-         <rect class="note voice-1" id="e34-m-850-pianoroll" height="5" data-time-start="56.12222222222222" data-time-end="57.222222222222214" x="2778.333333333333" width="54.999999999999716" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-851-pianoroll" height="5" data-time-start="57.222222222222214" data-time-end="57.77777777777777" x="2833.333333333333" width="27.777777777777857" y="0"></rect>
-         <rect class="note voice-1" id="e34-m-852-pianoroll" height="5" data-time-start="57.77777777777777" data-time-end="58.333333333333336" x="2861.111111111111" width="27.777777777778212" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-864-pianoroll" height="5" data-time-start="56.666666666666664" data-time-end="57.49999999999999" x="2805.555555555555" width="41.66666666666643" y="45"></rect>
-         <rect class="note voice-2" id="e34-m-865-pianoroll" height="5" data-time-start="57.49999999999999" data-time-end="57.77777777777777" x="2847.2222222222217" width="13.888888888888928" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-866-pianoroll" height="5" data-time-start="57.77777777777777" data-time-end="58.05555555555556" x="2861.111111111111" width="13.888888888889284" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-867-pianoroll" height="5" data-time-start="58.05555555555556" data-time-end="58.333333333333336" x="2875" width="13.888888888888928" y="45"></rect>
-         <rect class="note voice-3" id="e34-m-874-pianoroll" height="5" data-time-start="56.12222222222222" data-time-end="56.388888888888886" x="2778.333333333333" width="13.333333333333286" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-875-pianoroll" height="5" data-time-start="56.388888888888886" data-time-end="56.666666666666664" x="2791.6666666666665" width="13.888888888888928" y="95"></rect>
-         <rect class="note voice-3" id="e34-m-876-pianoroll" height="5" data-time-start="56.666666666666664" data-time-end="57.222222222222214" x="2805.555555555555" width="27.7777777777775" y="85"></rect>
-         <rect class="note voice-3" id="e34-m-878-pianoroll" height="5" data-time-start="57.77777777777777" data-time-end="58.333333333333336" x="2861.111111111111" width="27.777777777778212" y="105"></rect>
-         <rect class="note voice-1" id="e34-m-888-pianoroll" height="5" data-time-start="58.344444444444434" data-time-end="59.44444444444444" x="2889.444444444444" width="55.000000000000426" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-889-pianoroll" height="5" data-time-start="59.44444444444444" data-time-end="60.55555555555556" x="2944.4444444444443" width="55.55555555555571" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-895-pianoroll" height="5" data-time-start="58.344444444444434" data-time-end="58.888888888888886" x="2889.444444444444" width="27.22222222222257" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-897-pianoroll" height="5" data-time-start="58.888888888888886" data-time-end="59.3" x="2916.6666666666665" width="20.55555555555557" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-898-pianoroll" height="5" data-time-start="59.31111111111111" data-time-end="59.44444444444444" x="2937.777777777778" width="6.666666666666643" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-899-pianoroll" height="5" data-time-start="59.44444444444444" data-time-end="60.55555555555556" x="2944.4444444444443" width="55.55555555555571" y="45"></rect>
-         <rect class="note voice-3" id="e34-m-908-pianoroll" height="5" data-time-start="58.344444444444434" data-time-end="58.61111111111111" x="2889.444444444444" width="13.333333333333641" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-909-pianoroll" height="5" data-time-start="58.61111111111111" data-time-end="58.888888888888886" x="2902.7777777777774" width="13.888888888888928" y="95"></rect>
-         <rect class="note voice-3" id="e34-m-910-pianoroll" height="5" data-time-start="58.888888888888886" data-time-end="59.166666666666664" x="2916.6666666666665" width="13.888888888888928" y="85"></rect>
-         <rect class="note voice-3" id="e34-m-911-pianoroll" height="5" data-time-start="59.166666666666664" data-time-end="59.44444444444444" x="2930.555555555555" width="13.888888888888928" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-912-pianoroll" height="5" data-time-start="59.44444444444444" data-time-end="60" x="2944.4444444444443" width="27.777777777777857" y="80"></rect>
-         <rect class="note voice-3" id="e34-m-914-pianoroll" height="5" data-time-start="60" data-time-end="60.4111111111111" x="2972.222222222222" width="20.55555555555486" y="85"></rect>
-         <rect class="note voice-3" id="e34-m-915-pianoroll" height="5" data-time-start="60.42222222222222" data-time-end="60.55555555555556" x="2993.333333333333" width="6.666666666666998" y="95"></rect>
-         <rect class="note voice-1" id="e34-m-923-pianoroll" height="5" data-time-start="60.56666666666666" data-time-end="61.66666666666666" x="3000.555555555555" width="54.999999999999716" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-924-pianoroll" height="5" data-time-start="61.66666666666666" data-time-end="62.77777777777778" x="3055.555555555555" width="55.55555555555607" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-934-pianoroll" height="5" data-time-start="61.1111111111111" data-time-end="61.66666666666666" x="3027.7777777777774" width="27.777777777777857" y="45"></rect>
-         <rect class="note voice-2" id="e34-m-935-pianoroll" height="5" data-time-start="61.66666666666666" data-time-end="62.22222222222222" x="3055.555555555555" width="27.777777777778212" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-936-pianoroll" height="5" data-time-start="62.22222222222222" data-time-end="62.77777777777778" x="3083.333333333333" width="27.777777777777857" y="0"></rect>
-         <rect class="note voice-3" id="e34-m-941-pianoroll" height="5" data-time-start="60.56666666666666" data-time-end="61.66666666666666" x="3000.555555555555" width="54.999999999999716" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-943-pianoroll" height="5" data-time-start="62.22222222222222" data-time-end="62.77777777777778" x="3083.333333333333" width="27.777777777777857" y="105"></rect>
-         <rect class="note voice-1" id="e34-m-954-pianoroll" height="5" data-time-start="62.78888888888888" data-time-end="63.88888888888888" x="3111.666666666666" width="55.00000000000007" y="20"></rect>
-         <rect class="note voice-1" id="e34-m-956-pianoroll" height="5" data-time-start="63.88888888888888" data-time-end="64.44444444444444" x="3166.666666666666" width="27.777777777778212" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-957-pianoroll" height="5" data-time-start="64.44444444444444" data-time-end="65" x="3194.4444444444443" width="27.777777777777857" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-966-pianoroll" height="5" data-time-start="62.78888888888888" data-time-end="63.05555555555555" x="3111.666666666666" width="13.333333333333641" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-967-pianoroll" height="5" data-time-start="63.05555555555555" data-time-end="63.333333333333336" x="3124.9999999999995" width="13.888888888889284" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-968-pianoroll" height="5" data-time-start="63.333333333333336" data-time-end="63.61111111111111" x="3138.888888888889" width="13.888888888888573" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-970-pianoroll" height="5" data-time-start="63.61111111111111" data-time-end="63.88888888888888" x="3152.7777777777774" width="13.888888888888573" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-971-pianoroll" height="5" data-time-start="63.88888888888888" data-time-end="65" x="3166.666666666666" width="55.55555555555607" y="35"></rect>
-         <rect class="note voice-3" id="e34-m-984-pianoroll" height="5" data-time-start="62.78888888888888" data-time-end="63.333333333333336" x="3111.666666666666" width="27.222222222222925" y="120"></rect>
-         <rect class="note voice-3" id="e34-m-985-pianoroll" height="5" data-time-start="63.333333333333336" data-time-end="64.16666666666667" x="3138.888888888889" width="41.666666666666785" y="60"></rect>
-         <rect class="note voice-3" id="e34-m-986-pianoroll" height="5" data-time-start="64.16666666666667" data-time-end="64.44444444444444" x="3180.5555555555557" width="13.888888888888573" y="70"></rect>
-         <rect class="note voice-3" id="e34-m-987-pianoroll" height="5" data-time-start="64.44444444444444" data-time-end="64.72222222222223" x="3194.4444444444443" width="13.888888888889284" y="80"></rect>
-         <rect class="note voice-3" id="e34-m-989-pianoroll" height="5" data-time-start="64.72222222222223" data-time-end="65" x="3208.3333333333335" width="13.888888888888573" y="85"></rect>
-         <rect class="note voice-1" id="e34-m-999-pianoroll" height="5" data-time-start="65.0111111111111" data-time-end="65.55555555555556" x="3222.7777777777774" width="27.22222222222257" y="0"></rect>
-         <rect class="note voice-1" id="e34-m-1000-pianoroll" height="5" data-time-start="65.55555555555556" data-time-end="66.11111111111111" x="3250" width="27.777777777777857" y="0"></rect>
-         <rect class="note voice-1" id="e34-m-1001-pianoroll" height="5" data-time-start="66.11111111111111" data-time-end="67.22222222222221" x="3277.777777777778" width="55.555555555555" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-1009-pianoroll" height="5" data-time-start="65.55555555555556" data-time-end="66.11111111111111" x="3250" width="27.777777777777857" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-1010-pianoroll" height="5" data-time-start="66.11111111111111" data-time-end="66.66666666666667" x="3277.777777777778" width="27.777777777777857" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-1011-pianoroll" height="5" data-time-start="66.66666666666667" data-time-end="66.94444444444444" x="3305.5555555555557" width="13.888888888888573" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-1013-pianoroll" height="5" data-time-start="66.94444444444444" data-time-end="67.22222222222221" x="3319.4444444444443" width="13.888888888888573" y="25"></rect>
-         <rect class="note voice-3" id="e34-m-1020-pianoroll" height="5" data-time-start="65.0111111111111" data-time-end="66.11111111111111" x="3222.7777777777774" width="55.000000000000426" y="95"></rect>
-         <rect class="note voice-3" id="e34-m-1022-pianoroll" height="5" data-time-start="66.66666666666667" data-time-end="67.22222222222221" x="3305.5555555555557" width="27.777777777777146" y="120"></rect>
-         <rect class="note voice-1" id="e34-m-1030-pianoroll" height="5" data-time-start="67.23333333333333" data-time-end="68.33333333333333" x="3333.8888888888887" width="54.999999999999716" y="35"></rect>
-         <rect class="note voice-1" id="e34-m-1031-pianoroll" height="5" data-time-start="68.33333333333333" data-time-end="68.88888888888889" x="3388.8888888888887" width="27.777777777777857" y="25"></rect>
-         <rect class="note voice-1" id="e34-m-1032-pianoroll" height="5" data-time-start="68.88888888888889" data-time-end="69.44444444444444" x="3416.6666666666665" width="27.777777777777857" y="25"></rect>
-         <rect class="note voice-2" id="e34-m-1043-pianoroll" height="5" data-time-start="67.23333333333333" data-time-end="67.77777777777777" x="3333.8888888888887" width="27.22222222222186" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-1044-pianoroll" height="5" data-time-start="67.77777777777777" data-time-end="68.33333333333333" x="3361.111111111111" width="27.777777777777857" y="0"></rect>
-         <rect class="note voice-2" id="e34-m-1045-pianoroll" height="5" data-time-start="68.33333333333333" data-time-end="68.88888888888889" x="3388.8888888888887" width="27.777777777777857" y="10"></rect>
-         <rect class="note voice-2" id="e34-m-1046-pianoroll" height="5" data-time-start="68.88888888888889" data-time-end="69.44444444444444" x="3416.6666666666665" width="27.777777777777857" y="45"></rect>
-         <rect class="note voice-3" id="e34-m-1057-pianoroll" height="5" data-time-start="67.23333333333333" data-time-end="67.77777777777777" x="3333.8888888888887" width="27.22222222222186" y="70"></rect>
-         <rect class="note voice-3" id="e34-m-1058-pianoroll" height="5" data-time-start="67.77777777777777" data-time-end="68.05555555555556" x="3361.111111111111" width="13.888888888889284" y="80"></rect>
-         <rect class="note voice-3" id="e34-m-1060-pianoroll" height="5" data-time-start="68.05555555555556" data-time-end="68.33333333333333" x="3375" width="13.888888888888573" y="85"></rect>
-         <rect class="note voice-3" id="e34-m-1061-pianoroll" height="5" data-time-start="68.33333333333333" data-time-end="68.88888888888889" x="3388.8888888888887" width="27.777777777777857" y="70"></rect>
-         <rect class="note voice-3" id="e34-m-1062-pianoroll" height="5" data-time-start="68.88888888888889" data-time-end="69.44444444444444" x="3416.6666666666665" width="27.777777777777857" y="60"></rect>
-         <rect class="note voice-1" id="e34-m-1075-pianoroll" height="5" data-time-start="69.45555555555555" data-time-end="70.55555555555554" x="3444.9999999999995" width="54.999999999999716" y="10"></rect>
-         <rect class="note voice-1" id="e34-m-1076-pianoroll" height="5" data-time-start="70.55555555555554" data-time-end="71.66666666666667" x="3499.999999999999" width="55.555555555556424" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-1085-pianoroll" height="5" data-time-start="70.55555555555554" data-time-end="71.66666666666667" x="3499.999999999999" width="55.555555555556424" y="60"></rect>
-         <rect class="note voice-3" id="e34-m-1090-pianoroll" height="5" data-time-start="69.45555555555555" data-time-end="69.99999999999999" x="3444.9999999999995" width="27.22222222222186" y="70"></rect>
-         <rect class="note voice-3" id="e34-m-1091-pianoroll" height="5" data-time-start="69.99999999999999" data-time-end="70.55555555555554" x="3472.2222222222213" width="27.777777777777857" y="105"></rect>
-         <rect class="note voice-1" id="e34-m-1100-pianoroll" height="5" data-time-start="71.67777777777778" data-time-end="72.77777777777777" x="3556.111111111111" width="54.999999999999716" y="25"></rect>
-         <rect class="note voice-1" id="e34-m-1101-pianoroll" height="5" data-time-start="72.77777777777777" data-time-end="73.33333333333333" x="3611.111111111111" width="27.777777777777857" y="20"></rect>
-         <rect class="note voice-1" id="e34-m-1103-pianoroll" height="5" data-time-start="73.33333333333333" data-time-end="73.88888888888889" x="3638.8888888888887" width="27.777777777777857" y="20"></rect>
-         <rect class="note voice-2" id="e34-m-1111-pianoroll" height="5" data-time-start="71.67777777777778" data-time-end="72.22222222222223" x="3556.111111111111" width="27.22222222222257" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-1112-pianoroll" height="5" data-time-start="72.22222222222223" data-time-end="72.77777777777777" x="3583.3333333333335" width="27.777777777777146" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-1113-pianoroll" height="5" data-time-start="72.77777777777777" data-time-end="73.88888888888889" x="3611.111111111111" width="55.55555555555571" y="45"></rect>
-         <rect class="note voice-3" id="e34-m-1118-pianoroll" height="5" data-time-start="71.67777777777778" data-time-end="72.77777777777777" x="3556.111111111111" width="54.999999999999716" y="120"></rect>
-         <rect class="note voice-3" id="e34-m-1119-pianoroll" height="5" data-time-start="72.77777777777777" data-time-end="73.33333333333333" x="3611.111111111111" width="27.777777777777857" y="120"></rect>
-         <rect class="note voice-3" id="e34-m-1120-pianoroll" height="5" data-time-start="73.33333333333333" data-time-end="73.88888888888889" x="3638.8888888888887" width="27.777777777777857" y="120"></rect>
-         <rect class="note voice-1" id="e34-m-1128-pianoroll" height="5" data-time-start="73.9" data-time-end="75" x="3667.2222222222226" width="54.999999999999716" y="25"></rect>
-         <rect class="note voice-1" id="e34-m-1129-pianoroll" height="5" data-time-start="75" data-time-end="75.55555555555554" x="3722.222222222222" width="27.777777777777146" y="35"></rect>
-         <rect class="note voice-1" id="e34-m-1130-pianoroll" height="5" data-time-start="75.55555555555554" data-time-end="76.1111111111111" x="3749.999999999999" width="27.777777777777857" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-1139-pianoroll" height="5" data-time-start="73.9" data-time-end="74.72222222222221" x="3667.2222222222226" width="41.11111111111043" y="70"></rect>
-         <rect class="note voice-2" id="e34-m-1140-pianoroll" height="5" data-time-start="74.72222222222221" data-time-end="75" x="3708.333333333333" width="13.888888888889284" y="60"></rect>
-         <rect class="note voice-2" id="e34-m-1141-pianoroll" height="5" data-time-start="75" data-time-end="76.1111111111111" x="3722.222222222222" width="55.555555555555" y="50"></rect>
-         <rect class="note voice-3" id="e34-m-1150-pianoroll" height="5" data-time-start="73.9" data-time-end="74.44444444444444" x="3667.2222222222226" width="27.22222222222186" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-1151-pianoroll" height="5" data-time-start="74.44444444444444" data-time-end="75" x="3694.4444444444443" width="27.777777777777857" y="105"></rect>
-         <rect class="note voice-3" id="e34-m-1152-pianoroll" height="5" data-time-start="75" data-time-end="76.1111111111111" x="3722.222222222222" width="55.555555555555" y="130"></rect>
-         <rect class="note voice-1" id="e34-m-1162-pianoroll" height="5" data-time-start="76.12222222222222" data-time-end="80.55555555555556" x="3778.333333333333" width="221.66666666666686" y="35"></rect>
-         <rect class="note voice-2" id="e34-m-1169-pianoroll" height="5" data-time-start="76.12222222222222" data-time-end="80.55555555555556" x="3778.333333333333" width="221.66666666666686" y="50"></rect>
-         <rect class="note voice-3" id="e34-m-1176-pianoroll" height="5" data-time-start="76.12222222222222" data-time-end="80.55555555555556" x="3778.333333333333" width="221.66666666666686" y="130"></rect></svg></div>
+      </div><svg width="100%"></svg></div>
 </div>

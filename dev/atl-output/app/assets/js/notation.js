@@ -3,6 +3,8 @@
 
   const MAIN_COMPONENT_CLASSNAME = 'music',
     AUDIO_CONTAINER_CLASSNAME = 'audio',
+    AUDIO_LOADED_CLASSNAME = 'loaded',
+    AUDIO_LOADING_CLASSNAME = 'loading',
     MUTE_STATE_CLASSNAME = 'muted',
     MUTE_BUTTON_CLASSNAME = 'atalanta-notation-mute-track',
     HIGHLIGHT_CLASSNAME = 'highlighted',
@@ -17,12 +19,13 @@
     SCROLL_OFFSET = 100, // CMN scroll offset - to account for topnav
     PIANOROLL_SCROLL_OFFSET = 100;
 
+  let audioReady = false;
+
   // Set up mute button click event for a single mute button (including pianoroll)
 
   function initTrackMuteButton(buttonElement, musicRoot) {
   
     const trackNumber = parseInt(buttonElement.getAttribute(TRACK_NUMBER_ATTNAME)),
-      // muteClassname = `mute-${trackNumber}`,
       audioElements = Array.from(
         musicRoot.querySelectorAll(`.${AUDIO_CONTAINER_CLASSNAME} > audio[${TRACK_NUMBER_ATTNAME}="${trackNumber}"]`)
       );
@@ -139,24 +142,20 @@
 
   function scrollToSystem(elemInSystem, lastScrolledSystemElem) {
 
-    /*
-
-    Uncaught TypeError: Failed to execute 'scrollTo' on 'Window': parameter 1 ('options') is not an object.
-
-    */
-
     function recurseUpDomLookingForSystem(elem) {
 
       // If the musical system element is found
 
       if (elem.classList.contains('system')) {
+
         // ... and the system element is different from the last
         // one we scrolled to, then scroll to it
+        
         if (elem !== lastScrolledSystemElem) {
-          // const elem.getBoundingClientRect()
-          // TweenLite.to(window, 2, { scrollTo:400, offsetY: SCROLL_OFFSET });
-          // TweenLite.to(window, 2, { scrollTo: `#${elem.id}`, offsetY: SCROLL_OFFSET });
-          TweenMax.to(window, 2, { scrollTo:{ y: `#${elem.id}`, offsetY: SCROLL_OFFSET }, ease:Power2.easeInOut });
+          TweenMax.to(window, 2, { 
+            scrollTo:{ y: `#${elem.id}`, offsetY: SCROLL_OFFSET }, 
+            ease:Power2.easeInOut 
+          });
           console.log("Scrolling to " + elem.id);
         }
         return elem;
@@ -213,9 +212,40 @@
   
     return scrolledSystem;
   }
+
+  // Check when audio is all loaded, then change classes on root music element
+
+  function removeLoadingClassnameWhenContentLoaded(musicRoot, audioElements) {
+
+    function canAllPlay() {
+      if (audioElements.every(audioElement => audioElement.readyState === 4)) {
+        musicRoot.classList.remove(AUDIO_LOADING_CLASSNAME);
+        musicRoot.classList.add(AUDIO_LOADED_CLASSNAME);
+        audioReady = true;
+        console.log('ALL CAN PLAY');
+        return true;
+      } else {
+        console.log('ALL CANNOT PLAY');
+        console.log(audioElements.map((ae, i) => `${i}:${ae.readyState}`).join(' / '));
+        return false;
+      }
+    }
+
+    // Check if audio loaded - if not, add listener
+
+    if (canAllPlay() === false) {
+      audioElements.forEach(
+        (audioElement, i) => {
+          audioElement.addEventListener('canplaythrough', canAllPlay); 
+          console.log(`Adding listener #${i}`);
+        }
+      );
+    }
+  }
+
   
   function main() {
-  
+
     // Get page elements
 
     const musicRoot = document.getElementsByClassName(MAIN_COMPONENT_CLASSNAME)[0], // TODO: make this fail OK
@@ -237,11 +267,14 @@
       }
     });
   
+    // Update the markup
+
     initializeMarkup(musicRoot);
+    removeLoadingClassnameWhenContentLoaded(musicRoot, audio);
   
     // Setup track mute buttons
     // TODO: move mute state to musicRoot (like it is with the play button)
-    //  so that the CMN and pianoroll buttons stay syncronized in
+    //  so that the CMN and pianoroll buttons stay synchronized in
     //  a declarative way
   
     Array.from(musicRoot.getElementsByClassName(MUTE_BUTTON_CLASSNAME))
@@ -271,12 +304,14 @@
     // Set onclick for pause/stop button
   
     pauseButtons.forEach(pauseButton => pauseButton.onclick = function() {
-      audio.forEach(a => a.pause());
-      musicRoot.classList.remove(PLAYING_CLASSNAME);
-      musicRoot.classList.add(PAUSED_CLASSNAME);
-      pianorollContainer.classList.remove(PLAYING_CLASSNAME);
-      pianorollContainer.classList.add(PAUSED_CLASSNAME);
-      window.clearInterval(timerId);
+      if (audioReady) {
+        audio.forEach(a => a.pause());
+        musicRoot.classList.remove(PLAYING_CLASSNAME);
+        musicRoot.classList.add(PAUSED_CLASSNAME);
+        pianorollContainer.classList.remove(PLAYING_CLASSNAME);
+        pianorollContainer.classList.add(PAUSED_CLASSNAME);
+        window.clearInterval(timerId);
+      }
     });
   };
   
@@ -290,3 +325,4 @@
   }
   
   })(); 
+  
