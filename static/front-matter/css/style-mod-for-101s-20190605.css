@@ -1792,8 +1792,20 @@ input[type=submit] {
     display: none
 }
 
+#header .logo .bright-logo{
+    display:none
+}
+
 #header .logo a {
     color: #333
+}
+
+#header .logo:hover .light-logo,#header .logo:focus .light-logo{
+    display:block
+}
+
+#header .logo:hover .dark-logo,#header .logo:focus .dark-logo{
+    display:none
 }
 
 #header .header-wrap {
@@ -1957,20 +1969,20 @@ input[type=submit] {
 
 @media(min-width:768px) {
     #nav ul>li>a {
-        color: #333;
+        color:#0f0f0f;
         display: inline;
         padding: 0
     }
 }
 
-#nav ul>li>a:hover {
-    color: #ffae00;
-    background: #4d4c4c
+#nav ul>li>a:hover,#nav ul>li>a:focus{
+    color:#fff;
+    background:#4d4c4c
 }
 
-@media(min-width:768px) {
-    #nav ul>li>a:hover {
-        background: 0 0
+@media(min-width:768px){
+    #nav ul>li>a:hover,#nav ul>li>a:focus{
+        background:0 0
     }
 }
 
@@ -2445,8 +2457,24 @@ input[type=submit] {
     display: none
 }
 
-.fixed-header #header .logo .light-logo {
-    display: block
+.fixed-header #header .logo .bright-logo{
+    display:none
+}
+
+.fixed-header #header .logo .light-logo{
+    display:block
+}
+
+.fixed-header #header .logo:hover .bright-logo,.fixed-header #header .logo:focus .bright-logo{
+    display:block
+}
+
+.fixed-header #header .logo:hover .dark-logo,.fixed-header #header .logo:focus .dark-logo{
+    display:none
+}
+
+.fixed-header #header .logo:hover .light-logo,.fixed-header #header .logo:focus .light-logo{
+    display:none
 }
 
 .fixed-header #header .header-wrap:before {
@@ -2545,8 +2573,8 @@ input[type=submit] {
     color: gray
 }
 
-.fixed-header #nav ul>li>a:hover {
-    color: #ffae00
+.fixed-header #nav ul>li>a:hover,.fixed-header #nav ul>li>a:focus{
+    color:#ffae00
 }
 
 .fixed-header .page-anchor {
@@ -2806,8 +2834,9 @@ body {
     letter-spacing: .8px
 }
 
-.quick-links li a:hover {
-    color: #dc4929
+.quick-links li a:hover,.quick-links li a:focus{
+    color:#ffae00;
+    text-decoration:underline
 }
 
 @media(min-width:480px) {
@@ -4739,6 +4768,11 @@ section .content p a {
     border-bottom: 1px solid #658197
 }
 
+section .content p a:hover,section .content p a:focus{
+    color:#333;
+    border-bottom:1px dotted #333
+}
+
 section .content p sup a {
     border-bottom: none
 }
@@ -5485,6 +5519,16 @@ p .side-block {
     padding: 10px 0
 }
 
+.illustrations ul li a {
+    color: #333;
+    word-wrap: break-all;
+    text-decoration: underline;
+}
+
+.illustrations ul li a:hover,.illustrations ul li a:focus  {
+    color: #da4936;
+}
+
 .sources {
     padding: 30px 0
 }
@@ -5539,8 +5583,8 @@ p .side-block {
     text-decoration: underline
 }
 
-.sources .sources-detail a:hover {
-    color: #da4929
+.sources .sources-detail a:hover,.sources .sources-detail a:focus{
+    color:#da4936
 }
 
 .sources .indent {
