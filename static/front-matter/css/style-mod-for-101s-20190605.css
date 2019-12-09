@@ -1969,20 +1969,20 @@ input[type=submit] {
 
 @media(min-width:768px) {
     #nav ul>li>a {
-        color: #333;
+        color:#0f0f0f;
         display: inline;
         padding: 0
     }
 }
 
-#nav ul>li>a:hover {
-    color: #ffae00;
-    background: #4d4c4c
+#nav ul>li>a:hover,#nav ul>li>a:focus{
+    color:#fff;
+    background:#4d4c4c
 }
 
-@media(min-width:768px) {
-    #nav ul>li>a:hover {
-        background: 0 0
+@media(min-width:768px){
+    #nav ul>li>a:hover,#nav ul>li>a:focus{
+        background:0 0
     }
 }
 
@@ -2573,8 +2573,8 @@ input[type=submit] {
     color: gray
 }
 
-.fixed-header #nav ul>li>a:hover {
-    color: #ffae00
+.fixed-header #nav ul>li>a:hover,.fixed-header #nav ul>li>a:focus{
+    color:#ffae00
 }
 
 .fixed-header .page-anchor {
