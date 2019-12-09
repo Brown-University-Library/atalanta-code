@@ -5519,6 +5519,16 @@ p .side-block {
     padding: 10px 0
 }
 
+.illustrations ul li a {
+    color: #333;
+    word-wrap: break-all;
+    text-decoration: underline;
+}
+
+.illustrations ul li a:hover,.illustrations ul li a:focus  {
+    color: #da4936;
+}
+
 .sources {
     padding: 30px 0
 }
