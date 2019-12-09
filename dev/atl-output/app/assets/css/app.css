@@ -7026,18 +7026,7 @@ main.emblem-page[data-id='47'] {
 /*********** EMBLEM LAYOUT *************/
 main.emblem-page,
 main.emblem-page.frontmatter {
-  color: #4d4d4d;
-  /*	div.translation, 
-	div.original {
-		height: 100%;
-		margin-top: 2.5rem;
-	}
-	.panel--left div.translation, 
-	.panel--left div.original, 
-	.panel--right div.translation, 
-	.panel--right div.original {
-		margin-top: 3.5rem;
-	}*/ }
+  color: #4d4d4d; }
   main.emblem-page .lang--english,
   main.emblem-page .lang--german,
   main.emblem-page .lang--latin,
@@ -7293,11 +7282,6 @@ main.emblem-page.frontmatter section.section__epigram .original .de .verse-epigr
   line-height: 1.2;
   margin-bottom: .25rem; }
 
-main.emblem-page section.section__epigram .original .verse-epigram > span:nth-child(2),
-main.emblem-page.frontmatter section.section__epigram .original .verse-epigram > span:nth-child(2) {
-  /*		background-color: $error;*/
-  /*padding-top: 1.25rem;*/ }
-
 main.emblem-page section.section__epigram .original .lang--latin.edition--original .verse-epigram > span:nth-of-type(even),
 main.emblem-page.frontmatter section.section__epigram .original .lang--latin.edition--original .verse-epigram > span:nth-of-type(even) {
   text-indent: 5rem; }
@@ -7317,20 +7301,13 @@ main.emblem-page section.section__epigram .original .lang--german .verse-epigram
 main.emblem-page.frontmatter section.section__epigram .original .lang--german .verse-epigram > span:nth-of-type(2) {
   margin-left: 4rem; }
 
-main.emblem-page section.section__epigram .original .verse-epigram > span:last-child,
-main.emblem-page.frontmatter section.section__epigram .original .verse-epigram > span:last-child {
-  /*		background-color: $error;*/
-  /*padding-bottom: 1.25rem;*/ }
-
 main.emblem-page section.section__epigram .original div.epigram.la .verse-epigram span.original > br,
 main.emblem-page.frontmatter section.section__epigram .original div.epigram.la .verse-epigram span.original > br {
   display: none; }
 
 main.emblem-page section.section__epigram span.v-line,
 main.emblem-page.frontmatter section.section__epigram span.v-line {
-  display: block;
-  /*text-align: left;*/
-  /*margin-left: 1rem;*/ }
+  display: block; }
 
 main.emblem-page section.section__epigram .translation span.v-line,
 main.emblem-page.frontmatter section.section__epigram .translation span.v-line {
@@ -7370,17 +7347,9 @@ main.emblem-page.frontmatter .panel--right section.section__epigram {
   main.emblem-page.frontmatter .panel--right section.section__epigram .original .lang--german .verse-epigram {
     grid-column: 2 / 12;
     margin-left: 2rem; }
-  main.emblem-page .panel--right section.section__epigram .original .verse-epigram > span,
-  main.emblem-page.frontmatter .panel--right section.section__epigram .original .verse-epigram > span {
-    /*			line-height: 2.5;
-			margin-bottom: -1.375rem;*/ }
   main.emblem-page .panel--right section.section__epigram .original .de .verse-epigram > span,
   main.emblem-page.frontmatter .panel--right section.section__epigram .original .de .verse-epigram > span {
     line-height: 1.2; }
-  main.emblem-page .panel--right section.section__epigram .original .verse-epigram > span:nth-child(2),
-  main.emblem-page.frontmatter .panel--right section.section__epigram .original .verse-epigram > span:nth-child(2) {
-    /*		background-color: $error;*/
-    /*padding-top: .25rem;*/ }
   main.emblem-page .panel--right section.section__epigram .v-line-indent,
   main.emblem-page .panel--right section.section__epigram .original .lang--latin .verse-epigram > span:nth-of-type(even),
   main.emblem-page.frontmatter .panel--right section.section__epigram .v-line-indent,
@@ -7407,20 +7376,7 @@ main.emblem-page section.section__preface,
 main.emblem-page.frontmatter section.section__discourse,
 main.emblem-page.frontmatter section.section__preface {
   margin-bottom: 8rem;
-  padding-top: 5rem;
-  /*		.edition--facsimile div.discourse {
-			grid-column: 3 / 13;
-		}*/
-  /*		h3.title:nth-of-type(2) {
-			margin-top: 3rem;
-			margin-bottom: -2rem;
-		}*/
-  /*		div.original h3.title:nth-of-type(2) {
-			margin-bottom: 0;
-		}*/
-  /*	.edition--facsimile span.pb {
-			display: inline-block;
-		}*/ }
+  padding-top: 5rem; }
   main.emblem-page section.section__discourse div.translation,
   main.emblem-page section.section__discourse div.original,
   main.emblem-page section.section__preface div.translation,
@@ -7472,8 +7428,7 @@ main.emblem-page.frontmatter section.section__preface {
     grid-column: 4 / 10;
     grid-gap: .5rem;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    /*padding-left: 4rem;*/ }
+    grid-template-rows: auto; }
   main.emblem-page section.section__discourse div.preface,
   main.emblem-page section.section__discourse div.preface.la,
   main.emblem-page section.section__preface div.preface,
@@ -7506,15 +7461,6 @@ main.emblem-page.frontmatter section.section__preface {
     font-size: 1.25rem;
     grid-column: 1 / 13;
     line-height: 1.5; }
-  main.emblem-page section.section__discourse .discourse-p1,
-  main.emblem-page section.section__discourse .discourse-p2,
-  main.emblem-page section.section__preface .discourse-p1,
-  main.emblem-page section.section__preface .discourse-p2,
-  main.emblem-page.frontmatter section.section__discourse .discourse-p1,
-  main.emblem-page.frontmatter section.section__discourse .discourse-p2,
-  main.emblem-page.frontmatter section.section__preface .discourse-p1,
-  main.emblem-page.frontmatter section.section__preface .discourse-p2 {
-    /*line-height: 1.2;*/ }
   main.emblem-page section.section__discourse .discourse-p2,
   main.emblem-page section.section__preface .discourse-p2,
   main.emblem-page.frontmatter section.section__discourse .discourse-p2,
@@ -7535,33 +7481,6 @@ main.emblem-page.frontmatter section.section__preface {
   main.emblem-page.frontmatter section.section__preface .edition--facsimile .discourse-pagebreak,
   main.emblem-page.frontmatter section.section__preface .edition--facsimile .discourse-p2 {
     margin-right: -12rem; }
-  main.emblem-page section.section__discourse ._discourse--english .ab,
-  main.emblem-page section.section__discourse ._discourse--latin .discourse-p1,
-  main.emblem-page section.section__discourse ._discourse--latin .discourse-p2,
-  main.emblem-page section.section__discourse ._preface--english .ab,
-  main.emblem-page section.section__discourse ._preface--latin .page.italic,
-  main.emblem-page section.section__preface ._discourse--english .ab,
-  main.emblem-page section.section__preface ._discourse--latin .discourse-p1,
-  main.emblem-page section.section__preface ._discourse--latin .discourse-p2,
-  main.emblem-page section.section__preface ._preface--english .ab,
-  main.emblem-page section.section__preface ._preface--latin .page.italic,
-  main.emblem-page.frontmatter section.section__discourse ._discourse--english .ab,
-  main.emblem-page.frontmatter section.section__discourse ._discourse--latin .discourse-p1,
-  main.emblem-page.frontmatter section.section__discourse ._discourse--latin .discourse-p2,
-  main.emblem-page.frontmatter section.section__discourse ._preface--english .ab,
-  main.emblem-page.frontmatter section.section__discourse ._preface--latin .page.italic,
-  main.emblem-page.frontmatter section.section__preface ._discourse--english .ab,
-  main.emblem-page.frontmatter section.section__preface ._discourse--latin .discourse-p1,
-  main.emblem-page.frontmatter section.section__preface ._discourse--latin .discourse-p2,
-  main.emblem-page.frontmatter section.section__preface ._preface--english .ab,
-  main.emblem-page.frontmatter section.section__preface ._preface--latin .page.italic {
-    /*font-size: 1.25rem;*/
-    /*			grid-column: 1 / 2;
-			line-height: 2;*/
-    /*		span {
-				font-size: 1.25rem;
-				line-height: 2;
-			}*/ }
   main.emblem-page section.section__discourse .discourse-pagebreak,
   main.emblem-page section.section__preface .discourse-pagebreak,
   main.emblem-page.frontmatter section.section__discourse .discourse-pagebreak,
@@ -7699,31 +7618,6 @@ main.emblem-page.frontmatter .panel--right section.section__discourse div.origin
   left: 91vw;
   width: 8vw; }
 
-main.emblem-page .panel--right section.section__discourse ._discourse--english .ab,
-main.emblem-page .panel--right section.section__discourse ._discourse--latin .discourse-p1,
-main.emblem-page .panel--right section.section__discourse ._discourse--latin .discourse-p2,
-main.emblem-page.frontmatter .panel--right section.section__discourse ._discourse--english .ab,
-main.emblem-page.frontmatter .panel--right section.section__discourse ._discourse--latin .discourse-p1,
-main.emblem-page.frontmatter .panel--right section.section__discourse ._discourse--latin .discourse-p2 {
-  /*grid-column: 1 / 8;*/ }
-
-main.emblem-page .panel--right section.section__discourse h3.title,
-main.emblem-page.frontmatter .panel--right section.section__discourse h3.title {
-  /*grid-column: 1 / 4;*/ }
-
-main.emblem-page .panel--right section.section__discourse h3.title:nth-of-type(2),
-main.emblem-page.frontmatter .panel--right section.section__discourse h3.title:nth-of-type(2) {
-  /*margin-bottom: 0;*/ }
-
-main.emblem-page .panel--right section.section__discourse div.discourse,
-main.emblem-page .panel--right section.section__discourse div.discourse.la,
-main.emblem-page.frontmatter .panel--right section.section__discourse div.discourse,
-main.emblem-page.frontmatter .panel--right section.section__discourse div.discourse.la {
-  /* div.margin-note {
-			left: 85vw;
-			padding-right: 1rem;
-		} */ }
-
 /* emblems with margin notes */
 main.emblem-page[data-id='5'] section.section__discourse .edition--facsimile .discourse-p1,
 main.emblem-page[data-id='5'] section.section__discourse .edition--facsimile .discourse-pagebreak,
@@ -7797,6 +7691,12 @@ main.emblem-page[data-id='30'] section.section__discourse .edition--facsimile .d
 main.emblem-page[data-id='30'] section.section__preface .edition--facsimile .discourse-p1,
 main.emblem-page[data-id='30'] section.section__preface .edition--facsimile .discourse-pagebreak,
 main.emblem-page[data-id='30'] section.section__preface .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='36'] section.section__discourse .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='36'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='36'] section.section__discourse .edition--facsimile .discourse-p2,
+main.emblem-page[data-id='36'] section.section__preface .edition--facsimile .discourse-p1,
+main.emblem-page[data-id='36'] section.section__preface .edition--facsimile .discourse-pagebreak,
+main.emblem-page[data-id='36'] section.section__preface .edition--facsimile .discourse-p2,
 main.emblem-page[data-id='43'] section.section__discourse .edition--facsimile .discourse-p1,
 main.emblem-page[data-id='43'] section.section__discourse .edition--facsimile .discourse-pagebreak,
 main.emblem-page[data-id='43'] section.section__discourse .edition--facsimile .discourse-p2,
@@ -7841,20 +7741,14 @@ main.emblem-page .panel--right .section__discourse.grid--full span.note-mark:nth
 
 main.emblem-page .panel--full .section__discourse.grid--full span.note-mark:nth-of-type(2) {
   /* why is this a different size than other note marks??? */
-  /*	background-color: $error;*/
   grid-column: 1 / 3;
   grid-row: 1 / 2;
   margin-left: 7rem; }
-
-main.emblem-page .panel--full section.section__discourse div.discourse {
-  /*	grid-column: 3 / 13;
-	padding: 0;*/ }
 
 /* Emblem 1 margin notes: overlapping in Diplomatic English */
 main.emblem-page[data-id='5'] .edition--facsimile div.discourse div.margin-note:nth-of-type(4) {
   margin-top: 10px; }
 
-/* 11/20 */
 /* Dedication margin notes */
 main.emblem-page[data-id='3'] div.margin-note span.original:nth-of-type(2) > br {
   display: none; }
@@ -7956,11 +7850,14 @@ main.emblem-page[data-id='30'] section.section__discourse .edition--normalized d
   display: inline-block; }
 
 /* English emblems with page flaps */
-/* main.emblem-page[data-id='36'] {
-	section.section__discourse .edition--facsimile .discourse-p2 .ab .ab > span:nth-last-child(3) > br:first-child {
-		display: none;
-	}
-} */
+main.emblem-page[data-id='36'] section.section__discourse .edition--normalized .discourse-p2 .ab .ab > span.pc {
+  white-space: normal; }
+
+main.emblem-page[data-id='36'] section.section__discourse .edition--normalized .discourse-p2 .ab .ab > span:nth-last-child(3) > span.original {
+  display: block; }
+  main.emblem-page[data-id='36'] section.section__discourse .edition--normalized .discourse-p2 .ab .ab > span:nth-last-child(3) > span.original > br {
+    display: none; }
+
 /*********** END OF EMBLEM LAYOUT *************/
 /*********** COLLECTIONS OVERRIDES *************/
 main.emblem-page section.section__motto h1, main.emblem-page section.section__motto h3 {
@@ -8649,10 +8546,6 @@ main.emblem-page.frontmatter .discourse.la .pb {
 
 /************ END TESTS **************/
 /***************** BREAKPOINTS *****************/
-main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
-  /*border: 5px solid red;*/
-  /*	margin-top: 3.5rem;*/ }
-
 @media screen and (min-width: 320px) and (max-width: 767px) {
   main.emblem-page section.section__motto > div.original {
     margin-top: .5rem; }
@@ -8906,11 +8799,8 @@ main.emblem-page[data-id="5"] .panel--right .margin-note:nth-of-type(4) {
     padding-left: 6rem; }
   main.emblem-page.frontmatter section.section__dedication {
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    /* outline: 5px solid red; */ }
+    box-sizing: border-box; }
     main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(1) {
-      /* background-color: blue; */
-      /* border: 1px solid green; */
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       margin-right: 0;
