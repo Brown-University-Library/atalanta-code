@@ -1792,8 +1792,20 @@ input[type=submit] {
     display: none
 }
 
+#header .logo .bright-logo{
+    display:none
+}
+
 #header .logo a {
     color: #333
+}
+
+#header .logo:hover .light-logo,#header .logo:focus .light-logo{
+    display:block
+}
+
+#header .logo:hover .dark-logo,#header .logo:focus .dark-logo{
+    display:none
 }
 
 #header .header-wrap {
@@ -2445,8 +2457,24 @@ input[type=submit] {
     display: none
 }
 
-.fixed-header #header .logo .light-logo {
-    display: block
+.fixed-header #header .logo .bright-logo{
+    display:none
+}
+
+.fixed-header #header .logo .light-logo{
+    display:block
+}
+
+.fixed-header #header .logo:hover .bright-logo,.fixed-header #header .logo:focus .bright-logo{
+    display:block
+}
+
+.fixed-header #header .logo:hover .dark-logo,.fixed-header #header .logo:focus .dark-logo{
+    display:none
+}
+
+.fixed-header #header .logo:hover .light-logo,.fixed-header #header .logo:focus .light-logo{
+    display:none
 }
 
 .fixed-header #header .header-wrap:before {
