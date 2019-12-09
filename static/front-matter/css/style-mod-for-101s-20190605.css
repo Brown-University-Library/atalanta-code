@@ -4768,6 +4768,11 @@ section .content p a {
     border-bottom: 1px solid #658197
 }
 
+section .content p a:hover,section .content p a:focus{
+    color:#333;
+    border-bottom:1px dotted #333
+}
+
 section .content p sup a {
     border-bottom: none
 }
@@ -5568,8 +5573,8 @@ p .side-block {
     text-decoration: underline
 }
 
-.sources .sources-detail a:hover {
-    color: #da4929
+.sources .sources-detail a:hover,.sources .sources-detail a:focus{
+    color:#da4936
 }
 
 .sources .indent {
