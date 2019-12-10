@@ -58,6 +58,10 @@ main#image-search {
 	.category__item.category--active > a {
 		background-color: $blue_light;
 	}
+	.category__item > a:focus {
+		background-color: $blue_light;
+		outline: 1px dotted $gray;
+	}
 	.faceting--help {
 /*		display: none;
 		min-height: 2.625rem;*/
@@ -134,6 +138,9 @@ main#image-search {
 	.subcategory__term-item {
 		display: block;
 		padding: .75rem 0;
+	}
+	.subcategory__term-item a:focus .image-term {
+		text-decoration: underline;
 	}
 	.term--selected {
 		.image-term {

@@ -9975,6 +9975,9 @@ main#image-search {
   .image-search-filters .category__item > a:hover,
   .image-search-filters .category__item.category--active > a {
     background-color: #dae4ec; }
+  .image-search-filters .category__item > a:focus {
+    background-color: #dae4ec;
+    outline: 1px dotted #333; }
   .image-search-filters .faceting--help {
     /*		display: none;
 		min-height: 2.625rem;*/
@@ -10078,6 +10081,8 @@ main#image-search {
   .image-search-filters .subcategory__term-item {
     display: block;
     padding: .75rem 0; }
+  .image-search-filters .subcategory__term-item a:focus .image-term {
+    text-decoration: underline; }
   .image-search-filters .term--selected .image-term {
     font-weight: 800; }
   .image-search-filters .term--selected .image-term__number {
