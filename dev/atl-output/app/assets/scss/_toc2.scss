@@ -354,6 +354,14 @@ main.toc-wrapper {
 		}
 	}
 }
+@media screen and (min-width: 768px) and (max-width: 769px) {
+	main.toc-wrapper {
+		.section__essays li:nth-child(3), 
+		.section__essays li:nth-child(4) {
+			margin-top: -62px;
+		}
+	}
+}
 @media screen and (min-width: 812px) and (max-width: 892px) {
 	main.toc-wrapper {
 		.section__essays li:nth-child(4) {
