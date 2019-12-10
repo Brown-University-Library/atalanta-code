@@ -4207,7 +4207,7 @@ main.toc-wrapper {
   main.toc-wrapper h3 cite, main.toc-wrapper h4 cite {
     font-style: oblique; }
   main.toc-wrapper h4 {
-    color: #333;
+    color: #0f0f0f;
     font-size: 21px;
     font-weight: 600;
     line-height: 1.5; }
@@ -4358,6 +4358,8 @@ main.toc-wrapper {
     color: #333;
     font-size: 17px;
     font-weight: 600; }
+  main.toc-wrapper .section__essays span.byline {
+    color: #0f0f0f; }
 
 /*** GENERAL BREAKPOINTS ***/
 /* small  -  mobile */

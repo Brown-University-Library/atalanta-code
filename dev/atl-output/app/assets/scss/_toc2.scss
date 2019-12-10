@@ -71,7 +71,7 @@ main.toc-wrapper {
 		font-style: oblique;
 	}
 	h4 {
-		color: $gray;
+		color: $gray_accessible;
 		font-size: 21px;
 		font-weight: 600;
 		line-height: 1.5;
@@ -221,6 +221,9 @@ main.toc-wrapper {
 		color: $gray;
 		font-size: 17px;
 		font-weight: 600;
+	}
+	.section__essays span.byline {
+		color: $gray_accessible;
 	}
 }
 
