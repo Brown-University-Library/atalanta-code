@@ -10872,6 +10872,12 @@ main#essay-toc a {
 main#essay-toc li:hover {
   cursor: pointer; }
 
+main#essay-toc a:focus {
+  outline: none; }
+
+main#essay-toc a:focus h2 {
+  text-decoration: underline !important; }
+
 main#essay-toc .essay1 {
   background-position: 50% 75%;
   background-size: 112%;
