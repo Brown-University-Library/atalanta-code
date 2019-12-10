@@ -11054,6 +11054,7 @@ div._footer {
     text-transform: uppercase; }
   div._footer li a:hover {
     color: #ffcd61;
+    text-decoration: underline;
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s; }

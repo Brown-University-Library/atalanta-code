@@ -49,6 +49,7 @@ div._footer {
 	}
 	li a:hover {
 		color: $yellow_bright;
+		text-decoration: underline;
 		transition: .2s;
 	}
 	li a:focus {
