@@ -184,7 +184,7 @@ main#image-search {
 }
 .image-search__breadcrumbs {
 	background-color: $white;
-	color: $gray_medium;
+	color: $gray_medium_accessible;
 	top: $imagesearchnav-h;
 	padding: .5rem 0;
 	position: fixed;
@@ -272,7 +272,7 @@ main#image-search {
 }
 .image-search__results-viz {
 	background-color: $white;
-	color: $gray_medium;
+	color: $gray_medium_accessible;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;

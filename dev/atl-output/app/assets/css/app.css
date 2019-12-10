@@ -10116,7 +10116,7 @@ main#image-search {
 
 .image-search__breadcrumbs {
   background-color: white;
-  color: gray;
+  color: #707070;
   top: 5.625rem;
   padding: .5rem 0;
   position: fixed;
@@ -10214,7 +10214,7 @@ main#image-search {
 
 .image-search__results-viz {
   background-color: white;
-  color: gray;
+  color: #707070;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
