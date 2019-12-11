@@ -10169,6 +10169,7 @@ main#image-search {
   .image-search__breadcrumbs .filters__list .selected-filter__icon {
     background-image: url(../icons/icon_X-close.svg);
     display: inline-block;
+    display: none;
     -webkit-filter: invert(50%);
     filter: invert(50%);
     height: 10px;
@@ -10280,6 +10281,11 @@ main#image-search {
     z-index: 50; }
   .image-search__results-viz li.image--active {
     background-color: gray; }
+  .image-search__results-viz li.image--active:hover {
+    background-color: #ffae00;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
 
 .container--inactive {
   display: none; }

@@ -241,6 +241,7 @@ main#image-search {
 	.filters__list .selected-filter__icon {
 		background-image: url(../icons/icon_X-close.svg);
 		display: inline-block;
+		display: none;
 		filter: invert(50%);
 		height: 10px;
 		margin-left: .5rem;
@@ -337,6 +338,10 @@ main#image-search {
 	}
 	li.image--active {
 		background-color: $gray_medium;
+	}
+	li.image--active:hover {
+		background-color: $yellow;
+		transition: .2s;
 	}
 }
 .container--inactive {
