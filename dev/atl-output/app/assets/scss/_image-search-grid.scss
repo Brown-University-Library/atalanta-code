@@ -511,6 +511,14 @@ main#image-search {
 	}
 	.image-search-filters ul.image-search__subcategories {
 		flex-direction: column;
+		margin-top: -40px;
+	}
+	.image-search-filters ul.subcategory__terms {
+		flex-direction: row;
+		height: auto;
+	}
+	.image-search-filters .subcategory__term-item {
+		
 	}
 	.image-search__breadcrumbs {
 		margin-left: -1rem;
@@ -557,6 +565,14 @@ main#image-search {
 	}
 	.image-search__results-viz ul.results-viz__items  {
 		display: none;
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+	.image-search-filters ul.image-search__subcategories {
+		padding-bottom: 50px !important;
+	}
+	.image-search-filters ul.subcategory__terms {
+		flex-direction: column;
 	}
 }
 /* tablet */
