@@ -4207,7 +4207,7 @@ main.toc-wrapper {
   main.toc-wrapper h3 cite, main.toc-wrapper h4 cite {
     font-style: oblique; }
   main.toc-wrapper h4 {
-    color: #333;
+    color: #0f0f0f;
     font-size: 21px;
     font-weight: 600;
     line-height: 1.5; }
@@ -4358,6 +4358,8 @@ main.toc-wrapper {
     color: #333;
     font-size: 17px;
     font-weight: 600; }
+  main.toc-wrapper .section__essays span.byline {
+    color: #0f0f0f; }
 
 /*** GENERAL BREAKPOINTS ***/
 /* small  -  mobile */
@@ -4470,6 +4472,11 @@ main.toc-wrapper {
   main.toc-wrapper .section__essays li:nth-child(3),
   main.toc-wrapper .section__essays li:nth-child(4) {
     margin-top: -26px; } }
+
+@media screen and (min-width: 768px) and (max-width: 769px) {
+  main.toc-wrapper .section__essays li:nth-child(3),
+  main.toc-wrapper .section__essays li:nth-child(4) {
+    margin-top: -62px; } }
 
 @media screen and (min-width: 812px) and (max-width: 892px) {
   main.toc-wrapper .section__essays li:nth-child(4) {
@@ -5161,16 +5168,11 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   text-align: center;
   text-transform: uppercase;
   width: 100%;
-  z-index: 4000;
-  /*	li.topnav__search {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-	}*/ }
+  z-index: 4000; }
   .topnav a {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    color: #333; }
+    color: #0f0f0f; }
   .topnav > button {
     display: none; }
   .topnav .topnav-wrapper {
@@ -5306,7 +5308,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     -o-transition: .2s;
     transition: .2s; }
   .topnav li.topnav__search button {
-    color: #333;
+    color: #0f0f0f;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5321,7 +5323,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
   .topnav li.topnav__search svg {
     width: 5.5rem; }
   .topnav li.topnav__search svg .st0 {
-    stroke: #333; }
+    stroke: #0f0f0f; }
   .topnav li.topnav__search button:hover svg .st0,
   .topnav li.topnav__search button:focus svg .st0 {
     stroke: white;
@@ -9973,6 +9975,9 @@ main#image-search {
   .image-search-filters .category__item > a:hover,
   .image-search-filters .category__item.category--active > a {
     background-color: #dae4ec; }
+  .image-search-filters .category__item > a:focus {
+    background-color: #dae4ec;
+    outline: 1px dotted #333; }
   .image-search-filters .faceting--help {
     /*		display: none;
 		min-height: 2.625rem;*/
@@ -10076,6 +10081,8 @@ main#image-search {
   .image-search-filters .subcategory__term-item {
     display: block;
     padding: .75rem 0; }
+  .image-search-filters .subcategory__term-item a:focus .image-term {
+    text-decoration: underline; }
   .image-search-filters .term--selected .image-term {
     font-weight: 800; }
   .image-search-filters .term--selected .image-term__number {
@@ -10114,7 +10121,7 @@ main#image-search {
 
 .image-search__breadcrumbs {
   background-color: white;
-  color: gray;
+  color: #707070;
   top: 5.625rem;
   padding: .5rem 0;
   position: fixed;
@@ -10137,11 +10144,19 @@ main#image-search {
   .image-search__breadcrumbs .filters__list li {
     display: inline-block;
     padding: .5rem; }
+  .image-search__breadcrumbs .filters__list li.term a {
+    background-color: #dae4ec;
+    border-radius: 4px;
+    color: #4d4d4d; }
+  .image-search__breadcrumbs .filters__list li.term:hover a {
+    background-color: #dc4928;
+    color: white; }
+  .image-search__breadcrumbs .filters__list li.para {
+    display: none; }
   .image-search__breadcrumbs .filters__list a {
     color: gray;
     padding: .25rem .5rem; }
   .image-search__breadcrumbs .filters__list a:hover {
-    color: #4d4d4d;
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s; }
@@ -10154,11 +10169,19 @@ main#image-search {
   .image-search__breadcrumbs .filters__list .selected-filter__icon {
     background-image: url(../icons/icon_X-close.svg);
     display: inline-block;
+    display: none;
     -webkit-filter: invert(50%);
     filter: invert(50%);
     height: 10px;
     margin-left: .5rem;
     width: 10px; }
+  .image-search__breadcrumbs .filters__list li.reset-button button {
+    background-color: gray;
+    border-radius: 2px;
+    color: white;
+    padding: .25rem .5rem; }
+    .image-search__breadcrumbs .filters__list li.reset-button button:hover {
+      background-color: #dc4928; }
 
 .image-search__hero {
   display: -webkit-box;
@@ -10212,7 +10235,7 @@ main#image-search {
 
 .image-search__results-viz {
   background-color: white;
-  color: gray;
+  color: #707070;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10258,6 +10281,11 @@ main#image-search {
     z-index: 50; }
   .image-search__results-viz li.image--active {
     background-color: gray; }
+  .image-search__results-viz li.image--active:hover {
+    background-color: #ffae00;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s; }
 
 .container--inactive {
   display: none; }
@@ -10436,7 +10464,14 @@ main#image-search {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: -40px; }
+  .image-search-filters ul.subcategory__terms {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: auto; }
   .image-search__breadcrumbs {
     margin-left: -1rem;
     margin-top: -1rem;
@@ -10471,6 +10506,15 @@ main#image-search {
     padding-left: .5rem; }
   .image-search__results-viz ul.results-viz__items {
     display: none; } }
+
+@media screen and (min-width: 320px) and (max-width: 812px) and (orientation: landscape) {
+  .image-search-filters ul.image-search__subcategories {
+    padding-bottom: 50px !important; }
+  .image-search-filters ul.subcategory__terms {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
 
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -10870,6 +10914,12 @@ main#essay-toc a {
 main#essay-toc li:hover {
   cursor: pointer; }
 
+main#essay-toc a:focus {
+  outline: none; }
+
+main#essay-toc a:focus h2 {
+  text-decoration: underline !important; }
+
 main#essay-toc .essay1 {
   background-position: 50% 75%;
   background-size: 112%;
@@ -11052,6 +11102,7 @@ div._footer {
     text-transform: uppercase; }
   div._footer li a:hover {
     color: #ffcd61;
+    text-decoration: underline;
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s; }

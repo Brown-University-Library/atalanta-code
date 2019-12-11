@@ -40,6 +40,13 @@ main#essay-toc {
 	a:hover {
 
 	}
+	a:focus {
+		outline: none;
+	}
+	a:focus h2 {
+		text-decoration: underline !important;
+	}
+
 	.essay1 {
 		background-position: 50% 75%;
 		background-size: 112%;
