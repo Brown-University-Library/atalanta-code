@@ -50,7 +50,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 
 	a {
 		box-sizing: border-box;
-		color: $gray;
+		color: $gray_accessible;
 	}
 
 	> button {
@@ -165,13 +165,8 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 		transition: .2s;
 	}
 
-/*	li.topnav__search {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-	}*/
 	li.topnav__search button {
-		color: $gray;
+		color: $gray_accessible;
 		display: flex;
 		align-items: center;
 		justify-content: flex-end;
@@ -182,7 +177,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 		width: 5.5rem;
 	}
 	li.topnav__search svg .st0 {
-		stroke: $gray;
+		stroke: $gray_accessible;
 	}
 	li.topnav__search button:hover svg .st0, 
 	li.topnav__search button:focus svg .st0 {
