@@ -10144,11 +10144,19 @@ main#image-search {
   .image-search__breadcrumbs .filters__list li {
     display: inline-block;
     padding: .5rem; }
+  .image-search__breadcrumbs .filters__list li.term a {
+    background-color: #dae4ec;
+    border-radius: 4px;
+    color: #4d4d4d; }
+  .image-search__breadcrumbs .filters__list li.term:hover a {
+    background-color: #dc4928;
+    color: white; }
+  .image-search__breadcrumbs .filters__list li.para {
+    display: none; }
   .image-search__breadcrumbs .filters__list a {
     color: gray;
     padding: .25rem .5rem; }
   .image-search__breadcrumbs .filters__list a:hover {
-    color: #4d4d4d;
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s; }
@@ -10166,6 +10174,13 @@ main#image-search {
     height: 10px;
     margin-left: .5rem;
     width: 10px; }
+  .image-search__breadcrumbs .filters__list li.reset-button button {
+    background-color: gray;
+    border-radius: 2px;
+    color: white;
+    padding: .25rem .5rem; }
+    .image-search__breadcrumbs .filters__list li.reset-button button:hover {
+      background-color: #dc4928; }
 
 .image-search__hero {
   display: -webkit-box;
