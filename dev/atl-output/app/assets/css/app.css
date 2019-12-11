@@ -7909,6 +7909,16 @@ main.emblem-page.frontmatter {
   background: white; }
   main.emblem-page.frontmatter .pb {
     display: none; }
+  main.emblem-page.frontmatter .page-divider {
+    background: #333 !important;
+    display: block !important;
+    height: 1px;
+    margin-bottom: 4rem;
+    margin-top: 4rem !important;
+    width: 100%; }
+  main.emblem-page.frontmatter .page-divider:before,
+  main.emblem-page.frontmatter .page-divider:after {
+    content: "" !important; }
   main.emblem-page.frontmatter section.section__author-epigram,
   main.emblem-page.frontmatter section.section__dedication,
   main.emblem-page.frontmatter section.section__frontispiece,
@@ -8396,11 +8406,6 @@ main.emblem-page.frontmatter {
     text-align: center; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin .page:nth-of-type(1) > div:nth-of-type(2) {
     font-size: 1.125rem; }
-  main.emblem-page.frontmatter section.section__dedication ._dedication--latin div.page:nth-of-type(2),
-  main.emblem-page.frontmatter section.section__dedication ._dedication--latin div.page:nth-of-type(3) {
-    border-top: 2px solid gray;
-    margin-top: 3.5rem;
-    padding-top: 4rem; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin span.pb.atalanta-fugiens {
     /*display: block;*/ }
   main.emblem-page.frontmatter section.section__dedication ._dedication--latin span.caps {
@@ -8858,18 +8863,6 @@ main.emblem-page.frontmatter .discourse.la .pb {
   main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english.edition--facsimile div.preface,
   main.emblem-page.frontmatter .panel--full section.section__preface ._preface--latin.edition--regularized div.preface {
     margin: 0; } }
-
-.page-divider {
-  background: #333 !important;
-  display: block !important;
-  height: 1px;
-  margin-bottom: 4rem;
-  margin-top: 4rem !important;
-  width: 100%; }
-
-.page-divider:before,
-.page-divider:after {
-  content: "" !important; }
 
 body {
   /* background-color: #ddd; */

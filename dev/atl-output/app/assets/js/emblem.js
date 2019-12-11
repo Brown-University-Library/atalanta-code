@@ -64,7 +64,8 @@ $(function () {
 	var currentLanguage
 	var pageTiles = "../data/json/pageView.json"; // file path to page view dzi files
 	var bookTiles = "../data/json/bookView.json"; // file path to book view dzi files
-	var waypointDedicationAEnglish = 'div.dedication:nth-child(1) > div.ab:nth-child(1)';
+	var waypointDedication1 = '.section__dedication';
+	//var waypointDedicationAEnglish = 'div.dedication:nth-child(1) > div.ab:nth-child(1)';
 	// var waypointDedicationAEnglish = 'div.dedication:nth-child(1) > div.ab:nth-child(1) > span:nth-child(2)';
 	var waypointDedicationBEnglish = $('.pb.atalanta-fugiens:eq(0)');
 	var waypointDedicationCEnglish = $('.pb.atalanta-fugiens:eq(1)');
@@ -557,7 +558,7 @@ $(function () {
 	});
 
 	if(myEmblemDataNum === 3) { // DEDICATION (frontispiece and author's epigram are single pages anyway)
-		waypointFront1 = $(waypointDedicationAEnglish).waypoint({ // tells waypoint which DOM element's position to observe on scroll
+		waypointFront1 = $(waypointDedication1).waypoint({ // tells waypoint which DOM element's position to observe on scroll
 			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 				if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
 					console.log("hit dedication waypoint 1 down");
@@ -617,24 +618,24 @@ $(function () {
 		})
 		waypointFrontD3E = waypointFront3[0];
 
-		$(waypointDedicationALatin).addClass('page-divider').html("");
-		waypointFront4 = $(waypointDedicationALatin).waypoint({
-			handler: function(direction) {
-				if($('.section__dedication > div.original').hasClass('is-shown')) { // if latin is visible, then disable
-					console.log("enabling latin dedication 1");
-					// if (scrollPos > 10) {
-					if(direction === 'down') {
-						console.log("hit dedication 1 Latin waypoint down");
-						zoomingViewer.goToPage(myEmblemDataNum + 7);
-					}
-				// }
-				}
-				else {
-					console.log("disabling english dedication 1");	
-				}
-			},
-			offset: 480
-		})
+		// $(waypointDedicationALatin).addClass('page-divider').html("");
+		// waypointFront4 = $(waypointDedicationALatin).waypoint({
+		// 	handler: function(direction) {
+		// 		if($('.section__dedication > div.original').hasClass('is-shown')) { // if latin is visible, then disable
+		// 			console.log("enabling latin dedication 1");
+		// 			// if (scrollPos > 10) {
+		// 			if(direction === 'down') {
+		// 				console.log("hit dedication 1 Latin waypoint down");
+		// 				zoomingViewer.goToPage(myEmblemDataNum + 7);
+		// 			}
+		// 		// }
+		// 		}
+		// 		else {
+		// 			console.log("disabling english dedication 1");	
+		// 		}
+		// 	},
+		// 	offset: 480
+		// })
 
 		$(waypointDedicationBLatin).addClass('page-divider').html("");
 		waypointFront5 = $(waypointDedicationBLatin).waypoint({
@@ -654,7 +655,7 @@ $(function () {
 					console.log("disabling english dedication 2");	
 				}
 			},
-			offset: 0
+			offset: 480
 		})
 		waypointFrontD2L = waypointFront5[0];
 
@@ -676,7 +677,7 @@ $(function () {
 					console.log("disabling english dedication 3");	
 				}
 			},
-			offset: 0
+			offset: 500
 		})
 		waypointFrontD3L = waypointFront6[0];
 
