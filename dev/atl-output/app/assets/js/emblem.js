@@ -64,6 +64,8 @@ $(function () {
 	var currentLanguage
 	var pageTiles = "../data/json/pageView.json"; // file path to page view dzi files
 	var bookTiles = "../data/json/bookView.json"; // file path to book view dzi files
+	var waypointFrontispiece = ".section__frontispiece";
+	var waypointAuthorEpigram = '.section__author-epigram';
 	var waypointDedication1 = '.section__dedication';
 	//var waypointDedicationAEnglish = 'div.dedication:nth-child(1) > div.ab:nth-child(1)';
 	// var waypointDedicationAEnglish = 'div.dedication:nth-child(1) > div.ab:nth-child(1) > span:nth-child(2)';
@@ -86,6 +88,7 @@ $(function () {
 	var waypointFront4
 	var waypointFront5
 	var waypointFront6
+	var waypointFront7
 	// var waypointFrontD2E
 	// var waypointFrontD2L
 	// var waypointFrontD3E
@@ -271,32 +274,38 @@ $(function () {
 	}
 	/* language selections */
 	function selectLangEnglishOrig() {
+		console.log("THIS");
 		$(languageEnglishOrigBtn).attr('data-language', 'active'); // make English Original Button active
 		$(languageEnglishOrigBtn).siblings().attr('data-language', 'inactive'); // make non English Original Buttons inactive
 		switchTextToEnglishOrig();
 	}
 	function selectLangEnglishNorm() {
+		console.log("THIS");
 		$(languageEnglishNormBtn).attr('data-language', 'active'); // make English Normalized Button active
 		$(languageEnglishNormBtn).siblings().attr('data-language', 'inactive'); // make non English Normalized Buttons inactive
 		switchTextToEnglishNorm();
 	}
 	function selectLangGerman() {
+		console.log("THIS");
 		$(languageGermanBtn).attr('data-language', 'active'); // make Latin German Button active
 		$(languageGermanBtn).siblings().attr('data-language', 'inactive'); // make non Latin German Buttons inactive
 		switchTextToGerman();
 	}
 	function selectLangLatinOrig() {
+		console.log("THIS");
 		$(languageLatinOrigBtn).attr('data-language', 'active'); // make Latin Original Button active
 		$(languageLatinOrigBtn).siblings().attr('data-language', 'inactive'); // make non Latin Original Buttons inactive
 		switchTextToLatinOrig();
 	}
 	function selectLangLatinReg() {
+		console.log("THIS");
 		$(languageLatinRegBtn).attr('data-language', 'active'); // make Latin Regularized Button active
 		$(languageLatinRegBtn).siblings().attr('data-language', 'inactive'); // make non Latin Regularized Buttons inactive
 		switchTextToLatinReg();
 	}
 	function selectLanguage(value) {
 		console.log(value);
+		console.log("IS");
 		var values = {
 			'english_original': function() {
 				selectLangEnglishOrig();
@@ -377,12 +386,14 @@ $(function () {
 	}
 	/* text original/translation switches */
 	function showOriginalLanguage() {
+		console.log("PROBLEM");
 		$(textOriginal).removeClass('is-hidden'); // display Latin/German text block
 		$(textOriginal).addClass('is-shown'); // display Latin/German text block
 		$(textTranslation).addClass('is-hidden'); // hide English text block
 		$(textTranslation).removeClass('is-shown'); // hide English text block
 	}
 	function showTranslation() {
+		console.log("PROBLEM");
 		$(textTranslation).removeClass('is-hidden'); // display English text block
 		$(textTranslation).addClass('is-shown'); // display English text block
 		$(textOriginal).addClass('is-hidden'); // hide Latin/German text block
@@ -399,17 +410,20 @@ $(function () {
 	}
 	/* text switches */
 	function switchTextToEnglishOrig() {
+		console.log("THE");
 		$(fullLatinText).removeClass('is-hidden'); // make full Latin text visible
 		$(fullEnglishText).addClass('edition--facsimile'); // switch English text to facsimile CSS
 		$(fullEnglishText).removeClass('edition--normalized'); // remove normalized CSS from English text
 		showTranslation();
 	}
 	function switchTextToEnglishNorm() {
+		console.log("THE");
 		$(fullEnglishText).addClass('edition--normalized'); // switch English text to normalized CSS
 		$(fullEnglishText).removeClass('edition--facsimile'); // remove facsimile CSS from English text
 		showTranslation();
 	}
 	function switchTextToLatinOrig() {
+		console.log("THE");
 		$(fullLatinText).removeClass('is-hidden'); // make full Latin text visible
 		$(fullLatinText).addClass('edition--original'); // switch full Latin text to edition--original CSS
 		$(fullLatinText).removeClass('edition--regularized'); // remove edition--regularized CSS from full Latin text
@@ -417,6 +431,7 @@ $(function () {
 		showOriginalLanguage();	
 	}
 	function switchTextToLatinReg() {
+		console.log("THE");
 		$(fullLatinText).removeClass('is-hidden'); // make full Latin text visible
 		$(fullLatinText).addClass('edition--regularized'); // switch full Latin text to edition--regularized CSS
 		$(fullLatinText).removeClass('edition--original'); // remove edition--original CSS from full Latin text
@@ -424,6 +439,7 @@ $(function () {
 		showOriginalLanguage();	
 	}
 	function switchTextToGerman() {
+		console.log("THE");
 		$(fullGermanText).removeClass('is-hidden'); // make full German text visible
 		$(fullLatinText).addClass('is-hidden'); // hide full Latin text
 		$(fullLatinDiscourse).removeClass('is-hidden'); // make full Latin discourse visible
@@ -484,48 +500,6 @@ $(function () {
 // 		processMyEmblemData();	
 // }
 
-/* SIDENAV */
-//http://jennamolby.com/how-to-display-dynamic-content-on-a-page-using-url-parameters/
-	// function sideNavSetNum() {
-	// 	if (dataID === 1) {
-	// 		$(prevBtn).addClass('is-hidden'); // do not display previous button on first emblem
-	// 		$(nextBtn).removeClass('is-hidden'); // display next button
-	// 		$(nextBtn).attr("href", "author-epigram.html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Frontispiece"); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID === 2) {
-	// 		$(prevBtn).attr("href", "frontispiece.html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "dedication.html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Author's Epigram"); // update the emblem title to reflect the current emblem number	
-	// 	}
-	// 	else if (dataID === 3) {
-	// 		$(prevBtn).attr("href", "author-epigram.html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "preface.html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Dedication"); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID === 4) {
-	// 		$(prevBtn).attr("href", "dedication.html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "emblem01.html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Preface"); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID === 5) {
-	// 		$(prevBtn).attr("href", "preface.html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID > 5 && dataID < 55) {
-	// 		$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID === 55) {
-	// 		$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).addClass('is-hidden'); // do not display next button
-	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-	// 	}	
-	// }
-
-
 	$.get(pageTiles, function(data) { // after all the image tiles are ready, display zoomable pages
 		if (myEmblemDataNum <= 3) { // handle front matter (not in sets of 4)
 	      startPage = myEmblemDataNum + 7;
@@ -556,9 +530,8 @@ $(function () {
 			nextButton: "next"
 		});
 	});
-
 	if(myEmblemDataNum === 3) { // DEDICATION (frontispiece and author's epigram are single pages anyway)
-		waypointFront1 = $(waypointDedication1).waypoint({ // tells waypoint which DOM element's position to observe on scroll
+		waypointFront3 = $(waypointDedication1).waypoint({ // tells waypoint which DOM element's position to observe on scroll
 			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 				if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
 					zoomingViewer.goToPage(myEmblemDataNum + 7);
@@ -570,7 +543,7 @@ $(function () {
 			offset: 0
 		})
 		$(waypointDedicationBEnglish).addClass('page-divider').html("");
-		waypointFront2 = $(waypointDedicationBEnglish).waypoint({
+		waypointFront4 = $(waypointDedicationBEnglish).waypoint({
 			handler: function(direction) {
 				if($('.section__dedication > div.original').hasClass('is-shown')) {
 					// if latin is hidden, then enable english
@@ -586,10 +559,10 @@ $(function () {
 			},
 			offset: 480
 		})
-		waypointFrontD2E = waypointFront2[0];
+		waypointFrontD2E = waypointFront4[0];
 
 		$(waypointDedicationCEnglish).addClass('page-divider').html("");
-		waypointFront3 = $(waypointDedicationCEnglish).waypoint({
+		waypointFront5 = $(waypointDedicationCEnglish).waypoint({
 			handler: function(direction) {
 				if($('.section__dedication > div.original').hasClass('is-shown')) {
 					// if latin is hidden, then enable english
@@ -605,10 +578,10 @@ $(function () {
 			},
 			offset: 480
 		})
-		waypointFrontD3E = waypointFront3[0];
+		waypointFrontD3E = waypointFront5[0];
 
 		$(waypointDedicationBLatin).addClass('page-divider').html("");
-		waypointFront5 = $(waypointDedicationBLatin).waypoint({
+		waypointFront6 = $(waypointDedicationBLatin).waypoint({
 			handler: function(direction) {
 				if($('.section__dedication > div.original').hasClass('is-shown')) {
 					if(direction === 'down') {
@@ -624,10 +597,10 @@ $(function () {
 			},
 			offset: 480
 		})
-		waypointFrontD2L = waypointFront5[0];
+		waypointFrontD2L = waypointFront6[0];
 
 		$(waypointDedicationCLatin).addClass('page-divider').html("");
-		waypointFront6 = $(waypointDedicationCLatin).waypoint({
+		waypointFront7 = $(waypointDedicationCLatin).waypoint({
 			handler: function(direction) {
 				if($('.section__dedication > div.original').hasClass('is-shown')) {
 					if(direction === 'down') {
@@ -643,7 +616,7 @@ $(function () {
 			},
 			offset: 500
 		})
-		waypointFrontD3L = waypointFront6[0];
+		waypointFrontD3L = waypointFront7[0];
 
 		// enable/disable english/latin waypoints by selected language
 		$("#language").on( "selectmenuchange", function( event, ui ) {
@@ -674,22 +647,9 @@ $(function () {
 		});
 	}
 	else if(myEmblemDataNum === 4) { // PREFACE
-		//THERE ARE NO PAGE BREAKS IN THE ENGLISH PREFACE TO TIE A WAYPOINT TO
-		// var waypoint = $('.dedication:nth-of-type(2)').waypoint({
-		// 	handler: function(direction) {
-		// 		if(direction === 'down') {
-		// 			console.log("hit preface 1 waypoint down");
-		// 			zoomingViewer.goToPage(myEmblemDataNum + 8);
-		// 		}
-		// 		else {
-		// 			console.log("hit preface 1  waypoint up");
-		// 			zoomingViewer.goToPage(myEmblemDataNum + 7);
-		// 		}
-		// 	},
-		// 	offset: 300
-		// })
+		console.log("PREFACE");
 	}
-	else { // EMBLEMS 1—50
+	else if(myEmblemDataNum >= 5) { // EMBLEMS 1—50
 		/*** MOTTO WAYPOINT ENGLISH / LATIN ***/
 		// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
 		waypoint1A = $(waypointMotto).waypoint({
@@ -912,31 +872,7 @@ $(function () {
 		  		waypointD2L.disable();
 			  	waypointD2E.enable();
 		  }
-});
-		// $("#language").on( "selectmenuchange", function( event, ui ) {
-		//   console.log(ui.item.value);
-		//   if(ui.item.value == 'latin_original') {
-		//   	waypoint1B[0].disable();
-		// 	waypoint1A[0].enable();
-		//   }
-		//   else if(ui.item.value == 'latin_normal') {
-		//   	waypoint1B[0].disable();
-		// 	waypoint1A[0].enable();
-		//   }
-		//   else if(ui.item.value == 'english_original') {
-		//   	waypoint1B[0].disable();
-		// 	waypoint1A[0].enable();
-		//   }
-		//   else if(ui.item.value == 'english_modern') {
-		// 		waypoint1B[0].disable();
-		// 	waypoint1A[0].enable();
-		// 	}
-		//   else if(ui.item.value == 'german') {
-		// 	  	waypoint1A[0].disable();
-		// 	  	waypoint1B[0].enable();
-		// 	}
-
-		// });
+		});
 
 		$(window).scroll(function (event) { // calculate scroll position so enabling discourse 2 happens locally
 		    var scrollPosition = $(window).scrollTop();
@@ -946,7 +882,5 @@ $(function () {
 		    scrollPos = (scrollPosition / (pageHeight - browserWindowHeight)) * 100;
 		    console.log("the scroll position is" + scrollPos);
 		});
-
 	}
-
 });
