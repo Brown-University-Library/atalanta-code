@@ -4207,7 +4207,7 @@ main.toc-wrapper {
   main.toc-wrapper h3 cite, main.toc-wrapper h4 cite {
     font-style: oblique; }
   main.toc-wrapper h4 {
-    color: #0f0f0f;
+    color: #333;
     font-size: 21px;
     font-weight: 600;
     line-height: 1.5; }
@@ -4359,7 +4359,7 @@ main.toc-wrapper {
     font-size: 17px;
     font-weight: 600; }
   main.toc-wrapper .section__essays span.byline {
-    color: #0f0f0f; }
+    color: #333; }
 
 /*** GENERAL BREAKPOINTS ***/
 /* small  -  mobile */
@@ -8858,6 +8858,18 @@ main.emblem-page.frontmatter .discourse.la .pb {
   main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english.edition--facsimile div.preface,
   main.emblem-page.frontmatter .panel--full section.section__preface ._preface--latin.edition--regularized div.preface {
     margin: 0; } }
+
+.page-divider {
+  background: #333 !important;
+  display: block !important;
+  height: 1px;
+  margin-bottom: 4rem;
+  margin-top: 4rem !important;
+  width: 100%; }
+
+.page-divider:before,
+.page-divider:after {
+  content: "" !important; }
 
 body {
   /* background-color: #ddd; */

@@ -2424,3 +2424,15 @@ main.emblem-page.frontmatter {
 		}
 	}
 }
+.page-divider {
+	background: $gray !important;
+	display: block !important;
+	height: 1px;
+	margin-bottom: 4rem;
+	margin-top: 4rem !important;
+	width: 100%;
+}
+.page-divider:before, 
+.page-divider:after {
+	content: "" !important;
+}
