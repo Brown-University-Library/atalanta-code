@@ -8484,13 +8484,6 @@ main.emblem-page.frontmatter section.section__preface {
   main.emblem-page.frontmatter section.section__preface ._preface--latin h1 {
     font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
     font-size: 3rem; }
-  main.emblem-page.frontmatter section.section__preface ._preface--latin .page:nth-of-type(2),
-  main.emblem-page.frontmatter section.section__preface ._preface--latin .page:nth-of-type(3),
-  main.emblem-page.frontmatter section.section__preface ._preface--latin .page:nth-of-type(4),
-  main.emblem-page.frontmatter section.section__preface ._preface--latin .page:nth-of-type(5) {
-    border-top: 2px solid gray;
-    margin-top: 4rem;
-    padding-top: 3rem; }
   main.emblem-page.frontmatter section.section__preface .ab {
     margin-top: 1rem; }
   main.emblem-page.frontmatter section.section__preface .edition--facsimile h3.title {

@@ -67,13 +67,20 @@ $(function () {
 	var waypointFrontispiece = ".section__frontispiece";
 	var waypointAuthorEpigram = '.section__author-epigram';
 	var waypointDedication1 = '.section__dedication';
-	//var waypointDedicationAEnglish = 'div.dedication:nth-child(1) > div.ab:nth-child(1)';
-	// var waypointDedicationAEnglish = 'div.dedication:nth-child(1) > div.ab:nth-child(1) > span:nth-child(2)';
 	var waypointDedicationBEnglish = $('.pb.atalanta-fugiens:eq(0)');
 	var waypointDedicationCEnglish = $('.pb.atalanta-fugiens:eq(1)');
 	var waypointDedicationALatin = $('.pb.atalanta-fugiens:eq(2)');
 	var waypointDedicationBLatin = $('.pb.atalanta-fugiens:eq(3)');
 	var waypointDedicationCLatin = $('.pb.atalanta-fugiens:eq(4)');
+	var waypointPreface1 = '.section__preface';
+	var waypointPrefaceCEnglish = $('.pb.atalanta-fugiens:eq(1)');
+	var waypointPrefaceDEnglish = $('.pb.atalanta-fugiens:eq(2)');
+	var waypointPrefaceEEnglish = $('.pb.atalanta-fugiens:eq(3)');
+	var waypointPrefaceFEnglish = $('.pb.atalanta-fugiens:eq(4)');
+	var waypointPrefaceBLatin = $('.pb.atalanta-fugiens:eq(6)');
+	var waypointPrefaceCLatin = $('.pb.atalanta-fugiens:eq(7)');
+	var waypointPrefaceDLatin = $('.pb.atalanta-fugiens:eq(8)');
+	var waypointPrefaceELatin = $('.pb.atalanta-fugiens:eq(9)');
 	var waypointMotto = '._motto--english';
 	var waypointMottoGerman = '._motto--german';
 	var waypointImage = '.section__image';
@@ -89,10 +96,25 @@ $(function () {
 	var waypointFront5
 	var waypointFront6
 	var waypointFront7
-	// var waypointFrontD2E
-	// var waypointFrontD2L
-	// var waypointFrontD3E
-	// var waypointFrontD3L
+	var waypointFront8
+	var waypointFront9
+	var waypointFront10
+	var waypointFront11
+	var waypointFront12
+	var waypointFront13
+	var waypointFront14
+	var waypointFrontP2E
+	var waypointFrontP2L
+	var waypointFrontP3E
+	var waypointFrontP3L
+	var waypointFrontP4E
+	var waypointFrontP4L
+	var waypointFrontP5E
+	var waypointFrontP5L
+	var waypointFrontD2E
+	var waypointFrontD2L
+	var waypointFrontD3E
+	var waypointFrontD3L
 	var waypoint1A
 	var waypoint1B
 	var waypoint2
@@ -531,7 +553,7 @@ $(function () {
 		});
 	});
 	if(myEmblemDataNum === 3) { // DEDICATION (frontispiece and author's epigram are single pages anyway)
-		waypointFront3 = $(waypointDedication1).waypoint({ // tells waypoint which DOM element's position to observe on scroll
+		waypointFront1 = $(waypointDedication1).waypoint({ // tells waypoint which DOM element's position to observe on scroll
 			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 				if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
 					zoomingViewer.goToPage(myEmblemDataNum + 7);
@@ -543,7 +565,7 @@ $(function () {
 			offset: 0
 		})
 		$(waypointDedicationBEnglish).addClass('page-divider').html("");
-		waypointFront4 = $(waypointDedicationBEnglish).waypoint({
+		waypointFront2 = $(waypointDedicationBEnglish).waypoint({
 			handler: function(direction) {
 				if($('.section__dedication > div.original').hasClass('is-shown')) {
 					// if latin is hidden, then enable english
@@ -559,10 +581,10 @@ $(function () {
 			},
 			offset: 480
 		})
-		waypointFrontD2E = waypointFront4[0];
+		waypointFrontD2E = waypointFront2[0];
 
 		$(waypointDedicationCEnglish).addClass('page-divider').html("");
-		waypointFront5 = $(waypointDedicationCEnglish).waypoint({
+		waypointFront3 = $(waypointDedicationCEnglish).waypoint({
 			handler: function(direction) {
 				if($('.section__dedication > div.original').hasClass('is-shown')) {
 					// if latin is hidden, then enable english
@@ -578,10 +600,10 @@ $(function () {
 			},
 			offset: 480
 		})
-		waypointFrontD3E = waypointFront5[0];
+		waypointFrontD3E = waypointFront3[0];
 
 		$(waypointDedicationBLatin).addClass('page-divider').html("");
-		waypointFront6 = $(waypointDedicationBLatin).waypoint({
+		waypointFront4 = $(waypointDedicationBLatin).waypoint({
 			handler: function(direction) {
 				if($('.section__dedication > div.original').hasClass('is-shown')) {
 					if(direction === 'down') {
@@ -597,10 +619,10 @@ $(function () {
 			},
 			offset: 480
 		})
-		waypointFrontD2L = waypointFront6[0];
+		waypointFrontD2L = waypointFront4[0];
 
 		$(waypointDedicationCLatin).addClass('page-divider').html("");
-		waypointFront7 = $(waypointDedicationCLatin).waypoint({
+		waypointFront5 = $(waypointDedicationCLatin).waypoint({
 			handler: function(direction) {
 				if($('.section__dedication > div.original').hasClass('is-shown')) {
 					if(direction === 'down') {
@@ -616,7 +638,7 @@ $(function () {
 			},
 			offset: 500
 		})
-		waypointFrontD3L = waypointFront7[0];
+		waypointFrontD3L = waypointFront5[0];
 
 		// enable/disable english/latin waypoints by selected language
 		$("#language").on( "selectmenuchange", function( event, ui ) {
@@ -647,7 +669,215 @@ $(function () {
 		});
 	}
 	else if(myEmblemDataNum === 4) { // PREFACE
-		console.log("PREFACE");
+		waypointFront6 = $(waypointPreface1).waypoint({ // tells waypoint which DOM element's position to observe on scroll
+			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+				if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
+					zoomingViewer.goToPage(myEmblemDataNum + 9);
+				}
+				else { // if scrolling back up the page
+
+				}
+			},
+			offset: 0
+		})
+
+		$(waypointPrefaceCEnglish).addClass('page-divider').html("");
+		waypointFront7 = $(waypointPrefaceCEnglish).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					// if latin is hidden, then enable english
+				}
+				else {
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 10);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 9);
+					}
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP2E = waypointFront7[0];
+
+		$(waypointPrefaceDEnglish).addClass('page-divider').html("");
+		waypointFront8 = $(waypointPrefaceDEnglish).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					// if latin is hidden, then enable english
+				}
+				else {	
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 11);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 10);
+					}
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP3E = waypointFront8[0];
+
+		$(waypointPrefaceEEnglish).addClass('page-divider').html("");
+		waypointFront9 = $(waypointPrefaceEEnglish).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					// if latin is hidden, then enable english
+				}
+				else {	
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 12);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 11);
+					}
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP4E = waypointFront9[0];
+
+		$(waypointPrefaceFEnglish).addClass('page-divider').html("");
+		waypointFront10 = $(waypointPrefaceFEnglish).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					// if latin is hidden, then enable english
+				}
+				else {	
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 13);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 12);
+					}
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP5E = waypointFront10[0];
+
+		$(waypointPrefaceBLatin).addClass('page-divider').addClass('red').html("");
+		waypointFront11 = $(waypointPrefaceBLatin).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 10);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 9);
+					}
+				}
+				else {
+					// if latin is visible, then disable english
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP2L = waypointFront11[0];
+
+		$(waypointPrefaceCLatin).addClass('page-divider').html("");
+		waypointFront12 = $(waypointPrefaceCLatin).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 11);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 10);
+					}
+
+				}
+				else {
+					// if latin is visible, then disable english
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP3L = waypointFront12[0];
+
+		$(waypointPrefaceDLatin).addClass('page-divider').html("");
+		waypointFront13 = $(waypointPrefaceDLatin).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 12);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 11);
+					}
+					
+				}
+				else {
+					// if latin is visible, then disable english
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP4L = waypointFront13[0];
+
+		$(waypointPrefaceELatin).addClass('page-divider').html("");
+		waypointFront14 = $(waypointPrefaceELatin).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 13);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 12);
+					}
+				}
+				else {
+					// if latin is visible, then disable english
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP5L = waypointFront14[0];
+
+		// enable/disable english/latin waypoints by selected language
+		$("#language").on( "selectmenuchange", function( event, ui ) {
+		  if(ui.item.value == 'latin_original') {
+			  	waypointFrontP2E.disable();
+			  	waypointFrontP3E.disable();
+			  	waypointFrontP4E.disable();
+			  	waypointFrontP5E.disable();
+			  	waypointFrontP2L.enable();
+			  	waypointFrontP3L.enable();
+			  	waypointFrontP4L.enable();
+			  	waypointFrontP5L.enable();
+		  }
+		  else if(ui.item.value == 'latin_normal') {
+				waypointFrontP2E.disable();
+				waypointFrontP3E.disable();
+				waypointFrontP4E.disable();
+			  	waypointFrontP5E.disable();
+			  	waypointFrontP2L.enable();
+			  	waypointFrontP3L.enable();
+			  	waypointFrontP4L.enable();
+			  	waypointFrontP5L.enable();
+		  }
+		  else if(ui.item.value == 'english_original') {
+			  	waypointFrontP2L.disable();
+			  	waypointFrontP3L.disable();
+			  	waypointFrontP4L.disable();
+			  	waypointFrontP5L.disable();
+			  	waypointFrontP2E.enable();
+			  	waypointFrontP3E.enable();
+			  	waypointFrontP4E.enable();
+			  	waypointFrontP5E.enable();
+		  }
+		  else if(ui.item.value == 'english_modern') {
+		  		waypointFrontP2L.disable();
+		  		waypointFrontP3L.disable();
+		  		waypointFrontP4L.disable();
+			  	waypointFrontP5L.disable();
+			  	waypointFrontP2E.enable();
+			  	waypointFrontP3E.enable();
+			  	waypointFrontP4E.enable();
+			  	waypointFrontP5E.enable();
+		  }
+		});
 	}
 	else if(myEmblemDataNum >= 5) { // EMBLEMS 1—50
 		/*** MOTTO WAYPOINT ENGLISH / LATIN ***/
