@@ -5704,6 +5704,10 @@ main#emblem-toc nav.af-toc img {
     padding: 3rem 1rem; }
     main#emblem-toc h1 {
       font-size: 4.5rem; }
+    main#emblem-toc nav.af-toc > ul {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
     main#emblem-toc nav.af-toc li:nth-child(n+1):nth-child(-n+4) {
       -webkit-box-flex: 1;
       -ms-flex: 1 0 100%;
@@ -8547,6 +8551,22 @@ main.emblem-page.frontmatter .discourse.la .pb {
 /************ END TESTS **************/
 /***************** BREAKPOINTS *****************/
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  main.emblem-page.frontmatter section.section__author-epigram,
+  main.emblem-page.frontmatter section.section__dedication,
+  main.emblem-page.frontmatter section.section__frontispiece,
+  main.emblem-page.frontmatter section.section__preface {
+    padding: 2rem 1rem; }
+  main.emblem-page.frontmatter section.section__author-epigram .verse-epigram {
+    padding-left: 0; }
+  main.emblem-page.frontmatter section.section__author-epigram ._author-epigram--english .verse-epigram {
+    /* font-size: 1rem; */ }
+  main.emblem-page.frontmatter section.section__author-epigram .verse-epigram span.v-line {
+    grid-column: 1 / 12; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1),
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english div.dedication:nth-of-type(2) {
+    padding: 0; }
+  main.emblem-page.frontmatter section.section__preface ._preface--english .preface {
+    padding: 0; }
   main.emblem-page section.section__motto > div.original {
     margin-top: .5rem; }
   main.emblem-page section.section__motto div.lang--english > div.title,
@@ -8616,6 +8636,29 @@ main.emblem-page.frontmatter .discourse.la .pb {
     display: none !important; }
   main.emblem-page .panel--right {
     grid-column-start: 1; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+  main.emblem-page.frontmatter section.section__author-epigram div.margin-note,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english div.margin-note,
+  main.emblem-page.frontmatter section.section__preface ._preface--english div.margin-note {
+    display: none; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  main.emblem-page.frontmatter section.section__author-epigram div.margin-note,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english div.margin-note {
+    display: inline-block;
+    left: 85vw; }
+  main.emblem-page.frontmatter section.section__author-epigram .verse-epigram div.margin-note,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english .verse-epigram div.margin-note {
+    left: 85vw; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english div.dedication:nth-of-type(2) {
+    grid-column: 1 / 11; }
+  main.emblem-page.frontmatter section.section__preface ._preface--english div.margin-note {
+    display: inline-block;
+    left: 80vw;
+    width: 19vw; }
+  main.emblem-page.frontmatter section.section__preface ._preface--english div.preface {
+    grid-column: 1 / 10; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   main.emblem-page section.section__motto div.lang--english > div.title,

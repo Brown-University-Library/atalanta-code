@@ -1969,6 +1969,32 @@ main.emblem-page.frontmatter {
 
 /***************** BREAKPOINTS *****************/
 @media screen and (min-width: 320px) and (max-width: 767px) {
+	main.emblem-page.frontmatter {
+		section.section__author-epigram, 
+		section.section__dedication, 
+		section.section__frontispiece, 
+		section.section__preface {
+			padding: 2rem 1rem;
+		}
+		section.section__author-epigram {
+			.verse-epigram {
+				padding-left: 0;
+			}
+			._author-epigram--english .verse-epigram {
+				/* font-size: 1rem; */
+			}
+			.verse-epigram span.v-line {
+				grid-column: 1 / 12;
+			}
+		} 
+		section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1), 
+		section.section__dedication ._dedication--english div.dedication:nth-of-type(2) {
+			padding: 0;
+		}
+		section.section__preface ._preface--english .preface {
+			padding: 0;
+		}
+	}	
 	main.emblem-page {
 		section.section__motto > div.original {
 			margin-top: .5rem;
@@ -2050,6 +2076,38 @@ main.emblem-page.frontmatter {
 		}
 		.panel--right {
 			grid-column-start: 1;
+		}
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+	main.emblem-page.frontmatter section.section__author-epigram div.margin-note, 
+	main.emblem-page.frontmatter section.section__dedication ._dedication--english div.margin-note, 
+	main.emblem-page.frontmatter section.section__preface ._preface--english div.margin-note {
+		display: none;
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+	main.emblem-page.frontmatter {
+		section.section__author-epigram, 
+		section.section__dedication ._dedication--english {
+			div.margin-note {
+				display: inline-block;
+				left: 85vw;
+			}
+			.verse-epigram div.margin-note {
+				left: 85vw;
+			}
+		}
+		section.section__dedication ._dedication--english div.dedication:nth-of-type(2) {
+			grid-column: 1 / 11;
+		}
+		section.section__preface ._preface--english div.margin-note {
+			display: inline-block;
+			left: 80vw;
+			width: 19vw;
+		}
+		section.section__preface ._preface--english div.preface {
+			grid-column: 1 / 10;
 		}
 	}
 }
