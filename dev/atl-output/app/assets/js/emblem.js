@@ -64,6 +64,23 @@ $(function () {
 	var currentLanguage
 	var pageTiles = "../data/json/pageView.json"; // file path to page view dzi files
 	var bookTiles = "../data/json/bookView.json"; // file path to book view dzi files
+	var waypointFrontispiece = ".section__frontispiece";
+	var waypointAuthorEpigram = '.section__author-epigram';
+	var waypointDedication1 = '.section__dedication';
+	var waypointDedicationBEnglish = $('.pb.atalanta-fugiens:eq(0)');
+	var waypointDedicationCEnglish = $('.pb.atalanta-fugiens:eq(1)');
+	var waypointDedicationALatin = $('.pb.atalanta-fugiens:eq(2)');
+	var waypointDedicationBLatin = $('.pb.atalanta-fugiens:eq(3)');
+	var waypointDedicationCLatin = $('.pb.atalanta-fugiens:eq(4)');
+	var waypointPreface1 = '.section__preface';
+	var waypointPrefaceCEnglish = $('.pb.atalanta-fugiens:eq(1)');
+	var waypointPrefaceDEnglish = $('.pb.atalanta-fugiens:eq(2)');
+	var waypointPrefaceEEnglish = $('.pb.atalanta-fugiens:eq(3)');
+	var waypointPrefaceFEnglish = $('.pb.atalanta-fugiens:eq(4)');
+	var waypointPrefaceBLatin = $('.pb.atalanta-fugiens:eq(6)');
+	var waypointPrefaceCLatin = $('.pb.atalanta-fugiens:eq(7)');
+	var waypointPrefaceDLatin = $('.pb.atalanta-fugiens:eq(8)');
+	var waypointPrefaceELatin = $('.pb.atalanta-fugiens:eq(9)');
 	var waypointMotto = '._motto--english';
 	var waypointMottoGerman = '._motto--german';
 	var waypointImage = '.section__image';
@@ -72,6 +89,32 @@ $(function () {
 	var waypointDiscourse1 = '.section__discourse';
 	var waypointDiscourseEnglish2 = '._discourse--english .discourse-p2';
 	var waypointDiscourseLatin2 = '._discourse--latin .discourse-p2';
+	var waypointFront1
+	var waypointFront2
+	var waypointFront3
+	var waypointFront4
+	var waypointFront5
+	var waypointFront6
+	var waypointFront7
+	var waypointFront8
+	var waypointFront9
+	var waypointFront10
+	var waypointFront11
+	var waypointFront12
+	var waypointFront13
+	var waypointFront14
+	var waypointFrontP2E
+	var waypointFrontP2L
+	var waypointFrontP3E
+	var waypointFrontP3L
+	var waypointFrontP4E
+	var waypointFrontP4L
+	var waypointFrontP5E
+	var waypointFrontP5L
+	var waypointFrontD2E
+	var waypointFrontD2L
+	var waypointFrontD3E
+	var waypointFrontD3L
 	var waypoint1A
 	var waypoint1B
 	var waypoint2
@@ -253,32 +296,38 @@ $(function () {
 	}
 	/* language selections */
 	function selectLangEnglishOrig() {
+		console.log("THIS");
 		$(languageEnglishOrigBtn).attr('data-language', 'active'); // make English Original Button active
 		$(languageEnglishOrigBtn).siblings().attr('data-language', 'inactive'); // make non English Original Buttons inactive
 		switchTextToEnglishOrig();
 	}
 	function selectLangEnglishNorm() {
+		console.log("THIS");
 		$(languageEnglishNormBtn).attr('data-language', 'active'); // make English Normalized Button active
 		$(languageEnglishNormBtn).siblings().attr('data-language', 'inactive'); // make non English Normalized Buttons inactive
 		switchTextToEnglishNorm();
 	}
 	function selectLangGerman() {
+		console.log("THIS");
 		$(languageGermanBtn).attr('data-language', 'active'); // make Latin German Button active
 		$(languageGermanBtn).siblings().attr('data-language', 'inactive'); // make non Latin German Buttons inactive
 		switchTextToGerman();
 	}
 	function selectLangLatinOrig() {
+		console.log("THIS");
 		$(languageLatinOrigBtn).attr('data-language', 'active'); // make Latin Original Button active
 		$(languageLatinOrigBtn).siblings().attr('data-language', 'inactive'); // make non Latin Original Buttons inactive
 		switchTextToLatinOrig();
 	}
 	function selectLangLatinReg() {
+		console.log("THIS");
 		$(languageLatinRegBtn).attr('data-language', 'active'); // make Latin Regularized Button active
 		$(languageLatinRegBtn).siblings().attr('data-language', 'inactive'); // make non Latin Regularized Buttons inactive
 		switchTextToLatinReg();
 	}
 	function selectLanguage(value) {
 		console.log(value);
+		console.log("IS");
 		var values = {
 			'english_original': function() {
 				selectLangEnglishOrig();
@@ -359,12 +408,14 @@ $(function () {
 	}
 	/* text original/translation switches */
 	function showOriginalLanguage() {
+		console.log("PROBLEM");
 		$(textOriginal).removeClass('is-hidden'); // display Latin/German text block
 		$(textOriginal).addClass('is-shown'); // display Latin/German text block
 		$(textTranslation).addClass('is-hidden'); // hide English text block
 		$(textTranslation).removeClass('is-shown'); // hide English text block
 	}
 	function showTranslation() {
+		console.log("PROBLEM");
 		$(textTranslation).removeClass('is-hidden'); // display English text block
 		$(textTranslation).addClass('is-shown'); // display English text block
 		$(textOriginal).addClass('is-hidden'); // hide Latin/German text block
@@ -381,17 +432,20 @@ $(function () {
 	}
 	/* text switches */
 	function switchTextToEnglishOrig() {
+		console.log("THE");
 		$(fullLatinText).removeClass('is-hidden'); // make full Latin text visible
 		$(fullEnglishText).addClass('edition--facsimile'); // switch English text to facsimile CSS
 		$(fullEnglishText).removeClass('edition--normalized'); // remove normalized CSS from English text
 		showTranslation();
 	}
 	function switchTextToEnglishNorm() {
+		console.log("THE");
 		$(fullEnglishText).addClass('edition--normalized'); // switch English text to normalized CSS
 		$(fullEnglishText).removeClass('edition--facsimile'); // remove facsimile CSS from English text
 		showTranslation();
 	}
 	function switchTextToLatinOrig() {
+		console.log("THE");
 		$(fullLatinText).removeClass('is-hidden'); // make full Latin text visible
 		$(fullLatinText).addClass('edition--original'); // switch full Latin text to edition--original CSS
 		$(fullLatinText).removeClass('edition--regularized'); // remove edition--regularized CSS from full Latin text
@@ -399,6 +453,7 @@ $(function () {
 		showOriginalLanguage();	
 	}
 	function switchTextToLatinReg() {
+		console.log("THE");
 		$(fullLatinText).removeClass('is-hidden'); // make full Latin text visible
 		$(fullLatinText).addClass('edition--regularized'); // switch full Latin text to edition--regularized CSS
 		$(fullLatinText).removeClass('edition--original'); // remove edition--original CSS from full Latin text
@@ -406,6 +461,7 @@ $(function () {
 		showOriginalLanguage();	
 	}
 	function switchTextToGerman() {
+		console.log("THE");
 		$(fullGermanText).removeClass('is-hidden'); // make full German text visible
 		$(fullLatinText).addClass('is-hidden'); // hide full Latin text
 		$(fullLatinDiscourse).removeClass('is-hidden'); // make full Latin discourse visible
@@ -466,48 +522,6 @@ $(function () {
 // 		processMyEmblemData();	
 // }
 
-/* SIDENAV */
-//http://jennamolby.com/how-to-display-dynamic-content-on-a-page-using-url-parameters/
-	// function sideNavSetNum() {
-	// 	if (dataID === 1) {
-	// 		$(prevBtn).addClass('is-hidden'); // do not display previous button on first emblem
-	// 		$(nextBtn).removeClass('is-hidden'); // display next button
-	// 		$(nextBtn).attr("href", "author-epigram.html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Frontispiece"); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID === 2) {
-	// 		$(prevBtn).attr("href", "frontispiece.html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "dedication.html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Author's Epigram"); // update the emblem title to reflect the current emblem number	
-	// 	}
-	// 	else if (dataID === 3) {
-	// 		$(prevBtn).attr("href", "author-epigram.html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "preface.html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Dedication"); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID === 4) {
-	// 		$(prevBtn).attr("href", "dedication.html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "emblem01.html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Preface"); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID === 5) {
-	// 		$(prevBtn).attr("href", "preface.html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID > 5 && dataID < 55) {
-	// 		$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).attr("href", "emblem" + nextEmblemNum + ".html"); // update the next button to link to the next emblem
-	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-	// 	}
-	// 	else if (dataID === 55) {
-	// 		$(prevBtn).attr("href", "emblem" + prevEmblemNum + ".html"); // update the previous button to link to the previous emblem
-	// 		$(nextBtn).addClass('is-hidden'); // do not display next button
-	// 		$(emblemNumTextArea).text("Emblem " + currentEmblemNum); // update the emblem title to reflect the current emblem number
-	// 	}	
-	// }
-
-
 	$.get(pageTiles, function(data) { // after all the image tiles are ready, display zoomable pages
 		if (myEmblemDataNum <= 3) { // handle front matter (not in sets of 4)
 	      startPage = myEmblemDataNum + 7;
@@ -538,107 +552,334 @@ $(function () {
 			nextButton: "next"
 		});
 	});
-
 	if(myEmblemDataNum === 3) { // DEDICATION (frontispiece and author's epigram are single pages anyway)
-	var waypoint = $('.dedication:nth-of-type(1)').waypoint({ // tells waypoint which DOM element's position to observe on scroll
-		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
-				console.log("hit dedication Latin waypoint down");
-				console.log(myEmblemDataNum);
-				zoomingViewer.goToPage(myEmblemDataNum + 7);
-
-			}
-			else { // if scrolling back up the page
-				// zoomingViewer.goToPage(myEmblemDataNum + 6);
-			}
-		},
-		offset: 0 // moving the trigger location from 0 at the top of the viewport
-	})
-	var waypoint = $('.dedication:nth-of-type(2)').waypoint({
-		handler: function(direction) {
-			if(direction === 'down') {
-				console.log("hit dedication 2 Latin waypoint down");
-				zoomingViewer.goToPage(myEmblemDataNum + 8);
-			}
-			else {
-				console.log("hit dedication 2 Latin waypoint up");
-				zoomingViewer.goToPage(myEmblemDataNum + 7);
-			}
-		},
-		offset: 300
-	})
-	// var waypoint = $('.pc:nth-of-type(3)').waypoint({
-	// 	handler: function(direction) {
-	// 		if(direction === 'down') {
-	// 			console.log("hit dedication 3 Latin waypoint down");
-	// 			zoomingViewer.goToPage(myEmblemDataNum + 9);
-	// 		}
-	// 		else {
-	// 			console.log("hit dedication 3 Latin waypoint up");
-	// 			zoomingViewer.goToPage(myEmblemDataNum + 8);
-	// 		}
-	// 	},
-	// 	offset: 900
-	// })
-	/*if($('.section__dedication div.original').hasClass('is-shown')) {
-		console.log("THIS SHOULD WORK");
-
-		var waypointDedication2 = '.section__dedication .page';
-		var waypoint = new Waypoint({
-			element: document.querySelector(waypointDedication2), // tells waypoint which DOM element's position to observe on scroll
+		waypointFront1 = $(waypointDedication1).waypoint({ // tells waypoint which DOM element's position to observe on scroll
 			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
 				if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
-					console.log("hit dedication 2 Latin waypoint down");
+					zoomingViewer.goToPage(myEmblemDataNum + 7);
+				}
+				else { // if scrolling back up the page
+
+				}
+			},
+			offset: 0
+		})
+		$(waypointDedicationBEnglish).addClass('page-divider').html("");
+		waypointFront2 = $(waypointDedicationBEnglish).waypoint({
+			handler: function(direction) {
+				if($('.section__dedication > div.original').hasClass('is-shown')) {
+					// if latin is hidden, then enable english
+				}
+				else {
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 8);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 7);
+					}
+				}
+			},
+			offset: 480
+		})
+		waypointFrontD2E = waypointFront2[0];
+
+		$(waypointDedicationCEnglish).addClass('page-divider').html("");
+		waypointFront3 = $(waypointDedicationCEnglish).waypoint({
+			handler: function(direction) {
+				if($('.section__dedication > div.original').hasClass('is-shown')) {
+					// if latin is hidden, then enable english
+				}
+				else {	
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 9);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 8);
+					}
+				}
+			},
+			offset: 480
+		})
+		waypointFrontD3E = waypointFront3[0];
+
+		$(waypointDedicationBLatin).addClass('page-divider').html("");
+		waypointFront4 = $(waypointDedicationBLatin).waypoint({
+			handler: function(direction) {
+				if($('.section__dedication > div.original').hasClass('is-shown')) {
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 8);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 7);
+					}
+				}
+				else {
+					// if latin is visible, then disable english
+				}
+			},
+			offset: 480
+		})
+		waypointFrontD2L = waypointFront4[0];
+
+		$(waypointDedicationCLatin).addClass('page-divider').html("");
+		waypointFront5 = $(waypointDedicationCLatin).waypoint({
+			handler: function(direction) {
+				if($('.section__dedication > div.original').hasClass('is-shown')) {
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 9);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 8);
+					}
+				}
+				else {
+					// if latin is visible, then disable english
+				}
+			},
+			offset: 500
+		})
+		waypointFrontD3L = waypointFront5[0];
+
+		// enable/disable english/latin waypoints by selected language
+		$("#language").on( "selectmenuchange", function( event, ui ) {
+		  if(ui.item.value == 'latin_original') {
+			  	waypointFrontD2E.disable();
+			  	waypointFrontD3E.disable();
+			  	waypointFrontD2L.enable();
+			  	waypointFrontD3L.enable();
+		  }
+		  else if(ui.item.value == 'latin_normal') {
+				waypointFrontD2E.disable();
+				waypointFrontD3E.disable();
+			  	waypointFrontD2L.enable();
+			  	waypointFrontD3L.enable();
+		  }
+		  else if(ui.item.value == 'english_original') {
+			  	waypointFrontD2L.disable();
+			  	waypointFrontD3L.disable();
+			  	waypointFrontD2E.enable();
+			  	waypointFrontD3E.enable();
+		  }
+		  else if(ui.item.value == 'english_modern') {
+		  		waypointFrontD2L.disable();
+		  		waypointFrontD3L.disable();
+			  	waypointFrontD2E.enable();
+			  	waypointFrontD3E.enable();
+		  }
+		});
+	}
+	else if(myEmblemDataNum === 4) { // PREFACE
+		waypointFront6 = $(waypointPreface1).waypoint({ // tells waypoint which DOM element's position to observe on scroll
+			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+				if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
 					zoomingViewer.goToPage(myEmblemDataNum + 9);
 				}
 				else { // if scrolling back up the page
-					console.log("hit dedication 2 Latin waypoint up");
-					zoomingViewer.goToPage(myEmblemDataNum + 8);
+
 				}
 			},
-			offset: 200, // moving the trigger location from 0 at the top of the viewport
+			offset: 0
 		})
-	}
-	if($('.section__dedication div.translation').hasClass('is-shown')) {
-		console.log("THIS SHOULD ALSO WORK");
-		var waypointDedication2 = '.section__dedication .ab:nth-of-type(2)';
-		var waypoint = new Waypoint({
-			element: document.querySelector(waypointDedication2), // tells waypoint which DOM element's position to observe on scroll
-			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-				if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
-					console.log("hit dedication 2 English waypoint down");
-					zoomingViewer.goToPage(myEmblemDataNum + 8);
+
+		$(waypointPrefaceCEnglish).addClass('page-divider').html("");
+		waypointFront7 = $(waypointPrefaceCEnglish).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					// if latin is hidden, then enable english
 				}
-				else { // if scrolling back up the page
-					console.log("hit dedication 2 English waypoint up");
-					zoomingViewer.goToPage(myEmblemDataNum + 7);
+				else {
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 10);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 9);
+					}
 				}
 			},
-			offset: 200, // moving the trigger location from 0 at the top of the viewport
+			offset: 450
 		})
-	}
-	*/
+		waypointFrontP2E = waypointFront7[0];
 
-	
+		$(waypointPrefaceDEnglish).addClass('page-divider').html("");
+		waypointFront8 = $(waypointPrefaceDEnglish).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					// if latin is hidden, then enable english
+				}
+				else {	
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 11);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 10);
+					}
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP3E = waypointFront8[0];
 
+		$(waypointPrefaceEEnglish).addClass('page-divider').html("");
+		waypointFront9 = $(waypointPrefaceEEnglish).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					// if latin is hidden, then enable english
+				}
+				else {	
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 12);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 11);
+					}
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP4E = waypointFront9[0];
+
+		$(waypointPrefaceFEnglish).addClass('page-divider').html("");
+		waypointFront10 = $(waypointPrefaceFEnglish).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					// if latin is hidden, then enable english
+				}
+				else {	
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 13);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 12);
+					}
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP5E = waypointFront10[0];
+
+		$(waypointPrefaceBLatin).addClass('page-divider').addClass('red').html("");
+		waypointFront11 = $(waypointPrefaceBLatin).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 10);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 9);
+					}
+				}
+				else {
+					// if latin is visible, then disable english
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP2L = waypointFront11[0];
+
+		$(waypointPrefaceCLatin).addClass('page-divider').html("");
+		waypointFront12 = $(waypointPrefaceCLatin).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 11);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 10);
+					}
+
+				}
+				else {
+					// if latin is visible, then disable english
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP3L = waypointFront12[0];
+
+		$(waypointPrefaceDLatin).addClass('page-divider').html("");
+		waypointFront13 = $(waypointPrefaceDLatin).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 12);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 11);
+					}
+					
+				}
+				else {
+					// if latin is visible, then disable english
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP4L = waypointFront13[0];
+
+		$(waypointPrefaceELatin).addClass('page-divider').html("");
+		waypointFront14 = $(waypointPrefaceELatin).waypoint({
+			handler: function(direction) {
+				if($('.section__preface > div.original').hasClass('is-shown')) {
+					if(direction === 'down') {
+						zoomingViewer.goToPage(myEmblemDataNum + 13);
+					}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum + 12);
+					}
+				}
+				else {
+					// if latin is visible, then disable english
+				}
+			},
+			offset: 450
+		})
+		waypointFrontP5L = waypointFront14[0];
+
+		// enable/disable english/latin waypoints by selected language
+		$("#language").on( "selectmenuchange", function( event, ui ) {
+		  if(ui.item.value == 'latin_original') {
+			  	waypointFrontP2E.disable();
+			  	waypointFrontP3E.disable();
+			  	waypointFrontP4E.disable();
+			  	waypointFrontP5E.disable();
+			  	waypointFrontP2L.enable();
+			  	waypointFrontP3L.enable();
+			  	waypointFrontP4L.enable();
+			  	waypointFrontP5L.enable();
+		  }
+		  else if(ui.item.value == 'latin_normal') {
+				waypointFrontP2E.disable();
+				waypointFrontP3E.disable();
+				waypointFrontP4E.disable();
+			  	waypointFrontP5E.disable();
+			  	waypointFrontP2L.enable();
+			  	waypointFrontP3L.enable();
+			  	waypointFrontP4L.enable();
+			  	waypointFrontP5L.enable();
+		  }
+		  else if(ui.item.value == 'english_original') {
+			  	waypointFrontP2L.disable();
+			  	waypointFrontP3L.disable();
+			  	waypointFrontP4L.disable();
+			  	waypointFrontP5L.disable();
+			  	waypointFrontP2E.enable();
+			  	waypointFrontP3E.enable();
+			  	waypointFrontP4E.enable();
+			  	waypointFrontP5E.enable();
+		  }
+		  else if(ui.item.value == 'english_modern') {
+		  		waypointFrontP2L.disable();
+		  		waypointFrontP3L.disable();
+		  		waypointFrontP4L.disable();
+			  	waypointFrontP5L.disable();
+			  	waypointFrontP2E.enable();
+			  	waypointFrontP3E.enable();
+			  	waypointFrontP4E.enable();
+			  	waypointFrontP5E.enable();
+		  }
+		});
 	}
-	else if(myEmblemDataNum === 4) { // PREFACE
-		//THERE ARE NO PAGE BREAKS IN THE ENGLISH PREFACE TO TIE A WAYPOINT TO
-		// var waypoint = $('.dedication:nth-of-type(2)').waypoint({
-		// 	handler: function(direction) {
-		// 		if(direction === 'down') {
-		// 			console.log("hit preface 1 waypoint down");
-		// 			zoomingViewer.goToPage(myEmblemDataNum + 8);
-		// 		}
-		// 		else {
-		// 			console.log("hit preface 1  waypoint up");
-		// 			zoomingViewer.goToPage(myEmblemDataNum + 7);
-		// 		}
-		// 	},
-		// 	offset: 300
-		// })
-	}
-	else { // EMBLEMS 1—50
+	else if(myEmblemDataNum >= 5) { // EMBLEMS 1—50
 		/*** MOTTO WAYPOINT ENGLISH / LATIN ***/
 		// instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
 		waypoint1A = $(waypointMotto).waypoint({
@@ -690,150 +931,150 @@ $(function () {
 
 
 
-	// /*** IMAGE WAYPOINT ***/
-	// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
-	waypoint2 = $(waypointImage).waypoint({
-		//element: document.querySelector(waypointImage), // tells waypoint which DOM element's position to observe on scroll
-		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			if(direction === 'down') { // if scrolling down the page, change zooming page to 2/4
-				console.log("hit image waypoint down");
-				zoomingViewer.goToPage(myEmblemDataNum * 4);
-			}
-			else if (direction === 'up') { // if scrolling back up the page
-				console.log("hit image waypoint up");
-				if($('.section__motto .original.is-shown ._motto--latin').hasClass('is-hidden')) { // german is visible
-					zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
-					console.log("show german after image");
-				}
-				else { // german motto page
+		// /*** IMAGE WAYPOINT ***/
+		// // instantiate the global Waypoint class and pass an options object to it. the two paramaters required are element and handler
+		waypoint2 = $(waypointImage).waypoint({
+			//element: document.querySelector(waypointImage), // tells waypoint which DOM element's position to observe on scroll
+			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+				if(direction === 'down') { // if scrolling down the page, change zooming page to 2/4
+					console.log("hit image waypoint down");
 					zoomingViewer.goToPage(myEmblemDataNum * 4);
-					console.log("show latin after image");
 				}
-			}
-			else {
-				console.log("waypoints doesn't detect a scroll direction");
-			}
-		},
-		offset: 135, // moving the trigger location from 0 at the top of the viewport
-	})
-
-	// /*** MUSIC WAYPOINT ***/
-	waypoint3 = $(waypointMusic).waypoint({
-		element: document.querySelector(waypointMusic), // tells waypoint which DOM element's position to observe on scroll
-		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			if(direction === 'down') { // if English && scrolling down the page, change zooming page to 1/4
-				console.log("hit music waypoint down");
-				// if($('.section__epigram .original.is-shown ._epigram--latin').hasClass('is-hidden')) { // if german epigram is visible
-				// 	zoomingViewer.goToPage(myEmblemDataNum * 4);
-				// }
-				// else { //everything else
-				// 	zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
-				// }
-				zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
-			}
-			else if (direction === 'up') { // if scrolling back up the page
-				console.log("hit music waypoint up");
-				zoomingViewer.goToPage(myEmblemDataNum * 4);
-			}
-			else {
-				console.log("waypoints doesn't detect a scroll direction");
-			}
-		},
-		offset: 100, // moving the trigger location from 0 at the top of the viewport
-	})
-
-
-	// /*** EPIGRAM WAYPOINT ***/
-	waypoint4 = $(waypointEpigram).waypoint({
-		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			if(direction === 'down') { // if scrolling down the page, change zooming page to 2/4 if Latin/English is active or 1/4 if German is active
-				console.log("hit epigram waypoint down");
-				if($('.section__epigram .original.is-shown ._epigram--latin').hasClass('is-hidden')) { //if german is visible
-					zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
-					console.log("german shown");				}
+				else if (direction === 'up') { // if scrolling back up the page
+					console.log("hit image waypoint up");
+					if($('.section__motto .original.is-shown ._motto--latin').hasClass('is-hidden')) { // german is visible
+						zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
+						console.log("show german after image");
+					}
+					else { // german motto page
+						zoomingViewer.goToPage(myEmblemDataNum * 4);
+						console.log("show latin after image");
+					}
+				}
 				else {
-					zoomingViewer.goToPage(myEmblemDataNum * 4);
-					console.log("german not-shown");
+					console.log("waypoints doesn't detect a scroll direction");
 				}
-			}
-			else if (direction === 'up') { // if scrolling back up the page
-				console.log("hit epigram waypoint up");
-				zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
-			}
-			else {
-				console.log("waypoints doesn't detect a scroll direction");
-			}
-		},
-		offset: 350 // moving the trigger location from 0 at the top of the viewport
-	})
+			},
+			offset: 135, // moving the trigger location from 0 at the top of the viewport
+		})
 
-	// /*** DISCOURSE WAYPOINT 1 ***/
-	waypoint5 = $(waypointDiscourse1).waypoint({
-		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			if(direction === 'down') { // if scrolling down the page, change zooming page to 3/4
-				console.log("hit discourse 1 waypoint down");
-				zoomingViewer.goToPage(myEmblemDataNum * 4 + 1);
-			}
-			else if (direction === 'up') { // if scrolling back up the page
-				console.log("hit discourse 1 waypoint up");
-				if($('.section__epigram .original.is-shown ._epigram--latin').hasClass('is-hidden')) { //if german is visible
+		// /*** MUSIC WAYPOINT ***/
+		waypoint3 = $(waypointMusic).waypoint({
+			element: document.querySelector(waypointMusic), // tells waypoint which DOM element's position to observe on scroll
+			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+				if(direction === 'down') { // if English && scrolling down the page, change zooming page to 1/4
+					console.log("hit music waypoint down");
+					// if($('.section__epigram .original.is-shown ._epigram--latin').hasClass('is-hidden')) { // if german epigram is visible
+					// 	zoomingViewer.goToPage(myEmblemDataNum * 4);
+					// }
+					// else { //everything else
+					// 	zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
+					// }
 					zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
 				}
-				else { // if german is not visible
+				else if (direction === 'up') { // if scrolling back up the page
+					console.log("hit music waypoint up");
 					zoomingViewer.goToPage(myEmblemDataNum * 4);
 				}
-			}
-			else {
-				console.log("waypoints doesn't detect a scroll direction");
-			}
-		},
-		offset: 150, // moving the trigger location from 0 at the top of the viewport
-	})
-
-	/*** DISCOURSE WAYPOINT 2 ENGLISH ***/
-	waypoint6 = $(waypointDiscourseEnglish2).waypoint({
-		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			if($('.section__discourse .original').hasClass('is-shown')) { // if latin is visible, then disable
-				console.log("disabling english discourse 2");
-			}
-			else {
-				console.log("enabling english discourse 2");
-				if (scrollPos > 60) {
-					if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
-						zoomingViewer.goToPage(myEmblemDataNum * 4 + 2);
-					}
-					else { // if scrolling back up the page
-						zoomingViewer.goToPage(myEmblemDataNum * 4 + 1);
-				 	}
+				else {
+					console.log("waypoints doesn't detect a scroll direction");
 				}
+			},
+			offset: 100, // moving the trigger location from 0 at the top of the viewport
+		})
 
-			}
-		},
-		offset: 500 // moving the trigger location from 0 at the top of the viewport
-	})
-	waypointD2E = waypoint6[0];
 
-	/*** DISCOURSE WAYPOINT 2 LATIN ***/
-	waypoint7 = $(waypointDiscourseLatin2).waypoint({
-		handler: function(direction) { // triggered when the top of the element hits the top of the viewport
-			if($('.section__discourse .translation').hasClass('is-shown')) { // if english is visible, then disable
-				console.log("disabling latin discourse 2");
-			}
-			else {
-				console.log("enabling latin discourse 2");
-				if (scrollPos > 60) {
-					if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
-						zoomingViewer.goToPage(myEmblemDataNum * 4 + 2);
-					}
-					else { // if scrolling back up the page
-						zoomingViewer.goToPage(myEmblemDataNum * 4 + 1);
+		// /*** EPIGRAM WAYPOINT ***/
+		waypoint4 = $(waypointEpigram).waypoint({
+			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+				if(direction === 'down') { // if scrolling down the page, change zooming page to 2/4 if Latin/English is active or 1/4 if German is active
+					console.log("hit epigram waypoint down");
+					if($('.section__epigram .original.is-shown ._epigram--latin').hasClass('is-hidden')) { //if german is visible
+						zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
+						console.log("german shown");				}
+					else {
+						zoomingViewer.goToPage(myEmblemDataNum * 4);
+						console.log("german not-shown");
 					}
 				}
-			}
-		},
-		offset: 500 // moving the trigger location from 0 at the top of the viewport
-	})
-	waypointD2L = waypoint7[0];
+				else if (direction === 'up') { // if scrolling back up the page
+					console.log("hit epigram waypoint up");
+					zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
+				}
+				else {
+					console.log("waypoints doesn't detect a scroll direction");
+				}
+			},
+			offset: 350 // moving the trigger location from 0 at the top of the viewport
+		})
+
+		// /*** DISCOURSE WAYPOINT 1 ***/
+		waypoint5 = $(waypointDiscourse1).waypoint({
+			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+				if(direction === 'down') { // if scrolling down the page, change zooming page to 3/4
+					console.log("hit discourse 1 waypoint down");
+					zoomingViewer.goToPage(myEmblemDataNum * 4 + 1);
+				}
+				else if (direction === 'up') { // if scrolling back up the page
+					console.log("hit discourse 1 waypoint up");
+					if($('.section__epigram .original.is-shown ._epigram--latin').hasClass('is-hidden')) { //if german is visible
+						zoomingViewer.goToPage(myEmblemDataNum * 4 - 1);
+					}
+					else { // if german is not visible
+						zoomingViewer.goToPage(myEmblemDataNum * 4);
+					}
+				}
+				else {
+					console.log("waypoints doesn't detect a scroll direction");
+				}
+			},
+			offset: 150, // moving the trigger location from 0 at the top of the viewport
+		})
+
+		/*** DISCOURSE WAYPOINT 2 ENGLISH ***/
+		waypoint6 = $(waypointDiscourseEnglish2).waypoint({
+			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+				if($('.section__discourse .original').hasClass('is-shown')) { // if latin is visible, then disable
+					console.log("disabling english discourse 2");
+				}
+				else {
+					console.log("enabling english discourse 2");
+					if (scrollPos > 60) {
+						if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
+							zoomingViewer.goToPage(myEmblemDataNum * 4 + 2);
+						}
+						else { // if scrolling back up the page
+							zoomingViewer.goToPage(myEmblemDataNum * 4 + 1);
+					 	}
+					}
+
+				}
+			},
+			offset: 500 // moving the trigger location from 0 at the top of the viewport
+		})
+		waypointD2E = waypoint6[0];
+
+		/*** DISCOURSE WAYPOINT 2 LATIN ***/
+		waypoint7 = $(waypointDiscourseLatin2).waypoint({
+			handler: function(direction) { // triggered when the top of the element hits the top of the viewport
+				if($('.section__discourse .translation').hasClass('is-shown')) { // if english is visible, then disable
+					console.log("disabling latin discourse 2");
+				}
+				else {
+					console.log("enabling latin discourse 2");
+					if (scrollPos > 60) {
+						if(direction === 'down') { // if scrolling down the page, change zooming page to 4/4
+							zoomingViewer.goToPage(myEmblemDataNum * 4 + 2);
+						}
+						else { // if scrolling back up the page
+							zoomingViewer.goToPage(myEmblemDataNum * 4 + 1);
+						}
+					}
+				}
+			},
+			offset: 500 // moving the trigger location from 0 at the top of the viewport
+		})
+		waypointD2L = waypoint7[0];
 
 		$("#language").on( "selectmenuchange", function( event, ui ) {
 		  console.log(ui.item.value);
@@ -861,31 +1102,7 @@ $(function () {
 		  		waypointD2L.disable();
 			  	waypointD2E.enable();
 		  }
-});
-		// $("#language").on( "selectmenuchange", function( event, ui ) {
-		//   console.log(ui.item.value);
-		//   if(ui.item.value == 'latin_original') {
-		//   	waypoint1B[0].disable();
-		// 	waypoint1A[0].enable();
-		//   }
-		//   else if(ui.item.value == 'latin_normal') {
-		//   	waypoint1B[0].disable();
-		// 	waypoint1A[0].enable();
-		//   }
-		//   else if(ui.item.value == 'english_original') {
-		//   	waypoint1B[0].disable();
-		// 	waypoint1A[0].enable();
-		//   }
-		//   else if(ui.item.value == 'english_modern') {
-		// 		waypoint1B[0].disable();
-		// 	waypoint1A[0].enable();
-		// 	}
-		//   else if(ui.item.value == 'german') {
-		// 	  	waypoint1A[0].disable();
-		// 	  	waypoint1B[0].enable();
-		// 	}
-
-		// });
+		});
 
 		$(window).scroll(function (event) { // calculate scroll position so enabling discourse 2 happens locally
 		    var scrollPosition = $(window).scrollTop();
@@ -895,7 +1112,5 @@ $(function () {
 		    scrollPos = (scrollPosition / (pageHeight - browserWindowHeight)) * 100;
 		    console.log("the scroll position is" + scrollPos);
 		});
-
 	}
-
 });
