@@ -1969,6 +1969,32 @@ main.emblem-page.frontmatter {
 
 /***************** BREAKPOINTS *****************/
 @media screen and (min-width: 320px) and (max-width: 767px) {
+	main.emblem-page.frontmatter {
+		section.section__author-epigram, 
+		section.section__dedication, 
+		section.section__frontispiece, 
+		section.section__preface {
+			padding: 2rem 1rem;
+		}
+		section.section__author-epigram {
+			.verse-epigram {
+				padding-left: 0;
+			}
+			._author-epigram--english .verse-epigram {
+				/* font-size: 1rem; */
+			}
+			.verse-epigram span.v-line {
+				grid-column: 1 / 12;
+			}
+		} 
+		section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1), 
+		section.section__dedication ._dedication--english div.dedication:nth-of-type(2) {
+			padding: 0;
+		}
+		section.section__preface ._preface--english .preface {
+			padding: 0;
+		}
+	}	
 	main.emblem-page {
 		section.section__motto > div.original {
 			margin-top: .5rem;
@@ -2015,6 +2041,20 @@ main.emblem-page.frontmatter {
 				margin-bottom: -1.5rem;
 			}
 		}
+		.panel--right section.section__epigram .translation, 
+		.panel--right section.section__epigram .original {
+			h3 {
+				grid-column: 1 / 13;
+			}
+			.verse-epigram {
+				grid-column: 1 / 13;
+				line-height: 2;
+			}
+			.verse-epigram > span {
+				line-height: 1.2;
+				margin-bottom: .5rem;
+			}
+		}
 		section.section__discourse .translation, 
 		section.section__discourse .original {
 			._discourse--english, ._discourse--latin {
@@ -2034,9 +2074,21 @@ main.emblem-page.frontmatter {
 				grid-column: 1 / 13;
 				padding: 0 .25rem;
 			}
-			span.note-mark, 
 			div.margin-note {
 				display: none;
+			}
+		}
+		.panel--right section.section__discourse {
+			div.discourse {
+				padding: 0;
+			}
+			.discourse-p1, 
+			.discourse-pagebreak, 
+			.discourse-p2 {
+				grid-column: 1 / 13;
+			}
+			._discourse--english .ab, {
+				padding: 0;
 			}
 		}
 		.subnav-v3 form {
@@ -2051,6 +2103,107 @@ main.emblem-page.frontmatter {
 		.panel--right {
 			grid-column-start: 1;
 		}
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+	main.emblem-page.frontmatter {
+		section.section__frontispiece {
+			.hanging-indent {
+				padding-left: 1rem;
+			}
+		}
+	}
+	main.emblem-page.frontmatter section.section__author-epigram div.margin-note, 
+	main.emblem-page.frontmatter section.section__dedication ._dedication--english div.margin-note, 
+	main.emblem-page.frontmatter section.section__preface ._preface--english div.margin-note {
+		display: none;
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
+	main.emblem-page.frontmatter {
+		section.section__frontispiece {
+			.hanging-indent {
+				padding-left: 4rem;
+			}
+		}
+		section.section__author-epigram, 
+		section.section__dedication ._dedication--english {
+			div.margin-note {
+				display: inline-block;
+				left: 85vw;
+			}
+			.verse-epigram div.margin-note {
+				left: 85vw;
+			}
+		}
+		section.section__dedication ._dedication--english div.dedication:nth-of-type(2) {
+			grid-column: 1 / 11;
+		}
+		section.section__preface ._preface--english div.margin-note {
+			display: inline-block;
+			left: 80vw;
+			width: 19vw;
+		}
+		section.section__preface ._preface--english div.preface {
+			grid-column: 1 / 10;
+		}
+	}
+	main.emblem-page, 
+	main.emblem-page.frontmatter {
+
+	}
+	main.emblem-page {
+		.panel--right section.section__discourse {
+			.discourse-p1, 
+			.discourse-pagebreak, 
+			.discourse-p2 {
+				grid-column: 1 / 13;
+			}
+			div.margin-note {
+				display: inline-block;
+				left: 80vw;
+				line-height: 1;
+				width: 19vw;
+			}
+		}
+	}
+	main.emblem-page[data-id='5'] {
+		.discourse-p2 div.ab div.ab > div:nth-of-type(7) {
+			margin-top: .75rem;	
+		}
+	}
+	/* emblems with margin notes */
+	main.emblem-page[data-id='5'], 
+	main.emblem-page[data-id='7'], 
+	main.emblem-page[data-id='8'], 
+	main.emblem-page[data-id='9'], 
+	main.emblem-page[data-id='10'], 
+	main.emblem-page[data-id='13'], 
+	main.emblem-page[data-id='14'], 
+	main.emblem-page[data-id='15'], 
+	main.emblem-page[data-id='17'], 
+	main.emblem-page[data-id='23'], 
+	main.emblem-page[data-id='28'], 
+	main.emblem-page[data-id='30'], 
+	main.emblem-page[data-id='36'], 
+	main.emblem-page[data-id='43'], 
+	main.emblem-page[data-id='49'], 
+	main.emblem-page[data-id='53'] {
+		.panel--right section.section__discourse {
+			.discourse-p1, 
+			.discourse-pagebreak, 
+			.discourse-p2 {
+				grid-column: 1 / 10;
+			}
+		}
+		/* section.section__discourse, 
+		section.section__preface {
+			.edition--facsimile .discourse-p1, 
+			.edition--facsimile .discourse-pagebreak, 
+			.edition--facsimile .discourse-p2 {
+				margin-right: -4rem;
+			}
+		} */
 	}
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -2210,7 +2363,6 @@ main.emblem-page.frontmatter {
 			}
 			.hanging-indent {
 				font-size: 1.25rem;
-				padding-left: .75rem;
 				text-indent: -6%;
 			}
 			.titlepage-center {
@@ -2419,6 +2571,13 @@ main.emblem-page.frontmatter {
 			._preface--latin.edition--regularized div.preface {
 				margin: 0;
 			}
+		}
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+	main.emblem-page.frontmatter {
+		section.section__frontispiece .hanging-indent {
+			padding-left: .75rem;
 		}
 	}
 }

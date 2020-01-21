@@ -117,6 +117,9 @@ main#emblem-toc nav.af-toc {
 		h1 {
 			font-size: 4.5rem;
 		}
+		nav.af-toc > ul {
+			justify-content: center;
+		}
 		nav.af-toc li:nth-child(n+1):nth-child(-n+4) {
 			flex: 1 0 100%;
 			margin-bottom: 1.5rem;
