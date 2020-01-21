@@ -6197,47 +6197,42 @@ nav.digital-edition-nav.de-nav--open {
     height: 8rem; }
   nav.digital-edition-nav .owl-carousel .owl-nav button.owl-prev,
   nav.digital-edition-nav .owl-carousel .owl-nav button.owl-next {
-    display: none;
-    /*		height: 80px;
-		margin-top: -7.5rem;*/ }
+    display: none; }
   nav.digital-edition-nav .owl-item img {
     height: 80px;
     width: 90px; }
   nav.digital-edition-nav .owl-item .thumbnail__label {
     width: 90px; }
   nav.digital-edition-nav.de-nav--closed {
-    top: -5.5rem; }
+    top: -5.5rem; } }
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
   nav.digital-edition-nav button.thumbnail-trigger {
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
     left: calc(-50% + 3.25rem);
-    width: 6.5rem; }
+    width: 10rem; }
   nav.digital-edition-nav .thumbnail-trigger > span {
-    font-size: .75rem; }
+    font-size: .8125rem; }
   nav.digital-edition-nav.de-nav--closed button.thumbnail-trigger {
-    /*outline: 1px solid red;*/
-    left: calc(-50% + 2.55rem);
-    width: 5rem; }
+    left: -58%;
+    width: 10rem; }
   nav.digital-edition-nav.de-nav--closed .thumbnail-trigger__label {
     margin-right: 1rem; }
   nav.digital-edition-nav.de-nav--closed .thumbnail-trigger__icon {
-    /*		 	outline: 1px solid green;
-		 	transform: translate3d(-25px, -15px, 0) rotate(-90deg) scale(1.5);*/
-    /*transform: translate3d(-100px, 2px, 0) rotate(-90deg) scale(2);*/
-    /*			margin-left: 20px;
-			height: 25px;
-			width: 25px;*/ }
-  nav.digital-edition-nav.de-nav--closed button.thumbnail-trigger {
-    left: -60%;
-    width: 6.5rem; }
+    -webkit-transform: rotate(-90deg) scale(0.7);
+    -ms-transform: rotate(-90deg) scale(0.7);
+    transform: rotate(-90deg) scale(0.7); }
+  nav.digital-edition-nav.de-nav--open button.thumbnail-trigger {
+    left: -58%; }
   nav.digital-edition-nav.de-nav--open .thumbnail-trigger > div {
     -webkit-transform: translate3d(-6px, -30px, 0);
     transform: translate3d(-6px, -30px, 0); }
   nav.digital-edition-nav.de-nav--open .thumbnail-trigger__label {
-    margin-right: .25rem; }
+    margin-right: .75rem; }
   nav.digital-edition-nav.de-nav--open .thumbnail-trigger__icon {
-    -webkit-transform: translate3d(0, 2px, 0) rotate(90deg) scale(1.2);
-    transform: translate3d(0, 2px, 0) rotate(90deg) scale(1.2); } }
+    -webkit-transform: translate3d(0, 7px, 0) rotate(90deg) scale(0.7);
+    transform: translate3d(0, 7px, 0) rotate(90deg) scale(0.7); } }
 
 /* medium  -  tablet */
 @media screen and (min-width: 768px) and (max-width: 999px) {
