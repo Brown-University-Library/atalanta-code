@@ -6246,6 +6246,28 @@ nav.digital-edition-nav.de-nav--open {
   nav.digital-edition-nav .owl-item .thumbnail__label {
     width: 120px; } }
 
+/*** UNIQUE BREAKPOINTS ***/
+@-moz-document url-prefix() {
+  @media screen and (min-width: 1000px) and (max-width: 1399px) {
+    nav.digital-edition-nav .thumbnail__img {
+      display: flex;
+      justify-content: center; } }
+  @media screen and (min-width: 1000px) and (max-width: 1299px) {
+    nav.digital-edition-nav .owl-item {
+      width: 12vw !important; }
+    nav.digital-edition-nav .owl-item img {
+      width: 11vw !important; } }
+  @media screen and (min-width: 1300px) and (max-width: 1329px) {
+    nav.digital-edition-nav .owl-item {
+      width: 10vw !important; }
+    nav.digital-edition-nav .owl-item img {
+      width: 9vw !important; } }
+  @media screen and (min-width: 1330px) and (max-width: 1399px) {
+    nav.digital-edition-nav .owl-item {
+      width: 9vw !important; }
+    nav.digital-edition-nav .owl-item img {
+      width: 8vw !important; } } }
+
 .emblem-page {
   /*
      * CSS for Transcription of English translation of Atalanta. Designed mostly for proofreading.
