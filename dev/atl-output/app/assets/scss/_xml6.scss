@@ -2106,14 +2106,26 @@ main.emblem-page.frontmatter {
 	}
 }
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+	main.emblem-page.frontmatter {
+		section.section__frontispiece {
+			.hanging-indent {
+				padding-left: 1rem;
+			}
+		}
+	}
 	main.emblem-page.frontmatter section.section__author-epigram div.margin-note, 
 	main.emblem-page.frontmatter section.section__dedication ._dedication--english div.margin-note, 
 	main.emblem-page.frontmatter section.section__preface ._preface--english div.margin-note {
 		display: none;
 	}
 }
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+@media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
 	main.emblem-page.frontmatter {
+		section.section__frontispiece {
+			.hanging-indent {
+				padding-left: 4rem;
+			}
+		}
 		section.section__author-epigram, 
 		section.section__dedication ._dedication--english {
 			div.margin-note {
@@ -2135,6 +2147,10 @@ main.emblem-page.frontmatter {
 		section.section__preface ._preface--english div.preface {
 			grid-column: 1 / 10;
 		}
+	}
+	main.emblem-page, 
+	main.emblem-page.frontmatter {
+
 	}
 	main.emblem-page {
 		.panel--right section.section__discourse {
@@ -2347,7 +2363,6 @@ main.emblem-page.frontmatter {
 			}
 			.hanging-indent {
 				font-size: 1.25rem;
-				padding-left: .75rem;
 				text-indent: -6%;
 			}
 			.titlepage-center {
@@ -2556,6 +2571,13 @@ main.emblem-page.frontmatter {
 			._preface--latin.edition--regularized div.preface {
 				margin: 0;
 			}
+		}
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+	main.emblem-page.frontmatter {
+		section.section__frontispiece .hanging-indent {
+			padding-left: .75rem;
 		}
 	}
 }
