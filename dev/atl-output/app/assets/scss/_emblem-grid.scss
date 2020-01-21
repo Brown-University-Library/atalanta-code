@@ -161,12 +161,8 @@ main.emblem-page {
 	}
 }
 @media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
-	main.emblem-page, 
-	main.emblem-page.frontmatter {
-		grid-template-columns: 1fr 3fr;
-	}
-	.grid--half {
-		width: 25%;
+	.section__facsimile {
+		margin-top: -5px;
 	}
 }
 /* medium  -  tablet */
@@ -183,6 +179,17 @@ main.emblem-page {
 	.grid--half {
 		width: 50%;
 	}	
+}
+
+/*** Unique Breakpoints ***/
+@media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
+	main.emblem-page, 
+	main.emblem-page.frontmatter {
+		grid-template-columns: 1fr 3fr;
+	}
+	.grid--half {
+		width: 25%;
+	}
 }
 @media screen and (min-width: 900px) and (max-width: 1024px) and (orientation: landscape) {
 	main.emblem-page, 

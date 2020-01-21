@@ -5957,12 +5957,9 @@ main.emblem-page {
     margin-top: 0;
     margin-bottom: 3.125rem; } }
 
-@media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
-  main.emblem-page,
-  main.emblem-page.frontmatter {
-    grid-template-columns: 1fr 3fr; }
-  .grid--half {
-    width: 25%; } }
+@media screen and (min-width: 320px) and (max-width: 850px) and (orientation: landscape) {
+  .section__facsimile {
+    margin-top: -5px; } }
 
 /* medium  -  tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -5975,6 +5972,14 @@ main.emblem-page {
     grid-template-columns: repeat(2, 1fr); }
   .grid--half {
     width: 50%; } }
+
+/*** Unique Breakpoints ***/
+@media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
+  main.emblem-page,
+  main.emblem-page.frontmatter {
+    grid-template-columns: 1fr 3fr; }
+  .grid--half {
+    width: 25%; } }
 
 @media screen and (min-width: 900px) and (max-width: 1024px) and (orientation: landscape) {
   main.emblem-page,
@@ -9813,13 +9818,6 @@ button.lity-close {
   font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
   padding: 2rem; }
 
-/*.my-offset-debug {
-  background-color: red;
-  height: 5px;
-  width: auto;
-  left: 0;
-  z-index: 10000; 
-}*/
 #openseadragon-wrapper {
   background-color: gray;
   height: calc(100vh - 6.5rem); }
@@ -10055,7 +10053,7 @@ button.lity-close {
   display: none !important;
   /* important required for openseadragon override */ }
 
-/***     Breakpoints     ***/
+/*** Breakpoints ***/
 /* small  -  mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
   #tools {
@@ -10083,11 +10081,20 @@ button.lity-close {
       -ms-transform: scale(0.5);
       transform: scale(0.5); } }
 
-@media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
-  #tools {
-    bottom: 20; } }
-
 /* medium  -  tablet */
+/*** Unique Breakpoints ***/
+@media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
+  #tools > span {
+    padding: 0;
+    padding-left: 30%;
+    width: 100%; }
+  #tools a#zoom-in,
+  #tools a#zoom-out {
+    width: 30%; }
+  #openseadragon-wrapper {
+    height: calc(100vh - 123px);
+    /* emblem nav and collections drawer */ } }
+
 main#image-search {
   background: white;
   min-height: 100vh;
