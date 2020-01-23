@@ -1481,7 +1481,6 @@ main.emblem-page.frontmatter {
 /* AUTHOR'S EPIGRAM */
 main.emblem-page.frontmatter {
 	section.section__author-epigram {
-		/*border: 5px solid pink;*/
 		padding-top: 4rem;
 		div.epigram {
 			grid-template-columns: 8fr 2fr;
@@ -1617,8 +1616,26 @@ main.emblem-page.frontmatter {
 	}
 	.panel--full section.section__author-epigram {
 		div.epigram {
-			grid-column: 3 / 10;
+			grid-column: 3 / 11;
 			margin: 0 -2rem;
+		}
+		.verse-epigram {
+			margin: 0 auto;
+			padding: 0;
+			width: 29rem;
+		}
+		.verse-epigram span.v-line {
+			grid-column: 1 / 13;
+			line-height: .3
+		}
+		.verse-epigram-italic {
+			margin: 0 auto;
+			padding: 0;
+			width: 33rem;
+		}
+		.original .edition--original h3.title {
+			font-size: 2rem;
+			text-indent: 11rem;
 		}
 	}
 }
@@ -1997,6 +2014,16 @@ main.emblem-page.frontmatter {
 			.verse-epigram span.v-line {
 				grid-column: 1 / 12;
 			}
+			.edition--regularized .verse-epigram-italic span.v-line:nth-of-type(1):first-letter, 
+			.verse-epigram-italic span.v-line:nth-of-type(1):first-letter {
+				font-size: inherit;
+				font-style: normal;
+				padding: 0;
+				vertical-align: baseline;
+			}
+			.verse-epigram-italic span.v-line:nth-of-type(1):first-letter {
+				font-style: italic;
+			}
 		} 
 		section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1), 
 		section.section__dedication ._dedication--english div.dedication:nth-of-type(2) {
@@ -2143,6 +2170,22 @@ main.emblem-page.frontmatter {
 			} 
 			.edition--regularized .hanging-indent {
 				width: 28rem;
+			}
+		}
+		section.section__author-epigram {
+			padding: 1.5rem 2rem;
+			.edition--regularized .verse-epigram-italic span.v-line:nth-of-type(1):first-letter, 
+			.verse-epigram-italic span.v-line:nth-of-type(1):first-letter {
+				font-size: inherit;
+				font-style: normal;
+				padding: 0;
+				vertical-align: baseline;
+			}
+			.verse-epigram-italic span.v-line:nth-of-type(1):first-letter {
+				font-style: italic;
+			}
+			.verse-epigram-italic span.v-line-indent:nth-of-type(2) {
+				text-indent: 5.875rem;
 			}
 		}
 		section.section__author-epigram, 
@@ -2358,7 +2401,6 @@ main.emblem-page.frontmatter {
 		.subnav-v3 {
 			width: 100vw;
 		}
-		section.section__author-epigram, 
 		section.section__dedication, 
 		section.section__frontispiece, 
 		section.section__preface {
@@ -2466,9 +2508,6 @@ main.emblem-page.frontmatter {
 			}
 			._author-epigram--latin.edition--regularized .verse-epigram-italic span.v-line {
 				line-height: 1.8;
-			}
-			._author-epigram--latin .verse-epigram-italic span.v-line-indent {
-				text-indent: 2rem;
 			}
 			._author-epigram--latin.edition--regularized .verse-epigram-italic span.v-line-indent {
 				line-height: 1;
@@ -2597,6 +2636,12 @@ main.emblem-page.frontmatter {
 			}
 			div.original ._frontispiece--latin .hanging-indent {
 				padding-left: 5rem;
+			}
+		}
+		section.section__author-epigram {
+			padding: 1.5rem;
+			._author-epigram--latin .verse-epigram-italic span.v-line-indent {
+				text-indent: 2rem;
 			}
 		}
 		section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1) {
