@@ -5957,7 +5957,7 @@ main.emblem-page {
     margin-top: 0;
     margin-bottom: 3.125rem; } }
 
-@media screen and (min-width: 320px) and (max-width: 850px) and (orientation: landscape) {
+@media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
   .section__facsimile {
     margin-top: -5px; } }
 
@@ -9005,7 +9005,6 @@ main.emblem-page.frontmatter .discourse.la .pb {
     main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1) {
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      margin-right: -7vw;
       padding: 0 0 0 3vw; }
     main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(2) {
       -webkit-box-sizing: border-box;
@@ -9045,7 +9044,9 @@ main.emblem-page.frontmatter .discourse.la .pb {
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   main.emblem-page.frontmatter section.section__frontispiece .hanging-indent {
-    padding-left: .75rem; } }
+    padding-left: .75rem; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1) {
+    margin-right: -7vw; } }
 
 body {
   /* background-color: #ddd; */
