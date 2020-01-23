@@ -1751,13 +1751,11 @@ main.emblem-page.frontmatter {
 	.panel--full section.section__dedication ._dedication--english.edition--facsimile {
 		padding: 3rem 0;
 		div.dedication:nth-child(2) {
-			padding-left: 24%;
+			margin: 0 auto;
+			width: 44rem;
 		}
 		div.dedication:nth-child(2):not(.ab) {
 
-		}
-		div.dedication:nth-child(2) .ab {
-			margin-right: -200px;
 		}
 		div.margin-note {
 			left: 85vw;
