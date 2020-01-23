@@ -1496,7 +1496,6 @@ main.emblem-page.frontmatter {
 			margin-bottom: 3rem;
 			text-align: center;
 			text-indent: 0;
-			/*outline: 5px solid blue;*/
 		}
 		.verse-epigram {
 			display: grid;
@@ -1539,7 +1538,6 @@ main.emblem-page.frontmatter {
 				line-height: 3.6;
 			}
 			span.v-line:nth-of-type(1):first-letter {
-				/* float: left; */
 				font-size: 3.5rem;
 				font-style: normal;
 				line-height: 0;
@@ -2005,14 +2003,32 @@ main.emblem-page.frontmatter {
 			padding: 2rem 1rem;
 		}
 		section.section__author-epigram {
+			h3, 
+			h3.title {
+				font-size: 2.25rem;
+			}
+			.original .epigram.la h3.title {
+				text-indent: 0;
+			}
+			.original .edition--original .epigram.la h3.title {
+				font-size: 2rem;
+			}
 			.verse-epigram {
 				padding-left: 0;
 			}
-			._author-epigram--english .verse-epigram {
-				/* font-size: 1rem; */
-			}
 			.verse-epigram span.v-line {
 				grid-column: 1 / 12;
+			}
+			.edition--original .verse-epigram-italic span.v-line, 
+			.edition--original .verse-epigram-italic span.v-line-indent, 
+			.edition--regularized .verse-epigram-italic span.v-line, 
+			.edition--regularized .verse-epigram-italic span.v-line-indent {
+				grid-column: 1 / 13;
+				line-height: 2;
+				margin-bottom: -1.75rem;
+			}
+			._author-epigram--latin.edition--regularized .verse-epigram-italic {
+				grid-column: 1 / 13;
 			}
 			.edition--regularized .verse-epigram-italic span.v-line:nth-of-type(1):first-letter, 
 			.verse-epigram-italic span.v-line:nth-of-type(1):first-letter {
@@ -2174,6 +2190,13 @@ main.emblem-page.frontmatter {
 		}
 		section.section__author-epigram {
 			padding: 1.5rem 2rem;
+			h3, 
+			.original .edition--regularized .epigram.la h3.title {
+				font-size: 2rem;
+			}
+			.original .epigram.la h3.title {
+				text-indent: 0;
+			}
 			.edition--regularized .verse-epigram-italic span.v-line:nth-of-type(1):first-letter, 
 			.verse-epigram-italic span.v-line:nth-of-type(1):first-letter {
 				font-size: inherit;
@@ -2456,7 +2479,6 @@ main.emblem-page.frontmatter {
 		}
 		section.section__author-epigram {
 			h3 {
-				font-size: 2rem;
 				margin-bottom: .5rem;
 			}
 			._author-epigram--english.edition--normalized h3 span.regularized, 
@@ -2640,6 +2662,10 @@ main.emblem-page.frontmatter {
 		}
 		section.section__author-epigram {
 			padding: 1.5rem;
+			h3, 
+			h3.title {
+				font-size: 2rem;
+			}
 			._author-epigram--latin .verse-epigram-italic span.v-line-indent {
 				text-indent: 2rem;
 			}
