@@ -2840,6 +2840,14 @@ main.emblem-page.frontmatter {
 				margin-bottom: -.875rem;
 			}
 		}
+		.panel--right section.section__discourse {
+			div.original div.margin-note, 
+			div.original div.discourse.la div.margin-note {
+				display: inline-block !important;
+				left: 0 !important;
+				width: 100vw !important;
+			}
+		}
 	}
 }
 /*** UNIQUE BREAKPOINTS ***/

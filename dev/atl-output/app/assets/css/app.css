@@ -9331,7 +9331,12 @@ main.emblem-page.frontmatter .discourse.la .pb {
     grid-column: 3 / 11; }
   main.emblem-page .panel--full section.section__epigram .original .lang--latin span.v-line,
   main.emblem-page .panel--full section.section__epigram .original .lang--latin span.v-line-indent {
-    margin-bottom: -.875rem; } }
+    margin-bottom: -.875rem; }
+  main.emblem-page .panel--right section.section__discourse div.original div.margin-note,
+  main.emblem-page .panel--right section.section__discourse div.original div.discourse.la div.margin-note {
+    display: inline-block !important;
+    left: 0 !important;
+    width: 100vw !important; } }
 
 /*** UNIQUE BREAKPOINTS ***/
 @media screen and (min-width: 1025px) and (max-width: 1159px) {
