@@ -2743,6 +2743,16 @@ main.emblem-page.frontmatter {
 				grid-column: 1 / 13;
 			}
 		}
+		.panel--full section.section__preface {
+			div.preface {
+				grid-column: 2 / 12;
+			}
+			._preface--english.edition--facsimile div.preface {
+				grid-column: 1 / 12;
+				margin: 0;
+				padding: 0 6rem 0 0;
+			}
+		}
 	}
 }
 @media screen and (min-width: 1160px) and (max-width: 1299px) {
@@ -2754,6 +2764,13 @@ main.emblem-page.frontmatter {
 			.original ._author-epigram--latin.edition--original h3, 
 			.original ._author-epigram--latin.edition--original h3.title {
 				font-size: 1.875rem;
+			}
+		}
+		.panel--full section.section__preface {
+			._preface--english.edition--facsimile div.preface {
+				grid-column: 2 / 12;
+				margin: 0;
+				padding: 0 6rem 0 0;
 			}
 		}
 	}
