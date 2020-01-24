@@ -9312,6 +9312,15 @@ main.emblem-page.frontmatter .discourse.la .pb {
     margin-top: 1.5rem; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  main.emblem-page .panel--right section.section__epigram .original .verse-epigram,
+  main.emblem-page .panel--right section.section__epigram .translation .verse-epigram {
+    grid-column: 4 / 12; }
+  main.emblem-page .panel--right section.section__epigram .original .lang--german .verse-epigram {
+    grid-column: 3 / 12;
+    margin-left: -.5rem; }
+  main.emblem-page .panel--right section.section__epigram .original .lang--latin span.v-line,
+  main.emblem-page .panel--right section.section__epigram .original .lang--latin span.v-line-indent {
+    margin-bottom: -.5rem; }
   main.emblem-page .panel--full section.section__epigram .original .verse-epigram,
   main.emblem-page .panel--full section.section__epigram .translation .verse-epigram {
     grid-column: 4 / 10;
