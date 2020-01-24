@@ -2361,107 +2361,110 @@ main.emblem-page.frontmatter {
 		.panel--full section.section__epigram *:after {
 			color: $white !important;
 		}
-		section.section__epigram .translation, 
-		section.section__epigram .original {
-			.verse-epigram {
+		section.section__epigram {
+			.original .verse-epigram, 
+			.translation .verse-epigram {
 				font-size: 1.5rem;
 				grid-column: 2 / 12;
 				line-height: 2;
 			}
-		}
-		section.section__epigram .original {
-			.verse-epigram span {
+			.original .verse-epigram span {
 				line-height: 2;
 				margin: 0;
 			}
-			.verse-epigram br {
+			.original .verse-epigram br {
 				display: none;
 			}
 		}
-		.panel--right section.section__epigram .translation, 
-		.panel--right section.section__epigram .original {
-			.verse-epigram {
+		.panel--right section.section__epigram {
+			.original .verse-epigram, 
+			.translation .verse-epigram {
 				font-size: 1rem;
 				grid-column: 1 / 13;
-				padding-left: 1rem;
+				padding: 0 1rem;
 			}
-		}
-		.panel--right section.section__epigram .translation {
-			.verse-epigram {
+			.translation .verse-epigram {
 				padding-left: 2rem;
 			}
+			.original .lang--german .verse-epigram {
+				grid-column: 1 / 13;
+				margin-left: 0;
+			}
 		}
-		.panel--full section.section__epigram .translation, 
-		.panel--full section.section__epigram .original {
-			.verse-epigram {
+		.panel--full section.section__epigram {
+			.original .verse-epigram, 
+			.translation .verse-epigram {
 				grid-column: 3 / 13;
 				padding-left: 2rem;
 			}
-		}
-		.panel--full section.section__epigram .original .lang--latin {
-			.verse-epigram {
+			.original .lang--latin .verse-epigram {
 				padding-left: 0;
 			}
-		}
-		.panel--full section.section__epigram .original .lang--german {
-			.verse-epigram {
+			.original .lang--german .verse-epigram {
 				grid-column: 1 / 13;
 			}
 		}
-		section.section__discourse .translation,
-		section.section__discourse .original {
-			div.discourse {
-				grid-column: 1 / 13;
-				padding: 0 .5rem;
+		section.section__discourse {
+			.original, 
+			.translation {
+				div.discourse {
+					grid-column: 1 / 13;
+					padding: 0 .5rem;
+				}
+				div.margin-note {
+					left: 75vw;
+					padding-right: 1rem;
+				}
 			}
-			div.margin-note {
-				left: 75vw;
-				padding-right: 1rem;
-			}
-		}
-		section.section__discourse .translation {
-			div.discourse {
+			.translation div.discourse {
 				padding: 0 1rem;
 			}
 		}
-		.panel--right section.section__discourse .translation, 
-		.panel--right section.section__discourse .original {
-			span.note-mark, 
-			div.margin-note {
-				display: none;
+		.panel--right section.section__discourse {
+			.original, 
+			.translation {
+				span.note-mark, 
+				div.margin-note {
+					display: none;
+				}
+			}
+			div.discourse.la {
+				padding: 0 1rem;
 			}
 		}
-		.panel--full section.section__discourse .translation {
-			.discourse-p1, 
-			.discourse-p2 {
-				font-size: 1rem;
+		.panel--full section.section__discourse {
+			.original {
+				.discourse-p1, 
+				.discourse-p2 {
+					font-size: 1rem;
+					padding-left: 3rem;
+				}
+				.ab {
+					width: 85vw;
+				}
+				h3.title {
+					padding-right: 15vw;
+				}
+				.margin-note {
+					left: 86vw;
+				}
 			}
-			.edition--facsimile .discourse-p1, 
-			.edition--facsimile .discourse-p2 {
-				padding-left: 2rem;
-			}
-			.ab, 
-			h3 {
-				width: 80vw;
-			}
-			.margin-note {
-				left: 84vw;
-			}
-		}
-		.panel--full section.section__discourse .original {
-			.discourse-p1, 
-			.discourse-p2 {
-				font-size: 1rem;
-				padding-left: 3rem;
-			}
-			.ab {
-				width: 85vw;
-			}
-			h3.title {
-				padding-right: 15vw;
-			}
-			.margin-note {
-				left: 86vw;
+			.translation {
+				.discourse-p1, 
+				.discourse-p2 {
+					font-size: 1rem;
+				}
+				.edition--facsimile .discourse-p1, 
+				.edition--facsimile .discourse-p2 {
+					padding-left: 2rem;
+				}
+				.ab, 
+				h3 {
+					width: 80vw;
+				}
+				.margin-note {
+					left: 84vw;
+				}
 			}
 		}
 	}
@@ -2723,6 +2726,52 @@ main.emblem-page.frontmatter {
 				padding-left: 1rem;
 				width: 50vw;
 			}
+		}
+	}
+	main.emblem-page {
+		section.section__epigram .original .verse-epigram span {
+			line-height: 1.5;
+		}
+		.panel--right section.section__discourse .discourse-p1, 
+		.panel--right section.section__discourse .discourse-p2 {
+			grid-column: 1 / 3;
+		}
+		.panel--full section.section__discourse {
+			.translation .edition--normalized div.discourse {
+				padding: 0 3rem;
+			}
+			.edition--facsimile .discourse-p2 {
+				grid-column: 1 / 12;
+			}
+			.edition--normalized .discourse-p2 {
+				grid-column: 1 / 13;
+			}
+			.translation .edition--normalized .ab {
+				width: 72vw;
+			}
+		}
+	}
+	main.emblem-page[data-id='5'] {
+		.panel--full section.section__discourse .edition--normalized .discourse-p2 div.margin-note:nth-of-type(2) {
+			margin-top: 1.375rem;
+		}
+		.panel--full section.section__discourse .edition--facsimile .discourse-p2 div.margin-note:nth-of-type(3) {
+			line-height: 1.2;
+		}
+		.panel--full section.section__discourse .edition--normalized .discourse-p2 div.margin-note:nth-of-type(3) {
+			margin-top: 1.375rem;
+		}
+		.panel--full .edition--facsimile .discourse-p2 div.margin-note:nth-of-type(4) {
+			margin-top: 2.625rem;
+		}
+		.panel--full section.section__discourse .edition--normalized .discourse-p2 div.margin-note:nth-of-type(4) {
+			margin-top: 2.75rem;
+		}
+		.panel--full .edition--facsimile .discourse-p2 div.margin-note:nth-of-type(7) {
+			margin-top: 1.75rem;
+		}
+		.panel--full section.section__discourse .edition--normalized .discourse-p2 div.margin-note:nth-of-type(7) {
+			margin-top: 1.5rem;
 		}
 	}
 }
