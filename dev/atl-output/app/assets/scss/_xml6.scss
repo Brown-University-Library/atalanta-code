@@ -2733,6 +2733,11 @@ main.emblem-page.frontmatter {
 		section.section__frontispiece {
 			padding: 2rem 1rem;
 		}
+		.panel--full section.section__frontispiece {
+			div.translation ._frontispiece--english .ab:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+				padding: 0 10rem;
+			}
+		}
 		section.section__author-epigram {
 			padding: 2rem 2.875rem;
 			.original ._author-epigram--latin.edition--original h3, 
@@ -2764,6 +2769,11 @@ main.emblem-page.frontmatter {
 	main.emblem-page.frontmatter {
 		section.section__frontispiece {
 			padding: 2rem;
+		}
+		.panel--full section.section__frontispiece {
+			div.translation ._frontispiece--english .ab:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+				padding: 0 14.5rem;
+			}
 		}
 		section.section__author-epigram {
 			.original ._author-epigram--latin.edition--original h3, 

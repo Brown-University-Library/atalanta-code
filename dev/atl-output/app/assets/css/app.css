@@ -9165,6 +9165,8 @@ main.emblem-page.frontmatter .discourse.la .pb {
 @media screen and (min-width: 1025px) and (max-width: 1159px) {
   main.emblem-page.frontmatter section.section__frontispiece {
     padding: 2rem 1rem; }
+  main.emblem-page.frontmatter .panel--full section.section__frontispiece div.translation ._frontispiece--english .ab:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+    padding: 0 10rem; }
   main.emblem-page.frontmatter section.section__author-epigram {
     padding: 2rem 2.875rem; }
     main.emblem-page.frontmatter section.section__author-epigram .original ._author-epigram--latin.edition--original h3,
@@ -9184,6 +9186,8 @@ main.emblem-page.frontmatter .discourse.la .pb {
 @media screen and (min-width: 1160px) and (max-width: 1299px) {
   main.emblem-page.frontmatter section.section__frontispiece {
     padding: 2rem; }
+  main.emblem-page.frontmatter .panel--full section.section__frontispiece div.translation ._frontispiece--english .ab:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+    padding: 0 14.5rem; }
   main.emblem-page.frontmatter section.section__author-epigram .original ._author-epigram--latin.edition--original h3,
   main.emblem-page.frontmatter section.section__author-epigram .original ._author-epigram--latin.edition--original h3.title {
     font-size: 1.875rem; }
