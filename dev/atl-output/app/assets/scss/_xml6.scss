@@ -2043,9 +2043,22 @@ main.emblem-page.frontmatter {
 		section.section__dedication ._dedication--english div.dedication:nth-of-type(2) {
 			padding: 0;
 		}
-		section.section__preface ._preface--english .preface {
-			padding: 0;
-		}
+		section.section__preface {
+			._preface--english {
+				font-weight: 700;
+				line-height: 1.2;
+				.preface {
+					padding: 0;
+				}
+				.ab {
+					font-weight: normal;
+					margin-top: 3rem;
+				}
+				.preface > .ab > .original:nth-of-type(1) {
+					display: none;
+				}
+			} 
+		} 
 	}	
 	main.emblem-page {
 		section.section__motto > div.original {
@@ -2240,22 +2253,36 @@ main.emblem-page.frontmatter {
 				left: 86vw;
 			}
 		}
-		.panel--full section.section__dedication {
-			._dedication--latin div.preface.la {
-				font-size: 1.25rem;
-				grid-column: 2 / 12;
-				margin: 0;
-			}
+		.panel--full section.section__dedication ._dedication--latin div.preface.la {
+			font-size: 1.25rem;
+			grid-column: 2 / 12;
+			margin: 0;
 		}
 		section.section__preface {
-			._preface--english div.margin-note {
-				display: inline-block;
-				left: 80vw;
-				width: 19vw;
+			._preface--english {
+				font-weight: 700;
+				grid-column: 1 / 13;
+				line-height: 1.2;
+				.preface {
+					padding: 0;
+				}
+				.ab {
+					font-weight: normal;
+					margin-top: 3rem;
+					width: 50vw;
+				}
+				.preface > .ab > .original:nth-of-type(1) {
+					display: none;
+				}
+				div.margin-note {
+					display: inline-block;
+					left: 80vw;
+					width: 19vw;
+				}
 			}
-			._preface--english div.preface {
-				grid-column: 1 / 10;
-			}
+		}
+		.panel--full section.section__preface ._preface--english .ab {
+			width: 66vw;
 		}
 	}
 	main.emblem-page {

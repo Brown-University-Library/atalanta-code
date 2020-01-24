@@ -8656,8 +8656,16 @@ main.emblem-page.frontmatter .discourse.la .pb {
   main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1),
   main.emblem-page.frontmatter section.section__dedication ._dedication--english div.dedication:nth-of-type(2) {
     padding: 0; }
-  main.emblem-page.frontmatter section.section__preface ._preface--english .preface {
-    padding: 0; }
+  main.emblem-page.frontmatter section.section__preface ._preface--english {
+    font-weight: 700;
+    line-height: 1.2; }
+    main.emblem-page.frontmatter section.section__preface ._preface--english .preface {
+      padding: 0; }
+    main.emblem-page.frontmatter section.section__preface ._preface--english .ab {
+      font-weight: normal;
+      margin-top: 3rem; }
+    main.emblem-page.frontmatter section.section__preface ._preface--english .preface > .ab > .original:nth-of-type(1) {
+      display: none; }
   main.emblem-page section.section__motto > div.original {
     margin-top: .5rem; }
   main.emblem-page section.section__motto div.lang--english > div.title,
@@ -8803,12 +8811,24 @@ main.emblem-page.frontmatter .discourse.la .pb {
     font-size: 1.25rem;
     grid-column: 2 / 12;
     margin: 0; }
-  main.emblem-page.frontmatter section.section__preface ._preface--english div.margin-note {
-    display: inline-block;
-    left: 80vw;
-    width: 19vw; }
-  main.emblem-page.frontmatter section.section__preface ._preface--english div.preface {
-    grid-column: 1 / 10; }
+  main.emblem-page.frontmatter section.section__preface ._preface--english {
+    font-weight: 700;
+    grid-column: 1 / 13;
+    line-height: 1.2; }
+    main.emblem-page.frontmatter section.section__preface ._preface--english .preface {
+      padding: 0; }
+    main.emblem-page.frontmatter section.section__preface ._preface--english .ab {
+      font-weight: normal;
+      margin-top: 3rem;
+      width: 50vw; }
+    main.emblem-page.frontmatter section.section__preface ._preface--english .preface > .ab > .original:nth-of-type(1) {
+      display: none; }
+    main.emblem-page.frontmatter section.section__preface ._preface--english div.margin-note {
+      display: inline-block;
+      left: 80vw;
+      width: 19vw; }
+  main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english .ab {
+    width: 66vw; }
   main.emblem-page .panel--right section.section__discourse .discourse-p1,
   main.emblem-page .panel--right section.section__discourse .discourse-pagebreak,
   main.emblem-page .panel--right section.section__discourse .discourse-p2 {
