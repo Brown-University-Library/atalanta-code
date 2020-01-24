@@ -8799,6 +8799,10 @@ main.emblem-page.frontmatter .discourse.la .pb {
   main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.margin-note {
     display: inline-block;
     left: 86vw; }
+  main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--latin div.preface.la {
+    font-size: 1.25rem;
+    grid-column: 2 / 12;
+    margin: 0; }
   main.emblem-page.frontmatter section.section__preface ._preface--english div.margin-note {
     display: inline-block;
     left: 80vw;
@@ -9090,11 +9094,8 @@ main.emblem-page.frontmatter .discourse.la .pb {
     margin-right: 0;
     padding: 0;
     width: 100%; }
-  main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(2) {
-    margin-right: 0;
-    padding: 0;
-    padding-left: 1rem;
-    width: 50vw; }
+  main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--facsimile div.margin-note {
+    left: 91vw; }
   main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1) {
     margin-right: 0;
     padding: 0;
@@ -9135,7 +9136,12 @@ main.emblem-page.frontmatter .discourse.la .pb {
     box-sizing: border-box;
     padding: 0 0 0 3vw; }
   main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1) {
-    margin-right: -7vw; } }
+    margin-right: -7vw; }
+  main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(2) {
+    margin-right: 0;
+    padding: 0;
+    padding-left: 1rem;
+    width: 50vw; } }
 
 body {
   /* background-color: #ddd; */

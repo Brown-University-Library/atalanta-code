@@ -2240,6 +2240,13 @@ main.emblem-page.frontmatter {
 				left: 86vw;
 			}
 		}
+		.panel--full section.section__dedication {
+			._dedication--latin div.preface.la {
+				font-size: 1.25rem;
+				grid-column: 2 / 12;
+				margin: 0;
+			}
+		}
 		section.section__preface {
 			._preface--english div.margin-note {
 				display: inline-block;
@@ -2614,11 +2621,8 @@ main.emblem-page.frontmatter {
 					padding: 0;
 					width: 100%;
 				}
-				div.dedication:nth-of-type(2) {
-					margin-right: 0;
-					padding: 0;
-					padding-left: 1rem;
-					width: 50vw;
+				div.margin-note {
+					left: 91vw;
 				}
 			}
 			._dedication--english.edition--normalized {
@@ -2685,6 +2689,14 @@ main.emblem-page.frontmatter {
 			}
 		 	._dedication--english.edition--normalized div.dedication:nth-of-type(1) {
 				margin-right: -7vw;
+			}
+		}
+		.panel--full section.section__dedication {
+			._dedication--english.edition--facsimile div.dedication:nth-of-type(2) {
+				margin-right: 0;
+				padding: 0;
+				padding-left: 1rem;
+				width: 50vw;
 			}
 		}
 	}
