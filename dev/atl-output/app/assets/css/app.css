@@ -9311,6 +9311,19 @@ main.emblem-page.frontmatter .discourse.la .pb {
   main.emblem-page[data-id='5'] .panel--full section.section__discourse .edition--normalized .discourse-p2 div.margin-note:nth-of-type(7) {
     margin-top: 1.5rem; } }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  main.emblem-page .panel--full section.section__epigram .original .verse-epigram,
+  main.emblem-page .panel--full section.section__epigram .translation .verse-epigram {
+    grid-column: 4 / 10;
+    padding-left: 0; }
+  main.emblem-page .panel--full section.section__epigram .original .edition--original .verse-epigram {
+    grid-column: 4 / 11; }
+  main.emblem-page .panel--full section.section__epigram .original .lang--german .verse-epigram {
+    grid-column: 3 / 11; }
+  main.emblem-page .panel--full section.section__epigram .original .lang--latin span.v-line,
+  main.emblem-page .panel--full section.section__epigram .original .lang--latin span.v-line-indent {
+    margin-bottom: -.875rem; } }
+
 /*** UNIQUE BREAKPOINTS ***/
 @media screen and (min-width: 1025px) and (max-width: 1159px) {
   main.emblem-page.frontmatter section.section__frontispiece {

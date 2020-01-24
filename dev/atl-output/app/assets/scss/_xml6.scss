@@ -2807,7 +2807,27 @@ main.emblem-page.frontmatter {
 		}
 	}
 }
-
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	main.emblem-page {
+		.panel--full section.section__epigram {
+			.original .verse-epigram, 
+			.translation .verse-epigram {
+				grid-column: 4 / 10;
+				padding-left: 0;
+			}
+			.original .edition--original .verse-epigram {
+				grid-column: 4 / 11;
+			}
+			.original .lang--german .verse-epigram {
+				grid-column: 3 / 11;
+			}
+			.original .lang--latin span.v-line, 
+			.original .lang--latin span.v-line-indent {
+				margin-bottom: -.875rem;
+			}
+		}
+	}
+}
 /*** UNIQUE BREAKPOINTS ***/
 @media screen and (min-width: 1025px) and (max-width: 1159px) {
 	main.emblem-page.frontmatter {
