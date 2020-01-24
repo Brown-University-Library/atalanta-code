@@ -505,10 +505,18 @@ button.lity-close {
 			font-size: .75rem;
 		}
 	}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
 	/* @supports (display: grid) {...} */
 	.panel--right .section__music ._music .ata-music .transport.is-stuck {
 		left: 50vw;
 		width: calc(50vw/24 * 5);
-	}
-	
+	}	
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+	/* @supports (display: grid) {...} */
+	.panel--right .section__music ._music .ata-music .transport.is-stuck {
+		left: 30vw;
+		width: calc(50vw/24 * 5);
+	}	
 }
