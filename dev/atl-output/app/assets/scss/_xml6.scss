@@ -2730,6 +2730,9 @@ main.emblem-page.frontmatter {
 /*** UNIQUE BREAKPOINTS ***/
 @media screen and (min-width: 1025px) and (max-width: 1159px) {
 	main.emblem-page.frontmatter {
+		section.section__frontispiece {
+			padding: 2rem 1rem;
+		}
 		section.section__author-epigram {
 			padding: 2rem 2.875rem;
 			.original ._author-epigram--latin.edition--original h3, 
@@ -2743,7 +2746,10 @@ main.emblem-page.frontmatter {
 	}
 }
 @media screen and (min-width: 1160px) and (max-width: 1299px) {
-		main.emblem-page.frontmatter {
+	main.emblem-page.frontmatter {
+		section.section__frontispiece {
+			padding: 2rem;
+		}
 		section.section__author-epigram {
 			.original ._author-epigram--latin.edition--original h3, 
 			.original ._author-epigram--latin.edition--original h3.title {
