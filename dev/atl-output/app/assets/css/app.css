@@ -8538,9 +8538,7 @@ main.emblem-page section.section__discourse ._preface--english div.margin-note, 
 main.emblem-page.frontmatter section.section__preface {
   padding-top: 4rem;
   /* English */
-  /* Latin */
-  /* HEAD */
-  /* VIZ */ }
+  /* Latin */ }
   main.emblem-page.frontmatter section.section__preface ._preface--english,
   main.emblem-page.frontmatter section.section__preface ._preface--latin .page.italic {
     grid-column: 1 / 13; }
@@ -8602,7 +8600,7 @@ main.emblem-page.frontmatter .panel--full section.section__preface {
   main.emblem-page.frontmatter .panel--full section.section__preface ._preface--latin.edition--regularized div.preface {
     margin: 0 -2rem; }
   main.emblem-page.frontmatter .panel--full section.section__preface div.preface {
-    grid-column: 4 / 10; }
+    grid-column: 3 / 10; }
   main.emblem-page.frontmatter .panel--full section.section__preface div.margin-note {
     left: 78vw;
     width: 15vw; }

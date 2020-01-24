@@ -1938,7 +1938,6 @@ main.emblem-page.frontmatter {
 				margin-left: -14px;
 			}
 		}
-/* HEAD */
 		.edition--regularized {
 			.ab.italic {
 				font-style: normal;
@@ -1946,8 +1945,7 @@ main.emblem-page.frontmatter {
 			.ab.italic span.roman {
 				font-style: oblique;
 			}
-		}
-/* VIZ */
+		} 
 	}
 	.panel--full section.section__preface {
 		padding-top: 5rem;
@@ -1967,7 +1965,7 @@ main.emblem-page.frontmatter {
 			margin: 0 -2rem;
 		}
 		div.preface {
-			grid-column: 4 / 10;
+			grid-column: 3 / 10;
 		}
 		div.margin-note {
 			left: 78vw;
