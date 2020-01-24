@@ -2743,6 +2743,11 @@ main.emblem-page.frontmatter {
 				grid-column: 1 / 13;
 			}
 		}
+		.panel--full section.section__dedication {
+			._dedication--latin div.preface {
+				grid-column: 2 / 12;
+			}
+		}
 		.panel--full section.section__preface {
 			div.preface {
 				grid-column: 2 / 12;
@@ -2764,6 +2769,11 @@ main.emblem-page.frontmatter {
 			.original ._author-epigram--latin.edition--original h3, 
 			.original ._author-epigram--latin.edition--original h3.title {
 				font-size: 1.875rem;
+			}
+		}
+		.panel--full section.section__dedication {
+			._dedication--latin div.preface {
+				grid-column: 3 / 11;
 			}
 		}
 		.panel--full section.section__preface {

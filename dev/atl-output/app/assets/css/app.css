@@ -9172,6 +9172,8 @@ main.emblem-page.frontmatter .discourse.la .pb {
       font-size: 1.75rem; }
     main.emblem-page.frontmatter section.section__author-epigram ._author-epigram--latin.edition--regularized .verse-epigram-italic {
       grid-column: 1 / 13; }
+  main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--latin div.preface {
+    grid-column: 2 / 12; }
   main.emblem-page.frontmatter .panel--full section.section__preface div.preface {
     grid-column: 2 / 12; }
   main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english.edition--facsimile div.preface {
@@ -9185,6 +9187,8 @@ main.emblem-page.frontmatter .discourse.la .pb {
   main.emblem-page.frontmatter section.section__author-epigram .original ._author-epigram--latin.edition--original h3,
   main.emblem-page.frontmatter section.section__author-epigram .original ._author-epigram--latin.edition--original h3.title {
     font-size: 1.875rem; }
+  main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--latin div.preface {
+    grid-column: 3 / 11; }
   main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english.edition--facsimile div.preface {
     grid-column: 2 / 12;
     margin: 0;
