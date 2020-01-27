@@ -8685,6 +8685,9 @@ main.emblem-page.frontmatter .discourse.la .pb {
   main.emblem-page section.section__motto .original h3.title {
     font-size: .875rem;
     line-height: 1.5; }
+  main.emblem-page .panel--right section.section__epigram .original .lang--german .verse-epigram {
+    margin-left: 0;
+    padding: 0; }
   main.emblem-page section.section__epigram .translation h3,
   main.emblem-page section.section__epigram .translation h3.title,
   main.emblem-page section.section__epigram .original h3,
@@ -8734,6 +8737,10 @@ main.emblem-page.frontmatter .discourse.la .pb {
   main.emblem-page section.section__discourse .translation div.margin-note,
   main.emblem-page section.section__discourse .original div.margin-note {
     display: none; }
+  main.emblem-page section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page section.section__discourse .edition--facsimile .discourse-p2 {
+    margin-right: 0; }
   main.emblem-page .panel--right section.section__discourse div.discourse {
     padding: 0; }
   main.emblem-page .panel--right section.section__discourse .discourse-p1,
@@ -8742,6 +8749,9 @@ main.emblem-page.frontmatter .discourse.la .pb {
     grid-column: 1 / 13; }
   main.emblem-page .panel--right section.section__discourse ._discourse--english .ab {
     padding: 0; }
+  main.emblem-page .panel--right section.section__discourse div.discourse.la {
+    grid-gap: 0;
+    padding: 0; }
   main.emblem-page .subnav-v3 form {
     width: 50vw; }
   main.emblem-page #layout-button {
@@ -8749,7 +8759,56 @@ main.emblem-page.frontmatter .discourse.la .pb {
   main.emblem-page .section__facsimile.panel--left {
     display: none !important; }
   main.emblem-page .panel--right {
-    grid-column-start: 1; } }
+    grid-column-start: 1; }
+  main.emblem-page[data-id='5'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='5'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='5'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='7'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='7'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='7'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='8'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='8'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='8'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='9'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='9'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='9'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='10'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='10'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='10'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='13'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='13'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='13'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='14'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='14'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='14'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='15'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='15'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='15'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='17'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='17'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='17'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='23'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='23'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='23'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='28'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='28'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='28'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='30'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='30'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='30'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='36'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='36'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='36'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='43'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='43'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='43'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='49'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='49'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='49'] section.section__discourse .edition--facsimile .discourse-p2,
+  main.emblem-page[data-id='53'] section.section__discourse .edition--facsimile .discourse-p1,
+  main.emblem-page[data-id='53'] section.section__discourse .edition--facsimile .discourse-pagebreak,
+  main.emblem-page[data-id='53'] section.section__discourse .edition--facsimile .discourse-p2 {
+    margin-right: 0; } }
 
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
   main.emblem-page.frontmatter section.section__frontispiece .hanging-indent,
