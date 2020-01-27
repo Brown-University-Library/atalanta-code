@@ -520,3 +520,10 @@ button.lity-close {
 		width: calc(50vw/24 * 5);
 	}	
 }
+
+/*** UNIQUE BREAKPOINTS ***/
+@media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
+	.panel--right .section__music ._music .ata-music .transport.is-stuck {
+		left: 25vw;
+	}
+}
