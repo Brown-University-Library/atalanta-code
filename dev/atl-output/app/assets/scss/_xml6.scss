@@ -2841,12 +2841,30 @@ main.emblem-page.frontmatter {
 			}
 		}
 		.panel--right section.section__discourse {
-			div.original div.margin-note, 
-			div.original div.discourse.la div.margin-note {
-				display: inline-block !important;
-				left: 0 !important;
-				width: 100vw !important;
+			.original span.note-mark, 
+			.original div.margin-note, 
+			.translation span.note-mark, 
+			.translation div.margin-note {
+				display: inline-block;
 			}
+			.original div.margin-note,
+			.translation div.margin-note {
+				left: 85vw;
+			}
+		}
+	}
+	main.emblem-page[data-id='5'] {
+		.panel--right section.section__discourse .edition--normalized .discourse-p2 div.margin-note:nth-of-type(4) {
+			margin-top: 1.5rem;
+		}
+		.panel--full section.section__discourse .discourse-p2 div.margin-note:nth-of-type(4) {
+			margin-top: 1.75rem;
+		}
+		.panel--full section.section__discourse .edition--normalized .discourse-p2 div.margin-note:nth-of-type(4) {
+			margin-top: 1.5rem;
+		}
+		.panel--right section.section__discourse .edition--normalized .discourse-p2 div.margin-note:nth-of-type(7) {
+			margin-top: 1.5rem;
 		}
 	}
 }
