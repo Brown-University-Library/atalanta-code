@@ -7287,12 +7287,18 @@ main.emblem-page.frontmatter section.section__epigram .verse-epigram span.regula
   color: white; }
 
 main.emblem-page section.section__epigram .translation .verse-epigram,
+main.emblem-page section.section__epigram .original .lang--german .verse-epigram,
 main.emblem-page section.section__epigram .original .verse-epigram,
 main.emblem-page.frontmatter section.section__epigram .translation .verse-epigram,
+main.emblem-page.frontmatter section.section__epigram .original .lang--german .verse-epigram,
 main.emblem-page.frontmatter section.section__epigram .original .verse-epigram {
   font-size: 1.25rem;
-  grid-column: 5 / 10;
-  text-align: left; }
+  grid-column: 1 / 13;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  width: auto;
+  /* text-align: left; */ }
 
 main.emblem-page section.section__epigram .translation .verse-epigram,
 main.emblem-page.frontmatter section.section__epigram .translation .verse-epigram {
@@ -7302,10 +7308,6 @@ main.emblem-page section.section__epigram .original .verse-epigram,
 main.emblem-page.frontmatter section.section__epigram .original .verse-epigram {
   line-height: 1.5;
   text-indent: 0; }
-
-main.emblem-page section.section__epigram .original .lang--german .verse-epigram,
-main.emblem-page.frontmatter section.section__epigram .original .lang--german .verse-epigram {
-  grid-column: 4 / 11; }
 
 main.emblem-page section.section__epigram .translation .verse-epigram br,
 main.emblem-page section.section__epigram .original .verse-epigram br,
@@ -7379,18 +7381,6 @@ main.emblem-page.frontmatter .panel--right section.section__epigram {
   main.emblem-page.frontmatter .panel--right section.section__epigram .translation .edition--facsimile h3,
   main.emblem-page.frontmatter .panel--right section.section__epigram .translation .edition--facsimile h3.title {
     text-indent: 50%; }
-  main.emblem-page .panel--right section.section__epigram .translation .verse-epigram,
-  main.emblem-page .panel--right section.section__epigram .original .verse-epigram,
-  main.emblem-page.frontmatter .panel--right section.section__epigram .translation .verse-epigram,
-  main.emblem-page.frontmatter .panel--right section.section__epigram .original .verse-epigram {
-    grid-column: 4 / 12; }
-  main.emblem-page .panel--right section.section__epigram .original .lang--german .verse-epigram,
-  main.emblem-page.frontmatter .panel--right section.section__epigram .original .lang--german .verse-epigram {
-    margin-left: 0; }
-  main.emblem-page .panel--right section.section__epigram .original .lang--german .verse-epigram,
-  main.emblem-page.frontmatter .panel--right section.section__epigram .original .lang--german .verse-epigram {
-    grid-column: 2 / 12;
-    margin-left: 2rem; }
   main.emblem-page .panel--right section.section__epigram .original .de .verse-epigram > span,
   main.emblem-page.frontmatter .panel--right section.section__epigram .original .de .verse-epigram > span {
     line-height: 1.2; }
@@ -8685,9 +8675,6 @@ main.emblem-page.frontmatter .discourse.la .pb {
   main.emblem-page section.section__motto .original h3.title {
     font-size: .875rem;
     line-height: 1.5; }
-  main.emblem-page .panel--right section.section__epigram .original .lang--german .verse-epigram {
-    margin-left: 0;
-    padding: 0; }
   main.emblem-page section.section__epigram .original h3,
   main.emblem-page section.section__epigram .original h3.title,
   main.emblem-page section.section__epigram .translation h3,
@@ -8696,15 +8683,11 @@ main.emblem-page.frontmatter .discourse.la .pb {
   main.emblem-page section.section__epigram .original .verse-epigram,
   main.emblem-page section.section__epigram .translation .verse-epigram {
     font-size: 1.125rem;
-    grid-column: 1 / 13;
-    line-height: 2;
-    padding: 0 .5rem 0 1rem; }
+    line-height: 2; }
   main.emblem-page section.section__epigram .original .verse-epigram > span,
   main.emblem-page section.section__epigram .translation .verse-epigram > span {
     line-height: 1;
     margin-bottom: -1.5rem; }
-  main.emblem-page .panel--full section.section__epigram .original .lang--german .verse-epigram {
-    grid-column: 1 / 13; }
   main.emblem-page .panel--full section.section__epigram .translation .verse-epigram > span,
   main.emblem-page .panel--full section.section__epigram .original .verse-epigram > span {
     line-height: 1.5;
@@ -8714,7 +8697,6 @@ main.emblem-page.frontmatter .discourse.la .pb {
     grid-column: 1 / 13; }
   main.emblem-page .panel--right section.section__epigram .original .verse-epigram,
   main.emblem-page .panel--right section.section__epigram .translation .verse-epigram {
-    grid-column: 1 / 13;
     line-height: 2; }
   main.emblem-page .panel--right section.section__epigram .original .verse-epigram > span,
   main.emblem-page .panel--right section.section__epigram .translation .verse-epigram > span {
@@ -8831,204 +8813,6 @@ main.emblem-page.frontmatter .discourse.la .pb {
   main.emblem-page.frontmatter section.section__preface ._preface--english div.margin-note {
     display: none; } }
 
-@media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
-  main.emblem-page.frontmatter .panel--full section.section__frontispiece .hanging-indent {
-    width: 27rem; }
-  main.emblem-page.frontmatter .panel--full section.section__frontispiece .edition--regularized .hanging-indent {
-    width: 28rem; }
-  main.emblem-page.frontmatter section.section__author-epigram {
-    padding: 1.5rem 2rem; }
-    main.emblem-page.frontmatter section.section__author-epigram h3,
-    main.emblem-page.frontmatter section.section__author-epigram .original .edition--regularized .epigram.la h3.title {
-      font-size: 2rem; }
-    main.emblem-page.frontmatter section.section__author-epigram .original .epigram.la h3.title {
-      text-indent: 0; }
-    main.emblem-page.frontmatter section.section__author-epigram .edition--regularized .verse-epigram-italic span.v-line:nth-of-type(1):first-letter,
-    main.emblem-page.frontmatter section.section__author-epigram .verse-epigram-italic span.v-line:nth-of-type(1):first-letter {
-      font-size: inherit;
-      font-style: normal;
-      padding: 0;
-      vertical-align: baseline; }
-    main.emblem-page.frontmatter section.section__author-epigram .verse-epigram-italic span.v-line:nth-of-type(1):first-letter {
-      font-style: italic; }
-    main.emblem-page.frontmatter section.section__author-epigram .verse-epigram-italic span.v-line-indent:nth-of-type(2) {
-      text-indent: 5.875rem; }
-    main.emblem-page.frontmatter section.section__author-epigram div.margin-note {
-      display: inline-block;
-      left: 85vw; }
-    main.emblem-page.frontmatter section.section__author-epigram .verse-epigram div.margin-note {
-      left: 85vw; }
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english div.dedication:nth-of-type(1),
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english div.dedication:nth-of-type(2) {
-    grid-column: 1 / 11; }
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(1),
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(2),
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1),
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(2) {
-    padding: 0; }
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.margin-note,
-  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.margin-note {
-    display: inline-block;
-    left: 86vw; }
-  main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--latin div.preface.la {
-    font-size: 1.25rem;
-    grid-column: 2 / 12;
-    margin: 0; }
-  main.emblem-page.frontmatter section.section__preface ._preface--english {
-    font-weight: 700;
-    grid-column: 1 / 13;
-    line-height: 1.2; }
-    main.emblem-page.frontmatter section.section__preface ._preface--english .preface {
-      padding: 0; }
-    main.emblem-page.frontmatter section.section__preface ._preface--english .ab {
-      font-weight: normal;
-      margin-top: 3rem;
-      width: 50vw; }
-    main.emblem-page.frontmatter section.section__preface ._preface--english .preface > .ab > .original:nth-of-type(1) {
-      display: none; }
-    main.emblem-page.frontmatter section.section__preface ._preface--english div.margin-note {
-      display: inline-block;
-      left: 80vw;
-      width: 19vw; }
-  main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english .ab {
-    width: 66vw; }
-  main.emblem-page .panel--full .section__music .ata-viz-cmn > svg {
-    grid-column: 2 / 13;
-    margin-left: 1rem; }
-  main.emblem-page .panel--right section.section__epigram .original .verse-epigram,
-  main.emblem-page .panel--right section.section__epigram .original .lang--german .verse-epigram,
-  main.emblem-page .panel--right section.section__epigram .translation .verse-epigram {
-    margin-left: auto;
-    margin-right: auto; }
-  main.emblem-page .panel--right section.section__epigram .original .verse-epigram {
-    width: 72vw; }
-  main.emblem-page .panel--right section.section__epigram .original .lang--german .verse-epigram {
-    grid-column: 1 / 13;
-    width: 94vw; }
-  main.emblem-page .panel--right section.section__epigram .translation .verse-epigram {
-    width: 68vw; }
-  main.emblem-page .panel--full section.section__epigram .translation .verse-epigram {
-    grid-column: 3 / 11;
-    margin: 0 -.5rem; }
-  main.emblem-page .panel--full section.section__epigram .original .verse-epigram {
-    grid-column: 2 / 12; }
-  main.emblem-page .panel--right section.section__discourse div.discourse.la {
-    grid-template-columns: repeat(12, 1fr); }
-  main.emblem-page .panel--right section.section__discourse .discourse-p1,
-  main.emblem-page .panel--right section.section__discourse .discourse-pagebreak,
-  main.emblem-page .panel--right section.section__discourse .discourse-p2 {
-    grid-column: 1 / 13; }
-  main.emblem-page .panel--right section.section__discourse div.original .discourse-p2 {
-    padding-top: 4rem; }
-  main.emblem-page .panel--right section.section__discourse div.margin-note {
-    display: inline-block;
-    left: 80vw;
-    line-height: 1;
-    width: 19vw; }
-  main.emblem-page .panel--right section.section__discourse div.original div.discourse.la div.margin-note {
-    left: 80vw;
-    width: 19vw; }
-  main.emblem-page .panel--full section.section__discourse .original ._discourse--latin .discourse-p1,
-  main.emblem-page .panel--full section.section__discourse .original ._discourse--latin .discourse-p2,
-  main.emblem-page .panel--full section.section__discourse .original ._discourse--latin .discourse-pagebreak,
-  main.emblem-page .panel--full section.section__discourse .original ._discourse--english .discourse-p1,
-  main.emblem-page .panel--full section.section__discourse .original ._discourse--english .discourse-p2,
-  main.emblem-page .panel--full section.section__discourse .original ._discourse--english .discourse-pagebreak,
-  main.emblem-page .panel--full section.section__discourse .translation ._discourse--latin .discourse-p1,
-  main.emblem-page .panel--full section.section__discourse .translation ._discourse--latin .discourse-p2,
-  main.emblem-page .panel--full section.section__discourse .translation ._discourse--latin .discourse-pagebreak,
-  main.emblem-page .panel--full section.section__discourse .translation ._discourse--english .discourse-p1,
-  main.emblem-page .panel--full section.section__discourse .translation ._discourse--english .discourse-p2,
-  main.emblem-page .panel--full section.section__discourse .translation ._discourse--english .discourse-pagebreak {
-    grid-column: 1 / 9; }
-  main.emblem-page .panel--full section.section__discourse .original ._discourse--latin .discourse-p2,
-  main.emblem-page .panel--full section.section__discourse .translation ._discourse--latin .discourse-p2 {
-    padding-top: 4rem; }
-  main.emblem-page .panel--full section.section__discourse .original span.note-mark,
-  main.emblem-page .panel--full section.section__discourse .original div.margin-note,
-  main.emblem-page .panel--full section.section__discourse .translation span.note-mark,
-  main.emblem-page .panel--full section.section__discourse .translation div.margin-note {
-    display: inline-block; }
-  main.emblem-page .panel--full section.section__discourse .original div.margin-note,
-  main.emblem-page .panel--full section.section__discourse .translation div.margin-note {
-    left: 82vw; }
-  main.emblem-page[data-id='5'] .discourse-p2 div.ab div.ab > div:nth-of-type(7) {
-    margin-top: .75rem; }
-  /* emblems with margin notes */
-  main.emblem-page[data-id='5'],
-  main.emblem-page[data-id='7'],
-  main.emblem-page[data-id='8'],
-  main.emblem-page[data-id='9'],
-  main.emblem-page[data-id='10'],
-  main.emblem-page[data-id='13'],
-  main.emblem-page[data-id='14'],
-  main.emblem-page[data-id='15'],
-  main.emblem-page[data-id='17'],
-  main.emblem-page[data-id='23'],
-  main.emblem-page[data-id='28'],
-  main.emblem-page[data-id='30'],
-  main.emblem-page[data-id='36'],
-  main.emblem-page[data-id='43'],
-  main.emblem-page[data-id='49'],
-  main.emblem-page[data-id='53'] {
-    /* section.section__discourse, 
-		section.section__preface {
-			.edition--facsimile .discourse-p1, 
-			.edition--facsimile .discourse-pagebreak, 
-			.edition--facsimile .discourse-p2 {
-				margin-right: -4rem;
-			}
-		} */ }
-    main.emblem-page[data-id='5'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='5'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='5'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='7'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='7'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='7'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='8'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='8'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='8'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='9'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='9'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='9'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='10'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='10'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='10'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='13'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='13'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='13'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='14'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='14'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='14'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='15'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='15'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='15'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='17'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='17'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='17'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='23'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='23'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='23'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='28'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='28'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='28'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='30'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='30'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='30'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='36'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='36'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='36'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='43'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='43'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='43'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='49'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='49'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='49'] .panel--right section.section__discourse .discourse-p2,
-    main.emblem-page[data-id='53'] .panel--right section.section__discourse .discourse-p1,
-    main.emblem-page[data-id='53'] .panel--right section.section__discourse .discourse-pagebreak,
-    main.emblem-page[data-id='53'] .panel--right section.section__discourse .discourse-p2 {
-      grid-column: 1 / 10; } }
-
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   main.emblem-page section.section__motto div.lang--english > div.title,
   main.emblem-page section.section__motto div.image.la,
@@ -9047,7 +8831,6 @@ main.emblem-page.frontmatter .discourse.la .pb {
   main.emblem-page section.section__epigram .original .verse-epigram,
   main.emblem-page section.section__epigram .translation .verse-epigram {
     font-size: 1.5rem;
-    grid-column: 2 / 12;
     line-height: 2; }
   main.emblem-page section.section__epigram .original .verse-epigram span {
     line-height: 2;
@@ -9056,22 +8839,7 @@ main.emblem-page.frontmatter .discourse.la .pb {
     display: none; }
   main.emblem-page .panel--right section.section__epigram .original .verse-epigram,
   main.emblem-page .panel--right section.section__epigram .translation .verse-epigram {
-    font-size: 1rem;
-    grid-column: 1 / 13;
-    padding: 0 1rem; }
-  main.emblem-page .panel--right section.section__epigram .translation .verse-epigram {
-    padding-left: 2rem; }
-  main.emblem-page .panel--right section.section__epigram .original .lang--german .verse-epigram {
-    grid-column: 1 / 13;
-    margin-left: 0; }
-  main.emblem-page .panel--full section.section__epigram .original .verse-epigram,
-  main.emblem-page .panel--full section.section__epigram .translation .verse-epigram {
-    grid-column: 3 / 13;
-    padding-left: 2rem; }
-  main.emblem-page .panel--full section.section__epigram .original .lang--latin .verse-epigram {
-    padding-left: 0; }
-  main.emblem-page .panel--full section.section__epigram .original .lang--german .verse-epigram {
-    grid-column: 1 / 13; }
+    font-size: 1rem; }
   main.emblem-page section.section__discourse .original div.discourse,
   main.emblem-page section.section__discourse .translation div.discourse {
     grid-column: 1 / 13;
@@ -9428,23 +9196,9 @@ main.emblem-page.frontmatter .discourse.la .pb {
     margin-top: 1.5rem; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  main.emblem-page .panel--right section.section__epigram .original .verse-epigram,
-  main.emblem-page .panel--right section.section__epigram .translation .verse-epigram {
-    grid-column: 4 / 12; }
-  main.emblem-page .panel--right section.section__epigram .original .lang--german .verse-epigram {
-    grid-column: 3 / 12;
-    margin-left: -.5rem; }
   main.emblem-page .panel--right section.section__epigram .original .lang--latin span.v-line,
   main.emblem-page .panel--right section.section__epigram .original .lang--latin span.v-line-indent {
     margin-bottom: -.5rem; }
-  main.emblem-page .panel--full section.section__epigram .original .verse-epigram,
-  main.emblem-page .panel--full section.section__epigram .translation .verse-epigram {
-    grid-column: 4 / 10;
-    padding-left: 0; }
-  main.emblem-page .panel--full section.section__epigram .original .edition--original .verse-epigram {
-    grid-column: 4 / 11; }
-  main.emblem-page .panel--full section.section__epigram .original .lang--german .verse-epigram {
-    grid-column: 3 / 11; }
   main.emblem-page .panel--full section.section__epigram .original .lang--latin span.v-line,
   main.emblem-page .panel--full section.section__epigram .original .lang--latin span.v-line-indent {
     margin-bottom: -.875rem; }
@@ -9466,6 +9220,187 @@ main.emblem-page.frontmatter .discourse.la .pb {
     margin-top: 1.5rem; } }
 
 /*** UNIQUE BREAKPOINTS ***/
+@media screen and (min-width: 320px) and (max-height: 812px) and (orientation: landscape) {
+  main.emblem-page.frontmatter .panel--full section.section__frontispiece .hanging-indent {
+    width: 27rem; }
+  main.emblem-page.frontmatter .panel--full section.section__frontispiece .edition--regularized .hanging-indent {
+    width: 28rem; }
+  main.emblem-page.frontmatter section.section__author-epigram {
+    padding: 1.5rem 2rem; }
+    main.emblem-page.frontmatter section.section__author-epigram h3,
+    main.emblem-page.frontmatter section.section__author-epigram .original .edition--regularized .epigram.la h3.title {
+      font-size: 2rem; }
+    main.emblem-page.frontmatter section.section__author-epigram .original .epigram.la h3.title {
+      text-indent: 0; }
+    main.emblem-page.frontmatter section.section__author-epigram .edition--regularized .verse-epigram-italic span.v-line:nth-of-type(1):first-letter,
+    main.emblem-page.frontmatter section.section__author-epigram .verse-epigram-italic span.v-line:nth-of-type(1):first-letter {
+      font-size: inherit;
+      font-style: normal;
+      padding: 0;
+      vertical-align: baseline; }
+    main.emblem-page.frontmatter section.section__author-epigram .verse-epigram-italic span.v-line:nth-of-type(1):first-letter {
+      font-style: italic; }
+    main.emblem-page.frontmatter section.section__author-epigram .verse-epigram-italic span.v-line-indent:nth-of-type(2) {
+      text-indent: 5.875rem; }
+    main.emblem-page.frontmatter section.section__author-epigram div.margin-note {
+      display: inline-block;
+      left: 85vw; }
+    main.emblem-page.frontmatter section.section__author-epigram .verse-epigram div.margin-note {
+      left: 85vw; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english div.dedication:nth-of-type(1),
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english div.dedication:nth-of-type(2) {
+    grid-column: 1 / 11; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(1),
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.dedication:nth-of-type(2),
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(1),
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.dedication:nth-of-type(2) {
+    padding: 0; }
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--facsimile div.margin-note,
+  main.emblem-page.frontmatter section.section__dedication ._dedication--english.edition--normalized div.margin-note {
+    display: inline-block;
+    left: 86vw; }
+  main.emblem-page.frontmatter .panel--full section.section__dedication ._dedication--latin div.preface.la {
+    font-size: 1.25rem;
+    grid-column: 2 / 12;
+    margin: 0; }
+  main.emblem-page.frontmatter section.section__preface ._preface--english {
+    font-weight: 700;
+    grid-column: 1 / 13;
+    line-height: 1.2; }
+    main.emblem-page.frontmatter section.section__preface ._preface--english .preface {
+      padding: 0; }
+    main.emblem-page.frontmatter section.section__preface ._preface--english .ab {
+      font-weight: normal;
+      margin-top: 3rem;
+      width: 50vw; }
+    main.emblem-page.frontmatter section.section__preface ._preface--english .preface > .ab > .original:nth-of-type(1) {
+      display: none; }
+    main.emblem-page.frontmatter section.section__preface ._preface--english div.margin-note {
+      display: inline-block;
+      left: 80vw;
+      width: 19vw; }
+  main.emblem-page.frontmatter .panel--full section.section__preface ._preface--english .ab {
+    width: 66vw; }
+  main.emblem-page .panel--full .section__music .ata-viz-cmn > svg {
+    grid-column: 2 / 13;
+    margin-left: 1rem; }
+  main.emblem-page .panel--right section.section__discourse div.discourse.la {
+    grid-template-columns: repeat(12, 1fr); }
+  main.emblem-page .panel--right section.section__discourse .discourse-p1,
+  main.emblem-page .panel--right section.section__discourse .discourse-pagebreak,
+  main.emblem-page .panel--right section.section__discourse .discourse-p2 {
+    grid-column: 1 / 13; }
+  main.emblem-page .panel--right section.section__discourse div.original .discourse-p2 {
+    padding-top: 4rem; }
+  main.emblem-page .panel--right section.section__discourse div.margin-note {
+    display: inline-block;
+    left: 80vw;
+    line-height: 1;
+    width: 19vw; }
+  main.emblem-page .panel--right section.section__discourse div.original div.discourse.la div.margin-note {
+    left: 80vw;
+    width: 19vw; }
+  main.emblem-page .panel--full section.section__discourse .original ._discourse--latin .discourse-p1,
+  main.emblem-page .panel--full section.section__discourse .original ._discourse--latin .discourse-p2,
+  main.emblem-page .panel--full section.section__discourse .original ._discourse--latin .discourse-pagebreak,
+  main.emblem-page .panel--full section.section__discourse .original ._discourse--english .discourse-p1,
+  main.emblem-page .panel--full section.section__discourse .original ._discourse--english .discourse-p2,
+  main.emblem-page .panel--full section.section__discourse .original ._discourse--english .discourse-pagebreak,
+  main.emblem-page .panel--full section.section__discourse .translation ._discourse--latin .discourse-p1,
+  main.emblem-page .panel--full section.section__discourse .translation ._discourse--latin .discourse-p2,
+  main.emblem-page .panel--full section.section__discourse .translation ._discourse--latin .discourse-pagebreak,
+  main.emblem-page .panel--full section.section__discourse .translation ._discourse--english .discourse-p1,
+  main.emblem-page .panel--full section.section__discourse .translation ._discourse--english .discourse-p2,
+  main.emblem-page .panel--full section.section__discourse .translation ._discourse--english .discourse-pagebreak {
+    grid-column: 1 / 9; }
+  main.emblem-page .panel--full section.section__discourse .original ._discourse--latin .discourse-p2,
+  main.emblem-page .panel--full section.section__discourse .translation ._discourse--latin .discourse-p2 {
+    padding-top: 4rem; }
+  main.emblem-page .panel--full section.section__discourse .original span.note-mark,
+  main.emblem-page .panel--full section.section__discourse .original div.margin-note,
+  main.emblem-page .panel--full section.section__discourse .translation span.note-mark,
+  main.emblem-page .panel--full section.section__discourse .translation div.margin-note {
+    display: inline-block; }
+  main.emblem-page .panel--full section.section__discourse .original div.margin-note,
+  main.emblem-page .panel--full section.section__discourse .translation div.margin-note {
+    left: 82vw; }
+  main.emblem-page[data-id='5'] .discourse-p2 div.ab div.ab > div:nth-of-type(7) {
+    margin-top: .75rem; }
+  /* emblems with margin notes */
+  main.emblem-page[data-id='5'],
+  main.emblem-page[data-id='7'],
+  main.emblem-page[data-id='8'],
+  main.emblem-page[data-id='9'],
+  main.emblem-page[data-id='10'],
+  main.emblem-page[data-id='13'],
+  main.emblem-page[data-id='14'],
+  main.emblem-page[data-id='15'],
+  main.emblem-page[data-id='17'],
+  main.emblem-page[data-id='23'],
+  main.emblem-page[data-id='28'],
+  main.emblem-page[data-id='30'],
+  main.emblem-page[data-id='36'],
+  main.emblem-page[data-id='43'],
+  main.emblem-page[data-id='49'],
+  main.emblem-page[data-id='53'] {
+    /* section.section__discourse, 
+		section.section__preface {
+			.edition--facsimile .discourse-p1, 
+			.edition--facsimile .discourse-pagebreak, 
+			.edition--facsimile .discourse-p2 {
+				margin-right: -4rem;
+			}
+		} */ }
+    main.emblem-page[data-id='5'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='5'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='5'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='7'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='7'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='7'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='8'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='8'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='8'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='9'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='9'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='9'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='10'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='10'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='10'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='13'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='13'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='13'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='14'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='14'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='14'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='15'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='15'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='15'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='17'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='17'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='17'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='23'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='23'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='23'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='28'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='28'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='28'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='30'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='30'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='30'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='36'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='36'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='36'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='43'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='43'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='43'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='49'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='49'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='49'] .panel--right section.section__discourse .discourse-p2,
+    main.emblem-page[data-id='53'] .panel--right section.section__discourse .discourse-p1,
+    main.emblem-page[data-id='53'] .panel--right section.section__discourse .discourse-pagebreak,
+    main.emblem-page[data-id='53'] .panel--right section.section__discourse .discourse-p2 {
+      grid-column: 1 / 10; } }
+
 @media screen and (min-width: 1025px) and (max-width: 1159px) {
   main.emblem-page.frontmatter section.section__frontispiece {
     padding: 2rem 1rem; }
