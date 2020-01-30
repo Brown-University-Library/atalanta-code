@@ -9455,11 +9455,19 @@ main.emblem-page.frontmatter .discourse.la .pb {
 
 /*** BREAKPOINTS FOR EMBLEMS WITH MARGIN NOTES ***/
 @media screen and (min-width: 1025px) and (max-width: 1030px), screen and (min-width: 1042px) and (max-width: 1054px), screen and (min-width: 1636px) and (max-width: 1646px), screen and (min-width: 1777px) and (max-width: 1783px) {
-  main.emblem-page[data-id='5'] .edition--normalized .discourse-p2 div.ab div.ab > div:nth-of-type(7) {
+  main.emblem-page[data-id='5'] .panel--right .edition--normalized .discourse-p2 div.ab div.ab > div:nth-of-type(7) {
+    margin-top: 1.5rem; } }
+
+@media screen and (min-width: 1025px) and (max-width: 1097px) {
+  main.emblem-page[data-id='5'] .panel--full .edition--normalized .discourse-p2 div.ab div.ab > div:nth-of-type(4) {
     margin-top: 1.5rem; } }
 
 @media screen and (min-width: 1045px) and (max-width: 1066px), screen and (min-width: 1093px) and (max-width: 1115px), screen and (min-width: 1150px) and (max-width: 1179px), screen and (min-width: 1245px) and (max-width: 1342px), screen and (min-width: 1779px) and (max-width: 1824px) {
-  main.emblem-page[data-id='5'] .edition--normalized .discourse-p2 div.ab div.ab > div:nth-of-type(4) {
+  main.emblem-page[data-id='5'] .panel--right .edition--normalized .discourse-p2 div.ab div.ab > div:nth-of-type(4) {
+    margin-top: 1.5rem; } }
+
+@media screen and (min-width: 1350px) and (max-width: 1400px) {
+  main.emblem-page[data-id='5'] .panel--full .edition--normalized .discourse-p2 div.ab div.ab > div:nth-of-type(7) {
     margin-top: 1.5rem; } }
 
 body {
