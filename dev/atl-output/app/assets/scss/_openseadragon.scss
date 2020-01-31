@@ -1,14 +1,6 @@
 @import 'colors';
 @import 'utilities';
 
-/*.my-offset-debug {
-  background-color: red;
-  height: 5px;
-  width: auto;
-  left: 0;
-  z-index: 10000; 
-}*/
-
 #openseadragon-wrapper {
 	background-color: $gray_medium;
 	height: $lessemblemnav-h;
@@ -210,7 +202,7 @@
 	display: none !important; /* important required for openseadragon override */
 }
 
-/***     Breakpoints     ***/
+/*** Breakpoints ***/
 /* small  -  mobile */
 @media screen and (min-width: 320px) and (max-width: 767px) {
 	#tools {
@@ -240,4 +232,19 @@
 /* medium  -  tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 	
+}
+/*** Unique Breakpoints ***/
+@media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
+	#tools > span {
+		padding: 0;
+		padding-left: 30%;
+		width: 100%;
+	}
+	#tools a#zoom-in, 
+	#tools a#zoom-out {
+		width: 30%;
+	}
+	#openseadragon-wrapper {
+		height: calc(100vh - 123px); /* emblem nav and collections drawer */
+	}
 }
