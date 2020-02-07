@@ -344,7 +344,6 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
 
 /* search modal styles */
 .search__modal {
-  /*  background-color: $red_transparent;*/
   background: #dc4928;
   box-sizing: content-box;
   color: #222;
@@ -375,20 +374,25 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     -ms-flex-item-align: end;
     align-self: flex-end;
     background-image: url("../../../assets/icons/icon_X-close.svg");
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 2rem;
     -webkit-filter: invert(100%);
     filter: invert(100%);
     height: 3.125rem;
     margin-top: 1rem;
-    margin-right: 1.625rem;
+    position: absolute;
+    right: 5.625rem;
     width: 3.125rem; }
-  .search__modal button.x-close:hover {
+  .search__modal button.x-close:hover,
+  .search__modal button.x-close:focus {
     -webkit-filter: invert(0%);
     filter: invert(0%);
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s; }
+  .search__modal button.x-close:focus {
+    outline: 1px dotted white; }
   .search__modal .search__bar {
     display: -webkit-box;
     display: -webkit-flex;
@@ -411,6 +415,7 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     height: 5rem;
+    margin-top: 4.125rem;
     width: 80%; }
   .search__modal .search__bar__label,
   .search__modal input#search__bar__field,
@@ -473,6 +478,8 @@ a.a11y_skip-main:focus, a.a11y_skip-main:active {
     -webkit-transition: background-color .2s;
     -o-transition: background-color .2s;
     transition: background-color .2s; }
+  .search__modal button.submit:focus {
+    outline: 2px dotted white; }
   .search__modal button.submit:active {
     background-color: #ba4221; }
 
