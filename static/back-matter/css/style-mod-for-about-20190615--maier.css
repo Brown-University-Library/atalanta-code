@@ -1788,10 +1788,6 @@ input[type=submit] {
     }
 }
 
-#header .logo:focus {
-    outline: 1px dotted white;
-}
-
 #header .logo .light-logo {
     display: none
 }
@@ -1804,12 +1800,16 @@ input[type=submit] {
     color: #333
 }
 
-#header .logo:hover .light-logo,#header .logo:focus .light-logo{
+#header .logo:hover .light-logo,#header .logo>a:focus .light-logo{
     display:block
 }
 
-#header .logo:hover .dark-logo,#header .logo:focus .dark-logo{
+#header .logo:hover .dark-logo,#header .logo>a:focus .dark-logo{
     display:none
+}
+
+#header .logo>a:focus img {
+    outline: 1px dotted #fff;
 }
 
 #header .header-wrap {
@@ -1895,6 +1895,7 @@ input[type=submit] {
 
 @media(min-width:768px) {
     #nav ul {
+        display: -webkit-box;
         display: flex;
         flex-wrap: wrap;
         background: 0 0;
@@ -1912,11 +1913,14 @@ input[type=submit] {
     bottom: -13px;
     background-color: transparent;
     border: none;
+    color: #0f0f0f;
     cursor: pointer;
     padding: 0;
     color: #333;
     display: flex;
+    -webkit-box-align: center;
     align-items: center;
+    -webkit-box-pack: end;
     justify-content: flex-end;
     height: 50px;
     width: 88px
@@ -1927,7 +1931,17 @@ input[type=submit] {
 }
 
 #nav ul li.topnav__search svg .st0 {
-    stroke: #333
+    stroke: #0f0f0f;
+}
+
+#nav ul li.topnav__search button:hover svg .st0, 
+#nav ul li.topnav__search button:focus svg .st0 {
+    stroke: #fff;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+#nav ul li.topnav__search button:focus {
+    outline: 1px dotted #fff;
 }
 
 #nav ul>li {
@@ -1990,8 +2004,22 @@ input[type=submit] {
     }
 }
 
+#nav ul>li>a:focus {
+    outline: 1px dotted #fff !important;
+}
+
 .fixed-header #nav ul li.topnav__search {
     display: none
+}
+
+.fixed-header #nav ul>li>a:focus {
+    outline: 1px dotted #ffae00 !important;
+}
+.fixed-header #nav .logo:hover .light-logo{
+    display: none;
+}
+.fixed-header #nav .logo:hover .bright-logo{
+    display: block;
 }
 
 @media(min-width:768px) {
@@ -2006,14 +2034,26 @@ input[type=submit] {
     max-height: 0;
     overflow-y: hidden;
     background-color: #da4929;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: #222;
+    display: -webkit-box;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
     flex-direction: column;
     margin: 0;
     padding: 0 4rem;
+    /*position: relative;*/
     position: fixed;
     top: 42px;
     width: 100vw;
@@ -2031,6 +2071,7 @@ input[type=submit] {
     -ms-flex-item-align: end;
     align-self: flex-end;
     background-image: url(../images/icon_X-close.svg);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: 2rem;
     -webkit-filter: invert(100%);
@@ -2542,6 +2583,10 @@ input[type=submit] {
 
 .fixed-header #header .logo:hover .light-logo,.fixed-header #header .logo:focus .light-logo{
     display:none
+}
+
+.fixed-header #header .logo > a:focus {
+    outline: 1px dotted #fff !important;
 }
 
 .fixed-header #header .header-wrap:before {
