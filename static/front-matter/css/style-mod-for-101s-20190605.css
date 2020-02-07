@@ -8048,10 +8048,15 @@ html.magnifying>body {
     color: #ba4221
 }
 
-.search-results .results__item h3 a:hover {
+.search-results .results__item h3 a:hover, 
+.search-results .results__item h3 a:focus {
     border-bottom: 5px solid #dc4928;
     color: #dc4928;
     transition: .2s
+}
+
+.search-results .results__item h3 a:focus {
+    outline: 1px dotted #000;
 }
 
 .search-results .results__num {
@@ -8126,11 +8131,16 @@ html.magnifying>body {
     text-align: center
 }
 
-.search-results .results__item--image-terms h3 a:hover {
-    background-color: #dc4928;
+.search-results .results__item--image-terms h3 a:hover, 
+.search-results .results__item--image-terms h3 a:focus {
+    background-color: #dc4928 !important;
     color: rgba(255, 255, 255, .75);
     cursor: pointer;
     transition: .2s
+}
+
+.search-results .results__item--image-terms h3 > a:focus {
+    outline: 2px dotted #000;
 }
 
 .search-results .results__item--image-terms span:nth-of-type(1) {
