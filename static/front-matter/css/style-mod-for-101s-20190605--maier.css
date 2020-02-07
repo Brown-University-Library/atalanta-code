@@ -2806,8 +2806,9 @@ body {
     letter-spacing: .8px
 }
 
-.quick-links li a:hover {
-    color: #dc4929
+.quick-links li a:hover,.quick-links li a:focus{
+    color:#ffae00;
+    text-decoration:underline
 }
 
 @media(min-width:480px) {

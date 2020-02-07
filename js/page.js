@@ -1,9 +1,9 @@
 function pug_attr(t,e,n,f){return!1!==e&&null!=e&&(e||"class"!==t&&"style"!==t)?!0===e?" "+(f?t:t+'="'+t+'"'):("function"==typeof e.toJSON&&(e=e.toJSON()),"string"==typeof e||(e=JSON.stringify(e),n||-1===e.indexOf('"'))?(n&&(e=pug_escape(e))," "+t+'="'+e+'"'):" "+t+"='"+e.replace(/'/g,"&#39;")+"'"):""}
 function pug_escape(e){var a=""+e,t=pug_match_html.exec(a);if(!t)return e;var r,c,n,s="";for(r=t.index,c=0;r<a.length;r++){switch(a.charCodeAt(r)){case 34:n="&quot;";break;case 38:n="&amp;";break;case 60:n="&lt;";break;case 62:n="&gt;";break;default:continue}c!==r&&(s+=a.substring(c,r)),c=r+1,s+=n}return c!==r?s+a.substring(c,r):s}
-var pug_match_html=/["&<>]/;function pageTemplate(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (console, emblems, essaySectionNames, keywords, scholarship, searchTerm, sectionNames, str) {pug_html = pug_html + ("\u003Cdiv class=\"search-results\"\u003E\u003Cp class=\"lead\"\u003ESearch results for \"" + (pug_escape(null == (pug_interp = searchTerm) ? "" : pug_interp)) + "\"\u003C\u002Fp\u003E\u003Cdiv class=\"results\"\u003E" + (pug_escape(null == (pug_interp = console.log('keywords', keywords)) ? "" : pug_interp)) + (pug_escape(null == (pug_interp = console.log('emblems', emblems)) ? "" : pug_interp)) + (pug_escape(null == (pug_interp = console.log('scholarship', scholarship)) ? "" : pug_interp)));
+var pug_match_html=/["&<>]/;function pageTemplate(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (console, emblems, essaySectionNames, keywords, scholarship, searchTerm, section, sectionNames, str) {pug_html = pug_html + "\u003Cdiv class=\"search-results\"\u003E\u003Cp class=\"lead\"\u003ESearch results for \"" + (pug_escape(null == (pug_interp = searchTerm) ? "" : pug_interp)) + "\"\u003C\u002Fp\u003E\u003Cdiv class=\"results\"\u003E\u003C!--= console.log('keywords', keywords)--\u003E\u003C!--= console.log('emblems', emblems)--\u003E\u003C!--= console.log('scholarship', scholarship)--\u003E";
 if ( keywords.length )
 {
-pug_html = pug_html + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003E \u003CEmblem\u003EImages\u003C\u002FEmblem\u003E\u003C\u002Fh2\u003E\u003Cdiv class=\"results__item--image-terms\"\u003E";
+pug_html = pug_html + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003EAtalanta fugiens Images\u003C\u002Fh2\u003E\u003Cdiv class=\"results__item--image-terms\"\u003E";
 // iterate keywords
 ;(function(){
   var $$obj = keywords;
@@ -26,7 +26,7 @@ pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";
 }
 if ( emblems.length ) 
 {
-pug_html = pug_html + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003E\u003Ccite\u003EAtalanta fugiens\u003C\u002Fcite\u003E\u003C\u002Fh2\u003E";
+pug_html = pug_html + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003EAtalanta fugiens Text\u003C\u002Fh2\u003E";
 // iterate emblems
 ;(function(){
   var $$obj = emblems;
@@ -287,7 +287,7 @@ pug_html = pug_html + "\u003C\u002Fdiv\u003E";
 }
 if ( scholarship.length )
 {
-pug_html = pug_html + (pug_escape(null == (pug_interp = console.log("Scholarship", scholarship)) ? "" : pug_interp)) + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003E\u003CScholarly\u003EEssays\u003C\u002FScholarly\u003E\u003C\u002Fh2\u003E";
+pug_html = pug_html + (pug_escape(null == (pug_interp = console.log("Scholarship", scholarship)) ? "" : pug_interp)) + "\u003Cdiv class=\"results__section\"\u003E\u003Ch2\u003EScholarly Essays\u003C\u002Fh2\u003E";
 // iterate scholarship
 ;(function(){
   var $$obj = scholarship;
@@ -304,66 +304,27 @@ pug_html = pug_html + "\u003Cdiv class=\"results__item\"\u003E\u003Ch3\u003E\u00
 if ( sec in essay.contexts )
 {
 pug_html = pug_html + "\u003Ch4\u003E" + (pug_escape(null == (pug_interp = secname) ? "" : pug_interp)) + "\u003C\u002Fh4\u003E\u003Cul\u003E";
-if (( 'subtitle' == sec )) {
-pug_html = pug_html + "\u003Ci\u003E" + (pug_escape(null == (pug_interp = essay.title +':') ? "" : pug_interp)) + "\u003C\u002Fi\u003E";
-}
+if (( 'footnotes' == section )) {
 // iterate essay.contexts[sec]
 ;(function(){
   var $$obj = essay.contexts[sec];
   if ('number' == typeof $$obj.length) {
       for (var pug_index10 = 0, $$l = $$obj.length; pug_index10 < $$l; pug_index10++) {
-        var cxt = $$obj[pug_index10];
-pug_html = pug_html + "\u003Cli\u003E";
-var i = 0
-while (i < cxt.length) {
-str = cxt[i]
-if ( i % 2 )
-{
-pug_html = pug_html + "\u003Cb\u003E" + (pug_escape(null == (pug_interp = str) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
-}
-else
-{
-pug_html = pug_html + (pug_escape(null == (pug_interp = str) ? "" : pug_interp));
-}
-i++
-}
-pug_html = pug_html + "\u003C\u002Fli\u003E";
+        var fn = $$obj[pug_index10];
+pug_html = pug_html + "\u003Cli\u003E \u003C\u002Fli\u003E";
       }
   } else {
     var $$l = 0;
     for (var pug_index10 in $$obj) {
       $$l++;
-      var cxt = $$obj[pug_index10];
-pug_html = pug_html + "\u003Cli\u003E";
-var i = 0
-while (i < cxt.length) {
-str = cxt[i]
-if ( i % 2 )
-{
-pug_html = pug_html + "\u003Cb\u003E" + (pug_escape(null == (pug_interp = str) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
-}
-else
-{
-pug_html = pug_html + (pug_escape(null == (pug_interp = str) ? "" : pug_interp));
-}
-i++
-}
-pug_html = pug_html + "\u003C\u002Fli\u003E";
+      var fn = $$obj[pug_index10];
+pug_html = pug_html + "\u003Cli\u003E \u003C\u002Fli\u003E";
     }
   }
 }).call(this);
 
-pug_html = pug_html + "\u003C\u002Ful\u003E";
 }
-      }
-  } else {
-    var $$l = 0;
-    for (var sec in $$obj) {
-      $$l++;
-      var secname = $$obj[sec];
-if ( sec in essay.contexts )
-{
-pug_html = pug_html + "\u003Ch4\u003E" + (pug_escape(null == (pug_interp = secname) ? "" : pug_interp)) + "\u003C\u002Fh4\u003E\u003Cul\u003E";
+else {
 if (( 'subtitle' == sec )) {
 pug_html = pug_html + "\u003Ci\u003E" + (pug_escape(null == (pug_interp = essay.title +':') ? "" : pug_interp)) + "\u003C\u002Fi\u003E";
 }
@@ -383,7 +344,7 @@ pug_html = pug_html + "\u003Cb\u003E" + (pug_escape(null == (pug_interp = str) ?
 }
 else
 {
-pug_html = pug_html + (pug_escape(null == (pug_interp = str) ? "" : pug_interp));
+pug_html = pug_html + (pug_escape(null == (pug_interp = str.replace('<fn>', '').replace('</fn>','')) ? "" : pug_interp));
 }
 i++
 }
@@ -404,7 +365,7 @@ pug_html = pug_html + "\u003Cb\u003E" + (pug_escape(null == (pug_interp = str) ?
 }
 else
 {
-pug_html = pug_html + (pug_escape(null == (pug_interp = str) ? "" : pug_interp));
+pug_html = pug_html + (pug_escape(null == (pug_interp = str.replace('<fn>', '').replace('</fn>','')) ? "" : pug_interp));
 }
 i++
 }
@@ -413,6 +374,89 @@ pug_html = pug_html + "\u003C\u002Fli\u003E";
   }
 }).call(this);
 
+}
+pug_html = pug_html + "\u003C\u002Ful\u003E";
+}
+      }
+  } else {
+    var $$l = 0;
+    for (var sec in $$obj) {
+      $$l++;
+      var secname = $$obj[sec];
+if ( sec in essay.contexts )
+{
+pug_html = pug_html + "\u003Ch4\u003E" + (pug_escape(null == (pug_interp = secname) ? "" : pug_interp)) + "\u003C\u002Fh4\u003E\u003Cul\u003E";
+if (( 'footnotes' == section )) {
+// iterate essay.contexts[sec]
+;(function(){
+  var $$obj = essay.contexts[sec];
+  if ('number' == typeof $$obj.length) {
+      for (var pug_index12 = 0, $$l = $$obj.length; pug_index12 < $$l; pug_index12++) {
+        var fn = $$obj[pug_index12];
+pug_html = pug_html + "\u003Cli\u003E \u003C\u002Fli\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var pug_index12 in $$obj) {
+      $$l++;
+      var fn = $$obj[pug_index12];
+pug_html = pug_html + "\u003Cli\u003E \u003C\u002Fli\u003E";
+    }
+  }
+}).call(this);
+
+}
+else {
+if (( 'subtitle' == sec )) {
+pug_html = pug_html + "\u003Ci\u003E" + (pug_escape(null == (pug_interp = essay.title +':') ? "" : pug_interp)) + "\u003C\u002Fi\u003E";
+}
+// iterate essay.contexts[sec]
+;(function(){
+  var $$obj = essay.contexts[sec];
+  if ('number' == typeof $$obj.length) {
+      for (var pug_index13 = 0, $$l = $$obj.length; pug_index13 < $$l; pug_index13++) {
+        var cxt = $$obj[pug_index13];
+pug_html = pug_html + "\u003Cli\u003E";
+var i = 0
+while (i < cxt.length) {
+str = cxt[i]
+if ( i % 2 )
+{
+pug_html = pug_html + "\u003Cb\u003E" + (pug_escape(null == (pug_interp = str) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
+}
+else
+{
+pug_html = pug_html + (pug_escape(null == (pug_interp = str.replace('<fn>', '').replace('</fn>','')) ? "" : pug_interp));
+}
+i++
+}
+pug_html = pug_html + "\u003C\u002Fli\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var pug_index13 in $$obj) {
+      $$l++;
+      var cxt = $$obj[pug_index13];
+pug_html = pug_html + "\u003Cli\u003E";
+var i = 0
+while (i < cxt.length) {
+str = cxt[i]
+if ( i % 2 )
+{
+pug_html = pug_html + "\u003Cb\u003E" + (pug_escape(null == (pug_interp = str) ? "" : pug_interp)) + "\u003C\u002Fb\u003E";
+}
+else
+{
+pug_html = pug_html + (pug_escape(null == (pug_interp = str.replace('<fn>', '').replace('</fn>','')) ? "" : pug_interp));
+}
+i++
+}
+pug_html = pug_html + "\u003C\u002Fli\u003E";
+    }
+  }
+}).call(this);
+
+}
 pug_html = pug_html + "\u003C\u002Ful\u003E";
 }
     }
@@ -436,6 +480,27 @@ pug_html = pug_html + "\u003Cdiv class=\"results__item\"\u003E\u003Ch3\u003E\u00
 if ( sec in essay.contexts )
 {
 pug_html = pug_html + "\u003Ch4\u003E" + (pug_escape(null == (pug_interp = secname) ? "" : pug_interp)) + "\u003C\u002Fh4\u003E\u003Cul\u003E";
+if (( 'footnotes' == section )) {
+// iterate essay.contexts[sec]
+;(function(){
+  var $$obj = essay.contexts[sec];
+  if ('number' == typeof $$obj.length) {
+      for (var pug_index15 = 0, $$l = $$obj.length; pug_index15 < $$l; pug_index15++) {
+        var fn = $$obj[pug_index15];
+pug_html = pug_html + "\u003Cli\u003E \u003C\u002Fli\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var pug_index15 in $$obj) {
+      $$l++;
+      var fn = $$obj[pug_index15];
+pug_html = pug_html + "\u003Cli\u003E \u003C\u002Fli\u003E";
+    }
+  }
+}).call(this);
+
+}
+else {
 if (( 'subtitle' == sec )) {
 pug_html = pug_html + "\u003Ci\u003E" + (pug_escape(null == (pug_interp = essay.title +':') ? "" : pug_interp)) + "\u003C\u002Fi\u003E";
 }
@@ -443,8 +508,8 @@ pug_html = pug_html + "\u003Ci\u003E" + (pug_escape(null == (pug_interp = essay.
 ;(function(){
   var $$obj = essay.contexts[sec];
   if ('number' == typeof $$obj.length) {
-      for (var pug_index13 = 0, $$l = $$obj.length; pug_index13 < $$l; pug_index13++) {
-        var cxt = $$obj[pug_index13];
+      for (var pug_index16 = 0, $$l = $$obj.length; pug_index16 < $$l; pug_index16++) {
+        var cxt = $$obj[pug_index16];
 pug_html = pug_html + "\u003Cli\u003E";
 var i = 0
 while (i < cxt.length) {
@@ -455,7 +520,7 @@ pug_html = pug_html + "\u003Cb\u003E" + (pug_escape(null == (pug_interp = str) ?
 }
 else
 {
-pug_html = pug_html + (pug_escape(null == (pug_interp = str) ? "" : pug_interp));
+pug_html = pug_html + (pug_escape(null == (pug_interp = str.replace('<fn>', '').replace('</fn>','')) ? "" : pug_interp));
 }
 i++
 }
@@ -463,9 +528,9 @@ pug_html = pug_html + "\u003C\u002Fli\u003E";
       }
   } else {
     var $$l = 0;
-    for (var pug_index13 in $$obj) {
+    for (var pug_index16 in $$obj) {
       $$l++;
-      var cxt = $$obj[pug_index13];
+      var cxt = $$obj[pug_index16];
 pug_html = pug_html + "\u003Cli\u003E";
 var i = 0
 while (i < cxt.length) {
@@ -476,7 +541,7 @@ pug_html = pug_html + "\u003Cb\u003E" + (pug_escape(null == (pug_interp = str) ?
 }
 else
 {
-pug_html = pug_html + (pug_escape(null == (pug_interp = str) ? "" : pug_interp));
+pug_html = pug_html + (pug_escape(null == (pug_interp = str.replace('<fn>', '').replace('</fn>','')) ? "" : pug_interp));
 }
 i++
 }
@@ -485,6 +550,7 @@ pug_html = pug_html + "\u003C\u002Fli\u003E";
   }
 }).call(this);
 
+}
 pug_html = pug_html + "\u003C\u002Ful\u003E";
 }
       }
@@ -496,6 +562,27 @@ pug_html = pug_html + "\u003C\u002Ful\u003E";
 if ( sec in essay.contexts )
 {
 pug_html = pug_html + "\u003Ch4\u003E" + (pug_escape(null == (pug_interp = secname) ? "" : pug_interp)) + "\u003C\u002Fh4\u003E\u003Cul\u003E";
+if (( 'footnotes' == section )) {
+// iterate essay.contexts[sec]
+;(function(){
+  var $$obj = essay.contexts[sec];
+  if ('number' == typeof $$obj.length) {
+      for (var pug_index17 = 0, $$l = $$obj.length; pug_index17 < $$l; pug_index17++) {
+        var fn = $$obj[pug_index17];
+pug_html = pug_html + "\u003Cli\u003E \u003C\u002Fli\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var pug_index17 in $$obj) {
+      $$l++;
+      var fn = $$obj[pug_index17];
+pug_html = pug_html + "\u003Cli\u003E \u003C\u002Fli\u003E";
+    }
+  }
+}).call(this);
+
+}
+else {
 if (( 'subtitle' == sec )) {
 pug_html = pug_html + "\u003Ci\u003E" + (pug_escape(null == (pug_interp = essay.title +':') ? "" : pug_interp)) + "\u003C\u002Fi\u003E";
 }
@@ -503,8 +590,8 @@ pug_html = pug_html + "\u003Ci\u003E" + (pug_escape(null == (pug_interp = essay.
 ;(function(){
   var $$obj = essay.contexts[sec];
   if ('number' == typeof $$obj.length) {
-      for (var pug_index14 = 0, $$l = $$obj.length; pug_index14 < $$l; pug_index14++) {
-        var cxt = $$obj[pug_index14];
+      for (var pug_index18 = 0, $$l = $$obj.length; pug_index18 < $$l; pug_index18++) {
+        var cxt = $$obj[pug_index18];
 pug_html = pug_html + "\u003Cli\u003E";
 var i = 0
 while (i < cxt.length) {
@@ -515,7 +602,7 @@ pug_html = pug_html + "\u003Cb\u003E" + (pug_escape(null == (pug_interp = str) ?
 }
 else
 {
-pug_html = pug_html + (pug_escape(null == (pug_interp = str) ? "" : pug_interp));
+pug_html = pug_html + (pug_escape(null == (pug_interp = str.replace('<fn>', '').replace('</fn>','')) ? "" : pug_interp));
 }
 i++
 }
@@ -523,9 +610,9 @@ pug_html = pug_html + "\u003C\u002Fli\u003E";
       }
   } else {
     var $$l = 0;
-    for (var pug_index14 in $$obj) {
+    for (var pug_index18 in $$obj) {
       $$l++;
-      var cxt = $$obj[pug_index14];
+      var cxt = $$obj[pug_index18];
 pug_html = pug_html + "\u003Cli\u003E";
 var i = 0
 while (i < cxt.length) {
@@ -536,7 +623,7 @@ pug_html = pug_html + "\u003Cb\u003E" + (pug_escape(null == (pug_interp = str) ?
 }
 else
 {
-pug_html = pug_html + (pug_escape(null == (pug_interp = str) ? "" : pug_interp));
+pug_html = pug_html + (pug_escape(null == (pug_interp = str.replace('<fn>', '').replace('</fn>','')) ? "" : pug_interp));
 }
 i++
 }
@@ -545,6 +632,7 @@ pug_html = pug_html + "\u003C\u002Fli\u003E";
   }
 }).call(this);
 
+}
 pug_html = pug_html + "\u003C\u002Ful\u003E";
 }
     }
@@ -558,4 +646,4 @@ pug_html = pug_html + "\u003C\u002Fdiv\u003E";
 
 pug_html = pug_html + "\u003C\u002Fdiv\u003E";
 }
-pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";}.call(this,"console" in locals_for_with?locals_for_with.console:typeof console!=="undefined"?console:undefined,"emblems" in locals_for_with?locals_for_with.emblems:typeof emblems!=="undefined"?emblems:undefined,"essaySectionNames" in locals_for_with?locals_for_with.essaySectionNames:typeof essaySectionNames!=="undefined"?essaySectionNames:undefined,"keywords" in locals_for_with?locals_for_with.keywords:typeof keywords!=="undefined"?keywords:undefined,"scholarship" in locals_for_with?locals_for_with.scholarship:typeof scholarship!=="undefined"?scholarship:undefined,"searchTerm" in locals_for_with?locals_for_with.searchTerm:typeof searchTerm!=="undefined"?searchTerm:undefined,"sectionNames" in locals_for_with?locals_for_with.sectionNames:typeof sectionNames!=="undefined"?sectionNames:undefined,"str" in locals_for_with?locals_for_with.str:typeof str!=="undefined"?str:undefined));;return pug_html;}
+pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E";}.call(this,"console" in locals_for_with?locals_for_with.console:typeof console!=="undefined"?console:undefined,"emblems" in locals_for_with?locals_for_with.emblems:typeof emblems!=="undefined"?emblems:undefined,"essaySectionNames" in locals_for_with?locals_for_with.essaySectionNames:typeof essaySectionNames!=="undefined"?essaySectionNames:undefined,"keywords" in locals_for_with?locals_for_with.keywords:typeof keywords!=="undefined"?keywords:undefined,"scholarship" in locals_for_with?locals_for_with.scholarship:typeof scholarship!=="undefined"?scholarship:undefined,"searchTerm" in locals_for_with?locals_for_with.searchTerm:typeof searchTerm!=="undefined"?searchTerm:undefined,"section" in locals_for_with?locals_for_with.section:typeof section!=="undefined"?section:undefined,"sectionNames" in locals_for_with?locals_for_with.sectionNames:typeof sectionNames!=="undefined"?sectionNames:undefined,"str" in locals_for_with?locals_for_with.str:typeof str!=="undefined"?str:undefined));;return pug_html;}

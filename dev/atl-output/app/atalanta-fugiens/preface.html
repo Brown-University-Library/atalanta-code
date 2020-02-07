@@ -7,675 +7,1089 @@
     <meta name="author" content="">
 	<title>Furnace and Fugue: Atalanta fugiens (Digital Edition)</title>
 	<link type="text/css" rel="stylesheet" media="screen" href="../assets/css/app.css">
-    <link type="text/css" rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link type="text/css" rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 <!--    <link type="text/css" rel="stylesheet" media="screen" href="../assets/css/styles.css" /> -->
+  <link rel="stylesheet" href="../assets/css/collections.css">
+	<style>
+@media print {
+  header,
+  nav,
+  div#section__facsimile.panel--left,
+  section.facsimile,
+  div#tools,
+  div#basic-waypoint__1,
+  section#basic-waypoint__2 .transport,
+  section#basic-waypoint__2 .pianoroll,
+  div.collections-wrapper,
+  .ui-menu-item,
+  span.pb {
+    display: none !important; }
+  body {
+    padding-top: 3rem; }
+  body div.margin-note {
+    font-family: sans-serif !important;
+    font-style: italic; }
+  body div.margin-note .note-mark {
+    font-style: normal; }
+  section.section__motto div.title {
+    margin-top: 0 !important; }
+  main.emblem-page h1,
+  main.emblem-page h3 {
+    color: black !important;
+    font-family: serif !important; }
+  main.emblem-page .panel--right section.section__motto h1 {
+    font-size: 4rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 0 !important; }
+  main.emblem-page .panel--right section.section__epigram {
+    margin-top: 6rem !important; }
+  section#basic-waypoint__2 {
+    margin-top: 4rem !important; }
+  .discourse-p1 > h3 {
+    margin-top: 7rem !important;
+    margin-bottom: 5rem !important; }
+  span.italic {
+    font-style: italic !important; }
+  span.smallCaps {
+    font-variant: small-caps !important; }
+  .epigram .verse-epigram,
+  .epigram .verse-epigram-italic {
+    font-family: sans-serif !important; } }
+
+@media print {
+  div.translation div.lang--english.edition--normalized {
+    display: grid !important; }
+    div.translation div.lang--english.edition--normalized span.regularized {
+      display: inline-block; }
+    div.translation div.lang--english.edition--normalized span.original,
+    div.translation div.lang--english.edition--normalized span.pb,
+    div.translation div.lang--english.edition--normalized span.del,
+    div.translation div.lang--english.edition--normalized span.subst .del {
+      display: none !important; }
+    div.translation div.lang--english.edition--normalized .discourse-p2 {
+      border-top: 2px solid gray;
+      margin-top: 4rem;
+      padding-top: 4rem; }
+    div.translation div.lang--english.edition--normalized .discourse-p2 h3 {
+      display: none !important; }
+  div.translation div.lang--english._author-epigram--english.edition--normalized span.v-line {
+    line-height: 1.8 !important; }
+  div.translation div.lang--english._dedication--english.edition--normalized .dedication {
+    font-family: sans-serif !important;
+    line-height: 1.8 !important; }
+  div.translation div.lang--english._preface--english.edition--normalized .preface {
+    line-height: 1.8 !important; }
+  div.translation div.lang--english._preface--english.edition--normalized .ab {
+    font-family: sans-serif !important; }
+  div.translation div.lang--english._preface--english.edition--normalized .margin-note {
+    margin-left: 20mm !important; }
+  div.translation div.lang--english._preface--english.edition--normalized .margin-note span.original {
+    display: none; }
+  div.original.is-hidden div.lang--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin.edition--facsimile,
+  div.original.is-hidden div.lang--german.edition--facsimile,
+  div.original.is-hidden div.lang--latin._frontispiece--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._frontispiece--latin.edition--facsimile,
+  div.original.is-hidden div.lang--latin._author-epigram--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._author-epigram--latin.edition--facsimile,
+  div.original.is-hidden div.lang--latin._dedication--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._dedication--latin.edition--facsimile,
+  div.original.is-hidden div.lang--latin._preface--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._preface--latin.edition--facsimile {
+    display: none !important; } }
+
+@media print {
+  div.translation div.lang--english.edition--facsimile {
+    display: grid !important; }
+    div.translation div.lang--english.edition--facsimile span.regularized,
+    div.translation div.lang--english.edition--facsimile span.pb {
+      display: none !important; }
+    div.translation div.lang--english.edition--facsimile span.del .unclear,
+    div.translation div.lang--english.edition--facsimile span.subst .del {
+      display: none !important; }
+    div.translation div.lang--english.edition--facsimile span.subst .add:before {
+      content: "<"; }
+    div.translation div.lang--english.edition--facsimile span.subst .add:after {
+      content: ">"; }
+    div.translation div.lang--english.edition--facsimile span.unclear:before {
+      content: "["; }
+    div.translation div.lang--english.edition--facsimile span.unclear:after {
+      content: "]"; }
+    div.translation div.lang--english.edition--facsimile .discourse-p2 {
+      border-top: 2px solid gray;
+      margin-top: 4rem;
+      padding-top: 4rem; }
+  div.translation div.lang--english._author-epigram--english.edition--facsimile span.v-line {
+    line-height: 1.8 !important; }
+  div.translation div.lang--english._dedication--english.edition--facsimile .dedication {
+    font-family: sans-serif !important;
+    line-height: 1.8 !important; }
+  div.translation div.lang--english._dedication--english.edition--facsimile .add:before {
+    content: "<"; }
+  div.translation div.lang--english._dedication--english.edition--facsimile .add:after {
+    content: ">"; }
+  div.translation div.lang--english._preface--english.edition--facsimile .preface {
+    line-height: 1.8 !important; }
+  div.translation div.lang--english._preface--english.edition--facsimile .ab {
+    font-family: sans-serif !important; }
+  div.translation div.lang--english._preface--english.edition--facsimile .margin-note {
+    margin-left: 20mm !important; }
+  div.original.is-hidden div.lang--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin.edition--facsimile,
+  div.original.is-hidden div.lang--german.edition--facsimile,
+  div.original.is-hidden div.lang--latin._frontispiece--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._frontispiece--latin.edition--facsimile,
+  div.original.is-hidden div.lang--latin._author-epigram--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._author-epigram--latin.edition--facsimile,
+  div.original.is-hidden div.lang--latin._dedication--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._dedication--latin.edition--facsimile,
+  div.original.is-hidden div.lang--latin._preface--latin.edition--regularized,
+  div.original.is-hidden div.lang--latin._preface--latin.edition--facsimile {
+    display: none !important; } }
+
+@media print {
+  div.original div.lang--latin.edition--regularized {
+    display: grid !important; }
+    div.original div.lang--latin.edition--regularized span.original {
+      display: none !important; }
+    div.original div.lang--latin.edition--regularized .discourse-p2 {
+      border-top: 2px solid gray;
+      margin-top: 4rem;
+      padding-top: 4rem; }
+  div.original div.lang--latin._frontispiece--latin.edition--regularized span.italic {
+    font-family: sans-serif !important; }
+  div.original div.lang--latin._frontispiece--latin.edition--regularized .caps {
+    font-variant: small-caps !important; }
+  div.original div.lang--latin._author-epigram--latin.edition--regularized span.v-line,
+  div.original div.lang--latin._author-epigram--latin.edition--regularized span.v-line-indent {
+    line-height: 1.8 !important; }
+  div.original div.lang--latin._author-epigram--latin.edition--regularized span.v-line-indent {
+    margin-left: 20mm !important; }
+  div.original div.lang--latin._dedication--latin.edition--regularized span.regularized {
+    display: inline !important; }
+  div.original div.lang--latin._dedication--latin.edition--regularized .preface.la {
+    font-family: sans-serif !important;
+    line-height: 1.8 !important; }
+  div.original div.lang--latin._dedication--latin.edition--regularized .caps {
+    font-variant: small-caps !important; }
+  div.original div.lang--latin._dedication--latin.edition--regularized .caps-large {
+    text-transform: uppercase !important; }
+  div.original div.lang--latin._dedication--latin.edition--regularized div.page:nth-of-type(2),
+  div.original div.lang--latin._dedication--latin.edition--regularized div.page:nth-of-type(3) {
+    border-top: 2px solid gray;
+    margin-top: 3rem;
+    padding-top: 4rem; }
+  div.original div.lang--latin._dedication--latin.edition--regularized div.page div:nth-child(3) {
+    font-style: italic !important; }
+  div.original div.lang--latin._preface--latin.edition--regularized div.page .ab.italic {
+    font-family: sans-serif !important;
+    font-style: normal !important;
+    line-height: 1.8 !important; }
+  div.original div.lang--latin._preface--latin.edition--regularized div.page .ab.italic span.roman {
+    font-style: italic !important; }
+  div.original div.lang--latin._preface--latin.edition--regularized .page:nth-of-type(2),
+  div.original div.lang--latin._preface--latin.edition--regularized .page:nth-of-type(3),
+  div.original div.lang--latin._preface--latin.edition--regularized .page:nth-of-type(4),
+  div.original div.lang--latin._preface--latin.edition--regularized .page:nth-of-type(5) {
+    border-top: 2px solid gray;
+    margin-top: 4rem;
+    padding-top: 3rem; }
+  div.translation.is-hidden div.lang--english.edition--normalized,
+  div.translation.is-hidden div.lang--english.edition--facsimile,
+  div.original div.lang--german.edition--facsimile.is-hidden,
+  div.translation.is-hidden div.lang--english._frontispiece--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._frontispiece--english.edition--facsimile,
+  div.translation.is-hidden div.lang--english._author-epigram--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._author-epigram--english.edition--facsimile,
+  div.translation.is-hidden div.lang--english._dedication--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._dedication--english.edition--facsimile,
+  div.translation.is-hidden div.lang--english._preface--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._preface--english.edition--facsimile {
+    display: none !important; }
+    div.translation.is-hidden div.lang--english.edition--normalized span.original,
+    div.translation.is-hidden div.lang--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english.edition--facsimile span.original,
+    div.translation.is-hidden div.lang--english.edition--facsimile span.pb,
+    div.original div.lang--german.edition--facsimile.is-hidden span.original,
+    div.original div.lang--german.edition--facsimile.is-hidden span.pb,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--normalized span.original,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--facsimile span.original,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--facsimile span.pb,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--normalized span.original,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--facsimile span.original,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--facsimile span.pb,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--normalized span.original,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--facsimile span.original,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--facsimile span.pb,
+    div.translation.is-hidden div.lang--english._preface--english.edition--normalized span.original,
+    div.translation.is-hidden div.lang--english._preface--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._preface--english.edition--facsimile span.original,
+    div.translation.is-hidden div.lang--english._preface--english.edition--facsimile span.pb {
+      display: none !important; } }
+
+@media print {
+  div.original div.lang--latin.edition--original {
+    display: grid !important; }
+    div.original div.lang--latin.edition--original span.regularized {
+      display: none !important; }
+    div.original div.lang--latin.edition--original .discourse-p2 {
+      border-top: 2px solid gray;
+      margin-top: 4rem;
+      padding-top: 4rem; }
+  div.original div.lang--latin._frontispiece--latin.edition--original span.title-1,
+  div.original div.lang--latin._frontispiece--latin.edition--original .caps-italic {
+    font-family: sans-serif !important;
+    font-style: italic !important;
+    text-transform: uppercase !important; }
+  div.original div.lang--latin._frontispiece--latin.edition--original span.title-1,
+  div.original div.lang--latin._frontispiece--latin.edition--original span.title-2 {
+    font-family: sans-serif !important;
+    font-style: italic !important; }
+  div.original div.lang--latin._frontispiece--latin.edition--original span.title-3,
+  div.original div.lang--latin._frontispiece--latin.edition--original span.title-4 {
+    text-transform: uppercase !important; }
+  div.original div.lang--latin._frontispiece--latin.edition--original span.italic {
+    font-family: sans-serif !important; }
+  div.original div.lang--latin._frontispiece--latin.edition--original .caps {
+    font-variant: small-caps !important; }
+  div.original div.lang--latin._author-epigram--latin.edition--original .verse-epigram-italic {
+    font-style: italic !important; }
+  div.original div.lang--latin._author-epigram--latin.edition--original span.v-line,
+  div.original div.lang--latin._author-epigram--latin.edition--original span.v-line-indent {
+    line-height: 1.8 !important; }
+  div.original div.lang--latin._author-epigram--latin.edition--original span.v-line-indent {
+    text-indent: 20mm !important; }
+  div.original div.lang--latin._dedication--latin.edition--original .preface.la {
+    font-family: sans-serif !important;
+    line-height: 1.8 !important; }
+  div.original div.lang--latin._dedication--latin.edition--original .caps {
+    font-variant: small-caps !important; }
+  div.original div.lang--latin._dedication--latin.edition--original .caps-large {
+    text-transform: uppercase !important; }
+  div.original div.lang--latin._dedication--latin.edition--original div.page:nth-of-type(2),
+  div.original div.lang--latin._dedication--latin.edition--original div.page:nth-of-type(3) {
+    border-top: 2px solid gray;
+    margin-top: 3rem;
+    padding-top: 4rem; }
+  div.original div.lang--latin._dedication--latin.edition--original div.page div:nth-child(3) {
+    font-style: italic !important; }
+  div.original div.lang--latin._preface--latin.edition--original div.page .ab.italic {
+    font-family: sans-serif !important;
+    font-style: italic !important;
+    line-height: 1.8 !important; }
+  div.original div.lang--latin._preface--latin.edition--original div.page .ab.italic span.roman {
+    font-family: 'GTSectraDisplayBold', serif !important;
+    font-style: normal !important; }
+  div.original div.lang--latin._preface--latin.edition--original .page:nth-of-type(2),
+  div.original div.lang--latin._preface--latin.edition--original .page:nth-of-type(3),
+  div.original div.lang--latin._preface--latin.edition--original .page:nth-of-type(4),
+  div.original div.lang--latin._preface--latin.edition--original .page:nth-of-type(5) {
+    border-top: 2px solid gray;
+    margin-top: 4rem;
+    padding-top: 3rem; }
+  div.translation.is-hidden div.lang--english.edition--normalized,
+  div.translation.is-hidden div.lang--english.edition--facsimile,
+  div.original div.lang--german.edition--facsimile.is-hidden,
+  div.translation.is-hidden div.lang--english._frontispiece--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._frontispiece--english.edition--facsimile,
+  div.translation.is-hidden div.lang--english._author-epigram--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._author-epigram--english.edition--facsimile,
+  div.translation.is-hidden div.lang--english._dedication--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._dedication--english.edition--facsimile,
+  div.translation.is-hidden div.lang--english._preface--english.edition--normalized,
+  div.translation.is-hidden div.lang--english._preface--english.edition--facsimile {
+    display: none !important; }
+    div.translation.is-hidden div.lang--english.edition--normalized span.regularized,
+    div.translation.is-hidden div.lang--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english.edition--facsimile span.regularized,
+    div.translation.is-hidden div.lang--english.edition--facsimile span.pb,
+    div.original div.lang--german.edition--facsimile.is-hidden span.regularized,
+    div.original div.lang--german.edition--facsimile.is-hidden span.pb,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--normalized span.regularized,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--facsimile span.regularized,
+    div.translation.is-hidden div.lang--english._frontispiece--english.edition--facsimile span.pb,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--normalized span.regularized,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--facsimile span.regularized,
+    div.translation.is-hidden div.lang--english._author-epigram--english.edition--facsimile span.pb,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--normalized span.regularized,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--facsimile span.regularized,
+    div.translation.is-hidden div.lang--english._dedication--english.edition--facsimile span.pb,
+    div.translation.is-hidden div.lang--english._preface--english.edition--normalized span.regularized,
+    div.translation.is-hidden div.lang--english._preface--english.edition--normalized span.pb,
+    div.translation.is-hidden div.lang--english._preface--english.edition--facsimile span.regularized,
+    div.translation.is-hidden div.lang--english._preface--english.edition--facsimile span.pb {
+      display: none !important; } }
+
+@media print {
+  div.original div.lang--german.edition--facsimile {
+    display: grid !important; }
+  div.translation.is-hidden div.lang--english.edition--normalized,
+  div.translation.is-hidden div.lang--english.edition--facsimile,
+  div.original div.lang--latin.edition--regularized.is-hidden,
+  div.original div.lang--latin.edition--facsimile.is-hidden {
+    /* div.original div.lang--latin._discourse--latin .discourse.la { */
+    display: none !important; }
+    div.translation.is-hidden div.lang--english.edition--normalized span.regularized,
+    div.translation.is-hidden div.lang--english.edition--facsimile span.regularized,
+    div.original div.lang--latin.edition--regularized.is-hidden span.regularized,
+    div.original div.lang--latin.edition--facsimile.is-hidden span.regularized {
+      display: none !important; }
+  /* div.original div.lang--latin._discourse--latin .discourse.la:before {
+		content:"unavailable";
+	} */ }
+
+	</style>
 </head>
-<body class="emblem-body">
-<!-- GLOBAL NAVIGATION -->
-	<header data-page-type="digital edition">
-		<a class="a11y_skip-main" href="#emblem-data">Skip to main content</a>
-        <div class="_topnav" data-nav="digital edition">
-			<nav class="topnav" aria-label="Main">
-				<button class="topnav__hamburger--closed" aria-hidden="true" aria-label="Mobile menu"></button>
-				<div class="topnav-wrapper">
-					<div class="topnav__logo">
-						<a aria-label="Return to Furnace and Fugue home" href="../index.html"></a>
-					</div>
-					<div class="topnav__content">
-						<ul>
-							<li><a href="../atalanta-fugiens">Digital Edition</a></li>
-							<li><a href="../atalanta-essays/essays">Essays</a></li>
-							<li><a href="../search/image-search.html">Images</a></li>
-							<li><a href="../search">Contents</a></li>
-							<li class="topnav__search">
-								<button class="topnav__search--closed" aria-label="Search">
-									<span class="topnav__search-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 960 560" xml:space="preserve"><style type="text/css">.st0{fill:none;stroke:#fff; stroke-width:20;stroke-miterlimit:10;}</style><g id="handle"><g><path class="st0" d="M537.6,337.5l97,97L537.6,337.5z"/></g></g><g id="glass"><g><path class="st0" d="M480,153c33.9,0,65.8,13.2,89.8,37.2S607,246.1,607,280s-13.2,65.8-37.2,89.8S513.9,407,480,407s-65.8-13.2-89.8-37.2
-									S353,313.9,353,280s13.2-65.8,37.2-89.8S446.1,153,480,153 M480,143c-75.7,0-137,61.3-137,137s61.3,137,137,137s137-61.3,137-137
-									S555.7,143,480,143L480,143z"/></g></g></svg></span>
-									<span class="topnav__search-label">Search</span>
-								</button>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-			<div class="search__modal" aria-hidden="true">
-			    <form id="ataSearch" class="search__bar">
-			        <label class="label search__bar__label" for="search__bar__field">Enter your search below</label>
-			        <input type="text" id="search__bar__field" aria-label="Search the digital edition, scholarly essays or emblem images" />
-			        <button class="submit" type="submit">Search</button>
-			    </form>
-			    <button class="x-close" aria-label="Close search modal"></button>
-			</div>
-        </div>
-	</header>
-<!-- EMBLEM PAGE-->
-	<main id="emblem-data" class="emblem-page frontmatter" data-id="4" data-page="">
-    <!-- EMBLEM NAVIGATION -->
-        <nav class="subnav-v3" aria-label="Digital Edition">
-            <form action="#">
-                <fieldset>
-                    <label for="layout">Select a Layout</label>
-                    <select name="layout" id="layout">
-                        <option selected="selected" class="dropdown--layout" data-layout="active" value="compare">Comparative View</option>
-                        <option class="dropdown--layout" data-layout="inactive" value="digital-edition">Digital Edition</option>
-                        <option class="dropdown--layout" data-layout="inactive" value="zooming-image">Original</option>
-                    </select>
-                </fieldset>
-            </form>
-            <form action="#">
-                <fieldset>
-                    <label for="language">Select a Language</label>
-                    <select name="language" id="language">
-                        <option class="dropdown--language" data-language="inactive" value="english_original">Original English</option>
-                        <option  selected="selected" class="dropdown--language" data-language="active" value="english_modern">Modernized English</option>
-                        <option class="dropdown--language" data-language="inactive" value="latin_original">Original Latin</option>
-                        <option class="dropdown--language" data-language="inactive" value="latin_normal">Modernized Latin</option>
-                    </select>
-                </fieldset>
-            </form>
-        </nav>
-        <nav class="digital-edition-nav de-nav--closed" aria-hidden="true">
-			<div class="owl-carousel">
-				<div>
-					<a href="../atalanta-fugiens/frontispiece.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem00.320.jpg" alt="Frontispiece page thumbnail" /></div>
-						<div class="thumbnail__label">Frontispiece</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/author-epigram.html">
-						<div class="thumbnail__img thumbnail__img--frontmatter"><img src="../assets/img/default/author-epigram.320.jpg" alt="Author's Epigram page thumbnail" /></div>
-						<div class="thumbnail__label">Author's Epigram</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/dedication.html">
-						<div class="thumbnail__img thumbnail__img--frontmatter"><img src="../assets/img/default/dedication.320.jpg" alt="Dedication page thumbnail" /></div>
-						<div class="thumbnail__label">Dedication</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/preface.html">
-						<div class="thumbnail__img thumbnail__img--frontmatter"><img src="../assets/img/default/preface.320.jpg" alt="Preface page thumbnail" /></div>
-						<div class="thumbnail__label">Preface</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem01.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem01.320.jpg" alt="Emblem 1 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 1</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem02.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem02.320.jpg" alt="Emblem 2 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 2</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem03.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem03.320.jpg" alt="Emblem 3 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 3</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem04.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem04.320.jpg" alt="Emblem 4 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 4</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem05.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem05.320.jpg" alt="Emblem 5 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 5</div>
-					</a>
-				</div>
-				<div >
-					<a href="../atalanta-fugiens/emblem06.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem06.320.jpg" alt="Emblem 6 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 6</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem07.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem07.320.jpg" alt="Emblem 7 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 7</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem08.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem08.320.jpg" alt="Emblem 8 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 8</div>
-					</a>
-				</div>
-				<div >
-					<a href="../atalanta-fugiens/emblem09.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem09.320.jpg" alt="Emblem 9 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 9</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem10.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem10.320.jpg" alt="Emblem 10 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 10</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem11.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem11.320.jpg" alt="Emblem 11 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 11</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem12.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem12.320.jpg" alt="Emblem 12 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 12</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem13.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem13.320.jpg" alt="Emblem 13 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 13</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem14.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem14.320.jpg" alt="Emblem 14 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 14</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem15.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem15.320.jpg" alt="Emblem 15 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 15</div>
-					</a>
-				</div>
-				<div >
-					<a href="../atalanta-fugiens/emblem16.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem16.320.jpg" alt="Emblem 16 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 16</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem17.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem17.320.jpg" alt="Emblem 17 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 17</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem18.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem18.320.jpg" alt="Emblem 18 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 18</div>
-					</a>
-				</div>
-				<div >
-					<a href="../atalanta-fugiens/emblem19.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem19.320.jpg" alt="Emblem 19 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 19</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem20.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem20.320.jpg" alt="Emblem 20 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 20</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem21.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem21.320.jpg" alt="Emblem 21 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 21</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem22.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem22.320.jpg" alt="Emblem 22 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 22</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem23.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem23.320.jpg" alt="Emblem 23 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 23</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem24.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem24.320.jpg" alt="Emblem 24 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 24</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem25.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem25.320.jpg" alt="Emblem 25 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 25</div>
-					</a>
-				</div>
-				<div >
-					<a href="../atalanta-fugiens/emblem26.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem26.320.jpg" alt="Emblem 26 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 26</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem27.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem27.320.jpg" alt="Emblem 27 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 27</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem28.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem28.320.jpg" alt="Emblem 28 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 28</div>
-					</a>
-				</div>
-				<div >
-					<a href="../atalanta-fugiens/emblem29.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem29.320.jpg" alt="Emblem 29 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 29</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem30.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem30.320.jpg" alt="Emblem 30 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 30</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem31.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem31.320.jpg" alt="Emblem 31 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 31</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem32.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem32.320.jpg" alt="Emblem 32 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 32</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem33.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem33.320.jpg" alt="Emblem 33 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 33</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem34.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem34.320.jpg" alt="Emblem 34 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 34</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem35.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem35.320.jpg" alt="Emblem 35 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 35</div>
-					</a>
-				</div>
-				<div >
-					<a href="../atalanta-fugiens/emblem36.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem36.320.jpg" alt="Emblem 36 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 36</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem37.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem37.320.jpg" alt="Emblem 37 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 37</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem38.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem38.320.jpg" alt="Emblem 38 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 38</div>
-					</a>
-				</div>
-				<div >
-					<a href="../atalanta-fugiens/emblem39.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem39.320.jpg" alt="Emblem 39 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 39</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem40.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem40.320.jpg" alt="Emblem 40 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 40</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem41.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem41.320.jpg" alt="Emblem 41 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 41</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem42.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem42.320.jpg" alt="Emblem 42 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 42</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem43.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem43.320.jpg" alt="Emblem 43 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 43</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem44.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem44.320.jpg" alt="Emblem 44 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 44</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem45.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem45.320.jpg" alt="Emblem 45 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 45</div>
-					</a>
-				</div>
-				<div >
-					<a href="../atalanta-fugiens/emblem46.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem46.320.jpg" alt="Emblem 46 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 46</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem47.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem47.320.jpg" alt="Emblem 47 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 47</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem48.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem48.320.jpg" alt="Emblem 48 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 48</div>
-					</a>
-				</div>
-				<div >
-					<a href="../atalanta-fugiens/emblem49.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem49.320.jpg" alt="Emblem 49 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 49</div>
-					</a>
-				</div>
-				<div>
-					<a href="../atalanta-fugiens/emblem50.html">
-						<div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem50.320.jpg" alt="Emblem 50 image thumbnail" /></div>
-						<div class="thumbnail__label">Emblem 50</div>
-					</a>
-				</div>
-			</div>
-			<button class="thumbnail-trigger"><span><span class="thumbnail-trigger__label">Emblem</span><span class="thumbnail-trigger__icon"></span></span></button>
-		</nav>
-<!-- EMBLEM GRID -->
-		<!-- Facsimile -->
-		<div aria-hidden="true" class="section__facsimile panel--left">
-			<div class="facsimile--full grid--half">
-				<div class="_facsimile">
-					<!-- https://openseadragon.github.io/docs/ -->
-					<section class="facsimile">
-						<div id="openseadragon-wrapper">
-							<div id="tools">
-								<span>
-									<a id="next" href="#next" title="Next" style="position: relative"><svg id="icon_arrow-right-lineart" data-name="icon_arrow-right-lineart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.6 250.2" transform="scale(1)" transform-origin="0 0"><title>export_icon_arrow-right-lineart</title><polyline points="1.8 248.5 125.1 125.1 1.8 1.8" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="5"/></svg><span>Next</span></a>
-									<a id="previous" href="#previous" title="Previous" style="position: relative"><svg id="icon_arrow-left-lineart" data-name="icon_arrow-left-lineart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.6 250.2" transform="scale(1)" transform-origin="0 0"><title>export_icon_arrow-left-lineart</title><polyline points="126.9 1.8 3.5 125.1 126.9 248.5" fill="none" stroke="#000" stroke-miterlimit="50" stroke-width="5"/></svg><span>Previous</span></a>
-									<a id="zoom-in" href="#zoom-in" title="Zoom In" style="position: relative"><svg id="icon_zoom-in-lineart" data-name="icon_zoom-in-lineart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.1 299.9" transform="scale(.6)" transform-origin="50% 80%"><title>icon_magnifying-glass_zoom-in</title><g id="handle"><path d="M537.6,337.5l97,97Z" transform="translate(-343 -143)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="24"/></g><g id="glass"><path d="M480,153a127,127,0,1,1-89.8,37.2A126.2,126.2,0,0,1,480,153m0-10A137,137,0,1,0,617,280,137,137,0,0,0,480,143Z" transform="translate(-343 -143)"/></g><g id="symbol"><path d="M480,337.5v-115M422.5,280h115" transform="translate(-343 -143)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="12"/></g></svg><span>Zoom In</span></a>
-									<a id="zoom-out" href="#zoom-out" title="Zoom Out" style="position: relative"><svg id="icon_zoom-out-lineart" data-name="icon_zoom-out-lineart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300.1 299.9" transform="scale(.6)" transform-origin="50% 80%"><title>icon_magnifying-glass_zoom-out</title><g id="handle"><path d="M537.6,337.5l97,97Z" transform="translate(-343 -143)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="24"/></g><g id="glass"><path d="M480,154a126,126,0,1,1-89.1,36.9A125.2,125.2,0,0,1,480,154m0-11A137,137,0,1,0,617,280,137,137,0,0,0,480,143Z" transform="translate(-343 -143)"/></g><g id="symbol"><line x1="79.5" y1="137" x2="194.5" y2="137" fill="none" stroke="#000" stroke-miterlimit="100" stroke-width="10"/></g></svg><span>Zoom Out</span></a>
-					<!-- 				<a id="home" href="#home" title="Go home" style="display: inline-block; position: relative;">Home</a> -->
-					<!-- 				<a id="home" href="#home" title="Home" style="display: inline-block; position: relative">Reset</a> -->
-					<!-- 				<a id="full-page" href="#full-page" title="Full Page" style="display: inline-block; position: relative">Full Page</a> -->
-								</span>
-							</div>
-						</div>
-					</section>
-				</div>
-			</div>
-		</div>
-		<div class="emblem panel--right">
-			<section class="section__preface grid--full">
-				<div class="translation">
-					<div class="lang--english _preface--english edition--normalized" lang="en-US">
-						<div class="preface">
-                        
-	                        The <span class="original">Præface</span><span class="regularized">Preface</span> to the Reader.         
-	                        Candid Reader!
-	                        <div class="ab">
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="indent">It is a truth <span class="original">denyd</span><span class="regularized">denied</span> by none that man in his composition</span>
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">repræsents</span><span class="regularized">represents</span> a compendium of the universe, and is destinated to live three kinds
-		                        <span class="original"><br></span><span class="regularized"> </span>of life, namely a vegetable, in his mothers <span class="original">wombe</span><span class="regularized">womb</span>, where indeed <span class="original">hee</span><span class="regularized">he</span> <span class="original">growes</span><span class="regularized">grows</span> <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>and is <span class="original">encreased</span><span class="regularized">increased</span> like a plant; a sensible, <span class="original">towitt</span><span class="regularized">to wit</span> in this world, where for the
-		                        <span class="original"><br></span><span class="regularized"> </span>most part <span class="original">hee</span><span class="regularized">he</span> is led by the Senses, as all other <span class="original">animalls</span><span class="regularized">animals</span>, from which <span class="original">hee</span><span class="regularized">he</span> <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>differs, in beginning to exercise the understanding, though imperfectly; and
-		                        <span class="original"><br></span><span class="regularized"> </span>lastly an intelligible, in the other world with God, and the Intelligences,
-		                        <span class="original"><br></span><span class="regularized"> </span>or good <span class="original">Angells</span><span class="regularized">Angels</span> <span class="original">assistent</span><span class="regularized">assistant</span> to him; in this life, the nearer a man comes to the
-		                        <span class="original"><br></span><span class="regularized"> </span>divine nature, the more <span class="original">doth</span><span class="regularized">does</span> <span class="original">hee</span><span class="regularized">he</span> <span class="original">rejoyce</span><span class="regularized">rejoice</span> and is delighted in searching out <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>things <span class="original">subtill</span><span class="regularized">subtle</span> <span class="original">wonderfull</span><span class="regularized">wonderful</span> and rare, by the understanding: and on the contrary,
-		                        <span class="original"><br></span><span class="regularized"> </span>the more a man declines and degenerates to a <span class="original">bestiall</span><span class="regularized">bestial</span> kind, the <span class="original">lesse</span><span class="regularized">less</span> is <span class="original">hee</span><span class="regularized">he</span> <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>affected with them, and is bound to a more <span class="original">corporeall</span><span class="regularized">corporeal</span> sense.<span class="note-mark">*</span>
+<body class="emblem-body bul">
+    <div id="wrapper">
+        <header data-page-type="digital edition"><a class="a11y_skip-main" href="#emblem-data">Skip to main content</a>
+            <div class="_topnav" data-nav="digital edition">
+                <nav class="topnav" aria-label="Main">
+                    <button class="topnav__hamburger--closed" aria-hidden="true" aria-label="Mobile menu"></button>
+                    <div class="topnav-wrapper">
+                        <div class="topnav__logo">
+                            <a aria-label="Return to Furnace and Fugue home" href="/"></a>
+                        </div>
+                        <div class="topnav__content">
+                            <ul>
+                                <li>
+                                    <a href="../atalanta-fugiens/">Digital Edition</a>
+                                </li>
+                                <li>
+                                    <a href="../essays/">Essays</a>
+                                </li>
+                                <li>
+                                    <a href="../search/image-search.html">Images</a>
+                                </li>
+                                <li>
+                                    <a href="../search/">Contents</a>
+                                </li>
+                                <li class="topnav__search">
+                                    <button class="topnav__search--closed">
+                                        <span class="topnav__search-icon">
+<svg version="1.1" x="0px" y="0px" viewBox="0 0 960 560" xml:space="preserve">
+<style type="text/css">.st0{fill:none;stroke:#fff; stroke-width:20;stroke-miterlimit:10;}</style>
+<g id="handle">
+<g>
+<path class="st0" d="M537.6,337.5l97,97L537.6,337.5z"></path>
+</g>
+</g>
+<g id="glass">
+<g>
+<path class="st0" d="M480,153c33.9,0,65.8,13.2,89.8,37.2S607,246.1,607,280s-13.2,65.8-37.2,89.8S513.9,407,480,407s-65.8-13.2-89.8-37.2 S353,313.9,353,280s13.2-65.8,37.2-89.8S446.1,153,480,153 M480,143c-75.7,0-137,61.3-137,137s61.3,137,137,137s137-61.3,137-137 S555.7,143,480,143L480,143z"></path>
+</g>
+</g>
+</svg>
+</span>
+                                        <span class="topnav__search-label">Search</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="search__modal" aria-hidden="true">
+                    <button class="x-close" aria-label="Close search modal"></button>
+                    <form class="search__bar" id="ataSearch">
+                        <label class="label search__bar__label" for="search__bar__field">Enter your search below</label>
+                        <input type="text" aria-label="Search the digital edition, scholarly essays or emblem images" id="search__bar__field">
+                        <button class="submit" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <main id="emblem-data" class="emblem-page frontmatter" data-id="4" data-page="">
+            <nav class="subnav-v3" aria-label="Digital Edition">
+                <form action="#">
+                    <fieldset>
+                        <label for="layout">Select a Layout</label>
+                        <select name="layout" id="layout">
+                            <option selected class="dropdown--layout" data-layout="active" value="compare">Comparative View</option>
+                            <option class="dropdown--layout" data-layout="inactive" value="digital-edition">Digital Edition</option>
+                            <option class="dropdown--layout" data-layout="inactive" value="zooming-image">Original</option>
+                        </select>
+                    </fieldset>
+                </form>
+                <form action="#">
+                    <fieldset>
+                        <label for="language">Select a Language</label>
+                        <select name="language" id="language">
+                            <option class="dropdown--language" data-language="inactive" value="english_original">Diplomatic English</option>
+                            <option selected class="dropdown--language" data-language="active" value="english_modern">Normalized English</option>
+                            <option class="dropdown--language" data-language="inactive" value="latin_original">Diplomatic Latin</option>
+                            <option class="dropdown--language" data-language="inactive" value="latin_normal">Normalized Latin</option>
+                        </select>
+                    </fieldset>
+                </form>
+            </nav>
+            <nav class="digital-edition-nav de-nav--closed" aria-hidden="true">
+                <div class="owl-carousel">
+                    <div>
+                        <a href="../atalanta-fugiens/frontispiece.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem00.320.jpg" alt="Frontispiece page thumbnail"></div>
+                            <div class="thumbnail__label">Frontispiece</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/author-epigram.html">
+                            <div class="thumbnail__img thumbnail__img--frontmatter"><img src="../assets/img/default/author-epigram.320.jpg" alt="Author's Epigram page thumbnail"></div>
+                            <div class="thumbnail__label">Author's Epigram</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/dedication.html">
+                            <div class="thumbnail__img thumbnail__img--frontmatter"><img src="../assets/img/default/dedication.320.jpg" alt="Dedication page thumbnail"></div>
+                            <div class="thumbnail__label">Dedication</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/preface.html">
+                            <div class="thumbnail__img thumbnail__img--frontmatter"><img src="../assets/img/default/preface.320.jpg" alt="Preface page thumbnail"></div>
+                            <div class="thumbnail__label">Preface</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem01.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem01.320.jpg" alt="Emblem 1 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 1</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem02.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem02.320.jpg" alt="Emblem 2 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 2</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem03.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem03.320.jpg" alt="Emblem 3 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 3</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem04.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem04.320.jpg" alt="Emblem 4 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 4</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem05.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem05.320.jpg" alt="Emblem 5 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 5</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem06.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem06.320.jpg" alt="Emblem 6 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 6</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem07.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem07.320.jpg" alt="Emblem 7 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 7</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem08.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem08.320.jpg" alt="Emblem 8 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 8</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem09.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem09.320.jpg" alt="Emblem 9 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 9</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem10.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem10.320.jpg" alt="Emblem 10 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 10</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem11.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem11.320.jpg" alt="Emblem 11 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 11</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem12.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem12.320.jpg" alt="Emblem 12 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 12</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem13.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem13.320.jpg" alt="Emblem 13 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 13</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem14.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem14.320.jpg" alt="Emblem 14 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 14</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem15.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem15.320.jpg" alt="Emblem 15 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 15</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem16.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem16.320.jpg" alt="Emblem 16 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 16</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem17.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem17.320.jpg" alt="Emblem 17 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 17</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem18.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem18.320.jpg" alt="Emblem 18 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 18</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem19.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem19.320.jpg" alt="Emblem 19 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 19</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem20.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem20.320.jpg" alt="Emblem 20 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 20</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem21.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem21.320.jpg" alt="Emblem 21 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 21</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem22.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem22.320.jpg" alt="Emblem 22 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 22</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem23.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem23.320.jpg" alt="Emblem 23 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 23</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem24.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem24.320.jpg" alt="Emblem 24 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 24</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem25.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem25.320.jpg" alt="Emblem 25 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 25</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem26.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem26.320.jpg" alt="Emblem 26 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 26</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem27.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem27.320.jpg" alt="Emblem 27 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 27</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem28.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem28.320.jpg" alt="Emblem 28 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 28</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem29.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem29.320.jpg" alt="Emblem 29 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 29</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem30.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem30.320.jpg" alt="Emblem 30 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 30</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem31.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem31.320.jpg" alt="Emblem 31 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 31</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem32.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem32.320.jpg" alt="Emblem 32 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 32</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem33.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem33.320.jpg" alt="Emblem 33 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 33</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem34.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem34.320.jpg" alt="Emblem 34 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 34</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem35.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem35.320.jpg" alt="Emblem 35 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 35</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem36.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem36.320.jpg" alt="Emblem 36 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 36</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem37.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem37.320.jpg" alt="Emblem 37 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 37</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem38.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem38.320.jpg" alt="Emblem 38 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 38</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem39.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem39.320.jpg" alt="Emblem 39 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 39</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem40.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem40.320.jpg" alt="Emblem 40 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 40</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem41.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem41.320.jpg" alt="Emblem 41 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 41</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem42.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem42.320.jpg" alt="Emblem 42 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 42</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem43.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem43.320.jpg" alt="Emblem 43 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 43</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem44.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem44.320.jpg" alt="Emblem 44 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 44</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem45.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem45.320.jpg" alt="Emblem 45 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 45</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem46.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem46.320.jpg" alt="Emblem 46 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 46</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem47.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem47.320.jpg" alt="Emblem 47 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 47</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem48.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem48.320.jpg" alt="Emblem 48 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 48</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem49.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem49.320.jpg" alt="Emblem 49 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 49</div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="../atalanta-fugiens/emblem50.html">
+                            <div class="thumbnail__img"><img src="../assets/img/emblem-images_cropped/320/emblem50.320.jpg" alt="Emblem 50 image thumbnail"></div>
+                            <div class="thumbnail__label">Emblem 50</div>
+                        </a>
+                    </div>
+                </div>
+                <button class="thumbnail-trigger"><span><span class="thumbnail-trigger__label">Emblem</span><span class="thumbnail-trigger__icon"></span></span>
+                </button>
+            </nav>
+            <div aria-hidden="true" class="section__facsimile panel--left">
+                <div class="facsimile--full grid--half">
+                    <div class="_facsimile">
+                        <section class="facsimile">
+                            <div id="openseadragon-wrapper">
+                                <div id="tools"><span><a id="next" href="#next" title="Next" style="position: relative"><svg xmlns="http://www.w3.org/2000/svg" id="icon_arrow-right-lineart" data-name="icon_arrow-right-lineart" viewBox="0 0 128.6 250.2" transform="scale(1)" transform-origin="0 0"><title>export_icon_arrow-right-lineart</title><polyline points="1.8 248.5 125.1 125.1 1.8 1.8" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="5"></polyline></svg><span>Next</span></a>
+                                    <a id="previous" href="#previous" title="Previous" style="position: relative">
+                                        <svg xmlns="http://www.w3.org/2000/svg" id="icon_arrow-left-lineart" data-name="icon_arrow-left-lineart" viewBox="0 0 128.6 250.2" transform="scale(1)" transform-origin="0 0">
+                                            <title>export_icon_arrow-left-lineart</title>
+                                            <polyline points="126.9 1.8 3.5 125.1 126.9 248.5" fill="none" stroke="#000" stroke-miterlimit="50" stroke-width="5"></polyline>
+                                        </svg><span>Previous</span></a>
+                                    <a id="zoom-in" href="#zoom-in" title="Zoom In" style="position: relative">
+                                        <svg xmlns="http://www.w3.org/2000/svg" id="icon_zoom-in-lineart" data-name="icon_zoom-in-lineart" viewBox="0 0 300.1 299.9" transform="scale(.6)" transform-origin="50% 80%">
+                                            <title>icon_magnifying-glass_zoom-in</title>
+                                            <g id="handle">
+                                                <path d="M537.6,337.5l97,97Z" transform="translate(-343 -143)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="24"></path>
+                                            </g>
+                                            <g id="glass">
+                                                <path d="M480,153a127,127,0,1,1-89.8,37.2A126.2,126.2,0,0,1,480,153m0-10A137,137,0,1,0,617,280,137,137,0,0,0,480,143Z" transform="translate(-343 -143)"></path>
+                                            </g>
+                                            <g id="symbol">
+                                                <path d="M480,337.5v-115M422.5,280h115" transform="translate(-343 -143)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="12"></path>
+                                            </g>
+                                        </svg><span>Zoom In</span></a>
+                                    <a id="zoom-out" href="#zoom-out" title="Zoom Out" style="position: relative">
+                                        <svg xmlns="http://www.w3.org/2000/svg" id="icon_zoom-out-lineart" data-name="icon_zoom-out-lineart" viewBox="0 0 300.1 299.9" transform="scale(.6)" transform-origin="50% 80%">
+                                            <title>icon_magnifying-glass_zoom-out</title>
+                                            <g id="handle">
+                                                <path d="M537.6,337.5l97,97Z" transform="translate(-343 -143)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="24"></path>
+                                            </g>
+                                            <g id="glass">
+                                                <path d="M480,154a126,126,0,1,1-89.1,36.9A125.2,125.2,0,0,1,480,154m0-11A137,137,0,1,0,617,280,137,137,0,0,0,480,143Z" transform="translate(-343 -143)"></path>
+                                            </g>
+                                            <g id="symbol">
+                                                <line x1="79.5" y1="137" x2="194.5" y2="137" fill="none" stroke="#000" stroke-miterlimit="100" stroke-width="10"></line>
+                                            </g>
+                                        </svg><span>Zoom Out</span></a>
+                                    </span>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="emblem panel--right">
+                <section class="section__preface grid--full">
+                    <div class="translation is-shown">
+                        <div class="lang--english _preface--english edition--normalized" lang="en-US">
+                            <div class="preface">
+                                <span class="pb atalanta-fugiens">006</span> The <span class="original">Præface</span><span class="regularized">Preface</span> to the Reader. Candid Reader!
+                                <div class="ab">
+                                    <span class="original"><br></span><span class="indent">It is a truth <span class="original">denyd</span><span class="regularized">denied</span> by none that man in his composition</span>
+                                    <span class="original"><br></span><span class="original">repræsents</span><span class="regularized">represents</span> a compendium of the universe, and is destinated to live three kinds
+                                    <span class="original"><br></span>of life, namely a vegetable, in his mothers <span class="original">wombe</span><span class="regularized">womb</span>, where indeed <span class="original">hee</span><span class="regularized">he</span> <span class="original">growes</span><span class="regularized">grows</span> <span class="original">-</span>
+                                    <span class="original"><br></span>and is <span class="original">encreased</span><span class="regularized">increased</span> like a plant; a sensible, <span class="original">towitt</span><span class="regularized">to wit</span> in this world, where for the
+                                    <span class="original"><br></span>most part <span class="original">hee</span><span class="regularized">he</span> is led by the Senses, as all other <span class="original">animalls</span><span class="regularized">animals</span>, from which <span class="original">hee</span><span class="regularized">he</span> <span class="original">-</span>
+                                    <span class="original"><br></span>differs, in beginning to exercise the understanding, though imperfectly; and
+                                    <span class="original"><br></span>lastly an intelligible, in the other world with God, and the Intelligences,
+                                    <span class="original"><br></span>or good <span class="original">Angells</span><span class="regularized">Angels</span> <span class="original">assistent</span><span class="regularized">assistant</span> to him; in this life, the nearer a man comes to the
+                                    <span class="original"><br></span>divine nature, the more <span class="original">doth</span><span class="regularized">does</span> <span class="original">hee</span><span class="regularized">he</span> <span class="original">rejoyce</span><span class="regularized">rejoice</span> and is delighted in searching out <span class="original">-</span>
+                                    <span class="original"><br></span>things <span class="original">subtill</span><span class="regularized">subtle</span> <span class="original">wonderfull</span><span class="regularized">wonderful</span> and rare, by the understanding: and on the contrary,
+                                    <span class="original"><br></span>the more a man declines and degenerates to a <span class="original">bestiall</span><span class="regularized">bestial</span> kind, the <span class="original">lesse</span><span class="regularized">less</span> is <span class="original">hee</span><span class="regularized">he</span> <span class="original">-</span>
+                                    <span class="original"><br></span>affected with them, and is bound to a more <span class="original">corporeall</span><span class="regularized">corporeal</span> sense.<span class="note-mark">*</span>
+                                    <div class="margin-note">
+                                        <span class="note-mark">*</span>
+                                        <span class="original"><br></span>X <span class="original">Wee</span><span class="regularized">We</span> see examples of either, that some, namely the more learned
+                                        <span class="original"><br></span>are adorned with those arts &amp; sciences, but very many addicted to these,
+                                        <span class="original"><br></span>that is to say the pleasures of the body, lust, gluttony, <span class="original">externall</span><span class="regularized">external</span> <span class="original">pompe</span><span class="regularized">pomp</span>,
+                                        <span class="original"><br></span>and the like.</div> Now to instruct <span class="original">-</span>
+                                    <span class="original"><br></span>and perfect the understanding God <span class="original">hath</span><span class="regularized">has</span> hidden infinite secrets in nature, <span class="original">-</span>
+                                    <span class="original"><br></span>which are <span class="original">forc'd</span><span class="regularized">forced</span> out <span class="subst"><span class="del">of</span><span class="add">by</span></span> innumerable arts and Sciences, as fire out of a flint, <span class="original">-</span>
+                                    <span class="original"><br></span>and <span class="original">transferrd</span><span class="regularized">transferred</span> to use: amongst these <span class="original">Chymicall</span><span class="regularized">Chymical</span> <span class="pb atalanta-fugiens">007</span>secrets are not the mea<span class="original">=<br></span>nest, but next to the indagation of divine things, the <span class="original">principall</span><span class="regularized">principal</span> and most <span class="original">-</span>
+                                    <span class="original"><br></span><span class="original">pretious</span><span class="regularized">precious</span> of all, not to be investigated by circumforaneous impostors, and <span class="original">-</span>
+                                    <span class="original"><br></span><span class="original">pseudochymicall</span><span class="regularized">pseudochymical</span> drones (who in these things are asini ad Lyram, because <span class="original">-</span>
+                                    <span class="original"><br></span><span class="original">alltogether</span><span class="regularized">altogether</span> strangers to all good learning and intention) but by more lofty
+                                    <span class="original"><br></span><span class="original">witts</span><span class="regularized">wits</span>, generously educated, and <span class="original">borne</span><span class="regularized">born</span> to greater things, they being very <span class="original">sub<span class="original">=<br></span>till</span><span class="regularized">subtle</span>, concise, sacred, rare, and abstruse, and therefore to be comprehended
+                                    <span class="original"><br></span>by the understanding sooner than by sense, rather by profound contem
 
-		                        <div class="margin-note">
-									<span class="note-mark">*</span>
-			                        <span class="original"><br></span><span class="regularized"> </span>X <span class="original">Wee</span><span class="regularized">We</span> see examples of either, that some, namely the more learned
-			                        <span class="original"><br></span><span class="regularized"> </span>are adorned with those arts &amp; sciences, but very many addicted to these,
-			                        <span class="original"><br></span><span class="regularized"> </span>that is to say the pleasures of the body, lust, gluttony, <span class="original">externall</span><span class="regularized">external</span> <span class="original">pompe</span><span class="regularized">pomp</span>,
-			                        <span class="original"><br></span><span class="regularized"> </span>and the like.
-	                            </div> 
-	                            Now to instruct <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>and perfect the understanding God <span class="original">hath</span><span class="regularized">has</span> hidden infinite secrets in nature, <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>which are <span class="original">forc'd</span><span class="regularized">forced</span> out <span class="subst"><span class="del">of</span><span class="add">by</span></span> innumerable arts and Sciences, as fire out of a flint, <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>and <span class="original">transferrd</span><span class="regularized">transferred</span> to use: amongst these <span class="original">Chymicall</span><span class="regularized">Chymical</span> secrets are not the mea<span class="original">=<br></span>nest, but next to the indagation of divine things, the <span class="original">principall</span><span class="regularized">principal</span> and most <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">pretious</span><span class="regularized">precious</span> of all, not to be investigated by circumforaneous impostors, and <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">pseudochymicall</span><span class="regularized">pseudochymical</span> drones (who in these things are asini ad Lyram, because <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">alltogether</span><span class="regularized">altogether</span> strangers to all good learning and intention) but by more lofty
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">witts</span><span class="regularized">wits</span>, generously educated, and <span class="original">borne</span><span class="regularized">born</span> to greater things, they being very <span class="original">sub<span class="original">=<br></span>till</span><span class="regularized">subtle</span>, concise, sacred, rare, and abstruse, and therefore to be comprehended
-		                        <span class="original"><br></span><span class="regularized"> </span>by the understanding sooner than by sense, rather by profound contem
-		                        
-		                        <span class="original">=<br></span>plation upon the reading of authors, and comparing them together, and <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>with the works of nature, than sensitive operation, or <span class="original">manuall</span><span class="regularized">manual</span> experi<span class="original">=<br></span>mentation, which is blind without <span class="original">prævious</span><span class="regularized">previous</span> theory: next after such <span class="original">intellec<span class="original">=<br></span>tuall</span><span class="regularized">intellectual</span> sciences as these are reckoned those which treat of a visible and au<span class="original">=<br></span>dible object, as are <span class="original">Opticks</span><span class="regularized">Optics</span>, or perspectives, and Picture, which is by some
-		                        <span class="original"><br></span><span class="regularized"> </span>Poets called mute, as this on the contrary a speaking picture, as <span class="original">allso</span><span class="regularized">also</span> <span class="original">Mu<span class="original">=<br></span>sicke</span><span class="regularized">Music</span>, whether <span class="original">vocall</span><span class="regularized">vocal</span>, or <span class="original">instrumentall</span><span class="regularized">instrumental</span>: herein the ancient Philosophers <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>did <span class="original">soe</span><span class="regularized">so</span> exercise themselves, that <span class="original">hee</span><span class="regularized">he</span> was reputed unlearned, and <span class="original">forcd</span><span class="regularized">forced</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>to sing to the Myrtle, who refused the Harp in <span class="original">festivalls</span><span class="regularized">festivals</span>, as is declared of
-		                        <span class="original"><br></span><span class="regularized"> </span>Themistocles: in <span class="original">Musicke</span><span class="regularized">Music</span> was Socrates instructed, and Plato <span class="original">himselfe</span><span class="regularized">himself</span>, who
-		                        <span class="original"><br></span><span class="regularized"> </span>concluded him not harmoniously compounded, that delighted not in <span class="original">Musicall</span><span class="regularized">Musical</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>harmony: Pythagoras was very famous in the same, who is <span class="original">sayd</span><span class="regularized">said</span> to have used
-		                        <span class="original"><br></span><span class="regularized"> </span>the symphony of <span class="original">musicke</span><span class="regularized">music</span> morning, and evening to compose the minds of
-		                        <span class="original"><br></span><span class="regularized"> </span>his disciples: for this is a peculiar virtue of <span class="original">Musicke</span><span class="regularized">Music</span>, to quicken or refresh the
-		                        <span class="original"><br></span><span class="regularized"> </span>affections by the different <span class="original">musicall</span><span class="regularized">musical</span> measures: <span class="original">Soe</span><span class="regularized">So</span> the Phrygian tune was <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>by the <span class="original">Græks</span><span class="regularized">Greeks</span> termed <span class="original">warrlike</span><span class="regularized">warlike</span>, because it was sung in <span class="original">warre</span><span class="regularized">war</span>, and upon en<span class="original">=<br></span>gagement, and had a singular virtue in stirring up the Spirits of the <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>Soldiers; instead of which the <span class="original">Jonicke</span><span class="regularized">Ionic</span> is sometimes used for the same pur<span class="original">=<br></span>pose, which was formerly esteemed amatory (as the Phrygian is <span class="subst"><span class="del">sometimes</span><span class="add">now</span></span> re<span class="original">=<br></span>puted) from which <span class="original">wee</span><span class="regularized">we</span> gather tunes <span class="original">changd</span><span class="regularized">changed</span> one with another: it is <span class="original">sayd</span><span class="regularized">said</span> that
-		                        <span class="original"><br></span><span class="regularized"> </span>Timothy Milese used the Phrygian to make Alexander the great more <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">Spritefull</span><span class="regularized">Spriteful</span> and <span class="original">couragious</span><span class="regularized">courageous</span> in warlike <span class="original">affaires</span><span class="regularized">affairs</span>, which Cicero takes notice of 2.
-		                        <span class="original"><br></span><span class="regularized"> </span>de legibus, but Terpander Lesbius of the <span class="original">Jonicke</span><span class="regularized">Ionic</span>; who being sent for by <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>the <span class="original">Lacedæmonians</span><span class="regularized">Lacedamonians</span>, seditions then raging among them, did by the <span class="original">sweet<span class="original">=<br></span>nesse</span><span class="regularized">sweetness</span> of singing <span class="original">soe</span><span class="regularized">so</span> titillate and affect their minds, that they returned <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>into <span class="original">freindship</span><span class="regularized">friendship</span>, and desisted from sedition: upon which consideration the
-		                        <span class="original"><br></span><span class="regularized"> </span>Lesbian singers were <span class="original">allwayes</span><span class="regularized">always</span> <span class="original">præferrd</span><span class="regularized">preferred</span> in the judgment of the Spartans: <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>Fabius <span class="original">sayth</span><span class="regularized">says</span> thus of <span class="original">Musicke</span><span class="regularized">Music</span>: <span class="original">Musicke</span><span class="regularized">Music</span> is an honest and pleasant recrea<span class="original">=<br></span>tion most proper for generous <span class="original">witts</span><span class="regularized">wits</span>: that therefore <span class="original">wee</span><span class="regularized">we</span> might have these <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>three objects of the more <span class="original">spirituall</span><span class="regularized">spiritual</span> senses, namely <span class="original">seing</span><span class="regularized">seeing</span> and hearing, as <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">allso</span><span class="regularized">also</span> the understanding <span class="original">itselfe</span><span class="regularized">itself</span>, as it were in one view and embrace, and
-		                        <span class="original"><br></span><span class="regularized"> </span>insinuate all at once into mens minds for the better understanding thereof,
-		                        <span class="original"><br></span><span class="regularized"> </span>behold <span class="original">wee</span><span class="regularized">we</span> have <span class="original">joyned</span><span class="regularized">joined</span> the <span class="original">Opticke</span><span class="regularized">Optic</span> together with <span class="original">Musicke</span><span class="regularized">Music</span>, and sense <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>with the understanding, that is, things rare to be seen and heard of with
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">Chymicall</span><span class="regularized">Chymical</span> emblems, which are peculiar to this Science: for all other arts,
-		                        <span class="original"><br></span><span class="regularized"> </span>if they represent emblems of manners, or other things, than of the secrets
-		                        <span class="original"><br></span><span class="regularized"> </span>of nature, this seems different from their scope and end, they being <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>willing and requisite to be understood by all men; <span class="original">Chymy</span><span class="regularized">Chymia</span> not <span class="original">soe</span><span class="regularized">so</span>, <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>which as a <span class="original">chast</span><span class="regularized">chaste</span> virgin ought to be seen through a <span class="original">veile</span><span class="regularized">veil</span>, and as Diana,
-		                        <span class="original"><br></span><span class="regularized"> </span>not without a garment of various <span class="original">colours</span><span class="regularized">colors</span>, for reasons <span class="original">elswhere</span><span class="regularized">elsewhere</span> expres<span class="original">=<br></span>sed: I say, these <span class="original">foure</span><span class="regularized">four</span> <span class="original">emblematicall</span><span class="regularized">emblematical</span>, feigned, <span class="original">poeticall</span><span class="regularized">poetical</span> and <span class="original">allegoricall</span><span class="regularized">allegorical</span>, pic<span class="original">=<br></span>ted notions, graved in Venus or Copper, not without Venus or elegancy; most
-		                        <span class="original"><br></span><span class="regularized"> </span>abstruse <span class="original">Chymicall</span><span class="regularized">Chymical</span> things, and lastly most rare <span class="original">Musicall</span><span class="regularized">Musical</span> things to be enu<span class="original">=<br></span>cleated by the understanding, you have <span class="original">alltogether</span><span class="regularized">altogether</span> in one <span class="original">booke</span><span class="regularized">book</span>, and may
-		                        <span class="original"><br></span><span class="regularized"> </span>as designed apply them to your <span class="original">owne</span><span class="regularized">own</span> use, which if it be more <span class="original">intel
-		                        
-		                        <span class="original">=<br></span>lectuall</span><span class="regularized">intellectual</span>, than <span class="original">sensuall</span><span class="regularized">sensual</span>, the more profitable and <span class="original">delightfull</span><span class="regularized">delightful</span> will it be in time:
-		                        <span class="original"><br></span><span class="regularized"> </span>but if it be first in bondage to the sense, there is <span class="original">noe</span><span class="regularized">no</span> doubt but there will <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>be a passage from the sense to the understanding as by a <span class="original">doore</span><span class="regularized">door</span>: for nothing is
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">sayd</span><span class="regularized">said</span> to be in the understanding, which had not admission by some sense, <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>the understanding of a man new <span class="original">borne</span><span class="regularized">born</span> being <span class="original">supposd</span><span class="regularized">supposed</span> as a smooth table, <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>wherein nothing is as yet written, but any thing may be written by the <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">helpe</span><span class="regularized">help</span> of sense, as a Style: and it is <span class="original">coḿonly</span><span class="regularized">commonly</span> <span class="original">sayd</span><span class="regularized">said</span>, there is <span class="original">noe</span><span class="regularized">no</span> desire of a
-		                        <span class="original"><br></span><span class="regularized"> </span>thing <span class="original">unknowne</span><span class="regularized">unknown</span>, because the senses being inquisitors and messengers must
-		                        <span class="original"><br></span><span class="regularized"> </span>first convey, and as warders <span class="add">the instruments of a <span class="original">citty</span><span class="regularized">city</span></span> watching at the gates <span class="subst"><span class="del">(their organs)</span> <span class="del">of <span class="original">citty</span><span class="regularized">city</span></span><span class="add">thereof</span></span>
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">informe</span><span class="regularized">inform</span> and impart everything that is to be <span class="original">knowne</span><span class="regularized">known</span>, to the understanding,
-		                        <span class="original"><br></span><span class="regularized"> </span>as the dictator and arbiter. As to the reason of engraving these Emblems,
-		                        <span class="original"><br></span><span class="regularized"> </span>lest even they may seem monstrous and incongruous to you, I will add a few
-		                        <span class="original"><br></span><span class="regularized"> </span>things: Atalanta is renowned by the Poets for <span class="add">speed in</span> running, in which exercise
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">shee</span><span class="regularized">she</span> surpassed all her suitors, and therefore, the reward of victory being
-		                        <span class="original"><br></span><span class="regularized"> </span>propounded, death ensued to those <span class="subst"><span class="del">being</span><span class="add">that were</span></span> <span class="original">overrunne</span><span class="regularized">overrun</span> by the Virgin, till <span class="original">Shee</span><span class="regularized">She</span>
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">herselfe</span><span class="regularized">herself</span> was overcome by Hippomenes, a youth <span class="subst"><span class="del">more</span><span class="add">very</span></span> hardy and circumspect,
-		                        <span class="original"><br></span><span class="regularized"> </span>casting three golden apples at <span class="add">three</span> <span class="original">severall</span><span class="regularized">several</span> times in her way, which taking up,
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">Shee</span><span class="regularized">She</span> was in the <span class="original">meane</span><span class="regularized">mean</span> time outgone by him, being now near and touching <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>the <span class="original">goale</span><span class="regularized">goal</span>: as this Atalanta <span class="original">runns</span><span class="regularized">runs</span>, <span class="original">soe</span><span class="regularized">so</span> one <span class="original">Musicall</span><span class="regularized">Musical</span> note <span class="original">allwayes</span><span class="regularized">always</span> <span class="original">runns</span><span class="regularized">runs</span> before
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="superscript">1</span>another, <span class="superscript">6</span>as <span class="superscript">7</span>Hippomenes, <span class="superscript">2</span>and <span class="superscript">3</span>the <span class="superscript">4</span>other <span class="superscript">5</span><span class="original">followes</span><span class="regularized">follows</span>: <span class="superscript">8</span>yet they are established and
-		                        <span class="original"><br></span><span class="regularized"> </span>confirmed in a third, which is single and of one vali<span class="add">dity</span>, as a golden apple:
-		                        <span class="original"><br></span><span class="regularized"> </span>This same virgin is merely <span class="original">Chymicall</span><span class="regularized">Chymical</span>, namely <span class="original">Philosophicall</span><span class="regularized">Philosophical</span> Mercury <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>fixed in flight and restrained by the golden Sulphur, <span class="note-mark">*</span>
-		                        <div class="margin-note">
-									<span class="note-mark">*</span>x ☿
-								</div> 
-								which if a man <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>know how to make stand, <span class="original">hee</span><span class="regularized">he</span> will have that Spouse which <span class="original">hee</span><span class="regularized">he</span> desires, if <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>not, destruction and <span class="original">ruine</span><span class="regularized">ruin</span> of his <span class="original">affaires</span><span class="regularized">affairs</span>: From Hippomenes and Atalanta
-		                        <span class="original"><br></span><span class="regularized"> </span>lying together in the temple of the mother of the Gods, that is, a <span class="original">vessell</span><span class="regularized">vessel</span>, <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>are <span class="original">Lyons</span><span class="regularized">Lions</span> produced, or they acquire a red <span class="original">colour</span><span class="regularized">color</span>: This virgin <span class="original">allso</span><span class="regularized">also</span> <span class="original">obtaind</span><span class="regularized">obtained</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>a victory before men, killing a <span class="original">certaine</span><span class="regularized">certain</span> boar of notable <span class="original">bignesse</span><span class="regularized">bigness</span>, for which
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">Shee</span><span class="regularized">She</span> was rewarded by Meleager: Striking a <span class="original">rocke</span><span class="regularized">rock</span> at Stethæus the temple
-		                        <span class="original"><br></span><span class="regularized"> </span>of <span class="original">Æsculapius</span><span class="regularized">Aesculapius</span> <span class="original">Shee</span><span class="regularized">She</span> brought forth water, <span class="subst"><span class="del">which</span><span class="add">whereof</span></span> being thirsty, <span class="original">Shee</span><span class="regularized">She</span> <span class="original">dranke</span><span class="regularized">drank</span>:
-		                        <span class="original"><br></span><span class="regularized"> </span>which things being <span class="original">truely</span><span class="regularized">truly</span> <span class="original">allegoricall</span><span class="regularized">allegorical</span> and <span class="original">emblematicall</span><span class="regularized">emblematical</span>, and <span class="original">noe</span><span class="regularized">no</span> way
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">historicall</span><span class="regularized">historical</span>, I was willing that this intellectual <span class="original">emblematicall</span><span class="regularized">emblematical</span> treatise <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>Should indigitate and take notice of them in commemoration of this noble
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">Heroesse</span><span class="regularized">Heroine</span>, especially the apples cast before her being taken out of the <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>Hesperian gardens, and <span class="original">administred</span><span class="regularized">administered</span> to Hippomenes by Venus, the <span class="original">Goddesse</span><span class="regularized">Goddess</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>of <span class="original">favour</span><span class="regularized">favor</span> and <span class="original">sweetnesse</span><span class="regularized">sweetness</span>: in those <span class="original">Musicall</span><span class="regularized">Musical</span> measures or flights you see <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>this observed, that every <span class="original">disticke</span><span class="regularized">distich</span> being conveniently adapted to those three
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">voyces</span><span class="regularized">voices</span> may be <span class="original">expressd</span><span class="regularized">expressed</span> in singing, in which <span class="original">soe</span><span class="regularized">so</span> many <span class="original">varietyes</span><span class="regularized">varieties</span> of flights
-		                        <span class="original"><br></span><span class="regularized"> </span>being <span class="original">accomodated</span><span class="regularized">accommodated</span> to one single <span class="original">voyce</span><span class="regularized">voice</span>, every wise and intelligent man will
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">allso</span><span class="regularized">also</span> <span class="original">thinke</span><span class="regularized">think</span> well of this kind of <span class="original">emblematicall</span><span class="regularized">emblematical</span> figuration in them, as <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">allso</span><span class="regularized">also</span> the adaptation in the <span class="original">disticks</span><span class="regularized">distichs</span> to every <span class="original">voyce</span><span class="regularized">voice</span>: for if some Merchants
-		                        <span class="original"><br></span><span class="regularized"> </span><span class="original">doe</span><span class="regularized">do</span> <span class="original">esteeme</span><span class="regularized">esteem</span> and buy an artifice of picture with a great <span class="original">summe</span><span class="regularized">sum</span> of money,
-		                        <span class="original"><br></span><span class="regularized"> </span>where the eyes alone are deceived, they judging it very near to nature, <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>why should not the learned have these figures in good estimation <span class="original">-</span>
-		                    
-	                        
-		                        <span class="original"><br></span><span class="regularized"> </span>which are <span class="original">soe</span><span class="regularized">so</span> <span class="original">usefull</span><span class="regularized">useful</span> and serviceable both to the understanding and
-		                        <span class="original"><br></span><span class="regularized"> </span>many of the senses, that great utility besides delight and recreation <span class="original">-</span>
-		                        <span class="original"><br></span><span class="regularized"> </span>may be expected from them? Farewell <span class="pc">. . . . . . .</span>
-	                        </div><!-- end ab -->
-                        </div><!-- end english preface -->
-                    </div><!-- end english -->
-                </div><!-- end translation -->
+                                    <span class="original">=<br></span>plation upon the reading of authors, and comparing them together, and <span class="original">-</span>
+                                    <span class="original"><br></span>with the works of nature, than sensitive operation, or <span class="original">manuall</span><span class="regularized">manual</span> experi<span class="original">=<br></span>mentation, which is blind without <span class="original">prævious</span><span class="regularized">previous</span> theory: next after such <span class="original">intellec<span class="original">=<br></span>tuall</span><span class="regularized">intellectual</span> sciences as these are reckoned those which treat of a visible and au<span class="original">=<br></span>dible object, as are <span class="original">Opticks</span><span class="regularized">Optics</span>, or perspectives, and Picture, which is by some
+                                    <span class="original"><br></span>Poets called mute, as this on the contrary a speaking picture, as <span class="original">allso</span><span class="regularized">also</span> <span class="original">Mu<span class="original">=<br></span>sicke</span><span class="regularized">Music</span>, whether <span class="original">vocall</span><span class="regularized">vocal</span>, or <span class="original">instrumentall</span><span class="regularized">instrumental</span>: herein the ancient Philosophers <span class="original">-</span>
+                                    <span class="original"><br></span>did <span class="original">soe</span><span class="regularized">so</span> exercise themselves, that <span class="original">hee</span><span class="regularized">he</span> was reputed unlearned, and <span class="original">forcd</span><span class="regularized">forced</span>
+                                    <span class="original"><br></span>to sing to the Myrtle, who refused the Harp in <span class="original">festivalls</span><span class="regularized">festivals</span>, as is declared of
+                                    <span class="original"><br></span>Themistocles: in <span class="original">Musicke</span><span class="regularized">Music</span> was Socrates instructed, and Plato <span class="original">himselfe</span><span class="regularized">himself</span>, who
+                                    <span class="original"><br></span>concluded him not harmoniously compounded, that delighted not in <span class="original">Musicall</span><span class="regularized">Musical</span>
+                                    <span class="original"><br></span>harmony: Pythagoras was very famous in the same, who is <span class="original">sayd</span><span class="regularized">said</span> to have used
+                                    <span class="original"><br></span>the symphony of <span class="original">musicke</span><span class="regularized">music</span> morning, and evening to compose the minds of
+                                    <span class="original"><br></span>his disciples: for this is a peculiar virtue of <span class="original">Musicke</span><span class="regularized">Music</span>, to quicken or refresh the
+                                    <span class="original"><br></span>affections by the different <span class="original">musicall</span><span class="regularized">musical</span> measures: <span class="original">Soe</span><span class="regularized">So</span> the Phrygian tune was <span class="original">-</span>
+                                    <span class="original"><br></span>by the <span class="original">Græks</span><span class="regularized">Greeks</span> termed <span class="original">warrlike</span><span class="regularized">warlike</span>, because it was sung in <span class="original">warre</span><span class="regularized">war</span>, and upon en<span class="original">=<br></span>gagement, and had a singular virtue in stirring up the Spirits of the <span class="original">-</span>
+                                    <span class="original"><br></span>Soldiers; instead of which the <span class="original">Jonicke</span><span class="regularized">Ionic</span> is sometimes used for the same pur<span class="original">=<br></span>pose, which was formerly esteemed <span class="pb atalanta-fugiens">008</span>amatory (as the Phrygian is <span class="subst"><span class="del">sometimes</span><span class="add">now</span></span> re<span class="original">=<br></span>puted) from which <span class="original">wee</span><span class="regularized">we</span> gather tunes <span class="original">changd</span><span class="regularized">changed</span> one with another: it is <span class="original">sayd</span><span class="regularized">said</span> that
+                                    <span class="original"><br></span>Timothy Milese used the Phrygian to make Alexander the great more <span class="original">-</span>
+                                    <span class="original"><br></span><span class="original">Spritefull</span><span class="regularized">Spriteful</span> and <span class="original">couragious</span><span class="regularized">courageous</span> in warlike <span class="original">affaires</span><span class="regularized">affairs</span>, which Cicero takes notice of 2.
+                                    <span class="original"><br></span>de legibus, but Terpander Lesbius of the <span class="original">Jonicke</span><span class="regularized">Ionic</span>; who being sent for by <span class="original">-</span>
+                                    <span class="original"><br></span>the <span class="original">Lacedæmonians</span><span class="regularized">Lacedamonians</span>, seditions then raging among them, did by the <span class="original">sweet<span class="original">=<br></span>nesse</span><span class="regularized">sweetness</span> of singing <span class="original">soe</span><span class="regularized">so</span> titillate and affect their minds, that they returned <span class="original">-</span>
+                                    <span class="original"><br></span>into <span class="original">freindship</span><span class="regularized">friendship</span>, and desisted from sedition: upon which consideration the
+                                    <span class="original"><br></span>Lesbian singers were <span class="original">allwayes</span><span class="regularized">always</span> <span class="original">præferrd</span><span class="regularized">preferred</span> in the judgment of the Spartans: <span class="original">-</span>
+                                    <span class="original"><br></span>Fabius <span class="original">sayth</span><span class="regularized">says</span> thus of <span class="original">Musicke</span><span class="regularized">Music</span>: <span class="original">Musicke</span><span class="regularized">Music</span> is an honest and pleasant recrea<span class="original">=<br></span>tion most proper for generous <span class="original">witts</span><span class="regularized">wits</span>: that therefore <span class="original">wee</span><span class="regularized">we</span> might have these <span class="original">-</span>
+                                    <span class="original"><br></span>three objects of the more <span class="original">spirituall</span><span class="regularized">spiritual</span> senses, namely <span class="original">seing</span><span class="regularized">seeing</span> and hearing, as <span class="original">-</span>
+                                    <span class="original"><br></span><span class="original">allso</span><span class="regularized">also</span> the understanding <span class="original">itselfe</span><span class="regularized">itself</span>, as it were in one view and embrace, and
+                                    <span class="original"><br></span>insinuate all at once into mens minds for the better understanding thereof,
+                                    <span class="original"><br></span>behold <span class="original">wee</span><span class="regularized">we</span> have <span class="original">joyned</span><span class="regularized">joined</span> the <span class="original">Opticke</span><span class="regularized">Optic</span> together with <span class="original">Musicke</span><span class="regularized">Music</span>, and sense <span class="original">-</span>
+                                    <span class="original"><br></span>with the understanding, that is, things rare to be seen and heard of with
+                                    <span class="original"><br></span><span class="original">Chymicall</span><span class="regularized">Chymical</span> emblems, which are peculiar to this Science: for all other arts,
+                                    <span class="original"><br></span>if they represent emblems of manners, or other things, than of the secrets
+                                    <span class="original"><br></span>of nature, this seems different from their scope and end, they being <span class="original">-</span>
+                                    <span class="original"><br></span>willing and requisite to be understood by all men; <span class="original">Chymy</span><span class="regularized">Chymia</span> not <span class="original">soe</span><span class="regularized">so</span>, <span class="original">-</span>
+                                    <span class="original"><br></span>which as a <span class="original">chast</span><span class="regularized">chaste</span> virgin ought to be seen through a <span class="original">veile</span><span class="regularized">veil</span>, and as Diana,
+                                    <span class="original"><br></span>not without a garment of various <span class="original">colours</span><span class="regularized">colors</span>, for reasons <span class="original">elswhere</span><span class="regularized">elsewhere</span> expres<span class="original">=<br></span>sed: I say, these <span class="original">foure</span><span class="regularized">four</span> <span class="original">emblematicall</span><span class="regularized">emblematical</span>, feigned, <span class="original">poeticall</span><span class="regularized">poetical</span> and <span class="original">allegoricall</span><span class="regularized">allegorical</span>, pic<span class="original">=<br></span>ted notions, graved in Venus or Copper, not without Venus or elegancy; most
+                                    <span class="original"><br></span>abstruse <span class="original">Chymicall</span><span class="regularized">Chymical</span> things, and lastly most rare <span class="original">Musicall</span><span class="regularized">Musical</span> things to be enu<span class="original">=<br></span>cleated by the understanding, you have <span class="original">alltogether</span><span class="regularized">altogether</span> in one <span class="original">booke</span><span class="regularized">book</span>, and may
+                                    <span class="original"><br></span>as designed apply them to your <span class="original">owne</span><span class="regularized">own</span> use, which if it be more <span class="original">intel
 
-				<div class="original is-hidden">
-					<div class="lang--latin _preface--latin edition--regularized" lang="la">
-                        <div class="preface la" lang="la">
-                            <div class="page">
-                                <span class="pb atalanta-fugiens">06</span>
-                                <h1><span class="large">Pr<span class="original">æ</span><span class="regularized">ae</span>fatio ad Lectorem.</span></h1>
-                                <div class="ab italic">
-                                   <br/>Hominem, lectorem candide, universi compendium
-                                   <br/>sui compositione referre, in confesso est omnium,
-                                   <br/><span class="original">&amp;</span><span class="regularized">et</span> ternis <span class="original">vitę</span><span class="regularized">vitae</span> generibus vivendis destinatum es-               <br/>se, nempe vegetabili in utero materno, ubi sal-               <br/>tem plant<span class="original">æ</span><span class="regularized">ae</span> instar crescit <span class="original">&amp;</span><span class="regularized">et</span> augmentatur; sensi-               <br/>bili, nimirum in hoc mundo, ubi maxima ex parte sensibus ducitur,
-                                   <br/>ceu reliqua animalia, à quibus differt, quod intellectu incipiat
-                                   <br/>uti, licet imperfectè; ac denique intelligibili, in altero mundo apud
-                                   <br/>Deum, eiq́ue assistentes intelligentias seu Angelos bonos; In pr<span class="original">æ</span><span class="regularized">ae</span>-               <br/>senti vitâ, quò quis magis ad divinam naturam accedit, eò magis
-                                   <br/>rebus intellectu indagandis, subtilibus, miris <span class="original">&amp;</span><span class="regularized">et</span> raris, gaudet <span class="original">&amp;</span><span class="regularized">et</span> 
-                                   <br/>delectatur: Et econtrà, quò quis ad <span class="original">pecuinũ</span><span class="regularized">pecuinum</span> genus magis declinat,
-                                   <br/>eò min his capitur, <span class="original">&amp;</span><span class="regularized">et</span> sensui corporaliori astrictus est: Utro-               <br/>rumque videmus Exempla, quosdam illis, utpote doctiores, artibus
-                                   <br/><span class="original">&amp;</span><span class="regularized">et</span> scientiis politos esse deditos, quàmplurimos hisce, nempe volu-               <br/>ptatibus corporis, libidini, gul<span class="original">æ</span><span class="regularized">ae</span>, pomp<span class="original">æ</span><span class="regularized">ae</span> extern<span class="original">æ</span><span class="regularized">ae</span>, <span class="original">&amp;</span><span class="regularized">et</span> his similibus.
-                                   <br/>Ad excolendum autem intellectum Deus infinita arcana abdidit
-                                   <br/>in natura, qu<span class="original">æ</span><span class="regularized">ae</span> scientiis <span class="original">&amp;</span><span class="regularized">et</span> artibus innumeris, ut ignis ex silice ex-               <br/>tunduntur, <span class="original">&amp;</span><span class="regularized">et</span> in usum transferuntur: Inter h<span class="original">æ</span><span class="regularized">ae</span>c sunt Chymica
+                        <span class="original">=<br></span>lectuall</span><span class="regularized">intellectual</span>, than <span class="original">sensuall</span><span class="regularized">sensual</span>, the more profitable <span class="pb atalanta-fugiens">009</span>and <span class="original">delightfull</span><span class="regularized">delightful</span> will it be in time:
+                                    <span class="original"><br></span>but if it be first in bondage to the sense, there is <span class="original">noe</span><span class="regularized">no</span> doubt but there will <span class="original">-</span>
+                                    <span class="original"><br></span>be a passage from the sense to the understanding as by a <span class="original">doore</span><span class="regularized">door</span>: for nothing is
+                                    <span class="original"><br></span><span class="original">sayd</span><span class="regularized">said</span> to be in the understanding, which had not admission by some sense, <span class="original">-</span>
+                                    <span class="original"><br></span>the understanding of a man new <span class="original">borne</span><span class="regularized">born</span> being <span class="original">supposd</span><span class="regularized">supposed</span> as a smooth table, <span class="original">-</span>
+                                    <span class="original"><br></span>wherein nothing is as yet written, but any thing may be written by the <span class="original">-</span>
+                                    <span class="original"><br></span><span class="original">helpe</span><span class="regularized">help</span> of sense, as a Style: and it is <span class="original">coḿonly</span><span class="regularized">commonly</span> <span class="original">sayd</span><span class="regularized">said</span>, there is <span class="original">noe</span><span class="regularized">no</span> desire of a
+                                    <span class="original"><br></span>thing <span class="original">unknowne</span><span class="regularized">unknown</span>, because the senses being inquisitors and messengers must
+                                    <span class="original"><br></span>first convey, and as warders <span class="add">the instruments of a <span class="original">citty</span><span class="regularized">city</span></span> watching at the gates <span class="subst"><span class="del">(their organs)</span> <span class="del">of <span class="original">citty</span><span class="regularized">city</span></span><span class="add">thereof</span></span>
+                                    <span class="original"><br></span><span class="original">informe</span><span class="regularized">inform</span> and impart everything that is to be <span class="original">knowne</span><span class="regularized">known</span>, to the understanding,
+                                    <span class="original"><br></span>as the dictator and arbiter. As to the reason of engraving these Emblems,
+                                    <span class="original"><br></span>lest even they may seem monstrous and incongruous to you, I will add a few
+                                    <span class="original"><br></span>things: Atalanta is renowned by the Poets for <span class="add">speed in</span> running, in which exercise
+                                    <span class="original"><br></span><span class="original">shee</span><span class="regularized">she</span> surpassed all her suitors, and therefore, the reward of victory being
+                                    <span class="original"><br></span>propounded, death ensued to those <span class="subst"><span class="del">being</span><span class="add">that were</span></span> <span class="original">overrunne</span><span class="regularized">overrun</span> by the Virgin, till <span class="original">Shee</span><span class="regularized">She</span>
+                                    <span class="original"><br></span><span class="original">herselfe</span><span class="regularized">herself</span> was overcome by Hippomenes, a youth <span class="subst"><span class="del">more</span><span class="add">very</span></span> hardy and circumspect,
+                                    <span class="original"><br></span>casting three golden apples at <span class="add">three</span> <span class="original">severall</span><span class="regularized">several</span> times in her way, which taking up,
+                                    <span class="original"><br></span><span class="original">Shee</span><span class="regularized">She</span> was in the <span class="original">meane</span><span class="regularized">mean</span> time outgone by him, being now near and touching <span class="original">-</span>
+                                    <span class="original"><br></span>the <span class="original">goale</span><span class="regularized">goal</span>: as this Atalanta <span class="original">runns</span><span class="regularized">runs</span>, <span class="original">soe</span><span class="regularized">so</span> one <span class="original">Musicall</span><span class="regularized">Musical</span> note <span class="original">allwayes</span><span class="regularized">always</span> <span class="original">runns</span><span class="regularized">runs</span> before
+                                    <span class="original"><br></span><span class="original"><span class="superscript">1</span>another, <span class="superscript">6</span>as <span class="superscript">7</span>Hippomenes, <span class="superscript">2</span>and <span class="superscript">3</span>the <span class="superscript">4</span>other <span class="superscript">5</span><span class="original">followes</span><span class="regularized">follows</span>: <span class="superscript">8</span>yet</span><span class="regularized">another, and the other follows as Hippomenes, yet</span> they are established and
+                                    <span class="original"><br></span>confirmed in a third, which is single and of one vali<span class="add">dity</span>, as a golden apple:
+                                    <span class="original"><br></span>This same virgin is merely <span class="original">Chymicall</span><span class="regularized">Chymical</span>, namely <span class="original">Philosophicall</span><span class="regularized">Philosophical</span> Mercury <span class="original">-</span>
+                                    <span class="original"><br></span>fixed in flight and restrained by the golden Sulphur, <span class="note-mark">*</span>
+                                    <div class="margin-note">
+                                        <span class="note-mark">*</span>x ☿</div> which if a man <span class="original">-</span>
+                                    <span class="original"><br></span>know how to make stand, <span class="original">hee</span><span class="regularized">he</span> will have that Spouse which <span class="original">hee</span><span class="regularized">he</span> desires, if <span class="original">-</span>
+                                    <span class="original"><br></span>not, destruction and <span class="original">ruine</span><span class="regularized">ruin</span> of his <span class="original">affaires</span><span class="regularized">affairs</span>: From Hippomenes and Atalanta
+                                    <span class="original"><br></span>lying together in the temple of the mother of the Gods, that is, a <span class="original">vessell</span><span class="regularized">vessel</span>, <span class="original">-</span>
+                                    <span class="original"><br></span>are <span class="original">Lyons</span><span class="regularized">Lions</span> produced, or they acquire a red <span class="original">colour</span><span class="regularized">color</span>: <span class="pb atalanta-fugiens">0010</span>This virgin <span class="original">allso</span><span class="regularized">also</span> <span class="original">obtaind</span><span class="regularized">obtained</span>
+                                    <span class="original"><br></span>a victory before men, killing a <span class="original">certaine</span><span class="regularized">certain</span> boar of notable <span class="original">bignesse</span><span class="regularized">bigness</span>, for which
+                                    <span class="original"><br></span><span class="original">Shee</span><span class="regularized">She</span> was rewarded by Meleager: Striking a <span class="original">rocke</span><span class="regularized">rock</span> at <span class="original">Stethæus</span><span class="regularized">Stethaeus</span> the temple
+                                    <span class="original"><br></span>of <span class="original">Æsculapius</span><span class="regularized">Aesculapius</span> <span class="original">Shee</span><span class="regularized">She</span> brought forth water, <span class="subst"><span class="del">which</span><span class="add">whereof</span></span> being thirsty, <span class="original">Shee</span><span class="regularized">She</span> <span class="original">dranke</span><span class="regularized">drank</span>:
+                                    <span class="original"><br></span>which things being <span class="original">truely</span><span class="regularized">truly</span> <span class="original">allegoricall</span><span class="regularized">allegorical</span> and <span class="original">emblematicall</span><span class="regularized">emblematical</span>, and <span class="original">noe</span><span class="regularized">no</span> way
+                                    <span class="original"><br></span><span class="original">historicall</span><span class="regularized">historical</span>, I was willing that this intellectual <span class="original">emblematicall</span><span class="regularized">emblematical</span> treatise <span class="original">-</span>
+                                    <span class="original"><br></span>Should indigitate and take notice of them in commemoration of this noble
+                                    <span class="original"><br></span><span class="original">Heroesse</span><span class="regularized">Heroine</span>, especially the apples cast before her being taken out of the <span class="original">-</span>
+                                    <span class="original"><br></span>Hesperian gardens, and <span class="original">administred</span><span class="regularized">administered</span> to Hippomenes by Venus, the <span class="original">Goddesse</span><span class="regularized">Goddess</span>
+                                    <span class="original"><br></span>of <span class="original">favour</span><span class="regularized">favor</span> and <span class="original">sweetnesse</span><span class="regularized">sweetness</span>: in those <span class="original">Musicall</span><span class="regularized">Musical</span> measures or flights you see <span class="original">-</span>
+                                    <span class="original"><br></span>this observed, that every <span class="original">disticke</span><span class="regularized">distich</span> being conveniently adapted to those three
+                                    <span class="original"><br></span><span class="original">voyces</span><span class="regularized">voices</span> may be <span class="original">expressd</span><span class="regularized">expressed</span> in singing, in which <span class="original">soe</span><span class="regularized">so</span> many <span class="original">varietyes</span><span class="regularized">varieties</span> of flights
+                                    <span class="original"><br></span>being <span class="original">accomodated</span><span class="regularized">accommodated</span> to one single <span class="original">voyce</span><span class="regularized">voice</span>, every wise and intelligent man will
+                                    <span class="original"><br></span><span class="original">allso</span><span class="regularized">also</span> <span class="original">thinke</span><span class="regularized">think</span> well of this kind of <span class="original">emblematicall</span><span class="regularized">emblematical</span> figuration in them, as <span class="original">-</span>
+                                    <span class="original"><br></span><span class="original">allso</span><span class="regularized">also</span> the adaptation in the <span class="original">disticks</span><span class="regularized">distichs</span> to every <span class="original">voyce</span><span class="regularized">voice</span>: for if some Merchants
+                                    <span class="original"><br></span><span class="original">doe</span><span class="regularized">do</span> <span class="original">esteeme</span><span class="regularized">esteem</span> and buy an artifice of picture with a great <span class="original">summe</span><span class="regularized">sum</span> of money,
+                                    <span class="original"><br></span>where the eyes alone are deceived, they judging it very near to nature, <span class="original">-</span>
+                                    <span class="original"><br></span>why should not the learned have these figures in good estimation <span class="original">-</span>
+
+                                    <span class="original"><br></span>which are <span class="original">soe</span><span class="regularized">so</span> <span class="original">usefull</span><span class="regularized">useful</span> and serviceable both to the understanding and
+                                    <span class="original"><br></span>many of the senses, that great utility besides delight and recreation <span class="original">-</span>
+                                    <span class="original"><br></span>may be expected from them? Farewell <span class="pc">. . . . . . .</span>
                                 </div>
                             </div>
-                            <br class="discourse-pagebreak"/>
-                            <div class="page">
-                                <span class="pb atalanta-fugiens">7</span>
-                                <div class="ab italic">
-                                   <br/>secreta non postrema, sed post divinorum indagationem, omnium
-                                   <br/>prima <span class="original">&amp;</span><span class="regularized">et</span> preciosissima, non circumforaneis deceptoribus <span class="original">&amp;</span><span class="regularized">et</span> fucis
-                                   <br/>pseudo-chymicis (qui in his sunt asini ad lyram, quippe ad omni bo-               <br/>na doctrina <span class="original">&amp;</span><span class="regularized">et</span> intentione alienissimi) sed ingeniis altioribus, libe-               <br/>raliter educatis, <span class="original">&amp;</span><span class="regularized">et</span> ad majora natis investiganda, cùm sint val-               <br/>dè subtilia, augusta, sacra, rara <span class="original">&amp;</span><span class="regularized">et</span> abstrusa, ideoq́ue intellectu
-                                   <br/>comprehendenda priùs, quàm sensu, potiùs per contemplationem
-                                   <br/>profundam ex lectione authorum, eorumq́ue inter se <span class="original">&amp;</span><span class="regularized">et</span> cum natu-               <br/>r<span class="original">æ</span><span class="regularized">ae</span> operibus comparationem, quàm operationem sensitivam, seu
-                                   <br/>manualem experimentationem, qu<span class="original">æ</span><span class="regularized">ae</span> c<span class="original">œ</span><span class="regularized">oe</span>ca est sine Theorica pr<span class="original">æ</span><span class="regularized">ae</span>-               <br/>via: Post scientias huiusmodi intellectuales proximè numerantur,
-                                   <br/><span class="original">que</span><span class="regularized">quae</span> de visibili ac audibili objecto tractant, ut sun Optica seu per-              <br/>spectiva, <span class="original">&amp;</span><span class="regularized">et</span> pictura qu<span class="original">æ</span><span class="regularized">ae</span> dicitur à quibusdam Poëtis muta, ut
-                                  <br/>haec vice versâ, pictura loquens, nec non Musica sive vocalis
-                                   <br/>seu organica: In hac antiqui Philosophi adeò se exercuerunt, ut in-               <br/>doctus haberetur, <span class="original">&amp;</span><span class="regularized">et</span> ad <span class="original">myrtu</span><span class="regularized">myrtum</span> canere cogeretur, qui <span class="original">lyra</span><span class="regularized">lyram</span> recusasset
-                                  <br/>in conviviis, ut de <span class="roman">Themistocle</span> traditur: In Musica <span class="roman">Socrates</span>
-                                  <br/>institutus <span class="original">&amp;</span><span class="regularized">et</span> ipse <span class="roman">Plato</span>, qui non harmonicè <span class="original">compositũ</span><span class="regularized">compositum</span> eum statuit,
-                                  <br/>qui harmonia Musicali non gaudeat: In eâdem <span class="roman">Pythagoras</span> per-               <br/>celebris fuit, qui manè <span class="original">&amp;</span><span class="regularized">et</span> vesperi music<span class="original">æ</span><span class="regularized">ae</span> symphonia ad compo-               <br/>nendos suorum discipulorum animos usus dicitur: Est enim Mu-               <br/>sic<span class="original">æ</span><span class="regularized">ae</span> h<span class="original">æ</span><span class="regularized">ae</span>c peculiaris vis, ut affectus excitet vel mulceat, pro diver-              <br/>so Musicali modo: Sic <span class="roman">Phrygius</span> Modus apud <span class="roman">Gr<span class="original">æ</span><span class="regularized">ae</span>cos</span> diceba-               <br/>tur bellicosus propterea, quod in bello <span class="original">&amp;</span><span class="regularized">et</span> in pr<span class="original">æ</span><span class="regularized">ae</span>lio ineundo accinere-               <br/>tur, <span class="original">&amp;</span><span class="regularized">et</span> singularem vim haberet ad animos militum concitandos;
-                                  <br/>cuius vice ad eundem usum nunc adhibetur <span class="roman">Ionicus</span>, qui olim
+                        </div>
+                    </div>
+                    <div class="original is-hidden">
+                        <div class="lang--latin _preface--latin edition--regularized" lang="la">
+                            <div class="preface la" lang="la">
+
+                                <div class="page">
+                                    <span class="pb atalanta-fugiens">6</span>
+                                    <h1><span class="large">Pr<span class="original">æ</span><span class="regularized">ae</span>fatio ad Lectorem.</span></h1>
+                                    <div class="ab italic">
+                                        <br>Hominem, lector candide, universi compendium
+                                        <br>sui compositione referre, in confesso est omnium,
+                                        <br><span class="original">&amp;</span><span class="regularized">et</span> ternis <span class="original">vitę</span><span class="regularized">vitae</span> generibus vivendis destinatum es-
+                                        <br>se, nempe vegetabili in utero materno, ubi sal-
+                                        <br>tem plant<span class="original">æ</span><span class="regularized">ae</span> instar crescit <span class="original">&amp;</span><span class="regularized">et</span> augmentatur; sensi-
+                                        <br>bili, nimirum in hoc mundo, ubi maxima ex parte sensibus ducitur,
+                                        <br>ceu reliqua animalia, à quibus differt, quod intellectu incipiat
+                                        <br>uti, licet imperfectè; ac denique intelligibili, in altero mundo apud
+                                        <br>Deum, eiq́ue assistentes intelligentias seu Angelos bonos; In pr<span class="original">æ</span><span class="regularized">ae</span>-
+                                        <br>senti vitâ, quò quis magis ad divinam naturam accedit, eò magis
+                                        <br>rebus intellectu indagandis, subtilibus, miris <span class="original">&amp;</span><span class="regularized">et</span> raris, gaudet <span class="original">&amp;</span><span class="regularized">et</span>
+                                        <br>delectatur: Et econtrà, quò quis ad <span class="original">pecuinũ</span><span class="regularized">pecuinum</span> genus magis declinat,
+                                        <br>eò minùs his capitur, <span class="original">&amp;</span><span class="regularized">et</span> sensui corporaliori astrictus est: Utro-
+                                        <br>rumque videmus Exempla, quosdam illis, utpote doctiores, artibus
+                                        <br><span class="original">&amp;</span><span class="regularized">et</span> scientiis politos esse deditos, quàmplurimos hisce, nempe volu-
+                                        <br>ptatibus corporis, libidini, gul<span class="original">æ</span><span class="regularized">ae</span>, pomp<span class="original">æ</span><span class="regularized">ae</span> extern<span class="original">æ</span><span class="regularized">ae</span>, <span class="original">&amp;</span><span class="regularized">et</span> his similibus.
+                                        <br>Ad excolendum autem intellectum Deus infinita arcana abdidit
+                                        <br>in natura, qu<span class="original">æ</span><span class="regularized">ae</span> scientiis <span class="original">&amp;</span><span class="regularized">et</span> artibus innumeris, ut ignis ex silice ex-
+                                        <br>tunduntur, <span class="original">&amp;</span><span class="regularized">et</span> in usum transferuntur: Inter h<span class="original">æ</span><span class="regularized">ae</span>c sunt Chymica
+                                    </div>
                                 </div>
-                            </div>
-                            <br class="discourse-pagebreak"/>
-                            <div class="page">
-                                <span class="pb atalanta-fugiens">8</span>
-                                <div class="ab italic">
-                                  <br/>amatorius <span class="original">æ</span><span class="regularized">ae</span>stimatus fuit (qualis nunc habetur <span class="roman">Phrygius</span>) unde
-                                  <br/>modos inter se mutatos conjicimus: <span class="roman">Phrygio</span> <span class="roman">Timotheum</span>
-                                  <br/><span class="roman">Milesium</span> usum tradunt ad Alexandrum Magnum in rebus bel-               <br/>licis alacriorem <span class="original">&amp;</span><span class="regularized">et</span> animosiorem reddendum, cujus Cicero meminit
-                                  <br/>2. de <span class="original">legib</span><span class="regularized">legibus</span>. <span class="roman">Terpandrum</span> verò <span class="roman">Lesbium</span> <span class="roman">Ionico</span>; qui accersi-               <br/>tus à Laced<span class="original">æ</span><span class="regularized">ae</span>moniis, seditionibus inter se tumultuantibus suavi-               <br/>tate cantus eorum animos adeò delinivit, ut redirent in amici-              <br/>tiam <span class="original">&amp;</span><span class="regularized">et</span> à seditione desisterent: Unde <span class="roman">Lesbii</span> cantores primas
-                                   <br/>semper meruerunt Spartanorum judicio: De Musica sic Fabius,
-                                   <br/>Musica, inquit, est honestum <span class="original">&amp;</span><span class="regularized">et</span> jucundum oblectamentum libe-               <br/>ralibus ingeniis maximè dignum: H<span class="original">æ</span><span class="regularized">ae</span>c tria itaque sensuum magis
-                                   <br/>spiritualium, nempe visus <span class="original">&amp;</span><span class="regularized">et</span> auditus, nec non intellectus ipsius
-                                   <br/>objecta, ut in uno quasi conspectu <span class="original">&amp;</span><span class="regularized">et</span> complexu haberemus, <span class="original">&amp;</span><span class="regularized">et</span> ma-               <br/>gis <span class="original">intelligendũ</span><span class="regularized">intelligendum</span> animis simul <span class="original">&amp;</span><span class="regularized">et</span> semel insinuaremus, En conju-               <br/>ximus Opticam cum Musica <span class="original">&amp;</span><span class="regularized">et</span> sensum cum intellectu, hoc est, ra-               <br/>ra visu <span class="original">&amp;</span><span class="regularized">et</span> auditu cum chymicis emblematibus, qu<span class="original">æ</span><span class="regularized">ae</span> huic scienti<span class="original">æ</span><span class="regularized">ae</span>
-                                   <br/>sunt propria. C<span class="original">æ</span><span class="regularized">ae</span>ter<span class="original">æ</span><span class="regularized">ae</span> enim artes, si emblemata edant de moribus,
-                                   <br/>aur rebus aliis, quàm de natur<span class="original">æ</span><span class="regularized">ae</span> arcanis, alienum hoc videtur ab
-                                   <br/>eorum scopo <span class="original">&amp;</span><span class="regularized">et</span> fine, cùm intelligi omnibus velint <span class="original">&amp;</span><span class="regularized">et</span> debeant;
-                                   <br/>Chemia <span class="original">nõ</span><span class="regularized">non</span> <span class="original">itẽ</span><span class="regularized">item</span>, qu<span class="original">æ</span><span class="regularized">ae</span> ut casta virgo per transennam, <span class="original">&amp;</span><span class="regularized">et</span> veluti Dia-               <br/>na, non <span class="original">absq<span class="original">;</span></span><span class="regularized">absque</span> veste variati coloris visenda est, propter causas alibi
-                                   <br/>expressas: Quatuor, inquam, h<span class="original">æ</span><span class="regularized">ae</span>c, ficta, poëtica <span class="original">&amp;</span><span class="regularized">et</span> allegorica, picta,
-                                   <br/>Emblematica, Veneri sive cupro, non sine Venere sue gratia, incisa,
-                                   <br/>Chymica secretissima, intellectu indaganda <span class="original">&amp;</span><span class="regularized">et</span> denique Musicalia
-                                   <br/>rariora, simul <span class="original">&amp;</span><span class="regularized">et</span> semel uno libro suscipias inq́ue tuum usum dicata
-                                   <br/>adhibeas, qui si potiùs intellectualis fuerit, quàm sensualis, eò uti             -            
+                                <br class="discourse-pagebreak">
+
+                                <div class="page">
+                                    <span class="pb atalanta-fugiens">7</span>
+                                    <div class="ab italic">
+                                        <br>secreta non postrema, sed post divinorum indagationem, omnium
+                                        <br>prima <span class="original">&amp;</span><span class="regularized">et</span> preciosissima, non circumforaneis deceptoribus <span class="original">&amp;</span><span class="regularized">et</span> fucis
+                                        <br>pseudo-chymicis (qui in his sunt asini ad lyram, quippe ad omni bo-
+                                        <br>na doctrina <span class="original">&amp;</span><span class="regularized">et</span> intentione alienissimi) sed ingeniis altioribus, libe-
+                                        <br>raliter educatis, <span class="original">&amp;</span><span class="regularized">et</span> ad majora natis investiganda, cùm sint val-
+                                        <br>dè subtilia, augusta, sacra, rara <span class="original">&amp;</span><span class="regularized">et</span> abstrusa, ideoq́ue intellectu
+                                        <br>comprehendenda priùs, quàm sensu, potiùs per contemplationem
+                                        <br>profundam ex lectione authorum, eorumq́ue inter se <span class="original">&amp;</span><span class="regularized">et</span> cum natu-
+                                        <br>r<span class="original">æ</span><span class="regularized">ae</span> operibus comparationem, quàm operationem sensitivam, seu
+                                        <br>manualem experimentationem, qu<span class="original">æ</span><span class="regularized">ae</span> c<span class="original">œ</span><span class="regularized">oe</span>ca est sine Theorica pr<span class="original">æ</span><span class="regularized">ae</span>-
+                                        <br>via: Post scientias huiusmodi intellectuales proximè numerantur,
+                                        <br><span class="original">quę</span><span class="regularized">quae</span> de visibili ac audibili objecto tractant, ut sunt Optica seu per-
+                                        <br>spectiva, <span class="original">&amp;</span><span class="regularized">et</span> pictura, qu<span class="original">æ</span><span class="regularized">ae</span> dicitur à quibusdam Poëtis muta, ut
+                                        <br>h<span class="original">æ</span><span class="regularized">ae</span>c vice versâ, pictura loquens, nec non Musica sive vocalis
+                                        <br>seu organica: In hac antiqui Philosophi adeò se exercuerunt, ut in-
+                                        <br>doctus haberetur, <span class="original">&amp;</span><span class="regularized">et</span> ad <span class="original">myrtu</span><span class="regularized">myrtum</span> canere cogeretur, qui <span class="original">lyra</span><span class="regularized">lyram</span> recusasset
+                                        <br>in conviviis, ut de <span class="roman">Themistocle</span> traditur: In Musica <span class="roman">Socrates</span>
+                                        <br>institutus <span class="original">&amp;</span><span class="regularized">et</span> ipse <span class="roman">Plato</span>, qui non harmonicè <span class="original">compositũ</span><span class="regularized">compositum</span> eum statuit,
+                                        <br>qui harmonia Musicali non gaudeat: In eâdem <span class="roman">Pythagoras</span> per-
+                                        <br>celebris fuit, qui manè <span class="original">&amp;</span><span class="regularized">et</span> vesperi music<span class="original">æ</span><span class="regularized">ae</span> symphonia ad compo-
+                                        <br>nendos suorum discipulorum animos usus dicitur: Est enim Mu-
+                                        <br>sic<span class="original">æ</span><span class="regularized">ae</span> h<span class="original">æ</span><span class="regularized">ae</span>c peculiaris vis, ut affectus excitet vel mulceat, pro diver-
+                                        <br>so Musicali modo: Sic <span class="roman">Phrygius</span> Modus apud <span class="roman">Gr<span class="original">æ</span><span class="regularized">ae</span>cos</span> diceba-
+                                        <br>tur bellicosus propterea, quod in bello <span class="original">&amp;</span><span class="regularized">et</span> in pr<span class="original">œ</span><span class="regularized">oe</span>lio ineundo accinere-
+                                        <br>tur, <span class="original">&amp;</span><span class="regularized">et</span> singularem vim haberet ad animos militum concitandos;
+                                        <br>cujus vice ad eundem usum nunc adhibetur <span class="roman">Ionicus</span>, qui olim
+                                    </div>
                                 </div>
-                            </div>
-                            <br class="discourse-pagebreak"/>
-                            <div class="page">
-                                <span class="pb atalanta-fugiens">9</span>
-                                <div class="ab italic">-               <br/>lior <span class="original">&amp;</span><span class="regularized">et</span> jucundior olim futurus est: quod si verò primum sensui man-               <br/>cipatus, nullum est dubium quin à sensu ad intellectum transitus
-                                   <br/>fiet, tanquam per ostium: Nihil enim in intellectu esse dicitur, quod
-                                   <br/>non per sensum aliquem introiverit, cùm hominis recens nati in-               <br/>tellectus instar tabul<span class="original">æ</span><span class="regularized">ae</span> ras<span class="original">æ</span><span class="regularized">ae</span> habeatur, in qua nihil adhuc scriptum,
-                                   <br/>sed quod libet sensu mediante, tanquam stylo, scribi possit: Et vulgo
-                                   <br/>dicitur; Ignoti nulla cupido, quia oportet, ut intellectui, veluti dicta-               <br/>tori <span class="original">&amp;</span><span class="regularized">et</span> arbitro, sensus indagatores <span class="original">&amp;</span><span class="regularized">et</span> nuncii, omne scibile primitus
-                                   <br/>apportent <span class="original">&amp;</span><span class="regularized">et</span> innotescere faciant, <span class="original">tanquã</span><span class="regularized">tanquam</span> Excubitores ad (sua or-               <br/>gana) civitatis alicujus portas <span class="original">invigilãtes</span><span class="regularized">invigilantes</span>. De ratione inscriptionis
-                                   <br/>horum <span class="original">emblematũ</span><span class="regularized">emblematum</span>, ne <span class="original">&amp;</span><span class="regularized">et</span> h<span class="original">æ</span><span class="regularized">ae</span>c tibi monstrosa videatur <span class="original">&amp;</span><span class="regularized">et</span> absona,
-                                   <br/>pauca adjiciam: <span class="roman">Atalanta</span> Poëtis celebrata est propter fugam,
-                                   <br/>quâ omnes procos in certamine antevertit, ideóque ipsis victis pro
-                                   <br/>virgine, pr<span class="original">æ</span><span class="regularized">ae</span>mio victori<span class="original">æ</span><span class="regularized">ae</span> proposito, mors obtigit, donec ab <span class="roman">Hippo-                  <br/>mene</span>, juvene audaciore <span class="original">&amp;</span><span class="regularized">et</span> provido, superata <span class="original">&amp;</span><span class="regularized">et</span> obtenta sit trium
-                                   <br/>malorum aureorum per vices inter currendum objectu, qu<span class="original">æ</span><span class="regularized">ae</span> dum
-                                   <br/>illa tolleret, pr<span class="original">æ</span><span class="regularized">ae</span>venta est ab eo, metam jam attingente: H<span class="original">æ</span><span class="regularized">ae</span>c <span class="roman">Ata-                  <br/>lanta</span> ut fugit, sic una vox Musicalis semper fugit ante aliam <span class="original">&amp;</span><span class="regularized">et</span>
-                                   <br/>altera insequitur, ut <span class="roman">Hippomenes</span>: In tertia tamen stabiliun-               <br/>tur <span class="original">&amp;</span><span class="regularized">et</span> firmantur, qu<span class="original">æ</span><span class="regularized">ae</span> simplex est <span class="original">&amp;</span><span class="regularized">et</span> unius valoris, tanquam
-                                   <br/>malo aureo: H<span class="original">æ</span><span class="regularized">ae</span>c eadem virgo merè Chymica est, nempe Mercu-               <br/>rius Philosophicus à sulfure aureo in fuga fixatus <span class="original">&amp;</span><span class="regularized">et</span> retentus,
-                                   <br/>quem si quis sistere noverit, sponsam, quam ambit, habebit, sin mi-               <br/>nus, perditionem suarum rerum <span class="original">&amp;</span><span class="regularized">et</span> interitum: Ex <span class="roman">Hippome-                  <br/>ne</span> <span class="original">&amp;</span><span class="regularized">et</span> <span class="roman">Atalanta</span> coëuntibus in templo Matris Deûm, hoc est, va-               <br/>se, fiunt leones, sive rubeum acquirunt colorem. Obtinuit quoque
+                                <br class="discourse-pagebreak">
+
+                                <div class="page">
+                                    <span class="pb atalanta-fugiens">8</span>
+                                    <div class="ab italic">
+                                        <br>amatorius <span class="original">æ</span><span class="regularized">ae</span>stimatus fuit (qualis nunc habetur <span class="roman">Phrygius</span>) unde
+                                        <br>modos inter se mutatos conjicimus: <span class="roman">Phrygio</span> <span class="roman">Timotheum</span>
+                                        <br><span class="roman">Milesium</span> usum tradunt ad Alexandrum Magnum in rebus bel-
+                                        <br>licis alacriorem <span class="original">&amp;</span><span class="regularized">et</span> animosiorem reddendum, cujus Cicero meminit
+                                        <br>2. de <span class="original">legib</span><span class="regularized">legibus</span>. <span class="roman">Terpandrum</span> verò <span class="roman">Lesbium</span> <span class="roman">Ionico</span>; qui accersi-
+                                        <br>tus à Laced<span class="original">æ</span><span class="regularized">ae</span>moniis, seditionibus inter se tumultuantibus suavi-
+                                        <br>tate cantus eorum animos adeò delinivit, ut redirent in amici-
+                                        <br>tiam <span class="original">&amp;</span><span class="regularized">et</span> à seditione desisterent: Unde <span class="roman">Lesbii</span> cantores primas
+                                        <br>semper meruerunt Spartanorum judicio: De Musica sic Fabius,
+                                        <br>Musica, inquit, est honestum <span class="original">&amp;</span><span class="regularized">et</span> jucundum oblectamentum libe-
+                                        <br>ralibus ingeniis maximè dignum: H<span class="original">æ</span><span class="regularized">ae</span>c tria itaque sensuum magis
+                                        <br>spiritualium, nempe visus <span class="original">&amp;</span><span class="regularized">et</span> auditus, nec non intellectus ipsius
+                                        <br>objecta, ut in uno quasi conspectu <span class="original">&amp;</span><span class="regularized">et</span> complexu haberemus, <span class="original">&amp;</span><span class="regularized">et</span> ma-
+                                        <br>gis <span class="original">intelligendũ</span><span class="regularized">intelligendum</span> animis simul <span class="original">&amp;</span><span class="regularized">et</span> semel insinuaremus, En conjun-
+                                        <br>ximus Opticam cum Musica <span class="original">&amp;</span><span class="regularized">et</span> sensum cum intellectu, hoc est, ra-
+                                        <br>ra visu <span class="original">&amp;</span><span class="regularized">et</span> auditu cum chymicis emblematibus, qu<span class="original">æ</span><span class="regularized">ae</span> huic scienti<span class="original">æ</span><span class="regularized">ae</span>
+                                        <br>sunt propria. C<span class="original">æ</span><span class="regularized">ae</span>ter<span class="original">æ</span><span class="regularized">ae</span> enim artes, si emblemata edant de moribus,
+                                        <br>aut rebus aliis, quàm de natur<span class="original">æ</span><span class="regularized">ae</span> arcanis, alienum hoc videtur ab
+                                        <br>eorum scopo <span class="original">&amp;</span><span class="regularized">et</span> fine, cùm intelligi omnibus velint <span class="original">&amp;</span><span class="regularized">et</span> debeant;
+                                        <br>Chemia <span class="original">nõ</span><span class="regularized">non</span> <span class="original">itẽ</span><span class="regularized">item</span>, qu<span class="original">æ</span><span class="regularized">ae</span> ut casta virgo per transennam, <span class="original">&amp;</span><span class="regularized">et</span> veluti Dia-
+                                        <br>na, non <span class="original">absq<span class="original">;</span></span><span class="regularized">absque</span> veste variati coloris visenda est, propter causas alibi
+                                        <br>expressas: Quatuor, inquam, h<span class="original">æ</span><span class="regularized">ae</span>c, ficta, poëtica <span class="original">&amp;</span><span class="regularized">et</span> allegorica, picta,
+                                        <br>Emblematica, Veneri sive cupro, non sine Venere seu gratia, incisa,
+                                        <br>Chymica secretissima, intellectu indaganda <span class="original">&amp;</span><span class="regularized">et</span> denique Musicalia
+                                        <br>rariora, simul <span class="original">&amp;</span><span class="regularized">et</span> semel uno libro suscipias inq́ue tuum usum dicata
+                                        <br>adhibeas, qui si potiùs intellectualis fuerit, quàm sensualis, eò uti - </div>
                                 </div>
+                                <br class="discourse-pagebreak">
+
+                                <div class="page">
+                                    <span class="pb atalanta-fugiens">9</span>
+                                    <div class="ab italic">-
+                                        <br>lior <span class="original">&amp;</span><span class="regularized">et</span> jucundior olim futurus est: quod si verò primum sensui man-
+                                        <br>cipatus, nullum est dubium quin à sensu ad intellectum transitus
+                                        <br>fiet, tanquam per ostium: Nihil enim in intellectu esse dicitur, quod
+                                        <br>non per sensum aliquem introiverit, cùm hominis recens nati in-
+                                        <br>tellectus instar tabul<span class="original">æ</span><span class="regularized">ae</span> ras<span class="original">æ</span><span class="regularized">ae</span> habeatur, in qua nihil adhuc scriptum,
+                                        <br>sed quod libet sensu mediante, tanquam stylo, scribi possit: Et vulgo
+                                        <br>dicitur; Ignoti nulla cupido, quia oportet, ut intellectui, veluti dicta-
+                                        <br>tori <span class="original">&amp;</span><span class="regularized">et</span> arbitro, sensus indagatores <span class="original">&amp;</span><span class="regularized">et</span> nuncii, omne scibile primitus
+                                        <br>apportent <span class="original">&amp;</span><span class="regularized">et</span> innotescere faciant, <span class="original">tanquã</span><span class="regularized">tanquam</span> Excubitores ad (sua or-
+                                        <br>gana) civitatis alicujus portas <span class="original">invigilãtes</span><span class="regularized">invigilantes</span>. De ratione inscriptionis
+                                        <br>horum <span class="original">emblematũ</span><span class="regularized">emblematum</span>, ne <span class="original">&amp;</span><span class="regularized">et</span> h<span class="original">æ</span><span class="regularized">ae</span>c tibi monstrosa videatur <span class="original">&amp;</span><span class="regularized">et</span> absona,
+                                        <br>pauca adjiciam: <span class="roman">Atalanta</span> Poëtis celebrata est propter fugam,
+                                        <br>quâ omnes procos in certamine antevertit, ideóque ipsis victis pro
+                                        <br>virgine, pr<span class="original">æ</span><span class="regularized">ae</span>mio victori<span class="original">æ</span><span class="regularized">ae</span> proposito, mors obtigit, donec ab <span class="roman">Hippo-                  <br>mene</span>, juvene audaciore <span class="original">&amp;</span><span class="regularized">et</span> provido, superata <span class="original">&amp;</span><span class="regularized">et</span> obtenta sit trium
+                                        <br>malorum aureorum per vices inter currendum objectu, qu<span class="original">æ</span><span class="regularized">ae</span> dum
+                                        <br>illa tolleret, pr<span class="original">æ</span><span class="regularized">ae</span>venta est ab eo, metam jam attingente: H<span class="original">æ</span><span class="regularized">ae</span>c <span class="roman">Ata-                  <br>lanta</span> ut fugit, sic una vox Musicalis semper fugit ante aliam <span class="original">&amp;</span><span class="regularized">et</span>
+                                        <br>altera insequitur, ut <span class="roman">Hippomenes</span>: In tertia tamen stabiliun-
+                                        <br>tur <span class="original">&amp;</span><span class="regularized">et</span> firmantur, qu<span class="original">æ</span><span class="regularized">ae</span> simplex est <span class="original">&amp;</span><span class="regularized">et</span> unius valoris, tanquam
+                                        <br>malo aureo: H<span class="original">æ</span><span class="regularized">ae</span>c eadem virgo merè Chymica est, nempe Mercu-
+                                        <br>rius Philosophicus à sulfure aureo in fuga fixatus <span class="original">&amp;</span><span class="regularized">et</span> retentus,
+                                        <br>quem si quis sistere noverit, sponsam, quam ambit, habebit, sin mi-
+                                        <br>nus, perditionem suarum rerum <span class="original">&amp;</span><span class="regularized">et</span> interitum: Ex <span class="roman">Hippome-                  <br>ne</span> <span class="original">&amp;</span><span class="regularized">et</span> <span class="roman">Atalanta</span> coëuntibus in templo Matris Deûm, hoc est, va-
+                                        <br>se, fiunt leones, sive rubeum acquirunt colorem. Obtinuit quoque
+                                    </div>
+                                </div>
+                                <br class="discourse-pagebreak">
+
+                                <div class="page">
+                                    <span class="pb atalanta-fugiens">10</span>
+                                    <div class="ab italic">
+                                        <br>h<span class="original">æ</span><span class="regularized">ae</span>c virgo victoriam pr<span class="original">æ</span><span class="regularized">ae</span> viris, apro quodam insignis magnitudinis
+                                        <br>occiso, unde pr<span class="original">æ</span><span class="regularized">ae</span>mio à <span class="roman">Meleagro</span> donata est: Apud <span class="roman">Steth<span class="original">æ</span><span class="regularized">ae</span>um</span>
+                                        <br><span class="original">Æ</span><span class="regularized">Ae</span>sculapii fanum è saxo percusso aquam elicuit, quam sitibunda
+                                        <br>bibit: Qu<span class="original">æ</span><span class="regularized">ae</span> cùm allegorica <span class="original">&amp;</span><span class="regularized">et</span> Emblematica revera sint <span class="original">&amp;</span><span class="regularized">et</span> nullo
+                                        <br>modo historica, volui in hujus Heroin<span class="original">æ</span><span class="regularized">ae</span> commemorationem intel-
+                                        <br>lectualem hunc tractatum Emblematicum indigetare, pr<span class="original">æ</span><span class="regularized">ae</span>sertim
+                                        <br>cùm poma ei projecta ex hortis <span class="roman">Hesperiis</span> à <span class="roman">Venere</span>, suavitatis
+                                        <br>Dea, <span class="roman">Hippomeni</span> fuerint ministrata: In modulis illis seu fugis
+                                        <br>Musicis hoc observatum videtis, quod singula disticha ad tres il-
+                                        <br>las voces adaptata convenienter canendo exprimi possint, in qui-
+                                        <br>bus cùm uni simplici voci tot varietates fugarum sint accommo-
+                                        <br>dat<span class="original">æ</span><span class="regularized">ae</span>, omnis cordatus <span class="original">&amp;</span><span class="regularized">et</span> intelligens hanc quoque Emblematicam
+                                        <br>quasi figurationem, in his, ut <span class="original">&amp;</span><span class="regularized">et</span> in distichis <span class="original">adaptationẽ</span><span class="regularized">adaptationem</span> ad singu-
+                                        <br>las voculas, boni consulet <span class="original">&amp;</span><span class="regularized">et</span> pro nonnihilo reputabit: Si enim
+                                        <br>mercatores nonnulli pro magna pecuni<span class="original">æ</span><span class="regularized">ae</span> summa artificium pictur<span class="original">æ</span><span class="regularized">ae</span>
+                                        <br>aliquod <span class="original">æ</span><span class="regularized">ae</span>stimant <span class="original">&amp;</span><span class="regularized">et</span> emunt, ubi soli oculi falluntur, cùm natur<span class="original">æ</span><span class="regularized">ae</span>
+                                        <br>propinquissimum judicent, quid ni literati has figuras, qu<span class="original">æ</span><span class="regularized">ae</span> <span class="original">&amp;</span><span class="regularized">et</span> in-
+                                        <br>tellectui <span class="original">&amp;</span><span class="regularized">et</span> sensibus pluribus inserviunt ita, ut magna inde spe-
+                                        <br>randa sit utilitas pr<span class="original">æ</span><span class="regularized">ae</span>ter oblectationem, in precio habeant <span class="original">&amp;</span><span class="regularized">et</span> ma-
+                                        <br>gni censeant? Vale.
+                                    </div>
+
+                                </div>
+                                <br class="discourse-pagebreak">
                             </div>
-                            <br class="discourse-pagebreak"/>
-                            <div class="page">
-                                <span class="pb atalanta-fugiens">10</span>
-                                <div class="ab italic"> 
-                                   <br/>h<span class="original">æ</span><span class="regularized">ae</span>c virgo victoriam pr<span class="original">æ</span><span class="regularized">ae</span> viris, apro quodam insignis magnitudinis
-                                   <br/>occiso, unde pr<span class="original">æ</span><span class="regularized">ae</span>mio à <span class="roman">Meleagro</span> donata est: Apud <span class="roman">Steth<span class="original">æ</span><span class="regularized">ae</span>um</span>
-                                   <br/><span class="original">Æ</span><span class="regularized">Ae</span>sculapii fanum è saxo percusso aquam elicuit, quam sitibunda
-                                   <br/>bibit: Qu<span class="original">æ</span><span class="regularized">ae</span> cùm allegorica <span class="original">&amp;</span><span class="regularized">et</span> Emblematica revera sint <span class="original">&amp;</span><span class="regularized">et</span> nullo
-                                   <br/>modo historica, volui in hujus Heroin<span class="original">æ</span><span class="regularized">ae</span> commemorationem intel-               <br/>lectualem hunc tractatum Emblematicum indigetare, pr<span class="original">æ</span><span class="regularized">ae</span>sertim
-                                   <br/>cùm poma ei projecta ex hortis <span class="roman">Hesperiis</span> à <span class="roman">Venere</span>, suavitatis
-                                   <br/>Dea, <span class="roman">Hippomeni</span> fuerint ministrata: In modulis illis seu fugis
-                                   <br/>Musicis hoc observatum videtis, quod singula disticha ad tres il-               <br/>las voces adaptata convenienter canendo exprimi possint, in qui-               <br/>bus cùm uni simplici voci tot varietates fugarum sint accommo-               <br/>dat<span class="original">æ</span><span class="regularized">ae</span>, omnis cordatus <span class="original">&amp;</span><span class="regularized">et</span> intelligens hanc quoque Emblematicam
-                                   <br/>quasi figurationem, in his, ut <span class="original">&amp;</span><span class="regularized">et</span> in distichis <span class="original">adaptationẽ</span><span class="regularized">adaptationem</span> ad singu-               <br/>las voculas, boni consulet <span class="original">&amp;</span><span class="regularized">et</span> pro nonnihilo reputabit: Si enim
-                                   <br/>mercatores nonnulli pro magna pecuni<span class="original">æ</span><span class="regularized">ae</span> summa artificium pictur<span class="original">æ</span><span class="regularized">ae</span>
-                                   <br/>aliquod <span class="original">æ</span><span class="regularized">ae</span>stimant <span class="original">&amp;</span><span class="regularized">et</span> emunt, ubi soli oculi falluntur, cùm natur<span class="original">æ</span><span class="regularized">ae</span>
-                                   <br/>propinquissimum judicent, quid ni literati has figuras, qu<span class="original">æ</span><span class="regularized">ae</span> <span class="original">&amp;</span><span class="regularized">et</span> in-               <br/>tellecctui <span class="original">&amp;</span><span class="regularized">et</span> sensibus pluribus inserviunt ita, ut magna inde spe-               <br/>randa sit utilitas pr<span class="original">æ</span><span class="regularized">ae</span>ter oblectationem, in precio habeant <span class="original">&amp;</span><span class="regularized">et</span> ma-               <br/>gni censeant? Vale.
-                                </div>          
-                            </div>
-                            <br class="discourse-pagebreak"/>
-                        </div><!-- end preface la -->
-					</div><!-- end english -->
-				</div><!-- end original -->
-			</section><!-- end emblem section -->
-		</div><!-- END EMBLEM -->
-	</main> <!-- END OF EMBLEM PAGE -->
-    <div class="_collections"></div>
-    <div class="_footer"></div>
-<!-- JS -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
     <script src="../assets/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hogan.js/3.0.2/hogan.min.js" integrity="sha256-jIAAmB65ff5CEFvV6DRfRWjHFwqq+AHeV4le8f8PYp4=" crossorigin="anonymous"></script>
+    <script src="../assets/js/collections.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="../assets/js/vendors/jquery-ui-1.12.1/jquery-ui.js"></script>
     <script src="../assets/js/page.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.5/lunr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js"></script>
     <script src="../assets/js/lunr-languages/lunr.stemmer.support.js"></script>
     <script src="../assets/js/lunr-languages/lunr.multi.js"></script>
     <script src="../assets/js/lunr-languages/lunr.de.js"></script>
@@ -688,7 +1102,6 @@
     <script src="../assets/js/vendors/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="../assets/js/vendors/waypoints/lib/noframework.waypoints.min.js"></script>
     <script src="../assets/js/vendors/waypoints/lib/shortcuts/sticky.min.js"></script>
-    <script src="../assets/js/vendors/waypoints/lib/waypoints.debug.js"></script> <!-- remove in production -->
     <script src="../assets/js/vendors/openseadragon/openseadragon.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="../assets/js/emblem.js"></script>

@@ -1,0 +1,106 @@
+@import 'utilities';
+@import 'colors';
+
+@media print {
+	//else if edition latin normal
+	div.original div.lang--latin.edition--regularized {
+		display: grid !important;
+
+		span.original {
+			display: none !important;
+		}
+		.discourse-p2 {
+			border-top: 2px solid gray;
+			margin-top: 4rem;
+			padding-top: 4rem;
+		}
+	}
+	div.original div.lang--latin._frontispiece--latin.edition--regularized {
+		span.italic {
+			font-family: sans-serif !important;
+		}
+		.caps {
+			font-variant: small-caps !important;
+		}
+	}
+	div.original div.lang--latin._author-epigram--latin.edition--regularized {
+		span.v-line, 
+		span.v-line-indent {
+			line-height: 1.8 !important;
+		}
+		span.v-line-indent {
+			margin-left: 20mm !important;
+		}
+	}
+	div.original div.lang--latin._dedication--latin.edition--regularized {
+		span.regularized {
+			display: inline !important;
+		}
+		.preface.la {
+			font-family: sans-serif !important;
+			line-height: 1.8 !important;
+		}
+		.caps {
+			font-variant: small-caps !important;
+		}
+		.caps-large {
+			text-transform: uppercase !important;
+		}
+		div.page:nth-of-type(2), 
+		div.page:nth-of-type(3) {
+			border-top: 2px solid gray;
+			margin-top: 3rem;
+			padding-top: 4rem;
+		}
+		div.page div:nth-child(3) {
+			font-style: italic !important;
+		}
+	}
+		div.original div.lang--latin._preface--latin.edition--regularized {
+		div.page .ab.italic {
+			font-family: sans-serif !important;
+			font-style: normal !important;
+			line-height: 1.8 !important;
+		}
+		div.page .ab.italic span.roman {
+			font-style: italic !important;
+		}
+		.page:nth-of-type(2), 
+		.page:nth-of-type(3), 
+		.page:nth-of-type(4), 
+		.page:nth-of-type(5) {
+			border-top: 2px solid gray;
+			margin-top: 4rem;
+			padding-top: 3rem;
+		}
+	}
+	div.translation.is-hidden div.lang--english.edition--normalized, 
+	div.translation.is-hidden div.lang--english.edition--facsimile, 
+	div.original div.lang--german.edition--facsimile.is-hidden, 
+	div.translation.is-hidden div.lang--english._frontispiece--english.edition--normalized, 
+	div.translation.is-hidden div.lang--english._frontispiece--english.edition--facsimile, 
+	div.translation.is-hidden div.lang--english._author-epigram--english.edition--normalized, 
+	div.translation.is-hidden div.lang--english._author-epigram--english.edition--facsimile, 
+	div.translation.is-hidden div.lang--english._dedication--english.edition--normalized, 
+	div.translation.is-hidden div.lang--english._dedication--english.edition--facsimile, 
+	div.translation.is-hidden div.lang--english._preface--english.edition--normalized, 
+	div.translation.is-hidden div.lang--english._preface--english.edition--facsimile {
+		display: none !important;
+
+		span.original, 
+		span.pb {
+			display: none !important;
+		}
+	}
+
+	//main.emblem-page .panel--right section.section__motto ._motto--latin div.image {
+	//	margin-top: 0 !important;
+	//}
+	//main.emblem-page .panel--right section.section__motto .original h1.title {
+	//	font-size: 1.75rem !important;
+	//	margin-bottom: 5rem !important;
+	//}
+	//.discourse-p1 > h3 {
+	//	margin-top: 5rem !important;
+	//}
+}
