@@ -79,10 +79,14 @@
 		border-bottom: 5px solid $red_dark;
 		color: $red_dark;
 	}
-	.results__item h3 a:hover {
+	.results__item h3 a:hover, 
+	.results__item h3 a:focus {
 		border-bottom: 5px solid $red;
 		color: $red;
 		transition: .2s;
+	}
+	.results__item h3 a:focus {
+		outline: 1px dotted #000;
 	}
 	.results__num {
 		align-self: flex-end;
@@ -147,11 +151,15 @@
 		padding: .5rem;
 		text-align: center;
 	}
-	.results__item--image-terms h3 a:hover {
-		background-color: $red;
+	.results__item--image-terms h3 a:hover, 
+	.results__item--image-terms h3 > a:focus {
+		background-color: $red !important;
 		color: $white_transparent;
 		cursor: pointer;
 		transition: .2s;
+	}
+	.results__item--image-terms h3 > a:focus {
+		outline: 2px dotted #000;
 	}
 	.results__item--image-terms span:nth-of-type(1) {
 		align-self: flex-start;
