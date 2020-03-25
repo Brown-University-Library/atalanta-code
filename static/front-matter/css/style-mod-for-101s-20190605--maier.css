@@ -2161,6 +2161,12 @@ input[type=submit] {
     padding: 30px 0
 }
 
+@media screen and (max-width:768px) and (orientation: portrait) {
+    .header-banner {
+        padding-top: 16px;
+    }
+}
+
 @media(min-width:768px) {
     .header-banner {
         padding: 160px 0 89px
@@ -2187,6 +2193,26 @@ input[type=submit] {
     }
 } */
 
+@media screen and (max-width:320px) and (orientation: portrait) {
+    .header-banner .header-bg > div {
+        top: 0 !important;
+        margin-top: 17.75vh !important;
+    }
+}
+
+@media screen and (max-width:380px) and (orientation: portrait) {
+    .header-area {
+        height: auto !important;
+    }
+    .header-banner {
+        height: calc(auto + 155px) !important;
+    }
+    .header-banner .header-bg > div {
+        top: 0 !important;
+        margin-top: 53% !important;
+    }
+}
+
 .header-banner h1 {
     margin-bottom: 23px;
     word-wrap: break-word
@@ -2194,6 +2220,13 @@ input[type=submit] {
 
 .header-banner h1 a {
     color: #fff
+}
+
+@media screen and (max-width:767px) and (orientation: portrait) {
+    .header-banner h1 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
 }
 
 @media(min-width:768px) {
@@ -2375,6 +2408,12 @@ input[type=submit] {
     display: flex;
     flex-wrap: wrap;
     z-index: 2
+}
+
+@media screen and (max-width:768px) and (orientation: portrait) {
+    .header-area {
+        max-height: 50vh !important;
+    }
 }
 
 @media(min-width:768px) {
@@ -4618,6 +4657,12 @@ body {
 .content {
     background: #fff;
     padding: 50px 0
+}
+
+@media screen and (max-width:768px) and (orientation: portrait) {
+    .content {
+        margin-top: 50vh !important;
+    }
 }
 
 @media(min-width:768px) {
@@ -8184,9 +8229,42 @@ html.magnifying>body {
     }
 }
 
-a.fresco:focus {
+@media screen and (max-width:768px) and (orientation: portrait) {
+    #forced-gutter-fade {
+        margin-top: 50vh !important;
+    }
+}
+
+a.lity-link:focus {
     background: transparent !important;
     border-bottom: 1px solid hsla(11, 72%, 51%, 1) !important;
     color: hsla(0, 0%, 30%, 1) !important;
     outline: 1px dotted hsla(0, 0%, 30%, 1);
+}
+.lity-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.lity-content img {
+    padding-bottom: 100px;
+}
+.lity-container p {
+    outline: 5px solid green;
+    background: #222;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: -100px;
+    padding: 10px 16px 0 16px;
+    
+}
+button.lity-close:hover, 
+button.lity-close:focus {
+    color: rgb(83,181,140);
+    transition: .2s;
+}
+button.lity-close:focus {
+    outline: 1px fotted #fff;
 }
