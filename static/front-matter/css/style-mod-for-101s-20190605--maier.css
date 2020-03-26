@@ -8251,8 +8251,8 @@ a.lity-link:focus {
     padding-bottom: 100px;
 }
 .lity-container p {
-    outline: 5px solid green;
-    background: #222;
+    /*outline: 5px solid green;*/
+    background: #0d0d0d;
     color: #fff;
     font-size: 15px;
     font-weight: 800;
@@ -8260,11 +8260,18 @@ a.lity-link:focus {
     padding: 10px 16px 0 16px;
     
 }
+button.lity-close {
+    background: #363636;
+}
 button.lity-close:hover, 
 button.lity-close:focus {
-    color: rgb(83,181,140);
+    background: #363636;
+    color: hsla(41, 100%, 69%, 1);
     transition: .2s;
 }
 button.lity-close:focus {
-    outline: 1px fotted #fff;
+    outline: 1px dotted #fff;
+}
+.fr-caption {
+    font-weight: 700;
 }
