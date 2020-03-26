@@ -20,10 +20,10 @@
         .header-banner h1 {opacity: 0;}
         .header-banner .caption .by {opacity: 0;}
       }
-/*      div.fr-caption {
+      div.fr-caption {
         font-size: 15px;
         font-weight: bolder;
-      }*/
+      }
       a.lity-link:hover {
         background-color: rgb(83,181,140) !important;
         color: rgb(255,255,255) !important;
@@ -479,7 +479,7 @@
         console.log("img width = " + $imgWidth);
         $('.lity-content').append('<p>' + $caption + '</p>');
         $('.lity-content img').attr('alt', $altText);
-        if (phoneMediaQuery.matches) {
+        if (mobileMediaQuery.matches) {
           $('.lity-content p').css('width', '100%'); 
         }
         else {
