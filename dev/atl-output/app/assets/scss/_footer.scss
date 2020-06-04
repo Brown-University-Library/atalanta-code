@@ -7,6 +7,7 @@ div._footer {
 	max-height: 30vh;
 	padding: 100px 0;
 	width: 100%;
+	margin-bottom: 1.25rem;
 
 	@include media ('>=desktop', '<widescreen') {
 
@@ -15,6 +16,10 @@ div._footer {
 	footer {
 		box-sizing: border-box;
 		color: $white;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: row;
 		font-size: .75rem;
 		height: auto;
 		letter-spacing: .8px;
@@ -33,6 +38,9 @@ div._footer {
 		@include media ('>=desktop', '<widescreen') {
 			padding: 0 5rem;
 		}
+	}
+	.footer--main {
+		
 	}
 	ul {
 
@@ -57,20 +65,79 @@ div._footer {
 		outline: none;
 		text-decoration: underline solid $yellow_bright;
 	}
-/*	.footer--branding {
+	.footer--branding {
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-around;
 		flex-direction: column;
 		height: 100%;
+		padding-bottom: 3rem;
+
+		a {
+			color: $white;
+			font-size: .75rem;
+			font-weight: 400;
+			letter-spacing: .8px;
+			text-transform: uppercase;
+		}
+		a:nth-child(2) {
+			margin-bottom: .75rem;
+		}
+		a:nth-child(1):hover {
+			img {
+				border-bottom: 1px solid $yellow_bright;
+				margin-bottom: calc(1.125rem - 1px);
+			}
+		}
+		a:nth-child(2):hover {
+			color: $yellow_bright;
+			text-decoration: underline;
+			transition: .2s;
+		}
+		a:nth-child(1):focus {
+			outline: none;
+
+			img {
+				border-bottom: 1px solid $yellow_bright;
+				margin-bottom: calc(1.125rem - 1px);
+			}
+		}
+		a:nth-child(2):focus {
+			color: $yellow_bright;
+			outline: none;
+			text-decoration: underline solid $yellow_bright;
+		}
+		img {
+			height: auto;
+			margin-bottom: 1.125rem;
+			width: 19rem;
+		}
+		span {
+			font-size: .625rem;
+		}
 	}
-	h6 {
-		font-size: .75rem;
-		font-weight: 600;
-		text-transform: uppercase;
+}
+
+@media screen and (max-width: 549px) {
+	div._footer {
+		padding: 5rem 0 13rem 0;
+
+		footer {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.footer--main {
+			margin-bottom: 4rem;
+			width: 100%;
+		}
+		.footer--branding {
+			align-items: center;
+			width: 100%;
+		}
 	}
-	img {
-		height: auto;
-		width: 10rem;
-	}*/
+}
+@media screen and (max-width: 399px) {
+	div._footer {
+		padding: 5rem 0 16rem 0;
+	}
 }
