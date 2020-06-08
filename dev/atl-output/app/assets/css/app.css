@@ -2438,6 +2438,10 @@ main.home {
 @media (min-width: 320px) and (max-width: 767px) {
   main.home .hero {
     height: 88vh; } }
+
+@media (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  main.home .hero {
+    height: auto; } }
   main.home .hero-text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2462,9 +2466,16 @@ main.home {
     background: rgba(179, 39, 0, 0.3);
     padding-left: 1.5rem; } }
 
+@media (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  main.home .hero-text {
+    padding-bottom: 2rem; } }
+
 @media (min-width: 768px) and (max-width: 1024px) {
   main.home .hero-text {
     padding-left: 2rem; } }
+  @media screen and (min-width: 1025px) and (max-width: 1199px) {
+    main.home .hero-text {
+      padding-left: 2rem; } }
   main.home .hero-text h1 {
     font-family: "GTSectraDisplayBold", Garamond, Georgia, serif;
     font-size: 9rem;
@@ -2501,8 +2512,6 @@ main.home {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   main.home .hero-text h5 {
-    /*      margin-top: 2rem;
-      padding-top: 0;*/
     width: 38%; } }
 
 @media (min-width: 1025px) and (max-width: 1199px) {
@@ -2524,7 +2533,7 @@ main.home {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   main.home .hero-text h6 {
-    width: 28%; } }
+    width: 36%; } }
 
 @media (min-width: 1025px) and (max-width: 1199px) {
   main.home .hero-text h6 {
@@ -2537,7 +2546,7 @@ main.home {
     background-size: cover;
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    margin: 0 0 0 0; }
+    margin: 0; }
 
 @media (min-width: 320px) and (max-width: 767px) {
   main.home .hero-image {
@@ -2640,8 +2649,6 @@ main.home {
 @media (min-width: 320px) and (max-width: 767px) {
   main.home .intro-text {
     background-image: none;
-    /*      background-position: 50% 80%;
-      background-size: 200%;*/
     max-height: 150vh;
     padding: 3rem 1.5rem; } }
 
@@ -2677,13 +2684,11 @@ main.home {
   main.home .intro-text p {
     font-size: 1.25rem;
     margin-bottom: 1.75rem;
-    text-align: left;
-    /* justified at this size creates too many gaps */ } }
+    text-align: left; } }
 
 @media (min-width: 1025px) and (max-width: 1199px) {
   main.home .intro-text p {
-    text-align: left;
-    /* justified at this size creates too many gaps */ } }
+    text-align: left; } }
   main.home .intro-text p cite {
     font-family: "GTAmerica", "Avenir", Helvetica, Arial, sans-serif;
     font-style: oblique; }
@@ -2708,6 +2713,56 @@ main.home {
     outline: none;
     -webkit-text-decoration: underline solid #000;
     text-decoration: underline solid #000; }
+  main.home .marketing {
+    background-color: #ffae00;
+    color: #333;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    grid-area: 4 / 1 / 5 / 13;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    padding: 4rem 0; }
+    main.home .marketing p {
+      width: 32vw; }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main.home .marketing p {
+    width: 42vw; } }
+  main.home .credits {
+    background-color: #333;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    grid-area: 5 / 1 / 6 / 13;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin-bottom: -1rem;
+    padding-top: 4rem; }
+    main.home .credits p {
+      max-width: 46vw; }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  main.home .credits p {
+    padding: 0 1.25rem;
+    max-width: 100vw; } }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main.home .credits p {
+    max-width: 82vw; } }
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  main.home .credits p {
+    max-width: 62vw; } }
 
 /*$gray: #8e8e8e;
 $black: #000;
@@ -11784,6 +11839,9 @@ main#essay-toc cite {
   main#essay-toc h6 {
     z-index: 2; } }
 
+div._footer[data-nav='home'] {
+  margin-bottom: 0; }
+
 div._footer {
   background: #333;
   display: block;
@@ -11869,23 +11927,26 @@ div._footer {
       font-weight: 400;
       letter-spacing: .8px;
       text-transform: uppercase; }
-    div._footer .footer--branding a:nth-child(2) {
-      margin-bottom: .75rem; }
-    div._footer .footer--branding a:nth-child(1):hover img {
+    div._footer .footer--branding .branding--logo {
+      margin-bottom: 0; }
+    div._footer .footer--branding .branding--series {
+      line-height: 1.2rem;
+      margin-bottom: 1.375rem; }
+    div._footer .footer--branding .branding--logo:hover img {
       border-bottom: 1px solid #ffcd61;
       margin-bottom: calc(1.125rem - 1px); }
-    div._footer .footer--branding a:nth-child(2):hover {
+    div._footer .footer--branding .branding--logo:focus {
+      outline: none; }
+      div._footer .footer--branding .branding--logo:focus img {
+        border-bottom: 1px solid #ffcd61;
+        margin-bottom: calc(1.125rem - 1px); }
+    div._footer .footer--branding .branding--series:hover {
       color: #ffcd61;
       text-decoration: underline;
       -webkit-transition: .2s;
       -o-transition: .2s;
       transition: .2s; }
-    div._footer .footer--branding a:nth-child(1):focus {
-      outline: none; }
-      div._footer .footer--branding a:nth-child(1):focus img {
-        border-bottom: 1px solid #ffcd61;
-        margin-bottom: calc(1.125rem - 1px); }
-    div._footer .footer--branding a:nth-child(2):focus {
+    div._footer .footer--branding .branding--series:focus {
       color: #ffcd61;
       outline: none;
       -webkit-text-decoration: underline solid #ffcd61;
@@ -11894,8 +11955,12 @@ div._footer {
       height: auto;
       margin-bottom: 1.125rem;
       width: 19rem; }
-    div._footer .footer--branding span {
+    div._footer .footer--branding .branding--editor {
       font-size: .625rem; }
+
+@media screen and (max-width: 399px) {
+  div._footer {
+    padding: 5rem 0 16rem 0; } }
 
 @media screen and (max-width: 549px) {
   div._footer {
@@ -11917,8 +11982,11 @@ div._footer {
       align-items: center;
       width: 100%; } }
 
-@media screen and (max-width: 399px) {
-  div._footer {
-    padding: 5rem 0 16rem 0; } }
+@media (min-width: 320px) and (max-width: 767px) {
+  div._footer .footer--branding img {
+    width: 15rem; }
+  div._footer .footer--branding .branding--series,
+  div._footer .footer--branding .branding--editor {
+    text-align: center; } }
 
 /*@import 'breakpoints';*/

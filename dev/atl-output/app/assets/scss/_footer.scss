@@ -1,6 +1,10 @@
 @import 'colors';
 @import 'utilities';
 
+div._footer[data-nav='home'] {
+	margin-bottom: 0;
+}
+
 div._footer {
 	background: $gray;
 	display: block;
@@ -80,21 +84,20 @@ div._footer {
 			letter-spacing: .8px;
 			text-transform: uppercase;
 		}
-		a:nth-child(2) {
-			margin-bottom: .75rem;
+		.branding--logo {
+			margin-bottom: 0;
 		}
-		a:nth-child(1):hover {
+		.branding--series {
+			line-height: 1.2rem;
+			margin-bottom: 1.375rem;
+		}
+		.branding--logo:hover {
 			img {
 				border-bottom: 1px solid $yellow_bright;
 				margin-bottom: calc(1.125rem - 1px);
 			}
 		}
-		a:nth-child(2):hover {
-			color: $yellow_bright;
-			text-decoration: underline;
-			transition: .2s;
-		}
-		a:nth-child(1):focus {
+		.branding--logo:focus {
 			outline: none;
 
 			img {
@@ -102,7 +105,12 @@ div._footer {
 				margin-bottom: calc(1.125rem - 1px);
 			}
 		}
-		a:nth-child(2):focus {
+		.branding--series:hover {
+			color: $yellow_bright;
+			text-decoration: underline;
+			transition: .2s;
+		}
+		.branding--series:focus {
 			color: $yellow_bright;
 			outline: none;
 			text-decoration: underline solid $yellow_bright;
@@ -112,12 +120,16 @@ div._footer {
 			margin-bottom: 1.125rem;
 			width: 19rem;
 		}
-		span {
+		.branding--editor {
 			font-size: .625rem;
 		}
 	}
 }
-
+@media screen and (max-width: 399px) {
+	div._footer {
+		padding: 5rem 0 16rem 0;
+	}
+}
 @media screen and (max-width: 549px) {
 	div._footer {
 		padding: 5rem 0 13rem 0;
@@ -136,8 +148,19 @@ div._footer {
 		}
 	}
 }
-@media screen and (max-width: 399px) {
+@include media ('>=xs-phone', '<tablet') {
 	div._footer {
-		padding: 5rem 0 16rem 0;
-	}
+		.footer--branding {
+			img {
+				width: 15rem;
+			}
+			.branding--series, 
+			.branding--editor {
+				text-align: center;
+			}
+		}
+	}	
 }
+
+
+
