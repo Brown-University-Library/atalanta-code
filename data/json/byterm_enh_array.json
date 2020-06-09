@@ -38,7 +38,7 @@
     {
         "category": "Traits",
         "subcategory": "Attire",
-        "searchTerm": "Classical Clothing",
+        "searchTerm": "Classical clothing",
         "emblems": [
             "12",
             "23",
@@ -67,7 +67,7 @@
     },
     {
         "category": "Architecture",
-        "subcategory": "Architectural Elements",
+        "subcategory": "Architectural elements",
         "searchTerm": "Column",
         "emblems": [
             "28",
@@ -330,7 +330,7 @@
     },
     {
         "category": "Architecture",
-        "subcategory": "Architectural Elements",
+        "subcategory": "Architectural elements",
         "searchTerm": "Pediment",
         "emblems": [
             "40",
@@ -343,7 +343,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "Environment",
+        "subcategory": "Environments",
         "searchTerm": "Plants",
         "emblems": [
             "46",
@@ -448,7 +448,7 @@
     {
         "category": "Nature",
         "subcategory": "Elements",
-        "searchTerm": "Air/Wind",
+        "searchTerm": "Air/wind",
         "emblems": [
             "46",
             "12",
@@ -479,7 +479,7 @@
     },
     {
         "category": "Architecture",
-        "subcategory": "Architectural Elements",
+        "subcategory": "Architectural elements",
         "searchTerm": "Arch",
         "emblems": [
             "12",
@@ -508,8 +508,8 @@
     },
     {
         "category": "Traits",
-        "subcategory": "Bodily State",
-        "searchTerm": "Birth/Pregnancy",
+        "subcategory": "Bodily state",
+        "searchTerm": "Birth/pregnancy",
         "emblems": [
             "34",
             "1"
@@ -518,8 +518,8 @@
     },
     {
         "category": "Nature",
-        "subcategory": "Environment",
-        "searchTerm": "Bodies of Water",
+        "subcategory": "Environments",
+        "searchTerm": "Bodies of water",
         "emblems": [
             "46",
             "12",
@@ -589,8 +589,8 @@
     },
     {
         "category": "Nature",
-        "subcategory": "Environment",
-        "searchTerm": "Elevated Terrain",
+        "subcategory": "Environments",
+        "searchTerm": "Elevated terrain",
         "emblems": [
             "36",
             "31",
@@ -615,7 +615,7 @@
     },
     {
         "category": "Traits",
-        "subcategory": "Life Stage",
+        "subcategory": "Life stage",
         "searchTerm": "Fetus",
         "emblems": [
             "1"
@@ -722,7 +722,7 @@
     },
     {
         "category": "Traits",
-        "subcategory": "Life Stage",
+        "subcategory": "Life stage",
         "searchTerm": "Baby",
         "emblems": [
             "35",
@@ -804,7 +804,7 @@
     },
     {
         "category": "People",
-        "subcategory": "Personification",
+        "subcategory": "Personifications",
         "searchTerm": "Mother Earth",
         "emblems": [
             "2"
@@ -824,7 +824,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "Celestial Bodies",
+        "subcategory": "Celestial bodies",
         "searchTerm": "Planet Earth",
         "emblems": [
             "45",
@@ -854,7 +854,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "States of Matter",
+        "subcategory": "States of matter",
         "searchTerm": "Ash",
         "emblems": [
             "3"
@@ -863,7 +863,7 @@
     },
     {
         "category": "Architecture",
-        "subcategory": "Architectural Elements",
+        "subcategory": "Architectural elements",
         "searchTerm": "Brick",
         "emblems": [
             "21",
@@ -908,7 +908,7 @@
     {
         "category": "Traits",
         "subcategory": "Attire",
-        "searchTerm": "Early Modern Clothing",
+        "searchTerm": "Early modern clothing",
         "emblems": [
             "44",
             "36",
@@ -959,7 +959,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "States of Matter",
+        "subcategory": "States of matter",
         "searchTerm": "Smoke",
         "emblems": [
             "24",
@@ -978,7 +978,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "States of Matter",
+        "subcategory": "States of matter",
         "searchTerm": "Steam",
         "emblems": [
             "3",
@@ -1054,7 +1054,7 @@
     },
     {
         "category": "Architecture",
-        "subcategory": "Architectural Elements",
+        "subcategory": "Architectural elements",
         "searchTerm": "Courtyard",
         "emblems": [
             "10",
@@ -1087,7 +1087,7 @@
     },
     {
         "category": "Architecture",
-        "subcategory": "Architectural Elements",
+        "subcategory": "Architectural elements",
         "searchTerm": "Window",
         "emblems": [
             "44",
@@ -1114,7 +1114,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "Environment",
+        "subcategory": "Environments",
         "searchTerm": "Field",
         "emblems": [
             "6",
@@ -1161,7 +1161,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "Environment",
+        "subcategory": "Environments",
         "searchTerm": "Cave",
         "emblems": [
             "34",
@@ -1180,7 +1180,7 @@
     },
     {
         "category": "Architecture",
-        "subcategory": "Architectural Elements",
+        "subcategory": "Architectural elements",
         "searchTerm": "Door",
         "emblems": [
             "44",
@@ -1233,7 +1233,7 @@
     },
     {
         "category": "Architecture",
-        "subcategory": "Architectural Elements",
+        "subcategory": "Architectural elements",
         "searchTerm": "Passageway",
         "emblems": [
             "18",
@@ -1253,7 +1253,7 @@
     },
     {
         "category": "Traits",
-        "subcategory": "Life Stage",
+        "subcategory": "Life stage",
         "searchTerm": "Elderly",
         "emblems": [
             "39",
@@ -1273,7 +1273,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "Environment",
+        "subcategory": "Environments",
         "searchTerm": "Garden",
         "emblems": [
             "27",
@@ -1299,7 +1299,7 @@
     },
     {
         "category": "Architecture",
-        "subcategory": "Architectural Elements",
+        "subcategory": "Architectural elements",
         "searchTerm": "Hearth",
         "emblems": [
             "22",
@@ -1361,7 +1361,7 @@
     },
     {
         "category": "Traits",
-        "subcategory": "Life Stage",
+        "subcategory": "Life stage",
         "searchTerm": "Child",
         "emblems": [
             "11",
@@ -1393,7 +1393,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "Celestial Bodies",
+        "subcategory": "Celestial bodies",
         "searchTerm": "Moon",
         "emblems": [
             "25",
@@ -1406,7 +1406,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "Celestial Bodies",
+        "subcategory": "Celestial bodies",
         "searchTerm": "Sun",
         "emblems": [
             "25",
@@ -1456,7 +1456,7 @@
     },
     {
         "category": "Architecture",
-        "subcategory": "Architectural Elements",
+        "subcategory": "Architectural elements",
         "searchTerm": "Stairs",
         "emblems": [
             "44",
@@ -1495,8 +1495,8 @@
     },
     {
         "category": "Traits",
-        "subcategory": "Bodily State",
-        "searchTerm": "Sick",
+        "subcategory": "Bodily state",
+        "searchTerm": "Sickness",
         "emblems": [
             "13",
             "48"
@@ -1515,7 +1515,7 @@
     {
         "category": "Things",
         "subcategory": "Shapes",
-        "searchTerm": "Circle/Sphere",
+        "searchTerm": "Circle/sphere",
         "emblems": [
             "45",
             "21",
@@ -1609,7 +1609,7 @@
     {
         "category": "Things",
         "subcategory": "Shapes",
-        "searchTerm": "Cube/Square",
+        "searchTerm": "Cube/square",
         "emblems": [
             "36",
             "21",
@@ -1620,7 +1620,7 @@
     {
         "category": "Traits",
         "subcategory": "Attire",
-        "searchTerm": "Eastern Clothing",
+        "searchTerm": "Eastern clothing",
         "emblems": [
             "44",
             "21"
@@ -1657,7 +1657,7 @@
     {
         "category": "Things",
         "subcategory": "Implements",
-        "searchTerm": "T-Square",
+        "searchTerm": "T-square",
         "emblems": [
             "21"
         ],
@@ -1769,7 +1769,7 @@
     {
         "category": "Traits",
         "subcategory": "Headgear",
-        "searchTerm": "Sun Rays",
+        "searchTerm": "Sun rays",
         "emblems": [
             "34",
             "30",
@@ -1796,8 +1796,8 @@
     },
     {
         "category": "Traits",
-        "subcategory": "Bodily State",
-        "searchTerm": "Death/Dying",
+        "subcategory": "Bodily state",
+        "searchTerm": "Death/dying",
         "emblems": [
             "35",
             "24",
@@ -1850,7 +1850,7 @@
     },
     {
         "category": "People",
-        "subcategory": "Personification",
+        "subcategory": "Personifications",
         "searchTerm": "Wisdom",
         "emblems": [
             "26"
@@ -1859,7 +1859,7 @@
     },
     {
         "category": "Architecture",
-        "subcategory": "Architectural Elements",
+        "subcategory": "Architectural elements",
         "searchTerm": "Lock",
         "emblems": [
             "27"
@@ -1879,7 +1879,7 @@
     {
         "category": "Things",
         "subcategory": "Other",
-        "searchTerm": "Vapor Bath",
+        "searchTerm": "Vapor bath",
         "emblems": [
             "28"
         ],
@@ -1896,7 +1896,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "Celestial Bodies",
+        "subcategory": "Celestial bodies",
         "searchTerm": "Stars",
         "emblems": [
             "45",
@@ -1916,7 +1916,7 @@
     {
         "category": "Traits",
         "subcategory": "Headgear",
-        "searchTerm": "Moon Rays",
+        "searchTerm": "Moon rays",
         "emblems": [
             "34",
             "30"
@@ -1934,7 +1934,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "Environment",
+        "subcategory": "Environments",
         "searchTerm": "Bog",
         "emblems": [
             "37",
@@ -1981,7 +1981,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "Celestial Bodies",
+        "subcategory": "Celestial bodies",
         "searchTerm": "Eclipse",
         "emblems": [
             "45",
@@ -2051,7 +2051,7 @@
     {
         "category": "Traits",
         "subcategory": "Headgear",
-        "searchTerm": "Laurel Wreath",
+        "searchTerm": "Laurel wreath",
         "emblems": [
             "37"
         ],
@@ -2171,7 +2171,7 @@
     },
     {
         "category": "Nature",
-        "subcategory": "Environment",
+        "subcategory": "Environments",
         "searchTerm": "Grave",
         "emblems": [
             "50"

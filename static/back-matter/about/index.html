@@ -18,6 +18,15 @@
     </style>
 
     <script src="../../front-matter/js/bundle.a4684c668735c382d53e2866fd634193e985f586b3ff1e2453752a7d24181ebc.js" defer></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162912752-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-162912752-1');
+    </script>
 
 </head>
 
@@ -43,7 +52,7 @@
                 <li><a href="../../../search/image-search.html">IMAGES</a></li>
                 <li><a href="../../../search/">CONTENTS</a></li>
                 <li class="topnav__search">
-                  <button class="topnav__search--closed">
+                  <button class="topnav__search--closed" aria-label="Search Furnace and Fugue">
                     <span class="topnav__search-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 960 560"
                         xml:space="preserve">
@@ -75,13 +84,13 @@
             </div>
           </nav>
           <div class="search__modal" aria-hidden="true">
-            <button class="x-close" aria-label="Close search modal"></button>
             <form id="ataSearch" class="search__bar">
               <label class="label search__bar__label" for="search__bar__field">Enter your search below</label>
               <input type="text" id="search__bar__field"
                 aria-label="Search the digital edition, scholarly essays or emblem images" />
               <button class="submit" type="submit">Search</button>
             </form>
+            <button class="x-close" aria-label="Close search modal"></button>
           </div>
         </div>
       </div>

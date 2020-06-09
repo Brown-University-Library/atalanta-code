@@ -1983,110 +1983,7 @@ input[type=submit] {
         display: none
     }
 }
-/*
-.search__modal {
-    height: 388px;
-    min-height: 0;
-    max-height: 0;
-    overflow-y: hidden;
-    background-color: #da4929;
-    box-sizing: border-box;
-    color: #222;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin: 0;
-    padding: 0 4rem;
-    position: fixed;
-    top: 42px;
-    width: 100vw;
-    z-index: 1000;
-    left: 0;
-    right: 0
-}
 
-.search__modal button.x-close {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    align-self: flex-end;
-    background-image: url(../images/icon_X-close.svg);
-    background-repeat: no-repeat;
-    background-size: 2rem;
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
-    height: 3.125rem;
-    margin-right: 1.625rem;
-    margin-top: 1rem;
-    width: 3.125rem
-}
-
-.search__modal .search__bar {
-    display: -webkit-box;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    height: 5rem;
-    width: 80%
-}
-
-.search__modal .search__bar__label {
-    display: flex;
-    align-items: center;
-    flex: 0 0 100%;
-    font-weight: 700;
-    font-size: 1.25rem;
-    height: 10rem
-}
-
-.search__modal input#search__bar__field {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid #222;
-    border-radius: 0;
-    color: #222;
-    flex: 1 0 70%;
-    font-size: 3.5rem;
-    outline: none;
-    padding: 0 1rem;
-    margin-right: 1rem;
-    height: 5rem
-}
-
-.search__modal button.submit {
-    align-self: flex-end;
-    box-sizing: border-box;
-    flex: 0 0 15%;
-    font-size: .875rem;
-    font-weight: 600;
-    height: 3.5rem;
-    letter-spacing: .05em;
-    text-transform: uppercase;
-    background-color: #222;
-    border: none;
-    border-bottom: 2px solid #222;
-    color: #f1f1f1
-}
-
-.search__modal button.submit:hover {
-    background-color: transparent;
-    border: 2px solid #222;
-    color: #222;
-    transition: background-color .2s
-}
-
-.search__modal.search__modal--slide-in {
-    max-height: 400px;
-    transition: max-height .35s ease
-}
-*/
 .page-anchor {
     background: #333
 }
@@ -2264,6 +2161,12 @@ input[type=submit] {
     padding: 30px 0
 }
 
+@media screen and (max-width:768px) and (orientation: portrait) {
+    .header-banner {
+        padding-top: 16px;
+    }
+}
+
 @media(min-width:768px) {
     .header-banner {
         padding: 160px 0 89px
@@ -2290,6 +2193,26 @@ input[type=submit] {
     }
 } */
 
+@media screen and (max-width:320px) and (orientation: portrait) {
+    .header-banner .header-bg > div {
+        top: 0 !important;
+        margin-top: 17.75vh !important;
+    }
+}
+
+@media screen and (max-width:380px) and (orientation: portrait) {
+    .header-area {
+        height: auto !important;
+    }
+    .header-banner {
+        height: calc(auto + 155px) !important;
+    }
+    .header-banner .header-bg > div {
+        top: 0 !important;
+        margin-top: 53% !important;
+    }
+}
+
 .header-banner h1 {
     margin-bottom: 23px;
     word-wrap: break-word
@@ -2297,6 +2220,13 @@ input[type=submit] {
 
 .header-banner h1 a {
     color: #fff
+}
+
+@media screen and (max-width:767px) and (orientation: portrait) {
+    .header-banner h1 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
 }
 
 @media(min-width:768px) {
@@ -2478,6 +2408,12 @@ input[type=submit] {
     display: flex;
     flex-wrap: wrap;
     z-index: 2
+}
+
+@media screen and (max-width:768px) and (orientation: portrait) {
+    .header-area {
+        max-height: 50vh !important;
+    }
 }
 
 @media(min-width:768px) {
@@ -4721,6 +4657,12 @@ body {
 .content {
     background: #fff;
     padding: 50px 0
+}
+
+@media screen and (max-width:768px) and (orientation: portrait) {
+    .content {
+        margin-top: 50vh !important;
+    }
 }
 
 @media(min-width:768px) {
@@ -7897,10 +7839,15 @@ html.magnifying>body {
     color: #ba4221
 }
 
-.search-results .results__item h3 a:hover {
+.search-results .results__item h3 a:hover, 
+.search-results .results__item h3 a:focus {
     border-bottom: 5px solid #dc4928;
     color: #dc4928;
     transition: .2s
+}
+
+.search-results .results__item h3 a:focus {
+    outline: 1px dotted #000;
 }
 
 .search-results .results__num {
@@ -7975,11 +7922,16 @@ html.magnifying>body {
     text-align: center
 }
 
-.search-results .results__item--image-terms h3 a:hover {
-    background-color: #dc4928;
+.search-results .results__item--image-terms h3 a:hover, 
+.search-results .results__item--image-terms h3 a:focus {
+    background-color: #dc4928 !important;
     color: rgba(255, 255, 255, .75);
     cursor: pointer;
     transition: .2s
+}
+
+.search-results .results__item--image-terms h3 > a:focus {
+    outline: 2px dotted #000;
 }
 
 .search-results .results__item--image-terms span:nth-of-type(1) {
@@ -8275,4 +8227,50 @@ html.magnifying>body {
             width: 45vw
         }
     }
+}
+
+@media screen and (max-width:768px) and (orientation: portrait) {
+    #forced-gutter-fade {
+        margin-top: 50vh !important;
+    }
+}
+
+a.lity-link:focus {
+    background: transparent !important;
+    border-bottom: 1px solid hsla(11, 72%, 51%, 1) !important;
+    color: hsla(0, 0%, 30%, 1) !important;
+    outline: 1px dotted hsla(0, 0%, 30%, 1);
+}
+.lity-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.lity-content img {
+    padding-bottom: 100px;
+}
+.lity-container p {
+    background: #0d0d0d;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: -100px;
+    padding: 10px 16px 0 16px;
+    
+}
+button.lity-close {
+    background: #363636;
+}
+button.lity-close:hover, 
+button.lity-close:focus {
+    background: #363636;
+    color: hsla(41, 100%, 69%, 1);
+    transition: .2s;
+}
+button.lity-close:focus {
+    outline: 1px dotted #fff;
+}
+.fr-caption {
+    font-weight: 700;
 }

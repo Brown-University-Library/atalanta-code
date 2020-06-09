@@ -2,7 +2,6 @@
 @import 'colors';
 
 .search__modal {
-/*	background-color: $red_transparent;*/
 	background: $red;
 	box-sizing: content-box;
 	color: $black;
@@ -21,17 +20,23 @@
 	button.x-close {
 		align-self: flex-end;
 		background-image: url("../icons/icon_X-close.svg");
+		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 2rem;
 		filter: invert(100%);
 		height: 3.125rem;
 		margin-top: 1rem;
-		margin-right: 1.625rem;
+		position: absolute;
+		right: 5.625rem;
 		width: 3.125rem;
 	}
-	button.x-close:hover {
+	button.x-close:hover, 
+	button.x-close:focus {
 		filter: invert(0%);
 		transition: .2s;
+	}
+	button.x-close:focus {
+		outline: 1px dotted $white;
 	}
 	.search__bar {
 		display: flex;
@@ -40,6 +45,7 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		height: 5rem;
+		margin-top: 4.125rem;
 		width: 80%;
 	}
 	.search__bar__label, 
@@ -87,6 +93,9 @@
 		border: 2px solid $black;
 		color: $black;
 		transition: background-color .2s;
+	}
+	button.submit:focus {
+		outline: 2px dotted $white;
 	}
 	button.submit:active {
 		background-color: $red_dark;

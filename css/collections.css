@@ -3404,6 +3404,10 @@ body {
     font-size: 13px
 }
 
+.opener-holder .js-btns a:focus {
+    outline: 1px dotted white;
+}
+
 .opener-holder .js-btns .btn-up {
     margin: 0 2px
 }
@@ -3546,6 +3550,10 @@ body {
     }
 }
 
+.create-collection .new-collection a:focus {
+    outline: 1px dotted #ffae00;
+}
+
 .collection-view {
     display: none
 }
@@ -3592,6 +3600,10 @@ body {
 .view-icon {
     margin-left: 34px;
     line-height: 0
+}
+
+.view-icon a:focus span {
+    outline: 1px dotted #ffae00;
 }
 
 .view-icon span {
@@ -3747,6 +3759,10 @@ body {
     color: #ffae00
 }
 
+.collection-name .add-elements a:focus {
+    outline: 1px dotted #ffae00;
+}
+
 .collection-name .add-elements h6 {
     font-weight: 600;
     display: inline-block;
@@ -3820,6 +3836,10 @@ body {
 
 .edit-collection ul li a {
     color: #b2b2b2
+}
+
+.edit-collection ul li a:focus {
+    outline: 1px dotted #ffae00;
 }
 
 @media(min-width:1024px) {
@@ -4048,6 +4068,10 @@ body {
     }
 }
 
+.image-description .extra-edits li span a:focus {
+    outline: 1px dotted #ffae00;
+}
+
 .image-description .name-tags {
     display: flex;
     flex-wrap: wrap;
@@ -4067,6 +4091,9 @@ body {
     text-transform: uppercase
 }
 
+.image-description .tag-opener:focus {
+    outline: 1px dotted #ffae00;
+}
 .image-description .tag-opener .icon-down {
     margin: 0 6px;
     font-size: 10px
@@ -4232,6 +4259,10 @@ body {
     color: #ffb000
 }
 
+.slide>li a:focus {
+    text-decoration: underline #ffae00;
+}
+
 .slide .active a {
     color: #ffb000
 }
@@ -4324,7 +4355,7 @@ body {
 
 .add-collections .details .all-tags {
     font-size: 11px;
-    color: gray
+    color: #b2b2b2;
 }
 
 .add-collections .details .slide {
@@ -4350,6 +4381,10 @@ body {
 
 .add-collections .details .view a:hover {
     color: #ffb000
+}
+
+.add-collections .details .view a:focus {
+    outline: 1px dotted #ffae00;
 }
 
 .add-collections .img-holder {
@@ -4411,6 +4446,11 @@ body {
     font-size: 20px;
     color: #ffb000;
     margin-left: 11px
+}
+
+.create-collections .collection-detail input:focus, 
+.create-collections .collection-detail button:focus {
+    outline: 1px solid #ffae00;
 }
 
 @media(min-width:1024px) {
@@ -4551,6 +4591,10 @@ body {
     color: #ffb000
 }
 
+.copy-collections .options a:focus {
+    outline: 1px solid #ffae00;
+}
+
 .delete-collections .collection-detail {
     padding: 50px 13px
 }
@@ -4590,7 +4634,7 @@ body {
 }
 
 .delete-collections .options .option2 {
-    color: gray
+    color: #b2b2b2;
 }
 
 .delete-collections .options a {
@@ -4608,6 +4652,10 @@ body {
 
 .delete-collections .options a:hover {
     color: #ffb000
+}
+
+.delete-collections .options a:focus {
+    outline: 1px solid #ffae00;
 }
 
 .popup-holder {
@@ -4697,6 +4745,10 @@ body {
     display: block
 }
 
+.choose-emblems .image-list a:focus img {
+    outline: 2px dotted #ffae00;
+}
+
 .choose-emblems .add-link {
     color: #ffae00
 }
@@ -4711,6 +4763,10 @@ body {
 
 .choose-emblems .add-link.disabled .link-disabled {
     display: initial
+}
+
+.choose-emblems .add-link:focus {
+    outline: 1px dotted #ffae00;
 }
 
 .choose-emblems .add-link .link-active {

@@ -61,6 +61,9 @@ main#emblem-toc nav.af-toc {
 			mix-blend-mode: lighten;
 		}
 	}
+	a:hover {
+		text-decoration: underline;
+	}
 	li:nth-child(n+1):nth-child(-n+4) a:focus {
 		border-bottom: 2px solid $black_pure;
 	}
