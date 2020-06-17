@@ -2665,159 +2665,201 @@ body {
     display: none!important
 }
 
-#footer {
-    padding: 50px 0;
-    background-color: #333;
-    position: relative
+#footer{
+    padding:50px 0;
+    background-color:#333;
+    position:relative
 }
-
-#footer:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 100%;
-    width: 100%;
-    height: 1000px;
-    background: #333
+#footer:after{
+    content:'';
+    position:absolute;
+    left:0;
+    top:100%;
+    width:100%;
+    height:1000px;
+    background:#333
 }
-
-@media(min-width:768px) {
-    #footer {
-        padding: 100px 0
+@media(min-width:768px){
+    #footer{
+        padding:100px 0
     }
 }
-
-#footer .container {
-    max-width: 1137px;
-    padding: 0 25px
+#footer .container{
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-align:center;
+    align-items:center;
+    -webkit-box-pack:justify;
+    justify-content:space-between;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    flex-direction:row;
+    margin:0 auto;
+    padding:0 25px;
+    position:relative;
+    text-transform:uppercase;
+    width:100%;
+    max-width:1137px
 }
-
-@media(min-width:768px) {
-    #footer .container {
-        padding-right: 19px;
-        padding-left: 14px
+@media(min-width:320px) and (max-width:767px){
+    #footer .container{
+        padding:0 1.5rem
     }
 }
-
-@media(min-width:480px) {
-    .footer-holder {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 0 -15px
+@media(min-width:768px) and (max-width:1023px){
+    #footer .container{
+        padding:0 2rem
     }
 }
-
-.quick-links {
-    margin-bottom: 75px
-}
-
-@media(min-width:480px) {
-    .quick-links {
-        padding: 0 15px;
-        margin-bottom: 0;
-        max-width: 50%
+@media(min-width:1024px) and (max-width:1199px){
+    #footer .container{
+        padding:0 5rem
     }
 }
-
-.quick-links li {
-    font-size: 12px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    text-transform: uppercase
-}
-
-@media(min-width:480px) {
-    .quick-links li {
-        margin-bottom: 12px
+@media(min-width:768px){
+    #footer .container{
+        padding-right:19px;
+        padding-left:14px
     }
 }
-
-.quick-links li:last-child {
-    margin-bottom: 0
+@media screen and (max-width:549px){
+    #footer .container{
+        -webkit-box-orient:vertical;
+        -webkit-box-direction:normal;
+        flex-direction:column;
+        -webkit-box-align:start;
+        align-items:flex-start
+    }
 }
-
-.quick-links li a {
-    color: #fff;
-    letter-spacing: .8px
+@media(min-width:480px){
+    .footer-holder{
+        display:-webkit-box;
+        display:flex;
+        flex-wrap:wrap;
+        -webkit-box-pack:justify;
+        justify-content:space-between;
+        margin:0 -15px
+    }
 }
-
+@media screen and (max-width:549px){
+    .footer-holder{
+        margin-bottom:4rem
+    }
+}
+.quick-links{
+    margin-bottom:75px;
+    width:auto
+}
+@media(min-width:480px){
+    .quick-links{
+        padding:0 15px;
+        margin-bottom:0
+    }
+}
+.quick-links li{
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:15px;
+    text-transform:uppercase
+}
+@media(min-width:480px){
+    .quick-links li{
+        margin-bottom:12px
+    }
+}
+.quick-links li:last-child{
+    margin-bottom:0
+}
+.quick-links li a{
+    color:#fff;
+    letter-spacing:.8px
+}
 .quick-links li a:hover,.quick-links li a:focus{
     color:#ffae00;
     text-decoration:underline
 }
-
-@media(min-width:480px) {
-    .footer-logo {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 0 15px
+.footer--branding{
+    color:#fff;
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-align:start;
+    align-items:flex-start;
+    justify-content:space-around;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    flex-direction:column;
+    font-size:.75rem;
+    font-weight:600;
+    height:100%;
+    letter-spacing:.8px;
+    padding-bottom:3rem
+}
+.footer--branding a{
+    color:#fff;
+    font-size:.75rem;
+    font-weight:600;
+    letter-spacing:.8px;
+    text-transform:uppercase
+}
+.footer--branding .branding--logo{
+    margin-bottom:0
+}
+.footer--branding .branding--series{
+    line-height:1.2rem;
+    margin-bottom:1.375rem
+}
+@media(min-width:320px) and (max-width:767px){
+    .footer--branding .branding--series{
+        text-align:center
     }
 }
-
-.footer-logo .text {
-    color: #fff;
-    font-size: 13px;
-    margin-left: 25px;
-    display: none
+.footer--branding .branding--logo:hover img{
+    border-bottom:1px solid #ffcd61;
+    margin-bottom:calc(1.125rem - 1px)
 }
-
-@media(min-width:480px) {
-    .footer-logo .text {
-        display: block
+.footer--branding .branding--logo:focus{
+    outline:none
+}
+.footer--branding .branding--logo:focus img{
+    border-bottom:1px solid #ffcd61;
+    margin-bottom:calc(1.125rem - 1px)
+}
+.footer--branding .branding--series:hover{
+    color:#ffcd61;
+    text-decoration:underline;
+    -webkit-transition:.2s;
+    transition:.2s
+}
+.footer--branding .branding--series:focus{
+    color:#ffcd61;
+    outline:none;
+    -webkit-text-decoration:underline solid #ffcd61;
+    text-decoration:underline solid #ffcd61
+}
+.footer--branding img{
+    height:auto;
+    margin-bottom:1.125rem;
+    width:19rem
+}
+@media(min-width:320px) and (max-width:767px){
+    .footer--branding img{
+        width:15rem
     }
 }
-
-.footer-logo .text strong {
-    font-size: 12px;
-    letter-spacing: .8px
+.footer--branding .branding--editor{
+    font-size:.625rem
 }
-
-.footer-logo .text-before {
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 29px;
-    color: #fff;
-    display: block;
-    text-transform: uppercase
-}
-
-@media(min-width:480px) {
-    .footer-logo .text-before {
-        display: none
+@media(min-width:320px) and (max-width:767px){
+    .footer--branding .branding--editor{
+        text-align:center
     }
 }
-
-.footer-logo .text-after {
-    font-size: 25px;
-    color: #fff;
-    display: block;
-    font-family: times new roman, times, baskerville, georgia, serif;
-    margin-left: 11px;
-    font-weight: 400;
-    letter-spacing: 1.5px
-}
-
-@media(min-width:480px) {
-    .footer-logo .text-after {
-        display: none
+@media screen and (max-width:549px){
+    .footer--branding{
+        -webkit-box-align:center;
+        align-items:center;
+        width:100%
     }
-}
-
-.footer-logo .logo-text a {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center
-}
-
-.interactive-notation .music {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    margin: 0;
-    padding: 0
 }
 
 .interactive-notation .music audio {
