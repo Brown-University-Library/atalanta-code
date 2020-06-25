@@ -104,9 +104,7 @@ $(function () {
 	}
 	function searchModalOpen() {
 		var topnavHeight = $(topNav).height();
-		console.log("my topnav height is " + topnavHeight);
 		var searchModalHeight = $(searchModal).height();
-		console.log("my search modal height is " + searchModalHeight);
 
 		$(topnavSearchBtn).removeClass(searchModalClosed);
 		$(topnavSearchBtn).addClass(searchModalOpened);
@@ -120,5 +118,28 @@ $(function () {
 	/* clear text from search input field */
 	function searchTextClear() {
 		$(searchQueryInput).val('');
+	}
+
+	$(document).on('click', '[data-lightbox]', lity);
+
+	$('.btn--doi').click(function(e) {
+		var text = $(this).attr('data-copy');
+		var el = $(this);
+		copyToClipboard(text, el);
+	});
+
+	function copyToClipboard(text, el) {
+			var copyTest = document.queryCommandSupported('copy');
+
+		if (copyTest === true) {
+				var copyTextArea = document.createElement("textarea");
+				copyTextArea.value = text;
+				document.body.appendChild(copyTextArea);
+				copyTextArea.select();
+				document.execCommand('copy');
+		} else {
+		// Fallback if browser doesn't support .execCommand('copy')
+			window.prompt("Copy to clipboard: Ctrl+C or Command+C, Enter", text);
+		}
 	}
 });
