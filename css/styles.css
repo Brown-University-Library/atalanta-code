@@ -10715,7 +10715,17 @@ main#image-search {
   top: 3.375rem;
   left: 0;
   width: 100vw;
-  z-index: 200; }
+  z-index: 200;
+  /*	.category__close button:hover, 
+	.category__close button:focus {
+		background-color: blue;
+	}
+	.category__close button:focus {
+		outline: 1px dotted white;
+	}
+	.category__close svg {
+		fill: black;
+	} */ }
   .image-search-filters ul.image-search__categories {
     background-color: white;
     display: -webkit-box;
@@ -10732,6 +10742,23 @@ main#image-search {
     justify-content: space-around;
     height: 2.5rem;
     width: 100%; }
+  .image-search-filters .category__close {
+    position: absolute;
+    right: 10;
+    top: 50;
+    z-index: 1000; }
+  .image-search-filters .category__close button {
+    background-color: transparent;
+    background-image: url(../icons/icon_X-close_BLACK.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    border: none;
+    cursor: pointer;
+    fill: black;
+    height: 1.5rem;
+    padding: .75rem;
+    width: 1.5rem; }
   .image-search-filters .category__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10912,6 +10939,12 @@ main#image-search {
     height: 10px;
     margin-left: .5rem;
     width: 10px; }
+
+.image-search-filters.is-closed .category__close {
+  display: none; }
+
+image-search-filters.is-open .category__close {
+  display: block; }
 
 .image-search__breadcrumbs {
   background-color: white;

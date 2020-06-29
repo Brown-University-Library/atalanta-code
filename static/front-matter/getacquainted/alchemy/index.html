@@ -116,6 +116,16 @@
 
         <div class="container" style="background-color: white;">
           <div class="content">
+            <div class="wrapper--doi-btn">
+              <a href="#doi" class="btn--doi" aria-label="Copy DOI to clipboard" data-copy="https://doi.org/10.26300/bdp.ff.rampling" data-lity><span>DOI</span></a>
+            </div>
+            <div id="doi" class="wrapper--doi lity-hide">
+              <div class="doi">
+                <h6>DOI</h6>
+                <p class="doi__msg">Copied to clipboard!</p>
+                <p class="doi__ref">https://doi.org/10.26300/bdp.ff.rampling</p>
+              </div>
+            </div>
             <p>
               Alchemy was a <em>novitas</em>, a novelty, when it arrived in Christian Europe in the twelfth century. Known to the Latin West primarily from translations of Arabic texts, this new art taught how extraordinary physical transformations might be wrought through natural processes harnessed by human ingenuity &mdash; specifically, by crafting a transmuting agent, the philosophers’ stone. While new to Latinate readers, “alchemia” already had a long and multilingual history. In Greco-Roman Egypt, <em>chemeia</em> encompassed a variety of techniques for coloring substances: from dyeing wool purple to tinging base metals gold or silver. In the Byzantine Empire, alchemy increasingly came to be associated with the transmutation of metals. Alchemists in the medieval Islamic lands developed an array of practices that related to medicine as well as metallurgy, within a theoretical armature influenced by the precepts of Greek and Arabic philosophy.
           	</p>
@@ -222,7 +232,7 @@
         <div class="container">
           <h2>Citation</h2>
           <p>
-              Rampling, Jennifer M. “Early Modern Alchemy.” <em>Furnace and Fugue: A Digital Edition of Michael Maier’s “Atalanta fugiens” (1618) with Scholarly Commentary</em>. Charlottesville: University of Virginia Press, 2020. www.furnaceandfugue.org/front-matter/getacquainted/alchemy.
+              Rampling, Jennifer M. “Early Modern Alchemy.” <em>Furnace and Fugue: A Digital Edition of Michael Maier’s “Atalanta fugiens” (1618) with Scholarly Commentary</em>. Charlottesville: University of Virginia Press, 2020. https://doi.org/10.26300/bdp.ff.rampling.
           </p>
         </div>
       </section>
@@ -363,6 +373,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="/assets/js/page.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js"></script>
+    <script src="/assets/js/vendors/lity/lity.min.js"></script>
     <script src="/assets/js/lunr-languages/lunr.stemmer.support.js"></script>
     <script src="/assets/js/lunr-languages/lunr.multi.js"></script>
     <script src="/assets/js/lunr-languages/lunr.de.js"></script>
