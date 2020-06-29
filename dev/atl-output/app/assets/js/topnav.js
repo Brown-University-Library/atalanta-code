@@ -119,4 +119,31 @@ $(function () {
 	function searchTextClear() {
 		$(searchQueryInput).val('');
 	}
+
+	/* Copy DOI to Clipboard */
+	$(document).on('click', '[data-lightbox]', lity);
+	$('.btn--doi').click(function(e) {
+		var text = $(this).attr('data-copy');
+		var el = $(this);
+		copyToClipboard(text, el);
+	});
+	function copyToClipboard(text, el) {
+		var copyTest = document.queryCommandSupported('copy');
+
+		if (copyTest === true) {
+				var copyTextArea = document.createElement("textarea");
+				copyTextArea.classList.add("doi-text");
+				copyTextArea.value = text;
+				document.body.appendChild(copyTextArea);
+				copyTextArea.select();
+				document.execCommand('copy');
+				removeDoiHack(copyTextArea);
+		} else {
+		// Fallback if browser doesn't support .execCommand('copy')
+			window.prompt("Copy to clipboard: Ctrl+C or Command+C, Enter", text);
+		}
+	}
+	function removeDoiHack(DOIhackTextArea) {
+		document.body.removeChild(DOIhackTextArea);
+	}
 });
