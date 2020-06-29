@@ -115,6 +115,16 @@
       <section id="intro" class="text-section">
         <div class="container" style="background-color: white;">
           <div class="content">
+            <div class="wrapper--doi-btn">
+              <a href="#doi" class="btn--doi" aria-label="Copy DOI to clipboard" data-copy="https://doi.org/10.26300/bdp.ff.tabor" data-lity><span>DOI</span></a>
+            </div>
+            <div id="doi" class="wrapper--doi lity-hide">
+              <div class="doi">
+                <h6>DOI</h6>
+                <p class="doi__msg">Copied to clipboard!</p>
+                <p class="doi__ref">https://doi.org/10.26300/bdp.ff.tabor</p>
+              </div>
+            </div>
             <p>
               Michael Maier’s <em>Atalanta fugiens</em> is a small tour de force of bookmaking that combines the specialized media of intaglio (copperplate etching) and typeset music with the more conventional &mdash; though still demanding &mdash; setting of texts in two languages using roman, italic, and black-letter types of various sizes. It is one of scores of elaborate illustrated works printed by Hieronymus Galler, many of them for the publisher Johann Theodor de Bry. The following introduction to the technical aspects of Maier’s book may serve to increase our appreciation for the labor that went into it.
             </p>
@@ -276,7 +286,7 @@
         <div class="container">
           <h2>Citation</h2>
           <p>
-              Tabor, Stephen. “<em>Atalanta fugiens</em> in the Printing Office.” <em>Furnace and Fugue: A Digital Edition of Michael Maier’s “Atalanta fugiens” (1618) with Scholarly Commentary</em>. Charlottesville: University of Virginia Press, 2020. www.furnaceandfugue.org/front-matter/getacquainted/printing.
+              Tabor, Stephen. “<em>Atalanta fugiens</em> in the Printing Office.” <em>Furnace and Fugue: A Digital Edition of Michael Maier’s “Atalanta fugiens” (1618) with Scholarly Commentary</em>. Charlottesville: University of Virginia Press, 2020. https://doi.org/10.26300/bdp.ff.tabor.
           </p>
         </div>
       </section>
@@ -417,6 +427,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="/assets/js/page.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js"></script>
+  <script src="/assets/js/vendors/lity/lity.min.js"></script>
   <script src="/assets/js/lunr-languages/lunr.stemmer.support.js"></script>
   <script src="/assets/js/lunr-languages/lunr.multi.js"></script>
   <script src="/assets/js/lunr-languages/lunr.de.js"></script>

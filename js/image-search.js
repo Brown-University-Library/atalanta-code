@@ -16,6 +16,9 @@ $(document).ready(function() {
 		var resultsTermsContainer = '.image-results__all-terms';
 		var resultsTermsHidden = 'all-terms--inactive';
 		var resultsTermsRevealed = 'all-terms--active';
+		const MENU_VISIBLE_CLASSNAME = 'is-open';
+    	const MENU_HIDDEN_CLASSNAME = 'is-closed';
+    	var menuCloseBtn = '.category__close button';
 	
 		var heroPlaceholder = $('h1.hero__heading').html();
 	
@@ -42,6 +45,10 @@ $(document).ready(function() {
 			console.log('clicky.', ev.currentTarget);
 			var tid = $(ev.currentTarget).attr('data-id');
 			$('li.subcategory__term-item a[data-id="'+tid+'"]').click();
+		});
+
+		$(menuCloseBtn).on('click', function() {
+			categoriesCloseAll();
 		});
 		
 		function makeImageArrays() {
@@ -161,10 +168,16 @@ $(document).ready(function() {
 		}
 		function categoriesHide(activeCategory) {
 			$(activeCategory).removeClass(imageCategoryActive); // hide the last active category
+			closeMenu();
 		}
 		function categoriesReveal(activeCategory) {
 			$(activeCategory).siblings().removeClass(imageCategoryActive); // hide the last active category
 			$(activeCategory).addClass(imageCategoryActive); // reveal the current selected category
+			openMenu();
+		}
+		function categoriesCloseAll() {
+			$('.category--actions').removeClass('category--active');
+			closeMenu();
 		}
 		function termSelect(unselectedTerm, lastSelectedCategory) {
 			var currentUnselectedTerm = $(unselectedTerm);
@@ -177,6 +190,22 @@ $(document).ready(function() {
 			var currentSelectedCategory = $(newSelectedCategory);
 			$(currentSelectedTerm).removeClass(imageTermSelected); // remove selected term class
 			categoriesHide(currentSelectedCategory);
+		}
+
+		function openMenu() {
+		  const menu = document.getElementsByClassName('image-search-filters')[0];
+		  if (menu.classList.contains(MENU_HIDDEN_CLASSNAME)) {
+		    menu.classList.add(MENU_VISIBLE_CLASSNAME);
+		    menu.classList.remove(MENU_HIDDEN_CLASSNAME);
+		  }
+		}
+
+		function closeMenu() {
+		  const menu = document.getElementsByClassName('image-search-filters')[0];
+		  if (menu.classList.contains(MENU_VISIBLE_CLASSNAME)) {
+		    menu.classList.add(MENU_HIDDEN_CLASSNAME);
+		    menu.classList.remove(MENU_VISIBLE_CLASSNAME);
+		  }
 		}
 	
 		var updateEmblemView = function() {

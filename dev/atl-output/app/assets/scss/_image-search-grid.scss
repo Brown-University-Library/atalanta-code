@@ -35,6 +35,35 @@ main#image-search {
 		height: $imagesearchcatnav-h;
 		width: 100%;
 	}
+	.category__close {
+		position: absolute;
+		right: 10;
+		top: 50;
+		z-index: 1000;
+	}
+	.category__close button {
+		background-color: transparent;
+		background-image: url(../icons/icon_X-close_BLACK.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 30%;
+		border: none;
+		cursor: pointer;
+		fill: black;
+		height: 1.5rem;
+		padding: .75rem;
+		width: 1.5rem;
+	}
+/*	.category__close button:hover, 
+	.category__close button:focus {
+		background-color: blue;
+	}
+	.category__close button:focus {
+		outline: 1px dotted white;
+	}
+	.category__close svg {
+		fill: black;
+	} */
 	.category__item {
 		display: flex;
 		align-items: center;
@@ -188,6 +217,12 @@ main#image-search {
 		margin-left: .5rem;
 		width: 10px;		
 	}
+}
+.image-search-filters.is-closed .category__close {
+	display: none;
+}
+image-search-filters.is-open .category__close {
+	display: block;
 }
 .image-search__breadcrumbs {
 	background-color: $white;
