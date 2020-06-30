@@ -9667,7 +9667,6 @@ html.music-ready .audio audio.all-tracks {
   height: 0; }
 
 input.track-play + label {
-  /* ??? */
   background-image: url("../icons/icon_play_filled--gray.svg");
   background-size: auto 40px;
   background-position: center top;
@@ -9680,8 +9679,16 @@ input.track-play + label {
   width: 100%;
   /* transition: 0.5s; */ }
 
+.atalanta-notation-start input.track-play + label:hover {
+  cursor: pointer;
+  background-image: url("../icons/icon_play_filled--hover.svg");
+  /* filter: url("../icons/icon_play_filled--gray.svg#play-triangle") blur(100px); */ }
+
 input.track-play:checked + label {
   background-image: url("../icons/icon_pause_filled--gray.svg"); }
+
+.atalanta-notation-start input.track-play:checked + label:hover {
+  background-image: url("../icons/icon_pause_filled--hover.svg"); }
 
 input.track-play + label:after {
   content: "Play Voices"; }
@@ -9745,7 +9752,11 @@ input.track-play:checked + label:after {
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.4);
   color: #85929E;
-  content: "x";
+  content: "";
+  background-image: url(../icons/icon_X-close_BLACK.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9766,17 +9777,13 @@ input.track-play:checked + label:after {
   width: 16px; }
 
 .track-mute input:checked + .slider {
-  background-color: #F28455;
-  /*   background-color: #2196F3; */
-  /*   justify-content: flex-end; */ }
+  background-color: #F28455; }
+
+.track-mute input:checked + .slider::after {
+  background-image: none; }
 
 .track-mute input:checked + .slider:hover {
-  background-color: #C28970;
-  /*   background-color: #2196F3; */
-  /*   justify-content: flex-end; */ }
-
-.track-mute input:focus + .slider {
-  /*   box-shadow: 0 0 1px #2196F3; */ }
+  background-color: #C28970; }
 
 .track-mute input:checked + .slider:after {
   content: "";
@@ -9985,6 +9992,14 @@ input.track-play:checked + label:after {
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1; }
+
+.pianoroll > .transport {
+  max-height: 60.5vh;
+  margin-right: -1rem;
+  z-index: 10; }
+
+.pianoroll .atalanta-notation-start {
+  margin-bottom: 1.25rem; }
 
 .music .cmn .staff,
 .music .cmn .barLineAttr path {
