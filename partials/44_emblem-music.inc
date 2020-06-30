@@ -1,18 +1,25 @@
 <div class="music ata-music paused loading">
-   <div class="transport" id="my-transport"><button class="atalanta-notation-start" aria-label="Play Music">
-         <div class="play-btn__icon"></div>
-         <div class="play-btn__label">Play</div></button><button class="atalanta-notation-stop" aria-label="Pause Music">
-         <div class="pause-btn__icon"></div>
-         <div class="pause-btn__label">Pause</div></button><div class="track-mute"><button class="atalanta-notation-mute-track" aria-label="Play or Mute Voice 1" data-track="1">
-            <div class="mute-btn__icon"></div>
-            <div class="mute-btn__label">Hear/mute <em>Pomum morans.</em></div></button><button class="atalanta-notation-mute-track" aria-label="Play or Mute Voice 2" data-track="2">
-            <div class="mute-btn__icon"></div>
-            <div class="mute-btn__label">Hear/mute <em>Hippomenes sequens.</em></div></button><button class="atalanta-notation-mute-track" aria-label="Play or Mute Voice 3" data-track="3">
-            <div class="mute-btn__icon"></div>
-            <div class="mute-btn__label">Hear/mute <em>Atalanta fugiens.</em></div></button></div>
-      <div class="atalanta-notation__switch"><a href="#pianoroll-notation" data-lity="">
-            <div class="piano-roll__icon"></div>
-            <div class="piano-roll__label">Show piano roll</div></a></div>
+   <div class="transport" id="my-transport">
+      <div class="transport">
+         <div class="atalanta-notation-start"><input type="checkbox" class="track-play" id="track-play"><label for="track-play"></label></div>
+         <div class="track-mute">
+            <div class="track-container"><label class="track-descriptor">
+                  <p class="track-title">
+                     Voice 1 <span class="track-status"></span></p></label><label for="track-1" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 1" data-track="1" type="checkbox" id="track-1" checked><span class="slider round"></span></label><label class="track-descriptor">
+                  <p class="track-name">Pomum morans.</p></label></div>
+            <div class="track-container"><label class="track-descriptor">
+                  <p class="track-title">
+                     Voice 2 <span class="track-status"></span></p></label><label for="track-2" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 2" data-track="2" type="checkbox" id="track-2" checked><div class="slider round"></div></label><label class="track-descriptor">
+                  <p class="track-name">Hippomenes sequens.</p></label></div>
+            <div class="track-container"><label class="track-descriptor">
+                  <p class="track-title">
+                     Voice 3 <span class="track-status"></span></p></label><label for="track-3" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 3" data-track="3" type="checkbox" id="track-3" checked><div class="slider round"></div></label><label class="track-descriptor">
+                  <p class="track-name">Atalanta fugiens.</p></label></div>
+         </div>
+         <div class="atalanta-notation__switch"><a href="#pianoroll-notation" data-lity="">
+               <div class="piano-roll__label">Show piano roll</div>
+               <div class="piano-roll__icon">&nbsp;</div></a></div>
+      </div>
    </div>
    <div class="audio"><audio hidden preload="auto" src="../assets/audio/44-A-54bpm-Dry.mp3" data-track="1" class="dry" type="audio/mpeg"></audio><audio hidden preload="auto" src="../assets/audio/44-A-54bpm-Reverb.mp3" data-track="1" class="reverb" type="audio/mpeg"></audio><audio hidden preload="auto" src="../assets/audio/44-P-54bpm-Dry.mp3" data-track="2" class="dry" type="audio/mpeg"></audio><audio hidden preload="auto" src="../assets/audio/44-P-54bpm-Reverb.mp3" data-track="2" class="reverb" type="audio/mpeg"></audio><audio hidden preload="auto" src="../assets/audio/44-H-54bpm-Dry.mp3" data-track="3" class="dry" type="audio/mpeg"></audio><audio hidden preload="auto" src="../assets/audio/44-H-54bpm-Reverb.mp3" data-track="3" class="reverb" type="audio/mpeg"></audio></div>
    <div class="cmn ata-viz-cmn"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin" viewBox="0 0 21000 58635" version="1.1">
@@ -82,7 +89,7 @@
             		
             <g class="page-margin" transform="translate(500, 500)">
                			
-               <g class="system" id="system-0000000794371037">
+               <g class="system" id="system-0000001365034742">
                   				
                   <path d="M3916 720 L3916 5380" stroke="#000000" stroke-width="27"></path>
                   				
@@ -92,40 +99,40 @@
                   				
                   <rect x="3749" y="702" height="4696" width="90"></rect>
                   				
-                  <g class="label" id="label-0000001604645522">
+                  <g class="label" id="label-0000000034120037">
                      					
                      <text x="3633" y="1170" text-anchor="end" font-size="0px">
                         						
-                        <tspan class="text" id="text-0000001177649228">
+                        <tspan class="text" id="text-0000000077328110">
                            							
                            <tspan font-size="405px" class="text">Pomum morans.</tspan>
                            						</tspan>
                         					</text>
                      				</g>
                   				
-                  <g class="label" id="label-0000001595115964">
+                  <g class="label" id="label-0000000098546020">
                      					
                      <text x="3633" y="3005" text-anchor="end" font-size="0px">
                         						
-                        <tspan class="text" id="text-0000002075641447">
+                        <tspan class="text" id="text-0000000553066303">
                            							
                            <tspan font-size="405px" class="text">Hippomenes sequens.</tspan>
                            						</tspan>
                         					</text>
                      				</g>
                   				
-                  <g class="label" id="label-0000000738691570">
+                  <g class="label" id="label-0000001482547707">
                      					
                      <text x="3633" y="5110" text-anchor="end" font-size="0px">
                         						
-                        <tspan class="text" id="text-0000000586253683">
+                        <tspan class="text" id="text-0000002074039055">
                            							
                            <tspan font-size="405px" class="text">Atalanta fugiens.</tspan>
                            						</tspan>
                         					</text>
                      				</g>
                   				
-                  <g class="section boundaryStart" id="section-0000000905320518"></g>
+                  <g class="section boundaryStart" id="section-0000001783023949"></g>
                   				
                   <g class="sb" id="e44-m-40"></g>
                   				
@@ -143,17 +150,17 @@
                         						
                         <path d="M3903 1440 L10482 1440" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001026732309">
+                        <g class="clef" id="clef-0000001882867406">
                            							
                            <use xlink:href="#E050" x="3993" y="1260" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001258813718">
+                        <g class="keySig" id="keysig-0000000033470450">
                            							
                            <use xlink:href="#E260" x="4674" y="1080" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="meterSig" id="msig-0000002020751829">
+                        <g class="meterSig" id="msig-0000002044621283">
                            							
                            <use xlink:href="#E082" x="4996" y="900" height="720px" width="720px"></use>
                            							
@@ -177,7 +184,7 @@
                                     										
                                     <text x="5517" y="2022" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000890968463">
+                                       <tspan class="text" id="text-0000001087754237">
                                           												
                                           <tspan font-size="405px" class="text">Sy</tspan>
                                           											</tspan>
@@ -193,7 +200,7 @@
                                     										
                                     <text x="5517" y="2422" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001182680535">
+                                       <tspan class="text" id="text-0000001540599471">
                                           												
                                           <tspan font-size="405px" class="text">Ae</tspan>
                                           											</tspan>
@@ -221,7 +228,7 @@
                                     										
                                     <text x="7832" y="2022" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000801218223">
+                                       <tspan class="text" id="text-0000000264826202">
                                           												
                                           <tspan font-size="405px" class="text">ri</tspan>
                                           											</tspan>
@@ -239,7 +246,7 @@
                                     										
                                     <text x="7832" y="2422" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001156306088">
+                                       <tspan class="text" id="text-0000001477247457">
                                           												
                                           <tspan font-size="405px" class="text">gyp</tspan>
                                           											</tspan>
@@ -264,17 +271,17 @@
                         						
                         <path d="M3903 3275 L10482 3275" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000322112698">
+                        <g class="clef" id="clef-0000002064067734">
                            							
                            <use xlink:href="#E050" x="3993" y="3095" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000002089324846">
+                        <g class="keySig" id="keysig-0000000335571700">
                            							
                            <use xlink:href="#E260" x="4674" y="2915" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="meterSig" id="msig-0000001777574625">
+                        <g class="meterSig" id="msig-0000000661504878">
                            							
                            <use xlink:href="#E082" x="4996" y="2735" height="720px" width="720px"></use>
                            							
@@ -298,7 +305,7 @@
                                     										
                                     <text x="5517" y="3857" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000375159456">
+                                       <tspan class="text" id="text-0000000407937357">
                                           												
                                           <tspan font-size="405px" class="text">Sy</tspan>
                                           											</tspan>
@@ -314,7 +321,7 @@
                                     										
                                     <text x="5517" y="4257" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001343022081">
+                                       <tspan class="text" id="text-0000000153277275">
                                           												
                                           <tspan font-size="405px" class="text">Ae</tspan>
                                           											</tspan>
@@ -340,7 +347,7 @@
                                     										
                                     <text x="7832" y="3857" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001345946960">
+                                       <tspan class="text" id="text-0000000858170576">
                                           												
                                           <tspan font-size="405px" class="text">ri</tspan>
                                           											</tspan>
@@ -358,7 +365,7 @@
                                     										
                                     <text x="7832" y="4257" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000790758238">
+                                       <tspan class="text" id="text-0000001238619710">
                                           												
                                           <tspan font-size="405px" class="text">gyp</tspan>
                                           											</tspan>
@@ -383,17 +390,17 @@
                         						
                         <path d="M3903 5380 L10482 5380" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000002051708958">
+                        <g class="clef" id="clef-0000000389644027">
                            							
                            <use xlink:href="#E062" x="3993" y="4840" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000927537227">
+                        <g class="keySig" id="keysig-0000001069522086">
                            							
                            <use xlink:href="#E260" x="4674" y="5200" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="meterSig" id="msig-0000000534380616">
+                        <g class="meterSig" id="msig-0000001019574012">
                            							
                            <use xlink:href="#E082" x="4996" y="4840" height="720px" width="720px"></use>
                            							
@@ -404,12 +411,12 @@
                            							
                            <g class="tuplet" id="e44-m-67">
                               								
-                              <g class="tupletNum" id="num-0000002129782099">
+                              <g class="tupletNum" id="num-0000000800147286">
                                  									
                                  <use xlink:href="#E883" x="6554" y="5938" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000373479919">
+                              <g class="tupletBracket" id="bracket-0000000998083829">
                                  									
                                  <polygon points="5607,5839 6536,5839 6536,5821 5607,5821 "></polygon>
                                  									
@@ -435,7 +442,7 @@
                                        											
                                        <text x="5517" y="6339" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001772003173">
+                                          <tspan class="text" id="text-0000001916947204">
                                              													
                                              <tspan font-size="405px" class="text">Sy</tspan>
                                              												</tspan>
@@ -453,7 +460,7 @@
                                        											
                                        <text x="5517" y="6739" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000999194513">
+                                          <tspan class="text" id="text-0000001523184569">
                                              													
                                              <tspan font-size="405px" class="text">Ae</tspan>
                                              												</tspan>
@@ -502,12 +509,12 @@
                            							
                            <g class="tuplet" id="e44-m-73">
                               								
-                              <g class="tupletNum" id="num-0000000973180243">
+                              <g class="tupletNum" id="num-0000001471433886">
                                  									
                                  <use xlink:href="#E883" x="8985" y="5938" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000373922195">
+                              <g class="tupletBracket" id="bracket-0000000182675407">
                                  									
                                  <polygon points="7922,5839 8967,5839 8967,5821 7922,5821 "></polygon>
                                  									
@@ -533,7 +540,7 @@
                                        											
                                        <text x="7832" y="6739" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000885974572">
+                                          <tspan class="text" id="text-0000000316730646">
                                              													
                                              <tspan font-size="405px" class="text">gyp</tspan>
                                              												</tspan>
@@ -563,7 +570,7 @@
                                           												
                                           <text x="8527" y="6339" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000304661385">
+                                             <tspan class="text" id="text-0000000586674763">
                                                 														
                                                 <tspan font-size="405px" class="text">ri</tspan>
                                                 													</tspan>
@@ -606,7 +613,7 @@
                                           												
                                           <text x="9453" y="6339" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000002002955421">
+                                             <tspan class="text" id="text-0000000146156889">
                                                 														
                                                 <tspan font-size="405px" class="text">a</tspan>
                                                 													</tspan>
@@ -631,7 +638,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001554928830">
+                     <g class="barLineAttr" id="bline-0000000907656595">
                         						
                         <path d="M10469 1440 L10469 720" stroke="#000000" stroke-width="27"></path>
                         						
@@ -672,7 +679,7 @@
                                     										
                                     <text x="10624" y="2022" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001600759932">
+                                       <tspan class="text" id="text-0000000774309363">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -686,7 +693,7 @@
                                     										
                                     <text x="10624" y="2422" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000377440608">
+                                       <tspan class="text" id="text-0000001520946574">
                                           												
                                           <tspan font-size="405px" class="text">tus,</tspan>
                                           											</tspan>
@@ -712,7 +719,7 @@
                                     										
                                     <text x="12939" y="2422" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000024329910">
+                                       <tspan class="text" id="text-0000001033977732">
                                           												
                                           <tspan font-size="405px" class="text">qui</tspan>
                                           											</tspan>
@@ -726,7 +733,7 @@
                                     										
                                     <text x="12939" y="2022" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001040512007">
+                                       <tspan class="text" id="text-0000000709420617">
                                           												
                                           <tspan font-size="405px" class="text">A</tspan>
                                           											</tspan>
@@ -768,7 +775,7 @@
                                     										
                                     <text x="10624" y="3857" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000896205590">
+                                       <tspan class="text" id="text-0000000134629657">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -782,7 +789,7 @@
                                     										
                                     <text x="10624" y="4257" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001256148759">
+                                       <tspan class="text" id="text-0000000761265366">
                                           												
                                           <tspan font-size="405px" class="text">tus,</tspan>
                                           											</tspan>
@@ -806,7 +813,7 @@
                                     										
                                     <text x="12939" y="4257" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000066200704">
+                                       <tspan class="text" id="text-0000001169633208">
                                           												
                                           <tspan font-size="405px" class="text">qui</tspan>
                                           											</tspan>
@@ -820,7 +827,7 @@
                                     										
                                     <text x="12939" y="3857" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000591541604">
+                                       <tspan class="text" id="text-0000002106360012">
                                           												
                                           <tspan font-size="405px" class="text">A</tspan>
                                           											</tspan>
@@ -849,12 +856,12 @@
                            							
                            <g class="tuplet" id="e44-m-128">
                               								
-                              <g class="tupletNum" id="num-0000002067138252">
+                              <g class="tupletNum" id="num-0000000365022896">
                                  									
                                  <use xlink:href="#E883" x="11661" y="5847" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001292931914">
+                              <g class="tupletBracket" id="bracket-0000000195003574">
                                  									
                                  <polygon points="10714,5748 11643,5748 11643,5730 10714,5730 "></polygon>
                                  									
@@ -880,7 +887,7 @@
                                        											
                                        <text x="10624" y="6739" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001578575567">
+                                          <tspan class="text" id="text-0000000803331522">
                                              													
                                              <tspan font-size="405px" class="text">tus,</tspan>
                                              												</tspan>
@@ -896,7 +903,7 @@
                                        											
                                        <text x="10624" y="6339" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001959025338">
+                                          <tspan class="text" id="text-0000001095724375">
                                              													
                                              <tspan font-size="405px" class="text">A</tspan>
                                              												</tspan>
@@ -947,12 +954,12 @@
                            							
                            <g class="tuplet" id="e44-m-134">
                               								
-                              <g class="tupletNum" id="num-0000001472295421">
+                              <g class="tupletNum" id="num-0000000642705660">
                                  									
                                  <use xlink:href="#E883" x="13744" y="5938" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001861998215">
+                              <g class="tupletBracket" id="bracket-0000001920085647">
                                  									
                                  <polygon points="13029,5839 13726,5839 13726,5821 13029,5821 "></polygon>
                                  									
@@ -988,7 +995,7 @@
                                        											
                                        <text x="13634" y="6739" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000851860940">
+                                          <tspan class="text" id="text-0000000476104392">
                                              													
                                              <tspan font-size="405px" class="text">qui</tspan>
                                              												</tspan>
@@ -1004,7 +1011,7 @@
                                        											
                                        <text x="13634" y="6339" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000073151600">
+                                          <tspan class="text" id="text-0000001107307852">
                                              													
                                              <tspan font-size="405px" class="text">do</tspan>
                                              												</tspan>
@@ -1028,7 +1035,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001921717795">
+                     <g class="barLineAttr" id="bline-0000001806274466">
                         						
                         <path d="M15113 1440 L15113 720" stroke="#000000" stroke-width="27"></path>
                         						
@@ -1069,7 +1076,7 @@
                                     										
                                     <text x="15268" y="2422" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001423301648">
+                                       <tspan class="text" id="text-0000000614059155">
                                           												
                                           <tspan font-size="405px" class="text">sunt</tspan>
                                           											</tspan>
@@ -1083,7 +1090,7 @@
                                     										
                                     <text x="15268" y="2022" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000682388204">
+                                       <tspan class="text" id="text-0000001418595160">
                                           												
                                           <tspan font-size="405px" class="text">do</tspan>
                                           											</tspan>
@@ -1109,7 +1116,7 @@
                                     										
                                     <text x="17815" y="2422" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001691370199">
+                                       <tspan class="text" id="text-0000000601223801">
                                           												
                                           <tspan font-size="405px" class="text">nil</tspan>
                                           											</tspan>
@@ -1123,7 +1130,7 @@
                                     										
                                     <text x="17815" y="2022" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000357496899">
+                                       <tspan class="text" id="text-0000001859565232">
                                           												
                                           <tspan font-size="405px" class="text">ni</tspan>
                                           											</tspan>
@@ -1165,7 +1172,7 @@
                                     										
                                     <text x="15268" y="4257" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000257387718">
+                                       <tspan class="text" id="text-0000000263553274">
                                           												
                                           <tspan font-size="405px" class="text">sunt</tspan>
                                           											</tspan>
@@ -1179,7 +1186,7 @@
                                     										
                                     <text x="15268" y="3857" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001263653151">
+                                       <tspan class="text" id="text-0000001108801370">
                                           												
                                           <tspan font-size="405px" class="text">do</tspan>
                                           											</tspan>
@@ -1207,7 +1214,7 @@
                                     										
                                     <text x="17815" y="4257" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000655954724">
+                                       <tspan class="text" id="text-0000001575669926">
                                           												
                                           <tspan font-size="405px" class="text">nil</tspan>
                                           											</tspan>
@@ -1221,7 +1228,7 @@
                                     										
                                     <text x="17815" y="3857" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001231311492">
+                                       <tspan class="text" id="text-0000000232474044">
                                           												
                                           <tspan font-size="405px" class="text">ni</tspan>
                                           											</tspan>
@@ -1250,12 +1257,12 @@
                            							
                            <g class="tuplet" id="e44-m-166">
                               								
-                              <g class="tupletNum" id="num-0000001750202994">
+                              <g class="tupletNum" id="num-0000001822886512">
                                  									
                                  <use xlink:href="#E883" x="16421" y="6027" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000265616780">
+                              <g class="tupletBracket" id="bracket-0000001944688315">
                                  									
                                  <polygon points="15358,5928 16403,5928 16403,5910 15358,5910 "></polygon>
                                  									
@@ -1281,7 +1288,7 @@
                                        											
                                        <text x="15268" y="6739" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001249032976">
+                                          <tspan class="text" id="text-0000000386138092">
                                              													
                                              <tspan font-size="405px" class="text">sunt</tspan>
                                              												</tspan>
@@ -1297,7 +1304,7 @@
                                        											
                                        <text x="15268" y="6339" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000564146540">
+                                          <tspan class="text" id="text-0000000896435657">
                                              													
                                              <tspan font-size="405px" class="text">ni</tspan>
                                              												</tspan>
@@ -1363,12 +1370,12 @@
                            							
                            <g class="tuplet" id="e44-m-174">
                               								
-                              <g class="tupletNum" id="num-0000000322497420">
+                              <g class="tupletNum" id="num-0000000772242116">
                                  									
                                  <use xlink:href="#E883" x="18620" y="5938" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001020543487">
+                              <g class="tupletBracket" id="bracket-0000000936239955">
                                  									
                                  <polygon points="17905,5839 18602,5839 18602,5821 17905,5821 "></polygon>
                                  									
@@ -1394,7 +1401,7 @@
                                        											
                                        <text x="17815" y="6739" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000211991210">
+                                          <tspan class="text" id="text-0000001708295488">
                                              													
                                              <tspan font-size="405px" class="text">nil</tspan>
                                              												</tspan>
@@ -1430,7 +1437,7 @@
                                        											
                                        <text x="19027" y="6339" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000660057063">
+                                          <tspan class="text" id="text-0000001772604891">
                                              													
                                              <tspan font-size="405px" class="text">dem</tspan>
                                              												</tspan>
@@ -1442,7 +1449,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001818285240">
+                     <g class="barLineAttr" id="bline-0000001898155114">
                         						
                         <path d="M19988 1440 L19988 720" stroke="#000000" stroke-width="27"></path>
                         						
@@ -1453,7 +1460,7 @@
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000000761900700">
+               <g class="system" id="system-0000000078005314">
                   				
                   <polygon points="-270,7232 270,6872 270,6737 -270,7097 "></polygon>
                   				
@@ -1471,11 +1478,11 @@
                   				
                   <g class="measure" id="e44-m-189">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000000919453327">
+                     <g class="mNum autogenerated" id="mnum-0000001052227967">
                         						
                         <text x="0" y="7592" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000002107226724">
+                           <tspan class="text" id="text-0000000267608324">
                               								
                               <tspan font-size="324px" class="text">4</tspan>
                               							</tspan>
@@ -1494,12 +1501,12 @@
                         						
                         <path d="M0 8582 L5287 8582" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001207439319">
+                        <g class="clef" id="clef-0000001838822727">
                            							
                            <use xlink:href="#E050" x="90" y="8402" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001859653930">
+                        <g class="keySig" id="keysig-0000000656408712">
                            							
                            <use xlink:href="#E260" x="771" y="8222" height="720px" width="720px"></use>
                            						</g>
@@ -1521,7 +1528,7 @@
                                     										
                                     <text x="1138" y="9164" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001896957298">
+                                       <tspan class="text" id="text-0000001008361182">
                                           												
                                           <tspan font-size="405px" class="text">dem</tspan>
                                           											</tspan>
@@ -1535,7 +1542,7 @@
                                     										
                                     <text x="1138" y="9564" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000741976344">
+                                       <tspan class="text" id="text-0000001748211761">
                                           												
                                           <tspan font-size="405px" class="text">ni</tspan>
                                           											</tspan>
@@ -1561,7 +1568,7 @@
                                     										
                                     <text x="3161" y="9564" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000128158796">
+                                       <tspan class="text" id="text-0000001745422300">
                                           												
                                           <tspan font-size="405px" class="text">si</tspan>
                                           											</tspan>
@@ -1575,7 +1582,7 @@
                                     										
                                     <text x="3161" y="9164" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000738106312">
+                                       <tspan class="text" id="text-0000000768575687">
                                           												
                                           <tspan font-size="405px" class="text">ha</tspan>
                                           											</tspan>
@@ -1600,12 +1607,12 @@
                         						
                         <path d="M0 10597 L5287 10597" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000726603072">
+                        <g class="clef" id="clef-0000000637727945">
                            							
                            <use xlink:href="#E050" x="90" y="10417" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001425814262">
+                        <g class="keySig" id="keysig-0000000202689438">
                            							
                            <use xlink:href="#E260" x="771" y="10237" height="720px" width="720px"></use>
                            						</g>
@@ -1627,7 +1634,7 @@
                                     										
                                     <text x="1138" y="11179" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001071911285">
+                                       <tspan class="text" id="text-0000000122563435">
                                           												
                                           <tspan font-size="405px" class="text">dem</tspan>
                                           											</tspan>
@@ -1641,7 +1648,7 @@
                                     										
                                     <text x="1138" y="11579" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001861690268">
+                                       <tspan class="text" id="text-0000001701891554">
                                           												
                                           <tspan font-size="405px" class="text">ni</tspan>
                                           											</tspan>
@@ -1667,7 +1674,7 @@
                                     										
                                     <text x="3161" y="11579" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000040376255">
+                                       <tspan class="text" id="text-0000001635317637">
                                           												
                                           <tspan font-size="405px" class="text">si</tspan>
                                           											</tspan>
@@ -1681,7 +1688,7 @@
                                     										
                                     <text x="3161" y="11179" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000361429704">
+                                       <tspan class="text" id="text-0000002140193778">
                                           												
                                           <tspan font-size="405px" class="text">ha</tspan>
                                           											</tspan>
@@ -1706,12 +1713,12 @@
                         						
                         <path d="M0 12612 L5287 12612" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000002037768208">
+                        <g class="clef" id="clef-0000000692320324">
                            							
                            <use xlink:href="#E062" x="90" y="12072" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000701069500">
+                        <g class="keySig" id="keysig-0000000761286022">
                            							
                            <use xlink:href="#E260" x="771" y="12432" height="720px" width="720px"></use>
                            						</g>
@@ -1720,12 +1727,12 @@
                            							
                            <g class="tuplet" id="e44-m-226">
                               								
-                              <g class="tupletNum" id="num-0000000639048974">
+                              <g class="tupletNum" id="num-0000001791989497">
                                  									
                                  <use xlink:href="#E883" x="1923" y="12900" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001544176767">
+                              <g class="tupletBracket" id="bracket-0000000927995373">
                                  									
                                  <polygon points="1228,12801 1905,12801 1905,12783 1228,12783 "></polygon>
                                  									
@@ -1751,7 +1758,7 @@
                                        											
                                        <text x="1138" y="13571" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001531575289">
+                                          <tspan class="text" id="text-0000001955586914">
                                              													
                                              <tspan font-size="405px" class="text">ha</tspan>
                                              												</tspan>
@@ -1769,7 +1776,7 @@
                                        											
                                        <text x="1138" y="13971" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001526423064">
+                                          <tspan class="text" id="text-0000000501138362">
                                              													
                                              <tspan font-size="405px" class="text">ni</tspan>
                                              												</tspan>
@@ -1805,12 +1812,12 @@
                            							
                            <g class="tuplet" id="e44-m-230">
                               								
-                              <g class="tupletNum" id="num-0000000964351488">
+                              <g class="tupletNum" id="num-0000001692888639">
                                  									
                                  <use xlink:href="#E883" x="3946" y="13170" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000495306180">
+                              <g class="tupletBracket" id="bracket-0000000439129333">
                                  									
                                  <polygon points="3251,13071 3928,13071 3928,13053 3251,13053 "></polygon>
                                  									
@@ -1856,7 +1863,7 @@
                                        											
                                        <text x="4510" y="13571" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000346408525">
+                                          <tspan class="text" id="text-0000000286575390">
                                              													
                                              <tspan font-size="405px" class="text">bet,</tspan>
                                              												</tspan>
@@ -1870,7 +1877,7 @@
                                        											
                                        <text x="4510" y="13971" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000308660450">
+                                          <tspan class="text" id="text-0000001920102287">
                                              													
                                              <tspan font-size="405px" class="text">si</tspan>
                                              												</tspan>
@@ -1882,7 +1889,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001506819058">
+                     <g class="barLineAttr" id="bline-0000001992145613">
                         						
                         <path d="M5274 8582 L5274 7862" stroke="#000000" stroke-width="27"></path>
                         						
@@ -1923,7 +1930,7 @@
                                     										
                                     <text x="5422" y="9164" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000709912826">
+                                       <tspan class="text" id="text-0000001537066140">
                                           												
                                           <tspan font-size="405px" class="text">bet,</tspan>
                                           											</tspan>
@@ -1937,7 +1944,7 @@
                                     										
                                     <text x="5422" y="9564" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001331690175">
+                                       <tspan class="text" id="text-0000002039628535">
                                           												
                                           <tspan font-size="405px" class="text">SOL</tspan>
                                           											</tspan>
@@ -1961,7 +1968,7 @@
                                     										
                                     <text x="7408" y="9564" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000955439672">
+                                       <tspan class="text" id="text-0000001401408318">
                                           												
                                           <tspan font-size="405px" class="text">So</tspan>
                                           											</tspan>
@@ -1977,7 +1984,7 @@
                                     										
                                     <text x="7408" y="9164" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000428373309">
+                                       <tspan class="text" id="text-0000001394124013">
                                           												
                                           <tspan font-size="405px" class="text">Di</tspan>
                                           											</tspan>
@@ -2021,7 +2028,7 @@
                                     										
                                     <text x="5422" y="11179" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001972323017">
+                                       <tspan class="text" id="text-0000000315646309">
                                           												
                                           <tspan font-size="405px" class="text">bet,</tspan>
                                           											</tspan>
@@ -2035,7 +2042,7 @@
                                     										
                                     <text x="5422" y="11579" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001574030345">
+                                       <tspan class="text" id="text-0000000024949500">
                                           												
                                           <tspan font-size="405px" class="text">SOL</tspan>
                                           											</tspan>
@@ -2059,7 +2066,7 @@
                                     										
                                     <text x="7408" y="11579" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000828418435">
+                                       <tspan class="text" id="text-0000001001638123">
                                           												
                                           <tspan font-size="405px" class="text">So</tspan>
                                           											</tspan>
@@ -2075,7 +2082,7 @@
                                     										
                                     <text x="7408" y="11179" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001053298189">
+                                       <tspan class="text" id="text-0000001400681867">
                                           												
                                           <tspan font-size="405px" class="text">Di</tspan>
                                           											</tspan>
@@ -2104,12 +2111,12 @@
                            							
                            <g class="tuplet" id="e44-m-266">
                               								
-                              <g class="tupletNum" id="num-0000001635499571">
+                              <g class="tupletNum" id="num-0000002049416748">
                                  									
                                  <use xlink:href="#E883" x="6188" y="12990" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001852552711">
+                              <g class="tupletBracket" id="bracket-0000001297786240">
                                  									
                                  <polygon points="5512,12891 6170,12891 6170,12873 5512,12873 "></polygon>
                                  									
@@ -2124,7 +2131,7 @@
                                  									
                                  <use xlink:href="#E0A4" x="5512" y="11982" height="720px" width="720px"></use>
                                  									
-                                 <g class="dots" id="dots-0000000168442767">
+                                 <g class="dots" id="dots-0000000033244590">
                                     										
                                     <ellipse cx="5828" cy="11982" rx="36" ry="36"></ellipse>
                                     									</g>
@@ -2140,7 +2147,7 @@
                                        											
                                        <text x="5422" y="13971" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000130820993">
+                                          <tspan class="text" id="text-0000001871757268">
                                              													
                                              <tspan font-size="405px" class="text">SOL</tspan>
                                              												</tspan>
@@ -2156,7 +2163,7 @@
                                        											
                                        <text x="5422" y="13571" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001214700903">
+                                          <tspan class="text" id="text-0000001198371373">
                                              													
                                              <tspan font-size="405px" class="text">Di</tspan>
                                              												</tspan>
@@ -2175,7 +2182,7 @@
                                     										
                                     <rect x="6374" y="12094" height="608" width="18"></rect>
                                     										
-                                    <g class="flag" id="flag-0000002147257547">
+                                    <g class="flag" id="flag-0000001795997317">
                                        											
                                        <use xlink:href="#E241" x="6374" y="12702" height="720px" width="720px"></use>
                                        										</g>
@@ -2195,12 +2202,12 @@
                            							
                            <g class="tuplet" id="e44-m-270">
                               								
-                              <g class="tupletNum" id="num-0000001367199121">
+                              <g class="tupletNum" id="num-0000000801441384">
                                  									
                                  <use xlink:href="#E883" x="8193" y="13080" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000657346527">
+                              <g class="tupletBracket" id="bracket-0000001265385375">
                                  									
                                  <polygon points="7498,12981 8175,12981 8175,12963 7498,12963 "></polygon>
                                  									
@@ -2226,7 +2233,7 @@
                                        											
                                        <text x="7408" y="13571" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001711597593">
+                                          <tspan class="text" id="text-0000000698387025">
                                              													
                                              <tspan font-size="405px" class="text">o</tspan>
                                              												</tspan>
@@ -2260,7 +2267,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000663382052">
+                     <g class="barLineAttr" id="bline-0000000854181347">
                         						
                         <path d="M9521 8582 L9521 7862" stroke="#000000" stroke-width="27"></path>
                         						
@@ -2301,7 +2308,7 @@
                                     										
                                     <text x="9669" y="9564" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000708756421">
+                                       <tspan class="text" id="text-0000001452316588">
                                           												
                                           <tspan font-size="405px" class="text">phi</tspan>
                                           											</tspan>
@@ -2317,7 +2324,7 @@
                                     										
                                     <text x="9669" y="9164" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001820000152">
+                                       <tspan class="text" id="text-0000000869583403">
                                           												
                                           <tspan font-size="405px" class="text">o</tspan>
                                           											</tspan>
@@ -2343,7 +2350,7 @@
                                     										
                                     <text x="11692" y="9564" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001751268093">
+                                       <tspan class="text" id="text-0000001083173500">
                                           												
                                           <tspan font-size="405px" class="text">ae,</tspan>
                                           											</tspan>
@@ -2357,7 +2364,7 @@
                                     										
                                     <text x="11692" y="9164" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001419801112">
+                                       <tspan class="text" id="text-0000000989177833">
                                           												
                                           <tspan font-size="405px" class="text">ny</tspan>
                                           											</tspan>
@@ -2399,7 +2406,7 @@
                                     										
                                     <text x="9669" y="11579" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000496579552">
+                                       <tspan class="text" id="text-0000000960920845">
                                           												
                                           <tspan font-size="405px" class="text">phi</tspan>
                                           											</tspan>
@@ -2415,7 +2422,7 @@
                                     										
                                     <text x="9669" y="11179" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000825546952">
+                                       <tspan class="text" id="text-0000001482082797">
                                           												
                                           <tspan font-size="405px" class="text">o</tspan>
                                           											</tspan>
@@ -2441,7 +2448,7 @@
                                     										
                                     <text x="11692" y="11579" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000953056370">
+                                       <tspan class="text" id="text-0000000784958336">
                                           												
                                           <tspan font-size="405px" class="text">ae,</tspan>
                                           											</tspan>
@@ -2455,7 +2462,7 @@
                                     										
                                     <text x="11692" y="11179" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001125021155">
+                                       <tspan class="text" id="text-0000000822394216">
                                           												
                                           <tspan font-size="405px" class="text">ny</tspan>
                                           											</tspan>
@@ -2484,12 +2491,12 @@
                            							
                            <g class="tuplet" id="e44-m-299">
                               								
-                              <g class="tupletNum" id="num-0000002057880827">
+                              <g class="tupletNum" id="num-0000001374218035">
                                  									
                                  <use xlink:href="#E883" x="10454" y="13170" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000387147370">
+                              <g class="tupletBracket" id="bracket-0000000506191286">
                                  									
                                  <polygon points="9759,13071 10436,13071 10436,13053 9759,13053 "></polygon>
                                  									
@@ -2515,7 +2522,7 @@
                                        											
                                        <text x="9669" y="13571" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001009645684">
+                                          <tspan class="text" id="text-0000000577100164">
                                              													
                                              <tspan font-size="405px" class="text">ny</tspan>
                                              												</tspan>
@@ -2533,7 +2540,7 @@
                                        											
                                        <text x="9669" y="13971" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000776626088">
+                                          <tspan class="text" id="text-0000000768856087">
                                              													
                                              <tspan font-size="405px" class="text">So</tspan>
                                              												</tspan>
@@ -2569,12 +2576,12 @@
                            							
                            <g class="tuplet" id="e44-m-304">
                               								
-                              <g class="tupletNum" id="num-0000000266846609">
+                              <g class="tupletNum" id="num-0000000233924688">
                                  									
                                  <use xlink:href="#E883" x="12477" y="13170" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001688538302">
+                              <g class="tupletBracket" id="bracket-0000000095204929">
                                  									
                                  <polygon points="11782,13071 12459,13071 12459,13053 11782,13053 "></polygon>
                                  									
@@ -2600,7 +2607,7 @@
                                        											
                                        <text x="11692" y="13971" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000735878561">
+                                          <tspan class="text" id="text-0000001747490343">
                                              													
                                              <tspan font-size="405px" class="text">phi</tspan>
                                              												</tspan>
@@ -2636,7 +2643,7 @@
                                        											
                                        <text x="13041" y="13571" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000031809494">
+                                          <tspan class="text" id="text-0000000954672496">
                                              													
                                              <tspan font-size="405px" class="text">sum</tspan>
                                              												</tspan>
@@ -2648,7 +2655,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001593739816">
+                     <g class="barLineAttr" id="bline-0000002103379522">
                         						
                         <path d="M13805 8582 L13805 7862" stroke="#000000" stroke-width="27"></path>
                         						
@@ -2691,7 +2698,7 @@
                                     										
                                     <text x="14198" y="9164" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000261335217">
+                                       <tspan class="text" id="text-0000001509599853">
                                           												
                                           <tspan font-size="405px" class="text">sum</tspan>
                                           											</tspan>
@@ -2705,7 +2712,7 @@
                                     										
                                     <text x="14198" y="9564" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001808597681">
+                                       <tspan class="text" id="text-0000000669241368">
                                           												
                                           <tspan font-size="405px" class="text">nil</tspan>
                                           											</tspan>
@@ -2729,7 +2736,7 @@
                                     										
                                     <text x="17049" y="9564" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002119769190">
+                                       <tspan class="text" id="text-0000001550117417">
                                           												
                                           <tspan font-size="405px" class="text">ni</tspan>
                                           											</tspan>
@@ -2747,7 +2754,7 @@
                                     										
                                     <text x="17049" y="9164" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001694481863">
+                                       <tspan class="text" id="text-0000000670911851">
                                           												
                                           <tspan font-size="405px" class="text">Grae</tspan>
                                           											</tspan>
@@ -2789,7 +2796,7 @@
                                     										
                                     <text x="14198" y="11179" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002083459993">
+                                       <tspan class="text" id="text-0000002132092608">
                                           												
                                           <tspan font-size="405px" class="text">sum</tspan>
                                           											</tspan>
@@ -2803,7 +2810,7 @@
                                     										
                                     <text x="14198" y="11579" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000625404516">
+                                       <tspan class="text" id="text-0000000037556650">
                                           												
                                           <tspan font-size="405px" class="text">nil</tspan>
                                           											</tspan>
@@ -2827,7 +2834,7 @@
                                     										
                                     <text x="17049" y="11579" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001651245167">
+                                       <tspan class="text" id="text-0000001024570486">
                                           												
                                           <tspan font-size="405px" class="text">ni</tspan>
                                           											</tspan>
@@ -2845,7 +2852,7 @@
                                     										
                                     <text x="17049" y="11179" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000932064699">
+                                       <tspan class="text" id="text-0000000398469414">
                                           												
                                           <tspan font-size="405px" class="text">Grae</tspan>
                                           											</tspan>
@@ -2874,12 +2881,12 @@
                            							
                            <g class="tuplet" id="e44-m-350">
                               								
-                              <g class="tupletNum" id="num-0000000866268633">
+                              <g class="tupletNum" id="num-0000001706929271">
                                  									
                                  <use xlink:href="#E883" x="15509" y="13169" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001430344393">
+                              <g class="tupletBracket" id="bracket-0000000188183665">
                                  									
                                  <polygon points="14288,13070 15491,13070 15491,13052 14288,13052 "></polygon>
                                  									
@@ -2914,7 +2921,7 @@
                                           												
                                           <text x="14198" y="13971" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000081354777">
+                                             <tspan class="text" id="text-0000001645017642">
                                                 														
                                                 <tspan font-size="405px" class="text">ae,</tspan>
                                                 													</tspan>
@@ -2930,7 +2937,7 @@
                                           												
                                           <text x="14198" y="13571" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000001046232727">
+                                             <tspan class="text" id="text-0000000858829871">
                                                 														
                                                 <tspan font-size="405px" class="text">Grae</tspan>
                                                 													</tspan>
@@ -3018,12 +3025,12 @@
                            							
                            <g class="tuplet" id="e44-m-362">
                               								
-                              <g class="tupletNum" id="num-0000000587230904">
+                              <g class="tupletNum" id="num-0000000583387706">
                                  									
                                  <use xlink:href="#E883" x="18360" y="13259" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000812033427">
+                              <g class="tupletBracket" id="bracket-0000000986699120">
                                  									
                                  <polygon points="17139,13160 18342,13160 18342,13142 17139,13142 "></polygon>
                                  									
@@ -3117,7 +3124,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000002030835084">
+                     <g class="barLineAttr" id="bline-0000000609600843">
                         						
                         <path d="M19989 8582 L19989 7862" stroke="#000000" stroke-width="27"></path>
                         						
@@ -3128,7 +3135,7 @@
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000001941585819">
+               <g class="system" id="system-0000000897422112">
                   				
                   <polygon points="-270,14464 270,14104 270,13969 -270,14329 "></polygon>
                   				
@@ -3146,11 +3153,11 @@
                   				
                   <g class="measure" id="e44-m-377">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000001089824072">
+                     <g class="mNum autogenerated" id="mnum-0000001929260346">
                         						
                         <text x="0" y="14824" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000000785152841">
+                           <tspan class="text" id="text-0000000223049169">
                               								
                               <tspan font-size="324px" class="text">8</tspan>
                               							</tspan>
@@ -3169,12 +3176,12 @@
                         						
                         <path d="M0 15814 L5819 15814" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001456566330">
+                        <g class="clef" id="clef-0000000715397302">
                            							
                            <use xlink:href="#E050" x="90" y="15634" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001344216157">
+                        <g class="keySig" id="keysig-0000002068998808">
                            							
                            <use xlink:href="#E260" x="771" y="15454" height="720px" width="720px"></use>
                            						</g>
@@ -3196,7 +3203,7 @@
                                     										
                                     <text x="1095" y="16796" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001071133508">
+                                       <tspan class="text" id="text-0000000182670717">
                                           												
                                           <tspan font-size="405px" class="text">si</tspan>
                                           											</tspan>
@@ -3210,7 +3217,7 @@
                                     										
                                     <text x="1095" y="16396" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000915335271">
+                                       <tspan class="text" id="text-0000002092470986">
                                           												
                                           <tspan font-size="405px" class="text">ci</tspan>
                                           											</tspan>
@@ -3238,7 +3245,7 @@
                                     										
                                     <text x="3421" y="16396" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001367065009">
+                                       <tspan class="text" id="text-0000001237676038">
                                           												
                                           <tspan font-size="405px" class="text">a,</tspan>
                                           											</tspan>
@@ -3252,7 +3259,7 @@
                                     										
                                     <text x="3421" y="16796" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001260575045">
+                                       <tspan class="text" id="text-0000001000860927">
                                           												
                                           <tspan font-size="405px" class="text">SOL</tspan>
                                           											</tspan>
@@ -3275,12 +3282,12 @@
                         						
                         <path d="M0 17829 L5819 17829" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000712984259">
+                        <g class="clef" id="clef-0000001607753832">
                            							
                            <use xlink:href="#E050" x="90" y="17649" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000167690753">
+                        <g class="keySig" id="keysig-0000001879407870">
                            							
                            <use xlink:href="#E260" x="771" y="17469" height="720px" width="720px"></use>
                            						</g>
@@ -3302,7 +3309,7 @@
                                     										
                                     <text x="1095" y="18811" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000340796798">
+                                       <tspan class="text" id="text-0000000437009126">
                                           												
                                           <tspan font-size="405px" class="text">si</tspan>
                                           											</tspan>
@@ -3316,7 +3323,7 @@
                                     										
                                     <text x="1095" y="18411" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000764129776">
+                                       <tspan class="text" id="text-0000000973668811">
                                           												
                                           <tspan font-size="405px" class="text">ci</tspan>
                                           											</tspan>
@@ -3344,7 +3351,7 @@
                                     										
                                     <text x="3421" y="18411" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001683411757">
+                                       <tspan class="text" id="text-0000001268865456">
                                           												
                                           <tspan font-size="405px" class="text">a,</tspan>
                                           											</tspan>
@@ -3358,7 +3365,7 @@
                                     										
                                     <text x="3421" y="18811" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000074929960">
+                                       <tspan class="text" id="text-0000001509740611">
                                           												
                                           <tspan font-size="405px" class="text">SOL</tspan>
                                           											</tspan>
@@ -3381,12 +3388,12 @@
                         						
                         <path d="M0 19934 L5819 19934" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000879940807">
+                        <g class="clef" id="clef-0000002018591014">
                            							
                            <use xlink:href="#E062" x="90" y="19394" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001592750007">
+                        <g class="keySig" id="keysig-0000000512516992">
                            							
                            <use xlink:href="#E260" x="771" y="19754" height="720px" width="720px"></use>
                            						</g>
@@ -3395,12 +3402,12 @@
                            							
                            <g class="tuplet" id="e44-m-417">
                               								
-                              <g class="tupletNum" id="num-0000001550193945">
+                              <g class="tupletNum" id="num-0000001631156615">
                                  									
                                  <use xlink:href="#E883" x="2188" y="20401" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001396397423">
+                              <g class="tupletBracket" id="bracket-0000000500456781">
                                  									
                                  <polygon points="1185,20302 2170,20302 2170,20284 1185,20284 "></polygon>
                                  									
@@ -3430,7 +3437,7 @@
                                           												
                                           <text x="1095" y="21204" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000172559898">
+                                             <tspan class="text" id="text-0000000925818554">
                                                 														
                                                 <tspan font-size="405px" class="text">nil</tspan>
                                                 													</tspan>
@@ -3510,12 +3517,12 @@
                            							
                            <g class="tuplet" id="e44-m-428">
                               								
-                              <g class="tupletNum" id="num-0000001209908179">
+                              <g class="tupletNum" id="num-0000001309665539">
                                  									
                                  <use xlink:href="#E883" x="4407" y="20401" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000430667567">
+                              <g class="tupletBracket" id="bracket-0000002015188568">
                                  									
                                  <polygon points="3511,20302 4389,20302 4389,20284 3511,20284 "></polygon>
                                  									
@@ -3577,7 +3584,7 @@
                                           												
                                           <text x="4298" y="21204" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000001258142565">
+                                             <tspan class="text" id="text-0000000779248379">
                                                 														
                                                 <tspan font-size="405px" class="text">ni</tspan>
                                                 													</tspan>
@@ -3603,7 +3610,7 @@
                                           												
                                           <text x="4660" y="20804" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000892831079">
+                                             <tspan class="text" id="text-0000001781303345">
                                                 														
                                                 <tspan font-size="405px" class="text">ci</tspan>
                                                 													</tspan>
@@ -3630,7 +3637,7 @@
                                        											
                                        <text x="5172" y="20804" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000362292458">
+                                          <tspan class="text" id="text-0000000386399952">
                                              													
                                              <tspan font-size="405px" class="text">a</tspan>
                                              												</tspan>
@@ -3644,7 +3651,7 @@
                                        											
                                        <text x="5172" y="21204" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000979081911">
+                                          <tspan class="text" id="text-0000000487705076">
                                              													
                                              <tspan font-size="405px" class="text">si</tspan>
                                              												</tspan>
@@ -3656,7 +3663,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001658997636">
+                     <g class="barLineAttr" id="bline-0000001660593516">
                         						
                         <path d="M5806 15814 L5806 15094" stroke="#000000" stroke-width="27"></path>
                         						
@@ -3697,7 +3704,7 @@
                                     										
                                     <text x="5911" y="16396" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001727818764">
+                                       <tspan class="text" id="text-0000001680351042">
                                           												
                                           <tspan font-size="405px" class="text">O</tspan>
                                           											</tspan>
@@ -3711,7 +3718,7 @@
                                     										
                                     <text x="5911" y="16796" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001861533481">
+                                       <tspan class="text" id="text-0000001054779136">
                                           												
                                           <tspan font-size="405px" class="text">So</tspan>
                                           											</tspan>
@@ -3737,7 +3744,7 @@
                                     										
                                     <text x="7541" y="16396" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001375608826">
+                                       <tspan class="text" id="text-0000001882273405">
                                           												
                                           <tspan font-size="405px" class="text">si</tspan>
                                           											</tspan>
@@ -3757,7 +3764,7 @@
                                     										
                                     <text x="7541" y="16796" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000395268848">
+                                       <tspan class="text" id="text-0000001383338671">
                                           												
                                           <tspan font-size="405px" class="text">phi</tspan>
                                           											</tspan>
@@ -3803,7 +3810,7 @@
                                     										
                                     <text x="5911" y="18411" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000727828641">
+                                       <tspan class="text" id="text-0000001757375789">
                                           												
                                           <tspan font-size="405px" class="text">O</tspan>
                                           											</tspan>
@@ -3817,7 +3824,7 @@
                                     										
                                     <text x="5911" y="18811" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001687016275">
+                                       <tspan class="text" id="text-0000000569288744">
                                           												
                                           <tspan font-size="405px" class="text">So</tspan>
                                           											</tspan>
@@ -3845,7 +3852,7 @@
                                     										
                                     <text x="7541" y="18411" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000646646750">
+                                       <tspan class="text" id="text-0000000924971943">
                                           												
                                           <tspan font-size="405px" class="text">si</tspan>
                                           											</tspan>
@@ -3865,7 +3872,7 @@
                                     										
                                     <text x="7541" y="18811" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001890045675">
+                                       <tspan class="text" id="text-0000000025514058">
                                           												
                                           <tspan font-size="405px" class="text">phi</tspan>
                                           											</tspan>
@@ -3898,12 +3905,12 @@
                            							
                            <g class="tuplet" id="e44-m-465">
                               								
-                              <g class="tupletNum" id="num-0000000469166660">
+                              <g class="tupletNum" id="num-0000000050200775">
                                  									
                                  <use xlink:href="#E883" x="6565" y="20312" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001400166298">
+                              <g class="tupletBracket" id="bracket-0000000776991626">
                                  									
                                  <polygon points="6001,20213 6547,20213 6547,20195 6001,20195 "></polygon>
                                  									
@@ -3929,7 +3936,7 @@
                                        											
                                        <text x="5911" y="20804" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000876655169">
+                                          <tspan class="text" id="text-0000000143203099">
                                              													
                                              <tspan font-size="405px" class="text">O</tspan>
                                              												</tspan>
@@ -3943,7 +3950,7 @@
                                        											
                                        <text x="5911" y="21204" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000915228120">
+                                          <tspan class="text" id="text-0000001630417346">
                                              													
                                              <tspan font-size="405px" class="text">SOL</tspan>
                                              												</tspan>
@@ -3967,7 +3974,7 @@
                                        											
                                        <text x="6454" y="20804" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000002100347401">
+                                          <tspan class="text" id="text-0000001789240558">
                                              													
                                              <tspan font-size="405px" class="text">si</tspan>
                                              												</tspan>
@@ -3999,7 +4006,7 @@
                                        											
                                        <text x="6892" y="21204" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001189112894">
+                                          <tspan class="text" id="text-0000002081955365">
                                              													
                                              <tspan font-size="405px" class="text">So</tspan>
                                              												</tspan>
@@ -4013,12 +4020,12 @@
                            							
                            <g class="tuplet" id="e44-m-471">
                               								
-                              <g class="tupletNum" id="num-0000000717462425">
+                              <g class="tupletNum" id="num-0000000456769534">
                                  									
                                  <use xlink:href="#E883" x="8633" y="20491" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001080364830">
+                              <g class="tupletBracket" id="bracket-0000000164087926">
                                  									
                                  <polygon points="7631,20392 8615,20392 8615,20374 7631,20374 "></polygon>
                                  									
@@ -4053,7 +4060,7 @@
                                           												
                                           <text x="7541" y="21204" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000001576096063">
+                                             <tspan class="text" id="text-0000000262240783">
                                                 														
                                                 <tspan font-size="405px" class="text">phi</tspan>
                                                 													</tspan>
@@ -4137,7 +4144,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000347767372">
+                     <g class="barLineAttr" id="bline-0000000504812813">
                         						
                         <path d="M9957 15814 L9957 15094" stroke="#000000" stroke-width="27"></path>
                         						
@@ -4199,7 +4206,7 @@
                                     										
                                     <text x="12177" y="16396" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001656813592">
+                                       <tspan class="text" id="text-0000001966329331">
                                           												
                                           <tspan font-size="405px" class="text">rim</tspan>
                                           											</tspan>
@@ -4213,7 +4220,7 @@
                                     										
                                     <text x="12177" y="16796" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000000580520">
+                                       <tspan class="text" id="text-0000001485627334">
                                           												
                                           <tspan font-size="405px" class="text">ae:</tspan>
                                           											</tspan>
@@ -4269,7 +4276,7 @@
                                     										
                                     <text x="12177" y="18411" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000731443310">
+                                       <tspan class="text" id="text-0000001644500447">
                                           												
                                           <tspan font-size="405px" class="text">rim</tspan>
                                           											</tspan>
@@ -4283,7 +4290,7 @@
                                     										
                                     <text x="12177" y="18811" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001975580951">
+                                       <tspan class="text" id="text-0000000226154001">
                                           												
                                           <tspan font-size="405px" class="text">ae:</tspan>
                                           											</tspan>
@@ -4310,12 +4317,12 @@
                            							
                            <g class="tuplet" id="e44-m-518">
                               								
-                              <g class="tupletNum" id="num-0000001614862268">
+                              <g class="tupletNum" id="num-0000001099516620">
                                  									
                                  <use xlink:href="#E883" x="10959" y="20492" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001342864313">
+                              <g class="tupletBracket" id="bracket-0000001593141288">
                                  									
                                  <polygon points="10152,20393 10941,20393 10941,20375 10152,20375 "></polygon>
                                  									
@@ -4413,7 +4420,7 @@
                                     										
                                     <text x="12177" y="20804" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001725026448">
+                                       <tspan class="text" id="text-0000001428766373">
                                           												
                                           <tspan font-size="405px" class="text">rim</tspan>
                                           											</tspan>
@@ -4427,7 +4434,7 @@
                                     										
                                     <text x="12177" y="21204" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000077295949">
+                                       <tspan class="text" id="text-0000001314461904">
                                           												
                                           <tspan font-size="405px" class="text">ae:</tspan>
                                           											</tspan>
@@ -4438,7 +4445,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001995047654">
+                     <g class="barLineAttr" id="bline-0000002126832908">
                         						
                         <path d="M15843 15814 L15843 15094" stroke="#000000" stroke-width="27"></path>
                         						
@@ -4501,7 +4508,7 @@
                                     										
                                     <text x="16097" y="16396" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001209067507">
+                                       <tspan class="text" id="text-0000000563927449">
                                           												
                                           <tspan font-size="405px" class="text">I</tspan>
                                           											</tspan>
@@ -4517,7 +4524,7 @@
                                     										
                                     <text x="16097" y="16796" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000391444590">
+                                       <tspan class="text" id="text-0000001709972870">
                                           												
                                           <tspan font-size="405px" class="text">Cu</tspan>
                                           											</tspan>
@@ -4548,7 +4555,7 @@
                                     										
                                     <text x="17908" y="16396" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001748565456">
+                                       <tspan class="text" id="text-0000002146750013">
                                           												
                                           <tspan font-size="405px" class="text">SIS</tspan>
                                           											</tspan>
@@ -4562,7 +4569,7 @@
                                     										
                                     <text x="17908" y="16796" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001632055780">
+                                       <tspan class="text" id="text-0000000526255404">
                                           												
                                           <tspan font-size="405px" class="text">jus</tspan>
                                           											</tspan>
@@ -4602,7 +4609,7 @@
                                     										
                                     <text x="16097" y="18411" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001354754725">
+                                       <tspan class="text" id="text-0000000130138503">
                                           												
                                           <tspan font-size="405px" class="text">I</tspan>
                                           											</tspan>
@@ -4618,7 +4625,7 @@
                                     										
                                     <text x="16097" y="18811" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001028362565">
+                                       <tspan class="text" id="text-0000001050751504">
                                           												
                                           <tspan font-size="405px" class="text">Cu</tspan>
                                           											</tspan>
@@ -4644,7 +4651,7 @@
                                     										
                                     <text x="17908" y="18411" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000219873748">
+                                       <tspan class="text" id="text-0000001993643827">
                                           												
                                           <tspan font-size="405px" class="text">SIS</tspan>
                                           											</tspan>
@@ -4658,7 +4665,7 @@
                                     										
                                     <text x="17908" y="18811" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000429001826">
+                                       <tspan class="text" id="text-0000000520709129">
                                           												
                                           <tspan font-size="405px" class="text">jus</tspan>
                                           											</tspan>
@@ -4685,12 +4692,12 @@
                            							
                            <g class="tuplet" id="e44-m-567">
                               								
-                              <g class="tupletNum" id="num-0000001370064922">
+                              <g class="tupletNum" id="num-0000000009939324">
                                  									
                                  <use xlink:href="#E883" x="16932" y="20492" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001766290029">
+                              <g class="tupletBracket" id="bracket-0000001466453249">
                                  									
                                  <polygon points="16187,20393 16914,20393 16914,20375 16187,20375 "></polygon>
                                  									
@@ -4716,7 +4723,7 @@
                                        											
                                        <text x="16097" y="20804" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000557237122">
+                                          <tspan class="text" id="text-0000000286011209">
                                              													
                                              <tspan font-size="405px" class="text">I</tspan>
                                              												</tspan>
@@ -4732,7 +4739,7 @@
                                        											
                                        <text x="16097" y="21204" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000231591161">
+                                          <tspan class="text" id="text-0000001563015880">
                                              													
                                              <tspan font-size="405px" class="text">Cu</tspan>
                                              												</tspan>
@@ -4781,12 +4788,12 @@
                            							
                            <g class="tuplet" id="e44-m-573">
                               								
-                              <g class="tupletNum" id="num-0000001154870684">
+                              <g class="tupletNum" id="num-0000000634992146">
                                  									
                                  <use xlink:href="#E883" x="18834" y="20492" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001222474619">
+                              <g class="tupletBracket" id="bracket-0000000406356458">
                                  									
                                  <polygon points="17998,20393 18816,20393 18816,20375 17998,20375 "></polygon>
                                  									
@@ -4812,7 +4819,7 @@
                                        											
                                        <text x="17753" y="20804" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000624548782">
+                                          <tspan class="text" id="text-0000001180148597">
                                              													
                                              <tspan font-size="405px" class="text">SIS</tspan>
                                              												</tspan>
@@ -4826,7 +4833,7 @@
                                        											
                                        <text x="17866" y="21204" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001395060285">
+                                          <tspan class="text" id="text-0000001877333261">
                                              													
                                              <tspan font-size="405px" class="text">jus</tspan>
                                              												</tspan>
@@ -4854,7 +4861,7 @@
                                           												
                                           <text x="18451" y="20804" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000135041192">
+                                             <tspan class="text" id="text-0000000354224945">
                                                 														
                                                 <tspan font-size="405px" class="text">a</tspan>
                                                 													</tspan>
@@ -4870,7 +4877,7 @@
                                           												
                                           <text x="18451" y="21204" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000839153595">
+                                             <tspan class="text" id="text-0000001495170294">
                                                 														
                                                 <tspan font-size="405px" class="text">mem</tspan>
                                                 													</tspan>
@@ -4922,7 +4929,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000049499981">
+                     <g class="barLineAttr" id="bline-0000002072914870">
                         						
                         <path d="M19990 15814 L19990 15094" stroke="#000000" stroke-width="27"></path>
                         						
@@ -4933,7 +4940,7 @@
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000000718982821">
+               <g class="system" id="system-0000000177612348">
                   				
                   <polygon points="-270,21697 270,21337 270,21202 -270,21562 "></polygon>
                   				
@@ -4949,11 +4956,11 @@
                   				
                   <g class="measure" id="e44-m-589">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000000160113046">
+                     <g class="mNum autogenerated" id="mnum-0000001186624422">
                         						
                         <text x="0" y="22057" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000000222954431">
+                           <tspan class="text" id="text-0000002063514512">
                               								
                               <tspan font-size="324px" class="text">12</tspan>
                               							</tspan>
@@ -4972,12 +4979,12 @@
                         						
                         <path d="M0 23047 L4893 23047" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001777587393">
+                        <g class="clef" id="clef-0000002020372733">
                            							
                            <use xlink:href="#E050" x="90" y="22867" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000118817087">
+                        <g class="keySig" id="keysig-0000000393097167">
                            							
                            <use xlink:href="#E260" x="771" y="22687" height="720px" width="720px"></use>
                            						</g>
@@ -4999,7 +5006,7 @@
                                     										
                                     <text x="1103" y="23629" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001957526899">
+                                       <tspan class="text" id="text-0000001980505959">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -5015,7 +5022,7 @@
                                     										
                                     <text x="1103" y="24029" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000481764906">
+                                       <tspan class="text" id="text-0000000557010586">
                                           												
                                           <tspan font-size="405px" class="text">mem</tspan>
                                           											</tspan>
@@ -5043,7 +5050,7 @@
                                     										
                                     <text x="2995" y="23629" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000111139554">
+                                       <tspan class="text" id="text-0000000241706803">
                                           												
                                           <tspan font-size="405px" class="text">dest</tspan>
                                           											</tspan>
@@ -5057,7 +5064,7 @@
                                     										
                                     <text x="2995" y="24029" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001092601656">
+                                       <tspan class="text" id="text-0000001626818557">
                                           												
                                           <tspan font-size="405px" class="text">bra</tspan>
                                           											</tspan>
@@ -5080,12 +5087,12 @@
                         						
                         <path d="M0 25062 L4893 25062" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001946473146">
+                        <g class="clef" id="clef-0000001124387597">
                            							
                            <use xlink:href="#E050" x="90" y="24882" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001755770071">
+                        <g class="keySig" id="keysig-0000001873732826">
                            							
                            <use xlink:href="#E260" x="771" y="24702" height="720px" width="720px"></use>
                            						</g>
@@ -5107,7 +5114,7 @@
                                     										
                                     <text x="1103" y="25644" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001242285089">
+                                       <tspan class="text" id="text-0000001168570555">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -5123,7 +5130,7 @@
                                     										
                                     <text x="1103" y="26044" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002001305569">
+                                       <tspan class="text" id="text-0000001542760405">
                                           												
                                           <tspan font-size="405px" class="text">mem</tspan>
                                           											</tspan>
@@ -5149,7 +5156,7 @@
                                     										
                                     <text x="2995" y="25644" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000517508641">
+                                       <tspan class="text" id="text-0000000600273329">
                                           												
                                           <tspan font-size="405px" class="text">dest</tspan>
                                           											</tspan>
@@ -5163,7 +5170,7 @@
                                     										
                                     <text x="2995" y="26044" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000905204692">
+                                       <tspan class="text" id="text-0000000352466883">
                                           												
                                           <tspan font-size="405px" class="text">bra</tspan>
                                           											</tspan>
@@ -5186,12 +5193,12 @@
                         						
                         <path d="M0 27167 L4893 27167" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000654789870">
+                        <g class="clef" id="clef-0000001127406974">
                            							
                            <use xlink:href="#E062" x="90" y="26627" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001347137862">
+                        <g class="keySig" id="keysig-0000001080794537">
                            							
                            <use xlink:href="#E260" x="771" y="26987" height="720px" width="720px"></use>
                            						</g>
@@ -5200,12 +5207,12 @@
                            							
                            <g class="tuplet" id="e44-m-618">
                               								
-                              <g class="tupletNum" id="num-0000001172815978">
+                              <g class="tupletNum" id="num-0000000388145111">
                                  									
                                  <use xlink:href="#E883" x="1970" y="27634" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000139853628">
+                              <g class="tupletBracket" id="bracket-0000001813379905">
                                  									
                                  <polygon points="1193,27535 1952,27535 1952,27517 1193,27517 "></polygon>
                                  									
@@ -5231,7 +5238,7 @@
                                        											
                                        <text x="1103" y="28126" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000710155919">
+                                          <tspan class="text" id="text-0000000513358509">
                                              													
                                              <tspan font-size="405px" class="text">dest</tspan>
                                              												</tspan>
@@ -5280,12 +5287,12 @@
                            							
                            <g class="tuplet" id="e44-m-624">
                               								
-                              <g class="tupletNum" id="num-0000000548603712">
+                              <g class="tupletNum" id="num-0000001464124953">
                                  									
                                  <use xlink:href="#E883" x="3719" y="27725" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001271120124">
+                              <g class="tupletBracket" id="bracket-0000001079131524">
                                  									
                                  <polygon points="3085,27626 3701,27626 3701,27608 3085,27608 "></polygon>
                                  									
@@ -5321,7 +5328,7 @@
                                        											
                                        <text x="3562" y="28526" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001072946847">
+                                          <tspan class="text" id="text-0000000930022384">
                                              													
                                              <tspan font-size="405px" class="text">bra</tspan>
                                              												</tspan>
@@ -5335,7 +5342,7 @@
                                        											
                                        <text x="3562" y="28126" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000054932675">
+                                          <tspan class="text" id="text-0000000238183671">
                                              													
                                              <tspan font-size="405px" class="text">so</tspan>
                                              												</tspan>
@@ -5361,7 +5368,7 @@
                                        											
                                        <text x="4222" y="28526" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001365065084">
+                                          <tspan class="text" id="text-0000000270929634">
                                              													
                                              <tspan font-size="405px" class="text">Ty</tspan>
                                              												</tspan>
@@ -5375,7 +5382,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001794988420">
+                     <g class="barLineAttr" id="bline-0000001420657124">
                         						
                         <path d="M4880 23047 L4880 22327" stroke="#000000" stroke-width="27"></path>
                         						
@@ -5416,7 +5423,7 @@
                                     										
                                     <text x="4993" y="23629" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000714751591">
+                                       <tspan class="text" id="text-0000000463115131">
                                           												
                                           <tspan font-size="405px" class="text">so</tspan>
                                           											</tspan>
@@ -5432,7 +5439,7 @@
                                     										
                                     <text x="4993" y="24029" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000444459561">
+                                       <tspan class="text" id="text-0000001659253284">
                                           												
                                           <tspan font-size="405px" class="text">Ty</tspan>
                                           											</tspan>
@@ -5458,7 +5465,7 @@
                                     										
                                     <text x="7404" y="23629" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000616947046">
+                                       <tspan class="text" id="text-0000001290673033">
                                           												
                                           <tspan font-size="405px" class="text">ror,</tspan>
                                           											</tspan>
@@ -5472,7 +5479,7 @@
                                     										
                                     <text x="7404" y="24029" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001009540621">
+                                       <tspan class="text" id="text-0000002036685845">
                                           												
                                           <tspan font-size="405px" class="text">phon</tspan>
                                           											</tspan>
@@ -5512,7 +5519,7 @@
                                     										
                                     <text x="4993" y="25644" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002017163688">
+                                       <tspan class="text" id="text-0000000917274315">
                                           												
                                           <tspan font-size="405px" class="text">so</tspan>
                                           											</tspan>
@@ -5528,7 +5535,7 @@
                                     										
                                     <text x="4993" y="26044" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000840442378">
+                                       <tspan class="text" id="text-0000000701804957">
                                           												
                                           <tspan font-size="405px" class="text">Ty</tspan>
                                           											</tspan>
@@ -5556,7 +5563,7 @@
                                     										
                                     <text x="7404" y="25644" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001999681079">
+                                       <tspan class="text" id="text-0000000307210874">
                                           												
                                           <tspan font-size="405px" class="text">ror,</tspan>
                                           											</tspan>
@@ -5570,7 +5577,7 @@
                                     										
                                     <text x="7404" y="26044" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002115500512">
+                                       <tspan class="text" id="text-0000000924680165">
                                           												
                                           <tspan font-size="405px" class="text">phon</tspan>
                                           											</tspan>
@@ -5597,12 +5604,12 @@
                            							
                            <g class="tuplet" id="e44-m-664">
                               								
-                              <g class="tupletNum" id="num-0000001696992913">
+                              <g class="tupletNum" id="num-0000000576811373">
                                  									
                                  <use xlink:href="#E883" x="6120" y="27814" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001330986295">
+                              <g class="tupletBracket" id="bracket-0000001456392897">
                                  									
                                  <polygon points="5083,27715 6102,27715 6102,27697 5083,27697 "></polygon>
                                  									
@@ -5628,7 +5635,7 @@
                                        											
                                        <text x="4993" y="28126" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001478733405">
+                                          <tspan class="text" id="text-0000001038464479">
                                              													
                                              <tspan font-size="405px" class="text">ror,</tspan>
                                              												</tspan>
@@ -5644,7 +5651,7 @@
                                        											
                                        <text x="4927" y="28526" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001987675555">
+                                          <tspan class="text" id="text-0000000521607278">
                                              													
                                              <tspan font-size="405px" class="text">phon</tspan>
                                              												</tspan>
@@ -5672,7 +5679,7 @@
                                           												
                                           <text x="5890" y="28526" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000663680292">
+                                             <tspan class="text" id="text-0000001104110144">
                                                 														
                                                 <tspan font-size="405px" class="text">dis</tspan>
                                                 													</tspan>
@@ -5724,12 +5731,12 @@
                            							
                            <g class="tuplet" id="e44-m-672">
                               								
-                              <g class="tupletNum" id="num-0000000667411812">
+                              <g class="tupletNum" id="num-0000001440823669">
                                  									
                                  <use xlink:href="#E883" x="8082" y="27725" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000934189347">
+                              <g class="tupletBracket" id="bracket-0000001926010700">
                                  									
                                  <polygon points="7494,27626 8064,27626 8064,27608 7494,27608 "></polygon>
                                  									
@@ -5755,7 +5762,7 @@
                                        											
                                        <text x="7404" y="28126" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000002104949024">
+                                          <tspan class="text" id="text-0000001002755268">
                                              													
                                              <tspan font-size="405px" class="text">I</tspan>
                                              												</tspan>
@@ -5789,7 +5796,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000631903697">
+                     <g class="barLineAttr" id="bline-0000001311744860">
                         						
                         <path d="M9197 23047 L9197 22327" stroke="#000000" stroke-width="27"></path>
                         						
@@ -5832,7 +5839,7 @@
                                     										
                                     <text x="9310" y="23629" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001184820513">
+                                       <tspan class="text" id="text-0000001669181160">
                                           												
                                           <tspan font-size="405px" class="text">et</tspan>
                                           											</tspan>
@@ -5846,7 +5853,7 @@
                                     										
                                     <text x="9310" y="24029" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001006417254">
+                                       <tspan class="text" id="text-0000000437397984">
                                           												
                                           <tspan font-size="405px" class="text">dis</tspan>
                                           											</tspan>
@@ -5872,7 +5879,7 @@
                                     										
                                     <text x="11012" y="23629" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000681043450">
+                                       <tspan class="text" id="text-0000000138836451">
                                           												
                                           <tspan font-size="405px" class="text">con</tspan>
                                           											</tspan>
@@ -5888,7 +5895,7 @@
                                     										
                                     <text x="11012" y="24029" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001000871265">
+                                       <tspan class="text" id="text-0000000623349956">
                                           												
                                           <tspan font-size="405px" class="text">se</tspan>
                                           											</tspan>
@@ -5930,7 +5937,7 @@
                                     										
                                     <text x="9310" y="25644" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001725645901">
+                                       <tspan class="text" id="text-0000000350922279">
                                           												
                                           <tspan font-size="405px" class="text">et</tspan>
                                           											</tspan>
@@ -5944,7 +5951,7 @@
                                     										
                                     <text x="9310" y="26044" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000042183904">
+                                       <tspan class="text" id="text-0000001480067940">
                                           												
                                           <tspan font-size="405px" class="text">dis</tspan>
                                           											</tspan>
@@ -5970,7 +5977,7 @@
                                     										
                                     <text x="11012" y="25644" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000289150341">
+                                       <tspan class="text" id="text-0000002011478835">
                                           												
                                           <tspan font-size="405px" class="text">con</tspan>
                                           											</tspan>
@@ -5986,7 +5993,7 @@
                                     										
                                     <text x="11012" y="26044" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001232889101">
+                                       <tspan class="text" id="text-0000000448104844">
                                           												
                                           <tspan font-size="405px" class="text">se</tspan>
                                           											</tspan>
@@ -6015,12 +6022,12 @@
                            							
                            <g class="tuplet" id="e44-m-700">
                               								
-                              <g class="tupletNum" id="num-0000000224413561">
+                              <g class="tupletNum" id="num-0000001709441154">
                                  									
                                  <use xlink:href="#E883" x="9988" y="27455" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001692113426">
+                              <g class="tupletBracket" id="bracket-0000000242359638">
                                  									
                                  <polygon points="9400,27356 9970,27356 9970,27338 9400,27338 "></polygon>
                                  									
@@ -6046,7 +6053,7 @@
                                        											
                                        <text x="9310" y="28126" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001270382226">
+                                          <tspan class="text" id="text-0000000880107896">
                                              													
                                              <tspan font-size="405px" class="text">SIS</tspan>
                                              												</tspan>
@@ -6062,7 +6069,7 @@
                                        											
                                        <text x="9310" y="28526" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000402811061">
+                                          <tspan class="text" id="text-0000000694652538">
                                              													
                                              <tspan font-size="405px" class="text">se</tspan>
                                              												</tspan>
@@ -6098,12 +6105,12 @@
                            							
                            <g class="tuplet" id="e44-m-704">
                               								
-                              <g class="tupletNum" id="num-0000002001019506">
+                              <g class="tupletNum" id="num-0000000290448293">
                                  									
                                  <use xlink:href="#E883" x="11691" y="27725" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000768930215">
+                              <g class="tupletBracket" id="bracket-0000001712561062">
                                  									
                                  <polygon points="11102,27626 11673,27626 11673,27608 11102,27608 "></polygon>
                                  									
@@ -6129,7 +6136,7 @@
                                        											
                                        <text x="11012" y="28126" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001657202307">
+                                          <tspan class="text" id="text-0000000113019358">
                                              													
                                              <tspan font-size="405px" class="text">a</tspan>
                                              												</tspan>
@@ -6165,7 +6172,7 @@
                                        											
                                        <text x="12148" y="28526" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000002004597692">
+                                          <tspan class="text" id="text-0000000291535823">
                                              													
                                              <tspan font-size="405px" class="text">cat,</tspan>
                                              												</tspan>
@@ -6177,7 +6184,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000932140665">
+                     <g class="barLineAttr" id="bline-0000000808719779">
                         						
                         <path d="M12805 23047 L12805 22327" stroke="#000000" stroke-width="27"></path>
                         						
@@ -6218,7 +6225,7 @@
                                     										
                                     <text x="12918" y="23629" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000474167714">
+                                       <tspan class="text" id="text-0000001657065594">
                                           												
                                           <tspan font-size="405px" class="text">junx</tspan>
                                           											</tspan>
@@ -6232,7 +6239,7 @@
                                     										
                                     <text x="12918" y="24029" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000668838866">
+                                       <tspan class="text" id="text-0000000113116808">
                                           												
                                           <tspan font-size="405px" class="text">cat,</tspan>
                                           											</tspan>
@@ -6256,7 +6263,7 @@
                                     										
                                     <text x="14589" y="23629" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000271506830">
+                                       <tspan class="text" id="text-0000001958418078">
                                           												
                                           <tspan font-size="405px" class="text">ac</tspan>
                                           											</tspan>
@@ -6270,7 +6277,7 @@
                                     										
                                     <text x="14589" y="24029" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001632736355">
+                                       <tspan class="text" id="text-0000001760437760">
                                           												
                                           <tspan font-size="405px" class="text">dis</tspan>
                                           											</tspan>
@@ -6314,7 +6321,7 @@
                                     										
                                     <text x="12918" y="25644" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000430385735">
+                                       <tspan class="text" id="text-0000001693698094">
                                           												
                                           <tspan font-size="405px" class="text">junx</tspan>
                                           											</tspan>
@@ -6328,7 +6335,7 @@
                                     										
                                     <text x="12918" y="26044" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002067642758">
+                                       <tspan class="text" id="text-0000000038619644">
                                           												
                                           <tspan font-size="405px" class="text">cat,</tspan>
                                           											</tspan>
@@ -6352,7 +6359,7 @@
                                     										
                                     <text x="14589" y="25644" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001561788683">
+                                       <tspan class="text" id="text-0000001751136864">
                                           												
                                           <tspan font-size="405px" class="text">ac</tspan>
                                           											</tspan>
@@ -6366,7 +6373,7 @@
                                     										
                                     <text x="14589" y="26044" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000040311732">
+                                       <tspan class="text" id="text-0000000709356974">
                                           												
                                           <tspan font-size="405px" class="text">dis</tspan>
                                           											</tspan>
@@ -6395,12 +6402,12 @@
                            							
                            <g class="tuplet" id="e44-m-754">
                               								
-                              <g class="tupletNum" id="num-0000000933625412">
+                              <g class="tupletNum" id="num-0000001108701232">
                                  									
                                  <use xlink:href="#E883" x="13580" y="27545" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000834669888">
+                              <g class="tupletBracket" id="bracket-0000000413028848">
                                  									
                                  <polygon points="13008,27446 13562,27446 13562,27428 13008,27428 "></polygon>
                                  									
@@ -6415,7 +6422,7 @@
                                  									
                                  <use xlink:href="#E0A4" x="13008" y="26537" height="720px" width="720px"></use>
                                  									
-                                 <g class="dots" id="dots-0000001393142001">
+                                 <g class="dots" id="dots-0000001651164539">
                                     										
                                     <ellipse cx="13324" cy="26537" rx="36" ry="36"></ellipse>
                                     									</g>
@@ -6431,7 +6438,7 @@
                                        											
                                        <text x="12918" y="28126" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000002063476705">
+                                          <tspan class="text" id="text-0000001290421234">
                                              													
                                              <tspan font-size="405px" class="text">dest</tspan>
                                              												</tspan>
@@ -6447,7 +6454,7 @@
                                        											
                                        <text x="12918" y="28526" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001124144405">
+                                          <tspan class="text" id="text-0000000609632738">
                                              													
                                              <tspan font-size="405px" class="text">dis</tspan>
                                              												</tspan>
@@ -6466,7 +6473,7 @@
                                     										
                                     <rect x="13733" y="26649" height="608" width="18"></rect>
                                     										
-                                    <g class="flag" id="flag-0000000817943650">
+                                    <g class="flag" id="flag-0000000688248654">
                                        											
                                        <use xlink:href="#E241" x="13733" y="27257" height="720px" width="720px"></use>
                                        										</g>
@@ -6486,12 +6493,12 @@
                            							
                            <g class="tuplet" id="e44-m-758">
                               								
-                              <g class="tupletNum" id="num-0000000420115425">
+                              <g class="tupletNum" id="num-0000002052925527">
                                  									
                                  <use xlink:href="#E883" x="15267" y="27635" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001174132644">
+                              <g class="tupletBracket" id="bracket-0000001373683711">
                                  									
                                  <polygon points="14679,27536 15249,27536 15249,27518 14679,27518 "></polygon>
                                  									
@@ -6517,7 +6524,7 @@
                                        											
                                        <text x="14589" y="28126" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000220947846">
+                                          <tspan class="text" id="text-0000000410161586">
                                              													
                                              <tspan font-size="405px" class="text">so</tspan>
                                              												</tspan>
@@ -6533,7 +6540,7 @@
                                        											
                                        <text x="14589" y="28526" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000784107662">
+                                          <tspan class="text" id="text-0000000733485559">
                                              													
                                              <tspan font-size="405px" class="text">se</tspan>
                                              												</tspan>
@@ -6567,7 +6574,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000695716187">
+                     <g class="barLineAttr" id="bline-0000001581661937">
                         						
                         <path d="M16382 23047 L16382 22327" stroke="#000000" stroke-width="27"></path>
                         						
@@ -6608,7 +6615,7 @@
                                     										
                                     <text x="16495" y="23629" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000862314496">
+                                       <tspan class="text" id="text-0000000327280286">
                                           												
                                           <tspan font-size="405px" class="text">ma</tspan>
                                           											</tspan>
@@ -6624,7 +6631,7 @@
                                     										
                                     <text x="16495" y="24029" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001253116174">
+                                       <tspan class="text" id="text-0000002042498803">
                                           												
                                           <tspan font-size="405px" class="text">se</tspan>
                                           											</tspan>
@@ -6650,7 +6657,7 @@
                                     										
                                     <text x="18197" y="23629" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001117782486">
+                                       <tspan class="text" id="text-0000000965159159">
                                           												
                                           <tspan font-size="405px" class="text">ter,</tspan>
                                           											</tspan>
@@ -6664,7 +6671,7 @@
                                     										
                                     <text x="18197" y="24029" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001026486913">
+                                       <tspan class="text" id="text-0000000656447748">
                                           												
                                           <tspan font-size="405px" class="text">cat,</tspan>
                                           											</tspan>
@@ -6704,7 +6711,7 @@
                                     										
                                     <text x="16495" y="25644" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000530242203">
+                                       <tspan class="text" id="text-0000001651387648">
                                           												
                                           <tspan font-size="405px" class="text">ma</tspan>
                                           											</tspan>
@@ -6720,7 +6727,7 @@
                                     										
                                     <text x="16495" y="26044" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001372712809">
+                                       <tspan class="text" id="text-0000001795163439">
                                           												
                                           <tspan font-size="405px" class="text">se</tspan>
                                           											</tspan>
@@ -6746,7 +6753,7 @@
                                     										
                                     <text x="18197" y="25644" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002020478552">
+                                       <tspan class="text" id="text-0000000260925506">
                                           												
                                           <tspan font-size="405px" class="text">ter,</tspan>
                                           											</tspan>
@@ -6760,7 +6767,7 @@
                                     										
                                     <text x="18197" y="26044" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000584360787">
+                                       <tspan class="text" id="text-0000000064493391">
                                           												
                                           <tspan font-size="405px" class="text">cat,</tspan>
                                           											</tspan>
@@ -6787,12 +6794,12 @@
                            							
                            <g class="tuplet" id="e44-m-797">
                               								
-                              <g class="tupletNum" id="num-0000000513293269">
+                              <g class="tupletNum" id="num-0000002021497064">
                                  									
                                  <use xlink:href="#E883" x="17173" y="27725" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000095860417">
+                              <g class="tupletBracket" id="bracket-0000001371381924">
                                  									
                                  <polygon points="16585,27626 17155,27626 17155,27608 16585,27608 "></polygon>
                                  									
@@ -6818,7 +6825,7 @@
                                        											
                                        <text x="16495" y="28126" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000002051298012">
+                                          <tspan class="text" id="text-0000001778043002">
                                              													
                                              <tspan font-size="405px" class="text">ror,</tspan>
                                              												</tspan>
@@ -6834,7 +6841,7 @@
                                        											
                                        <text x="16495" y="28526" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000591183211">
+                                          <tspan class="text" id="text-0000000865079661">
                                              													
                                              <tspan font-size="405px" class="text">cat,</tspan>
                                              												</tspan>
@@ -6870,12 +6877,12 @@
                            							
                            <g class="tuplet" id="e44-m-802">
                               								
-                              <g class="tupletNum" id="num-0000001948608278">
+                              <g class="tupletNum" id="num-0000000481231838">
                                  									
                                  <use xlink:href="#E883" x="18876" y="27725" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001164512827">
+                              <g class="tupletBracket" id="bracket-0000000185683047">
                                  									
                                  <polygon points="18287,27626 18858,27626 18858,27608 18287,27608 "></polygon>
                                  									
@@ -6901,7 +6908,7 @@
                                        											
                                        <text x="18197" y="28126" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000328175577">
+                                          <tspan class="text" id="text-0000000286273185">
                                              													
                                              <tspan font-size="405px" class="text">et</tspan>
                                              												</tspan>
@@ -6915,7 +6922,7 @@
                                        											
                                        <text x="18197" y="28526" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001279096957">
+                                          <tspan class="text" id="text-0000000403132831">
                                              													
                                              <tspan font-size="405px" class="text">il</tspan>
                                              												</tspan>
@@ -6951,7 +6958,7 @@
                                        											
                                        <text x="19333" y="28526" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000350474066">
+                                          <tspan class="text" id="text-0000001464620122">
                                              													
                                              <tspan font-size="405px" class="text">la</tspan>
                                              												</tspan>
@@ -6965,7 +6972,7 @@
                                        											
                                        <text x="19161" y="28126" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001204595175">
+                                          <tspan class="text" id="text-0000000380402833">
                                              													
                                              <tspan font-size="405px" class="text">con</tspan>
                                              												</tspan>
@@ -6979,7 +6986,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000757452981">
+                     <g class="barLineAttr" id="bline-0000001471693915">
                         						
                         <path d="M19990 23047 L19990 22327" stroke="#000000" stroke-width="27"></path>
                         						
@@ -6990,7 +6997,7 @@
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000000245669771">
+               <g class="system" id="system-0000000937068159">
                   				
                   <polygon points="-270,29019 270,28659 270,28524 -270,28884 "></polygon>
                   				
@@ -7006,11 +7013,11 @@
                   				
                   <g class="measure" id="e44-m-821">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000001382221292">
+                     <g class="mNum autogenerated" id="mnum-0000000844585399">
                         						
                         <text x="0" y="29379" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000001662645045">
+                           <tspan class="text" id="text-0000000079894323">
                               								
                               <tspan font-size="324px" class="text">17</tspan>
                               							</tspan>
@@ -7029,12 +7036,12 @@
                         						
                         <path d="M0 30369 L7859 30369" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000649153870">
+                        <g class="clef" id="clef-0000001218926441">
                            							
                            <use xlink:href="#E050" x="90" y="30189" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001112166330">
+                        <g class="keySig" id="keysig-0000001650185154">
                            							
                            <use xlink:href="#E260" x="771" y="30009" height="720px" width="720px"></use>
                            						</g>
@@ -7058,7 +7065,7 @@
                                     										
                                     <text x="1434" y="30951" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000189201866">
+                                       <tspan class="text" id="text-0000000398022261">
                                           												
                                           <tspan font-size="405px" class="text">con</tspan>
                                           											</tspan>
@@ -7076,7 +7083,7 @@
                                     										
                                     <text x="1434" y="31351" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001973175626">
+                                       <tspan class="text" id="text-0000001640034567">
                                           												
                                           <tspan font-size="405px" class="text">il</tspan>
                                           											</tspan>
@@ -7104,7 +7111,7 @@
                                     										
                                     <text x="4595" y="30951" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000371589041">
+                                       <tspan class="text" id="text-0000001102876796">
                                           												
                                           <tspan font-size="405px" class="text">junx</tspan>
                                           											</tspan>
@@ -7118,7 +7125,7 @@
                                     										
                                     <text x="4595" y="31351" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000105115914">
+                                       <tspan class="text" id="text-0000001681492436">
                                           												
                                           <tspan font-size="405px" class="text">la</tspan>
                                           											</tspan>
@@ -7141,12 +7148,12 @@
                         						
                         <path d="M0 32384 L7859 32384" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000481844822">
+                        <g class="clef" id="clef-0000002058065920">
                            							
                            <use xlink:href="#E050" x="90" y="32204" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000205090517">
+                        <g class="keySig" id="keysig-0000000394815211">
                            							
                            <use xlink:href="#E260" x="771" y="32024" height="720px" width="720px"></use>
                            						</g>
@@ -7168,7 +7175,7 @@
                                     										
                                     <text x="1434" y="32966" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002146567790">
+                                       <tspan class="text" id="text-0000001295788487">
                                           												
                                           <tspan font-size="405px" class="text">con</tspan>
                                           											</tspan>
@@ -7186,7 +7193,7 @@
                                     										
                                     <text x="1434" y="33366" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001237874908">
+                                       <tspan class="text" id="text-0000000464392532">
                                           												
                                           <tspan font-size="405px" class="text">il</tspan>
                                           											</tspan>
@@ -7214,7 +7221,7 @@
                                     										
                                     <text x="4595" y="32966" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001844533081">
+                                       <tspan class="text" id="text-0000000141872744">
                                           												
                                           <tspan font-size="405px" class="text">junx</tspan>
                                           											</tspan>
@@ -7228,7 +7235,7 @@
                                     										
                                     <text x="4595" y="33366" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002079628149">
+                                       <tspan class="text" id="text-0000000946639712">
                                           												
                                           <tspan font-size="405px" class="text">la</tspan>
                                           											</tspan>
@@ -7251,12 +7258,12 @@
                         						
                         <path d="M0 34489 L7859 34489" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000245065784">
+                        <g class="clef" id="clef-0000002082265694">
                            							
                            <use xlink:href="#E062" x="90" y="33949" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000002094480389">
+                        <g class="keySig" id="keysig-0000001246007546">
                            							
                            <use xlink:href="#E260" x="771" y="34309" height="720px" width="720px"></use>
                            						</g>
@@ -7265,12 +7272,12 @@
                            							
                            <g class="tuplet" id="e44-m-852">
                               								
-                              <g class="tupletNum" id="num-0000001350488041">
+                              <g class="tupletNum" id="num-0000001991891595">
                                  									
                                  <use xlink:href="#E883" x="2876" y="35046" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000002000880402">
+                              <g class="tupletBracket" id="bracket-0000000970427959">
                                  									
                                  <polygon points="1524,34947 2858,34947 2858,34929 1524,34929 "></polygon>
                                  									
@@ -7305,7 +7312,7 @@
                                           												
                                           <text x="1434" y="35448" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000198312758">
+                                             <tspan class="text" id="text-0000002112706585">
                                                 														
                                                 <tspan font-size="405px" class="text">junx</tspan>
                                                 													</tspan>
@@ -7321,7 +7328,7 @@
                                           												
                                           <text x="1434" y="35848" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000867531109">
+                                             <tspan class="text" id="text-0000001852190372">
                                                 														
                                                 <tspan font-size="405px" class="text">li</tspan>
                                                 													</tspan>
@@ -7419,12 +7426,12 @@
                            							
                            <g class="tuplet" id="e44-m-864">
                               								
-                              <g class="tupletNum" id="num-0000001261680391">
+                              <g class="tupletNum" id="num-0000001443236229">
                                  									
                                  <use xlink:href="#E883" x="6037" y="35136" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001269373727">
+                              <g class="tupletBracket" id="bracket-0000001347837255">
                                  									
                                  <polygon points="4685,35037 6019,35037 6019,35019 4685,35019 "></polygon>
                                  									
@@ -7518,7 +7525,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001858915241">
+                     <g class="barLineAttr" id="bline-0000000487403640">
                         						
                         <path d="M7846 30369 L7846 29649" stroke="#000000" stroke-width="27"></path>
                         						
@@ -7561,7 +7568,7 @@
                                     										
                                     <text x="8019" y="30951" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000443167903">
+                                       <tspan class="text" id="text-0000000856769845">
                                           												
                                           <tspan font-size="405px" class="text">ac</tspan>
                                           											</tspan>
@@ -7575,7 +7582,7 @@
                                     										
                                     <text x="8019" y="31351" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000285212097">
+                                       <tspan class="text" id="text-0000001671201147">
                                           												
                                           <tspan font-size="405px" class="text">li</tspan>
                                           											</tspan>
@@ -7605,7 +7612,7 @@
                                     										
                                     <text x="11220" y="31351" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002137222190">
+                                       <tspan class="text" id="text-0000000530940664">
                                           												
                                           <tspan font-size="405px" class="text">gat,</tspan>
                                           											</tspan>
@@ -7619,7 +7626,7 @@
                                     										
                                     <text x="11220" y="30951" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001025046603">
+                                       <tspan class="text" id="text-0000001048326095">
                                           												
                                           <tspan font-size="405px" class="text">ma</tspan>
                                           											</tspan>
@@ -7663,7 +7670,7 @@
                                     										
                                     <text x="8019" y="32966" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000303338626">
+                                       <tspan class="text" id="text-0000001648632524">
                                           												
                                           <tspan font-size="405px" class="text">ac</tspan>
                                           											</tspan>
@@ -7677,7 +7684,7 @@
                                     										
                                     <text x="8019" y="33366" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000500210538">
+                                       <tspan class="text" id="text-0000001026992929">
                                           												
                                           <tspan font-size="405px" class="text">li</tspan>
                                           											</tspan>
@@ -7707,7 +7714,7 @@
                                     										
                                     <text x="11220" y="33366" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000976492798">
+                                       <tspan class="text" id="text-0000001342525275">
                                           												
                                           <tspan font-size="405px" class="text">gat,</tspan>
                                           											</tspan>
@@ -7721,7 +7728,7 @@
                                     										
                                     <text x="11220" y="32966" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000545287969">
+                                       <tspan class="text" id="text-0000002085959501">
                                           												
                                           <tspan font-size="405px" class="text">ma</tspan>
                                           											</tspan>
@@ -7752,12 +7759,12 @@
                            							
                            <g class="tuplet" id="e44-m-905">
                               								
-                              <g class="tupletNum" id="num-0000000864358718">
+                              <g class="tupletNum" id="num-0000000223801463">
                                  									
                                  <use xlink:href="#E883" x="9481" y="34956" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000164751043">
+                              <g class="tupletBracket" id="bracket-0000000279453236">
                                  									
                                  <polygon points="8109,34857 9463,34857 9463,34839 8109,34839 "></polygon>
                                  									
@@ -7851,12 +7858,12 @@
                            							
                            <g class="tuplet" id="e44-m-916">
                               								
-                              <g class="tupletNum" id="num-0000000789700912">
+                              <g class="tupletNum" id="num-0000001748503862">
                                  									
                                  <use xlink:href="#E883" x="12433" y="34956" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000343501264">
+                              <g class="tupletBracket" id="bracket-0000002008059381">
                                  									
                                  <polygon points="11310,34857 12415,34857 12415,34839 11310,34839 "></polygon>
                                  									
@@ -7939,7 +7946,7 @@
                                        											
                                        <text x="13424" y="35448" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000002013513543">
+                                          <tspan class="text" id="text-0000002053395850">
                                              													
                                              <tspan font-size="405px" class="text">ac</tspan>
                                              												</tspan>
@@ -7953,7 +7960,7 @@
                                        											
                                        <text x="13424" y="35848" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000864529436">
+                                          <tspan class="text" id="text-0000001789270746">
                                              													
                                              <tspan font-size="405px" class="text">gat,</tspan>
                                              												</tspan>
@@ -7965,7 +7972,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000040583377">
+                     <g class="barLineAttr" id="bline-0000002077165471">
                         						
                         <path d="M14261 30369 L14261 29649" stroke="#000000" stroke-width="27"></path>
                         						
@@ -8006,7 +8013,7 @@
                                     										
                                     <text x="14434" y="30951" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000413779753">
+                                       <tspan class="text" id="text-0000001328212969">
                                           												
                                           <tspan font-size="405px" class="text">ter</tspan>
                                           											</tspan>
@@ -8020,7 +8027,7 @@
                                     										
                                     <text x="14434" y="31351" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001252726568">
+                                       <tspan class="text" id="text-0000000826494901">
                                           												
                                           <tspan font-size="405px" class="text">il</tspan>
                                           											</tspan>
@@ -8046,7 +8053,7 @@
                                     										
                                     <text x="16697" y="31351" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001454297109">
+                                       <tspan class="text" id="text-0000000811122093">
                                           												
                                           <tspan font-size="405px" class="text">la</tspan>
                                           											</tspan>
@@ -8060,7 +8067,7 @@
                                     										
                                     <text x="16697" y="30951" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001316945112">
+                                       <tspan class="text" id="text-0000000903606799">
                                           												
                                           <tspan font-size="405px" class="text">O</tspan>
                                           											</tspan>
@@ -8104,7 +8111,7 @@
                                     										
                                     <text x="14434" y="32966" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000348484654">
+                                       <tspan class="text" id="text-0000001008394505">
                                           												
                                           <tspan font-size="405px" class="text">ter</tspan>
                                           											</tspan>
@@ -8118,7 +8125,7 @@
                                     										
                                     <text x="14434" y="33366" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000570574969">
+                                       <tspan class="text" id="text-0000001825846527">
                                           												
                                           <tspan font-size="405px" class="text">il</tspan>
                                           											</tspan>
@@ -8146,7 +8153,7 @@
                                     										
                                     <text x="16697" y="33366" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002084485267">
+                                       <tspan class="text" id="text-0000000275723240">
                                           												
                                           <tspan font-size="405px" class="text">la</tspan>
                                           											</tspan>
@@ -8160,7 +8167,7 @@
                                     										
                                     <text x="16697" y="32966" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001680051324">
+                                       <tspan class="text" id="text-0000001281743811">
                                           												
                                           <tspan font-size="405px" class="text">O</tspan>
                                           											</tspan>
@@ -8191,12 +8198,12 @@
                            							
                            <g class="tuplet" id="e44-m-959">
                               								
-                              <g class="tupletNum" id="num-0000000746544100">
+                              <g class="tupletNum" id="num-0000001237041919">
                                  									
                                  <use xlink:href="#E883" x="15303" y="34867" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000782527304">
+                              <g class="tupletBracket" id="bracket-0000000722630872">
                                  									
                                  <polygon points="14524,34768 15285,34768 15285,34750 14524,34750 "></polygon>
                                  									
@@ -8222,7 +8229,7 @@
                                        											
                                        <text x="14277" y="35448" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001628263513">
+                                          <tspan class="text" id="text-0000001446948369">
                                              													
                                              <tspan font-size="405px" class="text">ma</tspan>
                                              												</tspan>
@@ -8238,7 +8245,7 @@
                                        											
                                        <text x="14434" y="35848" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000770477777">
+                                          <tspan class="text" id="text-0000001197915401">
                                              													
                                              <tspan font-size="405px" class="text">il</tspan>
                                              												</tspan>
@@ -8264,7 +8271,7 @@
                                        											
                                        <text x="15202" y="35448" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000139878368">
+                                          <tspan class="text" id="text-0000001507064626">
                                              													
                                              <tspan font-size="405px" class="text">ter</tspan>
                                              												</tspan>
@@ -8288,7 +8295,7 @@
                                        											
                                        <text x="15950" y="35848" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000002010982687">
+                                          <tspan class="text" id="text-0000001142598225">
                                              													
                                              <tspan font-size="405px" class="text">la</tspan>
                                              												</tspan>
@@ -8302,7 +8309,7 @@
                                        											
                                        <text x="15950" y="35448" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000299077164">
+                                          <tspan class="text" id="text-0000002019918972">
                                              													
                                              <tspan font-size="405px" class="text">O</tspan>
                                              												</tspan>
@@ -8316,12 +8323,12 @@
                            							
                            <g class="tuplet" id="e44-m-965">
                               								
-                              <g class="tupletNum" id="num-0000001639290661">
+                              <g class="tupletNum" id="num-0000001607774635">
                                  									
                                  <use xlink:href="#E883" x="18159" y="35046" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000002043701597">
+                              <g class="tupletBracket" id="bracket-0000000739135669">
                                  									
                                  <polygon points="16787,34947 18141,34947 18141,34929 16787,34929 "></polygon>
                                  									
@@ -8356,7 +8363,7 @@
                                           												
                                           <text x="16697" y="35448" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000856624626">
+                                             <tspan class="text" id="text-0000001765444904">
                                                 														
                                                 <tspan font-size="405px" class="text">si</tspan>
                                                 													</tspan>
@@ -8374,7 +8381,7 @@
                                           												
                                           <text x="16697" y="35848" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000001135868176">
+                                             <tspan class="text" id="text-0000001083404437">
                                                 														
                                                 <tspan font-size="405px" class="text">li</tspan>
                                                 													</tspan>
@@ -8456,7 +8463,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001320172942">
+                     <g class="barLineAttr" id="bline-0000001774667216">
                         						
                         <path d="M19988 30369 L19988 29649" stroke="#000000" stroke-width="27"></path>
                         						
@@ -8467,7 +8474,7 @@
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000001009392541">
+               <g class="system" id="system-0000000429285471">
                   				
                   <polygon points="-270,36341 270,35981 270,35846 -270,36206 "></polygon>
                   				
@@ -8483,11 +8490,11 @@
                   				
                   <g class="measure" id="e44-m-982">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000000905554721">
+                     <g class="mNum autogenerated" id="mnum-0000001609808571">
                         						
                         <text x="0" y="36701" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000000441589558">
+                           <tspan class="text" id="text-0000002053667891">
                               								
                               <tspan font-size="324px" class="text">20</tspan>
                               							</tspan>
@@ -8506,12 +8513,12 @@
                         						
                         <path d="M0 37691 L7457 37691" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001143698229">
+                        <g class="clef" id="clef-0000000436621327">
                            							
                            <use xlink:href="#E050" x="90" y="37511" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000010010506">
+                        <g class="keySig" id="keysig-0000000343021090">
                            							
                            <use xlink:href="#E260" x="771" y="37331" height="720px" width="720px"></use>
                            						</g>
@@ -8533,7 +8540,7 @@
                                     										
                                     <text x="1107" y="38273" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000060967009">
+                                       <tspan class="text" id="text-0000000344570357">
                                           												
                                           <tspan font-size="405px" class="text">si</tspan>
                                           											</tspan>
@@ -8549,7 +8556,7 @@
                                     										
                                     <text x="1107" y="38673" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001028027245">
+                                       <tspan class="text" id="text-0000001331101896">
                                           												
                                           <tspan font-size="405px" class="text">li</tspan>
                                           											</tspan>
@@ -8586,7 +8593,7 @@
                                     										
                                     <text x="3371" y="38273" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000650887805">
+                                       <tspan class="text" id="text-0000001816815367">
                                           												
                                           <tspan font-size="405px" class="text">ris,</tspan>
                                           											</tspan>
@@ -8600,7 +8607,7 @@
                                     										
                                     <text x="3371" y="38673" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001309627782">
+                                       <tspan class="text" id="text-0000001612593871">
                                           												
                                           <tspan font-size="405px" class="text">gat.</tspan>
                                           											</tspan>
@@ -8623,12 +8630,12 @@
                         						
                         <path d="M0 39706 L7457 39706" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000742849876">
+                        <g class="clef" id="clef-0000001309351082">
                            							
                            <use xlink:href="#E050" x="90" y="39526" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001755425921">
+                        <g class="keySig" id="keysig-0000000998704365">
                            							
                            <use xlink:href="#E260" x="771" y="39346" height="720px" width="720px"></use>
                            						</g>
@@ -8650,7 +8657,7 @@
                                     										
                                     <text x="1107" y="40288" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001158313353">
+                                       <tspan class="text" id="text-0000001872230985">
                                           												
                                           <tspan font-size="405px" class="text">si</tspan>
                                           											</tspan>
@@ -8666,7 +8673,7 @@
                                     										
                                     <text x="1107" y="40688" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000636458871">
+                                       <tspan class="text" id="text-0000001383944593">
                                           												
                                           <tspan font-size="405px" class="text">li</tspan>
                                           											</tspan>
@@ -8698,7 +8705,7 @@
                                     										
                                     <text x="3371" y="40288" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000317826703">
+                                       <tspan class="text" id="text-0000000331129804">
                                           												
                                           <tspan font-size="405px" class="text">ris,</tspan>
                                           											</tspan>
@@ -8712,7 +8719,7 @@
                                     										
                                     <text x="3371" y="40688" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000692563763">
+                                       <tspan class="text" id="text-0000000514962718">
                                           												
                                           <tspan font-size="405px" class="text">gat.</tspan>
                                           											</tspan>
@@ -8735,12 +8742,12 @@
                         						
                         <path d="M0 41811 L7457 41811" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001313111761">
+                        <g class="clef" id="clef-0000000492077603">
                            							
                            <use xlink:href="#E062" x="90" y="41271" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001927410555">
+                        <g class="keySig" id="keysig-0000000388749024">
                            							
                            <use xlink:href="#E260" x="771" y="41631" height="720px" width="720px"></use>
                            						</g>
@@ -8749,12 +8756,12 @@
                            							
                            <g class="tuplet" id="e44-m-1016">
                               								
-                              <g class="tupletNum" id="num-0000000469962904">
+                              <g class="tupletNum" id="num-0000001306436952">
                                  									
                                  <use xlink:href="#E883" x="2059" y="42369" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000298122765">
+                              <g class="tupletBracket" id="bracket-0000002041765195">
                                  									
                                  <polygon points="1197,42270 2041,42270 2041,42252 1197,42252 "></polygon>
                                  									
@@ -8852,7 +8859,7 @@
                                     										
                                     <text x="3371" y="42770" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000306164704">
+                                       <tspan class="text" id="text-0000001913950710">
                                           												
                                           <tspan font-size="405px" class="text">ris,</tspan>
                                           											</tspan>
@@ -8866,7 +8873,7 @@
                                     										
                                     <text x="3371" y="43170" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001740894079">
+                                       <tspan class="text" id="text-0000001921917556">
                                           												
                                           <tspan font-size="405px" class="text">gat.</tspan>
                                           											</tspan>
@@ -8877,7 +8884,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001536182330">
+                     <g class="barLineAttr" id="bline-0000001286560559">
                         						
                         <path d="M7295 37691 L7295 36971" stroke="#000000" stroke-width="27"></path>
                         						
@@ -8940,7 +8947,7 @@
                                     										
                                     <text x="7561" y="38673" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001856645597">
+                                       <tspan class="text" id="text-0000002054366211">
                                           												
                                           <tspan font-size="405px" class="text">Sul</tspan>
                                           											</tspan>
@@ -8956,7 +8963,7 @@
                                     										
                                     <text x="7561" y="38273" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001123509363">
+                                       <tspan class="text" id="text-0000001651940229">
                                           												
                                           <tspan font-size="405px" class="text">De</tspan>
                                           											</tspan>
@@ -8987,7 +8994,7 @@
                                     										
                                     <text x="9499" y="38673" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001142925177">
+                                       <tspan class="text" id="text-0000000374427066">
                                           												
                                           <tspan font-size="405px" class="text">phur</tspan>
                                           											</tspan>
@@ -9001,7 +9008,7 @@
                                     										
                                     <text x="9499" y="38273" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001314046059">
+                                       <tspan class="text" id="text-0000001811340117">
                                           												
                                           <tspan font-size="405px" class="text">flu</tspan>
                                           											</tspan>
@@ -9043,7 +9050,7 @@
                                     										
                                     <text x="7561" y="40688" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001881783663">
+                                       <tspan class="text" id="text-0000000390300798">
                                           												
                                           <tspan font-size="405px" class="text">Sul</tspan>
                                           											</tspan>
@@ -9059,7 +9066,7 @@
                                     										
                                     <text x="7561" y="40288" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002109827149">
+                                       <tspan class="text" id="text-0000000484834334">
                                           												
                                           <tspan font-size="405px" class="text">De</tspan>
                                           											</tspan>
@@ -9085,7 +9092,7 @@
                                     										
                                     <text x="9499" y="40688" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000482163542">
+                                       <tspan class="text" id="text-0000000537123615">
                                           												
                                           <tspan font-size="405px" class="text">phur</tspan>
                                           											</tspan>
@@ -9099,7 +9106,7 @@
                                     										
                                     <text x="9499" y="40288" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001081490880">
+                                       <tspan class="text" id="text-0000000366437981">
                                           												
                                           <tspan font-size="405px" class="text">flu</tspan>
                                           											</tspan>
@@ -9128,12 +9135,12 @@
                            							
                            <g class="tuplet" id="e44-m-1057">
                               								
-                              <g class="tupletNum" id="num-0000000058341510">
+                              <g class="tupletNum" id="num-0000000432760485">
                                  									
                                  <use xlink:href="#E883" x="8447" y="42369" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001555897347">
+                              <g class="tupletBracket" id="bracket-0000000062251282">
                                  									
                                  <polygon points="7651,42270 8429,42270 8429,42252 7651,42252 "></polygon>
                                  									
@@ -9159,7 +9166,7 @@
                                        											
                                        <text x="7561" y="42770" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000835514739">
+                                          <tspan class="text" id="text-0000000392036366">
                                              													
                                              <tspan font-size="405px" class="text">De</tspan>
                                              												</tspan>
@@ -9175,7 +9182,7 @@
                                        											
                                        <text x="7561" y="43170" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001204296146">
+                                          <tspan class="text" id="text-0000001382120410">
                                              													
                                              <tspan font-size="405px" class="text">Sul</tspan>
                                              												</tspan>
@@ -9215,7 +9222,7 @@
                                           												
                                           <text x="8724" y="42770" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000485793224">
+                                             <tspan class="text" id="text-0000000818291400">
                                                 														
                                                 <tspan font-size="405px" class="text">flu</tspan>
                                                 													</tspan>
@@ -9240,12 +9247,12 @@
                            							
                            <g class="tuplet" id="e44-m-1063">
                               								
-                              <g class="tupletNum" id="num-0000001199911097">
+                              <g class="tupletNum" id="num-0000001439994619">
                                  									
                                  <use xlink:href="#E883" x="10482" y="42369" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000234407385">
+                              <g class="tupletBracket" id="bracket-0000000117253674">
                                  									
                                  <polygon points="9589,42270 10464,42270 10464,42252 9589,42252 "></polygon>
                                  									
@@ -9271,7 +9278,7 @@
                                        											
                                        <text x="9499" y="42770" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000108962745">
+                                          <tspan class="text" id="text-0000000264728707">
                                              													
                                              <tspan font-size="405px" class="text">it</tspan>
                                              												</tspan>
@@ -9299,7 +9306,7 @@
                                           												
                                           <text x="10080" y="42770" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000001362571190">
+                                             <tspan class="text" id="text-0000001915739203">
                                                 														
                                                 <tspan font-size="405px" class="text">at</tspan>
                                                 													</tspan>
@@ -9315,7 +9322,7 @@
                                           												
                                           <text x="10080" y="43170" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000072198049">
+                                             <tspan class="text" id="text-0000001555789980">
                                                 														
                                                 <tspan font-size="405px" class="text">phur</tspan>
                                                 													</tspan>
@@ -9367,7 +9374,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000002118053495">
+                     <g class="barLineAttr" id="bline-0000001052768015">
                         						
                         <path d="M11721 37691 L11721 36971" stroke="#000000" stroke-width="27"></path>
                         						
@@ -9408,7 +9415,7 @@
                                     										
                                     <text x="11838" y="38273" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000299863275">
+                                       <tspan class="text" id="text-0000000799202259">
                                           												
                                           <tspan font-size="405px" class="text">it</tspan>
                                           											</tspan>
@@ -9422,7 +9429,7 @@
                                     										
                                     <text x="11838" y="38673" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001118480033">
+                                       <tspan class="text" id="text-0000000881957347">
                                           												
                                           <tspan font-size="405px" class="text">e</tspan>
                                           											</tspan>
@@ -9450,7 +9457,7 @@
                                     										
                                     <text x="13776" y="38273" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000605766191">
+                                       <tspan class="text" id="text-0000000593899297">
                                           												
                                           <tspan font-size="405px" class="text">at</tspan>
                                           											</tspan>
@@ -9464,7 +9471,7 @@
                                     										
                                     <text x="13776" y="38673" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001987309364">
+                                       <tspan class="text" id="text-0000001419677238">
                                           												
                                           <tspan font-size="405px" class="text">nim,</tspan>
                                           											</tspan>
@@ -9504,7 +9511,7 @@
                                     										
                                     <text x="11838" y="40288" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000695000281">
+                                       <tspan class="text" id="text-0000001891913052">
                                           												
                                           <tspan font-size="405px" class="text">it</tspan>
                                           											</tspan>
@@ -9518,7 +9525,7 @@
                                     										
                                     <text x="11838" y="40688" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000538253096">
+                                       <tspan class="text" id="text-0000000475557359">
                                           												
                                           <tspan font-size="405px" class="text">e</tspan>
                                           											</tspan>
@@ -9544,7 +9551,7 @@
                                     										
                                     <text x="13776" y="40288" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001049271277">
+                                       <tspan class="text" id="text-0000000950298307">
                                           												
                                           <tspan font-size="405px" class="text">at</tspan>
                                           											</tspan>
@@ -9558,7 +9565,7 @@
                                     										
                                     <text x="13776" y="40688" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000703470454">
+                                       <tspan class="text" id="text-0000000949466085">
                                           												
                                           <tspan font-size="405px" class="text">nim,</tspan>
                                           											</tspan>
@@ -9585,12 +9592,12 @@
                            							
                            <g class="tuplet" id="e44-m-1120">
                               								
-                              <g class="tupletNum" id="num-0000001079403174">
+                              <g class="tupletNum" id="num-0000002063127591">
                                  									
                                  <use xlink:href="#E883" x="12724" y="42278" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000271582207">
+                              <g class="tupletBracket" id="bracket-0000001229045091">
                                  									
                                  <polygon points="11928,42179 12706,42179 12706,42161 11928,42161 "></polygon>
                                  									
@@ -9616,7 +9623,7 @@
                                        											
                                        <text x="11838" y="43170" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001130994417">
+                                          <tspan class="text" id="text-0000001240162491">
                                              													
                                              <tspan font-size="405px" class="text">e</tspan>
                                              												</tspan>
@@ -9632,7 +9639,7 @@
                                        											
                                        <text x="11838" y="42770" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001842688641">
+                                          <tspan class="text" id="text-0000001258962277">
                                              													
                                              <tspan font-size="405px" class="text">pu</tspan>
                                              												</tspan>
@@ -9681,12 +9688,12 @@
                            							
                            <g class="tuplet" id="e44-m-1126">
                               								
-                              <g class="tupletNum" id="num-0000001501087048">
+                              <g class="tupletNum" id="num-0000001323694266">
                                  									
                                  <use xlink:href="#E883" x="14468" y="42369" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000141534211">
+                              <g class="tupletBracket" id="bracket-0000000184455441">
                                  									
                                  <polygon points="13866,42270 14450,42270 14450,42252 13866,42252 "></polygon>
                                  									
@@ -9722,7 +9729,7 @@
                                        											
                                        <text x="14357" y="43170" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000372713115">
+                                          <tspan class="text" id="text-0000001222752281">
                                              													
                                              <tspan font-size="405px" class="text">nim,</tspan>
                                              												</tspan>
@@ -9738,7 +9745,7 @@
                                        											
                                        <text x="14357" y="42770" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000742791984">
+                                          <tspan class="text" id="text-0000000536262756">
                                              													
                                              <tspan font-size="405px" class="text">di</tspan>
                                              												</tspan>
@@ -9762,7 +9769,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001996934472">
+                     <g class="barLineAttr" id="bline-0000000313698039">
                         						
                         <path d="M15610 37691 L15610 36971" stroke="#000000" stroke-width="27"></path>
                         						
@@ -9803,7 +9810,7 @@
                                     										
                                     <text x="15727" y="38673" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001143769073">
+                                       <tspan class="text" id="text-0000001141703473">
                                           												
                                           <tspan font-size="405px" class="text">SUL</tspan>
                                           											</tspan>
@@ -9821,7 +9828,7 @@
                                     										
                                     <text x="15727" y="38273" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001977573623">
+                                       <tspan class="text" id="text-0000001218382189">
                                           												
                                           <tspan font-size="405px" class="text">pu</tspan>
                                           											</tspan>
@@ -9847,7 +9854,7 @@
                                     										
                                     <text x="17859" y="38273" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000165965193">
+                                       <tspan class="text" id="text-0000001541959665">
                                           												
                                           <tspan font-size="405px" class="text">di</tspan>
                                           											</tspan>
@@ -9889,7 +9896,7 @@
                                     										
                                     <text x="15727" y="40688" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001327283355">
+                                       <tspan class="text" id="text-0000001286632129">
                                           												
                                           <tspan font-size="405px" class="text">SUL</tspan>
                                           											</tspan>
@@ -9907,7 +9914,7 @@
                                     										
                                     <text x="15727" y="40288" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000212342466">
+                                       <tspan class="text" id="text-0000000815027069">
                                           												
                                           <tspan font-size="405px" class="text">pu</tspan>
                                           											</tspan>
@@ -9935,7 +9942,7 @@
                                     										
                                     <text x="17859" y="40288" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002139124504">
+                                       <tspan class="text" id="text-0000002077190977">
                                           												
                                           <tspan font-size="405px" class="text">di</tspan>
                                           											</tspan>
@@ -9964,12 +9971,12 @@
                            							
                            <g class="tuplet" id="e44-m-1146">
                               								
-                              <g class="tupletNum" id="num-0000001190329012">
+                              <g class="tupletNum" id="num-0000000687908739">
                                  									
                                  <use xlink:href="#E883" x="16710" y="42458" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001793622793">
+                              <g class="tupletBracket" id="bracket-0000000232588097">
                                  									
                                  <polygon points="15817,42359 16692,42359 16692,42341 15817,42341 "></polygon>
                                  									
@@ -9995,7 +10002,7 @@
                                        											
                                        <text x="15727" y="42770" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000699398899">
+                                          <tspan class="text" id="text-0000000681092644">
                                              													
                                              <tspan font-size="405px" class="text">bun</tspan>
                                              												</tspan>
@@ -10013,7 +10020,7 @@
                                        											
                                        <text x="15727" y="43170" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000905693717">
+                                          <tspan class="text" id="text-0000001533919790">
                                              													
                                              <tspan font-size="405px" class="text">SUL</tspan>
                                              												</tspan>
@@ -10077,12 +10084,12 @@
                            							
                            <g class="tuplet" id="e44-m-1154">
                               								
-                              <g class="tupletNum" id="num-0000001156438091">
+                              <g class="tupletNum" id="num-0000001324666922">
                                  									
                                  <use xlink:href="#E883" x="18551" y="42369" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001997674527">
+                              <g class="tupletBracket" id="bracket-0000001630847769">
                                  									
                                  <polygon points="17949,42270 18533,42270 18533,42252 17949,42252 "></polygon>
                                  									
@@ -10128,7 +10135,7 @@
                                        											
                                        <text x="19022" y="42770" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000040157593">
+                                          <tspan class="text" id="text-0000000442289397">
                                              													
                                              <tspan font-size="405px" class="text">da,</tspan>
                                              												</tspan>
@@ -10142,7 +10149,7 @@
                                        											
                                        <text x="18752" y="43170" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000002141775659">
+                                          <tspan class="text" id="text-0000000694994347">
                                              													
                                              <tspan font-size="405px" class="text">PHUR</tspan>
                                              												</tspan>
@@ -10154,7 +10161,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001302648326">
+                     <g class="barLineAttr" id="bline-0000000839342768">
                         						
                         <path d="M19989 37691 L19989 36971" stroke="#000000" stroke-width="27"></path>
                         						
@@ -10165,7 +10172,7 @@
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000000351260221">
+               <g class="system" id="system-0000001349911641">
                   				
                   <polygon points="-270,43663 270,43303 270,43168 -270,43528 "></polygon>
                   				
@@ -10183,11 +10190,11 @@
                   				
                   <g class="measure" id="e44-m-1169">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000000602228635">
+                     <g class="mNum autogenerated" id="mnum-0000001640909705">
                         						
                         <text x="0" y="44023" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000000566240134">
+                           <tspan class="text" id="text-0000000784417161">
                               								
                               <tspan font-size="324px" class="text">24</tspan>
                               							</tspan>
@@ -10206,12 +10213,12 @@
                         						
                         <path d="M0 45013 L5287 45013" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000495929680">
+                        <g class="clef" id="clef-0000001718980912">
                            							
                            <use xlink:href="#E050" x="90" y="44833" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000706097753">
+                        <g class="keySig" id="keysig-0000000814684893">
                            							
                            <use xlink:href="#E260" x="771" y="44653" height="720px" width="720px"></use>
                            						</g>
@@ -10233,7 +10240,7 @@
                                     										
                                     <text x="1138" y="45995" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001401974417">
+                                       <tspan class="text" id="text-0000002088954108">
                                           												
                                           <tspan font-size="405px" class="text">PHUR</tspan>
                                           											</tspan>
@@ -10247,7 +10254,7 @@
                                     										
                                     <text x="1138" y="45595" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000142762284">
+                                       <tspan class="text" id="text-0000001773774757">
                                           												
                                           <tspan font-size="405px" class="text">bun</tspan>
                                           											</tspan>
@@ -10273,7 +10280,7 @@
                                     										
                                     <text x="3161" y="45595" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000838147692">
+                                       <tspan class="text" id="text-0000000645392284">
                                           												
                                           <tspan font-size="405px" class="text">da,</tspan>
                                           											</tspan>
@@ -10287,7 +10294,7 @@
                                     										
                                     <text x="3161" y="45995" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001848303684">
+                                       <tspan class="text" id="text-0000001490371664">
                                           												
                                           <tspan font-size="405px" class="text">quod</tspan>
                                           											</tspan>
@@ -10310,12 +10317,12 @@
                         						
                         <path d="M0 47028 L5287 47028" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000390301349">
+                        <g class="clef" id="clef-0000000053263379">
                            							
                            <use xlink:href="#E050" x="90" y="46848" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001379714705">
+                        <g class="keySig" id="keysig-0000001844413701">
                            							
                            <use xlink:href="#E260" x="771" y="46668" height="720px" width="720px"></use>
                            						</g>
@@ -10337,7 +10344,7 @@
                                     										
                                     <text x="1138" y="48010" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001580229758">
+                                       <tspan class="text" id="text-0000001880942406">
                                           												
                                           <tspan font-size="405px" class="text">PHUR</tspan>
                                           											</tspan>
@@ -10351,7 +10358,7 @@
                                     										
                                     <text x="1138" y="47610" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000935807629">
+                                       <tspan class="text" id="text-0000001537450114">
                                           												
                                           <tspan font-size="405px" class="text">bun</tspan>
                                           											</tspan>
@@ -10377,7 +10384,7 @@
                                     										
                                     <text x="3161" y="47610" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001064765958">
+                                       <tspan class="text" id="text-0000001313878053">
                                           												
                                           <tspan font-size="405px" class="text">da,</tspan>
                                           											</tspan>
@@ -10391,7 +10398,7 @@
                                     										
                                     <text x="3161" y="48010" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001625415806">
+                                       <tspan class="text" id="text-0000001206988766">
                                           												
                                           <tspan font-size="405px" class="text">quod</tspan>
                                           											</tspan>
@@ -10414,12 +10421,12 @@
                         						
                         <path d="M0 49043 L5287 49043" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000000336626629">
+                        <g class="clef" id="clef-0000000134628262">
                            							
                            <use xlink:href="#E062" x="90" y="48503" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001211827405">
+                        <g class="keySig" id="keysig-0000001396919143">
                            							
                            <use xlink:href="#E260" x="771" y="48863" height="720px" width="720px"></use>
                            						</g>
@@ -10428,12 +10435,12 @@
                            							
                            <g class="tuplet" id="e44-m-1210">
                               								
-                              <g class="tupletNum" id="num-0000001694049007">
+                              <g class="tupletNum" id="num-0000000097169093">
                                  									
                                  <use xlink:href="#E883" x="1923" y="49331" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000477716899">
+                              <g class="tupletBracket" id="bracket-0000002036582318">
                                  									
                                  <polygon points="1228,49232 1905,49232 1905,49214 1228,49214 "></polygon>
                                  									
@@ -10459,7 +10466,7 @@
                                        											
                                        <text x="1138" y="50402" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001679825350">
+                                          <tspan class="text" id="text-0000000583398723">
                                              													
                                              <tspan font-size="405px" class="text">quod</tspan>
                                              												</tspan>
@@ -10473,7 +10480,7 @@
                                        											
                                        <text x="1138" y="50002" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001756930372">
+                                          <tspan class="text" id="text-0000000130107319">
                                              													
                                              <tspan font-size="405px" class="text">pu</tspan>
                                              												</tspan>
@@ -10507,12 +10514,12 @@
                            							
                            <g class="tuplet" id="e44-m-1214">
                               								
-                              <g class="tupletNum" id="num-0000001074211087">
+                              <g class="tupletNum" id="num-0000000514228167">
                                  									
                                  <use xlink:href="#E883" x="3946" y="49601" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001171105006">
+                              <g class="tupletBracket" id="bracket-0000000694349995">
                                  									
                                  <polygon points="3251,49502 3928,49502 3928,49484 3251,49484 "></polygon>
                                  									
@@ -10538,7 +10545,7 @@
                                        											
                                        <text x="3161" y="50002" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000142408963">
+                                          <tspan class="text" id="text-0000001909221880">
                                              													
                                              <tspan font-size="405px" class="text">di</tspan>
                                              												</tspan>
@@ -10554,7 +10561,7 @@
                                        											
                                        <text x="3161" y="50402" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000796878709">
+                                          <tspan class="text" id="text-0000001673334429">
                                              													
                                              <tspan font-size="405px" class="text">ge</tspan>
                                              												</tspan>
@@ -10590,7 +10597,7 @@
                                        											
                                        <text x="4510" y="50402" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000744115774">
+                                          <tspan class="text" id="text-0000000010736603">
                                              													
                                              <tspan font-size="405px" class="text">ne</tspan>
                                              												</tspan>
@@ -10604,7 +10611,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000357093260">
+                     <g class="barLineAttr" id="bline-0000001846695157">
                         						
                         <path d="M5274 45013 L5274 44293" stroke="#000000" stroke-width="27"></path>
                         						
@@ -10645,7 +10652,7 @@
                                     										
                                     <text x="5422" y="45595" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002019627623">
+                                       <tspan class="text" id="text-0000000754204749">
                                           												
                                           <tspan font-size="405px" class="text">pu</tspan>
                                           											</tspan>
@@ -10661,7 +10668,7 @@
                                     										
                                     <text x="5422" y="45995" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001698453619">
+                                       <tspan class="text" id="text-0000000792784743">
                                           												
                                           <tspan font-size="405px" class="text">ge</tspan>
                                           											</tspan>
@@ -10687,7 +10694,7 @@
                                     										
                                     <text x="7408" y="45595" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000902393830">
+                                       <tspan class="text" id="text-0000002069847472">
                                           												
                                           <tspan font-size="405px" class="text">di</tspan>
                                           											</tspan>
@@ -10703,7 +10710,7 @@
                                     										
                                     <text x="7408" y="45995" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001425843330">
+                                       <tspan class="text" id="text-0000002094086501">
                                           												
                                           <tspan font-size="405px" class="text">ne</tspan>
                                           											</tspan>
@@ -10747,7 +10754,7 @@
                                     										
                                     <text x="5422" y="47610" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000519336476">
+                                       <tspan class="text" id="text-0000001630973279">
                                           												
                                           <tspan font-size="405px" class="text">pu</tspan>
                                           											</tspan>
@@ -10763,7 +10770,7 @@
                                     										
                                     <text x="5422" y="48010" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000591874713">
+                                       <tspan class="text" id="text-0000002083670784">
                                           												
                                           <tspan font-size="405px" class="text">ge</tspan>
                                           											</tspan>
@@ -10789,7 +10796,7 @@
                                     										
                                     <text x="7408" y="47610" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000428645649">
+                                       <tspan class="text" id="text-0000002075837159">
                                           												
                                           <tspan font-size="405px" class="text">di</tspan>
                                           											</tspan>
@@ -10805,7 +10812,7 @@
                                     										
                                     <text x="7408" y="48010" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001546497726">
+                                       <tspan class="text" id="text-0000000752945172">
                                           												
                                           <tspan font-size="405px" class="text">ne</tspan>
                                           											</tspan>
@@ -10834,12 +10841,12 @@
                            							
                            <g class="tuplet" id="e44-m-1232">
                               								
-                              <g class="tupletNum" id="num-0000001092940991">
+                              <g class="tupletNum" id="num-0000001337987926">
                                  									
                                  <use xlink:href="#E883" x="6188" y="49421" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000929998151">
+                              <g class="tupletBracket" id="bracket-0000002139258000">
                                  									
                                  <polygon points="5512,49322 6170,49322 6170,49304 5512,49304 "></polygon>
                                  									
@@ -10854,7 +10861,7 @@
                                  									
                                  <use xlink:href="#E0A4" x="5512" y="48413" height="720px" width="720px"></use>
                                  									
-                                 <g class="dots" id="dots-0000001132024879">
+                                 <g class="dots" id="dots-0000000747973690">
                                     										
                                     <ellipse cx="5828" cy="48413" rx="36" ry="36"></ellipse>
                                     									</g>
@@ -10870,7 +10877,7 @@
                                        											
                                        <text x="5422" y="50002" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000002139420967">
+                                          <tspan class="text" id="text-0000001390045216">
                                              													
                                              <tspan font-size="405px" class="text">bun</tspan>
                                              												</tspan>
@@ -10888,7 +10895,7 @@
                                        											
                                        <text x="5422" y="50402" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000173612348">
+                                          <tspan class="text" id="text-0000000647132507">
                                              													
                                              <tspan font-size="405px" class="text">ra</tspan>
                                              												</tspan>
@@ -10913,7 +10920,7 @@
                                     										
                                     <rect x="6374" y="48525" height="608" width="18"></rect>
                                     										
-                                    <g class="flag" id="flag-0000001517616815">
+                                    <g class="flag" id="flag-0000001657604622">
                                        											
                                        <use xlink:href="#E241" x="6374" y="49133" height="720px" width="720px"></use>
                                        										</g>
@@ -10933,12 +10940,12 @@
                            							
                            <g class="tuplet" id="e44-m-1236">
                               								
-                              <g class="tupletNum" id="num-0000001002177221">
+                              <g class="tupletNum" id="num-0000001027111928">
                                  									
                                  <use xlink:href="#E883" x="8193" y="49511" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000201813462">
+                              <g class="tupletBracket" id="bracket-0000001275109563">
                                  									
                                  <polygon points="7498,49412 8175,49412 8175,49394 7498,49394 "></polygon>
                                  									
@@ -10984,7 +10991,7 @@
                                        											
                                        <text x="8756" y="50002" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000011285336">
+                                          <tspan class="text" id="text-0000000225778419">
                                              													
                                              <tspan font-size="405px" class="text">da</tspan>
                                              												</tspan>
@@ -10996,7 +11003,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001727712412">
+                     <g class="barLineAttr" id="bline-0000001779822824">
                         						
                         <path d="M9521 45013 L9521 44293" stroke="#000000" stroke-width="27"></path>
                         						
@@ -11037,7 +11044,7 @@
                                     										
                                     <text x="9669" y="45595" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001105066828">
+                                       <tspan class="text" id="text-0000000939541052">
                                           												
                                           <tspan font-size="405px" class="text">bun</tspan>
                                           											</tspan>
@@ -11053,7 +11060,7 @@
                                     										
                                     <text x="9669" y="45995" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001327109172">
+                                       <tspan class="text" id="text-0000000669844103">
                                           												
                                           <tspan font-size="405px" class="text">ra</tspan>
                                           											</tspan>
@@ -11079,7 +11086,7 @@
                                     										
                                     <text x="11692" y="45595" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001749382164">
+                                       <tspan class="text" id="text-0000000449027132">
                                           												
                                           <tspan font-size="405px" class="text">da</tspan>
                                           											</tspan>
@@ -11093,7 +11100,7 @@
                                     										
                                     <text x="11692" y="45995" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001441958941">
+                                       <tspan class="text" id="text-0000001608834006">
                                           												
                                           <tspan font-size="405px" class="text">vit,</tspan>
                                           											</tspan>
@@ -11133,7 +11140,7 @@
                                     										
                                     <text x="9669" y="47610" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000944624020">
+                                       <tspan class="text" id="text-0000001912810984">
                                           												
                                           <tspan font-size="405px" class="text">bun</tspan>
                                           											</tspan>
@@ -11149,7 +11156,7 @@
                                     										
                                     <text x="9669" y="48010" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002115845868">
+                                       <tspan class="text" id="text-0000001854391959">
                                           												
                                           <tspan font-size="405px" class="text">ra</tspan>
                                           											</tspan>
@@ -11175,7 +11182,7 @@
                                     										
                                     <text x="11692" y="47610" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001047725202">
+                                       <tspan class="text" id="text-0000001359643970">
                                           												
                                           <tspan font-size="405px" class="text">da</tspan>
                                           											</tspan>
@@ -11189,7 +11196,7 @@
                                     										
                                     <text x="11692" y="48010" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001780406260">
+                                       <tspan class="text" id="text-0000000048069470">
                                           												
                                           <tspan font-size="405px" class="text">vit,</tspan>
                                           											</tspan>
@@ -11216,12 +11223,12 @@
                            							
                            <g class="tuplet" id="e44-m-1291">
                               								
-                              <g class="tupletNum" id="num-0000000508146535">
+                              <g class="tupletNum" id="num-0000000176766217">
                                  									
                                  <use xlink:href="#E883" x="10454" y="49601" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000829022553">
+                              <g class="tupletBracket" id="bracket-0000000416167728">
                                  									
                                  <polygon points="9759,49502 10436,49502 10436,49484 9759,49484 "></polygon>
                                  									
@@ -11247,7 +11254,7 @@
                                        											
                                        <text x="9669" y="50002" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000445750177">
+                                          <tspan class="text" id="text-0000001648803057">
                                              													
                                              <tspan font-size="405px" class="text">ma</tspan>
                                              												</tspan>
@@ -11285,7 +11292,7 @@
                                        											
                                        <text x="11018" y="50002" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000132118032">
+                                          <tspan class="text" id="text-0000001666421479">
                                              													
                                              <tspan font-size="405px" class="text">ri</tspan>
                                              												</tspan>
@@ -11299,7 +11306,7 @@
                                        											
                                        <text x="10919" y="50402" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000294492400">
+                                          <tspan class="text" id="text-0000001186525081">
                                              													
                                              <tspan font-size="405px" class="text">vit,</tspan>
                                              												</tspan>
@@ -11311,12 +11318,12 @@
                            							
                            <g class="tuplet" id="e44-m-1296">
                               								
-                              <g class="tupletNum" id="num-0000001401267775">
+                              <g class="tupletNum" id="num-0000000212364707">
                                  									
                                  <use xlink:href="#E883" x="12477" y="49601" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000674725705">
+                              <g class="tupletBracket" id="bracket-0000001603438130">
                                  									
                                  <polygon points="11782,49502 12459,49502 12459,49484 11782,49484 "></polygon>
                                  									
@@ -11342,7 +11349,7 @@
                                        											
                                        <text x="11692" y="50002" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000830817406">
+                                          <tspan class="text" id="text-0000001126613547">
                                              													
                                              <tspan font-size="405px" class="text">pars,</tspan>
                                              												</tspan>
@@ -11356,7 +11363,7 @@
                                        											
                                        <text x="11692" y="50402" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001601747347">
+                                          <tspan class="text" id="text-0000000365553707">
                                              													
                                              <tspan font-size="405px" class="text">a</tspan>
                                              												</tspan>
@@ -11392,7 +11399,7 @@
                                        											
                                        <text x="13041" y="50402" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000200706387">
+                                          <tspan class="text" id="text-0000001297439924">
                                              													
                                              <tspan font-size="405px" class="text">best,</tspan>
                                              												</tspan>
@@ -11404,7 +11411,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000393974192">
+                     <g class="barLineAttr" id="bline-0000001164306941">
                         						
                         <path d="M13805 45013 L13805 44293" stroke="#000000" stroke-width="27"></path>
                         						
@@ -11447,7 +11454,7 @@
                                     										
                                     <text x="14198" y="45595" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002142119144">
+                                       <tspan class="text" id="text-0000001253182606">
                                           												
                                           <tspan font-size="405px" class="text">ma</tspan>
                                           											</tspan>
@@ -11463,7 +11470,7 @@
                                     										
                                     <text x="14198" y="45995" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002109406137">
+                                       <tspan class="text" id="text-0000001666106676">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -11491,7 +11498,7 @@
                                     										
                                     <text x="17049" y="45595" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000032606405">
+                                       <tspan class="text" id="text-0000001601893046">
                                           												
                                           <tspan font-size="405px" class="text">ri</tspan>
                                           											</tspan>
@@ -11505,7 +11512,7 @@
                                     										
                                     <text x="17049" y="45995" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000334248834">
+                                       <tspan class="text" id="text-0000000310983941">
                                           												
                                           <tspan font-size="405px" class="text">best,</tspan>
                                           											</tspan>
@@ -11545,7 +11552,7 @@
                                     										
                                     <text x="14198" y="47610" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001554247604">
+                                       <tspan class="text" id="text-0000001465577822">
                                           												
                                           <tspan font-size="405px" class="text">ma</tspan>
                                           											</tspan>
@@ -11561,7 +11568,7 @@
                                     										
                                     <text x="14198" y="48010" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001269760725">
+                                       <tspan class="text" id="text-0000000846548912">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -11589,7 +11596,7 @@
                                     										
                                     <text x="17049" y="47610" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000069717222">
+                                       <tspan class="text" id="text-0000000361748906">
                                           												
                                           <tspan font-size="405px" class="text">ri</tspan>
                                           											</tspan>
@@ -11603,7 +11610,7 @@
                                     										
                                     <text x="17049" y="48010" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002129987365">
+                                       <tspan class="text" id="text-0000001442745632">
                                           												
                                           <tspan font-size="405px" class="text">best,</tspan>
                                           											</tspan>
@@ -11630,12 +11637,12 @@
                            							
                            <g class="tuplet" id="e44-m-1348">
                               								
-                              <g class="tupletNum" id="num-0000000369724864">
+                              <g class="tupletNum" id="num-0000000411555007">
                                  									
                                  <use xlink:href="#E883" x="15509" y="49600" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000713124053">
+                              <g class="tupletBracket" id="bracket-0000001482576564">
                                  									
                                  <polygon points="14288,49501 15491,49501 15491,49483 14288,49483 "></polygon>
                                  									
@@ -11670,7 +11677,7 @@
                                           												
                                           <text x="14198" y="50002" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000001120763528">
+                                             <tspan class="text" id="text-0000000760362802">
                                                 														
                                                 <tspan font-size="405px" class="text">spar</tspan>
                                                 													</tspan>
@@ -11692,7 +11699,7 @@
                                           												
                                           <text x="14198" y="50402" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000001457888302">
+                                             <tspan class="text" id="text-0000002126713733">
                                                 														
                                                 <tspan font-size="405px" class="text">ge</tspan>
                                                 													</tspan>
@@ -11780,12 +11787,12 @@
                            							
                            <g class="tuplet" id="e44-m-1360">
                               								
-                              <g class="tupletNum" id="num-0000000254557837">
+                              <g class="tupletNum" id="num-0000000650245215">
                                  									
                                  <use xlink:href="#E883" x="18360" y="49690" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000712606108">
+                              <g class="tupletBracket" id="bracket-0000000763355599">
                                  									
                                  <polygon points="17139,49591 18342,49591 18342,49573 17139,49573 "></polygon>
                                  									
@@ -11879,7 +11886,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000681938032">
+                     <g class="barLineAttr" id="bline-0000000348165633">
                         						
                         <path d="M19989 45013 L19989 44293" stroke="#000000" stroke-width="27"></path>
                         						
@@ -11890,7 +11897,7 @@
                      				</g>
                   			</g>
                			
-               <g class="system" id="system-0000000994292609">
+               <g class="system" id="system-0000000929068053">
                   				
                   <polygon points="-270,50895 270,50535 270,50400 -270,50760 "></polygon>
                   				
@@ -11908,11 +11915,11 @@
                   				
                   <g class="measure" id="e44-m-1369">
                      					
-                     <g class="mNum autogenerated" id="mnum-0000001694942693">
+                     <g class="mNum autogenerated" id="mnum-0000000625565796">
                         						
                         <text x="0" y="51255" text-anchor="middle" font-size="0px">
                            							
-                           <tspan class="text" id="text-0000000531263796">
+                           <tspan class="text" id="text-0000001951881307">
                               								
                               <tspan font-size="324px" class="text">28</tspan>
                               							</tspan>
@@ -11931,12 +11938,12 @@
                         						
                         <path d="M0 52245 L5640 52245" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001330894486">
+                        <g class="clef" id="clef-0000000482695627">
                            							
                            <use xlink:href="#E050" x="90" y="52065" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000000153959050">
+                        <g class="keySig" id="keysig-0000001619668270">
                            							
                            <use xlink:href="#E260" x="771" y="51885" height="720px" width="720px"></use>
                            						</g>
@@ -11958,7 +11965,7 @@
                                     										
                                     <text x="1093" y="52827" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001269236980">
+                                       <tspan class="text" id="text-0000000754673297">
                                           												
                                           <tspan font-size="405px" class="text">pars,</tspan>
                                           											</tspan>
@@ -11972,7 +11979,7 @@
                                     										
                                     <text x="1093" y="53227" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000461174141">
+                                       <tspan class="text" id="text-0000001571255808">
                                           												
                                           <tspan font-size="405px" class="text">ge</tspan>
                                           											</tspan>
@@ -12000,7 +12007,7 @@
                                     										
                                     <text x="3405" y="52827" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000142808099">
+                                       <tspan class="text" id="text-0000000206127888">
                                           												
                                           <tspan font-size="405px" class="text">spar</tspan>
                                           											</tspan>
@@ -12016,7 +12023,7 @@
                                     										
                                     <text x="3405" y="53227" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001410800554">
+                                       <tspan class="text" id="text-0000000484518961">
                                           												
                                           <tspan font-size="405px" class="text">ne</tspan>
                                           											</tspan>
@@ -12041,12 +12048,12 @@
                         						
                         <path d="M0 54260 L5640 54260" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000002019442362">
+                        <g class="clef" id="clef-0000000261904518">
                            							
                            <use xlink:href="#E050" x="90" y="54080" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001936220946">
+                        <g class="keySig" id="keysig-0000001635241323">
                            							
                            <use xlink:href="#E260" x="771" y="53900" height="720px" width="720px"></use>
                            						</g>
@@ -12068,7 +12075,7 @@
                                     										
                                     <text x="1093" y="54842" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000805433261">
+                                       <tspan class="text" id="text-0000000990186973">
                                           												
                                           <tspan font-size="405px" class="text">pars,</tspan>
                                           											</tspan>
@@ -12082,7 +12089,7 @@
                                     										
                                     <text x="1093" y="55242" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001469955327">
+                                       <tspan class="text" id="text-0000001647097767">
                                           												
                                           <tspan font-size="405px" class="text">ge</tspan>
                                           											</tspan>
@@ -12110,7 +12117,7 @@
                                     										
                                     <text x="3405" y="54842" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001471223524">
+                                       <tspan class="text" id="text-0000000155354941">
                                           												
                                           <tspan font-size="405px" class="text">spar</tspan>
                                           											</tspan>
@@ -12126,7 +12133,7 @@
                                     										
                                     <text x="3405" y="55242" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001874607624">
+                                       <tspan class="text" id="text-0000000534498753">
                                           												
                                           <tspan font-size="405px" class="text">ne</tspan>
                                           											</tspan>
@@ -12151,12 +12158,12 @@
                         						
                         <path d="M0 56365 L5640 56365" stroke="#000000" stroke-width="13"></path>
                         						
-                        <g class="clef" id="clef-0000001245736431">
+                        <g class="clef" id="clef-0000000005201355">
                            							
                            <use xlink:href="#E062" x="90" y="55825" height="720px" width="720px"></use>
                            						</g>
                         						
-                        <g class="keySig" id="keysig-0000001274121214">
+                        <g class="keySig" id="keysig-0000001519827605">
                            							
                            <use xlink:href="#E260" x="771" y="56185" height="720px" width="720px"></use>
                            						</g>
@@ -12165,12 +12172,12 @@
                            							
                            <g class="tuplet" id="e44-m-1389">
                               								
-                              <g class="tupletNum" id="num-0000000377969429">
+                              <g class="tupletNum" id="num-0000001137838005">
                                  									
                                  <use xlink:href="#E883" x="2180" y="56832" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000710441307">
+                              <g class="tupletBracket" id="bracket-0000001783142270">
                                  									
                                  <polygon points="1183,56733 2162,56733 2162,56715 1183,56715 "></polygon>
                                  									
@@ -12264,12 +12271,12 @@
                            							
                            <g class="tuplet" id="e44-m-1400">
                               								
-                              <g class="tupletNum" id="num-0000000865361139">
+                              <g class="tupletNum" id="num-0000000228358865">
                                  									
                                  <use xlink:href="#E883" x="4312" y="56832" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000001563611754">
+                              <g class="tupletBracket" id="bracket-0000000557232376">
                                  									
                                  <polygon points="3495,56733 4294,56733 4294,56715 3495,56715 "></polygon>
                                  									
@@ -12352,7 +12359,7 @@
                                        											
                                        <text x="4997" y="57235" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001649341351">
+                                          <tspan class="text" id="text-0000001158829771">
                                              													
                                              <tspan font-size="405px" class="text">sa</tspan>
                                              												</tspan>
@@ -12366,7 +12373,7 @@
                                        											
                                        <text x="4997" y="57635" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000002001339629">
+                                          <tspan class="text" id="text-0000001042928809">
                                              													
                                              <tspan font-size="405px" class="text">ne</tspan>
                                              												</tspan>
@@ -12380,7 +12387,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000243131615">
+                     <g class="barLineAttr" id="bline-0000001408269653">
                         						
                         <path d="M5627 52245 L5627 51525" stroke="#000000" stroke-width="27"></path>
                         						
@@ -12421,7 +12428,7 @@
                                     										
                                     <text x="5730" y="52827" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001816220287">
+                                       <tspan class="text" id="text-0000000782069170">
                                           												
                                           <tspan font-size="405px" class="text">sa</tspan>
                                           											</tspan>
@@ -12435,7 +12442,7 @@
                                     										
                                     <text x="5730" y="53227" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000291608346">
+                                       <tspan class="text" id="text-0000000379357741">
                                           												
                                           <tspan font-size="405px" class="text">ra</tspan>
                                           											</tspan>
@@ -12461,7 +12468,7 @@
                                     										
                                     <text x="7350" y="52827" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000779276386">
+                                       <tspan class="text" id="text-0000002052632959">
                                           												
                                           <tspan font-size="405px" class="text">per</tspan>
                                           											</tspan>
@@ -12475,7 +12482,7 @@
                                     										
                                     <text x="7350" y="53227" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001551580730">
+                                       <tspan class="text" id="text-0000000715840971">
                                           												
                                           <tspan font-size="405px" class="text">vit,</tspan>
                                           											</tspan>
@@ -12515,7 +12522,7 @@
                                     										
                                     <text x="5730" y="54842" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000350350022">
+                                       <tspan class="text" id="text-0000001182125580">
                                           												
                                           <tspan font-size="405px" class="text">sa</tspan>
                                           											</tspan>
@@ -12529,7 +12536,7 @@
                                     										
                                     <text x="5730" y="55242" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000546205979">
+                                       <tspan class="text" id="text-0000001612525127">
                                           												
                                           <tspan font-size="405px" class="text">ra</tspan>
                                           											</tspan>
@@ -12557,7 +12564,7 @@
                                     										
                                     <text x="7350" y="54842" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001051921920">
+                                       <tspan class="text" id="text-0000000363992731">
                                           												
                                           <tspan font-size="405px" class="text">per</tspan>
                                           											</tspan>
@@ -12571,7 +12578,7 @@
                                     										
                                     <text x="7350" y="55242" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000613359913">
+                                       <tspan class="text" id="text-0000001683423295">
                                           												
                                           <tspan font-size="405px" class="text">vit,</tspan>
                                           											</tspan>
@@ -12598,12 +12605,12 @@
                            							
                            <g class="tuplet" id="e44-m-1453">
                               								
-                              <g class="tupletNum" id="num-0000001257332442">
+                              <g class="tupletNum" id="num-0000000302207547">
                                  									
                                  <use xlink:href="#E883" x="6381" y="56743" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000099993428">
+                              <g class="tupletBracket" id="bracket-0000001805197309">
                                  									
                                  <polygon points="5820,56644 6363,56644 6363,56626 5820,56626 "></polygon>
                                  									
@@ -12629,7 +12636,7 @@
                                        											
                                        <text x="5730" y="57235" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001521353865">
+                                          <tspan class="text" id="text-0000001803458186">
                                              													
                                              <tspan font-size="405px" class="text">per</tspan>
                                              												</tspan>
@@ -12643,7 +12650,7 @@
                                        											
                                        <text x="5730" y="57635" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000000721520326">
+                                          <tspan class="text" id="text-0000001498514437">
                                              													
                                              <tspan font-size="405px" class="text">ra</tspan>
                                              												</tspan>
@@ -12679,7 +12686,7 @@
                                        											
                                        <text x="6711" y="57635" font-size="0px">
                                           												
-                                          <tspan class="text" id="text-0000001760394850">
+                                          <tspan class="text" id="text-0000001766825198">
                                              													
                                              <tspan font-size="405px" class="text">vit,</tspan>
                                              												</tspan>
@@ -12691,12 +12698,12 @@
                            							
                            <g class="tuplet" id="e44-m-1459">
                               								
-                              <g class="tupletNum" id="num-0000001359435503">
+                              <g class="tupletNum" id="num-0000002019275197">
                                  									
                                  <use xlink:href="#E883" x="8437" y="56922" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000848111406">
+                              <g class="tupletBracket" id="bracket-0000000643841369">
                                  									
                                  <polygon points="7440,56823 8419,56823 8419,56805 7440,56805 "></polygon>
                                  									
@@ -12731,7 +12738,7 @@
                                           												
                                           <text x="7350" y="57235" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000223784700">
+                                             <tspan class="text" id="text-0000000768785101">
                                                 														
                                                 <tspan font-size="405px" class="text">un</tspan>
                                                 													</tspan>
@@ -12751,7 +12758,7 @@
                                           												
                                           <text x="7350" y="57635" font-size="0px">
                                              													
-                                             <tspan class="text" id="text-0000000742640330">
+                                             <tspan class="text" id="text-0000002018304262">
                                                 														
                                                 <tspan font-size="405px" class="text">a</tspan>
                                                 													</tspan>
@@ -12835,7 +12842,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000001799760615">
+                     <g class="barLineAttr" id="bline-0000001067639930">
                         						
                         <path d="M9752 52245 L9752 51525" stroke="#000000" stroke-width="27"></path>
                         						
@@ -12876,7 +12883,7 @@
                                     										
                                     <text x="9855" y="52827" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000887958194">
+                                       <tspan class="text" id="text-0000001065989762">
                                           												
                                           <tspan font-size="405px" class="text">un</tspan>
                                           											</tspan>
@@ -12892,7 +12899,7 @@
                                     										
                                     <text x="9855" y="53227" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000586455923">
+                                       <tspan class="text" id="text-0000001229685187">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -12929,7 +12936,7 @@
                                     										
                                     <text x="11958" y="52827" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002063117243">
+                                       <tspan class="text" id="text-0000002071584497">
                                           												
                                           <tspan font-size="405px" class="text">das,</tspan>
                                           											</tspan>
@@ -12943,7 +12950,7 @@
                                     										
                                     <text x="11958" y="53227" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000264448996">
+                                       <tspan class="text" id="text-0000000665549944">
                                           												
                                           <tspan font-size="405px" class="text">best.</tspan>
                                           											</tspan>
@@ -12983,7 +12990,7 @@
                                     										
                                     <text x="9855" y="54842" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002124807120">
+                                       <tspan class="text" id="text-0000000427233490">
                                           												
                                           <tspan font-size="405px" class="text">un</tspan>
                                           											</tspan>
@@ -12999,7 +13006,7 @@
                                     										
                                     <text x="9855" y="55242" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001095003264">
+                                       <tspan class="text" id="text-0000001855336764">
                                           												
                                           <tspan font-size="405px" class="text">a</tspan>
                                           											</tspan>
@@ -13031,7 +13038,7 @@
                                     										
                                     <text x="11958" y="54842" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001052712735">
+                                       <tspan class="text" id="text-0000001226267915">
                                           												
                                           <tspan font-size="405px" class="text">das,</tspan>
                                           											</tspan>
@@ -13045,7 +13052,7 @@
                                     										
                                     <text x="11958" y="55242" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000000662476440">
+                                       <tspan class="text" id="text-0000000023636534">
                                           												
                                           <tspan font-size="405px" class="text">best.</tspan>
                                           											</tspan>
@@ -13072,12 +13079,12 @@
                            							
                            <g class="tuplet" id="e44-m-1508">
                               								
-                              <g class="tupletNum" id="num-0000000308906198">
+                              <g class="tupletNum" id="num-0000001257169566">
                                  									
                                  <use xlink:href="#E883" x="10747" y="56923" height="720px" width="720px"></use>
                                  								</g>
                               								
-                              <g class="tupletBracket" id="bracket-0000000331973072">
+                              <g class="tupletBracket" id="bracket-0000001539997030">
                                  									
                                  <polygon points="9945,56824 10729,56824 10729,56806 9945,56806 "></polygon>
                                  									
@@ -13175,7 +13182,7 @@
                                     										
                                     <text x="11958" y="57235" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000001419221049">
+                                       <tspan class="text" id="text-0000001620116449">
                                           												
                                           <tspan font-size="405px" class="text">das,</tspan>
                                           											</tspan>
@@ -13189,7 +13196,7 @@
                                     										
                                     <text x="11958" y="57635" font-size="0px">
                                        											
-                                       <tspan class="text" id="text-0000002138073458">
+                                       <tspan class="text" id="text-0000000945146460">
                                           												
                                           <tspan font-size="405px" class="text">best.</tspan>
                                           											</tspan>
@@ -13200,7 +13207,7 @@
                            						</g>
                         					</g>
                      					
-                     <g class="barLineAttr" id="bline-0000000151225710">
+                     <g class="barLineAttr" id="bline-0000000691002360">
                         						
                         <path d="M15601 52245 L15601 51525" stroke="#000000" stroke-width="27"></path>
                         						
@@ -13228,26 +13235,49 @@
                         					</g>
                      				</g>
                   				
-                  <g class="boundaryEnd section-0000000905320518" id="bdend-0000001522217220"></g>
+                  <g class="boundaryEnd section-0000001783023949" id="bdend-0000002076603679"></g>
                   			</g>
                			
-               <g class="pgHead autogenerated" id="pghead-0000000932129829"></g>
+               <g class="pgHead autogenerated" id="pghead-0000000573801909"></g>
                		</g>
             	</svg>
-         </svg></div>
+         
+         <filter xmlns="" id="highlighting" x="-50%" y="-50%" width="200%" height="200%"><!-- Coloured outline -->
+            <feFlood flood-color="#ff0000" result="color-base"></feFlood>
+            <feGaussianBlur in="SourceAlpha" result="color-blur-out" stdDeviation="50"></feGaussianBlur>
+            <feOffset in="color-blur-out" result="color-shadow"></feOffset>
+            <feColorMatrix in="color-shadow" result="color-out" type="matrix" values="  0 0 0 0   0                                 0 0 0 0   0                                 0 0 0 0   0                                0 0 0 1.5 0"></feColorMatrix>
+            <feComposite result="color-drop" in="color-base" in2="color-out" operator="in"></feComposite>
+            <!-- Final blend -->
+            <feBlend in="SourceGraphic" in2="color-drop" mode="normal"></feBlend>
+         </filter></svg></div>
    <div class="pianoroll lity-hide ata-viz-pianoroll" id="pianoroll-notation">
-      <div class="transport"><button class="atalanta-notation-start" aria-label="Play Music">
-            <div class="play-btn__icon"></div>
-            <div class="play-btn__label">Play</div></button><button class="atalanta-notation-stop" aria-label="Pause Music">
-            <div class="pause-btn__icon"></div>
-            <div class="pause-btn__label">Pause</div></button><div class="track-mute"><button class="atalanta-notation-mute-track" aria-label="Play or Mute Voice 1" data-track="1">
-               <div class="mute-btn__icon"></div>
-               <div class="mute-btn__label">Hear/mute <em>Pomum morans.</em></div></button><button class="atalanta-notation-mute-track" aria-label="Play or Mute Voice 2" data-track="2">
-               <div class="mute-btn__icon"></div>
-               <div class="mute-btn__label">Hear/mute <em>Hippomenes sequens.</em></div></button><button class="atalanta-notation-mute-track" aria-label="Play or Mute Voice 3" data-track="3">
-               <div class="mute-btn__icon"></div>
-               <div class="mute-btn__label">Hear/mute <em>Atalanta fugiens.</em></div></button></div>
+      <div class="transport">
+         <div class="transport">
+            <div class="atalanta-notation-start"><input type="checkbox" class="track-play" id="track-play-pianoroll"><label for="track-play-pianoroll"></label></div>
+            <div class="track-mute">
+               <div class="track-container"><label class="track-descriptor">
+                     <p class="track-title">
+                        Voice 1 <span class="track-status"></span></p></label><label for="track-1-pianoroll" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 1" data-track="1" type="checkbox" id="track-1-pianoroll" checked><span class="slider round"></span></label><label class="track-descriptor">
+                     <p class="track-name">Pomum morans.</p></label></div>
+               <div class="track-container"><label class="track-descriptor">
+                     <p class="track-title">
+                        Voice 2 <span class="track-status"></span></p></label><label for="track-2-pianoroll" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 2" data-track="2" type="checkbox" id="track-2-pianoroll" checked><div class="slider round"></div></label><label class="track-descriptor">
+                     <p class="track-name">Hippomenes sequens.</p></label></div>
+               <div class="track-container"><label class="track-descriptor">
+                     <p class="track-title">
+                        Voice 3 <span class="track-status"></span></p></label><label for="track-3-pianoroll" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 3" data-track="3" type="checkbox" id="track-3-pianoroll" checked><div class="slider round"></div></label><label class="track-descriptor">
+                     <p class="track-name">Atalanta fugiens.</p></label></div>
+            </div>
+         </div>
       </div><svg width="100%">
+         <defs>
+            <filter id="highlightFilter" x="0" y="0" width="2000%" height="2000%">
+               <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0"></feOffset>
+               <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10"></feGaussianBlur>
+               <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
+            </filter>
+         </defs>
          <rect class="note voice-1" id="e44-m-57-pianoroll" height="5" data-time-start="1.1111111111111112" data-time-end="2.2222222222222223" x="0" width="55.55555555555556" y="40"></rect>
          <rect class="note voice-1" id="e44-m-58-pianoroll" height="5" data-time-start="2.2222222222222223" data-time-end="3.333333333333333" x="55.55555555555556" width="55.555555555555536" y="35"></rect>
          <rect class="note voice-2" id="e44-m-62-pianoroll" height="5" data-time-start="1.1111111111111112" data-time-end="2.2222222222222223" x="0" width="55.55555555555556" y="15"></rect>
