@@ -1,0 +1,225 @@
+body {
+  /* background-color: #ddd; */
+  padding: 3em;
+}
+
+/* MUSIC - START */
+
+/* Things to hide if there's no JS */
+
+.music .transport, 
+.music .audio {
+  display: initial;
+}
+
+/* If there is JS, unhide */
+
+.music.with-js .transport, 
+.music.with-js .pianoroll {
+  display: auto;
+}
+
+.music.with-js .audio audio.all-tracks, 
+html.music-ready .audio audio.all-tracks {
+  display: none;
+}
+
+.music.with-js .cmn .highlighted {
+  fill: red;
+}
+
+.music.with-js .cmn .muted .highlighted {
+  fill: black;
+}
+
+/* Transport */
+
+    /* Play / Pause button */
+    .track-play {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    input.track-play + label { /* ??? */
+      display: inline-block;
+      text-align: center;
+      padding: 50px 0 0 0;
+      margin: 0;
+      height: 80px;
+      width: 100%;
+      /* background-image: url("https://cdn.glitch.com/2d852fd1-777b-4ee2-8d6c-9c534adf95a5%2Ficon_play_filled--gray.svg?v=1572012432161"); */
+      background-image: url("../assets/icons/icon_play_filled--gray.svg");
+      background-size: auto 40px;
+      background-position: center top;
+      background-repeat: no-repeat;
+      /* transition: 0.5s; */
+    }
+    input.track-play:checked + label {
+      /* background-image: url("https://cdn.glitch.com/2d852fd1-777b-4ee2-8d6c-9c534adf95a5%2Ficon_pause_filled--gray.svg?v=1572012432196"); */
+      background-image: url("../assets/icons/icon_pause_filled--gray.svg");
+    }
+    input.track-play + label:after {
+      content: "Play Voices";
+    }
+    input.track-play:checked + label:after {
+      content: "Pause Voices";
+    }
+    /* Code adapted from https://www.w3schools.com/howto/howto_css_switch.asp */
+    /* The switch - the box around the slider */
+    .track-mute .switch {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: column;
+    }
+    /* Hide default HTML checkbox */
+    .track-mute .switch input {
+      height: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      width: 0;
+    }
+    /* The slider */
+    .track-mute .slider {
+      background-color: #85929E;
+      border-radius: 10px;
+      content: '';
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      height: 20px;
+      transition: 0.4s;
+      -webkit-transition: 0.4s;
+      width: 40px;
+    }
+    .track-mute .slider:hover {
+      background-color: #F28455;
+    }
+    .track-mute .slider::after {
+      background-color: white;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2), 0 0 2px rgba(0,0,0,0.4);
+      color: #85929E;
+      content: "x";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      height: 16px;
+      transform: translate3d(2px, 0, 0);
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      width: 16px;
+    }
+    .track-mute input:checked + .slider {
+      background-color: #F28455;
+    /*   background-color: #2196F3; */
+    /*   justify-content: flex-end; */
+    }
+    .track-mute input:checked + .slider:hover {
+      background-color: #C28970;
+    /*   background-color: #2196F3; */
+    /*   justify-content: flex-end; */
+    }
+    .track-mute input:focus + .slider {
+    /*   box-shadow: 0 0 1px #2196F3; */
+    }
+    .track-mute input:checked + .slider:after {
+      content: "";
+      transform: translate3d(calc(250% - 18px), 0, 0);
+      -ms-transform: translate3d(calc(250% - 18px), 0, 0);
+      -webkit-transform: translate3d(calc(250% - 18px), 0, 0);
+    }
+    .track-mute .slider::after {
+    }
+    /* Status labels for tracks */
+    .track-mute .track-descriptor .track-title::after { /* ??? */
+      text-transform: uppercase;
+      font-size: 60%;
+      font-weight: bold;
+      border: none;
+      color: white;
+      padding: 2px 5px;
+      text-align: center;
+      display: none;
+      margin: 0px 4px;
+      border-radius: 5px;
+    }
+    .track-mute .track-container .track-title {
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .track-mute .track-container .track-name {
+      display: block;
+      font-size: 12px;
+      font-style: italic;
+    }
+    .track-mute input:focus + .slider {
+      box-shadow: 0 0 3pt 2pt #34495E;
+      -moz-box-shadow: 0 0 3pt 2pt #34495E;
+      -webkit-box-shadow: 0 0 3pt 2pt #34495E;
+      -o-box-shadow: 0 0 3pt 2pt #34495E;
+    }
+   /* Piano roll */
+   .pianoroll svg rect.note { 
+     transition: transform 3s ease-out, fill 0.5s;
+   }
+   .pianoroll svg rect.note.muted {
+     fill: #eee;
+   }
+   .pianoroll svg rect.note.highlighted {
+     filter: url(#highlightFilter);
+   }
+   /* CMN (Common music notation) */
+   .music.with-js .cmn .highlighted {
+      filter: url(#highlighting);
+   }
+
+.music .cmn .staff, 
+.music .cmn .barLineAttr path {
+  transition: opacity 0.5s;
+}
+
+.music .cmn .staff.muted, 
+.music .cmn .barLineAttr path {
+  opacity: 0.3;
+}
+
+.music button.muted {
+  opacity: 0.5;
+}
+
+
+
+.pianoroll .note.highlighted {
+  fill: yellow;
+}
+
+.pianoroll .voice-1 {
+  fill: red;
+}
+
+.pianoroll .voice-2 {
+  fill: blue;
+}
+
+.pianoroll .voice-3 {
+  fill: green;
+}
+
+.pianoroll.mute-1 .voice-1 {
+  fill: grey;
+}
+
+.pianoroll.mute-2 .voice-2 {
+  fill: grey;
+}
+
+.pianoroll.mute-3 .voice-3 {
+  fill: grey;
+}
+
+/* MUSIC - END */

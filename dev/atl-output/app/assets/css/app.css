@@ -9660,21 +9660,181 @@ html.music-ready .audio audio.all-tracks {
   fill: black; }
 
 /* Transport */
-.music.playing .transport .atalanta-notation-start,
-.pianoroll.playing .atalanta-notation-start {
-  display: none; }
+/* Play / Pause button */
+.track-play {
+  opacity: 0;
+  width: 0;
+  height: 0; }
 
-.music.paused .transport .atalanta-notation-stop,
-.pianoroll .atalanta-notation-stop,
-.pianoroll.paused .atalanta-notation-stop {
-  display: none; }
+input.track-play + label {
+  /* ??? */
+  display: inline-block;
+  text-align: center;
+  padding: 50px 0 0 0;
+  margin: 0;
+  height: 80px;
+  width: 100%;
+  /* background-image: url("https://cdn.glitch.com/2d852fd1-777b-4ee2-8d6c-9c534adf95a5%2Ficon_play_filled--gray.svg?v=1572012432161"); */
+  background-image: url("../assets/icons/icon_play_filled--gray.svg");
+  background-size: auto 40px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  /* transition: 0.5s; */ }
 
-/*
-.music.mute-1 .measure > .staff:nth-child(1),
-.music.mute-2 .measure > .staff:nth-child(2),
-.music.mute-3 .measure > .staff:nth-child(3) {
-  opacity: 0.3;
-} */
+input.track-play:checked + label {
+  /* background-image: url("https://cdn.glitch.com/2d852fd1-777b-4ee2-8d6c-9c534adf95a5%2Ficon_pause_filled--gray.svg?v=1572012432196"); */
+  background-image: url("../assets/icons/icon_pause_filled--gray.svg"); }
+
+input.track-play + label:after {
+  content: "Play Voices"; }
+
+input.track-play:checked + label:after {
+  content: "Pause Voices"; }
+
+/* Code adapted from https://www.w3schools.com/howto/howto_css_switch.asp */
+/* The switch - the box around the slider */
+.track-mute .switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+/* Hide default HTML checkbox */
+.track-mute .switch input {
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 0; }
+
+/* The slider */
+.track-mute .slider {
+  background-color: #85929E;
+  border-radius: 10px;
+  content: '';
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 20px;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  width: 40px; }
+
+.track-mute .slider:hover {
+  background-color: #F28455; }
+
+.track-mute .slider::after {
+  background-color: white;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.4);
+  color: #85929E;
+  content: "x";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  height: 16px;
+  -webkit-transform: translate3d(2px, 0, 0);
+  transform: translate3d(2px, 0, 0);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  width: 16px; }
+
+.track-mute input:checked + .slider {
+  background-color: #F28455;
+  /*   background-color: #2196F3; */
+  /*   justify-content: flex-end; */ }
+
+.track-mute input:checked + .slider:hover {
+  background-color: #C28970;
+  /*   background-color: #2196F3; */
+  /*   justify-content: flex-end; */ }
+
+.track-mute input:focus + .slider {
+  /*   box-shadow: 0 0 1px #2196F3; */ }
+
+.track-mute input:checked + .slider:after {
+  content: "";
+  transform: translate3d(calc(250% - 18px), 0, 0);
+  -ms-transform: translate3d(calc(250% - 18px), 0, 0);
+  -webkit-transform: translate3d(calc(250% - 18px), 0, 0); }
+
+/* Status labels for tracks */
+.track-mute .track-descriptor .track-title::after {
+  /* ??? */
+  text-transform: uppercase;
+  font-size: 60%;
+  font-weight: bold;
+  border: none;
+  color: white;
+  padding: 2px 5px;
+  text-align: center;
+  display: none;
+  margin: 0px 4px;
+  border-radius: 5px; }
+
+.track-mute .track-container .track-title {
+  font-size: 13px;
+  font-weight: bold; }
+
+.track-mute .track-container .track-name {
+  display: block;
+  font-size: 12px;
+  font-style: italic; }
+
+.track-mute input:focus + .slider {
+  box-shadow: 0 0 3pt 2pt #34495E;
+  -moz-box-shadow: 0 0 3pt 2pt #34495E;
+  -webkit-box-shadow: 0 0 3pt 2pt #34495E;
+  -o-box-shadow: 0 0 3pt 2pt #34495E; }
+
+/* Piano roll */
+.pianoroll svg rect.note {
+  -webkit-transition: fill 0.5s, -webkit-transform 3s ease-out;
+  transition: fill 0.5s, -webkit-transform 3s ease-out;
+  -o-transition: transform 3s ease-out, fill 0.5s;
+  transition: transform 3s ease-out, fill 0.5s;
+  transition: transform 3s ease-out, fill 0.5s, -webkit-transform 3s ease-out; }
+
+.pianoroll svg rect.note.muted {
+  fill: #eee; }
+
+.pianoroll svg rect.note.highlighted {
+  -webkit-filter: url(#highlightFilter);
+  filter: url(#highlightFilter); }
+
+/* CMN (Common music notation) */
+.music.with-js .cmn .highlighted {
+  -webkit-filter: url(#highlighting);
+  filter: url(#highlighting); }
+
 .music .cmn .staff,
 .music .cmn .barLineAttr path {
   -webkit-transition: opacity 0.5s;
