@@ -1,0 +1,65 @@
+@import 'utilities';
+@import 'colors';
+
+.wrapper--doi-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.wrapper--doi-btn span {
+	letter-spacing: .05em;
+	margin-left: -1px;
+}
+#emblem-toc .wrapper--doi-btn {
+	grid-column: 1 / 13;
+	margin-top: -2rem;	
+}
+.btn--doi {
+	color: $white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: .75rem;
+	outline: 1px solid $white_transparent;
+	margin-bottom: 1rem;
+	padding: .125rem 0;
+	width: 2.5rem;
+}
+.btn--doi:hover, 
+.btn--doi:focus {
+	background-color: $blue_light;
+	color: $text_body;
+	outline: 1px solid $text_body;
+	transition: .2s;
+}
+.btn--doi:focus {
+	outline: 2px dotted black;	
+}
+.wrapper--doi {
+	
+}
+.show-doi {
+	display: block;
+}
+.doi {
+	background-color: $blue_light;
+	color: $text_body;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	height: 60vh;
+	padding: 0 3rem;
+	width: 60vw;
+}
+.doi h6 {
+	font-size: 2.5rem;
+	font-weight: 600;
+	margin-bottom: 2rem;
+}
+.doi p {
+	font-size: 1.5rem;
+}
+.doi__msg {
+	font-weight: 600;
+}
