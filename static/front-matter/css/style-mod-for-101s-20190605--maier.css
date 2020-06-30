@@ -8316,3 +8316,70 @@ button.lity-close:focus {
 .fr-caption {
     font-weight: 700;
 }
+
+.wrapper--doi-btn{
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-align:start;
+    align-items:flex-start;
+    -webkit-box-pack:start;
+    justify-content:flex-start;
+    margin:-2.5rem 0 .125rem
+}
+.wrapper--doi-btn span{
+    letter-spacing:.05em
+}
+.btn--doi{
+    color:#4d4c4c;
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-align:center;
+    align-items:center;
+    -webkit-box-pack:center;
+    justify-content:center;
+    font-size:.75rem;
+    border:1px solid #4d4c4c;
+    margin-bottom:1rem;
+    padding:.125rem 0;
+    width:2.5rem
+}
+.btn--doi:hover,.btn--doi:focus{
+    background-color:#dae4ec;
+    border:1px solid #4d4c4c;
+    -webkit-transition:.2s;
+    transition:.2s
+}
+.btn--doi:focus{
+    border:1px dotted #000
+}
+.show-doi{
+    display:block
+}
+.doi{
+    background-color:#dae4ec;
+    color:#4d4c4c;
+    display:-webkit-box;
+    display:flex;
+    -webkit-box-align:start;
+    align-items:flex-start;
+    -webkit-box-pack:center;
+    justify-content:center;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    flex-direction:column;
+    height:60vh;
+    padding:0 3rem;
+    width:60vw
+}
+.doi h6{
+    font-size:2.5rem;
+    font-weight:600;
+    margin-bottom:.25rem
+}
+.doi p{
+    font-size:1.5rem
+}
+.doi__msg{
+    font-weight:600;
+    margin-bottom:.875rem
+}
