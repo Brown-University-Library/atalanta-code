@@ -1,19 +1,19 @@
 <div class="music ata-music paused loading">
    <div class="transport" id="my-transport">
       <div class="transport">
-         <div class="atalanta-notation-start"><input type="checkbox" class="track-play" id="track-play"><label for="track-play"></label></div>
+         <div class="atalanta-notation-start"><input type="checkbox" class="track-play" id="track-play"/><label for="track-play"></label></div>
          <div class="track-mute">
             <div class="track-container"><label class="track-descriptor">
                   <span class="track-title">
-                     Voice 1 <span class="track-status"></span></span></label><label for="track-1" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 1" data-track="1" type="checkbox" id="track-1" checked><span class="slider round"></span></label><label class="track-descriptor">
+                     Voice 1 <span class="track-status"></span></span></label><label for="track-1" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 1" data-track="1" type="checkbox" id="track-1" checked="checked"/><span class="slider round"></span></label><label class="track-descriptor">
                   <span class="track-name">Atalanta fugiens.</span></label></div>
             <div class="track-container"><label class="track-descriptor">
                   <span class="track-title">
-                     Voice 2 <span class="track-status"></span></span></label><label for="track-2" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 2" data-track="2" type="checkbox" id="track-2" checked><span class="slider round"></span></label><label class="track-descriptor">
+                     Voice 2 <span class="track-status"></span></span></label><label for="track-2" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 2" data-track="2" type="checkbox" id="track-2" checked="checked"/><span class="slider round"></span></label><label class="track-descriptor">
                   <span class="track-name">Hippomenes sequens.</span></label></div>
             <div class="track-container"><label class="track-descriptor">
                   <span class="track-title">
-                     Voice 3 <span class="track-status"></span></span></label><label for="track-3" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 3" data-track="3" type="checkbox" id="track-3" checked><span class="slider round"></span></label><label class="track-descriptor">
+                     Voice 3 <span class="track-status"></span></span></label><label for="track-3" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 3" data-track="3" type="checkbox" id="track-3" checked="checked"/><span class="slider round"></span></label><label class="track-descriptor">
                   <span class="track-name">Pomum morans.</span></label></div>
          </div>
          <div class="atalanta-notation__switch"><a href="#pianoroll-notation" data-lity="">
@@ -11144,19 +11144,19 @@
    <div class="pianoroll lity-hide ata-viz-pianoroll" id="pianoroll-notation">
       <div class="transport">
          <div class="transport">
-            <div class="atalanta-notation-start"><input type="checkbox" class="track-play" id="track-play-pianoroll"><label for="track-play-pianoroll"></label></div>
+            <div class="atalanta-notation-start"><input type="checkbox" class="track-play" id="track-play-pianoroll"/><label for="track-play-pianoroll"></label></div>
             <div class="track-mute">
                <div class="track-container"><label class="track-descriptor">
                      <span class="track-title">
-                        Voice 1 <span class="track-status"></span></span></label><label for="track-1-pianoroll" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 1" data-track="1" type="checkbox" id="track-1-pianoroll" checked><span class="slider round"></span></label><label class="track-descriptor">
+                        Voice 1 <span class="track-status"></span></span></label><label for="track-1-pianoroll" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 1" data-track="1" type="checkbox" id="track-1-pianoroll" checked="checked"/><span class="slider round"></span></label><label class="track-descriptor">
                      <span class="track-name">Atalanta fugiens.</span></label></div>
                <div class="track-container"><label class="track-descriptor">
                      <span class="track-title">
-                        Voice 2 <span class="track-status"></span></span></label><label for="track-2-pianoroll" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 2" data-track="2" type="checkbox" id="track-2-pianoroll" checked><span class="slider round"></span></label><label class="track-descriptor">
+                        Voice 2 <span class="track-status"></span></span></label><label for="track-2-pianoroll" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 2" data-track="2" type="checkbox" id="track-2-pianoroll" checked="checked"/><span class="slider round"></span></label><label class="track-descriptor">
                      <span class="track-name">Hippomenes sequens.</span></label></div>
                <div class="track-container"><label class="track-descriptor">
                      <span class="track-title">
-                        Voice 3 <span class="track-status"></span></span></label><label for="track-3-pianoroll" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 3" data-track="3" type="checkbox" id="track-3-pianoroll" checked><span class="slider round"></span></label><label class="track-descriptor">
+                        Voice 3 <span class="track-status"></span></span></label><label for="track-3-pianoroll" class="switch"><input class="atalanta-notation-mute-track" aria-label="Play Voice 3" data-track="3" type="checkbox" id="track-3-pianoroll" checked="checked"/><span class="slider round"></span></label><label class="track-descriptor">
                      <span class="track-name">Pomum morans.</span></label></div>
             </div>
          </div>
