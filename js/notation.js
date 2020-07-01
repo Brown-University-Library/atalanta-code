@@ -2,60 +2,133 @@
 (function () { 
 
   const MAIN_COMPONENT_CLASSNAME = 'music',
-    AUDIO_CONTAINER_CLASSNAME = 'audio',
-    AUDIO_LOADED_CLASSNAME = 'loaded',
-    AUDIO_LOADING_CLASSNAME = 'loading',
-    MUTE_STATE_CLASSNAME = 'muted',
-    MUTE_BUTTON_CLASSNAME = 'atalanta-notation-mute-track',
-    HIGHLIGHT_CLASSNAME = 'highlighted',
-    PLAYING_CLASSNAME = 'playing',
-    PAUSED_CLASSNAME = 'paused',
-    PLAY_BUTTON_CLASSNAME = 'atalanta-notation-start',
-    STOP_BUTTON_CLASSNAME = 'atalanta-notation-stop',
-    TRACK_NUMBER_ATTNAME = 'data-track',
-    TIME_START_ATTNAME = 'data-time-start',
-    TIME_END_ATTNAME = 'data-time-end',
-    AUDIO_POLLING_INTERVAL = 200,
-    SCROLL_OFFSET = 100, // CMN scroll offset - to account for topnav
-    PIANOROLL_SCROLL_OFFSET = 100;
+        AUDIO_CONTAINER_CLASSNAME = 'audio',
+        AUDIO_LOADED_CLASSNAME = 'loaded',
+        AUDIO_LOADING_CLASSNAME = 'loading',
+        MUTE_STATE_CLASSNAME = 'muted',
+        MUTE_BUTTON_CLASSNAME = 'atalanta-notation-mute-track',
+        HIGHLIGHT_CLASSNAME = 'highlighted',
+        PLAYING_CLASSNAME = 'playing',
+        PAUSED_CLASSNAME = 'paused',
+        PLAY_BUTTON_CLASSNAME = 'track-play', // 'atalanta-notation-start',
+        // STOP_BUTTON_CLASSNAME = 'atalanta-notation-stop',
+        TRACK_NUMBER_ATTNAME = 'data-track',
+        TIME_START_ATTNAME = 'data-time-start',
+        TIME_END_ATTNAME = 'data-time-end',
+        AUDIO_POLLING_INTERVAL = 200,
+        SCROLL_OFFSET = 100, // CMN scroll offset - to account for topnav
+        PIANOROLL_SCROLL_OFFSET = 100;
 
-  let audioReady = false;
+
+  // Audio feature detection - can we make sound?
+  // modernizr 3.6.0 (Custom Build) | MIT
+  // https://modernizr.com/download/?-audio-webaudio-setclasses
+ 
+  ! function (e, n, a) {
+    function o(e, n) {
+      return typeof e === n
+    }
+    function s() {
+      var e, n, a, s, t, i, r;
+      for (var u in l) if (l.hasOwnProperty(u)) {
+        if (e =[], n = l[u], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (a = 0; a < n.options.aliases.length; a++) e.push(n.options.aliases[a].toLowerCase());
+        for (s = o(n.fn, "function") ? n.fn(): n.fn, t = 0; t < e.length; t++) i = e[t], r = i.split("."), 1 === r.length ? Modernizr[r[0]] = s: (! Modernizr[r[0]] || Modernizr[r[0]] instanceof Boolean || (Modernizr[r[0]] = new Boolean (Modernizr[r[0]])), Modernizr[r[0]][r[1]] = s), c.push((s ? "": "no-") + r.join("-"))
+      }
+    }
+    function t(e) {
+      var n = u.className, a = Modernizr._config.classPrefix || "";
+      if (p && (n = n.baseVal), Modernizr._config.enableJSClass) {
+        var o = new RegExp("(^|\\s)" + a + "no-js(\\s|$)");
+        n = n.replace(o, "$1" + a + "js$2")
+      }
+      Modernizr._config.enableClasses && (n += " " + a + e.join(" " + a), p ? u.className.baseVal = n: u.className = n)
+    }
+    function i() {
+      return "function" != typeof n.createElement ? n.createElement(arguments[0]): p ? n.createElementNS.call(n, "http://www.w3.org/2000/svg", arguments[0]): n.createElement.apply(n, arguments)
+    }
+    var c =[], l =[], r = {
+      _version: "3.6.0", _config: {
+        classPrefix: "", enableClasses: ! 0, enableJSClass: ! 0, usePrefixes: ! 0
+      },
+      _q:[], on: function (e, n) {
+        var a = this;
+        setTimeout(function () {
+          n(a[e])
+        },
+        0)
+      },
+      addTest: function (e, n, a) {
+        l.push({
+          name: e, fn: n, options: a
+        })
+      },
+      addAsyncTest: function (e) {
+        l.push({
+          name: null, fn: e
+        })
+      }
+    },
+    Modernizr = function () {
+    };
+    Modernizr.prototype = r, Modernizr = new Modernizr, Modernizr.addTest("webaudio", function () {
+      var n = "webkitAudioContext" in e, a = "AudioContext" in e; return Modernizr._config.usePrefixes ? n || a: a
+    });
+    var u = n.documentElement, p = "svg" === u.nodeName.toLowerCase();
+    Modernizr.addTest("audio", function () {
+      var e = i("audio"), n = ! 1; try {
+        n = ! ! e.canPlayType, n && (n = new Boolean (n), n.ogg = e.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/, ""), n.mp3 = e.canPlayType('audio/mpeg; codecs="mp3"').replace(/^no$/, ""), n.opus = e.canPlayType('audio/ogg; codecs="opus"') || e.canPlayType('audio/webm; codecs="opus"').replace(/^no$/, ""), n.wav = e.canPlayType('audio/wav; codecs="1"').replace(/^no$/, ""), n.m4a = (e.canPlayType("audio/x-m4a;") || e.canPlayType("audio/aac;")).replace(/^no$/, ""))
+      }
+      catch (a) {
+      }
+      return n
+    }), s(), t(c), delete r.addTest, delete r.addAsyncTest;
+    for (var f = 0; f < Modernizr._q.length; f++) Modernizr._q[f]();
+    e.Modernizr = Modernizr
+  } (window, document);
 
   // Set up mute button click event for a single mute button (including pianoroll)
 
-  function initTrackMuteButton(buttonElement, musicRoot) {
+  function initTrackMuteSwitch(muteSwitchElem, musicRoot) {
   
-    const trackNumber = parseInt(buttonElement.getAttribute(TRACK_NUMBER_ATTNAME)),
-      audioElements = Array.from(
-        musicRoot.querySelectorAll(`.${AUDIO_CONTAINER_CLASSNAME} > audio[${TRACK_NUMBER_ATTNAME}="${trackNumber}"]`)
-      );
+    const trackNumber = parseInt(muteSwitchElem.getAttribute(TRACK_NUMBER_ATTNAME)),
+          audioElements = Array.from(
+            musicRoot.querySelectorAll(`.${AUDIO_CONTAINER_CLASSNAME} > audio[${TRACK_NUMBER_ATTNAME}="${trackNumber}"]`)
+          ),
+          muteSwitchesForThisTrack = Array.from(
+            musicRoot.querySelectorAll(`.${MUTE_BUTTON_CLASSNAME}[${TRACK_NUMBER_ATTNAME}='${trackNumber}']`)
+          );
 
-    let isMuted = false;
-  
     const staffElements = Array.from(musicRoot.querySelectorAll('.measure'))
-      .map(measure => measure.querySelectorAll('.staff')[trackNumber - 1]);
-  
-    const barLinesElements = Array.from(musicRoot.querySelectorAll(`.barLineAttr path:nth-child(${trackNumber})`));
+                                .map(measure => measure.querySelectorAll('.staff')[trackNumber - 1]),
+          barLinesElements = Array.from(musicRoot.querySelectorAll(`.barLineAttr path:nth-child(${trackNumber})`)),
+          pianoRollNotes = Array.from(document.querySelectorAll(`.pianoroll svg rect.note.voice-${trackNumber}`)),
+          musicSvgElements = staffElements.concat(barLinesElements, muteSwitchElem, pianoRollNotes);
 
-    const pianoRollNotes = Array.from(document.querySelectorAll(`.pianoroll svg rect.note.voice-${trackNumber}`));
-  
-    const musicSvgElements = staffElements.concat(barLinesElements, buttonElement, pianoRollNotes);
+    // This is the onChange callback for the mute switches
 
     const updateMute = function() {
-  
-      isMuted = ! isMuted;
-      const classNameOp = isMuted ? 'add' : 'remove';
-      
-      audioElements.forEach(aElem => aElem.volume = isMuted ? 0 : 1); // TODO: finish this
-  
+
+      const isMuted = muteSwitchElem.checked;
+
+      // Sync all mute switches
+
+      muteSwitchesForThisTrack.forEach(muteSwitch => muteSwitch.checked = isMuted);
+
+      // Turn on/off audio for this track
+
+      audioElements.forEach(aElem => aElem.volume = isMuted ? 0 : 1);
+
+      // Change classname on CMN and pianoroll, etc.
+
+      const classNameOp = isMuted ? 'remove' : 'add';
       musicSvgElements.forEach(
         elem => elem.classList[classNameOp](MUTE_STATE_CLASSNAME)
       );
     }
   
-    // Add onclick to button
+    // Add onchange to switch
   
-    buttonElement.onclick = updateMute;
+    muteSwitchElem.onchange = updateMute;
   }
   
   // Update markup to prepare for script
@@ -63,7 +136,7 @@
   function initializeMarkup(musicRoot) {
   
     // Add classname to indicate that it's all-systems-go
-    // TODO: THIS HAS BEEN DONE WITH html.music-ready
+    // @todo: THIS HAS BEEN DONE WITH html.music-ready
   
     musicRoot.classList.add('with-js');
     
@@ -75,65 +148,12 @@
     // Activate individual tracks
   
     Array.from(musicRoot.querySelectorAll(`.audio *[${TRACK_NUMBER_ATTNAME}]`))
-      .forEach(trackElem => trackElem.removeAttribute('hidden'));
+         .forEach(audioElem => audioElem.removeAttribute('hidden'));
 
-    // Add style element & filter to pianoroll
-    // TODO: this should be added to SVG transform
+    // Add style element to piano roll (for scrolling)
 
-    const pianoRollDefs = document.createElement('defs');
-    
-    pianoRollDefs.innerHTML = `
-        <filter id="highlightFilter" x="0" y="0" width="2000%" height="2000%">
-        <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0"></feOffset>
-        <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10"></feGaussianBlur>
-        <feBlend in="SourceGraphic" in2="blurOut" mode="normal"></feBlend>
-      </filter>`;
-
-    Array.from(document.querySelectorAll('.pianoroll svg'))
-      .forEach(pianorollSvg => {
-        pianorollSvg.appendChild(document.createElement('style'));
-        pianorollSvg.appendChild(pianoRollDefs);
-      });
-
-    // Add to global style (TODO: should be migrated to main css file)
-
-    const tempStyle = document.createElement('style');
-    
-    tempStyle.textContent = `
-
-      .pianoroll svg rect.note { 
-        transition: transform 3s ease-out, fill 0.5s;
-      }
-
-      .pianoroll svg rect.note.${MUTE_STATE_CLASSNAME} {
-        fill: #eee;
-      }
-      
-      .pianoroll svg rect.note.${HIGHLIGHT_CLASSNAME} {
-        /* filter: url(#highlightFilter); */
-      }`;
-    
-      // The filter above isn't working for some reason ... 
-
-    document.head.appendChild(tempStyle);
-
-    
-
-    // filter: url(#displacementFilter);
-
-
-    /*
-
-    // Get rightmost coordinate of rightmost bar
-
-    Array.from(document.querySelectorAll('.pianoroll rect'))
-      .map(rect => parseInt(rect.getAttribute('x')) + parseInt(rect.getAttribute('width')))
-      .sort((a, b) => b - a)[0];
-
-    <svg width="100%" viewBox="961 0 1000 1000" preserveAspectRatio="xMidYMid slice">
-    (where 961 is the x-coord of the bar)
-
-    */
+    document.querySelector('.pianoroll svg')
+            .appendChild(document.createElement('style'));
   }
   
   // Given an element, and the last (music) system which was scrolled,
@@ -156,7 +176,6 @@
             scrollTo:{ y: `#${elem.id}`, offsetY: SCROLL_OFFSET }, 
             ease:Power2.easeInOut 
           });
-          console.log("Scrolling to " + elem.id);
         }
         return elem;
       } else if (elem.parentElement) {
@@ -167,10 +186,13 @@
     return recurseUpDomLookingForSystem(elemInSystem);
   }
 
+  // Scroll the piano roll to show <elem>
+  // Do this by updating the style element inside the
+  //  piano roll SVG
+
   function scrollPianoRollTo(elem, styleElem) {
     const offset = (parseInt(elem.getAttribute('x')) - PIANOROLL_SCROLL_OFFSET) * -1;
     styleElem.textContent = `
-
       rect.note { 
         transform: translate(${offset}px, 0);
       }`
@@ -178,12 +200,11 @@
 
   // Given a master audio track, a classname, a timetable
   //  update classname 
-  // TODO: Too much DOM accessing - this can be made more efficient
  
-  function updateHighlights(audioTrack, highlightClassname, timeTable, lastScrolledSystem, pianoRollStyleElem) {
+  function updateHighlights(audioTrack, timeTable, lastScrolledSystem, pianoRollStyleElem) {
 
     let scrollNeedsToBeUpdated = true,
-      scrolledSystem;
+        scrolledSystem;
   
     // For each element in the timetable ...
 
@@ -193,11 +214,10 @@
       //  add the highlight classname or remove it, depending
 
       const isPlaying = (audioTrack.currentTime > start && audioTrack.currentTime < end),
-          classOperation = isPlaying ? 'add' : 'remove';
-      elem.classList[classOperation](highlightClassname);
+            classOperation = isPlaying ? 'add' : 'remove';
+      elem.classList[classOperation](HIGHLIGHT_CLASSNAME);
   
       // Update CMN scroll, if necessary
-      //  TODO: do we need to check this for _every_ element in the timetable??
 
       if (scrollNeedsToBeUpdated && isPlaying) {
         scrolledSystem = scrollToSystem(elem, lastScrolledSystem);
@@ -207,7 +227,7 @@
 
     // Update pianoroll scrolling
 
-    const pianorollHighlightedElem = document.querySelector(`.pianoroll rect.note.${highlightClassname}`);
+    const pianorollHighlightedElem = document.querySelector(`.pianoroll rect.note.${HIGHLIGHT_CLASSNAME}`);
     scrollPianoRollTo(pianorollHighlightedElem, pianoRollStyleElem);
   
     return scrolledSystem;
@@ -217,16 +237,18 @@
 
   function removeLoadingClassnameWhenContentLoaded(musicRoot, audioElements) {
 
+    // Callback: returns boolean indicating if all audio is ready to play
+
     function canAllPlay() {
       if (audioElements.every(audioElement => audioElement.readyState === 4)) {
         musicRoot.classList.remove(AUDIO_LOADING_CLASSNAME);
         musicRoot.classList.add(AUDIO_LOADED_CLASSNAME);
-        audioReady = true;
-        console.log('ALL CAN PLAY');
+        // audioReady = true;
+        console.log('Audio loaded');
         return true;
       } else {
-        console.log('ALL CANNOT PLAY');
-        console.log(audioElements.map((ae, i) => `${i}:${ae.readyState}`).join(' / '));
+        console.log('Loading audio: ' + 
+                    audioElements.map(ae => ae.readyState === 4).join(','));
         return false;
       }
     }
@@ -237,7 +259,6 @@
       audioElements.forEach(
         (audioElement, i) => {
           audioElement.addEventListener('canplaythrough', canAllPlay); 
-          console.log(`Adding listener #${i}`);
         }
       );
     }
@@ -251,7 +272,6 @@
     const musicRoot = document.getElementsByClassName(MAIN_COMPONENT_CLASSNAME)[0], // TODO: make this fail OK
       pianorollContainer = musicRoot.getElementsByClassName('pianoroll')[0],
       playButtons = Array.from(musicRoot.getElementsByClassName(PLAY_BUTTON_CLASSNAME)),
-      pauseButtons = Array.from(musicRoot.getElementsByClassName(STOP_BUTTON_CLASSNAME)),
       audio = Array.from(musicRoot.querySelectorAll('audio')),
       masterAudioTrack = audio[0];
   
@@ -270,15 +290,15 @@
     // Update the markup
 
     initializeMarkup(musicRoot);
+
+    // Add classes once audio is loaded
+
     removeLoadingClassnameWhenContentLoaded(musicRoot, audio);
   
     // Setup track mute buttons
-    // TODO: move mute state to musicRoot (like it is with the play button)
-    //  so that the CMN and pianoroll buttons stay synchronized in
-    //  a declarative way
   
     Array.from(musicRoot.getElementsByClassName(MUTE_BUTTON_CLASSNAME))
-      .forEach(muteButton => initTrackMuteButton(muteButton, musicRoot));
+      .forEach(muteButton => initTrackMuteSwitch(muteButton, musicRoot));
   
     // Start updateHighlights when play button is pressed
   
@@ -287,29 +307,41 @@
   
     // Set onclick for play button
 
-    playButtons.forEach(playButton => playButton.onclick = function() {
-      audio.forEach(a => a.play());
-      musicRoot.classList.remove(PAUSED_CLASSNAME);
-      musicRoot.classList.add(PLAYING_CLASSNAME);
-      pianorollContainer.classList.remove(PAUSED_CLASSNAME);
-      pianorollContainer.classList.add(PLAYING_CLASSNAME);
-      timerId = window.setInterval(
-        function() {
-          scrolledSystem = updateHighlights(masterAudioTrack, HIGHLIGHT_CLASSNAME, timeTable, scrolledSystem, pianoRollStyleElem); 
-        }, 
-        AUDIO_POLLING_INTERVAL
-      );
-    });
+    playButtons.forEach(playButton => playButton.onchange = function(x) {
 
-    // Set onclick for pause/stop button
-  
-    pauseButtons.forEach(pauseButton => pauseButton.onclick = function() {
-      if (audioReady) {
-        audio.forEach(a => a.pause());
-        musicRoot.classList.remove(PLAYING_CLASSNAME);
-        musicRoot.classList.add(PAUSED_CLASSNAME);
-        pianorollContainer.classList.remove(PLAYING_CLASSNAME);
-        pianorollContainer.classList.add(PAUSED_CLASSNAME);
+      const changedToPlayMode = this.checked;
+
+      // Synchronize all play buttons (i.e. CMN and piano roll)
+
+      playButtons.forEach(pb => pb.checked = this.checked);
+
+      // Remove/add playing/paused classnames based on state
+
+      addWhenPlay    = changedToPlayMode ? 'add' : 'remove',
+      removeWhenPlay = changedToPlayMode ? 'remove' : 'add';
+
+      musicRoot.classList[removeWhenPlay](PAUSED_CLASSNAME);
+      musicRoot.classList[addWhenPlay](PLAYING_CLASSNAME);
+      pianorollContainer.classList[removeWhenPlay](PAUSED_CLASSNAME);
+      pianorollContainer.classList[addWhenPlay](PLAYING_CLASSNAME);
+
+      // Start or stop audio playing
+
+      const audioFunction = changedToPlayMode ? 'play' : 'pause';
+      audio.forEach(a => a[audioFunction]());
+
+      // Start or stop note highlighting
+
+      if (changedToPlayMode) {
+
+        const runToUpdateHighlights = function() {
+          scrolledSystem = updateHighlights(  
+            masterAudioTrack, timeTable, 
+            scrolledSystem, pianoRollStyleElem
+          ); 
+        }
+        timerId = window.setInterval(runToUpdateHighlights, AUDIO_POLLING_INTERVAL);
+      } else {
         window.clearInterval(timerId);
       }
     });
@@ -317,12 +349,12 @@
   
   // Check browser and do something only if capable
   
-  const MUSIC_CAPABLE = true; // TODO: Check the browser here
+  const MUSIC_CAPABLE = (Modernizr.audio && Modernizr.audio.mp3 !== '');
   
   if (MUSIC_CAPABLE) {
-    console.log(document.firstElementChild.classList.add('music-ready'));
+    document.firstElementChild.classList.add('music-ready');
     document.addEventListener('DOMContentLoaded', main);
   }
   
-  })(); 
+  })();
   
