@@ -51,9 +51,6 @@ body {
 			background-size: contain;
 			margin-bottom: .5rem;
 		}
-/*	???	.atalanta-notation-start.playing {
-		  display: none;
-		}*/
 		.play-btn__icon {
 			background-image: url('../icons/icon_play_filled--gray.svg');
 			height: 2.5rem;
@@ -101,6 +98,10 @@ body {
 			line-height: 1.2;
 			text-align: center;
 			width: 100%;
+		}
+		.track-title, 
+		.track-name {
+			line-height: 1.2;
 		}
 		.piano-roll__icon {
 			background-image: url('../icons/icon_piano-roll_filled--gray.svg');
@@ -410,6 +411,17 @@ button.lity-close {
 		filter: brightness(0.7);
 		transition: .3s;
 	}
+	.track-mute .track-container .track-title {
+	  font-size: .875rem;
+	  font-weight: 600;
+	  line-height: 1.2;
+	}
+	.track-mute .track-container .track-name {
+	  display: block;
+	  font-size: .75rem;
+	  font-style: italic;
+	  line-height: 1.2;
+	}
 }
 
 /* grid piano roll */
@@ -422,11 +434,12 @@ button.lity-close {
 	.lity-container .ata-viz-pianoroll > svg {
 		grid-column: 2 / 10;
 	}
-	.lity-container .ata-viz-pianoroll > .transport {
+	.lity-container .ata-viz-pianoroll > .transport > .transport {
 		display: grid;
 		grid-template-columns: auto;
 		grid-template-rows: 1fr 3fr;
 		grid-column: 1 / 2;
+		height: 100%;
 		.atalanta-notation-start, 
 		.atalanta-notation-stop {
 			grid-row: 1 / 2;
@@ -473,7 +486,7 @@ button.lity-close {
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {
 	.section__music ._music .ata-music > .transport {
-		padding: 0;
+		padding: 0 .5rem;
 		width: calc(100vw/24 * 5);
 		.play-btn__label, 
 		.pause-btn__label, 
@@ -526,4 +539,45 @@ button.lity-close {
 	.panel--right .section__music ._music .ata-music > .transport.is-stuck {
 		left: 25vw;
 	}
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.section__music ._music .ata-music > .transport {
+		.track-title {
+			font-size: .75rem;
+			font-weight: 500;
+		}
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 869px) {
+	.section__music ._music .ata-music > .transport {
+		.track-descriptor {
+			justify-content: center;
+			flex: 0 0 100%;
+		}
+		.track-name {
+			text-align: center;
+		}
+		.track-title {
+			font-weight: 600;
+			height: 1px;
+		}
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 869px) {
+	.lity-container .ata-viz-pianoroll  > .transport > .transport {
+		.track-descriptor {
+			justify-content: center;
+			flex: 0 0 100%;
+		}
+		.track-name {
+			text-align: center;
+		}
+		.track-title {
+			font-weight: 600;
+			height: 1px;
+		}
+		  .track-mute .switch {
+		    margin-left: 3.75vw;
+		  }
+	}	
 }

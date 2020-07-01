@@ -9691,9 +9691,11 @@ input.track-play:checked + label {
   background-image: url("../icons/icon_pause_filled--hover.svg"); }
 
 input.track-play + label:after {
+  font-size: .875rem;
   content: "Play Voices"; }
 
 input.track-play:checked + label:after {
+  font-size: .875rem;
   content: "Pause Voices"; }
 
 /* Code adapted from https://www.w3schools.com/howto/howto_css_switch.asp */
@@ -9738,9 +9740,9 @@ input.track-play:checked + label:after {
   -ms-flex-direction: row;
   flex-direction: row;
   height: 20px;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-  -webkit-transition: 0.4s;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
   width: 40px; }
 
 .track-mute .slider:hover {
@@ -9771,9 +9773,9 @@ input.track-play:checked + label:after {
   height: 16px;
   -webkit-transform: translate3d(2px, 0, 0);
   transform: translate3d(2px, 0, 0);
-  -webkit-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
   width: 16px; }
 
 .track-mute input:checked + .slider {
@@ -9789,6 +9791,10 @@ input.track-play:checked + label:after {
   content: "";
   -webkit-transform: translate3d(calc(250% - 18px), 0, 0);
   transform: translate3d(calc(250% - 18px), 0, 0); }
+
+@media screen and (min-width: 768px) and (max-width: 869px) {
+  .track-mute .switch {
+    margin-left: 2.25vw; } }
 
 .track-mute .track-container {
   display: -webkit-box;
@@ -9873,7 +9879,14 @@ input.track-play:checked + label:after {
     display: grid;
     grid-row: 2 / 3; }
   .track-container label:nth-child(3) {
-    height: 70%; } }
+    height: 70%; }
+  @media screen and (min-width: 768px) and (max-width: 869px) {
+    .music > .transport > .transport {
+      grid-template-rows: 1fr 3fr 1fr; }
+    .track-mute {
+      margin-top: -3rem; }
+    .track-container label:nth-child(3) {
+      height: 40%; } } }
 
 @supports not (display: grid) {
   .music .transport {
@@ -9951,12 +9964,12 @@ input.track-play:checked + label:after {
   border-radius: 5px; }
 
 .track-mute .track-container .track-title {
-  font-size: 13px;
+  font-size: .875rem;
   font-weight: bold; }
 
 .track-mute .track-container .track-name {
   display: block;
-  font-size: 12px;
+  font-size: .75rem;
   font-style: italic; }
 
 .track-mute input:focus + .slider {
@@ -10236,10 +10249,7 @@ body {
   /* viewheight - topnav - emblem nav */
   padding: 0 1rem;
   visibility: visible;
-  width: calc(60vw/12 * 2);
-  /*	???	.atalanta-notation-start.playing {
-		  display: none;
-		}*/ }
+  width: calc(60vw/12 * 2); }
   .section__music ._music .ata-music > .transport .atalanta-notation-start,
   .section__music ._music .ata-music > .transport .atalanta-notation-stop,
   .section__music ._music .ata-music > .transport .atalanta-notation-mute-track,
@@ -10331,6 +10341,9 @@ body {
     line-height: 1.2;
     text-align: center;
     width: 100%; }
+  .section__music ._music .ata-music > .transport .track-title,
+  .section__music ._music .ata-music > .transport .track-name {
+    line-height: 1.2; }
   .section__music ._music .ata-music > .transport .piano-roll__icon {
     background-image: url("../icons/icon_piano-roll_filled--gray.svg");
     background-position: center;
@@ -10619,6 +10632,15 @@ button.lity-close {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s; }
+  .lity-container .ata-viz-pianoroll > .transport .track-mute .track-container .track-title {
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.2; }
+  .lity-container .ata-viz-pianoroll > .transport .track-mute .track-container .track-name {
+    display: block;
+    font-size: .75rem;
+    font-style: italic;
+    line-height: 1.2; }
 
 /* grid piano roll */
 @supports (display: grid) {
@@ -10628,20 +10650,21 @@ button.lity-close {
     grid-template-rows: auto; }
   .lity-container .ata-viz-pianoroll > svg {
     grid-column: 2 / 10; }
-  .lity-container .ata-viz-pianoroll > .transport {
+  .lity-container .ata-viz-pianoroll > .transport > .transport {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1fr 3fr;
-    grid-column: 1 / 2; }
-    .lity-container .ata-viz-pianoroll > .transport .atalanta-notation-start,
-    .lity-container .ata-viz-pianoroll > .transport .atalanta-notation-stop {
+    grid-column: 1 / 2;
+    height: 100%; }
+    .lity-container .ata-viz-pianoroll > .transport > .transport .atalanta-notation-start,
+    .lity-container .ata-viz-pianoroll > .transport > .transport .atalanta-notation-stop {
       grid-row: 1 / 2; }
-    .lity-container .ata-viz-pianoroll > .transport .track-mute {
+    .lity-container .ata-viz-pianoroll > .transport > .transport .track-mute {
       display: grid;
       grid-template-columns: auto;
       grid-template-rows: 1fr 1fr 1fr;
       grid-row: 2 / 3; }
-    .lity-container .ata-viz-pianoroll > .transport .atalanta-notation-mute-track {
+    .lity-container .ata-viz-pianoroll > .transport > .transport .atalanta-notation-mute-track {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -10698,7 +10721,7 @@ button.lity-close {
 /* BREAKPOINTS */
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .section__music ._music .ata-music > .transport {
-    padding: 0;
+    padding: 0 .5rem;
     width: calc(100vw/24 * 5); }
     .section__music ._music .ata-music > .transport .atalanta-notation-start,
     .section__music ._music .ata-music > .transport .atalanta-notation-stop,
@@ -10736,6 +10759,41 @@ button.lity-close {
 @media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) {
   .panel--right .section__music ._music .ata-music > .transport.is-stuck {
     left: 25vw; } }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .section__music ._music .ata-music > .transport .track-title {
+    font-size: .75rem;
+    font-weight: 500; } }
+
+@media screen and (min-width: 768px) and (max-width: 869px) {
+  .section__music ._music .ata-music > .transport .track-descriptor {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%; }
+  .section__music ._music .ata-music > .transport .track-name {
+    text-align: center; }
+  .section__music ._music .ata-music > .transport .track-title {
+    font-weight: 600;
+    height: 1px; } }
+
+@media screen and (min-width: 320px) and (max-width: 869px) {
+  .lity-container .ata-viz-pianoroll > .transport > .transport .track-descriptor {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%; }
+  .lity-container .ata-viz-pianoroll > .transport > .transport .track-name {
+    text-align: center; }
+  .lity-container .ata-viz-pianoroll > .transport > .transport .track-title {
+    font-weight: 600;
+    height: 1px; }
+  .lity-container .ata-viz-pianoroll > .transport > .transport .track-mute .switch {
+    margin-left: 3.75vw; } }
 
 .frontmatter .section__frontispiece,
 .frontmatter .section__author-epigram,
