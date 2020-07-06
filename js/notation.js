@@ -108,11 +108,11 @@
 
     const updateMute = function() {
 
-      const isMuted = muteSwitchElem.checked;
+      const isMuted = ! muteSwitchElem.checked;
 
       // Sync all mute switches
 
-      muteSwitchesForThisTrack.forEach(muteSwitch => muteSwitch.checked = isMuted);
+      muteSwitchesForThisTrack.forEach(muteSwitch => muteSwitch.checked = ! isMuted);
 
       // Turn on/off audio for this track
 
@@ -357,4 +357,3 @@
   }
   
   })();
-  
