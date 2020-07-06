@@ -112,7 +112,7 @@
 
       // Sync all mute switches
 
-      muteSwitchesForThisTrack.forEach(muteSwitch => muteSwitch.checked = ! isMuted);
+      muteSwitchesForThisTrack.forEach(muteSwitch => muteSwitch.checked = !isMuted);
 
       // Turn on/off audio for this track
 
@@ -120,7 +120,7 @@
 
       // Change classname on CMN and pianoroll, etc.
 
-      const classNameOp = isMuted ? 'remove' : 'add';
+      const classNameOp = isMuted ? 'add' : 'remove';
       musicSvgElements.forEach(
         elem => elem.classList[classNameOp](MUTE_STATE_CLASSNAME)
       );
@@ -298,7 +298,7 @@
     // Setup track mute buttons
   
     Array.from(musicRoot.getElementsByClassName(MUTE_BUTTON_CLASSNAME))
-      .forEach(muteButton => initTrackMuteSwitch(muteButton, musicRoot));
+         .forEach(muteButton => initTrackMuteSwitch(muteButton, musicRoot));
   
     // Start updateHighlights when play button is pressed
   
