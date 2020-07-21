@@ -346,8 +346,19 @@ main.home {
       font-style: italic;
       width: 32vw;
     }
+    cite, 
     .marketing--attribution {
-      font-style: normal;
+      font-style: normal
+    }
+  }
+  @include media ('>=xs-phone', '<tablet') {
+    .marketing {
+      flex-direction: column;
+      padding: 1rem 1.5rem;
+
+      p {
+        width: 100%;
+      }
     }
   }
   @include media ('>=tablet', '<desktop') {
@@ -372,7 +383,7 @@ main.home {
   }
   @include media ('>=xs-phone', '<tablet') {
     .credits p {
-      padding: 0 1.25rem;
+      padding: 0 1.5rem;
       max-width: 100vw;
     }
   }
