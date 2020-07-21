@@ -33,11 +33,11 @@
         <span class="tags-count"></span>
         <div class="tag-detail">
           <span class="title">
-            <span class="tags-count"></span> Matching Tags in this Collection:
+            <span class="tags-count"></span> Matching tags in this collection:
           </span>
           <ul class="tag-list"></ul>
           <a class="all-tags" href="javascript:;'">
-            Show All Tags
+            Show all tags
           </a>
         </div>
       </div>

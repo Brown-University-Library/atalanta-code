@@ -343,7 +343,11 @@ main.home {
     padding: 4rem 0;
 
     p {
+      font-style: italic;
       width: 32vw;
+    }
+    .marketing--attribution {
+      font-style: normal;
     }
   }
   @include media ('>=tablet', '<desktop') {
@@ -356,8 +360,9 @@ main.home {
     display: flex;
     justify-content: center;
     grid-area: 5 / 1 / 6 / 13;
-    font-size: 1.125rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2;
     margin-bottom: -1rem;
     padding-top: 4rem;
 
