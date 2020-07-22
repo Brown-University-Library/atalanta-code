@@ -4276,7 +4276,7 @@ main.toc-wrapper {
   main.toc-wrapper h3 cite, main.toc-wrapper h4 cite {
     font-style: oblique; }
   main.toc-wrapper h4 {
-    color: #333;
+    color: #111;
     font-size: 21px;
     font-weight: 600;
     line-height: 1.5; }
@@ -4401,11 +4401,9 @@ main.toc-wrapper {
     font-style: oblique; }
   main.toc-wrapper .section__essays span.byline,
   main.toc-wrapper .section__performance span.byline {
-    color: #333;
+    color: #111;
     font-size: 17px;
     font-weight: 600; }
-  main.toc-wrapper .section__essays span.byline {
-    color: #333; }
 
 /*** SUPPORT QUERIES ***/
 @supports (display: grid) {
