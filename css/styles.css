@@ -9692,6 +9692,10 @@ input.track-play + label {
   width: 100%;
   /* transition: 0.5s; */ }
 
+.music.loading .atalanta-notation-start input.track-play:checked + label {
+  background-image: url("../icons/icon_loading_filled--gray.svg");
+}
+
 .atalanta-notation-start input.track-play + label:hover {
   cursor: pointer;
   background-image: url("../icons/icon_play_filled--hover.svg");
@@ -10379,9 +10383,6 @@ body {
 
 .section__music ._music .ata-music .ata-viz-pianoroll {
   overflow: hidden; }
-
-.section__music ._music .ata-music.loading > .transport {
-  visibility: hidden; }
 
 /* notation */
 .section__music .ata-viz-cmn {
