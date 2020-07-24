@@ -110,14 +110,16 @@
 
       const isMuted = ! muteSwitchElem.checked;
 
-      // Sync all mute switches
+      // Sync all mute switches (i.e. between CMN and pianoroll)
 
       muteSwitchesForThisTrack.forEach(muteSwitch => muteSwitch.checked = !isMuted);
 
       // Turn on/off audio for this track
 
-      audioElements.forEach(aElem => aElem.volume = isMuted ? 0 : 1);
-
+      audioElements.forEach(aElem => {
+        aElem.muted = isMuted;
+      });
+      
       // Change classname on CMN and pianoroll, etc.
 
       const classNameOp = isMuted ? 'add' : 'remove';
