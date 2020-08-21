@@ -2732,8 +2732,19 @@ main.home {
     main.home .marketing p {
       font-style: italic;
       width: 32vw; }
+    main.home .marketing cite,
     main.home .marketing .marketing--attribution {
       font-style: normal; }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  main.home .marketing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 1rem 1.5rem; }
+    main.home .marketing p {
+      width: 100%; } }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   main.home .marketing p {
@@ -2757,7 +2768,7 @@ main.home {
 
 @media (min-width: 320px) and (max-width: 767px) {
   main.home .credits p {
-    padding: 0 1.25rem;
+    padding: 0 1.5rem;
     max-width: 100vw; } }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -4265,7 +4276,7 @@ main.toc-wrapper {
   main.toc-wrapper h3 cite, main.toc-wrapper h4 cite {
     font-style: oblique; }
   main.toc-wrapper h4 {
-    color: #333;
+    color: #111;
     font-size: 21px;
     font-weight: 600;
     line-height: 1.5; }
@@ -4390,11 +4401,9 @@ main.toc-wrapper {
     font-style: oblique; }
   main.toc-wrapper .section__essays span.byline,
   main.toc-wrapper .section__performance span.byline {
-    color: #333;
+    color: #111;
     font-size: 17px;
     font-weight: 600; }
-  main.toc-wrapper .section__essays span.byline {
-    color: #333; }
 
 /*** SUPPORT QUERIES ***/
 @supports (display: grid) {
