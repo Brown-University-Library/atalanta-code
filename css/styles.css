@@ -9693,8 +9693,7 @@ input.track-play + label {
   /* transition: 0.5s; */ }
 
 .music.loading .atalanta-notation-start input.track-play:checked + label {
-  background-image: url("../icons/icon_loading_filled--gray.svg");
-}
+  /*background-image: url("../icons/icon_loading_filled--gray.svg");*/ }
 
 .atalanta-notation-start input.track-play + label:hover {
   cursor: pointer;
@@ -10742,6 +10741,15 @@ button.lity-close {
     .section__music ._music .ata-music > .transport .atalanta-notation-mute-track,
     .section__music ._music .ata-music > .transport .atalanta-notation__switch {
       font-size: .5rem; }
+    .section__music ._music .ata-music > .transport .track-container {
+      max-height: 100px; }
+    .section__music ._music .ata-music > .transport .track-container label:nth-child(1) {
+      display: none; }
+    .section__music ._music .ata-music > .transport .track-container label:nth-child(3),
+    .section__music ._music .ata-music > .transport .track-mute .switch {
+      height: 40px; }
+    .section__music ._music .ata-music > .transport .track-mute .switch {
+      margin-left: 1rem; }
   .panel--right .section__music ._music .ata-music > .transport.is-stuck {
     left: 0;
     width: calc(100vw/24 * 5); } }
@@ -10755,7 +10763,12 @@ button.lity-close {
     .section__music ._music .ata-music > .transport .atalanta-notation-stop,
     .section__music ._music .ata-music > .transport .atalanta-notation-mute-track,
     .section__music ._music .ata-music > .transport .atalanta-notation__switch {
-      font-size: .75rem; } }
+      font-size: .75rem; }
+    .section__music ._music .ata-music > .transport .track-container {
+      max-height: 150px; }
+    .section__music ._music .ata-music > .transport .track-descriptor,
+    .section__music ._music .ata-music > .transport .track-mute .switch {
+      height: 50px; } }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   /* @supports (display: grid) {...} */
