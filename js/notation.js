@@ -2,9 +2,11 @@
 (function () { 
 
   const MAIN_COMPONENT_CLASSNAME = 'music',
+        BROWSER_HAS_WEBAUDIO_CLASSNAME = 'music-ready',
         AUDIO_CONTAINER_CLASSNAME = 'audio',
         AUDIO_LOADED_CLASSNAME = 'loaded',
         AUDIO_LOADING_CLASSNAME = 'loading',
+        AUDIO_LOAD_POLL_INTERVAL = 200,
         MUTE_STATE_CLASSNAME = 'muted',
         MUTE_BUTTON_CLASSNAME = 'atalanta-notation-mute-track',
         HIGHLIGHT_CLASSNAME = 'highlighted',
@@ -99,7 +101,7 @@
           );
 
     const staffElements = Array.from(musicRoot.querySelectorAll('.measure'))
-                                .map(measure => measure.querySelectorAll('.staff')[trackNumber - 1]),
+                               .map(measure => measure.querySelectorAll('.staff')[trackNumber - 1]),
           barLinesElements = Array.from(musicRoot.querySelectorAll(`.barLineAttr path:nth-child(${trackNumber})`)),
           pianoRollNotes = Array.from(document.querySelectorAll(`.pianoroll svg rect.note.voice-${trackNumber}`)),
           musicSvgElements = staffElements.concat(barLinesElements, muteSwitchElem, pianoRollNotes);
@@ -110,14 +112,16 @@
 
       const isMuted = ! muteSwitchElem.checked;
 
-      // Sync all mute switches
+      // Sync all mute switches (i.e. between CMN and pianoroll)
 
       muteSwitchesForThisTrack.forEach(muteSwitch => muteSwitch.checked = !isMuted);
 
       // Turn on/off audio for this track
 
-      audioElements.forEach(aElem => aElem.volume = isMuted ? 0 : 1);
-
+      audioElements.forEach(aElem => {
+        aElem.muted = isMuted;
+      });
+      
       // Change classname on CMN and pianoroll, etc.
 
       const classNameOp = isMuted ? 'add' : 'remove';
@@ -264,7 +268,8 @@
     }
   }
 
-  
+  // Main routine that's called when DOM loaded
+
   function main() {
 
     // Get page elements
@@ -293,7 +298,7 @@
 
     // Add classes once audio is loaded
 
-    removeLoadingClassnameWhenContentLoaded(musicRoot, audio);
+    // removeLoadingClassnameWhenContentLoaded(musicRoot, audio);
   
     // Setup track mute buttons
   
@@ -304,16 +309,52 @@
   
     let timerId, scrolledSystem;
     const pianoRollStyleElem = document.querySelector('.pianoroll svg style');
-  
-    // Set onclick for play button
 
-    playButtons.forEach(playButton => playButton.onchange = function(x) {
+    // Mobile Safari workaround:
+    // When user touches something, activate audio downloading
 
-      const changedToPlayMode = this.checked;
+    document.addEventListener('touchstart', function() {
+      audio.forEach(audioElem => {
+        audioElem.play();
+        audioElem.pause();
+        audioElem.currentTime = 0;
+      });
+    }, { once: true });
+
+    // Call doWhenAudioDownloaded if audio is downloaded; 
+    //   otherwise, wait until download completes
+
+    function callWhenAudioDownloaded(doWhenAudioDownloaded) {
+
+      const audioIsReady = audio.every(audioElem => audioElem.readyState === 4);
+
+      // If audio is ready, set classnames and do the callback
+      // If audio is not ready, wait an interval and try again
+
+      if (audioIsReady) {
+        musicRoot.classList.remove(AUDIO_LOADING_CLASSNAME);
+        musicRoot.classList.add(AUDIO_LOADED_CLASSNAME);
+        doWhenAudioDownloaded();
+      } else {
+        console.log('LOADING AUDIO');
+        window.setTimeout(
+          callWhenAudioDownloaded, 
+          AUDIO_LOAD_POLL_INTERVAL,
+          doWhenAudioDownloaded
+        );
+      }
+    }
+
+    // Handler for when play button (which is a checkbox)
+    //  is changed
+
+    function onPlayStateChange(playButtonElem) {
+
+      const changedToPlayMode = playButtonElem.checked;
 
       // Synchronize all play buttons (i.e. CMN and piano roll)
 
-      playButtons.forEach(pb => pb.checked = this.checked);
+      playButtons.forEach(pb => pb.checked = changedToPlayMode);
 
       // Remove/add playing/paused classnames based on state
 
@@ -327,8 +368,8 @@
 
       // Start or stop audio playing
 
-      const audioFunction = changedToPlayMode ? 'play' : 'pause';
-      audio.forEach(a => a[audioFunction]());
+      const audioState = changedToPlayMode ? 'play' : 'pause';
+      audio.forEach(audioElem => audioElem[audioState]());
 
       // Start or stop note highlighting
 
@@ -344,6 +385,15 @@
       } else {
         window.clearInterval(timerId);
       }
+    }; // End playStateChanged handler
+
+    // Set handler for play buttons
+
+    playButtons.forEach(playButton => playButton.onchange = function () {
+      const playButtonElem = this;
+      callWhenAudioDownloaded(
+        () => onPlayStateChange(playButtonElem)
+      );
     });
   };
   
@@ -352,7 +402,7 @@
   const MUSIC_CAPABLE = (Modernizr.audio && Modernizr.audio.mp3 !== '');
   
   if (MUSIC_CAPABLE) {
-    document.firstElementChild.classList.add('music-ready');
+    document.firstElementChild.classList.add(BROWSER_HAS_WEBAUDIO_CLASSNAME);
     document.addEventListener('DOMContentLoaded', main);
   }
   
